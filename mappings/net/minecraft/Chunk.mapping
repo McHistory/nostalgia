@@ -1,11 +1,33 @@
 CLASS net/minecraft/class_203 net/minecraft/Chunk
 	FIELD field_841 blocks [B
+	FIELD field_843 level Lnet/minecraft/class_92;
 	FIELD field_846 blockLight Lnet/minecraft/class_406;
 	FIELD field_847 heightMap [B
 	FIELD field_849 xPos I
 	FIELD field_850 zPos I
+	FIELD field_851 tileEntities Ljava/util/Map;
 	FIELD field_852 entities [Ljava/util/List;
 	FIELD field_853 terrainPopulated Z
 	METHOD <init> (Lnet/minecraft/class_92;II)V
 		ARG 2 x
+		ARG 3 z
+	METHOD method_619 (IIII)Z
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+		ARG 4 blockId
+	METHOD method_621 placeTileEntity (IIILnet/minecraft/class_265;)V
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+		ARG 4 tileEntity
+	METHOD method_627 addEntity (Lnet/minecraft/class_333;)V
+		ARG 1 entity
+	METHOD method_642 getTileEntity (III)Lnet/minecraft/class_265;
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+	METHOD method_644 (III)V
+		ARG 1 x
+		ARG 2 y
 		ARG 3 z
