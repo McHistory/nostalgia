@@ -6,6 +6,8 @@ import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.gradle.api.Plugin;
 import org.gradle.api.Project;
+import org.gradle.api.artifacts.Dependency;
+import org.gradle.api.artifacts.ResolutionStrategy;
 import org.gradle.api.file.RegularFile;
 import org.gradle.api.provider.Provider;
 import org.gradle.api.tasks.TaskContainer;
@@ -22,6 +24,8 @@ import net.fabricmc.filament.task.minecraft.MergeMinecraftTask;
 import net.fabricmc.filament.task.minecraft.MinecraftLibrariesTask;
 import net.fabricmc.filament.task.minecraft.MinecraftVersionMetaTask;
 import net.fabricmc.loom.configuration.providers.minecraft.MinecraftVersionMeta;
+
+import org.gradle.internal.impldep.org.yaml.snakeyaml.util.ArrayUtils;
 
 public final class FilamentGradlePlugin implements Plugin<Project> {
 	public static final ObjectMapper OBJECT_MAPPER = new ObjectMapper().configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
@@ -53,11 +57,11 @@ public final class FilamentGradlePlugin implements Plugin<Project> {
 			task.getServerJar().set(getOutput(minecraftServer));
 			task.getOutputFile().set(new File(extension.getMinecraftDirectory(), "server.jar"));
 		});
-		tasks.register("mergeMinecraftJars", MergeMinecraftTask.class, task -> {
-			task.getClientJar().set(getOutput(minecraftClient));
-			task.getServerJar().set(getOutput(extractBundledServer));
+		tasks.register("mergeMinecraftJars", FileOutputTask.class, task -> {
+//			task.getClientJar().set(getOutput(minecraftClient));
+//			task.getServerJar().set(getOutput(extractBundledServer));
 
-			task.getOutputFile().set(new File(extension.getMinecraftDirectory(), "merged.jar"));
+			task.getOutputFile().set(getOutput(minecraftClient));
 		});
 		tasks.register("generatePackageInfoMappings", GeneratePackageInfoMappingsTask.class);
 		tasks.register("javadocLint", JavadocLintTask.class);
@@ -75,7 +79,11 @@ public final class FilamentGradlePlugin implements Plugin<Project> {
 
 			var files = MinecraftVersionMetaTask.readMetadata(minecraftMetaTask)
 					.map(meta -> MinecraftLibrariesTask.getDependencies(project, meta))
-					.map(dependencies -> project.getConfigurations().detachedConfiguration(dependencies).resolve());
+					.map(dependencies -> {
+						Dependency[] dependency = new Dependency[5];
+						System.arraycopy(dependencies, 0, dependency, 0, 5);
+						return project.getConfigurations().detachedConfiguration(dependency).resolve();
+					});
 			task.getFiles().from(files);
 		});
 	}
