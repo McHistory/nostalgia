@@ -6,8 +6,7 @@
  * The base package for all Minecraft classes. All Minecraft classes belong to this package
  * in their intermediary names.
  *
- * <p>Unmapped classes go into this package by default. This package additionally contains
- * {@link Bootstrap}, {@link SharedConstants}, and {@link MinecraftVersion} classes.
+ * <p>Unmapped classes go into this package by default.
  *
  * <p>While it's known that some obfuscated Minecraft classes are under other packages like
  * {@code com.mojang.*}, yarn keeps all mapped classes under {@code net.minecraft.*} since
