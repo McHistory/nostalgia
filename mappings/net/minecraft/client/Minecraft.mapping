@@ -1,4 +1,32 @@
 CLASS net/minecraft/client/Minecraft
 	FIELD field_1493 soundManager Lnet/minecraft/class_454;
+	FIELD field_1496 localGameDir Ljava/io/File;
+	FIELD field_1518 gameDir Ljava/io/File;
+	FIELD field_1523 displayWidth I
+	FIELD field_1524 displayHeight I
+	FIELD field_1525 level Lnet/minecraft/class_92;
+	FIELD field_1527 player Lnet/minecraft/class_45;
+	FIELD field_1534 textureManager Lnet/minecraft/class_169;
 	FIELD field_1535 fontRenderer Lnet/minecraft/class_329;
+	FIELD field_1536 currentScreen Lnet/minecraft/class_44;
 	FIELD field_1546 applet Lnet/minecraft/client/MinecraftApplet;
+	METHOD main ([Ljava/lang/String;)V
+		ARG 0 args
+	METHOD method_1054 setScreen (Lnet/minecraft/class_44;)V
+		ARG 1 screen
+	METHOD method_1056 loadLevel (Lnet/minecraft/class_92;Ljava/lang/String;)V
+	METHOD method_1057 loadLevel (Lnet/minecraft/class_92;Ljava/lang/String;Lnet/minecraft/class_123;)V
+		ARG 3 newPlayer
+	METHOD method_1058 handleCrash (Lnet/minecraft/class_220;)V
+		ARG 1 crash
+	METHOD method_1059 getWorkingDir (Ljava/lang/String;)Ljava/io/File;
+		ARG 0 path
+	METHOD method_1063 (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+		ARG 0 playerName
+	METHOD method_1064 getGameDir ()Ljava/io/File;
+	METHOD method_1065 loadLevelFromSave (Ljava/lang/String;)V
+		ARG 1 saveID
+	METHOD method_1067 setState (Ljava/lang/String;)V
+		ARG 1 stateName
+	METHOD method_1076 changeDimension ()V
+	METHOD method_1083 getOSType ()Lnet/minecraft/class_272;
