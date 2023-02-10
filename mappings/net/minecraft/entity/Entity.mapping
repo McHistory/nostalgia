@@ -1,30 +1,48 @@
 CLASS net/minecraft/class_333 net/minecraft/entity/Entity
+	FIELD field_1317 motionY D
+	FIELD field_1318 motionZ D
 	FIELD field_1319 yRot F
 	FIELD field_1320 xRot F
+	FIELD field_1321 lastYRot F
+	FIELD field_1322 lastXRot F
 	FIELD field_1324 onGround Z
 	FIELD field_1331 removed Z
 	FIELD field_1338 fallDistance F
 	FIELD field_1349 level Lnet/minecraft/class_92;
+	FIELD field_1350 lastXPos D
+	FIELD field_1351 lastYPos D
+	FIELD field_1352 lastZPost D
 	FIELD field_1353 xPos D
 	FIELD field_1354 yPos D
 	FIELD field_1355 zPos D
+	FIELD field_1356 motionX D
 	FIELD field_1361 random Ljava/util/Random;
 	FIELD field_1364 fire I
 	FIELD field_1368 air I
 	METHOD <init> (Lnet/minecraft/class_92;)V
 		ARG 1 level
 	METHOD method_910 discard ()V
+	METHOD method_918 setMotion (DDD)V
+		ARG 1 x
+		ARG 3 y
+		ARG 5 z
 	METHOD method_925 dropItem (IIF)Lnet/minecraft/class_136;
 		ARG 1 id
 		ARG 2 count
 	METHOD method_930 readAdditonalSaveData (Lnet/minecraft/class_246;)V
 		ARG 1 entityTag
-	METHOD method_935 (DDD)V
+	METHOD method_935 setPosition (DDD)V
 		ARG 1 x
 		ARG 3 y
 		ARG 5 z
 	METHOD method_939 addAdditonalSaveData (Lnet/minecraft/class_246;)V
 		ARG 1 entityTag
+	METHOD method_941 (DDDFF)V
+		ARG 1 x
+		ARG 3 y
+		ARG 5 z
+		ARG 7 yRot
+		ARG 8 xRot
 	METHOD method_943 (FF)V
 		ARG 1 yRot
 		ARG 2 xRot
