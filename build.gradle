@@ -33,7 +33,7 @@ filament {
 
 def ENV = System.getenv()
 // Fetch build number from Github Actions
-def build_number = ENV.BUILD_NUMBER ?: "local4"
+def build_number = ENV.BUILD_NUMBER ?: "local5"
 
 def yarnVersion = "${minecraft_version}+build.$build_number"
 version = yarnVersion
