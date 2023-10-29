@@ -2,11 +2,15 @@ CLASS net/minecraft/class_16 net/minecraft/Vec3
 	FIELD field_43 x D
 	FIELD field_44 y D
 	FIELD field_45 z D
+	FIELD field_46 cache Ljava/util/List;
+	FIELD field_47 cacheSize I
 	METHOD <init> (DDD)V
 		ARG 1 x
 		ARG 3 y
 		ARG 5 z
-	METHOD method_34 (DDD)Lnet/minecraft/class_16;
+	METHOD method_2156 clearCache ()V
+	METHOD method_33 resetCache ()V
+	METHOD method_34 create (DDD)Lnet/minecraft/class_16;
 		ARG 0 x
 		ARG 2 y
 		ARG 4 z
@@ -25,7 +29,7 @@ CLASS net/minecraft/class_16 net/minecraft/Vec3
 		ARG 1 x
 		ARG 3 y
 		ARG 5 z
-	METHOD method_49 (DDD)Lnet/minecraft/class_16;
+	METHOD method_49 set (DDD)Lnet/minecraft/class_16;
 		ARG 1 x
 		ARG 3 y
 		ARG 5 z

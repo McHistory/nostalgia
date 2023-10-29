@@ -25,7 +25,7 @@ plugins {
 	id 'net.fabricmc.filament'
 }
 
-def minecraft_version = "a1.2.6"
+def minecraft_version = "b1.7.3"
 
 filament {
 	minecraftVersion = minecraft_version
@@ -33,7 +33,7 @@ filament {
 
 def ENV = System.getenv()
 // Fetch build number from Github Actions
-def build_number = ENV.BUILD_NUMBER ?: "local5"
+def build_number = ENV.BUILD_NUMBER ?: "local8"
 
 def yarnVersion = "${minecraft_version}+build.$build_number"
 version = yarnVersion
@@ -146,7 +146,7 @@ task downloadIntermediary(type: Download) {
 
 task downloadIntermediaryV2(type: Download) {
 	group = buildMappingGroup
-	def url = "file:////home/alpha/github/intermediary/build/jars/intermediary-${minecraft_version}-v2.jar"
+	def url = "file:////home/alpha/github/nostalgia/intermediary/build/jars/intermediary-${minecraft_version}-v2.jar"
 	src com.google.common.net.UrlEscapers.urlFragmentEscaper().escape(url)
 	dest new File(cacheFilesMinecraft, "${minecraft_version}-intermediary-v2.jar")
 

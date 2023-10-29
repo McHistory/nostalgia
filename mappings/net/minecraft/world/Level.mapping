@@ -1,0 +1,113 @@
+CLASS net/minecraft/class_92 net/minecraft/world/Level
+	FIELD field_2617 levelData Lnet/minecraft/class_567;
+	FIELD field_273 lightingUpdates Ljava/util/List;
+	FIELD field_279 levelSource Lnet/minecraft/class_32;
+	FIELD field_280 playerData Lnet/minecraft/class_246;
+	FIELD field_287 entities Ljava/util/List;
+	FIELD field_289 players Ljava/util/List;
+	FIELD field_290 time J
+	FIELD field_297 random Ljava/util/Random;
+	FIELD field_298 spawnX I
+	FIELD field_299 spawnY I
+	FIELD field_300 spawnZ I
+	FIELD field_302 dimension Lnet/minecraft/class_417;
+	FIELD field_306 randomSeed J
+	FIELD field_307 sizeOnDisk J
+	FIELD field_311 interactionsEnabled Z
+	METHOD <init> (Ljava/lang/String;Lnet/minecraft/class_417;J)V
+		ARG 2 dimension
+	METHOD <init> (Lnet/minecraft/class_602;Ljava/lang/String;Lnet/minecraft/class_417;J)V
+		ARG 3 dimension
+	METHOD <init> (Lnet/minecraft/class_92;Lnet/minecraft/class_417;)V
+		ARG 1 level
+		ARG 2 dimension
+	METHOD method_1296 isAir (III)Z
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+	METHOD method_1428 getDebugInfo ()Ljava/lang/String;
+	METHOD method_1430 getLevelSource ()Lnet/minecraft/class_32;
+	METHOD method_1594 createLevelSource ()Lnet/minecraft/class_32;
+	METHOD method_1596 checkSession ()V
+	METHOD method_1597 getSeed ()J
+	METHOD method_1598 getTime ()J
+	METHOD method_1600 getLevelData ()Lnet/minecraft/class_567;
+	METHOD method_1921 (III)Z
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+	METHOD method_211 playSound (DDDLjava/lang/String;FF)V
+		ARG 1 x
+		ARG 3 y
+		ARG 5 z
+		ARG 7 soundId
+	METHOD method_215 setTileInBounds (IIII)Z
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+		ARG 4 blockId
+	METHOD method_219 (IIIIZ)Z
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+	METHOD method_220 placeTileEntity (IIILnet/minecraft/class_265;)V
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+		ARG 4 tileEntity
+	METHOD method_222 setTime (J)V
+		ARG 1 newTime
+	METHOD method_233 addPlayer (Lnet/minecraft/class_123;)V
+		ARG 1 player
+	METHOD method_235 getChunkGenerator (Ljava/io/File;)Lnet/minecraft/class_32;
+	METHOD method_236 load (Ljava/io/File;Ljava/lang/String;)Lnet/minecraft/class_246;
+	METHOD method_237 getPlayerForProxy (Ljava/lang/Class;)Lnet/minecraft/class_333;
+	METHOD method_239 spawnParticle (Ljava/lang/String;DDDDDD)V
+		ARG 1 particleId
+	METHOD method_243 addEntity (Lnet/minecraft/class_333;)Z
+		ARG 1 entity
+	METHOD method_251 playSound (Lnet/minecraft/class_333;Ljava/lang/String;FF)V
+		ARG 1 entity
+		ARG 2 soundId
+		ARG 3 volume
+	METHOD method_256 save (ZLnet/minecraft/class_441;)V
+	METHOD method_259 getTimeOfDay (F)F
+	METHOD method_260 getChunkFromPos (II)Lnet/minecraft/class_203;
+		ARG 1 x
+		ARG 2 z
+	METHOD method_264 (IIILnet/minecraft/class_265;)V
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+		ARG 4 te
+	METHOD method_268 save (Ljava/io/File;Ljava/lang/String;)V
+	METHOD method_276 getChunk (II)Lnet/minecraft/class_203;
+		ARG 1 x
+		ARG 2 z
+	METHOD method_281 getFogColor (F)Lnet/minecraft/class_16;
+		ARG 1 partialTicks
+	METHOD method_283 isLoaded (III)Z
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+	METHOD method_284 setTile (IIII)Z
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+		ARG 4 blockId
+	METHOD method_285 removeEntity (Lnet/minecraft/class_333;)V
+		ARG 1 entity
+	METHOD method_296 hasChunk (II)Z
+		ARG 1 x
+		ARG 2 z
+	METHOD method_303 (IIII)V
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+	METHOD method_305 getLightLevel (III)I
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+	METHOD method_307 getEntities ()Ljava/util/List;
+	METHOD method_315 checkSessionLock ()V
+	METHOD method_317 removeEntities ()V

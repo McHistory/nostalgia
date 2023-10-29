@@ -1,10 +1,29 @@
 CLASS net/minecraft/class_248 net/minecraft/Tesselator
 	FIELD field_1039 instance Lnet/minecraft/class_248;
 	FIELD field_1044 buffer Ljava/nio/FloatBuffer;
+	FIELD field_1045 array [I
+	FIELD field_1046 vertices I
+	FIELD field_1047 u D
+	FIELD field_1048 v D
+	FIELD field_1051 hasTexture Z
+	FIELD field_1053 p I
 	FIELD field_1055 noColor Z
 	FIELD field_1061 tesselating Z
 	METHOD <init> (I)V
 		ARG 1 size
 	METHOD method_736 flush ()V
+	METHOD method_737 tex (DD)V
+		ARG 1 u
+		ARG 3 v
+	METHOD method_738 vertex (DDD)V
+		ARG 1 x
+		ARG 3 y
+		ARG 5 z
+	METHOD method_739 vertexUV (DDDDD)V
+		ARG 1 x
+		ARG 3 y
+		ARG 5 z
+		ARG 7 u
+		ARG 9 v
 	METHOD method_750 noColor ()V
 	METHOD method_752 clear ()V

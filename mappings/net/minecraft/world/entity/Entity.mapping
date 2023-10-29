@@ -1,0 +1,78 @@
+CLASS net/minecraft/class_333 net/minecraft/world/entity/Entity
+	FIELD field_1317 motionY D
+	FIELD field_1318 motionZ D
+	FIELD field_1319 yRot F
+	FIELD field_1320 xRot F
+	FIELD field_1321 lastYRot F
+	FIELD field_1322 lastXRot F
+	FIELD field_1324 onGround Z
+	FIELD field_1331 removed Z
+	FIELD field_1338 fallDistance F
+	FIELD field_1344 id I
+	FIELD field_1349 level Lnet/minecraft/class_92;
+	FIELD field_1350 lastXPos D
+	FIELD field_1351 lastYPos D
+	FIELD field_1352 lastZPost D
+	FIELD field_1353 xPos D
+	FIELD field_1354 yPos D
+	FIELD field_1355 zPos D
+	FIELD field_1356 motionX D
+	FIELD field_1361 random Ljava/util/Random;
+	FIELD field_1364 fire I
+	FIELD field_1368 air I
+	METHOD <init> (Lnet/minecraft/class_92;)V
+		ARG 1 level
+	METHOD method_2064 thunderHit (Lnet/minecraft/class_650;)V
+		ARG 1 bolt
+	METHOD method_906 updateWaterState ()V
+	METHOD method_910 discard ()V
+	METHOD method_918 setMotion (DDD)V
+		ARG 1 x
+		ARG 3 y
+		ARG 5 z
+	METHOD method_923 updateMovement (FFF)V
+		ARG 1 inputX
+		ARG 2 inputY
+		ARG 3 inputZ
+	METHOD method_925 dropItem (IIF)Lnet/minecraft/class_136;
+		ARG 1 id
+		ARG 2 count
+	METHOD method_930 readAdditonalSaveData (Lnet/minecraft/class_246;)V
+		ARG 1 entityTag
+	METHOD method_935 setPosition (DDD)V
+		ARG 1 x
+		ARG 3 y
+		ARG 5 z
+	METHOD method_939 addAdditonalSaveData (Lnet/minecraft/class_246;)V
+		ARG 1 entityTag
+	METHOD method_941 setPos (DDDFF)V
+		ARG 1 x
+		ARG 3 y
+		ARG 5 z
+		ARG 7 yRot
+		ARG 8 xRot
+	METHOD method_943 (FF)V
+		ARG 1 yRot
+		ARG 2 xRot
+	METHOD method_948 writeNbt (Lnet/minecraft/class_246;)V
+		ARG 1 nbt
+	METHOD method_951 distanceToSqr (DDD)D
+		ARG 1 x
+		ARG 3 y
+		ARG 5 z
+	METHOD method_952 readNbt (Lnet/minecraft/class_246;)V
+		ARG 1 nbt
+	METHOD method_953 distanceTo (Lnet/minecraft/class_333;)F
+		ARG 1 entity
+	METHOD method_955 distanceTo (DDD)D
+		ARG 1 x
+		ARG 3 y
+		ARG 5 z
+	METHOD method_956 distanceToSqr (Lnet/minecraft/class_333;)D
+		ARG 1 entiy
+	METHOD method_958 addDeltaMovement (DDD)V
+		ARG 1 x
+		ARG 3 y
+		ARG 5 z
+	METHOD method_959 push (Lnet/minecraft/class_333;)V
+		ARG 1 entity

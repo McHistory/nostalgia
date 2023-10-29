@@ -1,36 +1,65 @@
 CLASS net/minecraft/client/Minecraft
 	FIELD field_1493 soundManager Lnet/minecraft/class_454;
+	FIELD field_1495 texturepackManager Lnet/minecraft/class_154;
 	FIELD field_1496 localGameDir Ljava/io/File;
+	FIELD field_1500 shouldClose Z
+	FIELD field_1508 timer Lnet/minecraft/class_286;
+	FIELD field_1509 resourceThread Lnet/minecraft/class_42;
 	FIELD field_1518 gameDir Ljava/io/File;
+	FIELD field_1519 fullscreen Z
+	FIELD field_1522 interactionHandler Lnet/minecraft/class_251;
 	FIELD field_1523 displayWidth I
 	FIELD field_1524 displayHeight I
 	FIELD field_1525 level Lnet/minecraft/class_92;
 	FIELD field_1527 player Lnet/minecraft/class_45;
+	FIELD field_1529 session Lnet/minecraft/class_122;
+	FIELD field_1531 canvas Ljava/awt/Canvas;
 	FIELD field_1534 textureManager Lnet/minecraft/class_169;
 	FIELD field_1535 fontRenderer Lnet/minecraft/class_329;
+	FIELD field_1535 fontManager Lnet/minecraft/class_707;
 	FIELD field_1536 currentScreen Lnet/minecraft/class_44;
+	FIELD field_1537 loadingScreen Lnet/minecraft/class_223;
 	FIELD field_1538 renderManager Lnet/minecraft/class_285;
 	FIELD field_1541 gameOverlay Lnet/minecraft/class_376;
 	FIELD field_1545 config Lnet/minecraft/class_192;
 	FIELD field_1546 applet Lnet/minecraft/client/MinecraftApplet;
+	FIELD field_2731 saveManager Lnet/minecraft/class_587;
+	FIELD field_3340 crashed Z
+	FIELD field_3342 gameRenderer Lnet/minecraft/class_700;
 	METHOD main ([Ljava/lang/String;)V
 		ARG 0 args
+	METHOD method_1048 init ()V
 	METHOD method_1054 setScreen (Lnet/minecraft/class_44;)V
 		ARG 1 screen
+	METHOD method_1055 setLevel (Lnet/minecraft/class_92;)V
 	METHOD method_1056 loadLevel (Lnet/minecraft/class_92;Ljava/lang/String;)V
 	METHOD method_1057 loadLevel (Lnet/minecraft/class_92;Ljava/lang/String;Lnet/minecraft/class_123;)V
 		ARG 3 newPlayer
+	METHOD method_1057 changeDimension (Lnet/minecraft/class_92;Ljava/lang/String;Lnet/minecraft/class_480;)V
 	METHOD method_1058 handleCrash (Lnet/minecraft/class_220;)V
 		ARG 1 crash
-	METHOD method_1059 getWorkingDir (Ljava/lang/String;)Ljava/io/File;
+	METHOD method_1059 getOsWorkingDir (Ljava/lang/String;)Ljava/io/File;
 		ARG 0 path
+	METHOD method_1061 setResourceLocation (Ljava/lang/String;Ljava/io/File;)V
 	METHOD method_1063 (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 		ARG 0 playerName
 	METHOD method_1064 getGameDir ()Ljava/io/File;
 	METHOD method_1065 loadLevelFromSave (Ljava/lang/String;)V
 		ARG 1 saveID
+	METHOD method_1066 initGame ()V
 	METHOD method_1067 setState (Ljava/lang/String;)V
 		ARG 1 stateName
+	METHOD method_1068 closeGame ()V
+	METHOD method_1069 setLoadingStage (Ljava/lang/String;)V
+	METHOD method_1072 pause ()V
+	METHOD method_1074 tick ()V
 	METHOD method_1076 changeDimension ()V
 	METHOD method_1081 respawn ()V
 	METHOD method_1083 getOSType ()Lnet/minecraft/class_272;
+	METHOD method_1086 forceReload ()V
+	METHOD method_1362 getConnection ()Lnet/minecraft/class_231;
+	METHOD method_1683 convertWorld (Ljava/lang/String;Ljava/lang/String;)V
+	METHOD method_1684 getSaveManager ()Lnet/minecraft/class_587;
+	METHOD method_1808 respawn (ZI)V
+	METHOD method_2225 crash (Lnet/minecraft/class_220;)V
+		ARG 1 report

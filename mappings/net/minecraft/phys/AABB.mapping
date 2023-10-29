@@ -1,0 +1,72 @@
+CLASS net/minecraft/class_510 net/minecraft/phys/AABB
+	FIELD field_2315 x0 D
+	FIELD field_2316 y0 D
+	FIELD field_2317 z0 D
+	FIELD field_2318 x1 D
+	FIELD field_2319 y1 D
+	FIELD field_2320 z1 D
+	FIELD field_2321 cache Ljava/util/List;
+	FIELD field_2322 cacheSize I
+	METHOD <init> (DDDDDD)V
+		ARG 1 minX
+		ARG 3 minY
+		ARG 5 minZ
+		ARG 7 maxX
+		ARG 9 maxY
+		ARG 11 maxZ
+	METHOD method_1397 resetCache ()V
+	METHOD method_1398 expand (DDD)Lnet/minecraft/class_510;
+		ARG 1 x
+		ARG 3 y
+		ARG 5 z
+	METHOD method_1399 create (DDDDDD)Lnet/minecraft/class_510;
+		ARG 0 x0
+		ARG 2 y0
+		ARG 4 z0
+		ARG 6 x1
+		ARG 8 y1
+		ARG 10 z1
+	METHOD method_1400 intersects (Lnet/minecraft/class_16;)Z
+		ARG 1 c
+	METHOD method_1402 intersects (Lnet/minecraft/class_510;)Z
+		ARG 1 c
+	METHOD method_1403 clipXCollide (Lnet/minecraft/class_510;D)D
+		ARG 1 c
+		ARG 2 xa
+	METHOD method_1404 getSize ()D
+	METHOD method_1405 inflate (DDD)Lnet/minecraft/class_510;
+		ARG 1 x
+		ARG 3 y
+		ARG 5 z
+	METHOD method_1406 newTemp (DDDDDD)Lnet/minecraft/class_510;
+		ARG 0 x0
+		ARG 2 y0
+		ARG 4 z0
+		ARG 6 x1
+		ARG 8 y1
+		ARG 10 z1
+	METHOD method_1408 copyFrom (Lnet/minecraft/class_510;)V
+		ARG 1 c
+	METHOD method_1409 clipYCollide (Lnet/minecraft/class_510;D)D
+		ARG 1 c
+		ARG 2 ya
+	METHOD method_1410 copy ()Lnet/minecraft/class_510;
+	METHOD method_1411 offset (DDD)Lnet/minecraft/class_510;
+		ARG 1 x
+		ARG 3 y
+		ARG 5 z
+	METHOD method_1412 set (DDDDDD)Lnet/minecraft/class_510;
+		ARG 1 x0
+		ARG 3 y0
+		ARG 5 z0
+		ARG 7 x1
+		ARG 9 y1
+		ARG 11 z1
+	METHOD method_1414 clipZCollide (Lnet/minecraft/class_510;D)D
+		ARG 1 c
+		ARG 2 za
+	METHOD method_1415 grow (DDD)Lnet/minecraft/class_510;
+		ARG 1 x
+		ARG 3 y
+		ARG 5 z
+	METHOD method_2163 clearCache ()V

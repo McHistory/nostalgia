@@ -1,4 +1,11 @@
 CLASS net/minecraft/class_192 net/minecraft/ConfigManager
+	FIELD field_2667 ao Z
+	FIELD field_2868 guiScale I
+	FIELD field_2869 GUI_SCALES [Ljava/lang/String;
+	FIELD field_3058 advancedOpengl Z
+	FIELD field_3431 PERFORMANCE_OPTIONS [Ljava/lang/String;
+	FIELD field_3432 fpsLimit I
+	FIELD field_780 RENDER_DISTANCES [Ljava/lang/String;
 	FIELD field_781 DIFFICULTIES [Ljava/lang/String;
 	FIELD field_782 optionsFile Ljava/io/File;
 	FIELD field_783 music F
@@ -25,6 +32,13 @@ CLASS net/minecraft/class_192 net/minecraft/ConfigManager
 	FIELD field_804 minecraft Lnet/minecraft/client/Minecraft;
 	FIELD field_806 difficulty I
 	FIELD field_808 lastServer Ljava/lang/String;
+	METHOD <init> (Lnet/minecraft/client/Minecraft;Ljava/io/File;)V
+		ARG 2 configDir
+	METHOD method_1338 getSliderOption (Lnet/minecraft/class_482;)F
+		ARG 1 option
+	METHOD method_1343 getOptionValue (Lnet/minecraft/class_482;)Ljava/lang/String;
+		ARG 1 option
 	METHOD method_585 loadOptions ()V
+	METHOD method_590 save ()V
 	METHOD method_594 getSliderText (I)Ljava/lang/String;
 		ARG 1 sliderId
