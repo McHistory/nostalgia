@@ -1,6 +1,7 @@
 CLASS net/minecraft/class_203 net/minecraft/world/Chunk
 	FIELD field_841 tiles [B
 	FIELD field_843 level Lnet/minecraft/class_92;
+	FIELD field_844 blocks Lnet/minecraft/class_406;
 	FIELD field_845 skyLight Lnet/minecraft/class_406;
 	FIELD field_846 blockLight Lnet/minecraft/class_406;
 	FIELD field_847 heightMap [B
@@ -28,6 +29,12 @@ CLASS net/minecraft/class_203 net/minecraft/world/Chunk
 		ARG 2 y
 		ARG 3 z
 		ARG 4 id
+	METHOD method_620 setTile (IIIII)Z
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+		ARG 4 id
+		ARG 5 meta
 	METHOD method_621 placeTileEntity (IIILnet/minecraft/class_265;)V
 		ARG 1 x
 		ARG 2 y
@@ -38,6 +45,13 @@ CLASS net/minecraft/class_203 net/minecraft/world/Chunk
 		ARG 1 tileEntity
 	METHOD method_627 addEntity (Lnet/minecraft/class_333;)V
 		ARG 1 entity
+	METHOD method_633 getYHeight (II)I
+		ARG 1 x
+		ARG 2 z
+	METHOD method_634 getMeta (III)I
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
 	METHOD method_636 removeEntity (Lnet/minecraft/class_333;)V
 	METHOD method_642 getTileEntity (III)Lnet/minecraft/class_265;
 		ARG 1 x

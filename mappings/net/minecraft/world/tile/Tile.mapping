@@ -52,6 +52,8 @@ CLASS net/minecraft/class_381 net/minecraft/world/tile/Tile
 	FIELD field_2212 ROSE Lnet/minecraft/class_402;
 	FIELD field_2213 BROWN_MUSHROOM Lnet/minecraft/class_402;
 	FIELD field_2214 RED_MUSHROOM Lnet/minecraft/class_402;
+	FIELD field_2217 DOUBLE_SLAB Lnet/minecraft/class_381;
+	FIELD field_2218 SLAB Lnet/minecraft/class_381;
 	FIELD field_2220 TNT Lnet/minecraft/class_381;
 	FIELD field_2223 OBSIDIAN Lnet/minecraft/class_381;
 	FIELD field_2225 FIRE Lnet/minecraft/class_455;
@@ -79,16 +81,21 @@ CLASS net/minecraft/class_381 net/minecraft/world/tile/Tile
 	FIELD field_2764 REPEATER_OFF Lnet/minecraft/class_381;
 	FIELD field_2765 REPEATER_ON Lnet/minecraft/class_381;
 	FIELD field_3149 RAIL Lnet/minecraft/class_381;
+	FIELD field_3382 TALL_GRASS Lnet/minecraft/class_759;
+	FIELD field_3383 DEAD_BUSH Lnet/minecraft/class_747;
 	FIELD field_3385 TRAPDOOR Lnet/minecraft/class_381;
 	METHOD <init> (IILnet/minecraft/class_204;)V
 		ARG 1 id
 	METHOD <init> (ILnet/minecraft/class_204;)V
 		ARG 1 id
-	METHOD method_1115 (II)I
+	METHOD method_1115 getTextureFromMeta (II)I
+		ARG 1 meta
 		ARG 2 lit
 	METHOD method_1116 drops (ILjava/util/Random;)I
 		ARG 2 random
 	METHOD method_1119 material (Lnet/minecraft/class_37;)Lnet/minecraft/class_381;
+	METHOD method_1122 (Lnet/minecraft/class_92;IIIIF)V
+		ARG 5 meta
 	METHOD method_1125 onUse (Lnet/minecraft/class_92;IIILnet/minecraft/class_123;)Z
 		ARG 1 level
 		ARG 2 x
@@ -128,4 +135,7 @@ CLASS net/minecraft/class_381 net/minecraft/world/tile/Tile
 		ARG 3 y
 		ARG 4 z
 		ARG 5 noteType
+	METHOD method_1522 getItemDamage (I)I
+		ARG 1 meta
+	METHOD method_1815 getName ()Ljava/lang/String;
 	METHOD method_2256 registerBurnables ()V
