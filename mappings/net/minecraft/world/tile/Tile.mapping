@@ -1,6 +1,8 @@
 CLASS net/minecraft/class_381 net/minecraft/world/tile/Tile
+	FIELD field_1676 texture I
 	FIELD field_1677 id I
 	FIELD field_1679 blastResistance F
+	FIELD field_1688 material Lnet/minecraft/class_204;
 	FIELD field_1690 STONE_SETTINGS Lnet/minecraft/class_37;
 	FIELD field_1691 WOOD_MATERIAL Lnet/minecraft/class_37;
 	FIELD field_1692 GRAVEL_SETTINGS Lnet/minecraft/class_37;
@@ -86,8 +88,10 @@ CLASS net/minecraft/class_381 net/minecraft/world/tile/Tile
 	FIELD field_3385 TRAPDOOR Lnet/minecraft/class_381;
 	METHOD <init> (IILnet/minecraft/class_204;)V
 		ARG 1 id
+		ARG 2 texture
 	METHOD <init> (ILnet/minecraft/class_204;)V
 		ARG 1 id
+		ARG 2 material
 	METHOD method_1115 getTextureFromMeta (II)I
 		ARG 1 meta
 		ARG 2 lit
@@ -115,6 +119,11 @@ CLASS net/minecraft/class_381 net/minecraft/world/tile/Tile
 		ARG 4 z
 		ARG 5 random
 	METHOD method_1137 blastResistance (F)Lnet/minecraft/class_381;
+	METHOD method_1139 (Lnet/minecraft/class_92;III)V
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
 	METHOD method_1142 (Lnet/minecraft/class_92;IIILjava/util/Random;)V
 		ARG 1 level
 		ARG 2 x
@@ -135,7 +144,7 @@ CLASS net/minecraft/class_381 net/minecraft/world/tile/Tile
 		ARG 3 y
 		ARG 4 z
 		ARG 5 noteType
-	METHOD method_1522 getItemDamage (I)I
+	METHOD method_1522 getItemMeta (I)I
 		ARG 1 meta
 	METHOD method_1815 getName ()Ljava/lang/String;
 	METHOD method_2256 registerBurnables ()V

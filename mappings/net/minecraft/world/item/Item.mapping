@@ -2,16 +2,50 @@ CLASS net/minecraft/class_479 net/minecraft/world/item/Item
 	FIELD field_1973 MUSHROOM_STEW Lnet/minecraft/class_479;
 	FIELD field_1979 FEATHER Lnet/minecraft/class_479;
 	FIELD field_1980 SULPHUR Lnet/minecraft/class_479;
+	FIELD field_1988 BREAD Lnet/minecraft/class_479;
+	FIELD field_1989 LEATHER_HELMET Lnet/minecraft/class_479;
+	FIELD field_1990 LEATHER_CHESTPLATE Lnet/minecraft/class_479;
+	FIELD field_1991 LEATHER_LEGGINGS Lnet/minecraft/class_479;
+	FIELD field_1992 LEATHER_BOOTS Lnet/minecraft/class_479;
+	FIELD field_1993 CHAIN_HELMET Lnet/minecraft/class_479;
+	FIELD field_1994 CHAIN_CHESTPLATE Lnet/minecraft/class_479;
+	FIELD field_1995 CHAIN_LEGGINGS Lnet/minecraft/class_479;
+	FIELD field_1996 REDSTONE Lnet/minecraft/class_479;
 	FIELD field_1997 SNOWBALL Lnet/minecraft/class_479;
 	FIELD field_1998 BOAT Lnet/minecraft/class_479;
 	FIELD field_1999 LEATHER Lnet/minecraft/class_479;
 	FIELD field_2008 translationKey Ljava/lang/String;
 	FIELD field_2010 EGG Lnet/minecraft/class_479;
 	FIELD field_2011 COMPASS Lnet/minecraft/class_479;
+	FIELD field_2012 FISHING_ROD Lnet/minecraft/class_479;
 	FIELD field_2013 CLOCK Lnet/minecraft/class_479;
+	FIELD field_2014 GLOW_STONE Lnet/minecraft/class_479;
+	FIELD field_2015 FISH Lnet/minecraft/class_479;
 	FIELD field_2018 CAT_RECORD Lnet/minecraft/class_479;
 	FIELD field_2019 id I
 	FIELD field_2020 maxStackSize I
+	FIELD field_2022 texture I
+	FIELD field_2023 CHAIN_BOOTS Lnet/minecraft/class_479;
+	FIELD field_2024 IRON_HELMET Lnet/minecraft/class_479;
+	FIELD field_2025 IRON_CHESTPLATE Lnet/minecraft/class_479;
+	FIELD field_2026 IRON_LEGGINGS Lnet/minecraft/class_479;
+	FIELD field_2027 IRON_BOOTS Lnet/minecraft/class_479;
+	FIELD field_2028 DIAMOND_HELMET Lnet/minecraft/class_479;
+	FIELD field_2029 DIAMOND_CHESTPLATE Lnet/minecraft/class_479;
+	FIELD field_2030 DIAMOND_LEGGINGS Lnet/minecraft/class_479;
+	FIELD field_2031 DIAMOND_BOOTS Lnet/minecraft/class_479;
+	FIELD field_2032 GOLD_HELMET Lnet/minecraft/class_479;
+	FIELD field_2033 GOLD_CHESTPLATE Lnet/minecraft/class_479;
+	FIELD field_2034 GOLD_LEGGINGS Lnet/minecraft/class_479;
+	FIELD field_2035 GOLD_BOOTS Lnet/minecraft/class_479;
+	FIELD field_2036 FLINT Lnet/minecraft/class_479;
+	FIELD field_2037 PORKCHOP Lnet/minecraft/class_479;
+	FIELD field_2038 COOKED_PORKCHOP Lnet/minecraft/class_479;
+	FIELD field_2044 WATER_BUCKET Lnet/minecraft/class_479;
+	FIELD field_2045 LAVA_BUCKET Lnet/minecraft/class_479;
+	FIELD field_2046 MINECART Lnet/minecraft/class_479;
+	FIELD field_2047 SADDLE Lnet/minecraft/class_479;
+	FIELD field_2048 DOOR Lnet/minecraft/class_479;
 	FIELD field_2049 random Ljava/util/Random;
 	FIELD field_2051 items [Lnet/minecraft/class_479;
 	FIELD field_2052 IRON_SHOVEL Lnet/minecraft/class_479;
@@ -27,6 +61,7 @@ CLASS net/minecraft/class_479 net/minecraft/world/item/Item
 	FIELD field_2065 WOOD_SHOVEL Lnet/minecraft/class_479;
 	FIELD field_2066 WOOD_PICKAXE Lnet/minecraft/class_479;
 	FIELD field_2331 remainder Lnet/minecraft/class_479;
+	FIELD field_2332 COOKED_FISH Lnet/minecraft/class_479;
 	FIELD field_2634 BED Lnet/minecraft/class_479;
 	FIELD field_2827 durability I
 	FIELD field_2828 COOKIE Lnet/minecraft/class_479;
@@ -37,10 +72,16 @@ CLASS net/minecraft/class_479 net/minecraft/world/item/Item
 	METHOD method_1303 setTranslationKey (Ljava/lang/String;)Lnet/minecraft/class_479;
 	METHOD method_1305 getDurability ()I
 	METHOD method_1434 getCraftingResult (Lnet/minecraft/class_479;)Lnet/minecraft/class_479;
+	METHOD method_1436 (Lnet/minecraft/class_164;)Ljava/lang/String;
+		ARG 1 item
 	METHOD method_1438 setDurability (I)Lnet/minecraft/class_479;
 		ARG 1 durability
 	METHOD method_1440 getRecipeRemainder ()Lnet/minecraft/class_479;
 	METHOD method_1441 hasRecipeRemainder ()Z
+	METHOD method_1925 getTexture (I)I
+		ARG 1 meta
+	METHOD method_1926 getTexture (Lnet/minecraft/class_164;)I
+		ARG 1 item
 	METHOD method_355 onUse (Lnet/minecraft/class_164;Lnet/minecraft/class_92;Lnet/minecraft/class_480;)Lnet/minecraft/class_164;
 		ARG 1 item
 		ARG 2 level
