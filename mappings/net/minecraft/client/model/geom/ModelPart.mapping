@@ -4,12 +4,20 @@ CLASS net/minecraft/class_284 net/minecraft/client/model/geom/ModelPart
 	FIELD field_1140 z F
 	FIELD field_1141 xRot F
 	FIELD field_1142 yRot F
+	FIELD field_1143 zRot F
+	FIELD field_1144 mirror Z
+	FIELD field_1145 visible Z
+	FIELD field_1146 neverRender Z
+	FIELD field_1147 vertices [Lnet/minecraft/class_144;
+	FIELD field_1148 polygons [Lnet/minecraft/class_367;
 	FIELD field_1149 xTexSize I
 	FIELD field_1150 yTexSize I
+	FIELD field_1151 compiled Z
+	FIELD field_1152 list I
 	METHOD <init> (II)V
 		ARG 1 xTexSize
 		ARG 2 yTexSize
-	METHOD method_1807 (F)V
+	METHOD method_1807 renderRollable (F)V
 		ARG 1 scale
 	METHOD method_816 render (F)V
 		ARG 1 scale
@@ -19,3 +27,7 @@ CLASS net/minecraft/class_284 net/minecraft/client/model/geom/ModelPart
 		ARG 3 z
 	METHOD method_818 addBox (FFFIII)V
 	METHOD method_819 addBox (FFFIIIF)V
+	METHOD method_820 translateTo (F)V
+		ARG 1 scale
+	METHOD method_821 compile (F)V
+		ARG 1 scale

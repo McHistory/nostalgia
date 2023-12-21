@@ -1,10 +1,12 @@
-CLASS net/minecraft/class_570 net/minecraft/LevelSaver
-	FIELD field_2626 parent Ljava/io/File;
-	FIELD field_2627 players Ljava/io/File;
-	FIELD field_2628 currentSession J
-	FIELD field_3264 data Ljava/io/File;
-	METHOD <init> (Ljava/io/File;Ljava/lang/String;Z)V
-		ARG 1 savesFolder
-		ARG 3 savePlayers
-	METHOD method_1606 getSavesDirectory ()Ljava/io/File;
-	METHOD method_1607 writeSessionLock ()V
+CLASS net/minecraft/class_602 net/minecraft/LevelSaver
+	METHOD method_1732 save (Lnet/minecraft/class_567;)V
+		ARG 1 data
+	METHOD method_1733 saveWithPlayers (Lnet/minecraft/class_567;Ljava/util/List;)V
+		ARG 1 data
+		ARG 2 players
+	METHOD method_1734 readDimension (Lnet/minecraft/class_417;)Lnet/minecraft/class_10;
+		ARG 1 dimension
+	METHOD method_1735 checkSession ()V
+	METHOD method_1736 getLevelData ()Lnet/minecraft/class_567;
+	METHOD method_2262 getDataFile (Ljava/lang/String;)Ljava/io/File;
+		ARG 1 name

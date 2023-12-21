@@ -1,14 +1,41 @@
 CLASS net/minecraft/class_480 net/minecraft/world/entity/Player
 	FIELD field_2080 inventory Lnet/minecraft/class_163;
+	FIELD field_2082 containerMenu Lnet/minecraft/class_475;
 	FIELD field_2084 score I
+	FIELD field_2089 username Ljava/lang/String;
 	FIELD field_2090 dimension I
 	FIELD field_2513 cloakImage Ljava/lang/String;
+	FIELD field_2636 sleeping Z
+	FIELD field_2638 sleepCounter I
+	FIELD field_2829 respawnPosition Lnet/minecraft/class_562;
+	FIELD field_3271 portalTime F
+	FIELD field_3272 oPortalTime F
 	METHOD method_1309 openCraftingTable (III)V
 		ARG 1 x
 		ARG 2 y
 		ARG 3 z
 	METHOD method_1442 openDispenser (Lnet/minecraft/class_503;)V
 		ARG 1 te
+	METHOD method_1623 isSleepingLongEnough ()Z
+	METHOD method_1624 getSleepTimer ()I
+	METHOD method_1626 startSleepInBed (III)Lnet/minecraft/class_610;
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+	METHOD method_1627 displayClientMessage (Ljava/lang/String;)V
+		ARG 1 msg
+	METHOD method_1773 getRespawnPosition ()Lnet/minecraft/class_562;
+	METHOD method_1774 setRespawnPosition (Lnet/minecraft/class_562;)V
+		ARG 1 pos
+	METHOD method_1777 awardStat (Lnet/minecraft/class_718;I)V
+		ARG 1 stat
+		ARG 2 increment
+	METHOD method_1778 checkMovementStatistics (DDD)V
+		ARG 1 x
+		ARG 3 y
+		ARG 5 z
+	METHOD method_1929 awardStat (Lnet/minecraft/class_718;)V
+		ARG 1 stat
 	METHOD method_377 openContainer (Lnet/minecraft/class_211;)V
 		ARG 1 container
 	METHOD method_378 openFurnace (Lnet/minecraft/class_330;)V

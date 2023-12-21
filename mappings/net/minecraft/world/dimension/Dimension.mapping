@@ -1,7 +1,7 @@
 CLASS net/minecraft/class_417 net/minecraft/world/dimension/Dimension
 	FIELD field_1793 level Lnet/minecraft/class_92;
 	FIELD field_1794 biomeProvider Lnet/minecraft/class_435;
-	FIELD field_1795 foggy Z
+	FIELD field_1795 natural Z
 	FIELD field_1796 ultraWarm Z
 	FIELD field_1797 hasCeiling Z
 	FIELD field_1798 brightnessRamp [F
@@ -13,6 +13,9 @@ CLASS net/minecraft/class_417 net/minecraft/world/dimension/Dimension
 		ARG 2 partialTicks
 	METHOD method_1204 byId (I)Lnet/minecraft/class_417;
 		ARG 0 id
+	METHOD method_1205 isValidSpawnPosition (II)Z
+		ARG 1 x
+		ARG 2 z
 	METHOD method_1206 getTimeOfDay (JF)F
 		ARG 1 timeOfDay
 		ARG 3 partialTicks
@@ -25,7 +28,7 @@ CLASS net/minecraft/class_417 net/minecraft/world/dimension/Dimension
 		ARG 1 timeOfDay
 		ARG 2 partialTicks
 	METHOD method_1211 getLevelSource ()Lnet/minecraft/class_32;
-	METHOD method_1212 stayInDimensionOnDeath ()Z
+	METHOD method_1212 mayRespawn ()Z
 	METHOD method_2263 getDimensionFromId (I)Lnet/minecraft/class_417;
 		ARG 0 id
 	METHOD method_2264 hasNormalSkyColor ()Z

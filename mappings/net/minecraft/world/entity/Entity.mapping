@@ -7,14 +7,23 @@ CLASS net/minecraft/class_333 net/minecraft/world/entity/Entity
 	FIELD field_1322 xRotO F
 	FIELD field_1323 bb Lnet/minecraft/class_510;
 	FIELD field_1324 onGround Z
+	FIELD field_1325 ENTITY_COUNTER I
+	FIELD field_1329 hurtMarked Z
 	FIELD field_1331 removed Z
+	FIELD field_1332 ridingHeight F
 	FIELD field_1333 dimensionsWidth F
 	FIELD field_1334 dimensionsHeight F
+	FIELD field_1335 walkDistO F
+	FIELD field_1336 walkDist F
 	FIELD field_1338 fallDistance F
 	FIELD field_1339 xOld D
 	FIELD field_1340 yOld D
 	FIELD field_1341 zOld D
 	FIELD field_1344 id I
+	FIELD field_1345 viewScale D
+	FIELD field_1346 blocksBuilding Z
+	FIELD field_1347 passenger Lnet/minecraft/class_333;
+	FIELD field_1348 vechicle Lnet/minecraft/class_333;
 	FIELD field_1349 level Lnet/minecraft/class_92;
 	FIELD field_1350 xo D
 	FIELD field_1351 yo D
@@ -23,23 +32,55 @@ CLASS net/minecraft/class_333 net/minecraft/world/entity/Entity
 	FIELD field_1354 y D
 	FIELD field_1355 z D
 	FIELD field_1356 motionX D
+	FIELD field_1358 noPhysics Z
 	FIELD field_1361 random Ljava/util/Random;
 	FIELD field_1362 tickCount I
 	FIELD field_1364 remainingFireTicks I
 	FIELD field_1366 wasInWater Z
 	FIELD field_1368 air I
+	FIELD field_1370 fireImmune Z
 	FIELD field_2411 syncData Lnet/minecraft/class_544;
 	METHOD <init> (Lnet/minecraft/class_92;)V
 		ARG 1 level
+	METHOD method_1494 getEntityData ()Lnet/minecraft/class_544;
+	METHOD method_1497 spawnAtLocation (IIF)Lnet/minecraft/class_136;
+		ARG 1 item
+		ARG 2 count
+		ARG 3 heightOffset
+	METHOD method_1498 spawnAtLocation (Lnet/minecraft/class_164;F)Lnet/minecraft/class_136;
+		ARG 1 item
+		ARG 2 heightOffset
+	METHOD method_1499 defineSynchedData ()V
+	METHOD method_1810 isMovementNoisy ()Z
 	METHOD method_2064 thunderHit (Lnet/minecraft/class_650;)V
 		ARG 1 bolt
-	METHOD method_906 updateWaterState ()V
+	METHOD method_905 getTexture ()Ljava/lang/String;
+	METHOD method_906 baseTick ()V
 	METHOD method_907 isAlive ()Z
-	METHOD method_910 discard ()V
+	METHOD method_908 outOfWorld ()V
+	METHOD method_909 getLookAngle ()Lnet/minecraft/class_16;
+	METHOD method_910 remove ()V
+	METHOD method_913 markHurt ()V
+	METHOD method_914 getEncodeId ()Ljava/lang/String;
+	METHOD method_915 isInWall ()Z
+	METHOD method_917 shouldRenderAtSqrDistance (D)Z
+		ARG 1 distance
 	METHOD method_918 setMotion (DDD)V
 		ARG 1 x
 		ARG 3 y
 		ARG 5 z
+	METHOD method_919 lerpTo (DDDFFI)V
+		ARG 1 lerpX
+		ARG 3 lerpY
+		ARG 5 lerpZ
+		ARG 7 lerpYRot
+		ARG 8 lerpXRot
+		ARG 9 lerpSteps
+	METHOD method_920 checkFallDamage (DZ)V
+		ARG 1 yVelocity
+		ARG 3 onGround
+	METHOD method_921 getBrightness (F)F
+		ARG 1 tickDelta
 	METHOD method_922 setDimensions (FF)V
 		ARG 1 width
 		ARG 2 height
@@ -47,15 +88,37 @@ CLASS net/minecraft/class_333 net/minecraft/world/entity/Entity
 		ARG 1 inputX
 		ARG 2 inputY
 		ARG 3 inputZ
+	METHOD method_924 burn (I)V
+		ARG 1 damage
 	METHOD method_925 dropItem (IIF)Lnet/minecraft/class_136;
 		ARG 1 id
 		ARG 2 count
+	METHOD method_926 shouldRender (Lnet/minecraft/class_16;)Z
+		ARG 1 other
+	METHOD method_927 setLevel (Lnet/minecraft/class_92;)V
+		ARG 1 level
+	METHOD method_928 interact (Lnet/minecraft/class_480;)Z
+		ARG 1 player
+	METHOD method_929 isSubmergedInFluid (Lnet/minecraft/class_204;)Z
+		ARG 1 material
 	METHOD method_930 readAdditionalSaveData (Lnet/minecraft/class_246;)V
 		ARG 1 entityTag
+	METHOD method_931 getCollideAgainstBox (Lnet/minecraft/class_333;)Lnet/minecraft/class_510;
+		ARG 1 entity
+	METHOD method_932 hurt (Lnet/minecraft/class_333;I)Z
+		ARG 1 entity
+		ARG 2 damage
+	METHOD method_933 newDoubleList ([D)Lnet/minecraft/class_335;
+		ARG 1 doubles
+	METHOD method_934 newFloatList ([F)Lnet/minecraft/class_335;
+		ARG 1 floats
 	METHOD method_935 setPos (DDD)V
 		ARG 1 x
 		ARG 3 y
 		ARG 5 z
+	METHOD method_937 spawnAtLocation (II)Lnet/minecraft/class_136;
+		ARG 1 item
+		ARG 2 count
 	METHOD method_939 addAdditionalSaveData (Lnet/minecraft/class_246;)V
 		ARG 1 entityTag
 	METHOD method_941 moveTo (DDDFF)V
@@ -64,17 +127,25 @@ CLASS net/minecraft/class_333 net/minecraft/world/entity/Entity
 		ARG 5 z
 		ARG 7 yRot
 		ARG 8 xRot
+	METHOD method_942 causeFallDamage (F)V
+		ARG 1 fallDistance
 	METHOD method_943 setRot (FF)V
 		ARG 1 yRot
 		ARG 2 xRot
+	METHOD method_944 saveAsPassenger (Lnet/minecraft/class_246;)Z
+	METHOD method_946 move (DDD)V
+		ARG 1 x
+		ARG 3 y
+		ARG 5 z
 	METHOD method_947 turn (FF)V
-	METHOD method_948 writeNbt (Lnet/minecraft/class_246;)V
+	METHOD method_948 saveWithoutId (Lnet/minecraft/class_246;)V
 		ARG 1 nbt
+	METHOD method_950 getCollideBox ()Lnet/minecraft/class_510;
 	METHOD method_951 distanceToSqr (DDD)D
 		ARG 1 x
 		ARG 3 y
 		ARG 5 z
-	METHOD method_952 readNbt (Lnet/minecraft/class_246;)V
+	METHOD method_952 load (Lnet/minecraft/class_246;)V
 		ARG 1 nbt
 	METHOD method_953 distanceTo (Lnet/minecraft/class_333;)F
 		ARG 1 entity
@@ -91,4 +162,13 @@ CLASS net/minecraft/class_333 net/minecraft/world/entity/Entity
 		ARG 5 z
 	METHOD method_959 push (Lnet/minecraft/class_333;)V
 		ARG 1 entity
+	METHOD method_960 startRiding (Lnet/minecraft/class_333;)V
+		ARG 1 entity
 	METHOD method_961 isInWater ()Z
+	METHOD method_963 getRideHeight ()D
+	METHOD method_964 positionRider ()V
+	METHOD method_965 getPickRadius ()F
+	METHOD method_966 isPickable ()Z
+	METHOD method_969 rideTick ()V
+	METHOD method_970 resetPos ()V
+	METHOD method_972 getRidingHeight ()D

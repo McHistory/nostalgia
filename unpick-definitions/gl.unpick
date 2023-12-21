@@ -1,0 +1,170 @@
+v2
+
+# Unpick definition for GL
+
+# Editing Note:
+# This file sorts constant declarations by the class name it is
+# most frequently used in. Lines declaring or using the same constants
+# are grouped.
+
+# Where possible, this will unpick the constant using values from
+# the game jar (usually GlConst in Blaze3D.) If there is no applicable
+# field there, this will use the value from GLxx class in LWJGL,
+# where XX is the lowest version the constant is available in.
+
+# This does not unpick all constants in LWJGL; that'd become
+# too big and target methods become harder to maintain.
+# Only constants that need unpicking in vanilla are listed.
+
+# Framebuffer
+
+constant gl_tex_parameter_pname org/lwjgl/opengl/GL12 GL_TEXTURE_MAX_LEVEL
+constant gl_tex_parameter_pname org/lwjgl/opengl/GL12 GL_TEXTURE_MAX_LOD
+constant gl_tex_parameter_pname org/lwjgl/opengl/GL12 GL_TEXTURE_MIN_LOD
+constant gl_tex_parameter_pname org/lwjgl/opengl/GL14 GL_TEXTURE_LOD_BIAS
+
+# GlDebug - Does not have blaze3d const
+constant gl_debug_source org/lwjgl/opengl/GL43 GL_DEBUG_SOURCE_API
+constant gl_debug_source org/lwjgl/opengl/GL43 GL_DEBUG_SOURCE_WINDOW_SYSTEM
+constant gl_debug_source org/lwjgl/opengl/GL43 GL_DEBUG_SOURCE_SHADER_COMPILER
+constant gl_debug_source org/lwjgl/opengl/GL43 GL_DEBUG_SOURCE_THIRD_PARTY
+constant gl_debug_source org/lwjgl/opengl/GL43 GL_DEBUG_SOURCE_APPLICATION
+constant gl_debug_source org/lwjgl/opengl/GL43 GL_DEBUG_SOURCE_OTHER
+
+constant gl_debug_type org/lwjgl/opengl/GL43 GL_DEBUG_TYPE_ERROR
+constant gl_debug_type org/lwjgl/opengl/GL43 GL_DEBUG_TYPE_DEPRECATED_BEHAVIOR
+constant gl_debug_type org/lwjgl/opengl/GL43 GL_DEBUG_TYPE_UNDEFINED_BEHAVIOR
+constant gl_debug_type org/lwjgl/opengl/GL43 GL_DEBUG_TYPE_PORTABILITY
+constant gl_debug_type org/lwjgl/opengl/GL43 GL_DEBUG_TYPE_PERFORMANCE
+constant gl_debug_type org/lwjgl/opengl/GL43 GL_DEBUG_TYPE_OTHER
+constant gl_debug_type org/lwjgl/opengl/GL43 GL_DEBUG_TYPE_MARKER
+
+constant gl_debug_severity org/lwjgl/opengl/GL43 GL_DEBUG_SEVERITY_HIGH
+constant gl_debug_severity org/lwjgl/opengl/GL43 GL_DEBUG_SEVERITY_MEDIUM
+constant gl_debug_severity org/lwjgl/opengl/GL43 GL_DEBUG_SEVERITY_LOW
+constant gl_debug_severity org/lwjgl/opengl/GL43 GL_DEBUG_SEVERITY_NOTIFICATION
+
+constant gl_enable_state org/lwjgl/opengl/GL11 GL_FLAT
+constant gl_enable_state org/lwjgl/opengl/GL11 GL_BLEND
+constant gl_enable_state org/lwjgl/opengl/GL11 GL_DEPTH_TEST
+constant gl_enable_state org/lwjgl/opengl/GL11 GL_LIGHTING
+constant gl_enable_state org/lwjgl/opengl/GL11 GL_LIGHT0
+constant gl_enable_state org/lwjgl/opengl/GL11 GL_LIGHT1
+constant gl_enable_state org/lwjgl/opengl/GL11 GL_LIGHT2
+constant gl_enable_state org/lwjgl/opengl/GL11 GL_LIGHT3
+constant gl_enable_state org/lwjgl/opengl/GL11 GL_LIGHT4
+constant gl_enable_state org/lwjgl/opengl/GL11 GL_LIGHT5
+constant gl_enable_state org/lwjgl/opengl/GL11 GL_LIGHT6
+constant gl_enable_state org/lwjgl/opengl/GL11 GL_LIGHT7
+constant gl_enable_state org/lwjgl/opengl/GL11 GL_POSITION
+constant gl_enable_state org/lwjgl/opengl/GL11 GL_DIFFUSE
+constant gl_enable_state org/lwjgl/opengl/GL11 GL_AMBIENT
+constant gl_enable_state org/lwjgl/opengl/GL11 GL_SPECULAR
+constant gl_enable_state org/lwjgl/opengl/GL11 GL_LIGHT_MODEL_AMBIENT
+constant gl_enable_state org/lwjgl/opengl/GL11 GL_FRONT_AND_BACK
+constant gl_enable_state org/lwjgl/opengl/GL11 GL_AMBIENT_AND_DIFFUSE
+constant gl_enable_state org/lwjgl/opengl/GL11 GL_COLOR_BUFFER_BIT
+constant gl_enable_state org/lwjgl/opengl/GL11 GL_CULL_FACE
+constant gl_enable_state org/lwjgl/opengl/GL11 GL_PROJECTION
+constant gl_enable_state org/lwjgl/opengl/GL11 GL_POLYGON_OFFSET_LINE
+constant gl_enable_state org/lwjgl/opengl/GL11 GL_COLOR_LOGIC_OP
+constant gl_enable_state org/lwjgl/opengl/GL11 GL_SCISSOR_TEST
+constant gl_enable_state org/lwjgl/opengl/GL11 GL_COLOR_MATERIAL
+constant gl_enable_state org/lwjgl/opengl/GL12 GL_RESCALE_NORMAL
+constant gl_enable_state org/lwjgl/opengl/GL43 GL_DEBUG_OUTPUT
+constant gl_enable_state org/lwjgl/opengl/GL43 GL_DEBUG_OUTPUT_SYNCHRONOUS
+
+constant gl_hint_mode org/lwjgl/opengl/GL11 GL_DONT_CARE
+
+# note: glGetProgramInfoLog 32768 is not a const or flag
+
+# GlTimer
+
+constant gl_query_target org/lwjgl/opengl/GL33 GL_TIME_ELAPSED
+
+constant gl_query_object_pname org/lwjgl/opengl/GL15 GL_QUERY_RESULT
+constant gl_query_object_pname org/lwjgl/opengl/GL15 GL_QUERY_RESULT_AVAILABLE
+
+# GlDebugInfo
+constant gl_get_string_name org/lwjgl/opengl/GL11 GL_VENDOR
+constant gl_get_string_name org/lwjgl/opengl/GL11 GL_RENDERER
+constant gl_get_string_name org/lwjgl/opengl/GL11 GL_VERSION
+constant gl_get_string_name org/lwjgl/opengl/GL11 GL_EXTENSIONS
+
+# GlStateManager
+
+constant gl_get_integer_pname org/lwjgl/opengl/GL11 GL_MAX_TEXTURE_SIZE
+
+constant gl_logic_op org/lwjgl/opengl/GL11 GL_CLEAR
+constant gl_logic_op org/lwjgl/opengl/GL11 GL_AND
+constant gl_logic_op org/lwjgl/opengl/GL11 GL_AND_REVERSE
+constant gl_logic_op org/lwjgl/opengl/GL11 GL_COPY
+constant gl_logic_op org/lwjgl/opengl/GL11 GL_AND_INVERTED
+constant gl_logic_op org/lwjgl/opengl/GL11 GL_NOOP
+constant gl_logic_op org/lwjgl/opengl/GL11 GL_XOR
+constant gl_logic_op org/lwjgl/opengl/GL11 GL_OR
+constant gl_logic_op org/lwjgl/opengl/GL11 GL_NOR
+constant gl_logic_op org/lwjgl/opengl/GL11 GL_EQUIV
+constant gl_logic_op org/lwjgl/opengl/GL11 GL_INVERT
+constant gl_logic_op org/lwjgl/opengl/GL11 GL_OR_REVERSE
+constant gl_logic_op org/lwjgl/opengl/GL11 GL_COPY_INVERTED
+constant gl_logic_op org/lwjgl/opengl/GL11 GL_OR_INVERTED
+constant gl_logic_op org/lwjgl/opengl/GL11 GL_NAND
+constant gl_logic_op org/lwjgl/opengl/GL11 GL_SET
+
+constant gl_blend_func_factor org/lwjgl/opengl/GL14 GL_CONSTANT_ALPHA
+constant gl_blend_func_factor org/lwjgl/opengl/GL14 GL_CONSTANT_COLOR
+constant gl_blend_func_factor org/lwjgl/opengl/GL14 GL_ONE_MINUS_CONSTANT_ALPHA
+constant gl_blend_func_factor org/lwjgl/opengl/GL14 GL_ONE_MINUS_CONSTANT_COLOR
+
+# Target definition
+
+target_method org/lwjgl/opengl/GL11 glTexImage2D (IIIIIIIILjava/nio/IntBuffer;)V
+	param 2 gl_tex_format
+	param 6 gl_tex_format
+
+target_method org/lwjgl/opengl/GL11 glMatrixMode (I)V
+	param 0 gl_enable_state
+
+target_method org/lwjgl/opengl/GL11 glEnable (I)V
+	param 0 gl_enable_state
+
+target_method org/lwjgl/opengl/GL11 glDisable (I)V
+	param 0 gl_enable_state
+
+target_method org/lwjgl/opengl/GL11 glShadeModel (I)V
+	param 0 gl_enable_state
+
+target_method org/lwjgl/opengl/GL11 glLightModel (ILjava/nio/FloatBuffer;)V
+	param 0 gl_enable_state
+
+target_method org/lwjgl/opengl/GL11 glLight (IILjava/nio/FloatBuffer;)V
+	param 0 gl_enable_state
+	param 1 gl_enable_state
+
+target_method org/lwjgl/opengl/GL11 glColorMaterial (II)V
+	param 0 gl_enable_state
+	param 1 gl_enable_state
+
+target_method org/lwjgl/opengl/KHRDebug glDebugMessageControl (III[IZ)V
+	param 0 gl_hint_mode
+	param 1 gl_hint_mode
+target_method org/lwjgl/opengl/ARBDebugOutput glDebugMessageControlARB (III[IZ)V
+	param 0 gl_hint_mode
+	param 1 gl_hint_mode
+
+target_method org/lwjgl/opengl/GL32C glBeginQuery (II)V
+	param 0 gl_query_target
+target_method org/lwjgl/opengl/GL32C glEndQuery (I)V
+	param 0 gl_query_target
+
+target_method org/lwjgl/opengl/GL32C glGetQueryObjecti (II)I
+	param 1 gl_query_object_pname
+target_method org/lwjgl/opengl/ARBTimerQuery glGetQueryObjecti64 (II)J
+	param 1 gl_query_object_pname
+
+target_method org/lwjgl/opengl/GL32C glBindBuffer (II)V
+	param 0 gl_bind_buffer_target
+target_method org/lwjgl/opengl/GL32C glBufferData (IJI)V
+	param 0 gl_bind_buffer_target
+	param 2 gl_buffer_data_usage

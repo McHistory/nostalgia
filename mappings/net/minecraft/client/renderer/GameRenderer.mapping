@@ -1,0 +1,41 @@
+CLASS net/minecraft/class_700 net/minecraft/client/renderer/GameRenderer
+	FIELD field_3100 zoom D
+	FIELD field_3101 zoom_x D
+	FIELD field_3102 zoom_y D
+	FIELD field_3104 random Ljava/util/Random;
+	FIELD field_3105 rainSoundTime I
+	FIELD field_3108 itemInHandRenderer Lnet/minecraft/class_304;
+	FIELD field_3112 fogRed F
+	FIELD field_3113 fogGreen F
+	FIELD field_3114 fogBlue F
+	FIELD field_3115 minecraft Lnet/minecraft/client/Minecraft;
+	FIELD field_3116 renderDistance F
+	FIELD field_3117 tick I
+	FIELD field_3118 targetedEntity Lnet/minecraft/class_333;
+	FIELD field_3131 fov F
+	FIELD field_3132 oldFov F
+	FIELD field_3411 nanoTime J
+	METHOD <init> (Lnet/minecraft/client/Minecraft;)V
+		ARG 1 minecraft
+	METHOD method_2032 tick ()V
+	METHOD method_2033 pick (F)V
+		ARG 1 partialTick
+	METHOD method_2035 setupCamera (FI)V
+		ARG 1 partialTick
+		ARG 2 nanoSeconds
+	METHOD method_2036 setupFog (IF)V
+	METHOD method_2039 renderItemInHand (FI)V
+		ARG 1 partialTick
+	METHOD method_2040 tickRain ()V
+	METHOD method_2042 renderSnowAndRain (F)V
+		ARG 1 partialTick
+	METHOD method_2043 getFov (F)F
+		ARG 1 partialTick
+	METHOD method_2044 bobHurt (F)V
+		ARG 1 partialTick
+	METHOD method_2045 doViewBobbing (F)V
+	METHOD method_2047 setupClearColor (F)V
+		ARG 1 partialTicks
+	METHOD method_2274 render (FJ)V
+		ARG 1 partialTick
+		ARG 2 nanoTime

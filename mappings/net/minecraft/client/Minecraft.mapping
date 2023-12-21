@@ -1,4 +1,4 @@
-CLASS net/minecraft/client/Minecraft
+CLASS net/minecraft/client/Minecraft net/minecraft/client/Minecraft
 	FIELD field_1493 soundManager Lnet/minecraft/class_454;
 	FIELD field_1495 texturepackManager Lnet/minecraft/class_154;
 	FIELD field_1496 localGameDir Ljava/io/File;
@@ -7,10 +7,11 @@ CLASS net/minecraft/client/Minecraft
 	FIELD field_1509 resourceThread Lnet/minecraft/class_42;
 	FIELD field_1518 gameDir Ljava/io/File;
 	FIELD field_1519 fullscreen Z
-	FIELD field_1522 interactionHandler Lnet/minecraft/class_251;
+	FIELD field_1522 gameMode Lnet/minecraft/class_251;
 	FIELD field_1523 displayWidth I
 	FIELD field_1524 displayHeight I
 	FIELD field_1525 level Lnet/minecraft/class_92;
+	FIELD field_1526 levelRenderer Lnet/minecraft/class_148;
 	FIELD field_1527 player Lnet/minecraft/class_45;
 	FIELD field_1529 session Lnet/minecraft/class_122;
 	FIELD field_1531 canvas Ljava/awt/Canvas;
@@ -20,10 +21,12 @@ CLASS net/minecraft/client/Minecraft
 	FIELD field_1537 loadingScreen Lnet/minecraft/class_223;
 	FIELD field_1538 renderManager Lnet/minecraft/class_285;
 	FIELD field_1541 gameOverlay Lnet/minecraft/class_376;
-	FIELD field_1544 lookingAt Lnet/minecraft/class_388;
+	FIELD field_1544 hitResult Lnet/minecraft/class_388;
 	FIELD field_1545 config Lnet/minecraft/class_192;
 	FIELD field_1546 applet Lnet/minecraft/client/MinecraftApplet;
 	FIELD field_2731 saveManager Lnet/minecraft/class_587;
+	FIELD field_2732 instance Lnet/minecraft/client/Minecraft;
+	FIELD field_2733 cameraEntity Lnet/minecraft/class_208;
 	FIELD field_3340 crashed Z
 	FIELD field_3342 gameRenderer Lnet/minecraft/class_700;
 	METHOD main ([Ljava/lang/String;)V
@@ -56,10 +59,14 @@ CLASS net/minecraft/client/Minecraft
 	METHOD method_1076 changeDimension ()V
 	METHOD method_1081 respawn ()V
 	METHOD method_1083 getOSType ()Lnet/minecraft/class_272;
+	METHOD method_1085 pickBlock ()V
 	METHOD method_1086 forceReload ()V
 	METHOD method_1362 getConnection ()Lnet/minecraft/class_231;
 	METHOD method_1683 convertWorld (Ljava/lang/String;Ljava/lang/String;)V
 	METHOD method_1684 getSaveManager ()Lnet/minecraft/class_587;
+	METHOD method_1686 useFancyGraphics ()Z
+	METHOD method_1687 useAmbientOcclusion ()Z
 	METHOD method_1808 respawn (ZI)V
 	METHOD method_2225 crash (Lnet/minecraft/class_220;)V
 		ARG 1 report
+	METHOD run run ()V

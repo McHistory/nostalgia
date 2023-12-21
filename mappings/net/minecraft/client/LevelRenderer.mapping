@@ -1,9 +1,35 @@
 CLASS net/minecraft/class_148 net/minecraft/client/LevelRenderer
-	FIELD field_565 viewDistance I
+	FIELD field_565 lastViewDistance I
+	FIELD field_566 noEntityRenderFrames I
+	FIELD field_567 totalEntities I
+	FIELD field_568 renderedEntities I
+	FIELD field_569 culledEntities I
+	FIELD field_570 totalChunks I
+	FIELD field_573 renderedChunks I
+	FIELD field_577 globalBlockEntities Ljava/util/List;
 	FIELD field_587 level Lnet/minecraft/class_92;
 	FIELD field_588 textureManager Lnet/minecraft/class_169;
+	FIELD field_591 chunks [Lnet/minecraft/class_51;
+	FIELD field_592 chunkGridSizeX I
+	FIELD field_593 chunkGridSizeY I
+	FIELD field_594 chunkGridSizeZ I
 	FIELD field_596 minecraft Lnet/minecraft/client/Minecraft;
+	FIELD field_601 starList I
+	METHOD method_416 allChanged ()V
 	METHOD method_417 renderSky (F)V
+	METHOD method_422 renderEntities (Lnet/minecraft/class_16;Lnet/minecraft/class_453;F)V
+		ARG 2 culler
+		ARG 3 partialTick
 	METHOD method_424 setLevel (Lnet/minecraft/class_92;)V
 		ARG 1 level
-	METHOD method_434 renderClouds (F)V
+	METHOD method_428 cullChunks (Lnet/minecraft/class_453;F)V
+		ARG 1 culler
+	METHOD method_429 getChunkStatistics ()Ljava/lang/String;
+	METHOD method_430 renderClouds (F)V
+	METHOD method_431 repositionCamera (III)V
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+	METHOD method_433 getEntityStatistics ()Ljava/lang/String;
+	METHOD method_434 buildClouds (F)V
+	METHOD method_436 drawStars ()V
