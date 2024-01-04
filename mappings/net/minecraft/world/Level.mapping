@@ -1,5 +1,6 @@
 CLASS net/minecraft/class_92 net/minecraft/world/Level
 	FIELD field_2615 allPlayersSleeping Z
+	FIELD field_2616 levelSaver Lnet/minecraft/class_602;
 	FIELD field_2617 levelData Lnet/minecraft/class_567;
 	FIELD field_273 lightingUpdates Ljava/util/List;
 	FIELD field_275 tickNextTickList Ljava/util/TreeSet;
@@ -42,6 +43,7 @@ CLASS net/minecraft/class_92 net/minecraft/world/Level
 	METHOD method_1592 setGameTime (J)V
 		ARG 1 time
 	METHOD method_1593 setSpawnPos (Lnet/minecraft/class_562;)V
+		ARG 1 spawnPos
 	METHOD method_1594 createLevelSource ()Lnet/minecraft/class_32;
 	METHOD method_1595 validateSpawn ()V
 	METHOD method_1596 checkSession ()V
@@ -118,6 +120,11 @@ CLASS net/minecraft/class_92 net/minecraft/world/Level
 		ARG 1 from
 		ARG 2 to
 	METHOD method_226 getBrightness (Lnet/minecraft/class_63;III)I
+	METHOD method_227 (Lnet/minecraft/class_63;IIII)V
+		ARG 1 layer
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
 	METHOD method_2278 setMetaWithUpdate (IIII)V
 		ARG 1 x
 		ARG 2 y
@@ -171,8 +178,17 @@ CLASS net/minecraft/class_92 net/minecraft/world/Level
 		ARG 2 y
 		ARG 3 z
 		ARG 4 te
+	METHOD method_265 setLightLevel (Lnet/minecraft/class_63;IIII)V
+		ARG 1 layer
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+		ARG 5 level
 	METHOD method_268 save (Ljava/io/File;Ljava/lang/String;)V
+	METHOD method_269 getMobCountForClass (Ljava/lang/Class;)I
+		ARG 1 entityClass
 	METHOD method_273 getEntities (Lnet/minecraft/class_333;Lnet/minecraft/class_510;)Ljava/util/List;
+		ARG 1 entity
 	METHOD method_275 getCloudColor (F)Lnet/minecraft/class_16;
 	METHOD method_276 getChunk (II)Lnet/minecraft/class_203;
 		ARG 1 x
@@ -204,6 +220,8 @@ CLASS net/minecraft/class_92 net/minecraft/world/Level
 		ARG 1 x
 		ARG 2 z
 	METHOD method_291 getDebugEntities ()Ljava/lang/String;
+	METHOD method_294 loadChunksAroundEntity (Lnet/minecraft/class_333;)V
+		ARG 1 entity
 	METHOD method_296 hasChunk (II)Z
 		ARG 1 x
 		ARG 2 z

@@ -5,6 +5,7 @@ CLASS net/minecraft/client/Minecraft net/minecraft/client/Minecraft
 	FIELD field_1500 shouldClose Z
 	FIELD field_1508 timer Lnet/minecraft/class_286;
 	FIELD field_1509 resourceThread Lnet/minecraft/class_42;
+	FIELD field_1511 missTime I
 	FIELD field_1518 gameDir Ljava/io/File;
 	FIELD field_1519 fullscreen Z
 	FIELD field_1522 gameMode Lnet/minecraft/class_251;
@@ -13,22 +14,30 @@ CLASS net/minecraft/client/Minecraft net/minecraft/client/Minecraft
 	FIELD field_1525 level Lnet/minecraft/class_92;
 	FIELD field_1526 levelRenderer Lnet/minecraft/class_148;
 	FIELD field_1527 player Lnet/minecraft/class_45;
+	FIELD field_1528 particleEngine Lnet/minecraft/class_54;
 	FIELD field_1529 session Lnet/minecraft/class_122;
 	FIELD field_1531 canvas Ljava/awt/Canvas;
 	FIELD field_1534 textureManager Lnet/minecraft/class_169;
 	FIELD field_1535 font Lnet/minecraft/class_707;
-	FIELD field_1536 currentScreen Lnet/minecraft/class_44;
+	FIELD field_1536 screen Lnet/minecraft/class_44;
 	FIELD field_1537 loadingScreen Lnet/minecraft/class_223;
 	FIELD field_1538 renderManager Lnet/minecraft/class_285;
-	FIELD field_1541 gameOverlay Lnet/minecraft/class_376;
+	FIELD field_1541 gui Lnet/minecraft/class_376;
+	FIELD field_1542 noRender Z
 	FIELD field_1544 hitResult Lnet/minecraft/class_388;
-	FIELD field_1545 config Lnet/minecraft/class_192;
+	FIELD field_1545 options Lnet/minecraft/class_192;
 	FIELD field_1546 applet Lnet/minecraft/client/MinecraftApplet;
 	FIELD field_2731 saveManager Lnet/minecraft/class_587;
 	FIELD field_2732 instance Lnet/minecraft/client/Minecraft;
 	FIELD field_2733 cameraEntity Lnet/minecraft/class_208;
 	FIELD field_3340 crashed Z
 	FIELD field_3342 gameRenderer Lnet/minecraft/class_700;
+	METHOD <init> (Ljava/awt/Component;Ljava/awt/Canvas;Lnet/minecraft/client/MinecraftApplet;IIZ)V
+		ARG 2 canvas
+		ARG 3 applet
+		ARG 4 displayWidth
+		ARG 5 displayHeight
+		ARG 6 fullscreen
 	METHOD main ([Ljava/lang/String;)V
 		ARG 0 args
 	METHOD method_1048 init ()V

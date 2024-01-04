@@ -21,7 +21,10 @@ CLASS net/minecraft/class_381 net/minecraft/world/tile/Tile
 	FIELD field_1697 WOOL_SOUND Lnet/minecraft/class_37;
 	FIELD field_1698 SAND_SOUND Lnet/minecraft/class_37;
 	FIELD field_1699 tiles [Lnet/minecraft/class_381;
+	FIELD field_1700 TICKS_RANDOMLY [Z
 	FIELD field_1702 tileHasTileEntity [Z
+	FIELD field_1703 OPACITIES [I
+	FIELD field_1705 LIGHT_TILES [I
 	FIELD field_2170 FLOWING_WATER Lnet/minecraft/class_381;
 	FIELD field_2171 WATER Lnet/minecraft/class_381;
 	FIELD field_2172 FLOWING_LAVA Lnet/minecraft/class_381;
@@ -125,6 +128,7 @@ CLASS net/minecraft/class_381 net/minecraft/world/tile/Tile
 	METHOD <init> (ILnet/minecraft/class_204;)V
 		ARG 1 id
 		ARG 2 material
+	METHOD method_1112 lightLevel (F)Lnet/minecraft/class_381;
 	METHOD method_1113 setShape (FFFFFF)V
 		ARG 1 minX
 		ARG 2 minY
@@ -177,12 +181,22 @@ CLASS net/minecraft/class_381 net/minecraft/world/tile/Tile
 		ARG 3 y
 		ARG 4 z
 		ARG 5 random
+	METHOD method_1130 getDestroyProgress (Lnet/minecraft/class_480;)F
+		ARG 1 player
 	METHOD method_1132 getExplosionResistance (Lnet/minecraft/class_333;)F
+		ARG 1 entity
 	METHOD method_1133 (Lnet/minecraft/class_431;III)V
 		ARG 1 region
 		ARG 2 x
 		ARG 3 y
 		ARG 4 z
+	METHOD method_1135 playerDestroy (Lnet/minecraft/class_92;Lnet/minecraft/class_480;IIII)V
+		ARG 1 level
+		ARG 2 player
+		ARG 3 x
+		ARG 4 y
+		ARG 5 z
+		ARG 6 meta
 	METHOD method_1136 blocksMotion ()Z
 	METHOD method_1137 explosionResistance (F)Lnet/minecraft/class_381;
 	METHOD method_1139 onRemove (Lnet/minecraft/class_92;III)V
@@ -213,6 +227,8 @@ CLASS net/minecraft/class_381 net/minecraft/world/tile/Tile
 		ARG 3 y
 		ARG 4 z
 		ARG 5 meta
+	METHOD method_1146 randomTick (Z)Lnet/minecraft/class_381;
+		ARG 1 ticksRandomly
 	METHOD method_1147 dropResources (Lnet/minecraft/class_92;IIII)V
 		ARG 1 level
 		ARG 2 x
@@ -221,12 +237,15 @@ CLASS net/minecraft/class_381 net/minecraft/world/tile/Tile
 		ARG 5 meta
 	METHOD method_1148 getRenderLayer ()I
 	METHOD method_1149 strength (F)Lnet/minecraft/class_381;
+		ARG 1 strength
 	METHOD method_1151 wasExploded (Lnet/minecraft/class_92;III)V
 		ARG 1 level
 		ARG 2 x
 		ARG 3 y
 		ARG 4 z
 	METHOD method_1154 getTickDelay ()I
+	METHOD method_1155 opacity (I)Lnet/minecraft/class_381;
+		ARG 1 opacity
 	METHOD method_1156 getShape (Lnet/minecraft/class_92;III)Lnet/minecraft/class_510;
 		ARG 1 level
 		ARG 2 x
@@ -270,4 +289,5 @@ CLASS net/minecraft/class_381 net/minecraft/world/tile/Tile
 		ARG 5 item
 	METHOD method_2334 getColor (I)I
 		ARG 1 meta
+	METHOD method_2336 unbreakable ()Lnet/minecraft/class_381;
 	METHOD method_2337 getDestroyTime ()F

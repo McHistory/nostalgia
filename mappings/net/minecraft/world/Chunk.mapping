@@ -1,5 +1,6 @@
 CLASS net/minecraft/class_203 net/minecraft/world/Chunk
 	FIELD field_841 tiles [B
+	FIELD field_842 loaded Z
 	FIELD field_843 level Lnet/minecraft/class_92;
 	FIELD field_844 tileMeta Lnet/minecraft/class_406;
 	FIELD field_845 skyLight Lnet/minecraft/class_406;
@@ -11,6 +12,7 @@ CLASS net/minecraft/class_203 net/minecraft/world/Chunk
 	FIELD field_852 entities [Ljava/util/List;
 	FIELD field_853 terrainPopulated Z
 	FIELD field_854 changed Z
+	FIELD field_857 lastSaveHadEntities Z
 	METHOD <init> (Lnet/minecraft/class_92;II)V
 		ARG 1 level
 		ARG 2 x
@@ -20,6 +22,7 @@ CLASS net/minecraft/class_203 net/minecraft/world/Chunk
 		ARG 2 tiles
 		ARG 3 x
 		ARG 4 z
+	METHOD method_1472 isEmptyChunk ()Z
 	METHOD method_617 equals (II)Z
 		ARG 1 x
 		ARG 2 z
@@ -44,12 +47,27 @@ CLASS net/minecraft/class_203 net/minecraft/world/Chunk
 		ARG 3 z
 		ARG 4 tileEntity
 	METHOD method_622 getRandom (J)Ljava/util/Random;
+	METHOD method_623 getLightLevel (Lnet/minecraft/class_63;III)I
+		ARG 1 layer
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+	METHOD method_624 setLightLevel (Lnet/minecraft/class_63;IIII)V
+		ARG 1 layer
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+		ARG 5 level
 	METHOD method_625 getEntitiesOfClass (Ljava/lang/Class;Lnet/minecraft/class_510;Ljava/util/List;)V
 	METHOD method_626 placeTileEntity (Lnet/minecraft/class_265;)V
 		ARG 1 tileEntity
 	METHOD method_627 addEntity (Lnet/minecraft/class_333;)V
 		ARG 1 entity
+	METHOD method_628 removeEntity (Lnet/minecraft/class_333;I)V
+		ARG 1 entity
+		ARG 2 entityId
 	METHOD method_629 getEntities (Lnet/minecraft/class_333;Lnet/minecraft/class_510;Ljava/util/List;)V
+	METHOD method_632 primeHeightmap ()V
 	METHOD method_633 getYHeight (II)I
 		ARG 1 x
 		ARG 2 z
@@ -63,12 +81,15 @@ CLASS net/minecraft/class_203 net/minecraft/world/Chunk
 		ARG 3 z
 		ARG 4 meta
 	METHOD method_636 removeEntity (Lnet/minecraft/class_333;)V
+		ARG 1 entity
 	METHOD method_642 getTileEntity (III)Lnet/minecraft/class_265;
 		ARG 1 x
 		ARG 2 y
 		ARG 3 z
-	METHOD method_644 (III)V
+	METHOD method_643 load ()V
+	METHOD method_644 removeTileEntity (III)V
 		ARG 1 x
 		ARG 2 y
 		ARG 3 z
+	METHOD method_645 unload ()V
 	METHOD method_647 setChanged ()V

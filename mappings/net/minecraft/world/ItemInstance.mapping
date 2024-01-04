@@ -44,18 +44,30 @@ CLASS net/minecraft/class_164 net/minecraft/world/ItemInstance
 	METHOD method_1452 isStackable ()Z
 	METHOD method_1453 isDamageableItem ()Z
 	METHOD method_1455 isDamaged ()Z
-	METHOD method_1456 getDamage ()I
+	METHOD method_1456 getDamageValue ()I
 	METHOD method_1457 getMeta ()I
 	METHOD method_1786 damage (ILnet/minecraft/class_333;)V
 		ARG 1 amount
+	METHOD method_1787 hurtEnemy (Lnet/minecraft/class_208;Lnet/minecraft/class_480;)V
+		ARG 2 player
 	METHOD method_2201 setDamage (I)V
 		ARG 1 damage
 	METHOD method_498 getItem ()Lnet/minecraft/class_479;
 	METHOD method_499 shrink (I)Lnet/minecraft/class_164;
 		ARG 1 amount
+	METHOD method_500 mineBlock (IIIILnet/minecraft/class_480;)V
+		ARG 1 tile
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+		ARG 5 player
 	METHOD method_505 save (Lnet/minecraft/class_246;)Lnet/minecraft/class_246;
 		ARG 1 vase
+	METHOD method_507 getDestroySpeed (Lnet/minecraft/class_381;)F
+	METHOD method_510 interactEnemy (Lnet/minecraft/class_208;)V
 	METHOD method_511 load (Lnet/minecraft/class_246;)V
 		ARG 1 base
+	METHOD method_512 canDestroySpecial (Lnet/minecraft/class_381;)Z
 	METHOD method_513 getMaxStackSize ()I
+	METHOD method_514 getMaxDamage ()I
 	METHOD method_515 copy ()Lnet/minecraft/class_164;

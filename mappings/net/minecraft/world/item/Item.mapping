@@ -122,10 +122,20 @@ CLASS net/minecraft/class_479 net/minecraft/world/item/Item
 	METHOD method_1434 getCraftingResult (Lnet/minecraft/class_479;)Lnet/minecraft/class_479;
 	METHOD method_1436 (Lnet/minecraft/class_164;)Ljava/lang/String;
 		ARG 1 item
+	METHOD method_1437 stacksTo (I)Lnet/minecraft/class_479;
+		ARG 1 maxSize
 	METHOD method_1438 setDurability (I)Lnet/minecraft/class_479;
 		ARG 1 durability
 	METHOD method_1440 getRecipeRemainder ()Lnet/minecraft/class_479;
 	METHOD method_1441 hasRecipeRemainder ()Z
+	METHOD method_1767 mineBlock (Lnet/minecraft/class_164;IIIILnet/minecraft/class_208;)Z
+		ARG 1 item
+		ARG 2 tile
+		ARG 3 x
+		ARG 4 y
+		ARG 5 z
+		ARG 6 entity
+	METHOD method_1768 hurtEnemy (Lnet/minecraft/class_164;Lnet/minecraft/class_208;Lnet/minecraft/class_208;)Z
 	METHOD method_1925 getTexture (I)I
 		ARG 1 meta
 	METHOD method_1926 getTexture (Lnet/minecraft/class_164;)I
@@ -141,7 +151,10 @@ CLASS net/minecraft/class_479 net/minecraft/world/item/Item
 		ARG 4 x
 		ARG 5 y
 		ARG 6 z
-	METHOD method_360 canHarvest (Lnet/minecraft/class_381;)Z
+	METHOD method_358 getDestroySpeed (Lnet/minecraft/class_164;Lnet/minecraft/class_381;)F
+		ARG 1 item
+		ARG 2 tile
+	METHOD method_360 canDestroySpecial (Lnet/minecraft/class_381;)Z
 		ARG 1 tile
 	METHOD method_362 interactEnemy (Lnet/minecraft/class_164;Lnet/minecraft/class_208;)V
 		ARG 1 item
