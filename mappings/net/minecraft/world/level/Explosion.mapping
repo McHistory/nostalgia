@@ -1,10 +1,20 @@
 CLASS net/minecraft/class_302 net/minecraft/world/level/Explosion
+	FIELD field_1227 fire Z
 	FIELD field_1228 x D
 	FIELD field_1229 y D
 	FIELD field_1230 z D
+	FIELD field_1231 source Lnet/minecraft/class_333;
 	FIELD field_1232 radius F
 	FIELD field_1233 toBlow Ljava/util/Set;
 	FIELD field_1234 random Ljava/util/Random;
 	FIELD field_1235 level Lnet/minecraft/class_92;
+	METHOD <init> (Lnet/minecraft/class_92;Lnet/minecraft/class_333;DDDF)V
+		ARG 1 level
+		ARG 2 source
+		ARG 3 x
+		ARG 5 y
+		ARG 7 z
+		ARG 9 radius
 	METHOD method_2055 finalizeExplosion (Z)V
+		ARG 1 spawnParticles
 	METHOD method_855 explode ()V

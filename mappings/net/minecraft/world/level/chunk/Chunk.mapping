@@ -1,4 +1,5 @@
-CLASS net/minecraft/class_203 net/minecraft/world/Chunk
+CLASS net/minecraft/class_203 net/minecraft/world/level/chunk/Chunk
+	FIELD field_2376 unsaved Z
 	FIELD field_841 tiles [B
 	FIELD field_842 loaded Z
 	FIELD field_843 level Lnet/minecraft/class_92;
@@ -13,6 +14,7 @@ CLASS net/minecraft/class_203 net/minecraft/world/Chunk
 	FIELD field_853 terrainPopulated Z
 	FIELD field_854 changed Z
 	FIELD field_857 lastSaveHadEntities Z
+	FIELD field_858 lastSaveTime J
 	METHOD <init> (Lnet/minecraft/class_92;II)V
 		ARG 1 level
 		ARG 2 x
@@ -67,6 +69,7 @@ CLASS net/minecraft/class_203 net/minecraft/world/Chunk
 		ARG 1 entity
 		ARG 2 entityId
 	METHOD method_629 getEntities (Lnet/minecraft/class_333;Lnet/minecraft/class_510;Ljava/util/List;)V
+	METHOD method_630 isUnsaved (Z)Z
 	METHOD method_632 primeHeightmap ()V
 	METHOD method_633 getYHeight (II)I
 		ARG 1 x
@@ -82,6 +85,15 @@ CLASS net/minecraft/class_203 net/minecraft/world/Chunk
 		ARG 4 meta
 	METHOD method_636 removeEntity (Lnet/minecraft/class_333;)V
 		ARG 1 entity
+	METHOD method_639 isHighestTile (III)Z
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+	METHOD method_640 getLightLevel (IIII)I
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+		ARG 4 skyDarken
 	METHOD method_642 getTileEntity (III)Lnet/minecraft/class_265;
 		ARG 1 x
 		ARG 2 y
@@ -93,3 +105,7 @@ CLASS net/minecraft/class_203 net/minecraft/world/Chunk
 		ARG 3 z
 	METHOD method_645 unload ()V
 	METHOD method_647 setChanged ()V
+	METHOD method_648 updateSkylight (III)V
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z

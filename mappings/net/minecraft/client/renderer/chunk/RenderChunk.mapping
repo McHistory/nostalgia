@@ -2,6 +2,7 @@ CLASS net/minecraft/class_51 net/minecraft/client/renderer/chunk/RenderChunk
 	FIELD field_143 renderableBlockEntities Ljava/util/List;
 	FIELD field_145 tesselator Lnet/minecraft/class_248;
 	FIELD field_148 level Lnet/minecraft/class_92;
+	FIELD field_149 updateCounter I
 	FIELD field_150 originX I
 	FIELD field_151 originY I
 	FIELD field_152 originZ I
@@ -9,6 +10,7 @@ CLASS net/minecraft/class_51 net/minecraft/client/renderer/chunk/RenderChunk
 	FIELD field_160 centerY I
 	FIELD field_161 centerZ I
 	FIELD field_162 visible Z
+	FIELD field_168 dirty Z
 	FIELD field_169 bb Lnet/minecraft/class_510;
 	METHOD <init> (Lnet/minecraft/class_92;Ljava/util/List;IIIII)V
 		ARG 3 x
@@ -22,4 +24,5 @@ CLASS net/minecraft/class_51 net/minecraft/client/renderer/chunk/RenderChunk
 	METHOD method_156 cull (Lnet/minecraft/class_453;)V
 		ARG 1 culler
 	METHOD method_157 reset ()V
+	METHOD method_161 setDirty ()V
 	METHOD method_162 translate ()V
