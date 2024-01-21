@@ -1,4 +1,5 @@
 CLASS net/minecraft/class_164 net/minecraft/world/ItemInstance
+	FIELD field_3297 popTime I
 	FIELD field_686 count I
 	FIELD field_688 id I
 	FIELD field_689 damage I
@@ -50,8 +51,16 @@ CLASS net/minecraft/class_164 net/minecraft/world/ItemInstance
 		ARG 1 amount
 	METHOD method_1787 hurtEnemy (Lnet/minecraft/class_208;Lnet/minecraft/class_480;)V
 		ARG 2 player
+	METHOD method_2200 inventoryTick (Lnet/minecraft/class_92;Lnet/minecraft/class_333;IZ)V
+		ARG 1 level
+		ARG 2 entity
+		ARG 3 inventorySlot
+		ARG 4 isCurrentItem
 	METHOD method_2201 setDamage (I)V
 		ARG 1 damage
+	METHOD method_2202 onCraftedBy (Lnet/minecraft/class_92;Lnet/minecraft/class_480;)V
+		ARG 1 level
+		ARG 2 player
 	METHOD method_498 getItem ()Lnet/minecraft/class_479;
 	METHOD method_499 shrink (I)Lnet/minecraft/class_164;
 		ARG 1 amount

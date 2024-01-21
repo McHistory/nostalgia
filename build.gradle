@@ -28,7 +28,7 @@ filament {
 
 def ENV = System.getenv()
 // Fetch build number from Github Actions
-def build_number = ENV.BUILD_NUMBER ?: "local27"
+def build_number = ENV.BUILD_NUMBER ?: "local29"
 
 def yarnVersion = "${minecraft_version}+build.$build_number"
 version = yarnVersion
@@ -121,7 +121,7 @@ import java.util.zip.GZIPOutputStream
 tasks.register('downloadIntermediary', FileOutputTask) {
 	group = buildMappingGroup
 
-	output = new File("/home/alpha/github/nostalgia/intermediary/mappings/${minecraft_version}/client.tiny")
+	output = new File("/home/alpha/github/nostalgia/intermediary/mappings/${minecraft_version}.tiny")
 }
 
 tasks.register('mapIntermediaryJar', MapJarTask) {
