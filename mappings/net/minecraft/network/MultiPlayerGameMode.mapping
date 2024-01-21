@@ -1,6 +1,9 @@
 CLASS net/minecraft/class_251 net/minecraft/network/MultiPlayerGameMode
 	FIELD field_1070 minecraft Lnet/minecraft/client/Minecraft;
+	METHOD <init> (Lnet/minecraft/client/Minecraft;)V
+		ARG 1 minecraft
 	METHOD method_1345 handleInventoryMouseClick (IIIZLnet/minecraft/class_480;)Lnet/minecraft/class_164;
+	METHOD method_753 stopDestroyBlock ()V
 	METHOD method_761 getPickRange ()F
 	METHOD method_762 destroyTile (IIII)Z
 		ARG 1 x
@@ -9,3 +12,6 @@ CLASS net/minecraft/class_251 net/minecraft/network/MultiPlayerGameMode
 		ARG 4 l
 	METHOD method_763 createPlayer (Lnet/minecraft/class_92;)Lnet/minecraft/class_480;
 		ARG 1 level
+	METHOD method_764 respawn (Lnet/minecraft/class_480;)V
+		ARG 1 player
+	METHOD method_768 isSurvival ()Z

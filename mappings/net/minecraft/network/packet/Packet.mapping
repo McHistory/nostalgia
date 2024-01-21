@@ -1,4 +1,4 @@
-CLASS net/minecraft/class_186 net/minecraft/network/Packet
+CLASS net/minecraft/class_186 net/minecraft/network/packet/Packet
 	FIELD field_767 idToPacket Ljava/util/Map;
 	FIELD field_768 packetToId Ljava/util/Map;
 	METHOD method_1639 getPacketFromData (Ljava/io/DataInputStream;Z)Lnet/minecraft/class_186;
@@ -10,6 +10,7 @@ CLASS net/minecraft/class_186 net/minecraft/network/Packet
 		ARG 0 msg
 		ARG 1 data
 	METHOD method_574 getPacket (I)Lnet/minecraft/class_186;
+		ARG 0 id
 	METHOD method_575 registerPacket (ILjava/lang/Class;)V
 		ARG 0 id
 		ARG 1 packetClass_

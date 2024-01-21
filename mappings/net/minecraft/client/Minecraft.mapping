@@ -2,7 +2,8 @@ CLASS net/minecraft/client/Minecraft net/minecraft/client/Minecraft
 	FIELD field_1493 soundManager Lnet/minecraft/class_454;
 	FIELD field_1495 texturepackManager Lnet/minecraft/class_154;
 	FIELD field_1496 localGameDir Ljava/io/File;
-	FIELD field_1500 shouldClose Z
+	FIELD field_1500 running Z
+	FIELD field_1501 fpsString Ljava/lang/String;
 	FIELD field_1508 timer Lnet/minecraft/class_286;
 	FIELD field_1509 resourceThread Lnet/minecraft/class_42;
 	FIELD field_1511 missTime I
@@ -17,6 +18,7 @@ CLASS net/minecraft/client/Minecraft net/minecraft/client/Minecraft
 	FIELD field_1528 particleEngine Lnet/minecraft/class_54;
 	FIELD field_1529 session Lnet/minecraft/class_122;
 	FIELD field_1531 canvas Ljava/awt/Canvas;
+	FIELD field_1533 pause Z
 	FIELD field_1534 textureManager Lnet/minecraft/class_169;
 	FIELD field_1535 font Lnet/minecraft/class_707;
 	FIELD field_1536 screen Lnet/minecraft/class_44;
@@ -41,6 +43,9 @@ CLASS net/minecraft/client/Minecraft net/minecraft/client/Minecraft
 	METHOD main ([Ljava/lang/String;)V
 		ARG 0 args
 	METHOD method_1048 init ()V
+	METHOD method_1049 startAttack (I)V
+	METHOD method_1052 continueAttack (IZ)V
+	METHOD method_1053 renderFpsMeter (J)V
 	METHOD method_1054 setScreen (Lnet/minecraft/class_44;)V
 		ARG 1 screen
 	METHOD method_1055 setLevel (Lnet/minecraft/class_92;)V
@@ -61,10 +66,11 @@ CLASS net/minecraft/client/Minecraft net/minecraft/client/Minecraft
 	METHOD method_1066 initGame ()V
 	METHOD method_1067 setState (Ljava/lang/String;)V
 		ARG 1 stateName
-	METHOD method_1068 closeGame ()V
+	METHOD method_1068 stop ()V
 	METHOD method_1069 setLoadingStage (Ljava/lang/String;)V
 	METHOD method_1072 pause ()V
 	METHOD method_1074 tick ()V
+	METHOD method_1075 isSingleplayer ()Z
 	METHOD method_1076 changeDimension ()V
 	METHOD method_1081 respawn ()V
 	METHOD method_1083 getOSType ()Lnet/minecraft/class_272;
