@@ -42,6 +42,9 @@ CLASS net/minecraft/class_164 net/minecraft/world/ItemInstance
 	METHOD method_1334 matches (Lnet/minecraft/class_164;Lnet/minecraft/class_164;)Z
 		ARG 0 item0
 		ARG 1 item1
+	METHOD method_1335 getTranslationKey ()Ljava/lang/String;
+	METHOD method_1451 equals (Lnet/minecraft/class_164;)Z
+		ARG 1 other
 	METHOD method_1452 isStackable ()Z
 	METHOD method_1453 isDamageableItem ()Z
 	METHOD method_1455 isDamaged ()Z
@@ -63,6 +66,8 @@ CLASS net/minecraft/class_164 net/minecraft/world/ItemInstance
 		ARG 2 player
 	METHOD method_2203 sameItem (Lnet/minecraft/class_164;)Z
 		ARG 1 other
+	METHOD method_2279 copy (Lnet/minecraft/class_164;)Lnet/minecraft/class_164;
+		ARG 0 item
 	METHOD method_498 getItem ()Lnet/minecraft/class_479;
 	METHOD method_499 shrink (I)Lnet/minecraft/class_164;
 		ARG 1 amount
@@ -72,13 +77,28 @@ CLASS net/minecraft/class_164 net/minecraft/world/ItemInstance
 		ARG 3 y
 		ARG 4 z
 		ARG 5 player
+	METHOD method_501 use (Lnet/minecraft/class_92;Lnet/minecraft/class_480;)Lnet/minecraft/class_164;
+		ARG 1 level
+		ARG 2 player
+	METHOD method_502 (Lnet/minecraft/class_480;)V
+		ARG 1 player
+	METHOD method_503 useOn (Lnet/minecraft/class_480;Lnet/minecraft/class_92;IIII)Z
+		ARG 1 player
+		ARG 2 level
+		ARG 3 x
+		ARG 4 y
+		ARG 5 z
+		ARG 6 face
 	METHOD method_505 save (Lnet/minecraft/class_246;)Lnet/minecraft/class_246;
 		ARG 1 vase
 	METHOD method_507 getDestroySpeed (Lnet/minecraft/class_381;)F
+		ARG 1 tile
+	METHOD method_508 getTexture ()I
 	METHOD method_510 interactEnemy (Lnet/minecraft/class_208;)V
 	METHOD method_511 load (Lnet/minecraft/class_246;)V
 		ARG 1 base
 	METHOD method_512 canDestroySpecial (Lnet/minecraft/class_381;)Z
+		ARG 1 tile
 	METHOD method_513 getMaxStackSize ()I
 	METHOD method_514 getMaxDamage ()I
 	METHOD method_515 copy ()Lnet/minecraft/class_164;

@@ -12,6 +12,8 @@ CLASS net/minecraft/class_700 net/minecraft/client/renderer/GameRenderer
 	FIELD field_3116 renderDistance F
 	FIELD field_3117 tick I
 	FIELD field_3118 targetedEntity Lnet/minecraft/class_333;
+	FIELD field_3119 smoothTurnX Lnet/minecraft/class_564;
+	FIELD field_3120 smoothTurnY Lnet/minecraft/class_564;
 	FIELD field_3131 fov F
 	FIELD field_3132 oldFov F
 	FIELD field_3411 nanoTime J
@@ -24,6 +26,8 @@ CLASS net/minecraft/class_700 net/minecraft/client/renderer/GameRenderer
 		ARG 1 partialTick
 		ARG 2 nanoSeconds
 	METHOD method_2036 setupFog (IF)V
+	METHOD method_2038 (F)V
+		ARG 1 partialTick
 	METHOD method_2039 renderItemInHand (FI)V
 		ARG 1 partialTick
 	METHOD method_2040 tickRain ()V

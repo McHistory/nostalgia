@@ -116,11 +116,16 @@ CLASS net/minecraft/class_479 net/minecraft/world/item/Item
 	METHOD <init> (I)V
 		ARG 1 id
 	METHOD method_1299 getTranslationKey ()Ljava/lang/String;
+	METHOD method_1300 texture (I)Lnet/minecraft/class_479;
+		ARG 1 index
+	METHOD method_1301 texture (II)Lnet/minecraft/class_479;
+		ARG 1 row
+		ARG 2 column
 	METHOD method_1303 setTranslationKey (Ljava/lang/String;)Lnet/minecraft/class_479;
 	METHOD method_1304 getMaxStackSize ()I
 	METHOD method_1305 getDurability ()I
 	METHOD method_1434 getCraftingResult (Lnet/minecraft/class_479;)Lnet/minecraft/class_479;
-	METHOD method_1436 (Lnet/minecraft/class_164;)Ljava/lang/String;
+	METHOD method_1436 getTranslationKey (Lnet/minecraft/class_164;)Ljava/lang/String;
 		ARG 1 item
 	METHOD method_1437 stacksTo (I)Lnet/minecraft/class_479;
 		ARG 1 maxSize
@@ -150,17 +155,18 @@ CLASS net/minecraft/class_479 net/minecraft/world/item/Item
 		ARG 1 item
 		ARG 2 level
 		ARG 3 player
-	METHOD method_355 onUse (Lnet/minecraft/class_164;Lnet/minecraft/class_92;Lnet/minecraft/class_480;)Lnet/minecraft/class_164;
+	METHOD method_355 use (Lnet/minecraft/class_164;Lnet/minecraft/class_92;Lnet/minecraft/class_480;)Lnet/minecraft/class_164;
 		ARG 1 item
 		ARG 2 level
 		ARG 3 player
-	METHOD method_356 onUse (Lnet/minecraft/class_164;Lnet/minecraft/class_480;Lnet/minecraft/class_92;IIII)Z
+	METHOD method_356 useOn (Lnet/minecraft/class_164;Lnet/minecraft/class_480;Lnet/minecraft/class_92;IIII)Z
 		ARG 1 item
 		ARG 2 player
 		ARG 3 level
 		ARG 4 x
 		ARG 5 y
 		ARG 6 z
+		ARG 7 face
 	METHOD method_358 getDestroySpeed (Lnet/minecraft/class_164;Lnet/minecraft/class_381;)F
 		ARG 1 item
 		ARG 2 tile

@@ -1,25 +1,43 @@
 CLASS net/minecraft/class_44 net/minecraft/client/gui/screens/Screen
+	FIELD field_123 clickedButton Lnet/minecraft/class_183;
 	FIELD field_124 minecraft Lnet/minecraft/client/Minecraft;
 	FIELD field_125 width I
 	FIELD field_126 height I
 	FIELD field_127 buttons Ljava/util/List;
 	FIELD field_128 passEvents Z
 	FIELD field_129 font Lnet/minecraft/class_707;
+	FIELD field_2803 particles Lnet/minecraft/class_612;
 	METHOD method_125 init ()V
+	METHOD method_126 charTyped (CI)V
+		ARG 1 codePoint
+		ARG 2 modifiers
 	METHOD method_127 renderBackground (I)V
+		ARG 1 vOffset
 	METHOD method_128 render (IIF)V
 		ARG 1 mouseX
 		ARG 2 mouseY
 		ARG 3 tickDelta
-	METHOD method_129 (III)V
+	METHOD method_129 mouseClicked (III)V
 		ARG 1 mouseX
 		ARG 2 mouseY
+		ARG 3 button
 	METHOD method_130 onButtonClick (Lnet/minecraft/class_183;)V
 		ARG 1 button
 	METHOD method_131 setup (Lnet/minecraft/client/Minecraft;II)V
 		ARG 1 client
+		ARG 2 width
+		ARG 3 height
 	METHOD method_133 isPauseScreen ()Z
 	METHOD method_134 renderDirtBackground (I)V
+		ARG 1 vOffset
+	METHOD method_135 mouseReleased (III)V
+		ARG 1 mouseX
+		ARG 2 mouseY
+		ARG 3 button
 	METHOD method_136 getClipboardText ()Ljava/lang/String;
+	METHOD method_137 next ()V
+	METHOD method_138 updateMouse ()V
+	METHOD method_139 updateKeyboard ()V
+	METHOD method_140 tick ()V
 	METHOD method_141 close ()V
 	METHOD method_142 renderBackground ()V

@@ -1,9 +1,11 @@
 CLASS net/minecraft/client/Minecraft net/minecraft/client/Minecraft
 	FIELD field_1493 soundManager Lnet/minecraft/class_454;
+	FIELD field_1494 mouseHandler Lnet/minecraft/class_400;
 	FIELD field_1495 texturepackManager Lnet/minecraft/class_154;
 	FIELD field_1496 localGameDir Ljava/io/File;
 	FIELD field_1500 running Z
 	FIELD field_1501 fpsString Ljava/lang/String;
+	FIELD field_1504 mouseGrabbed Z
 	FIELD field_1508 timer Lnet/minecraft/class_286;
 	FIELD field_1509 resourceThread Lnet/minecraft/class_42;
 	FIELD field_1511 missTime I
@@ -68,6 +70,8 @@ CLASS net/minecraft/client/Minecraft net/minecraft/client/Minecraft
 		ARG 1 stateName
 	METHOD method_1068 stop ()V
 	METHOD method_1069 setLoadingStage (Ljava/lang/String;)V
+	METHOD method_1070 grabMouse ()V
+	METHOD method_1071 releaseMouse ()V
 	METHOD method_1072 pause ()V
 	METHOD method_1074 tick ()V
 	METHOD method_1075 isSingleplayer ()Z
@@ -84,4 +88,5 @@ CLASS net/minecraft/client/Minecraft net/minecraft/client/Minecraft
 	METHOD method_1808 respawn (ZI)V
 	METHOD method_2225 crash (Lnet/minecraft/class_220;)V
 		ARG 1 report
+	METHOD method_2227 toggleFullscreen ()V
 	METHOD run run ()V

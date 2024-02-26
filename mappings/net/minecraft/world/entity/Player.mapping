@@ -13,6 +13,8 @@ CLASS net/minecraft/class_480 net/minecraft/world/entity/Player
 	FIELD field_2829 respawnPosition Lnet/minecraft/class_562;
 	FIELD field_3271 portalTime F
 	FIELD field_3272 oPortalTime F
+	FIELD field_3274 changingDimensionDelay I
+	FIELD field_3275 isInsidePortal Z
 	METHOD method_1309 openCraftingTable (III)V
 		ARG 1 x
 		ARG 2 y
@@ -31,8 +33,11 @@ CLASS net/minecraft/class_480 net/minecraft/world/entity/Player
 	METHOD method_1318 closeContainer ()V
 	METHOD method_1320 drop ()V
 	METHOD method_1321 getHeldItem ()Lnet/minecraft/class_164;
+	METHOD method_1322 setSelectedToEmtpy ()V
 	METHOD method_1442 openDispenser (Lnet/minecraft/class_503;)V
 		ARG 1 te
+	METHOD method_1443 interactOn (Lnet/minecraft/class_333;)V
+		ARG 1 entityToInteractOn
 	METHOD method_1623 isSleepingLongEnough ()Z
 	METHOD method_1624 getSleepTimer ()I
 	METHOD method_1626 startSleepInBed (III)Lnet/minecraft/class_610;

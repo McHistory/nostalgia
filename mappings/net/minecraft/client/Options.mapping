@@ -35,8 +35,10 @@ CLASS net/minecraft/class_192 net/minecraft/client/Options
 	FIELD field_807 thirdPersonView Z
 	FIELD field_808 lastServer Ljava/lang/String;
 	METHOD <init> (Lnet/minecraft/client/Minecraft;Ljava/io/File;)V
+		ARG 1 minecraft
 		ARG 2 configDir
 	METHOD method_1337 getTranslatedKeyName (I)Ljava/lang/String;
+		ARG 1 keyId
 	METHOD method_1338 getSliderOption (Lnet/minecraft/class_482;)F
 		ARG 1 option
 	METHOD method_1339 setOptionF (Lnet/minecraft/class_482;F)V
@@ -52,6 +54,9 @@ CLASS net/minecraft/class_192 net/minecraft/client/Options
 	METHOD method_1343 getFormatedString (Lnet/minecraft/class_482;)Ljava/lang/String;
 		ARG 1 option
 	METHOD method_585 loadOptions ()V
+	METHOD method_588 setKey (II)V
+		ARG 1 keyId
+		ARG 2 input
 	METHOD method_590 save ()V
 	METHOD method_594 getSliderText (I)Ljava/lang/String;
 		ARG 1 sliderId
