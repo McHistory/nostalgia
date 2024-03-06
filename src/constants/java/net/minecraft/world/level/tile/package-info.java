@@ -10,4 +10,4 @@
  * for use during compile time, in which the Java Compiler will replace the field references
  * with <a href="{@docRoot}/constant-values.html#net.fabricmc">constant values</a>.
  */
-package net.fabricmc.yarn.constants;
+package net.minecraft.world.level.tile;
