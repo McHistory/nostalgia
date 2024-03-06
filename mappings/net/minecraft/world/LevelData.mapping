@@ -1,19 +1,19 @@
-CLASS net/minecraft/class_567 net/minecraft/world/LevelData
-	FIELD field_2604 seed J
-	FIELD field_2605 spawnX I
-	FIELD field_2606 spawnY I
-	FIELD field_2607 spawnZ I
-	FIELD field_2608 time J
-	FIELD field_2609 lastPlayed J
-	FIELD field_2610 size J
-	FIELD field_2611 player Lnet/minecraft/class_246;
-	FIELD field_2612 dimension I
-	FIELD field_2613 levelName Ljava/lang/String;
-	FIELD field_2614 version I
-	FIELD field_2979 raining Z
-	FIELD field_2980 rainTime I
-	FIELD field_2981 thundering Z
-	FIELD field_2982 thunderTime I
+CLASS net/minecraft/class_7 net/minecraft/world/LevelData
+	FIELD field_13 seed J
+	FIELD field_14 spawnX I
+	FIELD field_15 spawnY I
+	FIELD field_16 spawnZ I
+	FIELD field_17 time J
+	FIELD field_18 lastPlayed J
+	FIELD field_19 size J
+	FIELD field_20 player Lnet/minecraft/class_8;
+	FIELD field_21 dimension I
+	FIELD field_22 levelName Ljava/lang/String;
+	FIELD field_23 version I
+	FIELD field_24 raining Z
+	FIELD field_25 rainTime I
+	FIELD field_26 thundering Z
+	FIELD field_27 thunderTime I
 	METHOD <init> (JLjava/lang/String;)V
 		ARG 1 seed
 		ARG 3 name
@@ -21,56 +21,56 @@ CLASS net/minecraft/class_567 net/minecraft/world/LevelData
 		ARG 1 base
 	METHOD <init> (Lnet/minecraft/class_567;)V
 		ARG 1 old
-	METHOD method_1569 save ()Lnet/minecraft/class_246;
+	METHOD method_3 save ()Lnet/minecraft/class_8;
 		LOCAL 1 tag
-	METHOD method_1570 setSpawnX (I)V
+	METHOD method_27 setSpawnX (I)V
 		ARG 1 spawnX
-	METHOD method_1571 setSpawnXYZ (III)V
+	METHOD method_5 setSpawnXYZ (III)V
 		ARG 1 x
 		ARG 2 y
 		ARG 3 z
-	METHOD method_1572 setTime (J)V
+	METHOD method_6 setTime (J)V
 		ARG 1 time
-	METHOD method_1573 setLevelName (Ljava/lang/String;)V
+	METHOD method_8 setLevelName (Ljava/lang/String;)V
 		ARG 1 name
-	METHOD method_1574 saveWithPlayers (Ljava/util/List;)Lnet/minecraft/class_246;
+	METHOD method_9 saveWithPlayers (Ljava/util/List;)Lnet/minecraft/class_8;
 		ARG 1 players
 		LOCAL 2 tag
 		LOCAL 3 entity
 		LOCAL 4 entityTag
-	METHOD method_1575 setPlayer (Lnet/minecraft/class_246;)V
+	METHOD method_28 setPlayer (Lnet/minecraft/class_8;)V
 		ARG 1 player
-	METHOD method_1576 save (Lnet/minecraft/class_246;Lnet/minecraft/class_246;)V
+	METHOD method_7 save (Lnet/minecraft/class_8;Lnet/minecraft/class_8;)V
 		ARG 1 base
 		ARG 2 player
-	METHOD method_1577 getSeed ()J
-	METHOD method_1578 setSpawnY (I)V
+	METHOD method_11 getSeed ()J
+	METHOD method_29 setSpawnY (I)V
 		ARG 1 spawnY
-	METHOD method_1579 setSize (J)V
+	METHOD method_13 setSize (J)V
 		ARG 1 size
-	METHOD method_1580 getSpawnX ()I
-	METHOD method_1581 setSpawnZ (I)V
+	METHOD method_15 getSpawnX ()I
+	METHOD method_30 setSpawnZ (I)V
 		ARG 1 spawnZ
-	METHOD method_1582 getSpawnY ()I
-	METHOD method_1583 setVersion (I)V
+	METHOD method_17 getSpawnY ()I
+	METHOD method_4 setVersion (I)V
 		ARG 1 version
-	METHOD method_1584 getSpawnZ ()I
-	METHOD method_1585 getTime ()J
-	METHOD method_1586 getSize ()J
-	METHOD method_1587 getPlayer ()Lnet/minecraft/class_246;
-	METHOD method_1588 getDimension ()I
-	METHOD method_1589 getLevelName ()Ljava/lang/String;
-	METHOD method_1590 getVersion ()I
-	METHOD method_1591 getLastPlayed ()J
-	METHOD method_1899 setThundering (Z)V
+	METHOD method_18 getSpawnZ ()I
+	METHOD method_19 getTime ()J
+	METHOD method_20 getSize ()J
+	METHOD method_31 getPlayer ()Lnet/minecraft/class_8;
+	METHOD method_21 getDimension ()I
+	METHOD method_32 getLevelName ()Ljava/lang/String;
+	METHOD method_22 getVersion ()I
+	METHOD method_33 getLastPlayed ()J
+	METHOD method_10 setThundering (Z)V
 		ARG 1 thundering
-	METHOD method_1900 setRaining (Z)V
+	METHOD method_14 setRaining (Z)V
 		ARG 1 raining
-	METHOD method_1901 setThunderTime (I)V
+	METHOD method_12 setThunderTime (I)V
 		ARG 1 thunderTime
-	METHOD method_1902 setRainTime (I)V
+	METHOD method_16 setRainTime (I)V
 		ARG 1 rainTime
-	METHOD method_1903 isThundering ()Z
-	METHOD method_1904 getThunderTime ()I
-	METHOD method_1905 isRaining ()Z
-	METHOD method_1906 getRainTime ()I
+	METHOD method_23 isThundering ()Z
+	METHOD method_24 getThunderTime ()I
+	METHOD method_25 isRaining ()Z
+	METHOD method_26 getRainTime ()I

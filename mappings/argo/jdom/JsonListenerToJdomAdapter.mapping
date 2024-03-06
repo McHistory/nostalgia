@@ -1,8 +1,19 @@
-CLASS net/minecraft/class_679 argo/jdom/JsonListenerToJdomAdapter
-	FIELD field_3066 stack Ljava/util/Stack;
-	FIELD field_3067 root Lnet/minecraft/class_677;
-	METHOD method_1987 getDocument ()Lnet/minecraft/class_702;
-	METHOD method_1988 addRootNode (Lnet/minecraft/class_677;)V
+CLASS argo/jdom/JsonListenerToJdomAdapter
+	CLASS 3
+		FIELD val$fieldBuilder val$fieldBuilder Largo/jdom/JsonFieldBuilder;
+		FIELD this$0 parent Largo/jdom/JsonListenerToJdomAdapter;
+	FIELD stack stack Ljava/util/Stack;
+	FIELD root root Largo/jdom/JsonNodeBuilder;
+	METHOD getDocument getDocument ()Largo/jdom/JsonRootNode;
+	METHOD addRootNode addRootNode (Largo/jdom/JsonNodeBuilder;)V
 		ARG 1 rootNodeBuilder
-	METHOD method_1989 addValue (Lnet/minecraft/class_677;)V
+	METHOD addValue addValue (Largo/jdom/JsonNodeBuilder;)V
 		ARG 1 nodeBuilder
+	CLASS 2
+		FIELD val$objectNodeBuilder val$objectNodeBuilder Largo/jdom/JsonObjectNodeBuilder;
+		FIELD this$0 parent Largo/jdom/JsonListenerToJdomAdapter;
+	CLASS 1
+		FIELD val$arrayBuilder val$arrayBuilder Largo/jdom/JsonArrayNodeBuilder;
+	CLASS NodeContainer
+		METHOD addNode addNode (Largo/jdom/JsonNodeBuilder;)V
+		METHOD addField addField (Largo/jdom/JsonFieldBuilder;)V

@@ -37,7 +37,7 @@ filament {
 }
 
 // Fetch build number from BuildBot
-def build_number = project.hasProperty("build_id")? project.build_id : "local"
+def build_number = project.hasProperty("build_id")? project.build_id : "local31"
 
 def yarnVersion = "${minecraft_version}+$build_number"
 version = yarnVersion
@@ -341,7 +341,8 @@ remapUnpickDefinitionsIntermediary {
 	mappings = buildYarnTiny.v2Output
 }
 
-tasks.register('unpickIntermediaryJar', UnpickJarTask) {
+tasks.register('unpickIntermediaryJar', UnpickJarTask, ) {
+	dependsOn(mergeIntermediaryJars, remapUnpickDefinitionsIntermediary)
 	group = 'unpick'
 	input = intermediaryJar
 	output = unpickedJar
