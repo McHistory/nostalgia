@@ -1,30 +1,30 @@
-CLASS net/minecraft/class_169 net/minecraft/network/packet/Packet
-	FIELD field_899 idToPacket Ljava/util/Map;
-	FIELD field_900 packetToId Ljava/util/Map;
-	METHOD method_803 getPacketFromData (Ljava/io/DataInputStream;Z)Lnet/minecraft/class_169;
+CLASS net/minecraft/class_186 net/minecraft/network/packet/Packet
+	FIELD field_767 idToPacket Ljava/util/Map;
+	FIELD field_768 packetToId Ljava/util/Map;
+	METHOD method_1639 getPacketFromData (Ljava/io/DataInputStream;Z)Lnet/minecraft/class_186;
 		ARG 0 data
-	METHOD method_802 readString (Ljava/io/DataInputStream;I)Ljava/lang/String;
+	METHOD method_1969 readString (Ljava/io/DataInputStream;I)Ljava/lang/String;
 		ARG 0 data
 		ARG 1 length
-	METHOD method_804 writeString (Ljava/lang/String;Ljava/io/DataOutputStream;)V
+	METHOD method_1970 writeString (Ljava/lang/String;Ljava/io/DataOutputStream;)V
 		ARG 0 msg
 		ARG 1 data
-	METHOD method_799 getPacket (I)Lnet/minecraft/class_169;
+	METHOD method_574 getPacket (I)Lnet/minecraft/class_186;
 		ARG 0 id
-	METHOD method_800 registerPacket (IZZLjava/lang/Class;)V
+	METHOD method_575 registerPacket (ILjava/lang/Class;)V
 		ARG 0 id
 		ARG 1 packetClass_
-	METHOD method_800 registerPacket (IZZLjava/lang/Class;)V
+	METHOD method_575 registerPacket (IZZLjava/lang/Class;)V
 		ARG 0 id
 		ARG 3 packetClass
-	METHOD method_801 encodePacket (Lnet/minecraft/class_169;Ljava/io/DataOutputStream;)V
+	METHOD method_576 encodePacket (Lnet/minecraft/class_186;Ljava/io/DataOutputStream;)V
 		ARG 0 packet
 		ARG 1 data
-	METHOD method_806 read (Ljava/io/DataInputStream;)V
+	METHOD method_577 read (Ljava/io/DataInputStream;)V
 		ARG 1 data
-	METHOD method_807 write (Ljava/io/DataOutputStream;)V
+	METHOD method_578 write (Ljava/io/DataOutputStream;)V
 		ARG 1 data
-	METHOD method_808 handle (Lnet/minecraft/class_240;)V
+	METHOD method_579 handle (Lnet/minecraft/class_352;)V
 		ARG 1 handler
-	METHOD method_805 getId ()I
+	METHOD method_580 getId ()I
 	METHOD method_581 readPacketFromStream (Ljava/io/DataInputStream;)Lnet/minecraft/class_186;

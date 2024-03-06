@@ -1,60 +1,60 @@
-CLASS argo/saj/SajParser
-	METHOD parse parse (Ljava/io/Reader;Largo/saj/JsonListener;)V
+CLASS net/minecraft/class_642 argo/saj/SajParser
+	METHOD method_1832 parse (Ljava/io/Reader;Lnet/minecraft/class_720;)V
 		ARG 1 in
 		ARG 2 jsonListener
-	METHOD numberToken numberToken (Largo/saj/PositionTrackingPushbackReader;)Ljava/lang/String;
+	METHOD method_1833 numberToken (Lnet/minecraft/class_678;)Ljava/lang/String;
 		ARG 1 in
 		LOCAL 2 result
 		LOCAL 3 firstChar
-	METHOD arrayString arrayString (Largo/saj/PositionTrackingPushbackReader;Largo/saj/JsonListener;)V
-	METHOD nonNegativeNumberToken nonNegativeNumberToken (Largo/saj/PositionTrackingPushbackReader;)Ljava/lang/String;
+	METHOD method_1834 arrayString (Lnet/minecraft/class_678;Lnet/minecraft/class_720;)V
+	METHOD method_1835 nonNegativeNumberToken (Lnet/minecraft/class_678;)Ljava/lang/String;
 		ARG 1 in
 		LOCAL 2 result
 		LOCAL 3 firstChar
-	METHOD objectString objectString (Largo/saj/PositionTrackingPushbackReader;Largo/saj/JsonListener;)V
-	METHOD nonZeroDigitToken nonZeroDigitToken (Largo/saj/PositionTrackingPushbackReader;)C
+	METHOD method_1836 objectString (Lnet/minecraft/class_678;Lnet/minecraft/class_720;)V
+	METHOD method_1837 nonZeroDigitToken (Lnet/minecraft/class_678;)C
 		ARG 1 in
 		LOCAL 3 nextChar
-	METHOD aFieldToken aFieldToken (Largo/saj/PositionTrackingPushbackReader;Largo/saj/JsonListener;)V
+	METHOD method_1838 aFieldToken (Lnet/minecraft/class_678;Lnet/minecraft/class_720;)V
 		ARG 1 pushbackReader
-	METHOD digitToken digitToken (Largo/saj/PositionTrackingPushbackReader;)C
+	METHOD method_1839 digitToken (Lnet/minecraft/class_678;)C
 		ARG 1 in
 		LOCAL 3 nextChar
-	METHOD aJsonValue aJsonValue (Largo/saj/PositionTrackingPushbackReader;Largo/saj/JsonListener;)V
+	METHOD method_1840 aJsonValue (Lnet/minecraft/class_678;Lnet/minecraft/class_720;)V
 		ARG 1 pushbackReader
 		ARG 2 jsonListener
 		LOCAL 3 nextChar
-	METHOD digitString digitString (Largo/saj/PositionTrackingPushbackReader;)Ljava/lang/String;
+	METHOD method_1841 digitString (Lnet/minecraft/class_678;)Ljava/lang/String;
 		ARG 1 in
 		LOCAL 2 result
 		LOCAL 3 gotANonDigit
 		LOCAL 4 nextChar
-	METHOD possibleFractionalComponent possibleFractionalComponent (Largo/saj/PositionTrackingPushbackReader;)Ljava/lang/String;
+	METHOD method_1842 possibleFractionalComponent (Lnet/minecraft/class_678;)Ljava/lang/String;
 		ARG 1 pushbackReader
-	METHOD possibleExponent possibleExponent (Largo/saj/PositionTrackingPushbackReader;)Ljava/lang/String;
-		ARG 1 pushbackReader
-		LOCAL 2 result
-		LOCAL 3 firstChar
-	METHOD possibleSign possibleSign (Largo/saj/PositionTrackingPushbackReader;)Ljava/lang/String;
+	METHOD method_1843 possibleExponent (Lnet/minecraft/class_678;)Ljava/lang/String;
 		ARG 1 pushbackReader
 		LOCAL 2 result
 		LOCAL 3 firstChar
-	METHOD stringToken stringToken (Largo/saj/PositionTrackingPushbackReader;)Ljava/lang/String;
+	METHOD method_1844 possibleSign (Lnet/minecraft/class_678;)Ljava/lang/String;
+		ARG 1 pushbackReader
+		LOCAL 2 result
+		LOCAL 3 firstChar
+	METHOD method_1845 stringToken (Lnet/minecraft/class_678;)Ljava/lang/String;
 		ARG 1 in
 		LOCAL 2 result
 		LOCAL 3 firstChar
 		LOCAL 4 stringClosed
 		LOCAL 5 nextChar
-	METHOD escapedStringChar escapedStringChar (Largo/saj/PositionTrackingPushbackReader;)C
+	METHOD method_1846 escapedStringChar (Lnet/minecraft/class_678;)C
 		ARG 1 in
 		LOCAL 2 result
 		LOCAL 3 firstChar
-	METHOD hexidecimalNumber hexidecimalNumber (Largo/saj/PositionTrackingPushbackReader;)I
+	METHOD method_1847 hexidecimalNumber (Lnet/minecraft/class_678;)I
 		ARG 1 in
 		LOCAL 2 resultCharArray
 		LOCAL 3 readSize
 		LOCAL 4 result
-	METHOD readNextNonWhitespaceChar readNextNonWhitespaceChar (Largo/saj/PositionTrackingPushbackReader;)I
+	METHOD method_1848 readNextNonWhitespaceChar (Lnet/minecraft/class_678;)I
 		ARG 1 in
 		LOCAL 2 nextChar
 		LOCAL 3 gotNonWhitespace
