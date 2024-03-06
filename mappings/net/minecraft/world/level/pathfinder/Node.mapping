@@ -1,0 +1,28 @@
+CLASS net/minecraft/class_28 net/minecraft/world/level/pathfinder/Node
+	FIELD field_87 x I
+	FIELD field_88 y I
+	FIELD field_89 z I
+	FIELD field_90 hash I
+	FIELD field_91 heapIdx I
+	FIELD field_92 g F
+	FIELD field_93 h F
+	FIELD field_94 f F
+	FIELD field_95 cameFrom Lnet/minecraft/class_28;
+	FIELD field_96 closed Z
+	METHOD <init> (III)V
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+	METHOD equals (Ljava/lang/Object;)Z
+		ARG 1 other
+		LOCAL 2 otherNode
+	METHOD method_1547 createHash (III)I
+		ARG 0 x
+		ARG 1 y
+		ARG 2 z
+	METHOD method_69 inOpenSet ()Z
+	METHOD method_70 distanceTo (Lnet/minecraft/class_28;)F
+		ARG 1 otherNode
+		LOCAL 2 relX
+		LOCAL 3 relY
+		LOCAL 4 relZ

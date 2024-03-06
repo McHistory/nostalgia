@@ -8,7 +8,7 @@ CLASS net/minecraft/class_567 net/minecraft/world/LevelData
 	FIELD field_2610 size J
 	FIELD field_2611 player Lnet/minecraft/class_246;
 	FIELD field_2612 dimension I
-	FIELD field_2613 name Ljava/lang/String;
+	FIELD field_2613 levelName Ljava/lang/String;
 	FIELD field_2614 version I
 	FIELD field_2979 raining Z
 	FIELD field_2980 rainTime I
@@ -22,6 +22,7 @@ CLASS net/minecraft/class_567 net/minecraft/world/LevelData
 	METHOD <init> (Lnet/minecraft/class_567;)V
 		ARG 1 old
 	METHOD method_1569 save ()Lnet/minecraft/class_246;
+		LOCAL 1 tag
 	METHOD method_1570 setSpawnX (I)V
 		ARG 1 spawnX
 	METHOD method_1571 setSpawnXYZ (III)V
@@ -30,10 +31,13 @@ CLASS net/minecraft/class_567 net/minecraft/world/LevelData
 		ARG 3 z
 	METHOD method_1572 setTime (J)V
 		ARG 1 time
-	METHOD method_1573 setName (Ljava/lang/String;)V
+	METHOD method_1573 setLevelName (Ljava/lang/String;)V
 		ARG 1 name
 	METHOD method_1574 saveWithPlayers (Ljava/util/List;)Lnet/minecraft/class_246;
 		ARG 1 players
+		LOCAL 2 tag
+		LOCAL 3 entity
+		LOCAL 4 entityTag
 	METHOD method_1575 setPlayer (Lnet/minecraft/class_246;)V
 		ARG 1 player
 	METHOD method_1576 save (Lnet/minecraft/class_246;Lnet/minecraft/class_246;)V
@@ -55,7 +59,7 @@ CLASS net/minecraft/class_567 net/minecraft/world/LevelData
 	METHOD method_1586 getSize ()J
 	METHOD method_1587 getPlayer ()Lnet/minecraft/class_246;
 	METHOD method_1588 getDimension ()I
-	METHOD method_1589 getName ()Ljava/lang/String;
+	METHOD method_1589 getLevelName ()Ljava/lang/String;
 	METHOD method_1590 getVersion ()I
 	METHOD method_1591 getLastPlayed ()J
 	METHOD method_1899 setThundering (Z)V

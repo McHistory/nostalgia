@@ -19,6 +19,7 @@ CLASS net/minecraft/class_203 net/minecraft/world/level/chunk/Chunk
 		ARG 1 level
 		ARG 2 x
 		ARG 3 z
+		LOCAL 4 section
 	METHOD <init> (Lnet/minecraft/class_92;[BII)V
 		ARG 1 level
 		ARG 2 tiles
@@ -43,6 +44,10 @@ CLASS net/minecraft/class_203 net/minecraft/world/level/chunk/Chunk
 		ARG 3 z
 		ARG 4 id
 		ARG 5 meta
+		LOCAL 7 height
+		LOCAL 8 oldTile
+		LOCAL 9 tileX
+		LOCAL 10 tileZ
 	METHOD method_621 placeTileEntity (IIILnet/minecraft/class_265;)V
 		ARG 1 x
 		ARG 2 y
@@ -67,7 +72,7 @@ CLASS net/minecraft/class_203 net/minecraft/world/level/chunk/Chunk
 		ARG 1 entity
 	METHOD method_628 removeEntity (Lnet/minecraft/class_333;I)V
 		ARG 1 entity
-		ARG 2 entityId
+		ARG 2 section
 	METHOD method_629 getEntities (Lnet/minecraft/class_333;Lnet/minecraft/class_510;Ljava/util/List;)V
 	METHOD method_630 isUnsaved (Z)Z
 	METHOD method_632 primeHeightmap ()V
@@ -98,6 +103,9 @@ CLASS net/minecraft/class_203 net/minecraft/world/level/chunk/Chunk
 		ARG 1 x
 		ARG 2 y
 		ARG 3 z
+		LOCAL 4 pos
+		LOCAL 5 te
+		LOCAL 6 tile
 	METHOD method_643 load ()V
 	METHOD method_644 removeTileEntity (III)V
 		ARG 1 x

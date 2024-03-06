@@ -54,7 +54,7 @@ public abstract class MinecraftVersionMetaHelper {
 		}
 
 		final String versionMetadata = Download.create("https://babric.github.io/manifest-polyfill/" + getMinecraftVersion().get() +".json")
-				.sha1("45432f89c915eabbaeda1ef6a5f417451eabade3")
+				.sha1("3325c74de7e4ef9b7b4634b1427d7e985eafe994")
 				.downloadString(versionMetadataPath);
 
 		try {

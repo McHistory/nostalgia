@@ -89,6 +89,8 @@ CLASS net/minecraft/class_92 net/minecraft/world/Level
 	METHOD method_1919 setRainLevel (F)V
 		ARG 1 newRainLevel
 	METHOD method_1920 tickWeather ()V
+		LOCAL 1 thunderTime
+		LOCAL 2 rainTime
 	METHOD method_1921 isRainingAt (III)Z
 		ARG 1 x
 		ARG 2 y
@@ -142,6 +144,8 @@ CLASS net/minecraft/class_92 net/minecraft/world/Level
 		ARG 4 maxX
 		ARG 5 maxY
 		ARG 6 maxZ
+		LOCAL 7 chunkX
+		LOCAL 8 chunkZ
 	METHOD method_2170 getFreeMapId (Ljava/lang/String;)I
 		ARG 1 id
 	METHOD method_2173 (III)I
@@ -189,6 +193,7 @@ CLASS net/minecraft/class_92 net/minecraft/world/Level
 		ARG 2 y
 		ARG 3 z
 		ARG 4 meta
+		LOCAL 5 tile
 	METHOD method_228 enqueueLightUpdate (Lnet/minecraft/class_63;IIIIII)V
 		ARG 1 type
 		ARG 2 x0
@@ -235,6 +240,7 @@ CLASS net/minecraft/class_92 net/minecraft/world/Level
 		ARG 1 entity
 		ARG 2 soundId
 		ARG 3 volume
+	METHOD method_255 tick (Z)Z
 	METHOD method_256 save (ZLnet/minecraft/class_441;)V
 	METHOD method_259 getTimeOfDay (F)F
 		ARG 1 partialTick
@@ -275,6 +281,7 @@ CLASS net/minecraft/class_92 net/minecraft/world/Level
 		ARG 2 y
 		ARG 3 z
 		ARG 4 meta
+		LOCAL 5 chunk
 	METHOD method_280 isDay ()Z
 	METHOD method_281 getFogColor (F)Lnet/minecraft/class_16;
 		ARG 1 partialTicks
@@ -313,6 +320,7 @@ CLASS net/minecraft/class_92 net/minecraft/world/Level
 		ARG 3 z
 		ARG 4 tile
 	METHOD method_298 updateSkyBrightness ()V
+		LOCAL 1 newSkyDarken
 	METHOD method_299 tileChanged (III)V
 		ARG 1 x
 		ARG 2 y
@@ -328,6 +336,8 @@ CLASS net/minecraft/class_92 net/minecraft/world/Level
 		ARG 1 x
 		ARG 2 y
 		ARG 3 z
+	METHOD method_304 ()V
+		LOCAL 2 player
 	METHOD method_305 getLightLevel (III)I
 		ARG 1 x
 		ARG 2 y
