@@ -1,8 +1,8 @@
-CLASS net/minecraft/class_164 net/minecraft/world/ItemInstance
-	FIELD field_3297 popTime I
-	FIELD field_686 count I
-	FIELD field_688 id I
-	FIELD field_689 damage I
+CLASS net/minecraft/class_31 net/minecraft/world/ItemInstance
+	FIELD field_752 popTime I
+	FIELD field_751 count I
+	FIELD field_753 id I
+	FIELD field_754 damage I
 	METHOD <init> (I)V
 		ARG 1 id
 	METHOD <init> (II)V
@@ -37,53 +37,53 @@ CLASS net/minecraft/class_164 net/minecraft/world/ItemInstance
 		ARG 1 item
 		ARG 2 count
 		ARG 3 damage
-	METHOD method_1333 matches (Lnet/minecraft/class_164;)Z
+	METHOD method_718 matches (Lnet/minecraft/class_31;)Z
 		ARG 1 other
-	METHOD method_1334 matches (Lnet/minecraft/class_164;Lnet/minecraft/class_164;)Z
+	METHOD method_703 matches (Lnet/minecraft/class_31;Lnet/minecraft/class_31;)Z
 		ARG 0 item0
 		ARG 1 item1
-	METHOD method_1335 getTranslationKey ()Ljava/lang/String;
-	METHOD method_1451 equals (Lnet/minecraft/class_164;)Z
+	METHOD method_726 getTranslationKey ()Ljava/lang/String;
+	METHOD method_702 equals (Lnet/minecraft/class_31;)Z
 		ARG 1 other
-	METHOD method_1452 isStackable ()Z
-	METHOD method_1453 isDamageableItem ()Z
-	METHOD method_1455 isDamaged ()Z
-	METHOD method_1456 getDamageValue ()I
-	METHOD method_1457 getMeta ()I
-	METHOD method_1786 damage (ILnet/minecraft/class_333;)V
+	METHOD method_715 isStackable ()Z
+	METHOD method_717 isDamageableItem ()Z
+	METHOD method_720 isDamaged ()Z
+	METHOD method_721 getDamageValue ()I
+	METHOD method_722 getMeta ()I
+	METHOD method_697 damage (ILnet/minecraft/class_57;)V
 		ARG 1 amount
 		ARG 2 holder
-	METHOD method_1787 hurtEnemy (Lnet/minecraft/class_208;Lnet/minecraft/class_480;)V
+	METHOD method_705 hurtEnemy (Lnet/minecraft/class_127;Lnet/minecraft/class_54;)V
 		ARG 2 player
-	METHOD method_2200 inventoryTick (Lnet/minecraft/class_92;Lnet/minecraft/class_333;IZ)V
+	METHOD method_699 inventoryTick (Lnet/minecraft/class_18;Lnet/minecraft/class_57;IZ)V
 		ARG 1 level
 		ARG 2 entity
 		ARG 3 inventorySlot
 		ARG 4 isCurrentItem
-	METHOD method_2201 setDamage (I)V
+	METHOD method_710 setDamage (I)V
 		ARG 1 damage
-	METHOD method_2202 onCraftedBy (Lnet/minecraft/class_92;Lnet/minecraft/class_480;)V
+	METHOD method_711 onCraftedBy (Lnet/minecraft/class_18;Lnet/minecraft/class_54;)V
 		ARG 1 level
 		ARG 2 player
-	METHOD method_2203 sameItem (Lnet/minecraft/class_164;)Z
+	METHOD method_716 sameItem (Lnet/minecraft/class_31;)Z
 		ARG 1 other
-	METHOD method_2279 copy (Lnet/minecraft/class_164;)Lnet/minecraft/class_164;
+	METHOD method_712 copy (Lnet/minecraft/class_31;)Lnet/minecraft/class_31;
 		ARG 0 item
-	METHOD method_498 getItem ()Lnet/minecraft/class_479;
-	METHOD method_499 shrink (I)Lnet/minecraft/class_164;
+	METHOD method_694 getItem ()Lnet/minecraft/class_124;
+	METHOD method_695 shrink (I)Lnet/minecraft/class_31;
 		ARG 1 amount
-	METHOD method_500 mineBlock (IIIILnet/minecraft/class_480;)V
+	METHOD method_696 mineBlock (IIIILnet/minecraft/class_54;)V
 		ARG 1 tile
 		ARG 2 x
 		ARG 3 y
 		ARG 4 z
 		ARG 5 player
-	METHOD method_501 use (Lnet/minecraft/class_92;Lnet/minecraft/class_480;)Lnet/minecraft/class_164;
+	METHOD method_698 use (Lnet/minecraft/class_18;Lnet/minecraft/class_54;)Lnet/minecraft/class_31;
 		ARG 1 level
 		ARG 2 player
-	METHOD method_502 (Lnet/minecraft/class_480;)V
+	METHOD method_700 (Lnet/minecraft/class_54;)V
 		ARG 1 player
-	METHOD method_503 useOn (Lnet/minecraft/class_480;Lnet/minecraft/class_92;IIII)Z
+	METHOD method_701 useOn (Lnet/minecraft/class_54;Lnet/minecraft/class_18;IIII)Z
 		ARG 1 player
 		ARG 2 level
 		ARG 3 x
@@ -91,16 +91,16 @@ CLASS net/minecraft/class_164 net/minecraft/world/ItemInstance
 		ARG 5 z
 		ARG 6 face
 		LOCAL 7 used
-	METHOD method_505 save (Lnet/minecraft/class_246;)Lnet/minecraft/class_246;
+	METHOD method_706 save (Lnet/minecraft/class_8;)Lnet/minecraft/class_8;
 		ARG 1 vase
-	METHOD method_507 getDestroySpeed (Lnet/minecraft/class_381;)F
+	METHOD method_708 getDestroySpeed (Lnet/minecraft/class_17;)F
 		ARG 1 tile
-	METHOD method_508 getTexture ()I
-	METHOD method_510 interactEnemy (Lnet/minecraft/class_208;)V
-	METHOD method_511 load (Lnet/minecraft/class_246;)V
+	METHOD method_725 getTexture ()I
+	METHOD method_704 interactEnemy (Lnet/minecraft/class_127;)V
+	METHOD method_713 load (Lnet/minecraft/class_8;)V
 		ARG 1 base
-	METHOD method_512 canDestroySpecial (Lnet/minecraft/class_381;)Z
+	METHOD method_714 canDestroySpecial (Lnet/minecraft/class_17;)Z
 		ARG 1 tile
-	METHOD method_513 getMaxStackSize ()I
-	METHOD method_514 getMaxDamage ()I
-	METHOD method_515 copy ()Lnet/minecraft/class_164;
+	METHOD method_709 getMaxStackSize ()I
+	METHOD method_723 getMaxDamage ()I
+	METHOD method_724 copy ()Lnet/minecraft/class_31;

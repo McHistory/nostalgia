@@ -1,10 +1,10 @@
-CLASS net/minecraft/class_697 argo/jdom/JsonFieldBuilder
-	FIELD field_3094 keyBuilder Lnet/minecraft/class_677;
-	FIELD field_3095 valueBuilder Lnet/minecraft/class_677;
-	METHOD method_2024 aJsonFieldBuilder ()Lnet/minecraft/class_697;
-	METHOD method_2025 withKey (Lnet/minecraft/class_677;)Lnet/minecraft/class_697;
+CLASS argo/jdom/JsonFieldBuilder
+	FIELD keyBuilder keyBuilder Largo/jdom/JsonNodeBuilder;
+	FIELD valueBuilder valueBuilder Largo/jdom/JsonNodeBuilder;
+	METHOD aJsonFieldBuilder aJsonFieldBuilder ()Largo/jdom/JsonFieldBuilder;
+	METHOD withKey withKey (Largo/jdom/JsonNodeBuilder;)Largo/jdom/JsonFieldBuilder;
 		ARG 1 jsonStringNodeBuilder
-	METHOD method_2026 buildKey ()Lnet/minecraft/class_701;
-	METHOD method_2027 withValue (Lnet/minecraft/class_677;)Lnet/minecraft/class_697;
+	METHOD buildKey buildKey ()Largo/jdom/JsonStringNode;
+	METHOD withValue withValue (Largo/jdom/JsonNodeBuilder;)Largo/jdom/JsonFieldBuilder;
 		ARG 1 jsonNodeBuilder
-	METHOD method_2028 buildValue ()Lnet/minecraft/class_664;
+	METHOD buildValue buildValue ()Largo/jdom/JsonNode;

@@ -1,41 +1,40 @@
-CLASS net/minecraft/client/Minecraft net/minecraft/client/Minecraft
-	FIELD field_1493 soundManager Lnet/minecraft/class_454;
-	FIELD field_1494 mouseHandler Lnet/minecraft/class_400;
-	FIELD field_1495 texturepackManager Lnet/minecraft/class_154;
-	FIELD field_1496 localGameDir Ljava/io/File;
-	FIELD field_1500 running Z
-	FIELD field_1501 fpsString Ljava/lang/String;
-	FIELD field_1504 mouseGrabbed Z
-	FIELD field_1508 timer Lnet/minecraft/class_286;
-	FIELD field_1509 resourceThread Lnet/minecraft/class_42;
-	FIELD field_1511 missTime I
-	FIELD field_1518 gameDir Ljava/io/File;
-	FIELD field_1519 fullscreen Z
-	FIELD field_1522 gameMode Lnet/minecraft/class_251;
-	FIELD field_1523 displayWidth I
-	FIELD field_1524 displayHeight I
-	FIELD field_1525 level Lnet/minecraft/class_92;
-	FIELD field_1526 levelRenderer Lnet/minecraft/class_148;
-	FIELD field_1527 player Lnet/minecraft/class_45;
-	FIELD field_1528 particleEngine Lnet/minecraft/class_54;
-	FIELD field_1529 session Lnet/minecraft/class_122;
-	FIELD field_1531 canvas Ljava/awt/Canvas;
-	FIELD field_1533 pause Z
-	FIELD field_1534 textureManager Lnet/minecraft/class_169;
-	FIELD field_1535 font Lnet/minecraft/class_707;
-	FIELD field_1536 screen Lnet/minecraft/class_44;
-	FIELD field_1537 loadingScreen Lnet/minecraft/class_223;
-	FIELD field_1538 renderManager Lnet/minecraft/class_285;
-	FIELD field_1541 gui Lnet/minecraft/class_376;
-	FIELD field_1542 noRender Z
-	FIELD field_1544 hitResult Lnet/minecraft/class_388;
-	FIELD field_1545 options Lnet/minecraft/class_192;
-	FIELD field_1546 applet Lnet/minecraft/client/MinecraftApplet;
-	FIELD field_2731 levelSource Lnet/minecraft/class_587;
-	FIELD field_2732 instance Lnet/minecraft/client/Minecraft;
-	FIELD field_2733 cameraEntity Lnet/minecraft/class_208;
-	FIELD field_3340 crashed Z
-	FIELD field_3342 gameRenderer Lnet/minecraft/class_700;
+CLASS net/minecraft/client/Minecraft
+	FIELD field_2766 soundManager Lnet/minecraft/class_617;
+	FIELD field_2767 mouseHandler Lnet/minecraft/class_596;
+	FIELD field_2768 texturepackManager Lnet/minecraft/class_303;
+	FIELD field_2790 localGameDir Ljava/io/File;
+	FIELD field_2774 running Z
+	FIELD field_2775 fpsString Ljava/lang/String;
+	FIELD field_2778 mouseGrabbed Z
+	FIELD field_2784 timer Lnet/minecraft/class_559;
+	FIELD field_2785 resourceThread Lnet/minecraft/class_28;
+	FIELD field_2787 missTime I
+	FIELD field_2797 gameDir Ljava/io/File;
+	FIELD field_2781 fullscreen Z
+	FIELD field_2801 gameMode Lnet/minecraft/class_504;
+	FIELD field_2802 displayWidth I
+	FIELD field_2803 displayHeight I
+	FIELD field_2804 level Lnet/minecraft/class_18;
+	FIELD field_2805 levelRenderer Lnet/minecraft/class_471;
+	FIELD field_2806 player Lnet/minecraft/class_40;
+	FIELD field_2808 particleEngine Lnet/minecraft/class_75;
+	FIELD field_2809 session Lnet/minecraft/class_237;
+	FIELD field_2811 canvas Ljava/awt/Canvas;
+	FIELD field_2813 pause Z
+	FIELD field_2814 textureManager Lnet/minecraft/class_76;
+	FIELD field_2815 font Lnet/minecraft/class_34;
+	FIELD field_2816 screen Lnet/minecraft/class_32;
+	FIELD field_2817 loadingScreen Lnet/minecraft/class_452;
+	FIELD field_2820 gui Lnet/minecraft/class_588;
+	FIELD field_2821 noRender Z
+	FIELD field_2823 hitResult Lnet/minecraft/class_27;
+	FIELD field_2824 options Lnet/minecraft/class_322;
+	FIELD field_2765 applet Lnet/minecraft/client/MinecraftApplet;
+	FIELD field_2792 levelSource Lnet/minecraft/class_182;
+	FIELD field_2791 instance Lnet/minecraft/client/Minecraft;
+	FIELD field_2807 cameraEntity Lnet/minecraft/class_127;
+	FIELD field_2782 crashed Z
+	FIELD field_2818 gameRenderer Lnet/minecraft/class_555;
 	METHOD <init> (Ljava/awt/Component;Ljava/awt/Canvas;Lnet/minecraft/client/MinecraftApplet;IIZ)V
 		ARG 2 canvas
 		ARG 3 applet
@@ -44,49 +43,51 @@ CLASS net/minecraft/client/Minecraft net/minecraft/client/Minecraft
 		ARG 6 fullscreen
 	METHOD main ([Ljava/lang/String;)V
 		ARG 0 args
-	METHOD method_1048 init ()V
-	METHOD method_1049 startAttack (I)V
-	METHOD method_1052 continueAttack (IZ)V
-	METHOD method_1053 renderFpsMeter (J)V
-	METHOD method_1054 setScreen (Lnet/minecraft/class_44;)V
+	METHOD method_2106 init ()V
+	METHOD method_2107 startAttack (I)V
+	METHOD method_2110 continueAttack (IZ)V
+	METHOD method_2111 renderFpsMeter (J)V
+	METHOD method_2112 setScreen (Lnet/minecraft/class_32;)V
 		ARG 1 screen
-	METHOD method_1055 setLevel (Lnet/minecraft/class_92;)V
-	METHOD method_1056 loadLevel (Lnet/minecraft/class_92;Ljava/lang/String;)V
-	METHOD method_1057 loadLevel (Lnet/minecraft/class_92;Ljava/lang/String;Lnet/minecraft/class_123;)V
+	METHOD method_2113 setLevel (Lnet/minecraft/class_18;)V
+	METHOD method_2114 loadLevel (Lnet/minecraft/class_18;Ljava/lang/String;)V
+	METHOD method_2115 loadLevel (Lnet/minecraft/class_18;Ljava/lang/String;Lnet/minecraft/class_54;)V
 		ARG 3 newPlayer
-	METHOD method_1057 changeDimension (Lnet/minecraft/class_92;Ljava/lang/String;Lnet/minecraft/class_480;)V
-	METHOD method_1058 handleCrash (Lnet/minecraft/class_220;)V
+	METHOD method_2115 changeDimension (Lnet/minecraft/class_18;Ljava/lang/String;Lnet/minecraft/class_54;)V
+	METHOD method_2102 handleCrash (Lnet/minecraft/class_447;)V
 		ARG 1 crash
-	METHOD method_1059 getOsWorkingDir (Ljava/lang/String;)Ljava/io/File;
+	METHOD method_2116 getOsWorkingDir (Ljava/lang/String;)Ljava/io/File;
 		ARG 0 path
-	METHOD method_1061 setResourceLocation (Ljava/lang/String;Ljava/io/File;)V
-	METHOD method_1063 (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+	METHOD method_2118 setResourceLocation (Ljava/lang/String;Ljava/io/File;)V
+	METHOD method_2121 (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 		ARG 0 playerName
-	METHOD method_1064 getGameDir ()Ljava/io/File;
-	METHOD method_1065 loadLevelFromSave (Ljava/lang/String;)V
-		ARG 1 saveID
-	METHOD method_1066 initGame ()V
-	METHOD method_1067 setState (Ljava/lang/String;)V
+	METHOD method_2123 getGameDir ()Ljava/io/File;
+	METHOD method_2129 initGame ()V
+	METHOD method_2128 setState (Ljava/lang/String;)V
 		ARG 1 stateName
-	METHOD method_1068 stop ()V
-	METHOD method_1069 setLoadingStage (Ljava/lang/String;)V
-	METHOD method_1070 grabMouse ()V
-	METHOD method_1071 releaseMouse ()V
-	METHOD method_1072 pause ()V
-	METHOD method_1074 tick ()V
-	METHOD method_1075 isSingleplayer ()Z
-	METHOD method_1076 changeDimension ()V
-	METHOD method_1081 respawn ()V
-	METHOD method_1083 getOSType ()Lnet/minecraft/class_272;
-	METHOD method_1085 pickBlock ()V
-	METHOD method_1086 forceReload ()V
-	METHOD method_1362 getConnection ()Lnet/minecraft/class_231;
-	METHOD method_1683 convertWorld (Ljava/lang/String;Ljava/lang/String;)V
-	METHOD method_1684 getLevelSource ()Lnet/minecraft/class_587;
-	METHOD method_1686 useFancyGraphics ()Z
-	METHOD method_1687 useAmbientOcclusion ()Z
-	METHOD method_1808 respawn (ZI)V
-	METHOD method_2225 crash (Lnet/minecraft/class_220;)V
+	METHOD method_2132 stop ()V
+	METHOD method_2130 setLoadingStage (Ljava/lang/String;)V
+	METHOD method_2133 grabMouse ()V
+	METHOD method_2134 releaseMouse ()V
+	METHOD method_2135 pause ()V
+	METHOD method_2137 tick ()V
+	METHOD method_2138 isSingleplayer ()Z
+	METHOD method_2139 changeDimension ()V
+	METHOD method_2151 getOSType ()Lnet/minecraft/class_531;
+	METHOD method_2103 pickBlock ()V
+	METHOD method_2105 forceReload ()V
+	METHOD method_2145 getConnection ()Lnet/minecraft/class_219;
+	METHOD method_2125 convertWorld (Ljava/lang/String;Ljava/lang/String;)V
+	METHOD method_2127 getLevelSource ()Lnet/minecraft/class_182;
+	METHOD method_2147 useFancyGraphics ()Z
+	METHOD method_2148 useAmbientOcclusion ()Z
+	METHOD method_2122 respawn (ZI)V
+	METHOD method_2126 crash (Lnet/minecraft/class_447;)V
 		ARG 1 report
-	METHOD method_2227 toggleFullscreen ()V
+	METHOD method_2136 toggleFullscreen ()V
 	METHOD run run ()V
+	CLASS class_636 TimerThread
+		FIELD field_2825 minecraft Lnet/minecraft/client/Minecraft;
+		METHOD <init> (Lnet/minecraft/client/Minecraft;Ljava/lang/String;)V
+			ARG 1 minecraft
+			ARG 2 threadName

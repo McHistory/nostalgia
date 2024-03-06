@@ -1,20 +1,20 @@
-CLASS net/minecraft/class_203 net/minecraft/world/level/chunk/Chunk
-	FIELD field_2376 unsaved Z
-	FIELD field_841 tiles [B
-	FIELD field_842 loaded Z
-	FIELD field_843 level Lnet/minecraft/class_92;
-	FIELD field_844 tileMeta Lnet/minecraft/class_406;
-	FIELD field_845 skyLight Lnet/minecraft/class_406;
-	FIELD field_846 blockLight Lnet/minecraft/class_406;
-	FIELD field_847 heightMap [B
-	FIELD field_849 xPos I
-	FIELD field_850 zPos I
-	FIELD field_851 tileEntities Ljava/util/Map;
-	FIELD field_852 entities [Ljava/util/List;
-	FIELD field_853 terrainPopulated Z
-	FIELD field_854 changed Z
-	FIELD field_857 lastSaveHadEntities Z
-	FIELD field_858 lastSaveTime J
+CLASS net/minecraft/class_43 net/minecraft/world/level/chunk/Chunk
+	FIELD field_968 unsaved Z
+	FIELD field_954 tiles [B
+	FIELD field_955 loaded Z
+	FIELD field_956 level Lnet/minecraft/class_18;
+	FIELD field_957 tileMeta Lnet/minecraft/class_257;
+	FIELD field_958 skyLight Lnet/minecraft/class_257;
+	FIELD field_959 blockLight Lnet/minecraft/class_257;
+	FIELD field_960 heightMap [B
+	FIELD field_962 xPos I
+	FIELD field_963 zPos I
+	FIELD field_964 tileEntities Ljava/util/Map;
+	FIELD field_965 entities [Ljava/util/List;
+	FIELD field_966 terrainPopulated Z
+	FIELD field_967 changed Z
+	FIELD field_969 lastSaveHadEntities Z
+	FIELD field_970 lastSaveTime J
 	METHOD <init> (Lnet/minecraft/class_92;II)V
 		ARG 1 level
 		ARG 2 x
@@ -25,20 +25,20 @@ CLASS net/minecraft/class_203 net/minecraft/world/level/chunk/Chunk
 		ARG 2 tiles
 		ARG 3 x
 		ARG 4 z
-	METHOD method_1472 isEmptyChunk ()Z
-	METHOD method_617 equals (II)Z
+	METHOD method_886 isEmptyChunk ()Z
+	METHOD method_858 equals (II)Z
 		ARG 1 x
 		ARG 2 z
-	METHOD method_618 getTile (III)I
+	METHOD method_859 getTile (III)I
 		ARG 1 x
 		ARG 2 y
 		ARG 3 z
-	METHOD method_619 setTile (IIII)Z
+	METHOD method_860 setTile (IIII)Z
 		ARG 1 x
 		ARG 2 y
 		ARG 3 z
 		ARG 4 id
-	METHOD method_620 setTile (IIIII)Z
+	METHOD method_861 setTile (IIIII)Z
 		ARG 1 x
 		ARG 2 y
 		ARG 3 z
@@ -48,72 +48,72 @@ CLASS net/minecraft/class_203 net/minecraft/world/level/chunk/Chunk
 		LOCAL 8 oldTile
 		LOCAL 9 tileX
 		LOCAL 10 tileZ
-	METHOD method_621 placeTileEntity (IIILnet/minecraft/class_265;)V
+	METHOD method_862 placeTileEntity (IIILnet/minecraft/class_55;)V
 		ARG 1 x
 		ARG 2 y
 		ARG 3 z
 		ARG 4 tileEntity
-	METHOD method_622 getRandom (J)Ljava/util/Random;
-	METHOD method_623 getLightLevel (Lnet/minecraft/class_63;III)I
+	METHOD method_863 getRandom (J)Ljava/util/Random;
+	METHOD method_864 getLightLevel (Lnet/minecraft/class_56;III)I
 		ARG 1 layer
 		ARG 2 x
 		ARG 3 y
 		ARG 4 z
-	METHOD method_624 setLightLevel (Lnet/minecraft/class_63;IIII)V
+	METHOD method_865 setLightLevel (Lnet/minecraft/class_56;IIII)V
 		ARG 1 layer
 		ARG 2 x
 		ARG 3 y
 		ARG 4 z
 		ARG 5 level
-	METHOD method_625 getEntitiesOfClass (Ljava/lang/Class;Lnet/minecraft/class_510;Ljava/util/List;)V
-	METHOD method_626 placeTileEntity (Lnet/minecraft/class_265;)V
+	METHOD method_866 getEntitiesOfClass (Ljava/lang/Class;Lnet/minecraft/class_25;Ljava/util/List;)V
+	METHOD method_867 placeTileEntity (Lnet/minecraft/class_55;)V
 		ARG 1 tileEntity
-	METHOD method_627 addEntity (Lnet/minecraft/class_333;)V
+	METHOD method_868 addEntity (Lnet/minecraft/class_57;)V
 		ARG 1 entity
-	METHOD method_628 removeEntity (Lnet/minecraft/class_333;I)V
+	METHOD method_869 removeEntity (Lnet/minecraft/class_57;I)V
 		ARG 1 entity
 		ARG 2 section
-	METHOD method_629 getEntities (Lnet/minecraft/class_333;Lnet/minecraft/class_510;Ljava/util/List;)V
-	METHOD method_630 isUnsaved (Z)Z
-	METHOD method_632 primeHeightmap ()V
-	METHOD method_633 getYHeight (II)I
+	METHOD method_870 getEntities (Lnet/minecraft/class_57;Lnet/minecraft/class_25;Ljava/util/List;)V
+	METHOD method_871 isUnsaved (Z)Z
+	METHOD method_892 primeHeightmap ()V
+	METHOD method_874 getYHeight (II)I
 		ARG 1 x
 		ARG 2 z
-	METHOD method_634 getMeta (III)I
+	METHOD method_875 getMeta (III)I
 		ARG 1 x
 		ARG 2 y
 		ARG 3 z
-	METHOD method_635 setMeta (IIII)V
+	METHOD method_876 setMeta (IIII)V
 		ARG 1 x
 		ARG 2 y
 		ARG 3 z
 		ARG 4 meta
-	METHOD method_636 removeEntity (Lnet/minecraft/class_333;)V
+	METHOD method_877 removeEntity (Lnet/minecraft/class_57;)V
 		ARG 1 entity
-	METHOD method_639 isHighestTile (III)Z
+	METHOD method_879 isHighestTile (III)Z
 		ARG 1 x
 		ARG 2 y
 		ARG 3 z
-	METHOD method_640 getLightLevel (IIII)I
+	METHOD method_880 getLightLevel (IIII)I
 		ARG 1 x
 		ARG 2 y
 		ARG 3 z
 		ARG 4 skyDarken
-	METHOD method_642 getTileEntity (III)Lnet/minecraft/class_265;
+	METHOD method_882 getTileEntity (III)Lnet/minecraft/class_55;
 		ARG 1 x
 		ARG 2 y
 		ARG 3 z
 		LOCAL 4 pos
 		LOCAL 5 te
 		LOCAL 6 tile
-	METHOD method_643 load ()V
-	METHOD method_644 removeTileEntity (III)V
+	METHOD method_881 load ()V
+	METHOD method_884 removeTileEntity (III)V
 		ARG 1 x
 		ARG 2 y
 		ARG 3 z
-	METHOD method_645 unload ()V
-	METHOD method_647 setChanged ()V
-	METHOD method_648 updateSkylight (III)V
+	METHOD method_883 unload ()V
+	METHOD method_885 setChanged ()V
+	METHOD method_889 updateSkylight (III)V
 		ARG 1 x
 		ARG 2 y
 		ARG 3 z
