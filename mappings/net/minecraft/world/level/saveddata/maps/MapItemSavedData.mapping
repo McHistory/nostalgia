@@ -1,14 +1,4 @@
 CLASS net/minecraft/class_198 net/minecraft/world/level/saveddata/maps/MapItemSavedData
-	CLASS class_200 HoldingPlayer
-		FIELD field_734 player Lnet/minecraft/class_54;
-		FIELD field_735 dirtyX [I
-		FIELD field_736 dirtyY [I
-		FIELD field_737 parent Lnet/minecraft/class_198;
-		FIELD field_738 tick I
-		FIELD field_739 step I
-		METHOD <init> (Lnet/minecraft/class_745;Lnet/minecraft/class_480;)V
-			ARG 1 parent
-			ARG 2 player
 	FIELD field_720 xCenter I
 	FIELD field_721 zCenter I
 	FIELD field_722 dimension B
@@ -21,3 +11,17 @@ CLASS net/minecraft/class_198 net/minecraft/world/level/saveddata/maps/MapItemSa
 	METHOD method_667 tickCarriedBy (Lnet/minecraft/class_54;Lnet/minecraft/class_31;)V
 		ARG 1 player
 		ARG 2 item
+	CLASS class_199
+		FIELD field_733 data Lnet/minecraft/class_198;
+		METHOD <init> (Lnet/minecraft/class_745;BBBB)V
+			ARG 1 data
+	CLASS class_200 HoldingPlayer
+		FIELD field_734 player Lnet/minecraft/class_54;
+		FIELD field_735 dirtyX [I
+		FIELD field_736 dirtyY [I
+		FIELD field_737 parent Lnet/minecraft/class_198;
+		FIELD field_738 tick I
+		FIELD field_739 step I
+		METHOD <init> (Lnet/minecraft/class_745;Lnet/minecraft/class_480;)V
+			ARG 1 parent
+			ARG 2 player

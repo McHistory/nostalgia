@@ -6,29 +6,36 @@ CLASS net/minecraft/class_71 net/minecraft/world/inventory/AbstractContainerMenu
 	FIELD field_2735 containerId I
 	FIELD field_2736 containerListeners Ljava/util/List;
 	METHOD method_2075 broadcastChanges ()V
-	METHOD method_2084 getSlot (I)Lnet/minecraft/class_133;
+	METHOD method_2076 addListener (Lnet/minecraft/class_633;)V
+		ARG 1 listener
+	METHOD method_2077 set (II)V
 		ARG 1 index
+		ARG 2 value
 	METHOD method_2078 clicked (IIZLnet/minecraft/class_54;)Lnet/minecraft/class_31;
 		ARG 1 slotId
 		ARG 2 button
+		ARG 3 quickMove
 		ARG 4 player
-	METHOD method_2089 setItem (ILnet/minecraft/class_31;)V
-		ARG 1 slot
-		ARG 2 item
 	METHOD method_2079 addSlot (Lnet/minecraft/class_133;)V
 		ARG 1 slot
-	METHOD method_2087 removed (Lnet/minecraft/class_54;)V
-		ARG 1 player
-	METHOD method_2088 slotsChanged (Lnet/minecraft/class_134;)V
-		ARG 1 container
-	METHOD method_2092 setAll ([Lnet/minecraft/class_31;)V
-		ARG 1 items
-	METHOD method_2094 stillValid (Lnet/minecraft/class_54;)Z
-		ARG 1 player
-	METHOD method_2086 quickMoveStack (I)Lnet/minecraft/class_31;
-		ARG 1 index
 	METHOD method_2081 moveItemStackTo (Lnet/minecraft/class_31;IIZ)V
 		ARG 1 item
 		ARG 2 slotFrom
 		ARG 3 slotTo
 		ARG 4 take
+	METHOD method_2083 getItems ()Ljava/util/List;
+	METHOD method_2084 getSlot (I)Lnet/minecraft/class_133;
+		ARG 1 index
+	METHOD method_2086 quickMoveStack (I)Lnet/minecraft/class_31;
+		ARG 1 index
+	METHOD method_2087 removed (Lnet/minecraft/class_54;)V
+		ARG 1 player
+	METHOD method_2088 slotsChanged (Lnet/minecraft/class_134;)V
+		ARG 1 container
+	METHOD method_2089 setItem (ILnet/minecraft/class_31;)V
+		ARG 1 slot
+		ARG 2 item
+	METHOD method_2092 setAll ([Lnet/minecraft/class_31;)V
+		ARG 1 items
+	METHOD method_2094 stillValid (Lnet/minecraft/class_54;)Z
+		ARG 1 player

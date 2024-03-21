@@ -1,0 +1,21 @@
+v2
+
+# Sounds
+
+constant level_event_type net/minecraft/world/level/tile/LevelEvent SOUND_DISPENSER_DISPENSE
+constant level_event_type net/minecraft/world/level/tile/LevelEvent SOUND_DISPENSER_FAIL
+constant level_event_type net/minecraft/world/level/tile/LevelEvent SOUND_DISPENSER_PROJECTILE_LAUNCH
+constant level_event_type net/minecraft/world/level/tile/LevelEvent SOUND_OPEN_OR_CLOSE
+constant level_event_type net/minecraft/world/level/tile/LevelEvent SOUND_LAVA_FIZZ
+constant level_event_type net/minecraft/world/level/tile/LevelEvent SOUND_PLAY_RECORD
+
+# Particles
+
+constant level_event_type net/minecraft/world/level/tile/LevelEvent PARTICLES_SHOOT_SMOKE
+constant level_event_type net/minecraft/world/level/tile/LevelEvent PARTICLES_DESTROY_BLOCK
+
+target_method net/minecraft/world/Level levelEvent (IIIII)V
+	param 0 level_event_type
+
+target_method net/minecraft/world/Level levelEvent (Lnet/minecraft/world/entity/Player;IIIII)V
+	param 1 level_event_type
