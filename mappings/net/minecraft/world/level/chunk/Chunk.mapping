@@ -1,5 +1,4 @@
 CLASS net/minecraft/class_43 net/minecraft/world/level/chunk/Chunk
-	FIELD field_968 unsaved Z
 	FIELD field_954 tiles [B
 	FIELD field_955 loaded Z
 	FIELD field_956 level Lnet/minecraft/class_18;
@@ -13,8 +12,18 @@ CLASS net/minecraft/class_43 net/minecraft/world/level/chunk/Chunk
 	FIELD field_965 entities [Ljava/util/List;
 	FIELD field_966 terrainPopulated Z
 	FIELD field_967 changed Z
+	FIELD field_968 unsaved Z
 	FIELD field_969 lastSaveHadEntities Z
 	FIELD field_970 lastSaveTime J
+	METHOD <init> (Lnet/minecraft/class_18;II)V
+		ARG 1 level
+		ARG 2 x
+		ARG 3 z
+	METHOD <init> (Lnet/minecraft/class_18;[BII)V
+		ARG 1 level
+		ARG 2 tiles
+		ARG 3 x
+		ARG 4 z
 	METHOD <init> (Lnet/minecraft/class_92;II)V
 		ARG 1 level
 		ARG 2 x
@@ -25,7 +34,6 @@ CLASS net/minecraft/class_43 net/minecraft/world/level/chunk/Chunk
 		ARG 2 tiles
 		ARG 3 x
 		ARG 4 z
-	METHOD method_886 isEmptyChunk ()Z
 	METHOD method_858 equals (II)Z
 		ARG 1 x
 		ARG 2 z
@@ -75,7 +83,8 @@ CLASS net/minecraft/class_43 net/minecraft/world/level/chunk/Chunk
 		ARG 2 section
 	METHOD method_870 getEntities (Lnet/minecraft/class_57;Lnet/minecraft/class_25;Ljava/util/List;)V
 	METHOD method_871 isUnsaved (Z)Z
-	METHOD method_892 primeHeightmap ()V
+	METHOD method_872 setChunkData ([BIIIIIII)I
+		ARG 1 chunkData
 	METHOD method_874 getYHeight (II)I
 		ARG 1 x
 		ARG 2 z
@@ -99,6 +108,7 @@ CLASS net/minecraft/class_43 net/minecraft/world/level/chunk/Chunk
 		ARG 2 y
 		ARG 3 z
 		ARG 4 skyDarken
+	METHOD method_881 load ()V
 	METHOD method_882 getTileEntity (III)Lnet/minecraft/class_55;
 		ARG 1 x
 		ARG 2 y
@@ -106,14 +116,17 @@ CLASS net/minecraft/class_43 net/minecraft/world/level/chunk/Chunk
 		LOCAL 4 pos
 		LOCAL 5 te
 		LOCAL 6 tile
-	METHOD method_881 load ()V
+	METHOD method_883 unload ()V
 	METHOD method_884 removeTileEntity (III)V
 		ARG 1 x
 		ARG 2 y
 		ARG 3 z
-	METHOD method_883 unload ()V
 	METHOD method_885 setChanged ()V
+	METHOD method_886 isEmptyChunk ()Z
 	METHOD method_889 updateSkylight (III)V
 		ARG 1 x
 		ARG 2 y
 		ARG 3 z
+	METHOD method_891 loadChunkData ([BIIIIIII)I
+		ARG 1 chunkData
+	METHOD method_892 primeHeightmap ()V

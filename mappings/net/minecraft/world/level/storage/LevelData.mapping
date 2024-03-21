@@ -1,4 +1,4 @@
-CLASS net/minecraft/class_7 net/minecraft/world/LevelData
+CLASS net/minecraft/class_7 net/minecraft/world/level/storage/LevelData
 	FIELD field_13 seed J
 	FIELD field_14 spawnX I
 	FIELD field_15 spawnY I
@@ -44,33 +44,49 @@ CLASS net/minecraft/class_7 net/minecraft/world/LevelData
 		ARG 1 base
 		ARG 2 player
 	METHOD method_11 getSeed ()J
-	METHOD method_29 setSpawnY (I)V
-		ARG 1 spawnY
+	METHOD method_12 setThunderTime (I)V
+		ARG 1 thunderTime
 	METHOD method_13 setSize (J)V
 		ARG 1 size
+	METHOD method_14 setRaining (Z)V
+		ARG 1 raining
 	METHOD method_15 getSpawnX ()I
-	METHOD method_30 setSpawnZ (I)V
-		ARG 1 spawnZ
+	METHOD method_16 setRainTime (I)V
+		ARG 1 rainTime
 	METHOD method_17 getSpawnY ()I
-	METHOD method_4 setVersion (I)V
-		ARG 1 version
 	METHOD method_18 getSpawnZ ()I
 	METHOD method_19 getTime ()J
 	METHOD method_20 getSize ()J
-	METHOD method_31 getPlayer ()Lnet/minecraft/class_8;
 	METHOD method_21 getDimension ()I
-	METHOD method_32 getLevelName ()Ljava/lang/String;
 	METHOD method_22 getVersion ()I
-	METHOD method_33 getLastPlayed ()J
-	METHOD method_10 setThundering (Z)V
-		ARG 1 thundering
-	METHOD method_14 setRaining (Z)V
-		ARG 1 raining
-	METHOD method_12 setThunderTime (I)V
-		ARG 1 thunderTime
-	METHOD method_16 setRainTime (I)V
-		ARG 1 rainTime
 	METHOD method_23 isThundering ()Z
 	METHOD method_24 getThunderTime ()I
 	METHOD method_25 isRaining ()Z
 	METHOD method_26 getRainTime ()I
+	METHOD method_27 setSpawnX (I)V
+		ARG 1 spawnX
+	METHOD method_28 setPlayer (Lnet/minecraft/class_8;)V
+		ARG 1 player
+	METHOD method_29 setSpawnY (I)V
+		ARG 1 spawnY
+	METHOD method_3 save ()Lnet/minecraft/class_8;
+	METHOD method_30 setSpawnZ (I)V
+		ARG 1 spawnZ
+	METHOD method_31 getPlayer ()Lnet/minecraft/class_8;
+	METHOD method_32 getLevelName ()Ljava/lang/String;
+	METHOD method_33 getLastPlayed ()J
+	METHOD method_4 setVersion (I)V
+		ARG 1 version
+	METHOD method_5 setSpawnXYZ (III)V
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+	METHOD method_6 setTime (J)V
+		ARG 1 time
+	METHOD method_7 save (Lnet/minecraft/class_8;Lnet/minecraft/class_8;)V
+		ARG 1 base
+		ARG 2 player
+	METHOD method_8 setLevelName (Ljava/lang/String;)V
+		ARG 1 name
+	METHOD method_9 saveWithPlayers (Ljava/util/List;)Lnet/minecraft/class_8;
+		ARG 1 players
