@@ -1,6 +1,8 @@
 CLASS net/minecraft/class_216 net/minecraft/world/entity/data/SynchedEntityData
 	FIELD field_1740 dataTypes Ljava/util/HashMap;
 	FIELD field_1741 dataHolders Ljava/util/Map;
+	FIELD field_1742 isDirty Z
+	METHOD method_1500 isDirty ()Z
 	METHOD method_1501 getByte (I)B
 		ARG 1 id
 	METHOD method_1502 define (ILjava/lang/Object;)V
@@ -12,8 +14,8 @@ CLASS net/minecraft/class_216 net/minecraft/world/entity/data/SynchedEntityData
 	METHOD method_1505 writeData (Ljava/io/DataOutputStream;Lnet/minecraft/class_270;)V
 		ARG 0 data
 		ARG 1 dataHolder
-	METHOD method_1509 set (ILjava/lang/Object;)V
 	METHOD method_1508 getInt (I)I
 		ARG 1 id
+	METHOD method_1509 set (ILjava/lang/Object;)V
 	METHOD method_1510 getString (I)Ljava/lang/String;
 		ARG 1 id

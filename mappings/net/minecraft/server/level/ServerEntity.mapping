@@ -1,0 +1,27 @@
+CLASS net/minecraft/class_174 net/minecraft/server/level/ServerEntity
+	FIELD field_597 entity Lnet/minecraft/class_57;
+	FIELD field_598 range I
+	FIELD field_599 updateInterval I
+	FIELD field_600 xp I
+	FIELD field_601 yp I
+	FIELD field_602 zp I
+	FIELD field_603 yRotp I
+	FIELD field_604 xRotp I
+	FIELD field_608 tickCount I
+	FIELD field_610 seenBy Ljava/util/Set;
+	FIELD field_615 trackDelta Z
+	FIELD field_616 teleportDelay I
+	METHOD <init> (Lnet/minecraft/class_57;IIZ)V
+		ARG 1 entity
+		ARG 2 range
+		ARG 3 updateInterval
+		ARG 4 trackDelta
+	METHOD method_598 broadcast (Lnet/minecraft/class_169;)V
+		ARG 1 packet
+	METHOD method_599 sendChanges (Ljava/util/List;)V
+		ARG 1 players
+	METHOD method_600 getAddEntityPacket ()Lnet/minecraft/class_169;
+	METHOD method_601 (Lnet/minecraft/class_69;)V
+		ARG 1 player
+	METHOD method_602 broadcastAll (Lnet/minecraft/class_169;)V
+		ARG 1 packet

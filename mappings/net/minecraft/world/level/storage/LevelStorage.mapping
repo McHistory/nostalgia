@@ -2,11 +2,13 @@ CLASS net/minecraft/class_81 net/minecraft/world/level/storage/LevelStorage
 	FIELD field_278 LOGGER Ljava/util/logging/Logger;
 	FIELD field_279 worldDir Ljava/io/File;
 	FIELD field_280 playerDir Ljava/io/File;
-	FIELD field_282 currentSession J
 	FIELD field_281 data Ljava/io/File;
+	FIELD field_282 currentSession J
 	METHOD <init> (Ljava/io/File;Ljava/lang/String;Z)V
 		ARG 1 savesFolder
 		ARG 2 name
 		ARG 3 savePlayers
 	METHOD method_332 getFolder ()Ljava/io/File;
+	METHOD method_333 load (Ljava/lang/String;)Lnet/minecraft/class_8;
+		ARG 1 username
 	METHOD method_334 initiateSession ()V

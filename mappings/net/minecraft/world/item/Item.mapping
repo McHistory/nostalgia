@@ -25,6 +25,7 @@ CLASS net/minecraft/class_124 net/minecraft/world/item/Item
 	FIELD field_399 CHAIN_HELMET Lnet/minecraft/class_124;
 	FIELD field_400 CHAIN_CHESTPLATE Lnet/minecraft/class_124;
 	FIELD field_401 CHAIN_LEGGINGS Lnet/minecraft/class_124;
+	FIELD field_402 durability I
 	FIELD field_403 REDSTONE Lnet/minecraft/class_124;
 	FIELD field_404 SNOWBALL Lnet/minecraft/class_124;
 	FIELD field_405 BOAT Lnet/minecraft/class_124;
@@ -37,7 +38,6 @@ CLASS net/minecraft/class_124 net/minecraft/world/item/Item
 	FIELD field_412 BOOK Lnet/minecraft/class_124;
 	FIELD field_413 SLIMEBALL Lnet/minecraft/class_124;
 	FIELD field_414 MINECART_CHEST Lnet/minecraft/class_124;
-	FIELD field_467 translationKey Ljava/lang/String;
 	FIELD field_415 MINECART_FURNACE Lnet/minecraft/class_124;
 	FIELD field_416 EGG Lnet/minecraft/class_124;
 	FIELD field_417 COMPASS Lnet/minecraft/class_124;
@@ -45,11 +45,13 @@ CLASS net/minecraft/class_124 net/minecraft/world/item/Item
 	FIELD field_419 CLOCK Lnet/minecraft/class_124;
 	FIELD field_420 GLOW_STONE Lnet/minecraft/class_124;
 	FIELD field_421 FISH Lnet/minecraft/class_124;
-	FIELD field_459 RECORD_13 Lnet/minecraft/class_124;
-	FIELD field_460 RECORD_CAT Lnet/minecraft/class_124;
-	FIELD field_461 id I
-	FIELD field_462 maxStackSize I
-	FIELD field_463 texture I
+	FIELD field_422 COOKED_FISH Lnet/minecraft/class_124;
+	FIELD field_423 DYE Lnet/minecraft/class_124;
+	FIELD field_424 BONE Lnet/minecraft/class_124;
+	FIELD field_425 SUGAR Lnet/minecraft/class_124;
+	FIELD field_426 CAKE Lnet/minecraft/class_124;
+	FIELD field_427 BED Lnet/minecraft/class_124;
+	FIELD field_428 REPEATER Lnet/minecraft/class_124;
 	FIELD field_429 CHAIN_BOOTS Lnet/minecraft/class_124;
 	FIELD field_430 IRON_HELMET Lnet/minecraft/class_124;
 	FIELD field_431 IRON_CHESTPLATE Lnet/minecraft/class_124;
@@ -77,6 +79,17 @@ CLASS net/minecraft/class_124 net/minecraft/world/item/Item
 	FIELD field_453 SADDLE Lnet/minecraft/class_124;
 	FIELD field_454 DOOR Lnet/minecraft/class_124;
 	FIELD field_455 random Ljava/util/Random;
+	FIELD field_456 COOKIE Lnet/minecraft/class_124;
+	FIELD field_457 MAP Lnet/minecraft/class_125;
+	FIELD field_458 SHEARS Lnet/minecraft/class_126;
+	FIELD field_459 RECORD_13 Lnet/minecraft/class_124;
+	FIELD field_460 RECORD_CAT Lnet/minecraft/class_124;
+	FIELD field_461 id I
+	FIELD field_462 maxStackSize I
+	FIELD field_463 texture I
+	FIELD field_465 hasMeta Z
+	FIELD field_466 remainder Lnet/minecraft/class_124;
+	FIELD field_467 translationKey Ljava/lang/String;
 	FIELD field_468 items [Lnet/minecraft/class_124;
 	FIELD field_469 IRON_SHOVEL Lnet/minecraft/class_124;
 	FIELD field_470 IRON_PICKAXE Lnet/minecraft/class_124;
@@ -101,38 +114,8 @@ CLASS net/minecraft/class_124 net/minecraft/world/item/Item
 	FIELD field_489 DIAMOND_SWORD Lnet/minecraft/class_124;
 	FIELD field_490 DIAMOND_SHOVEL Lnet/minecraft/class_124;
 	FIELD field_491 DIAMOND_PICKAXE Lnet/minecraft/class_124;
-	FIELD field_466 remainder Lnet/minecraft/class_124;
-	FIELD field_422 COOKED_FISH Lnet/minecraft/class_124;
-	FIELD field_423 DYE Lnet/minecraft/class_124;
-	FIELD field_424 BONE Lnet/minecraft/class_124;
-	FIELD field_425 SUGAR Lnet/minecraft/class_124;
-	FIELD field_426 CAKE Lnet/minecraft/class_124;
-	FIELD field_427 BED Lnet/minecraft/class_124;
-	FIELD field_428 REPEATER Lnet/minecraft/class_124;
-	FIELD field_402 durability I
-	FIELD field_456 COOKIE Lnet/minecraft/class_124;
-	FIELD field_457 MAP Lnet/minecraft/class_125;
-	FIELD field_458 SHEARS Lnet/minecraft/class_126;
 	METHOD <init> (I)V
 		ARG 1 id
-	METHOD method_443 getTranslationKey ()Ljava/lang/String;
-	METHOD method_458 texture (I)Lnet/minecraft/class_124;
-		ARG 1 index
-	METHOD method_452 texture (II)Lnet/minecraft/class_124;
-		ARG 1 row
-		ARG 2 column
-	METHOD method_456 setTranslationKey (Ljava/lang/String;)Lnet/minecraft/class_124;
-	METHOD method_459 getMaxStackSize ()I
-	METHOD method_464 getDurability ()I
-	METHOD method_453 getCraftingResult (Lnet/minecraft/class_124;)Lnet/minecraft/class_124;
-	METHOD method_442 getTranslationKey (Lnet/minecraft/class_31;)Ljava/lang/String;
-		ARG 1 item
-	METHOD method_460 stacksTo (I)Lnet/minecraft/class_124;
-		ARG 1 maxSize
-	METHOD method_463 setDurability (I)Lnet/minecraft/class_124;
-		ARG 1 durability
-	METHOD method_467 getRecipeRemainder ()Lnet/minecraft/class_124;
-	METHOD method_468 hasRecipeRemainder ()Z
 	METHOD method_437 mineBlock (Lnet/minecraft/class_31;IIIILnet/minecraft/class_127;)Z
 		ARG 1 item
 		ARG 2 tile
@@ -140,25 +123,16 @@ CLASS net/minecraft/class_124 net/minecraft/world/item/Item
 		ARG 4 y
 		ARG 5 z
 		ARG 6 entity
-	METHOD method_446 hurtEnemy (Lnet/minecraft/class_31;Lnet/minecraft/class_127;Lnet/minecraft/class_127;)Z
-	METHOD method_441 getTexture (I)I
-		ARG 1 meta
+	METHOD method_438 getDestroySpeed (Lnet/minecraft/class_31;Lnet/minecraft/class_17;)F
+		ARG 1 item
+		ARG 2 tile
 	METHOD method_439 getTexture (Lnet/minecraft/class_31;)I
 		ARG 1 item
-	METHOD method_454 inventoryTick (Lnet/minecraft/class_31;Lnet/minecraft/class_18;Lnet/minecraft/class_57;IZ)V
+	METHOD method_441 getTexture (I)I
+		ARG 1 meta
+	METHOD method_442 getTranslationKey (Lnet/minecraft/class_31;)Ljava/lang/String;
 		ARG 1 item
-		ARG 2 level
-		ARG 3 entity
-		ARG 4 slotId
-		ARG 5 isSelected
-	METHOD method_461 onCraftedBy (Lnet/minecraft/class_31;Lnet/minecraft/class_18;Lnet/minecraft/class_54;)V
-		ARG 1 item
-		ARG 2 level
-		ARG 3 player
-	METHOD method_451 use (Lnet/minecraft/class_31;Lnet/minecraft/class_18;Lnet/minecraft/class_54;)Lnet/minecraft/class_31;
-		ARG 1 item
-		ARG 2 level
-		ARG 3 player
+	METHOD method_443 getTranslationKey ()Ljava/lang/String;
 	METHOD method_444 useOn (Lnet/minecraft/class_31;Lnet/minecraft/class_54;Lnet/minecraft/class_18;IIII)Z
 		ARG 1 item
 		ARG 2 player
@@ -169,11 +143,41 @@ CLASS net/minecraft/class_124 net/minecraft/world/item/Item
 		ARG 7 face
 		LOCAL 8 bed
 		LOCAL 9 facing
-	METHOD method_438 getDestroySpeed (Lnet/minecraft/class_31;Lnet/minecraft/class_17;)F
-		ARG 1 item
-		ARG 2 tile
+	METHOD method_446 hurtEnemy (Lnet/minecraft/class_31;Lnet/minecraft/class_127;Lnet/minecraft/class_127;)Z
 	METHOD method_450 canDestroySpecial (Lnet/minecraft/class_17;)Z
 		ARG 1 tile
+	METHOD method_451 use (Lnet/minecraft/class_31;Lnet/minecraft/class_18;Lnet/minecraft/class_54;)Lnet/minecraft/class_31;
+		ARG 1 item
+		ARG 2 level
+		ARG 3 player
+	METHOD method_452 texture (II)Lnet/minecraft/class_124;
+		ARG 1 row
+		ARG 2 column
+	METHOD method_453 getCraftingResult (Lnet/minecraft/class_124;)Lnet/minecraft/class_124;
+	METHOD method_454 inventoryTick (Lnet/minecraft/class_31;Lnet/minecraft/class_18;Lnet/minecraft/class_57;IZ)V
+		ARG 1 item
+		ARG 2 level
+		ARG 3 entity
+		ARG 4 slotId
+		ARG 5 isSelected
 	METHOD method_455 interactEnemy (Lnet/minecraft/class_31;Lnet/minecraft/class_127;)V
 		ARG 1 item
 		ARG 2 entity
+	METHOD method_456 setTranslationKey (Ljava/lang/String;)Lnet/minecraft/class_124;
+	METHOD method_457 setMeta (Z)Lnet/minecraft/class_124;
+		ARG 1 hasMeta
+	METHOD method_458 texture (I)Lnet/minecraft/class_124;
+		ARG 1 index
+	METHOD method_459 getMaxStackSize ()I
+	METHOD method_460 stacksTo (I)Lnet/minecraft/class_124;
+		ARG 1 maxSize
+	METHOD method_461 onCraftedBy (Lnet/minecraft/class_31;Lnet/minecraft/class_18;Lnet/minecraft/class_54;)V
+		ARG 1 item
+		ARG 2 level
+		ARG 3 player
+	METHOD method_462 hasMeta ()Z
+	METHOD method_463 setDurability (I)Lnet/minecraft/class_124;
+		ARG 1 durability
+	METHOD method_464 getDurability ()I
+	METHOD method_467 getRecipeRemainder ()Lnet/minecraft/class_124;
+	METHOD method_468 hasRecipeRemainder ()Z

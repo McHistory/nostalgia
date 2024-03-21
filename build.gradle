@@ -33,9 +33,9 @@ filament {
 
 def ENV = System.getenv()
 // Fetch build number from Github Actions
-def build_number = ENV.BUILD_NUMBER ?: "local35"
+def build_number = ENV.BUILD_NUMBER ?: "local37"
 
-def nostalgiaVersion = "${minecraft_version}+build.$build_number"
+def nostalgiaVersion = "${minecraft_version}-babric+build.$build_number"
 version = nostalgiaVersion
 
 if (ENV.BRANCH_NAME) {

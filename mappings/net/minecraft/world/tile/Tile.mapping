@@ -1,30 +1,5 @@
 CLASS net/minecraft/class_17 net/minecraft/world/tile/Tile
-	FIELD field_1914 texture I
-	FIELD field_1915 id I
-	FIELD field_1916 destroyTime F
-	FIELD field_1917 explosionResistance F
-	FIELD field_1920 minX D
-	FIELD field_1921 minY D
-	FIELD field_1922 minZ D
-	FIELD field_1923 maxX D
-	FIELD field_1924 maxY D
-	FIELD field_1925 maxZ D
-	FIELD field_1926 sound Lnet/minecraft/class_475;
-	FIELD field_1900 material Lnet/minecraft/class_15;
-	FIELD field_1928 DEFAULT_SOUND Lnet/minecraft/class_475;
-	FIELD field_1929 WOOD_SOUND Lnet/minecraft/class_475;
-	FIELD field_1930 GRAVEL_SOUND Lnet/minecraft/class_475;
-	FIELD field_1931 GRASS_SOUND Lnet/minecraft/class_475;
-	FIELD field_1932 STONE_SOUND Lnet/minecraft/class_475;
-	FIELD field_1933 METAL_SOUND Lnet/minecraft/class_475;
-	FIELD field_1934 GLASS_SOUND Lnet/minecraft/class_475;
-	FIELD field_1935 WOOL_SOUND Lnet/minecraft/class_475;
-	FIELD field_1936 SAND_SOUND Lnet/minecraft/class_475;
-	FIELD field_1937 tiles [Lnet/minecraft/class_17;
-	FIELD field_1938 TICKS_RANDOMLY [Z
-	FIELD field_1940 tileHasTileEntity [Z
-	FIELD field_1941 OPACITIES [I
-	FIELD field_1943 LIGHT_TILES [I
+	FIELD field_1821 BEDROCK Lnet/minecraft/class_17;
 	FIELD field_1822 FLOWING_WATER Lnet/minecraft/class_17;
 	FIELD field_1823 WATER Lnet/minecraft/class_17;
 	FIELD field_1824 FLOWING_LAVA Lnet/minecraft/class_17;
@@ -38,18 +13,32 @@ CLASS net/minecraft/class_17 net/minecraft/world/tile/Tile
 	FIELD field_1832 LEAVES Lnet/minecraft/class_299;
 	FIELD field_1833 SPONGE Lnet/minecraft/class_17;
 	FIELD field_1834 GLASS Lnet/minecraft/class_17;
+	FIELD field_1835 LAPIS_ORE Lnet/minecraft/class_17;
+	FIELD field_1836 LAPIS_BLOCK Lnet/minecraft/class_17;
+	FIELD field_1837 DISPENSER Lnet/minecraft/class_17;
+	FIELD field_1838 SANDSTONE Lnet/minecraft/class_17;
+	FIELD field_1839 MUSIC_BLOCK Lnet/minecraft/class_17;
+	FIELD field_1840 BED Lnet/minecraft/class_17;
+	FIELD field_1841 POWERED_RAIL Lnet/minecraft/class_17;
+	FIELD field_1842 DETECTOR_RAIL Lnet/minecraft/class_17;
+	FIELD field_1843 STICKY_PISTON Lnet/minecraft/class_17;
+	FIELD field_1844 WEB Lnet/minecraft/class_17;
+	FIELD field_1845 TALL_GRASS Lnet/minecraft/class_392;
+	FIELD field_1846 DEAD_BUSH Lnet/minecraft/class_204;
+	FIELD field_1847 translationKey Ljava/lang/String;
+	FIELD field_1848 WHEAT Lnet/minecraft/class_17;
 	FIELD field_1849 FARMLAND Lnet/minecraft/class_17;
 	FIELD field_1850 FURNACE Lnet/minecraft/class_17;
 	FIELD field_1851 LIT_FURNACE Lnet/minecraft/class_17;
 	FIELD field_1852 SIGN Lnet/minecraft/class_17;
 	FIELD field_1853 DOOR Lnet/minecraft/class_17;
 	FIELD field_1854 LADDER Lnet/minecraft/class_17;
+	FIELD field_1855 RAIL Lnet/minecraft/class_17;
 	FIELD field_1856 COBBLESTONE_STAIRS Lnet/minecraft/class_17;
 	FIELD field_1857 WALL_SIGN Lnet/minecraft/class_17;
 	FIELD field_1858 LEVER Lnet/minecraft/class_17;
 	FIELD field_1859 STONE_PRESSURE_PLATE Lnet/minecraft/class_17;
 	FIELD field_1860 IRON_DOOR Lnet/minecraft/class_17;
-	FIELD field_1847 translationKey Ljava/lang/String;
 	FIELD field_1861 WOOD_PRESSURE_PLATE Lnet/minecraft/class_17;
 	FIELD field_1862 REDSTONE_ORE Lnet/minecraft/class_17;
 	FIELD field_1863 LIT_REDSTONE_ORE Lnet/minecraft/class_17;
@@ -63,7 +52,10 @@ CLASS net/minecraft/class_17 net/minecraft/world/tile/Tile
 	FIELD field_1871 CLAY Lnet/minecraft/class_17;
 	FIELD field_1872 REEDS Lnet/minecraft/class_17;
 	FIELD field_1873 JUKEBOX Lnet/minecraft/class_17;
-	FIELD field_1902 OAK_FENCE Lnet/minecraft/class_17;
+	FIELD field_1874 PISTON Lnet/minecraft/class_17;
+	FIELD field_1875 PISTON_HEAD Lnet/minecraft/class_205;
+	FIELD field_1876 CLOTH Lnet/minecraft/class_17;
+	FIELD field_1877 GHOST_PISTON_HEAD Lnet/minecraft/class_469;
 	FIELD field_1878 FLOWER Lnet/minecraft/class_473;
 	FIELD field_1879 ROSE Lnet/minecraft/class_473;
 	FIELD field_1880 BROWN_MUSHROOM Lnet/minecraft/class_473;
@@ -86,41 +78,50 @@ CLASS net/minecraft/class_17 net/minecraft/world/tile/Tile
 	FIELD field_1897 DIAMOND_ORE Lnet/minecraft/class_17;
 	FIELD field_1898 DIAMOND_BLOCK Lnet/minecraft/class_17;
 	FIELD field_1899 WORKBENCH Lnet/minecraft/class_17;
-	FIELD field_1848 WHEAT Lnet/minecraft/class_17;
+	FIELD field_1900 material Lnet/minecraft/class_15;
+	FIELD field_1902 OAK_FENCE Lnet/minecraft/class_17;
 	FIELD field_1903 PUMPKIN Lnet/minecraft/class_17;
 	FIELD field_1904 NETHERRACK Lnet/minecraft/class_17;
 	FIELD field_1905 SOUL_SAND Lnet/minecraft/class_17;
 	FIELD field_1906 GLOWSTONE Lnet/minecraft/class_17;
 	FIELD field_1907 PORTAL Lnet/minecraft/class_207;
+	FIELD field_1908 LIT_PUMPKIN Lnet/minecraft/class_17;
+	FIELD field_1909 CAKE Lnet/minecraft/class_17;
+	FIELD field_1910 REPEATER_OFF Lnet/minecraft/class_17;
+	FIELD field_1911 REPEATER_ON Lnet/minecraft/class_17;
+	FIELD field_1912 LOCKED_CHEST Lnet/minecraft/class_17;
+	FIELD field_1913 TRAPDOOR Lnet/minecraft/class_17;
+	FIELD field_1914 texture I
+	FIELD field_1915 id I
+	FIELD field_1916 destroyTime F
+	FIELD field_1917 explosionResistance F
+	FIELD field_1920 minX D
+	FIELD field_1921 minY D
+	FIELD field_1922 minZ D
+	FIELD field_1923 maxX D
+	FIELD field_1924 maxY D
+	FIELD field_1925 maxZ D
+	FIELD field_1926 sound Lnet/minecraft/class_475;
+	FIELD field_1928 DEFAULT_SOUND Lnet/minecraft/class_475;
+	FIELD field_1929 WOOD_SOUND Lnet/minecraft/class_475;
+	FIELD field_1930 GRAVEL_SOUND Lnet/minecraft/class_475;
+	FIELD field_1931 GRASS_SOUND Lnet/minecraft/class_475;
+	FIELD field_1932 STONE_SOUND Lnet/minecraft/class_475;
+	FIELD field_1933 METAL_SOUND Lnet/minecraft/class_475;
+	FIELD field_1934 GLASS_SOUND Lnet/minecraft/class_475;
+	FIELD field_1935 WOOL_SOUND Lnet/minecraft/class_475;
+	FIELD field_1936 SAND_SOUND Lnet/minecraft/class_475;
+	FIELD field_1937 tiles [Lnet/minecraft/class_17;
+	FIELD field_1938 TICKS_RANDOMLY [Z
+	FIELD field_1940 tileHasTileEntity [Z
+	FIELD field_1941 OPACITIES [I
+	FIELD field_1943 LIGHT_TILES [I
 	FIELD field_1945 STONE Lnet/minecraft/class_17;
 	FIELD field_1946 GRASS Lnet/minecraft/class_476;
 	FIELD field_1947 DIRT Lnet/minecraft/class_17;
 	FIELD field_1948 COBBLESTONE Lnet/minecraft/class_17;
 	FIELD field_1949 WOOD Lnet/minecraft/class_17;
 	FIELD field_1950 SAPLING Lnet/minecraft/class_17;
-	FIELD field_1821 BEDROCK Lnet/minecraft/class_17;
-	FIELD field_1835 LAPIS_ORE Lnet/minecraft/class_17;
-	FIELD field_1836 LAPIS_BLOCK Lnet/minecraft/class_17;
-	FIELD field_1837 DISPENSER Lnet/minecraft/class_17;
-	FIELD field_1838 SANDSTONE Lnet/minecraft/class_17;
-	FIELD field_1839 MUSIC_BLOCK Lnet/minecraft/class_17;
-	FIELD field_1876 CLOTH Lnet/minecraft/class_17;
-	FIELD field_1908 LIT_PUMPKIN Lnet/minecraft/class_17;
-	FIELD field_1909 CAKE Lnet/minecraft/class_17;
-	FIELD field_1840 BED Lnet/minecraft/class_17;
-	FIELD field_1910 REPEATER_OFF Lnet/minecraft/class_17;
-	FIELD field_1911 REPEATER_ON Lnet/minecraft/class_17;
-	FIELD field_1841 POWERED_RAIL Lnet/minecraft/class_17;
-	FIELD field_1842 DETECTOR_RAIL Lnet/minecraft/class_17;
-	FIELD field_1855 RAIL Lnet/minecraft/class_17;
-	FIELD field_1845 TALL_GRASS Lnet/minecraft/class_392;
-	FIELD field_1846 DEAD_BUSH Lnet/minecraft/class_204;
-	FIELD field_1912 LOCKED_CHEST Lnet/minecraft/class_17;
-	FIELD field_1913 TRAPDOOR Lnet/minecraft/class_17;
-	FIELD field_1843 STICKY_PISTON Lnet/minecraft/class_17;
-	FIELD field_1844 WEB Lnet/minecraft/class_17;
-	FIELD field_1874 PISTON Lnet/minecraft/class_17;
-	FIELD field_1875 PISTON_HEAD Lnet/minecraft/class_205;
 	METHOD <init> (IILnet/minecraft/class_204;)V
 		ARG 1 id
 		ARG 2 texture
@@ -128,6 +129,38 @@ CLASS net/minecraft/class_17 net/minecraft/world/tile/Tile
 	METHOD <init> (ILnet/minecraft/class_204;)V
 		ARG 1 id
 		ARG 2 material
+	METHOD method_1563 spawnNote (Lnet/minecraft/class_18;IIIII)V
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+		ARG 5 noteType
+	METHOD method_1565 getTickDelay ()I
+	METHOD method_1566 canPlace (Lnet/minecraft/class_18;III)Z
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+	METHOD method_1567 canSurvive (Lnet/minecraft/class_18;III)Z
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+	METHOD method_1568 hasSignal (Lnet/minecraft/class_14;IIII)Z
+		ARG 1 levelReader
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+		ARG 5 direction
+	METHOD method_1569 isSignalSource ()Z
+	METHOD method_1570 hasDirectSignal (Lnet/minecraft/class_18;IIII)Z
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+		ARG 5 direction
+	METHOD method_1575 getExplosionResistance (Lnet/minecraft/class_57;)F
+		ARG 1 entity
 	METHOD method_1577 lightLevel (F)Lnet/minecraft/class_17;
 	METHOD method_1578 setShape (FFFFFF)V
 		ARG 1 minX
@@ -136,75 +169,72 @@ CLASS net/minecraft/class_17 net/minecraft/world/tile/Tile
 		ARG 4 maxX
 		ARG 5 maxY
 		ARG 6 maxZ
-	METHOD method_1607 getTexture (I)I
-		ARG 1 side
-	METHOD method_1627 getTextureFromMeta (II)I
-		ARG 1 side
-		ARG 2 meta
-	METHOD method_1601 drops (ILjava/util/Random;)I
-		ARG 1 meta
-		ARG 2 random
 	METHOD method_1580 sound (Lnet/minecraft/class_475;)Lnet/minecraft/class_17;
 		ARG 1 sound
-	METHOD method_1567 canSurvive (Lnet/minecraft/class_18;III)Z
+	METHOD method_1581 popResource (Lnet/minecraft/class_18;IIILnet/minecraft/class_31;)V
 		ARG 1 level
 		ARG 2 x
 		ARG 3 y
 		ARG 4 z
-	METHOD method_1609 neighborChanged (Lnet/minecraft/class_18;IIII)V
-		ARG 1 level
-		ARG 2 x
-		ARG 3 y
-		ARG 4 z
-		ARG 5 tile
-	METHOD method_1625 dropResources (Lnet/minecraft/class_18;IIIIF)V
+		ARG 5 item
+	METHOD method_1582 getDestroyProgress (Lnet/minecraft/class_54;)F
+		ARG 1 player
+	METHOD method_1583 setTranslationKey (Ljava/lang/String;)Lnet/minecraft/class_17;
+		ARG 1 name
+	METHOD method_1584 randomTick (Z)Lnet/minecraft/class_17;
+		ARG 1 ticksRandomly
+	METHOD method_1585 explosionResistance (F)Lnet/minecraft/class_17;
+	METHOD method_1587 strength (F)Lnet/minecraft/class_17;
+		ARG 1 strength
+	METHOD method_1589 getColor (I)I
+		ARG 1 meta
+	METHOD method_1590 opacity (I)Lnet/minecraft/class_17;
+		ARG 1 opacity
+	METHOD method_1592 dropResources (Lnet/minecraft/class_18;IIII)V
 		ARG 1 level
 		ARG 2 x
 		ARG 3 y
 		ARG 4 z
 		ARG 5 meta
-	METHOD method_1608 onUse (Lnet/minecraft/class_18;IIILnet/minecraft/class_54;)Z
+	METHOD method_1593 registerBurnables ()V
+	METHOD method_1594 unbreakable ()Lnet/minecraft/class_17;
+	METHOD method_1595 getDestroyTime ()F
+	METHOD method_1596 getName ()Ljava/lang/String;
+	METHOD method_1597 getTranslationKey ()Ljava/lang/String;
+	METHOD method_1600 getFoliageColor (Lnet/minecraft/class_14;III)I
 		ARG 1 level
 		ARG 2 x
 		ARG 3 y
 		ARG 4 z
-		ARG 5 player
-	METHOD method_1608 onUse (Lnet/minecraft/class_18;IIILnet/minecraft/class_54;)Z
-		ARG 1 level
-		ARG 2 x
-		ARG 3 y
-		ARG 4 z
-		ARG 5 player
-	METHOD method_1614 (Lnet/minecraft/class_18;IIILnet/minecraft/class_127;)V
-		ARG 1 level
-		ARG 2 x
-		ARG 3 y
-		ARG 4 z
+	METHOD method_1601 drops (ILjava/util/Random;)I
+		ARG 1 meta
+		ARG 2 random
 	METHOD method_1602 randomTick (Lnet/minecraft/class_18;IIILjava/util/Random;)V
 		ARG 1 level
 		ARG 2 x
 		ARG 3 y
 		ARG 4 z
 		ARG 5 random
-	METHOD method_1582 getDestroyProgress (Lnet/minecraft/class_54;)F
-		ARG 1 player
-	METHOD method_1575 getExplosionResistance (Lnet/minecraft/class_57;)F
-		ARG 1 entity
-	METHOD method_1616 (Lnet/minecraft/class_14;III)V
-		ARG 1 region
+	METHOD method_1604 getBrightness (Lnet/minecraft/class_14;III)F
+		ARG 1 level
 		ARG 2 x
 		ARG 3 y
 		ARG 4 z
-	METHOD method_1628 playerDestroy (Lnet/minecraft/class_18;Lnet/minecraft/class_54;IIII)V
+	METHOD method_1607 getTexture (I)I
+		ARG 1 side
+	METHOD method_1608 onUse (Lnet/minecraft/class_18;IIILnet/minecraft/class_54;)Z
 		ARG 1 level
-		ARG 2 player
-		ARG 3 x
-		ARG 4 y
-		ARG 5 z
-		ARG 6 meta
-	METHOD method_1623 blocksMotion ()Z
-	METHOD method_1585 explosionResistance (F)Lnet/minecraft/class_17;
-	METHOD method_1630 onRemove (Lnet/minecraft/class_18;III)V
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+		ARG 5 player
+	METHOD method_1609 neighborChanged (Lnet/minecraft/class_18;IIII)V
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+		ARG 5 tile
+	METHOD method_1611 onPlace (Lnet/minecraft/class_18;III)V
 		ARG 1 level
 		ARG 2 x
 		ARG 3 y
@@ -215,84 +245,68 @@ CLASS net/minecraft/class_17 net/minecraft/world/tile/Tile
 		ARG 3 y
 		ARG 4 z
 		ARG 5 meta
+	METHOD method_1613 wasExploded (Lnet/minecraft/class_18;III)V
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+	METHOD method_1614 (Lnet/minecraft/class_18;IIILnet/minecraft/class_127;)V
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+	METHOD method_1615 entityInside (Lnet/minecraft/class_18;IIILnet/minecraft/class_57;)V
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+		ARG 5 entity
+	METHOD method_1616 updateShape (Lnet/minecraft/class_14;III)V
+		ARG 1 region
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
 	METHOD method_1617 animateTick (Lnet/minecraft/class_18;IIILjava/util/Random;)V
 		ARG 1 level
 		ARG 2 x
 		ARG 3 y
 		ARG 4 z
 		ARG 5 random
-	METHOD method_1600 getFoliageColor (Lnet/minecraft/class_14;III)I
-		ARG 1 level
-		ARG 2 x
-		ARG 3 y
-		ARG 4 z
 	METHOD method_1618 skipRendering (Lnet/minecraft/class_14;IIII)Z
 		ARG 1 level
 		ARG 2 x
 		ARG 3 y
 		ARG 4 z
 		ARG 5 meta
-	METHOD method_1584 randomTick (Z)Lnet/minecraft/class_17;
-		ARG 1 ticksRandomly
-	METHOD method_1592 dropResources (Lnet/minecraft/class_18;IIII)V
-		ARG 1 level
-		ARG 2 x
-		ARG 3 y
-		ARG 4 z
-		ARG 5 meta
 	METHOD method_1619 getRenderLayer ()I
-	METHOD method_1587 strength (F)Lnet/minecraft/class_17;
-		ARG 1 strength
-	METHOD method_1613 wasExploded (Lnet/minecraft/class_18;III)V
-		ARG 1 level
-		ARG 2 x
-		ARG 3 y
-		ARG 4 z
-	METHOD method_1565 getTickDelay ()I
-	METHOD method_1590 opacity (I)Lnet/minecraft/class_17;
-		ARG 1 opacity
+	METHOD method_1620 isFullBlock ()Z
+	METHOD method_1621 getModelId ()I
+	METHOD method_1623 blocksMotion ()Z
 	METHOD method_1624 getShape (Lnet/minecraft/class_18;III)Lnet/minecraft/class_25;
 		ARG 1 level
 		ARG 2 x
 		ARG 3 y
 		ARG 4 z
-	METHOD method_1604 getBrightness (Lnet/minecraft/class_14;III)F
+	METHOD method_1625 dropResources (Lnet/minecraft/class_18;IIIIF)V
 		ARG 1 level
 		ARG 2 x
 		ARG 3 y
 		ARG 4 z
-	METHOD method_1569 isSignalSource ()Z
-	METHOD method_1611 onPlace (Lnet/minecraft/class_18;III)V
+		ARG 5 meta
+	METHOD method_1627 getTextureFromMeta (II)I
+		ARG 1 side
+		ARG 2 meta
+	METHOD method_1628 playerDestroy (Lnet/minecraft/class_18;Lnet/minecraft/class_54;IIII)V
 		ARG 1 level
-		ARG 2 x
-		ARG 3 y
-		ARG 4 z
-	METHOD method_1621 getModelId ()I
-	METHOD method_1566 canPlace (Lnet/minecraft/class_18;III)Z
-		ARG 1 level
-		ARG 2 x
-		ARG 3 y
-		ARG 4 z
-	METHOD method_1583 setTranslationKey (Ljava/lang/String;)Lnet/minecraft/class_17;
-		ARG 1 name
-	METHOD method_1597 getTranslationKey ()Ljava/lang/String;
-	METHOD method_1563 spawnNote (Lnet/minecraft/class_18;IIIII)V
-		ARG 1 level
-		ARG 2 x
-		ARG 3 y
-		ARG 4 z
-		ARG 5 noteType
+		ARG 2 player
+		ARG 3 x
+		ARG 4 y
+		ARG 5 z
+		ARG 6 meta
 	METHOD method_1629 getItemMeta (I)I
 		ARG 1 meta
-	METHOD method_1596 getName ()Ljava/lang/String;
-	METHOD method_1593 registerBurnables ()V
-	METHOD method_1581 popResource (Lnet/minecraft/class_18;IIILnet/minecraft/class_31;)V
+	METHOD method_1630 onRemove (Lnet/minecraft/class_18;III)V
 		ARG 1 level
 		ARG 2 x
 		ARG 3 y
 		ARG 4 z
-		ARG 5 item
-	METHOD method_1589 getColor (I)I
-		ARG 1 meta
-	METHOD method_1594 unbreakable ()Lnet/minecraft/class_17;
-	METHOD method_1595 getDestroyTime ()F
