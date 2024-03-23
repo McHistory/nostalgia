@@ -2,7 +2,11 @@ CLASS net/minecraft/class_240 net/minecraft/network/PacketListener
 	METHOD method_1423 handleContainerClick (Lnet/minecraft/class_145;)V
 	METHOD method_1424 handleSetCarriedItem (Lnet/minecraft/class_170;)V
 		ARG 1 packet
+	METHOD method_1425 handleMovePlayer (Lnet/minecraft/class_184;)V
+		ARG 1 packet
 	METHOD method_1426 handlePlayerAction (Lnet/minecraft/class_228;)V
+	METHOD method_1428 handleAnimate (Lnet/minecraft/class_305;)V
+		ARG 1 packet
 	METHOD method_1430 handlePlayerChangeDimension (Lnet/minecraft/class_335;)V
 		ARG 1 packet
 	METHOD method_1431 handleChat (Lnet/minecraft/class_340;)V
@@ -11,11 +15,13 @@ CLASS net/minecraft/class_240 net/minecraft/network/PacketListener
 	METHOD method_1433 handleContainerClick (Lnet/minecraft/class_363;)V
 	METHOD method_1435 handleSignUpdate (Lnet/minecraft/class_432;)V
 		ARG 1 packet
-	METHOD method_1436 handleKick (Lnet/minecraft/class_433;)V
+	METHOD method_1436 handleDisconnect (Lnet/minecraft/class_433;)V
 		ARG 1 packet
-	METHOD method_1441 spawnLightingBolt (Lnet/minecraft/class_45;)V
+	METHOD method_1438 handleTakeItemEntity (Lnet/minecraft/class_435;)V
 		ARG 1 packet
-	METHOD method_1443 setEntityMotion (Lnet/minecraft/class_119;)V
+	METHOD method_1441 handleAddGlobalEntity (Lnet/minecraft/class_45;)V
+		ARG 1 packet
+	METHOD method_1443 handleSetEntityMotion (Lnet/minecraft/class_119;)V
 		ARG 1 packet
 	METHOD method_1444 (Lnet/minecraft/class_156;)V
 		ARG 1 packet
@@ -24,14 +30,22 @@ CLASS net/minecraft/class_240 net/minecraft/network/PacketListener
 	METHOD method_1446 openTileInventory (Lnet/minecraft/class_201;)V
 		ARG 1 packet
 	METHOD method_1450 handleContainerContent (Lnet/minecraft/class_236;)V
+	METHOD method_1451 handleAddPlayer (Lnet/minecraft/class_272;)V
+		ARG 1 packet
 	METHOD method_1452 handleContainerSetData (Lnet/minecraft/class_292;)V
 	METHOD method_1456 setSpawn (Lnet/minecraft/class_373;)V
 		ARG 1 packet
-	METHOD method_1460 removeEntity (Lnet/minecraft/class_394;)V
+	METHOD method_1457 handleTeleportEntity (Lnet/minecraft/class_374;)V
 		ARG 1 packet
-	METHOD method_1462 spawnEntity (Lnet/minecraft/class_414;)V
+	METHOD method_1460 handleRemoveEntity (Lnet/minecraft/class_394;)V
 		ARG 1 packet
-	METHOD method_1466 spawnPainting (Lnet/minecraft/class_439;)V
+	METHOD method_1462 handleAddEntity (Lnet/minecraft/class_414;)V
+		ARG 1 packet
+	METHOD method_1464 handleMoveEntity (Lnet/minecraft/class_437;)V
+		ARG 1 packet
+	METHOD method_1465 handleSetEntityData (Lnet/minecraft/class_438;)V
+		ARG 1 packet
+	METHOD method_1466 handleAddPainting (Lnet/minecraft/class_439;)V
 		ARG 1 packet
 	METHOD method_1472 (Lnet/minecraft/class_118;)V
 		ARG 1 levelPacket

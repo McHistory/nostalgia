@@ -126,6 +126,9 @@ CLASS net/minecraft/class_17 net/minecraft/world/tile/Tile
 		ARG 1 id
 		ARG 2 texture
 		ARG 3 material
+	METHOD <init> (ILnet/minecraft/class_15;)V
+		ARG 1 id
+		ARG 2 material
 	METHOD <init> (ILnet/minecraft/class_204;)V
 		ARG 1 id
 		ARG 2 material
@@ -222,7 +225,7 @@ CLASS net/minecraft/class_17 net/minecraft/world/tile/Tile
 		ARG 4 z
 	METHOD method_1607 getTexture (I)I
 		ARG 1 side
-	METHOD method_1608 onUse (Lnet/minecraft/class_18;IIILnet/minecraft/class_54;)Z
+	METHOD method_1608 use (Lnet/minecraft/class_18;IIILnet/minecraft/class_54;)Z
 		ARG 1 level
 		ARG 2 x
 		ARG 3 y
@@ -234,6 +237,12 @@ CLASS net/minecraft/class_17 net/minecraft/world/tile/Tile
 		ARG 3 y
 		ARG 4 z
 		ARG 5 tile
+	METHOD method_1610 attack (Lnet/minecraft/class_18;IIILnet/minecraft/class_54;)V
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+		ARG 5 player
 	METHOD method_1611 onPlace (Lnet/minecraft/class_18;III)V
 		ARG 1 level
 		ARG 2 x
