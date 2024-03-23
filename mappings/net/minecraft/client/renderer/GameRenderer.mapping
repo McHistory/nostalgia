@@ -1,9 +1,13 @@
 CLASS net/minecraft/class_555 net/minecraft/client/renderer/GameRenderer
+	FIELD field_2327 oldFov F
 	FIELD field_2331 zoom D
 	FIELD field_2332 zoom_x D
 	FIELD field_2333 zoom_y D
+	FIELD field_2334 lastActiveTime J
+	FIELD field_2335 nanoTime J
 	FIELD field_2336 random Ljava/util/Random;
 	FIELD field_2337 rainSoundTime I
+	FIELD field_2340 anaglyph3d Z
 	FIELD field_2342 itemInHandRenderer Lnet/minecraft/class_556;
 	FIELD field_2346 fogRed F
 	FIELD field_2347 fogGreen F
@@ -15,8 +19,6 @@ CLASS net/minecraft/class_555 net/minecraft/client/renderer/GameRenderer
 	FIELD field_2353 smoothTurnX Lnet/minecraft/class_12;
 	FIELD field_2354 smoothTurnY Lnet/minecraft/class_12;
 	FIELD field_2365 fov F
-	FIELD field_2327 oldFov F
-	FIELD field_2335 nanoTime J
 	METHOD <init> (Lnet/minecraft/client/Minecraft;)V
 		ARG 1 minecraft
 	METHOD method_1837 tick ()V
@@ -25,8 +27,12 @@ CLASS net/minecraft/class_555 net/minecraft/client/renderer/GameRenderer
 	METHOD method_1840 setupCamera (FI)V
 		ARG 1 partialTick
 		ARG 2 nanoSeconds
+	METHOD method_1841 render (FJ)V
+		ARG 1 partialTick
+		ARG 2 nanoTime
 	METHOD method_1842 setupFog (IF)V
-	METHOD method_1844 (F)V
+	METHOD method_1843 setScreenProjectionMatrix ()V
+	METHOD method_1844 render (F)V
 		ARG 1 partialTick
 	METHOD method_1845 renderItemInHand (FI)V
 		ARG 1 partialTick
@@ -40,6 +46,3 @@ CLASS net/minecraft/class_555 net/minecraft/client/renderer/GameRenderer
 	METHOD method_1850 doViewBobbing (F)V
 	METHOD method_1852 setupClearColor (F)V
 		ARG 1 partialTicks
-	METHOD method_1841 render (FJ)V
-		ARG 1 partialTick
-		ARG 2 nanoTime

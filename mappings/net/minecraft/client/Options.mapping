@@ -1,13 +1,13 @@
 CLASS net/minecraft/class_322 net/minecraft/client/Options
+	FIELD field_1442 thirdPersonView Z
 	FIELD field_1443 renderDebug Z
-	FIELD field_1466 ao Z
+	FIELD field_1444 lastServer Ljava/lang/String;
+	FIELD field_1446 smoothCamera Z
 	FIELD field_1450 guiScale I
-	FIELD field_1453 GUI_SCALES [Ljava/lang/String;
-	FIELD field_1463 advancedOpengl Z
-	FIELD field_1454 PERFORMANCE_OPTIONS [Ljava/lang/String;
-	FIELD field_1464 fpsLimit I
 	FIELD field_1451 RENDER_DISTANCES [Ljava/lang/String;
 	FIELD field_1452 DIFFICULTIES [Ljava/lang/String;
+	FIELD field_1453 GUI_SCALES [Ljava/lang/String;
+	FIELD field_1454 PERFORMANCE_OPTIONS [Ljava/lang/String;
 	FIELD field_1455 optionsFile Ljava/io/File;
 	FIELD field_1456 music F
 	FIELD field_1457 sound F
@@ -16,7 +16,10 @@ CLASS net/minecraft/class_322 net/minecraft/client/Options
 	FIELD field_1460 viewDistance I
 	FIELD field_1461 viewBobbing Z
 	FIELD field_1462 anaglyph3d Z
+	FIELD field_1463 advancedOpengl Z
+	FIELD field_1464 fpsLimit I
 	FIELD field_1465 fancyGraphics Z
+	FIELD field_1466 ao Z
 	FIELD field_1467 skin Ljava/lang/String;
 	FIELD field_1468 forwardKeybind Lnet/minecraft/class_386;
 	FIELD field_1469 leftKeybind Lnet/minecraft/class_386;
@@ -31,13 +34,16 @@ CLASS net/minecraft/class_322 net/minecraft/client/Options
 	FIELD field_1478 keybinds [Lnet/minecraft/class_386;
 	FIELD field_1479 minecraft Lnet/minecraft/client/Minecraft;
 	FIELD field_1480 difficulty I
-	FIELD field_1442 thirdPersonView Z
-	FIELD field_1444 lastServer Ljava/lang/String;
+	FIELD field_1481 hideGui Z
 	METHOD <init> (Lnet/minecraft/client/Minecraft;Ljava/io/File;)V
 		ARG 1 minecraft
 		ARG 2 configDir
+	METHOD method_1224 loadOptions ()V
 	METHOD method_1225 getTranslatedKeyName (I)Ljava/lang/String;
 		ARG 1 keyId
+	METHOD method_1226 setKey (II)V
+		ARG 1 keyId
+		ARG 2 input
 	METHOD method_1227 getSliderOption (Lnet/minecraft/class_271;)F
 		ARG 1 option
 	METHOD method_1228 setOptionF (Lnet/minecraft/class_271;F)V
@@ -46,14 +52,10 @@ CLASS net/minecraft/class_322 net/minecraft/client/Options
 	METHOD method_1229 setOptionI (Lnet/minecraft/class_271;I)V
 		ARG 1 option
 		ARG 2 val
+	METHOD method_1231 save ()V
 	METHOD method_1232 getBoundKeyName (I)Ljava/lang/String;
 		ARG 1 keyId
 	METHOD method_1233 getOptionB (Lnet/minecraft/class_271;)Z
 		ARG 1 Option
 	METHOD method_1234 getFormatedString (Lnet/minecraft/class_271;)Ljava/lang/String;
 		ARG 1 option
-	METHOD method_1224 loadOptions ()V
-	METHOD method_1226 setKey (II)V
-		ARG 1 keyId
-		ARG 2 input
-	METHOD method_1231 save ()V
