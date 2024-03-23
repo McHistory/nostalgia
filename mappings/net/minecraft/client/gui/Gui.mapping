@@ -2,6 +2,7 @@ CLASS net/minecraft/class_588 net/minecraft/client/gui/Gui
 	FIELD field_2544 itemRenderer Lnet/minecraft/class_92;
 	FIELD field_2546 random Ljava/util/Random;
 	FIELD field_2547 minecraft Lnet/minecraft/client/Minecraft;
+	FIELD field_2548 tickCount I
 	FIELD field_2549 titleText Ljava/lang/String;
 	FIELD field_2550 overlayMessageTime I
 	FIELD field_2551 animateOverlayMessageColor Z
@@ -17,6 +18,8 @@ CLASS net/minecraft/class_588 net/minecraft/client/gui/Gui
 	METHOD method_1947 renderPumpkin (II)V
 		ARG 1 screenWidth
 		ARG 2 screenHeight
+	METHOD method_1949 handleChat (Ljava/lang/String;)V
+		ARG 1 message
 	METHOD method_1951 renderPortalOverlay (FII)V
 	METHOD method_1952 setNowPlaying (Ljava/lang/String;)V
 		ARG 1 song

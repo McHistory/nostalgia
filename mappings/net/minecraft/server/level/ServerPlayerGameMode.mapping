@@ -1,6 +1,10 @@
 CLASS net/minecraft/class_70 net/minecraft/server/level/ServerPlayerGameMode
 	FIELD field_2309 player Lnet/minecraft/class_54;
 	FIELD field_2310 level Lnet/minecraft/class_73;
+	FIELD field_2312 destroyProgressStart I
+	FIELD field_2313 destroyX I
+	FIELD field_2314 destroyY I
+	FIELD field_2315 destroyZ I
 	FIELD field_2316 gameTicks I
 	FIELD field_2317 hasDelayedDestroy Z
 	FIELD field_2318 delayedDestroyX I
@@ -10,19 +14,32 @@ CLASS net/minecraft/class_70 net/minecraft/server/level/ServerPlayerGameMode
 	METHOD <init> (Lnet/minecraft/class_73;)V
 		ARG 1 level
 	METHOD method_1828 tick ()V
-	METHOD method_1829 (III)V
+	METHOD method_1829 handleStopDestroyTile (III)V
 		ARG 1 x
 		ARG 2 y
 		ARG 3 z
-	METHOD method_1830 (IIII)V
+	METHOD method_1830 handleStartDestroyTile (IIII)V
 		ARG 1 x
 		ARG 2 y
 		ARG 3 z
+		ARG 4 direction
+	METHOD method_1831 useItem (Lnet/minecraft/class_54;Lnet/minecraft/class_18;Lnet/minecraft/class_31;)Z
+		ARG 1 player
+		ARG 2 level
+		ARG 3 item
+	METHOD method_1832 useItemOn (Lnet/minecraft/class_54;Lnet/minecraft/class_18;Lnet/minecraft/class_31;IIII)Z
+		ARG 1 player
+		ARG 2 level
+		ARG 3 item
+		ARG 4 x
+		ARG 5 y
+		ARG 6 z
+		ARG 7 face
 	METHOD method_1833 (III)Z
 		ARG 1 x
 		ARG 2 y
 		ARG 3 z
-	METHOD method_1834 destroyBlock (III)Z
+	METHOD method_1834 destroyTile (III)Z
 		ARG 1 x
 		ARG 2 y
 		ARG 3 z

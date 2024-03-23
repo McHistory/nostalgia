@@ -1,71 +1,76 @@
 CLASS net/minecraft/class_54 net/minecraft/world/entity/Player
+	FIELD field_504 portalTime F
+	FIELD field_505 oPortalTime F
+	FIELD field_506 cloakImage Ljava/lang/String;
+	FIELD field_511 changingDimensionDelay I
+	FIELD field_512 isInsidePortal Z
+	FIELD field_515 sleepCounter I
+	FIELD field_516 respawnPosition Lnet/minecraft/class_63;
 	FIELD field_519 inventory Lnet/minecraft/class_136;
 	FIELD field_520 inventoryMenu Lnet/minecraft/class_71;
 	FIELD field_521 containerMenu Lnet/minecraft/class_71;
 	FIELD field_523 score I
 	FIELD field_524 oBob F
 	FIELD field_525 bob F
+	FIELD field_526 swinging Z
+	FIELD field_527 swingTime I
 	FIELD field_528 username Ljava/lang/String;
 	FIELD field_529 dimension I
-	FIELD field_506 cloakImage Ljava/lang/String;
 	FIELD field_536 sleeping Z
-	FIELD field_515 sleepCounter I
-	FIELD field_516 respawnPosition Lnet/minecraft/class_63;
-	FIELD field_504 portalTime F
-	FIELD field_505 oPortalTime F
-	FIELD field_511 changingDimensionDelay I
-	FIELD field_512 isInsidePortal Z
+	METHOD method_483 getSleepTimer ()I
 	METHOD method_484 openCraftingTable (III)V
 		ARG 1 x
 		ARG 2 y
 		ARG 3 z
-	METHOD method_513 drop (Lnet/minecraft/class_31;)V
-		ARG 1 item
+	METHOD method_485 openDispenser (Lnet/minecraft/class_137;)V
+		ARG 1 te
+	METHOD method_486 openContainer (Lnet/minecraft/class_134;)V
+		ARG 1 container
+	METHOD method_487 openFurnace (Lnet/minecraft/class_138;)V
+		ARG 1 te
+	METHOD method_488 awardStat (Lnet/minecraft/class_139;I)V
+		ARG 1 stat
+		ARG 2 increment
+	METHOD method_489 openSign (Lnet/minecraft/class_140;)V
+		ARG 1 te
+	METHOD method_490 displayClientMessage (Ljava/lang/String;)V
+		ARG 1 msg
+	METHOD method_491 take (Lnet/minecraft/class_57;I)V
+		ARG 1 entity
+		ARG 2 amount
+	METHOD method_493 closeContainer ()V
+	METHOD method_495 startSleepInBed (III)Lnet/minecraft/class_141;
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+	METHOD method_500 swing ()V
+	METHOD method_501 drop ()V
+	METHOD method_502 getHeldItem ()Lnet/minecraft/class_31;
+	METHOD method_503 setSelectedToEmtpy ()V
+	METHOD method_504 isSleepingLongEnough ()Z
+	METHOD method_505 getRespawnPosition ()Lnet/minecraft/class_63;
+	METHOD method_506 setRespawnPosition (Lnet/minecraft/class_63;)V
+		ARG 1 pos
 	METHOD method_509 drop (Lnet/minecraft/class_31;Z)V
 		ARG 1 item
 		ARG 2 dropAround
 	METHOD method_511 getDestroySpeed (Lnet/minecraft/class_17;)F
 		ARG 1 tile
+	METHOD method_512 awardStat (Lnet/minecraft/class_139;)V
+		ARG 1 stat
+	METHOD method_513 drop (Lnet/minecraft/class_31;)V
+		ARG 1 item
 	METHOD method_514 canDestroy (Lnet/minecraft/class_17;)Z
 		ARG 1 tile
-	METHOD method_516 attack (Lnet/minecraft/class_57;)V
-		ARG 1 entity
-	METHOD method_493 closeContainer ()V
-	METHOD method_501 drop ()V
-	METHOD method_502 getHeldItem ()Lnet/minecraft/class_31;
-	METHOD method_503 setSelectedToEmtpy ()V
-	METHOD method_485 openDispenser (Lnet/minecraft/class_137;)V
-		ARG 1 te
 	METHOD method_515 interactOn (Lnet/minecraft/class_57;)V
 		ARG 1 entityToInteractOn
-	METHOD method_504 isSleepingLongEnough ()Z
-	METHOD method_483 getSleepTimer ()I
-	METHOD method_495 startSleepInBed (III)Lnet/minecraft/class_141;
-		ARG 1 x
-		ARG 2 y
-		ARG 3 z
-	METHOD method_490 displayClientMessage (Ljava/lang/String;)V
-		ARG 1 msg
-	METHOD method_505 getRespawnPosition ()Lnet/minecraft/class_63;
-	METHOD method_506 setRespawnPosition (Lnet/minecraft/class_63;)V
-		ARG 1 pos
-	METHOD method_488 awardStat (Lnet/minecraft/class_139;I)V
-		ARG 1 stat
-		ARG 2 increment
+	METHOD method_516 attack (Lnet/minecraft/class_57;)V
+		ARG 1 entity
 	METHOD method_518 checkMovementStatistics (DDD)V
 		ARG 1 x
 		ARG 3 y
 		ARG 5 z
-	METHOD method_512 awardStat (Lnet/minecraft/class_139;)V
-		ARG 1 stat
 	METHOD method_519 checkRidingStatistics (DDD)V
 		ARG 1 distanceX
 		ARG 3 distanceY
 		ARG 5 distanceZ
-	METHOD method_486 openContainer (Lnet/minecraft/class_134;)V
-		ARG 1 container
-	METHOD method_487 openFurnace (Lnet/minecraft/class_138;)V
-		ARG 1 te
-	METHOD method_489 openSign (Lnet/minecraft/class_140;)V
-		ARG 1 te
-	METHOD method_491 (Lnet/minecraft/class_57;I)V

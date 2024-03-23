@@ -41,13 +41,19 @@ CLASS net/minecraft/class_57 net/minecraft/world/entity/Entity
 	FIELD field_1638 yOld D
 	FIELD field_1639 zOld D
 	FIELD field_1642 noPhysics Z
+	FIELD field_1643 pushthrough F
 	FIELD field_1644 random Ljava/util/Random;
 	FIELD field_1645 tickCount I
 	FIELD field_1647 remainingFireTicks I
+	FIELD field_1654 xp I
+	FIELD field_1655 yp I
+	FIELD field_1656 zp I
 	METHOD <init> (Lnet/minecraft/class_18;)V
 		ARG 1 level
 	METHOD <init> (Lnet/minecraft/class_92;)V
 		ARG 1 level
+	METHOD equals (Ljava/lang/Object;)Z
+		ARG 1 other
 	METHOD method_1310 defineSynchedData ()V
 	METHOD method_1311 lerpTo (DDDFFI)V
 		ARG 1 lerpX
@@ -56,6 +62,7 @@ CLASS net/minecraft/class_57 net/minecraft/world/entity/Entity
 		ARG 7 lerpYRot
 		ARG 8 lerpXRot
 		ARG 9 lerpSteps
+	METHOD method_1312 animateHurt ()V
 	METHOD method_1314 getTexture ()Ljava/lang/String;
 	METHOD method_1315 resetPos ()V
 	METHOD method_1317 baseTick ()V
@@ -95,6 +102,12 @@ CLASS net/minecraft/class_57 net/minecraft/world/entity/Entity
 	METHOD method_1334 isInWater ()Z
 	METHOD method_1336 markHurt ()V
 	METHOD method_1337 getEncodeId ()Ljava/lang/String;
+	METHOD method_1338 absMoveTo (DDDFF)V
+		ARG 1 x
+		ARG 3 y
+		ARG 5 z
+		ARG 7 yRot
+		ARG 8 xRot
 	METHOD method_1339 spawnAtLocation (II)Lnet/minecraft/class_142;
 		ARG 1 item
 		ARG 2 count
@@ -132,6 +145,8 @@ CLASS net/minecraft/class_57 net/minecraft/world/entity/Entity
 		ARG 1 entiy
 	METHOD method_1353 push (Lnet/minecraft/class_57;)V
 		ARG 1 entity
+	METHOD method_1354 playerTouch (Lnet/minecraft/class_54;)V
+		ARG 1 player
 	METHOD method_1355 hurt (Lnet/minecraft/class_57;I)Z
 		ARG 1 entity
 		ARG 2 damage

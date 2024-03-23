@@ -4,11 +4,21 @@ CLASS net/minecraft/server/MinecraftServer net/minecraft/server/MinecraftServer
 	FIELD field_2840 properties Lnet/minecraft/class_391;
 	FIELD field_2841 levels [Lnet/minecraft/class_73;
 	FIELD field_2842 playerList Lnet/minecraft/class_166;
+	FIELD field_2847 trackers [Lnet/minecraft/class_488;
 	FIELD field_2848 onlineMode Z
 	FIELD field_2849 animals Z
 	FIELD field_2850 allowPvp Z
 	FIELD field_2851 allowFlight Z
+	FIELD field_2854 tickables Ljava/util/List;
 	METHOD method_2157 getLevel (I)Lnet/minecraft/class_73;
 		ARG 1 dimension
+	METHOD method_2158 addTickable (Lnet/minecraft/class_46;)V
+		ARG 1 tickable
 	METHOD method_2160 getFile (Ljava/lang/String;)Ljava/io/File;
 		ARG 1 path
+	METHOD method_2165 getEntityTracker (I)Lnet/minecraft/class_488;
+		ARG 1 dimension
+	METHOD method_2166 start ()Z
+	METHOD method_2169 save ()V
+	METHOD method_2170 stop ()V
+	CLASS class_643 ServerThread
