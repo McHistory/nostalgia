@@ -1,19 +1,21 @@
 CLASS net/minecraft/class_67 net/minecraft/client/Tesselator
+	FIELD field_2053 size I
 	FIELD field_2054 instance Lnet/minecraft/class_67;
-	FIELD field_2059 buffer Ljava/nio/FloatBuffer;
+	FIELD field_2057 colorBuffer Ljava/nio/ByteBuffer;
+	FIELD field_2059 texCoordBuffer Ljava/nio/FloatBuffer;
 	FIELD field_2060 array [I
 	FIELD field_2061 vertices I
+	FIELD field_2062 u D
+	FIELD field_2063 v D
+	FIELD field_2065 hasColor Z
 	FIELD field_2066 hasTexture Z
+	FIELD field_2067 hasNormal Z
 	FIELD field_2070 noColor Z
 	FIELD field_2071 mode I
 	FIELD field_2076 tesselating Z
+	FIELD field_2077 isVboEnabled Z
 	METHOD <init> (I)V
 		ARG 1 size
-	METHOD method_1694 (IIII)V
-		ARG 1 r
-		ARG 2 g
-		ARG 3 b
-		ARG 4 a
 	METHOD method_1685 flush ()V
 	METHOD method_1686 tex (DD)V
 		ARG 1 u
@@ -28,9 +30,26 @@ CLASS net/minecraft/class_67 net/minecraft/client/Tesselator
 		ARG 5 z
 		ARG 7 u
 		ARG 9 v
+	METHOD method_1689 color (FFF)V
+		ARG 1 r
+		ARG 2 g
+		ARG 3 b
+	METHOD method_1690 color (FFFF)V
+		ARG 1 r
+		ARG 2 g
+		ARG 3 b
+		ARG 4 a
 	METHOD method_1691 begin (I)V
 		ARG 1 mode
 	METHOD method_1693 color (III)V
+		ARG 1 r
+		ARG 2 g
+		ARG 3 b
+	METHOD method_1694 color (IIII)V
+		ARG 1 r
+		ARG 2 g
+		ARG 3 b
+		ARG 4 a
 	METHOD method_1695 beginQuads ()V
 	METHOD method_1696 offset (DDD)V
 	METHOD method_1697 normal (FFF)V

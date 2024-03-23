@@ -23,6 +23,17 @@ constant gl_tex_parameter_pname org/lwjgl/opengl/GL12 GL_TEXTURE_MAX_LOD
 constant gl_tex_parameter_pname org/lwjgl/opengl/GL12 GL_TEXTURE_MIN_LOD
 constant gl_tex_parameter_pname org/lwjgl/opengl/GL14 GL_TEXTURE_LOD_BIAS
 
+constant gl_vertex_mode org/lwjgl/opengl/GL11 GL_POINTS
+constant gl_vertex_mode org/lwjgl/opengl/GL11 GL_LINES
+constant gl_vertex_mode org/lwjgl/opengl/GL11 GL_LINE_LOOP
+constant gl_vertex_mode org/lwjgl/opengl/GL11 GL_LINE_STRIP
+constant gl_vertex_mode org/lwjgl/opengl/GL11 GL_TRIANGLES
+constant gl_vertex_mode org/lwjgl/opengl/GL11 GL_TRIANGLE_STRIP
+constant gl_vertex_mode org/lwjgl/opengl/GL11 GL_TRIANGLE_FAN
+constant gl_vertex_mode org/lwjgl/opengl/GL11 GL_QUADS
+constant gl_vertex_mode org/lwjgl/opengl/GL11 GL_QUAD_STRIP
+constant gl_vertex_mode org/lwjgl/opengl/GL11 GL_POLYGON
+
 # GlDebug - Does not have blaze3d const
 constant gl_debug_source org/lwjgl/opengl/GL43 GL_DEBUG_SOURCE_API
 constant gl_debug_source org/lwjgl/opengl/GL43 GL_DEBUG_SOURCE_WINDOW_SYSTEM
@@ -160,6 +171,9 @@ constant gl_blend_func_factor org/lwjgl/opengl/GL14 GL_ONE_MINUS_CONSTANT_COLOR
 target_method org/lwjgl/opengl/GL11 glTexImage2D (IIIIIIIILjava/nio/IntBuffer;)V
 	param 2 gl_tex_format
 	param 6 gl_tex_format
+
+target_method org/lwjgl/opengl/GL11 glDrawArrays (III)V
+	param 0 gl_vertex_mode
 
 target_method org/lwjgl/opengl/GL11 glMatrixMode (I)V
 	param 0 gl_enable_state
