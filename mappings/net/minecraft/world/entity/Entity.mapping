@@ -45,6 +45,7 @@ CLASS net/minecraft/class_57 net/minecraft/world/entity/Entity
 	FIELD field_1644 random Ljava/util/Random;
 	FIELD field_1645 tickCount I
 	FIELD field_1647 remainingFireTicks I
+	FIELD field_1649 firstTick Z
 	FIELD field_1654 xp I
 	FIELD field_1655 yp I
 	FIELD field_1656 zp I
@@ -98,8 +99,10 @@ CLASS net/minecraft/class_57 net/minecraft/world/entity/Entity
 	METHOD method_1330 newFloatList ([F)Lnet/minecraft/class_202;
 		ARG 1 floats
 	METHOD method_1331 getEntityData ()Lnet/minecraft/class_216;
+	METHOD method_1332 lavaHurt ()V
 	METHOD method_1333 isInWaterOrRain ()Z
 	METHOD method_1334 isInWater ()Z
+	METHOD method_1335 isInLava ()Z
 	METHOD method_1336 markHurt ()V
 	METHOD method_1337 getEncodeId ()Ljava/lang/String;
 	METHOD method_1338 absMoveTo (DDDFF)V
@@ -125,6 +128,7 @@ CLASS net/minecraft/class_57 net/minecraft/world/entity/Entity
 		ARG 1 yRot
 		ARG 2 xRot
 	METHOD method_1343 saveAsPassenger (Lnet/minecraft/class_8;)Z
+		ARG 1 tag
 	METHOD method_1346 saveWithoutId (Lnet/minecraft/class_8;)V
 		ARG 1 nbt
 	METHOD method_1347 distanceToSqr (DDD)D
@@ -185,6 +189,7 @@ CLASS net/minecraft/class_57 net/minecraft/world/entity/Entity
 		ARG 1 entity
 	METHOD method_1379 getCollideAgainstBox (Lnet/minecraft/class_57;)Lnet/minecraft/class_25;
 		ARG 1 entity
+	METHOD method_1380 isPushable ()Z
 	METHOD method_1381 getCollideBox ()Lnet/minecraft/class_25;
 	METHOD method_1382 positionRider ()V
 	METHOD method_1383 thunderHit (Lnet/minecraft/class_411;)V
@@ -195,6 +200,9 @@ CLASS net/minecraft/class_57 net/minecraft/world/entity/Entity
 	METHOD method_1387 isInWall ()Z
 	METHOD method_1389 causeFallDamage (F)V
 		ARG 1 fallDistance
+	METHOD method_1391 awardKillScore (Lnet/minecraft/class_57;I)V
+		ARG 1 attacked
+		ARG 2 scoreToAdd
 	METHOD method_1392 burn (I)V
 		ARG 1 damage
 	METHOD method_1393 isUnderWater ()Z
