@@ -1,5 +1,10 @@
 CLASS net/minecraft/class_127 net/minecraft/world/entity/LivingEntity
+	FIELD field_1019 entityTexture Ljava/lang/String;
 	FIELD field_1021 rotOffs F
+	FIELD field_1029 zza F
+	FIELD field_1030 yRotA F
+	FIELD field_1031 jumping Z
+	FIELD field_1033 movementSpeed F
 	FIELD field_1036 health I
 	FIELD field_1038 hurtTime I
 	FIELD field_1039 hurtDuration I
@@ -17,38 +22,34 @@ CLASS net/minecraft/class_127 net/minecraft/world/entity/LivingEntity
 	FIELD field_1056 lerpXRot D
 	FIELD field_1059 noActionTime I
 	FIELD field_1060 xxa F
-	FIELD field_1029 zza F
-	FIELD field_1030 yRotA F
-	FIELD field_1031 jumping Z
-	FIELD field_1033 movementSpeed F
-	FIELD field_1019 entityTexture Ljava/lang/String;
-	METHOD method_943 isSleeping ()Z
+	METHOD method_909 getItemInHand ()Lnet/minecraft/class_31;
+	METHOD method_911 getAmbientSound ()Ljava/lang/String;
+	METHOD method_912 getHurtSound ()Ljava/lang/String;
+	METHOD method_913 getDeathSound ()Ljava/lang/String;
+	METHOD method_914 getDropItem ()I
+	METHOD method_915 getSoundVolume ()F
 	METHOD method_918 playAmbientSound ()V
-	METHOD method_942 isImmobile ()Z
 	METHOD method_919 spawnAnim ()V
-	METHOD method_932 onLadder ()Z
-	METHOD method_944 jumpFromGround ()V
-	METHOD method_935 isDarkEnoughToSpawn ()Z
+	METHOD method_926 getViewVector (F)Lnet/minecraft/class_26;
+		ARG 1 partialTick
 	METHOD method_929 pick (DF)Lnet/minecraft/class_27;
 		ARG 1 pickRange
 		ARG 3 partialTick
+	METHOD method_931 getEyePosition (F)Lnet/minecraft/class_26;
+		ARG 1 partialTick
+	METHOD method_932 onLadder ()Z
+	METHOD method_935 isDarkEnoughToSpawn ()Z
 	METHOD method_936 getAmbientSoundInterval ()I
+	METHOD method_937 aiStep ()V
+	METHOD method_938 (Lnet/minecraft/class_57;)V
+		ARG 1 killer
+	METHOD method_939 heal (I)V
+		ARG 1 amount
+	METHOD method_942 isImmobile ()Z
+	METHOD method_943 isSleeping ()Z
+	METHOD method_944 jumpFromGround ()V
 	METHOD method_945 travel (FF)V
 		ARG 1 xxa
 		ARG 2 zza
 	METHOD method_946 hurt (I)V
 		ARG 1 damage
-	METHOD method_938 (Lnet/minecraft/class_57;)V
-		ARG 1 killer
-	METHOD method_939 heal (I)V
-		ARG 1 amount
-	METHOD method_911 getAmbientSound ()Ljava/lang/String;
-	METHOD method_931 getEyePosition (F)Lnet/minecraft/class_26;
-		ARG 1 partialTick
-	METHOD method_913 getDeathSound ()Ljava/lang/String;
-	METHOD method_926 getViewVector (F)Lnet/minecraft/class_26;
-		ARG 1 partialTick
-	METHOD method_912 getHurtSound ()Ljava/lang/String;
-	METHOD method_914 getDropItem ()I
-	METHOD method_915 getSoundVolume ()F
-	METHOD method_937 aiStep ()V
