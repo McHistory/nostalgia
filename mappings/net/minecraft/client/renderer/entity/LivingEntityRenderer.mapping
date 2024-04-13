@@ -9,13 +9,31 @@ CLASS net/minecraft/class_245 net/minecraft/client/renderer/entity/LivingEntityR
 		ARG 2 shadowRadius
 	METHOD method_815 setInnerModel (Lnet/minecraft/class_173;)V
 		ARG 1 model
+	METHOD method_816 getFlipDegrees (Lnet/minecraft/class_127;)F
 	METHOD method_817 getOverlayColor (Lnet/minecraft/class_127;FF)I
 		ARG 1 creeper
 	METHOD method_818 (Lnet/minecraft/class_127;Ljava/lang/String;DDDI)V
 		ARG 2 username
+	METHOD method_820 getAttackAnim (Lnet/minecraft/class_127;F)F
+		ARG 1 living
+		ARG 2 partialTick
 	METHOD method_821 render (Lnet/minecraft/class_127;DDD)V
 	METHOD method_823 scale (Lnet/minecraft/class_127;F)V
 		ARG 1 creeper
+	METHOD method_824 setupRotations (Lnet/minecraft/class_127;FFF)V
+		ARG 1 living
+		ARG 2 bob
+		ARG 3 yHeadRot
+		ARG 4 partialTick
+		LOCAL 5 deathAngle
 	METHOD method_825 shouldRenderInnerModel (Lnet/minecraft/class_127;IF)Z
 		ARG 1 entity
 		ARG 2 model
+	METHOD method_826 setupPosition (Lnet/minecraft/class_127;DDD)V
+		ARG 1 living
+		ARG 2 x
+		ARG 4 y
+		ARG 6 z
+	METHOD method_828 getBob (Lnet/minecraft/class_127;F)F
+		ARG 1 living
+		ARG 2 partialTick

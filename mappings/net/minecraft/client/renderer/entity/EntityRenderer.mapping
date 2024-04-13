@@ -1,6 +1,8 @@
 CLASS net/minecraft/class_579 net/minecraft/client/renderer/entity/EntityRenderer
+	FIELD field_2676 defaultModel Lnet/minecraft/class_173;
 	FIELD field_2677 entityRendererManager Lnet/minecraft/class_578;
 	FIELD field_2678 shadowRadius F
+	FIELD field_2679 shadowStrength F
 	FIELD field_2680 blockRenderer Lnet/minecraft/class_13;
 	METHOD method_2022 render (Lnet/minecraft/class_57;DDDFF)V
 		ARG 1 entity
@@ -9,23 +11,52 @@ CLASS net/minecraft/class_579 net/minecraft/client/renderer/entity/EntityRendere
 		ARG 6 z
 		ARG 8 yRot
 		ARG 9 partialTick
+		LOCAL 10 lerpedHeadYRot
+		LOCAL 11 lerpedYRot
+		LOCAL 12 lerpedXRot
+		LOCAL 13 bob
+		LOCAL 14 scale
+		LOCAL 15 animationSpeed
+		LOCAL 16 animationPos
 	METHOD method_2023 getFont ()Lnet/minecraft/class_34;
-	METHOD method_2024 renderAABB (Lnet/minecraft/class_25;)V
+	METHOD method_2024 render (Lnet/minecraft/class_25;)V
 		ARG 0 aabb
-	METHOD method_2025 renderAABB (Lnet/minecraft/class_25;DDD)V
+		LOCAL 1 tes
+	METHOD method_2025 render (Lnet/minecraft/class_25;DDD)V
 		ARG 0 aabb
 		ARG 1 x
 		ARG 3 y
 		ARG 5 z
+		LOCAL 7 tes
 	METHOD method_2026 bindTexture (Ljava/lang/String;)V
 		ARG 1 textureLocation
+		LOCAL 2 manager
+	METHOD method_2027 bindTexture (Ljava/lang/String;Ljava/lang/String;)Z
+		LOCAL 3 manager
+		LOCAL 4 texture
 	METHOD method_2028 renderEntity (Lnet/minecraft/class_57;DDDF)V
 		ARG 1 entity
 		ARG 2 x
 		ARG 4 y
 		ARG 6 z
+		ARG 8 partialTick
+	METHOD method_2029 setEntityRenderDispatcher (Lnet/minecraft/class_578;)V
+		ARG 1 entityRenderDispatcher
+	METHOD method_2030 renderTileShadow (Lnet/minecraft/class_17;DDDIIIFFDDD)V
+		ARG 1 tile
 	METHOD method_2031 getLevel ()Lnet/minecraft/class_18;
-	METHOD method_2033 (Lnet/minecraft/class_57;DDDFF)V
+	METHOD method_2032 postRender (Lnet/minecraft/class_57;DDDFF)V
+		ARG 1 entity
 		ARG 2 x
 		ARG 4 y
 		ARG 6 z
+		ARG 8 yRot
+		ARG 9 partialTick
+		LOCAL 12 distance
+	METHOD method_2033 renderShadow (Lnet/minecraft/class_57;DDDFF)V
+		ARG 1 entity
+		ARG 2 x
+		ARG 4 y
+		ARG 6 z
+		ARG 8 distance
+		ARG 9 partialTick

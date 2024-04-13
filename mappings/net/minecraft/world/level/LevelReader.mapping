@@ -7,6 +7,7 @@ CLASS net/minecraft/class_14 net/minecraft/world/level/LevelReader
 		ARG 1 x
 		ARG 2 y
 		ARG 3 z
+		LOCAL 4 chunk
 	METHOD method_1778 getTileMeta (III)I
 		ARG 1 x
 		ARG 2 y
@@ -17,18 +18,11 @@ CLASS net/minecraft/class_14 net/minecraft/world/level/LevelReader
 		ARG 2 y
 		ARG 3 z
 		LOCAL 4 tile
-	METHOD method_1780 isViewBlocking (III)Z
+	METHOD method_1780 isSolidBlockingTile (III)Z
 		ARG 1 x
 		ARG 2 y
 		ARG 3 z
-	METHOD method_1782 getBrightness (III)F
-		ARG 1 x
-		ARG 2 y
-		ARG 3 z
-	METHOD method_1783 (III)Z
-		ARG 1 x
-		ARG 2 y
-		ARG 3 z
+		LOCAL 4 tile
 	METHOD method_1784 getRawBrightness (IIII)F
 		ARG 1 x
 		ARG 2 y

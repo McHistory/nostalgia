@@ -23,6 +23,9 @@ CLASS net/minecraft/class_166 net/minecraft/server/players/PlayerList
 	METHOD method_560 broadcastAll (Lnet/minecraft/class_169;I)V
 		ARG 1 packet
 		ARG 2 dimension
+	METHOD method_562 (Ljava/lang/String;Lnet/minecraft/class_169;)Z
+		ARG 1 name
+		ARG 2 packet
 	METHOD method_568 getPlayerNames ()Ljava/lang/String;
 	METHOD method_569 (Lnet/minecraft/class_69;)V
 		ARG 1 player
@@ -37,7 +40,11 @@ CLASS net/minecraft/class_166 net/minecraft/server/players/PlayerList
 	METHOD method_582 isWhiteListed (Ljava/lang/String;)Z
 		ARG 1 username
 	METHOD method_583 saveBanList ()V
+	METHOD method_584 isOp (Ljava/lang/String;)Z
+		ARG 1 name
 	METHOD method_585 loadIpBanList ()V
+	METHOD method_586 getPlayerByName (Ljava/lang/String;)Lnet/minecraft/class_69;
+		ARG 1 name
 	METHOD method_587 saveIpBanList ()V
 	METHOD method_589 loadOps ()V
 	METHOD method_591 saveOps ()V

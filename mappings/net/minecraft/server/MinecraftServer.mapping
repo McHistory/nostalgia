@@ -9,13 +9,20 @@ CLASS net/minecraft/server/MinecraftServer net/minecraft/server/MinecraftServer
 	FIELD field_2849 animals Z
 	FIELD field_2850 allowPvp Z
 	FIELD field_2851 allowFlight Z
+	FIELD field_2853 running Z
 	FIELD field_2854 tickables Ljava/util/List;
+	FIELD field_2855 consoleInput Ljava/util/List;
+	METHOD method_2156 halt ()V
 	METHOD method_2157 getLevel (I)Lnet/minecraft/class_73;
 		ARG 1 dimension
 	METHOD method_2158 addTickable (Lnet/minecraft/class_46;)V
 		ARG 1 tickable
 	METHOD method_2160 getFile (Ljava/lang/String;)Ljava/io/File;
 		ARG 1 path
+	METHOD method_2162 handleConsoleInput (Ljava/lang/String;Lnet/minecraft/class_39;)V
+		ARG 1 msg
+		ARG 2 source
+	METHOD method_2164 handleConsoleInputs ()V
 	METHOD method_2165 getEntityTracker (I)Lnet/minecraft/class_488;
 		ARG 1 dimension
 	METHOD method_2166 start ()Z

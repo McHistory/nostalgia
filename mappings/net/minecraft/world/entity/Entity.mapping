@@ -21,6 +21,7 @@ CLASS net/minecraft/class_57 net/minecraft/world/entity/Entity
 	FIELD field_1609 xRotO F
 	FIELD field_1610 bb Lnet/minecraft/class_25;
 	FIELD field_1612 wasInWater Z
+	FIELD field_1613 invulnerableTime I
 	FIELD field_1614 air I
 	FIELD field_1615 fireImmune Z
 	FIELD field_1616 entityData Lnet/minecraft/class_216;
@@ -30,6 +31,7 @@ CLASS net/minecraft/class_57 net/minecraft/world/entity/Entity
 	FIELD field_1621 zChunk I
 	FIELD field_1623 onGround Z
 	FIELD field_1627 hurtMarked Z
+	FIELD field_1628 stuckInBlock Z
 	FIELD field_1630 removed Z
 	FIELD field_1631 ridingHeight F
 	FIELD field_1632 dimensionsWidth F
@@ -64,6 +66,7 @@ CLASS net/minecraft/class_57 net/minecraft/world/entity/Entity
 		ARG 8 lerpXRot
 		ARG 9 lerpSteps
 	METHOD method_1312 animateHurt ()V
+	METHOD method_1313 handleEntityEvent (B)V
 	METHOD method_1314 getTexture ()Ljava/lang/String;
 	METHOD method_1315 resetPos ()V
 	METHOD method_1317 baseTick ()V
@@ -129,6 +132,8 @@ CLASS net/minecraft/class_57 net/minecraft/world/entity/Entity
 		ARG 2 xRot
 	METHOD method_1343 saveAsPassenger (Lnet/minecraft/class_8;)Z
 		ARG 1 tag
+	METHOD method_1345 getSharedFlag (I)Z
+		ARG 1 flag
 	METHOD method_1346 saveWithoutId (Lnet/minecraft/class_8;)V
 		ARG 1 nbt
 	METHOD method_1347 distanceToSqr (DDD)D
@@ -157,12 +162,14 @@ CLASS net/minecraft/class_57 net/minecraft/world/entity/Entity
 	METHOD method_1356 isPickable ()Z
 	METHOD method_1357 getRideHeight ()D
 	METHOD method_1358 isMovementNoisy ()Z
+	METHOD method_1359 displayFireAnimation ()Z
+	METHOD method_1360 isPassenger ()Z
 	METHOD method_1362 turn (FF)V
 	METHOD method_1363 addAdditionalSaveData (Lnet/minecraft/class_8;)V
 		ARG 1 entityTag
 	METHOD method_1364 shouldRenderAtSqrDistance (D)Z
 		ARG 1 distance
-	METHOD method_1365 setMotion (DDD)V
+	METHOD method_1365 lerpMotion (DDD)V
 		ARG 1 x
 		ARG 3 y
 		ARG 5 z
@@ -180,6 +187,7 @@ CLASS net/minecraft/class_57 net/minecraft/world/entity/Entity
 		ARG 1 x
 		ARG 3 y
 		ARG 5 z
+	METHOD method_1373 isShiftKeyDown ()Z
 	METHOD method_1374 checkFallDamage (DZ)V
 		ARG 1 yVelocity
 		ARG 3 onGround

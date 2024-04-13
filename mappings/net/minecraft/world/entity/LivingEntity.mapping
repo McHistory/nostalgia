@@ -1,11 +1,21 @@
 CLASS net/minecraft/class_127 net/minecraft/world/entity/LivingEntity
+	FIELD field_1009 invulnerableDuration I
+	FIELD field_1012 yHeadRot F
+	FIELD field_1013 yHeadRotO F
+	FIELD field_1014 oRun F
+	FIELD field_1015 run F
+	FIELD field_1016 yBodyRot F
+	FIELD field_1017 yBodyRotO F
 	FIELD field_1019 entityTexture Ljava/lang/String;
 	FIELD field_1021 rotOffs F
+	FIELD field_1027 oAttackAnim F
 	FIELD field_1029 zza F
 	FIELD field_1030 yRotA F
 	FIELD field_1031 jumping Z
 	FIELD field_1033 movementSpeed F
+	FIELD field_1035 attackAnim F
 	FIELD field_1036 health I
+	FIELD field_1037 lastHealth I
 	FIELD field_1038 hurtTime I
 	FIELD field_1039 hurtDuration I
 	FIELD field_1040 hurtDir F
@@ -20,6 +30,7 @@ CLASS net/minecraft/class_127 net/minecraft/world/entity/LivingEntity
 	FIELD field_1054 lerpZ D
 	FIELD field_1055 lerpYRot D
 	FIELD field_1056 lerpXRot D
+	FIELD field_1058 lastHurt I
 	FIELD field_1059 noActionTime I
 	FIELD field_1060 xxa F
 	METHOD method_909 getItemInHand ()Lnet/minecraft/class_31;
@@ -35,6 +46,9 @@ CLASS net/minecraft/class_127 net/minecraft/world/entity/LivingEntity
 	METHOD method_929 pick (DF)Lnet/minecraft/class_27;
 		ARG 1 pickRange
 		ARG 3 partialTick
+	METHOD method_930 getAttackAnim (F)F
+		ARG 1 partialTick
+		LOCAL 2 difference
 	METHOD method_931 getEyePosition (F)Lnet/minecraft/class_26;
 		ARG 1 partialTick
 	METHOD method_932 onLadder ()Z
