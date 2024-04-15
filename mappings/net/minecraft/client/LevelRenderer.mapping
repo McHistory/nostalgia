@@ -5,6 +5,7 @@ CLASS net/minecraft/class_471 net/minecraft/client/LevelRenderer
 	FIELD field_1785 renderedEntities I
 	FIELD field_1786 culledEntities I
 	FIELD field_1787 totalChunks I
+	FIELD field_1789 occludedChunks I
 	FIELD field_1790 renderedChunks I
 	FIELD field_1794 renderLists [Lnet/minecraft/class_472;
 	FIELD field_1795 globalBlockEntities Ljava/util/List;
@@ -19,7 +20,10 @@ CLASS net/minecraft/class_471 net/minecraft/client/LevelRenderer
 	FIELD field_1812 chunkGridSizeZ I
 	FIELD field_1814 minecraft Lnet/minecraft/client/Minecraft;
 	FIELD field_1815 blockRenderer Lnet/minecraft/class_13;
+	FIELD field_1817 supportsOcclusionQuery Z
 	FIELD field_1819 starList I
+	METHOD <init> (Lnet/minecraft/client/Minecraft;Lnet/minecraft/class_76;)V
+		ARG 1 client
 	METHOD method_1537 allChanged ()V
 	METHOD method_1539 renderSky (F)V
 	METHOD method_1543 (IIIIII)V
