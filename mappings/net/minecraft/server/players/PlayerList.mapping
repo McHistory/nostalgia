@@ -12,7 +12,7 @@ CLASS net/minecraft/class_166 net/minecraft/server/players/PlayerList
 	FIELD field_588 opsFile Ljava/io/File;
 	FIELD field_589 whitelistFile Ljava/io/File;
 	FIELD field_590 playerIo Lnet/minecraft/class_168;
-	FIELD field_591 enableWhiteList Z
+	FIELD field_591 doWhiteList Z
 	METHOD <init> (Lnet/minecraft/server/MinecraftServer;)V
 		ARG 1 server
 	METHOD method_557 canPlayerLogin (Lnet/minecraft/class_10;Ljava/lang/String;)Lnet/minecraft/class_69;
@@ -26,10 +26,13 @@ CLASS net/minecraft/class_166 net/minecraft/server/players/PlayerList
 	METHOD method_562 (Ljava/lang/String;Lnet/minecraft/class_169;)Z
 		ARG 1 name
 		ARG 2 packet
+	METHOD method_564 setLevel ([Lnet/minecraft/class_73;)V
+		ARG 1 levels
 	METHOD method_568 getPlayerNames ()Ljava/lang/String;
 	METHOD method_569 (Lnet/minecraft/class_69;)V
 		ARG 1 player
 	METHOD method_571 saveAll ()V
+	METHOD method_572 move (Lnet/minecraft/class_69;)V
 	METHOD method_574 getWhiteList ()Ljava/util/Set;
 	METHOD method_575 remove (Lnet/minecraft/class_69;)V
 		ARG 1 player
