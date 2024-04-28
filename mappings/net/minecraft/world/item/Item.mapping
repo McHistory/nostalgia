@@ -128,6 +128,8 @@ CLASS net/minecraft/class_124 net/minecraft/world/item/Item
 		ARG 2 tile
 	METHOD method_439 getTexture (Lnet/minecraft/class_31;)I
 		ARG 1 item
+	METHOD method_440 getItemColor (I)I
+		ARG 1 meta
 	METHOD method_441 getTexture (I)I
 		ARG 1 meta
 	METHOD method_442 getTranslationKey (Lnet/minecraft/class_31;)Ljava/lang/String;
@@ -144,6 +146,11 @@ CLASS net/minecraft/class_124 net/minecraft/world/item/Item
 		LOCAL 8 bed
 		LOCAL 9 facing
 	METHOD method_446 hurtEnemy (Lnet/minecraft/class_31;Lnet/minecraft/class_127;Lnet/minecraft/class_127;)Z
+		ARG 1 weapon
+		ARG 2 enemy
+		ARG 3 attacker
+	METHOD method_447 getAttackDamage (Lnet/minecraft/class_57;)I
+		ARG 1 target
 	METHOD method_450 canDestroySpecial (Lnet/minecraft/class_17;)Z
 		ARG 1 tile
 	METHOD method_451 use (Lnet/minecraft/class_31;Lnet/minecraft/class_18;Lnet/minecraft/class_54;)Lnet/minecraft/class_31;
@@ -181,3 +188,5 @@ CLASS net/minecraft/class_124 net/minecraft/world/item/Item
 	METHOD method_464 getDurability ()I
 	METHOD method_467 getRecipeRemainder ()Lnet/minecraft/class_124;
 	METHOD method_468 hasRecipeRemainder ()Z
+	METHOD method_470 getPlacementMeta (I)I
+		ARG 1 itemMeta
