@@ -2,6 +2,7 @@ CLASS net/minecraft/class_166 net/minecraft/server/players/PlayerList
 	FIELD field_577 LOGGER Ljava/util/logging/Logger;
 	FIELD field_578 players Ljava/util/List;
 	FIELD field_579 server Lnet/minecraft/server/MinecraftServer;
+	FIELD field_580 chunkMaps [Lnet/minecraft/class_167;
 	FIELD field_581 maxPlayers I
 	FIELD field_582 bans Ljava/util/Set;
 	FIELD field_583 ipBans Ljava/util/Set;
@@ -15,6 +16,7 @@ CLASS net/minecraft/class_166 net/minecraft/server/players/PlayerList
 	FIELD field_591 doWhiteList Z
 	METHOD <init> (Lnet/minecraft/server/MinecraftServer;)V
 		ARG 1 server
+	METHOD method_552 tileChanaged (IIII)V
 	METHOD method_557 canPlayerLogin (Lnet/minecraft/class_10;Ljava/lang/String;)Lnet/minecraft/class_69;
 		ARG 1 listener
 		ARG 2 username

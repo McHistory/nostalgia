@@ -3,6 +3,9 @@ CLASS net/minecraft/class_75 net/minecraft/client/particle/ParticleEngine
 	FIELD field_270 particles [Ljava/util/List;
 	FIELD field_271 textureManager Lnet/minecraft/class_76;
 	FIELD field_272 random Ljava/util/Random;
+	METHOD <init> (Lnet/minecraft/class_18;Lnet/minecraft/class_76;)V
+		ARG 1 level
+		ARG 2 textureManager
 	METHOD <init> (Lnet/minecraft/class_92;Lnet/minecraft/class_169;)V
 		ARG 1 level
 		ARG 2 textureManager
@@ -12,6 +15,12 @@ CLASS net/minecraft/class_75 net/minecraft/client/particle/ParticleEngine
 		ARG 2 y
 		ARG 3 z
 		ARG 4 direction
+	METHOD method_322 destroy (IIIII)V
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+		ARG 4 tile
+		ARG 5 meta
 	METHOD method_323 setLevel (Lnet/minecraft/class_18;)V
 		ARG 1 level
 	METHOD method_324 render (Lnet/minecraft/class_57;F)V
@@ -23,9 +32,3 @@ CLASS net/minecraft/class_75 net/minecraft/client/particle/ParticleEngine
 	METHOD method_327 (Lnet/minecraft/class_57;F)V
 		ARG 1 cameraEntity
 		ARG 2 partialTick
-	METHOD method_322 destroy (IIIII)V
-		ARG 1 x
-		ARG 2 y
-		ARG 3 z
-		ARG 4 tile
-		ARG 5 meta
