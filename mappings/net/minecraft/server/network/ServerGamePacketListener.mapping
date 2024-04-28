@@ -1,4 +1,4 @@
-CLASS net/minecraft/class_11 net/minecraft/server/network/ServerGamePacketListenerImpl
+CLASS net/minecraft/class_11 net/minecraft/server/network/ServerGamePacketListener
 	FIELD field_916 LOGGER Ljava/util/logging/Logger;
 	FIELD field_917 connection Lnet/minecraft/class_117;
 	FIELD field_919 server Lnet/minecraft/server/MinecraftServer;
@@ -6,8 +6,11 @@ CLASS net/minecraft/class_11 net/minecraft/server/network/ServerGamePacketListen
 	FIELD field_925 lastGoodX D
 	FIELD field_926 lastGoodY D
 	FIELD field_927 lastGoodZ D
+	FIELD field_928 awaitingPositionFromClient Z
 	METHOD <init> (Lnet/minecraft/server/MinecraftServer;Lnet/minecraft/class_117;Lnet/minecraft/class_69;)V
 		ARG 1 server
+		ARG 2 connection
+		ARG 3 player
 	METHOD method_832 teleport (DDDFF)V
 		ARG 1 x
 		ARG 3 y

@@ -3,15 +3,19 @@ CLASS net/minecraft/class_117 net/minecraft/network/Connection
 	FIELD field_1282 address Ljava/net/SocketAddress;
 	FIELD field_1283 incomingBytes Ljava/io/DataInputStream;
 	FIELD field_1284 outgoingBytes Ljava/io/DataOutputStream;
-	FIELD field_1289 connectionHandler Lnet/minecraft/class_240;
+	FIELD field_1289 packetListener Lnet/minecraft/class_240;
 	FIELD field_1291 writeThread Ljava/lang/Thread;
 	FIELD field_1292 readThread Ljava/lang/Thread;
+	FIELD field_1296 keepAliveTime I
 	METHOD <init> (Ljava/net/Socket;Ljava/lang/String;Lnet/minecraft/class_240;)V
 		ARG 1 socket
+		ARG 3 packetListener
 	METHOD method_1123 handlePacket (Lnet/minecraft/class_169;)V
 		ARG 1 packet
 	METHOD method_1124 exceptionCaught (Ljava/lang/Exception;)V
 		ARG 1 exception
 	METHOD method_1125 disconnect (Ljava/lang/String;[Ljava/lang/Object;)V
+	METHOD method_1128 setListener (Lnet/minecraft/class_240;)V
+		ARG 1 lisener
 	METHOD method_1131 getAddress ()Ljava/net/SocketAddress;
 	METHOD method_1139 readPacket ()Z

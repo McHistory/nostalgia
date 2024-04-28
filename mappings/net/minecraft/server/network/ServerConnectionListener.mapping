@@ -3,6 +3,13 @@ CLASS net/minecraft/class_9 net/minecraft/server/network/ServerConnectionListene
 	FIELD field_30 server Lnet/minecraft/server/MinecraftServer;
 	FIELD field_31 socket Ljava/net/ServerSocket;
 	FIELD field_32 thread Ljava/lang/Thread;
+	FIELD field_34 pendingConnections Ljava/util/ArrayList;
+	FIELD field_35 connections Ljava/util/ArrayList;
 	METHOD <init> (Lnet/minecraft/server/MinecraftServer;Ljava/net/InetAddress;I)V
 		ARG 1 server
+	METHOD method_34 tick ()V
+	METHOD method_37 addPendingConnection (Lnet/minecraft/class_10;)V
+		ARG 1 lisener
+	METHOD method_38 addConnection (Lnet/minecraft/class_11;)V
+		ARG 1 listener
 	CLASS 1 ListenThread

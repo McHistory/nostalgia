@@ -1,4 +1,4 @@
-CLASS net/minecraft/class_40 net/minecraft/world/entity/LocalPlayer
+CLASS net/minecraft/class_40 net/minecraft/client/player/LocalPlayer
 	FIELD field_161 input Lnet/minecraft/class_41;
 	FIELD field_162 minecraft Lnet/minecraft/client/Minecraft;
 	METHOD <init> (Lnet/minecraft/client/Minecraft;Lnet/minecraft/class_18;Lnet/minecraft/class_237;I)V
@@ -11,6 +11,11 @@ CLASS net/minecraft/class_40 net/minecraft/world/entity/LocalPlayer
 		ARG 2 level
 		ARG 3 session
 		ARG 4 dimension
+	METHOD method_136 keyPressed (IZ)V
+		ARG 1 key
+		ARG 2 isDown
+	METHOD method_137 chat (Ljava/lang/String;)V
+		ARG 1 msg
 	METHOD method_138 blocked (III)Z
 		ARG 1 x
 		ARG 2 y
