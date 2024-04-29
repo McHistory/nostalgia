@@ -22,8 +22,10 @@ CLASS net/minecraft/class_245 net/minecraft/client/renderer/entity/LivingEntityR
 		ARG 5 y
 		ARG 7 z
 		ARG 9 distance
-	METHOD method_819 (Lnet/minecraft/class_127;IF)Z
+	METHOD method_819 setupColor (Lnet/minecraft/class_127;IF)Z
 		ARG 1 entity
+		ARG 2 model
+		ARG 3 partialTick
 	METHOD method_820 getAttackAnim (Lnet/minecraft/class_127;F)F
 		ARG 1 living
 		ARG 2 partialTick
@@ -41,7 +43,7 @@ CLASS net/minecraft/class_245 net/minecraft/client/renderer/entity/LivingEntityR
 		ARG 3 yHeadRot
 		ARG 4 partialTick
 		LOCAL 5 deathAngle
-	METHOD method_825 shouldRenderInnerModel (Lnet/minecraft/class_127;IF)Z
+	METHOD method_825 setupOverlayColor (Lnet/minecraft/class_127;IF)Z
 		ARG 1 entity
 		ARG 2 model
 		ARG 3 partialTick
