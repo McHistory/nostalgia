@@ -10,20 +10,31 @@ CLASS net/minecraft/class_245 net/minecraft/client/renderer/entity/LivingEntityR
 	METHOD method_815 setInnerModel (Lnet/minecraft/class_173;)V
 		ARG 1 model
 	METHOD method_816 getFlipDegrees (Lnet/minecraft/class_127;)F
+		ARG 1 entity
 	METHOD method_817 getOverlayColor (Lnet/minecraft/class_127;FF)I
 		ARG 1 creeper
-	METHOD method_818 (Lnet/minecraft/class_127;Ljava/lang/String;DDDI)V
+		ARG 2 brightness
+		ARG 3 partialTick
+	METHOD method_818 renderNameTag (Lnet/minecraft/class_127;Ljava/lang/String;DDDI)V
+		ARG 1 entity
 		ARG 2 username
+		ARG 3 x
+		ARG 5 y
+		ARG 7 z
+		ARG 9 distance
+	METHOD method_819 (Lnet/minecraft/class_127;IF)Z
+		ARG 1 entity
 	METHOD method_820 getAttackAnim (Lnet/minecraft/class_127;F)F
 		ARG 1 living
 		ARG 2 partialTick
-	METHOD method_821 render (Lnet/minecraft/class_127;DDD)V
+	METHOD method_821 renderNameTags (Lnet/minecraft/class_127;DDD)V
 		ARG 1 player
 		ARG 2 x
 		ARG 4 y
 		ARG 6 z
 	METHOD method_823 scale (Lnet/minecraft/class_127;F)V
-		ARG 1 creeper
+		ARG 1 entity
+		ARG 2 partialTick
 	METHOD method_824 setupRotations (Lnet/minecraft/class_127;FFF)V
 		ARG 1 living
 		ARG 2 bob
@@ -33,11 +44,15 @@ CLASS net/minecraft/class_245 net/minecraft/client/renderer/entity/LivingEntityR
 	METHOD method_825 shouldRenderInnerModel (Lnet/minecraft/class_127;IF)Z
 		ARG 1 entity
 		ARG 2 model
+		ARG 3 partialTick
 	METHOD method_826 setupPosition (Lnet/minecraft/class_127;DDD)V
 		ARG 1 living
 		ARG 2 x
 		ARG 4 y
 		ARG 6 z
+	METHOD method_827 renderExtras (Lnet/minecraft/class_127;F)V
+		ARG 1 player
+		ARG 2 partialTick
 	METHOD method_828 getBob (Lnet/minecraft/class_127;F)F
 		ARG 1 living
 		ARG 2 partialTick

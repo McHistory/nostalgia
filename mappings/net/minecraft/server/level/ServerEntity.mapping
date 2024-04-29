@@ -7,6 +7,9 @@ CLASS net/minecraft/class_174 net/minecraft/server/level/ServerEntity
 	FIELD field_602 zp I
 	FIELD field_603 yRotp I
 	FIELD field_604 xRotp I
+	FIELD field_605 aX D
+	FIELD field_606 aY D
+	FIELD field_607 aZ D
 	FIELD field_608 tickCount I
 	FIELD field_610 seenBy Ljava/util/Set;
 	FIELD field_615 trackDelta Z
@@ -16,6 +19,8 @@ CLASS net/minecraft/class_174 net/minecraft/server/level/ServerEntity
 		ARG 2 range
 		ARG 3 updateInterval
 		ARG 4 trackDelta
+	METHOD equals (Ljava/lang/Object;)Z
+		ARG 1 obj
 	METHOD method_598 broadcast (Lnet/minecraft/class_169;)V
 		ARG 1 packet
 	METHOD method_599 sendChanges (Ljava/util/List;)V
