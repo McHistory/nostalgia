@@ -34,6 +34,7 @@ CLASS net/minecraft/class_127 net/minecraft/world/entity/LivingEntity
 	FIELD field_1059 noActionTime I
 	FIELD field_1060 xxa F
 	METHOD method_909 getItemInHand ()Lnet/minecraft/class_31;
+	METHOD method_910 serverAiStep ()V
 	METHOD method_911 getAmbientSound ()Ljava/lang/String;
 	METHOD method_912 getHurtSound ()Ljava/lang/String;
 	METHOD method_913 getDeathSound ()Ljava/lang/String;
@@ -41,8 +42,11 @@ CLASS net/minecraft/class_127 net/minecraft/world/entity/LivingEntity
 	METHOD method_915 getSoundVolume ()F
 	METHOD method_918 playAmbientSound ()V
 	METHOD method_919 spawnAnim ()V
+	METHOD method_920 checkDespawn ()V
 	METHOD method_926 getViewVector (F)Lnet/minecraft/class_26;
 		ARG 1 partialTick
+	METHOD method_928 canSee (Lnet/minecraft/class_57;)Z
+		ARG 1 entity
 	METHOD method_929 pick (DF)Lnet/minecraft/class_27;
 		ARG 1 pickRange
 		ARG 3 partialTick
@@ -59,6 +63,7 @@ CLASS net/minecraft/class_127 net/minecraft/world/entity/LivingEntity
 		ARG 1 killer
 	METHOD method_939 heal (I)V
 		ARG 1 amount
+	METHOD method_940 removeWhenFarAway ()Z
 	METHOD method_942 isImmobile ()Z
 	METHOD method_943 isSleeping ()Z
 	METHOD method_944 jumpFromGround ()V

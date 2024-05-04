@@ -72,7 +72,7 @@ CLASS net/minecraft/class_18 net/minecraft/world/level/Level
 		ARG 1 x
 		ARG 2 y
 		ARG 3 z
-		ARG 4 id
+		ARG 4 tile
 		ARG 5 meta
 	METHOD method_155 isRegionLoaded (IIIIII)Z
 		ARG 1 minX
@@ -221,7 +221,7 @@ CLASS net/minecraft/class_18 net/minecraft/world/level/Level
 		ARG 1 x
 		ARG 2 y
 		ARG 3 z
-		ARG 4 blockId
+		ARG 4 tile
 	METHOD method_201 setTileWithUpdate (IIIII)Z
 		ARG 1 x
 		ARG 2 y
@@ -337,7 +337,10 @@ CLASS net/minecraft/class_18 net/minecraft/world/level/Level
 	METHOD method_245 tickWeather ()V
 		LOCAL 1 thunderTime
 		LOCAL 2 rainTime
-	METHOD method_246 setBlockDirty (III)V
+	METHOD method_246 setTileDirty (III)V
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
 	METHOD method_247 hasDirectSignal (IIII)Z
 		ARG 1 x
 		ARG 2 y
