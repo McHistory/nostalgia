@@ -1,5 +1,6 @@
 CLASS net/minecraft/class_372 net/minecraft/world/entity/Fireball
 	FIELD field_2192 shake I
+	FIELD field_2193 owner Lnet/minecraft/class_127;
 	FIELD field_2194 xPower D
 	FIELD field_2195 yPower D
 	FIELD field_2196 zPower D
@@ -8,6 +9,8 @@ CLASS net/minecraft/class_372 net/minecraft/world/entity/Fireball
 	FIELD field_2199 zTile I
 	FIELD field_2200 inTile I
 	FIELD field_2201 inGround Z
+	FIELD field_2202 life I
+	FIELD field_2203 flightTime I
 	METHOD <init> (Lnet/minecraft/class_18;DDDDDD)V
 		ARG 1 level
 		ARG 2 x
@@ -18,6 +21,7 @@ CLASS net/minecraft/class_372 net/minecraft/world/entity/Fireball
 		ARG 12 zPower
 	METHOD <init> (Lnet/minecraft/class_18;Lnet/minecraft/class_127;DDD)V
 		ARG 1 level
+		ARG 2 owner
 		ARG 3 x
 		ARG 5 y
 		ARG 7 z

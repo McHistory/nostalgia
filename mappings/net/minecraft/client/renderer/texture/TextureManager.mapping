@@ -1,15 +1,33 @@
 CLASS net/minecraft/class_76 net/minecraft/client/renderer/texture/TextureManager
+	FIELD field_1245 mipmap Z
+	FIELD field_1246 byPath Ljava/util/HashMap;
+	FIELD field_1247 pixelMap Ljava/util/HashMap;
+	FIELD field_1248 byId Ljava/util/HashMap;
+	FIELD field_1249 texureBuffer Ljava/nio/IntBuffer;
+	FIELD field_1250 imageBuffer Ljava/nio/ByteBuffer;
 	FIELD field_1251 tickableTextures Ljava/util/List;
 	FIELD field_1252 textures Ljava/util/Map;
 	FIELD field_1253 options Lnet/minecraft/class_322;
+	FIELD field_1254 clamp Z
+	FIELD field_1255 blur Z
 	FIELD field_1256 packManager Lnet/minecraft/class_303;
 	FIELD field_1257 missingTex Ljava/awt/image/BufferedImage;
 	METHOD <init> (Lnet/minecraft/class_303;Lnet/minecraft/class_322;)V
 		ARG 1 packManager
 		ARG 2 options
 	METHOD method_1084 tick ()V
+	METHOD method_1085 deleteTexture (I)V
+		ARG 1 texture
 	METHOD method_1087 addAnimated (Lnet/minecraft/class_336;)V
+		ARG 1 texture
 	METHOD method_1088 generateTexture (Ljava/awt/image/BufferedImage;)I
+		ARG 1 image
+	METHOD method_1089 initTexture (Ljava/awt/image/BufferedImage;I)V
+		ARG 1 image
+		ARG 2 texture
+	METHOD method_1090 getPixels (Ljava/awt/image/BufferedImage;[I)[I
+		ARG 1 image
+		ARG 2 pixels
 	METHOD method_1091 readImage (Ljava/io/InputStream;)Ljava/awt/image/BufferedImage;
 		ARG 1 input
 	METHOD method_1092 getPixels (Ljava/lang/String;)[I
@@ -25,5 +43,7 @@ CLASS net/minecraft/class_76 net/minecraft/client/renderer/texture/TextureManage
 	METHOD method_1096 reload ()V
 	METHOD method_1097 bindTexture (I)V
 		ARG 1 textureId
+	METHOD method_1099 getPixels (Ljava/awt/image/BufferedImage;)[I
+		ARG 1 image
 	METHOD method_1100 getTextureId (Ljava/lang/String;)I
 		ARG 1 textureLocation

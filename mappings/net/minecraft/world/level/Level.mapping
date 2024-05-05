@@ -142,7 +142,7 @@ CLASS net/minecraft/class_18 net/minecraft/world/level/Level
 		ARG 5 x1
 		ARG 6 y1
 		ARG 7 z1
-	METHOD method_169 isInsideMaterial (Lnet/minecraft/class_25;Lnet/minecraft/class_15;)Z
+	METHOD method_169 isInside (Lnet/minecraft/class_25;Lnet/minecraft/class_15;)Z
 		ARG 1 aabb
 		ARG 2 material
 	METHOD method_171 mayInteract (Lnet/minecraft/class_54;III)Z
@@ -199,6 +199,7 @@ CLASS net/minecraft/class_18 net/minecraft/world/level/Level
 		ARG 4 y
 		ARG 6 z
 		ARG 8 radius
+		ARG 9 fire
 	METHOD method_190 getEntityCollisions (Lnet/minecraft/class_57;Lnet/minecraft/class_25;)Ljava/util/List;
 		ARG 1 entity
 		ARG 2 area
@@ -248,6 +249,9 @@ CLASS net/minecraft/class_18 net/minecraft/world/level/Level
 		ARG 3 y
 		ARG 4 z
 		ARG 5 level
+	METHOD method_207 isTouching (Lnet/minecraft/class_25;Lnet/minecraft/class_15;)Z
+		ARG 1 aabb
+		ARG 2 material
 	METHOD method_208 getFreeMapId (Ljava/lang/String;)I
 		ARG 1 id
 	METHOD method_210 addEntity (Lnet/minecraft/class_57;)Z
