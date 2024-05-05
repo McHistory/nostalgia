@@ -8,6 +8,7 @@ CLASS net/minecraft/class_127 net/minecraft/world/entity/LivingEntity
 	FIELD field_1017 yBodyRotO F
 	FIELD field_1019 entityTexture Ljava/lang/String;
 	FIELD field_1021 rotOffs F
+	FIELD field_1024 deathScore I
 	FIELD field_1027 oAttackAnim F
 	FIELD field_1029 zza F
 	FIELD field_1030 yRotA F
@@ -21,6 +22,7 @@ CLASS net/minecraft/class_127 net/minecraft/world/entity/LivingEntity
 	FIELD field_1040 hurtDir F
 	FIELD field_1041 deathTime I
 	FIELD field_1042 attackTime I
+	FIELD field_1045 dead Z
 	FIELD field_1048 animationSpeedOld F
 	FIELD field_1049 animationSpeed F
 	FIELD field_1050 animationPosition F
@@ -43,6 +45,10 @@ CLASS net/minecraft/class_127 net/minecraft/world/entity/LivingEntity
 	METHOD method_918 playAmbientSound ()V
 	METHOD method_919 spawnAnim ()V
 	METHOD method_920 checkDespawn ()V
+	METHOD method_925 knockback (Lnet/minecraft/class_57;IDD)V
+		ARG 1 attacker
+		ARG 3 xVel
+		ARG 5 zVel
 	METHOD method_926 getViewVector (F)Lnet/minecraft/class_26;
 		ARG 1 partialTick
 	METHOD method_928 canSee (Lnet/minecraft/class_57;)Z
@@ -56,10 +62,11 @@ CLASS net/minecraft/class_127 net/minecraft/world/entity/LivingEntity
 	METHOD method_931 getEyePosition (F)Lnet/minecraft/class_26;
 		ARG 1 partialTick
 	METHOD method_932 onLadder ()Z
+	METHOD method_933 dropAllDeathLoot ()V
 	METHOD method_935 isDarkEnoughToSpawn ()Z
 	METHOD method_936 getAmbientSoundInterval ()I
 	METHOD method_937 aiStep ()V
-	METHOD method_938 (Lnet/minecraft/class_57;)V
+	METHOD method_938 die (Lnet/minecraft/class_57;)V
 		ARG 1 killer
 	METHOD method_939 heal (I)V
 		ARG 1 amount
