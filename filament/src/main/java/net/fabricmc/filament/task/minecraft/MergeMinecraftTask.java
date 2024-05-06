@@ -2,6 +2,8 @@ package net.fabricmc.filament.task.minecraft;
 
 import java.io.IOException;
 
+import net.fabricmc.stitch.commands.CommandFixNesting;
+
 import org.gradle.api.file.RegularFileProperty;
 import org.gradle.api.tasks.InputFile;
 import org.gradle.api.tasks.TaskAction;
@@ -24,5 +26,7 @@ public abstract class MergeMinecraftTask extends FileOutputTask {
 				getOutput().getAsFile().get())) {
 			jarMerger.merge();
 		}
+
+		CommandFixNesting.run(getOutputFile());
 	}
 }

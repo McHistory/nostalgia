@@ -20,6 +20,10 @@ file('../gradle.properties').newInputStream().withCloseable {
 
 repositories {
 	maven {
+		name = 'Babric'
+		url = 'https://maven.glass-launcher.net/babric'
+	}
+	maven {
 		name "Fabric Repository"
 		url 'https://maven.fabricmc.net'
 	}
@@ -38,6 +42,7 @@ dependencies {
 	implementation "net.fabricmc:tiny-remapper:$properties.tiny_remapper_version"
 	implementation "net.fabricmc:mappingpoet:$properties.mappingpoet_version"
 	implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.4.2'
+	implementation 'babric:stitch:0.6.2-babric.1'
 	implementation 'me.alphamode.wisp:mapping-io:0.5.1'
 
 	// Contains a number of useful utilities we can re-use.
