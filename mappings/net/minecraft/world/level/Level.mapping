@@ -81,21 +81,17 @@ CLASS net/minecraft/class_18 net/minecraft/world/level/Level
 		ARG 4 maxX
 		ARG 5 maxY
 		ARG 6 maxZ
-		LOCAL 7 chunkX
-		LOCAL 8 chunkZ
 	METHOD method_156 canPlace (IIIIZI)Z
 		ARG 1 tileId
 		ARG 2 x
 		ARG 3 y
 		ARG 4 z
 		ARG 6 meta
-		LOCAL 8 tile
 	METHOD method_157 setTileEntity (IIILnet/minecraft/class_55;)V
 		ARG 1 x
 		ARG 2 y
 		ARG 3 z
 		ARG 4 tileEntity
-		LOCAL 5 chunk
 	METHOD method_158 getLightLevel (IIIZ)I
 		ARG 1 x
 		ARG 2 y
@@ -269,7 +265,6 @@ CLASS net/minecraft/class_18 net/minecraft/world/level/Level
 		ARG 2 y
 		ARG 3 z
 		ARG 4 meta
-		LOCAL 5 tile
 	METHOD method_216 tickBlock (IIIII)V
 		ARG 1 x
 		ARG 2 y
@@ -287,12 +282,7 @@ CLASS net/minecraft/class_18 net/minecraft/world/level/Level
 		ARG 2 y
 		ARG 3 z
 		ARG 4 meta
-		LOCAL 5 chunk
 	METHOD method_224 (IIIII)V
-		LOCAL 1 x
-		LOCAL 2 y
-		LOCAL 3 z
-		LOCAL 6 tile
 	METHOD method_228 getTopY (II)I
 		ARG 1 x
 		ARG 2 z
@@ -327,7 +317,6 @@ CLASS net/minecraft/class_18 net/minecraft/world/level/Level
 		ARG 2 y
 		ARG 3 z
 	METHOD method_242 tick ()V
-		LOCAL 1 newSkyDarken
 	METHOD method_243 tileChanged (III)V
 		ARG 1 x
 		ARG 2 y
@@ -339,8 +328,6 @@ CLASS net/minecraft/class_18 net/minecraft/world/level/Level
 		ARG 4 tile
 		ARG 5 delay
 	METHOD method_245 tickWeather ()V
-		LOCAL 1 thunderTime
-		LOCAL 2 rainTime
 	METHOD method_246 setTileDirty (III)V
 		ARG 1 x
 		ARG 2 y
@@ -351,7 +338,6 @@ CLASS net/minecraft/class_18 net/minecraft/world/level/Level
 		ARG 3 z
 		ARG 4 direction
 	METHOD method_248 ()V
-		LOCAL 2 player
 	METHOD method_249 isTopTile (III)Z
 		ARG 1 x
 		ARG 2 y
@@ -384,11 +370,6 @@ CLASS net/minecraft/class_18 net/minecraft/world/level/Level
 	METHOD method_258 getSpawnPos ()Lnet/minecraft/class_63;
 	METHOD method_259 getLevelSource ()Lnet/minecraft/class_51;
 	METHOD method_260 removeTileEntity (III)V
-		LOCAL 1 x
-		LOCAL 2 y
-		LOCAL 3 z
-		LOCAL 4 te
-		LOCAL 5 chunk
 	METHOD method_261 getLevelIo ()Lnet/minecraft/class_52;
 	METHOD method_262 getLevelData ()Lnet/minecraft/class_7;
 	METHOD method_263 hasDirectSignalTo (III)Z

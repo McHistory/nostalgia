@@ -1,7 +1,6 @@
 CLASS argo/saj/JsonListener
 	METHOD startField startField (Ljava/lang/String;)V
 		ARG 1 name
-		LOCAL 2 fieldBuilder
 	METHOD startDocument startDocument ()V
 	METHOD numberValue numberValue (Ljava/lang/String;)V
 		ARG 1 value
@@ -9,10 +8,8 @@ CLASS argo/saj/JsonListener
 	METHOD stringValue stringValue (Ljava/lang/String;)V
 		ARG 1 value
 	METHOD startArray startArray ()V
-		LOCAL 1 arrayBuilder
 	METHOD endArray endArray ()V
 	METHOD startObject startObject ()V
-		LOCAL 1 objectNodeBuilder
 	METHOD endObject endObject ()V
 	METHOD endField endField ()V
 	METHOD trueValue trueValue ()V

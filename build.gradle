@@ -9,7 +9,6 @@ buildscript {
 			url 'https://maven.fabricmc.net'
 		}
 		mavenCentral()
-		mavenLocal()
 	}
 	dependencies {
 		classpath "cuchaz:enigma-cli:${project.enigma_version}"
@@ -33,7 +32,7 @@ filament {
 
 def ENV = System.getenv()
 // Fetch build number from Github Actions
-def build_number = ENV.BUILD_NUMBER ?: "local43"
+def build_number = ENV.BUILD_NUMBER ?: "local"
 
 def nostalgiaVersion = "${minecraft_version}-babric+build.$build_number"
 version = nostalgiaVersion
@@ -59,7 +58,6 @@ repositories {
 		name "Mojang"
 		url 'https://libraries.minecraft.net/'
 	}
-	mavenLocal()
 }
 
 configurations {

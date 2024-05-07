@@ -161,26 +161,19 @@ CLASS net/minecraft/class_17 net/minecraft/world/level/tile/Tile
 		ARG 4 z
 		ARG 5 noteType
 		ARG 6 direction
-		LOCAL 16 piston
 	METHOD method_1564 (Lnet/minecraft/class_18;IIILnet/minecraft/class_26;Lnet/minecraft/class_26;)Lnet/minecraft/class_27;
 		ARG 1 level
-		LOCAL 2 x
-		LOCAL 3 y
-		LOCAL 4 z
-		LOCAL 7 meta
 	METHOD method_1565 getTickDelay ()I
 	METHOD method_1566 canPlace (Lnet/minecraft/class_18;III)Z
 		ARG 1 level
 		ARG 2 x
 		ARG 3 y
 		ARG 4 z
-		LOCAL 5 tile
 	METHOD method_1567 canSurvive (Lnet/minecraft/class_18;III)Z
 		ARG 1 level
 		ARG 2 x
 		ARG 3 y
 		ARG 4 z
-		LOCAL 5 tile
 	METHOD method_1568 hasSignal (Lnet/minecraft/class_14;IIII)Z
 		ARG 1 levelReader
 		ARG 2 x
@@ -194,7 +187,6 @@ CLASS net/minecraft/class_17 net/minecraft/world/level/tile/Tile
 		ARG 3 y
 		ARG 4 z
 		ARG 5 direction
-		LOCAL 6 meta
 	METHOD method_1572 handleEntityInside (Lnet/minecraft/class_18;IIILnet/minecraft/class_57;Lnet/minecraft/class_26;)V
 		ARG 1 level
 		ARG 2 x
@@ -205,7 +197,6 @@ CLASS net/minecraft/class_17 net/minecraft/world/level/tile/Tile
 		ARG 2 x
 		ARG 3 y
 		ARG 4 z
-		LOCAL 6 material
 	METHOD method_1574 getPistonPushReaction ()I
 	METHOD method_1575 getExplosionResistance (Lnet/minecraft/class_57;)F
 		ARG 1 entity
@@ -225,7 +216,6 @@ CLASS net/minecraft/class_17 net/minecraft/world/level/tile/Tile
 		ARG 3 y
 		ARG 4 z
 		ARG 5 item
-		LOCAL 13 itemEntity
 	METHOD method_1582 getDestroyProgress (Lnet/minecraft/class_54;)F
 		ARG 1 player
 	METHOD method_1583 setTranslationKey (Ljava/lang/String;)Lnet/minecraft/class_17;
@@ -264,8 +254,6 @@ CLASS net/minecraft/class_17 net/minecraft/world/level/tile/Tile
 		ARG 3 y
 		ARG 4 z
 		ARG 5 random
-		LOCAL 6 meta
-		LOCAL 7 turnOn
 	METHOD method_1603 getDropAmount (Ljava/util/Random;)I
 		ARG 1 random
 	METHOD method_1604 getBrightness (Lnet/minecraft/class_14;III)F
@@ -279,7 +267,6 @@ CLASS net/minecraft/class_17 net/minecraft/world/level/tile/Tile
 		ARG 3 y
 		ARG 4 z
 		ARG 5 facing
-		LOCAL 6 meta
 	METHOD method_1607 getTexture (I)I
 		ARG 1 side
 	METHOD method_1608 use (Lnet/minecraft/class_18;IIILnet/minecraft/class_54;)Z
@@ -288,15 +275,12 @@ CLASS net/minecraft/class_17 net/minecraft/world/level/tile/Tile
 		ARG 3 y
 		ARG 4 z
 		ARG 5 player
-		LOCAL 6 meta
 	METHOD method_1609 neighborChanged (Lnet/minecraft/class_18;IIII)V
 		ARG 1 level
 		ARG 2 x
 		ARG 3 y
 		ARG 4 z
 		ARG 5 tile
-		LOCAL 6 meta
-		LOCAL 7 orientation
 	METHOD method_1610 attack (Lnet/minecraft/class_18;IIILnet/minecraft/class_54;)V
 		ARG 1 level
 		ARG 2 x
@@ -314,13 +298,11 @@ CLASS net/minecraft/class_17 net/minecraft/world/level/tile/Tile
 		ARG 3 y
 		ARG 4 z
 		ARG 5 meta
-		LOCAL 6 tnt
 	METHOD method_1613 wasExploded (Lnet/minecraft/class_18;III)V
 		ARG 1 level
 		ARG 2 x
 		ARG 3 y
 		ARG 4 z
-		LOCAL 5 tnt
 	METHOD method_1614 setPlacedBy (Lnet/minecraft/class_18;IIILnet/minecraft/class_127;)V
 		ARG 1 level
 		ARG 2 x
@@ -333,27 +315,23 @@ CLASS net/minecraft/class_17 net/minecraft/world/level/tile/Tile
 		ARG 3 y
 		ARG 4 z
 		ARG 5 entity
-		LOCAL 6 meta
 	METHOD method_1616 updateShape (Lnet/minecraft/class_14;III)V
 		ARG 1 region
 		ARG 2 x
 		ARG 3 y
 		ARG 4 z
-		LOCAL 5 meta
 	METHOD method_1617 animateTick (Lnet/minecraft/class_18;IIILjava/util/Random;)V
 		ARG 1 level
 		ARG 2 x
 		ARG 3 y
 		ARG 4 z
 		ARG 5 random
-		LOCAL 6 meta
 	METHOD method_1618 skipRendering (Lnet/minecraft/class_14;IIII)Z
 		ARG 1 level
 		ARG 2 x
 		ARG 3 y
 		ARG 4 z
 		ARG 5 meta
-		LOCAL 6 tile
 	METHOD method_1619 getRenderLayer ()I
 	METHOD method_1620 isFullBlock ()Z
 	METHOD method_1621 getModelId ()I
@@ -363,25 +341,20 @@ CLASS net/minecraft/class_17 net/minecraft/world/level/tile/Tile
 		ARG 2 x
 		ARG 3 y
 		ARG 4 z
-		LOCAL 5 n
 	METHOD method_1625 dropResources (Lnet/minecraft/class_18;IIIIF)V
 		ARG 1 level
 		ARG 2 x
 		ARG 3 y
 		ARG 4 z
 		ARG 5 meta
-		LOCAL 9 toDrop
-		LOCAL 12 item
 	METHOD method_1626 (Lnet/minecraft/class_14;IIII)I
 		ARG 1 level
 		ARG 2 x
 		ARG 3 y
 		ARG 4 z
-		LOCAL 5 direction
 	METHOD method_1627 getTextureFromMeta (II)I
 		ARG 1 side
 		ARG 2 meta
-		LOCAL 3 direction
 	METHOD method_1628 playerDestroy (Lnet/minecraft/class_18;Lnet/minecraft/class_54;IIII)V
 		ARG 1 level
 		ARG 2 player
@@ -396,4 +369,3 @@ CLASS net/minecraft/class_17 net/minecraft/world/level/tile/Tile
 		ARG 2 x
 		ARG 3 y
 		ARG 4 z
-		LOCAL 5 meta
