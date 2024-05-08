@@ -12,6 +12,7 @@ CLASS net/minecraft/class_471 net/minecraft/client/LevelRenderer
 	FIELD field_1800 lastCameraX D
 	FIELD field_1801 lastCameraY D
 	FIELD field_1802 lastCameraZ D
+	FIELD field_1803 destroyProgress F
 	FIELD field_1805 level Lnet/minecraft/class_18;
 	FIELD field_1806 textureManager Lnet/minecraft/class_76;
 	FIELD field_1809 chunks [Lnet/minecraft/class_66;
@@ -44,9 +45,11 @@ CLASS net/minecraft/class_471 net/minecraft/client/LevelRenderer
 		ARG 1 aabb
 	METHOD method_1546 setLevel (Lnet/minecraft/class_18;)V
 		ARG 1 level
-	METHOD method_1547 (Lnet/minecraft/class_54;Lnet/minecraft/class_27;ILnet/minecraft/class_31;F)V
+	METHOD method_1547 renderDestroyAnimation (Lnet/minecraft/class_54;Lnet/minecraft/class_27;ILnet/minecraft/class_31;F)V
 		ARG 1 player
 		ARG 2 result
+		ARG 4 item
+		ARG 5 partialTick
 	METHOD method_1549 resortChunks (Lnet/minecraft/class_127;Z)Z
 	METHOD method_1550 cullChunks (Lnet/minecraft/class_68;F)V
 		ARG 1 culler
@@ -57,9 +60,11 @@ CLASS net/minecraft/class_471 net/minecraft/client/LevelRenderer
 		ARG 1 x
 		ARG 2 y
 		ARG 3 z
-	METHOD method_1554 (Lnet/minecraft/class_54;Lnet/minecraft/class_27;ILnet/minecraft/class_31;F)V
+	METHOD method_1554 renderHitOutline (Lnet/minecraft/class_54;Lnet/minecraft/class_27;ILnet/minecraft/class_31;F)V
 		ARG 1 player
 		ARG 2 result
+		ARG 4 item
+		ARG 5 partialTick
 	METHOD method_1555 getEntityStatistics ()Ljava/lang/String;
 	METHOD method_1556 renderFancyClouds (F)V
 		ARG 1 partialTick
