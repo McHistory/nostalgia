@@ -16,15 +16,33 @@ CLASS net/minecraft/class_166 net/minecraft/server/players/PlayerList
 	FIELD field_591 doWhiteList Z
 	METHOD <init> (Lnet/minecraft/server/MinecraftServer;)V
 		ARG 1 server
+	METHOD method_550 broadcastToAllInRange (DDDDILnet/minecraft/class_169;)V
+		ARG 1 x
+		ARG 3 y
+		ARG 5 z
+		ARG 7 range
+		ARG 9 dimension
+		ARG 10 packet
 	METHOD method_552 tileChanaged (IIII)V
 	METHOD method_553 setChanged (IIILnet/minecraft/class_55;)V
 		ARG 1 x
 		ARG 2 y
 		ARG 3 z
 		ARG 4 te
+	METHOD method_556 (Lnet/minecraft/class_69;Lnet/minecraft/class_73;)V
+		ARG 1 player
+		ARG 2 level
 	METHOD method_557 canPlayerLogin (Lnet/minecraft/class_10;Ljava/lang/String;)Lnet/minecraft/class_69;
 		ARG 1 listener
 		ARG 2 username
+	METHOD method_558 broadcastToAllInRange (Lnet/minecraft/class_54;DDDDILnet/minecraft/class_169;)V
+		ARG 1 player
+		ARG 2 x
+		ARG 4 y
+		ARG 6 z
+		ARG 8 range
+		ARG 10 dimension
+		ARG 11 packet
 	METHOD method_559 broadcastAll (Lnet/minecraft/class_169;)V
 		ARG 1 packet
 	METHOD method_560 broadcastAll (Lnet/minecraft/class_169;I)V
@@ -32,7 +50,7 @@ CLASS net/minecraft/class_166 net/minecraft/server/players/PlayerList
 		ARG 2 dimension
 	METHOD method_561 ban (Ljava/lang/String;)V
 		ARG 1 username
-	METHOD method_562 (Ljava/lang/String;Lnet/minecraft/class_169;)Z
+	METHOD method_562 broadcastTo (Ljava/lang/String;Lnet/minecraft/class_169;)Z
 		ARG 1 name
 		ARG 2 packet
 	METHOD method_563 sendMessage (Ljava/lang/String;Ljava/lang/String;)V
