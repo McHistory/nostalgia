@@ -1,4 +1,4 @@
-CLASS net/minecraft/class_42 net/minecraft/world/level/chunk/ChunkRegion
+CLASS net/minecraft/class_42 net/minecraft/world/level/chunk/Region
 	FIELD field_166 centerX I
 	FIELD field_167 centerZ I
 	FIELD field_168 chunks [[Lnet/minecraft/class_43;
@@ -19,11 +19,12 @@ CLASS net/minecraft/class_42 net/minecraft/world/level/chunk/ChunkRegion
 		ARG 5 maxX
 		ARG 6 maxY
 		ARG 7 maxZ
-	METHOD method_142 (IIIZ)I
+	METHOD method_142 getRawBrightness (IIIZ)I
 		ARG 1 x
 		ARG 2 y
 		ARG 3 z
-	METHOD method_143 (III)I
+		ARG 4 checkNeighbors
+	METHOD method_143 getRawBrightness (III)I
 		ARG 1 x
 		ARG 2 y
 		ARG 3 z

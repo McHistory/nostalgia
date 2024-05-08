@@ -1,0 +1,40 @@
+v2
+
+# Directions
+
+constant direction net/minecraft/util/Facing DOWN
+constant direction net/minecraft/util/Facing UP
+constant direction net/minecraft/util/Facing NORTH
+constant direction net/minecraft/util/Facing SOUTH
+constant direction net/minecraft/util/Facing WEST
+constant direction net/minecraft/util/Facing EAST
+
+target_method net/minecraft/world/level/tile/Tile canPlace (Lnet/minecraft/world/level/Level;IIII)Z
+	param 4 direction
+
+target_method net/minecraft/world/level/tile/Tile isSolid (Lnet/minecraft/world/level/LevelReader;IIII)Z
+	param 4 direction
+
+target_method net/minecraft/world/level/tile/Tile skipRendering (Lnet/minecraft/world/level/LevelReader;IIII)Z
+	param 4 direction
+
+target_method net/minecraft/world/level/tile/Tile getTexture (Lnet/minecraft/world/level/LevelReader;IIII)I
+	param 4 direction
+
+target_method net/minecraft/world/level/tile/Tile getTextureFromMeta (II)I
+	param 0 direction
+
+target_method net/minecraft/world/level/tile/Tile getTexture (I)I
+	param 0 direction
+
+target_method net/minecraft/world/level/tile/Tile setPlacedOnFace (Lnet/minecraft/world/level/Level;IIII)V
+	param 4 direction
+
+target_method net/minecraft/world/level/tile/Tile hasSignal (Lnet/minecraft/world/level/LevelReader;IIII)Z
+	param 4 direction
+
+target_method net/minecraft/world/level/tile/Tile hasDirectSignal (Lnet/minecraft/world/level/Level;IIII)Z
+	param 4 direction
+
+target_method net/minecraft/world/level/tile/Tile triggerEvent (Lnet/minecraft/world/level/Level;IIIII)V
+	param 5 direction

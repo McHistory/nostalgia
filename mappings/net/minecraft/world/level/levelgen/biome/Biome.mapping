@@ -1,9 +1,4 @@
 CLASS net/minecraft/class_153 net/minecraft/world/level/levelgen/biome/Biome
-	FIELD field_893 monsterSpawns Ljava/util/List;
-	FIELD field_894 creatureSpawns Ljava/util/List;
-	FIELD field_895 waterSpawns Ljava/util/List;
-	FIELD field_896 hasPrecipitation Z
-	FIELD field_887 SKY Lnet/minecraft/class_153;
 	FIELD field_875 RAINFOREST Lnet/minecraft/class_153;
 	FIELD field_876 SWAPLAND Lnet/minecraft/class_153;
 	FIELD field_877 SEASONAL_FOREST Lnet/minecraft/class_153;
@@ -16,15 +11,37 @@ CLASS net/minecraft/class_153 net/minecraft/world/level/levelgen/biome/Biome
 	FIELD field_884 ICE_DESERT Lnet/minecraft/class_153;
 	FIELD field_885 TUNDRA Lnet/minecraft/class_153;
 	FIELD field_886 HELL Lnet/minecraft/class_153;
+	FIELD field_887 SKY Lnet/minecraft/class_153;
 	FIELD field_888 name Ljava/lang/String;
+	FIELD field_889 leafColor I
 	FIELD field_890 topMaterial B
 	FIELD field_891 underMaterial B
+	FIELD field_892 color I
+	FIELD field_893 monsterSpawns Ljava/util/List;
+	FIELD field_894 creatureSpawns Ljava/util/List;
+	FIELD field_895 waterSpawns Ljava/util/List;
+	FIELD field_896 hasPrecipitation Z
+	FIELD field_897 tickRain Z
 	FIELD field_898 BIOMES [Lnet/minecraft/class_153;
-	METHOD method_793 hasPrecipitation ()Z
-	METHOD method_785 init ()V
-	METHOD method_796 getSkyColor (F)I
-	METHOD method_789 getSpawnList (Lnet/minecraft/class_238;)Ljava/util/List;
+	METHOD method_785 recalc ()V
+	METHOD method_786 getBiome (DD)Lnet/minecraft/class_153;
+		ARG 0 temp
+		ARG 2 downfall
+	METHOD method_787 getBiome (FF)Lnet/minecraft/class_153;
+		ARG 0 temp
+		ARG 1 downfall
+	METHOD method_788 setColor (I)Lnet/minecraft/class_153;
+		ARG 1 color
 	METHOD method_789 getMobs (Lnet/minecraft/class_238;)Ljava/util/List;
 		ARG 1 category
 	METHOD method_790 setName (Ljava/lang/String;)Lnet/minecraft/class_153;
 		ARG 1 name
+	METHOD method_791 setSnowCovered ()Lnet/minecraft/class_153;
+	METHOD method_792 setLeafColor (I)Lnet/minecraft/class_153;
+		ARG 1 leafColor
+	METHOD method_793 hasPrecipitation ()Z
+	METHOD method_795 setNoRain ()Lnet/minecraft/class_153;
+	METHOD method_796 getSkyColor (F)I
+		ARG 1 temp
+	METHOD method_797 getTreeFeature (Ljava/util/Random;)Lnet/minecraft/class_239;
+		ARG 1 random

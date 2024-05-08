@@ -32,6 +32,15 @@ CLASS net/minecraft/class_18 net/minecraft/world/level/Level
 	METHOD <init> (Lnet/minecraft/class_18;Lnet/minecraft/class_50;)V
 		ARG 1 level
 		ARG 2 dimension
+	METHOD <init> (Lnet/minecraft/class_52;Ljava/lang/String;J)V
+		ARG 1 levelIo
+		ARG 2 levelName
+		ARG 3 seed
+	METHOD <init> (Lnet/minecraft/class_52;Ljava/lang/String;JLnet/minecraft/class_50;)V
+		ARG 1 levelIo
+		ARG 2 levelName
+		ARG 3 seed
+		ARG 5 dimension
 	METHOD <init> (Lnet/minecraft/class_52;Ljava/lang/String;Lnet/minecraft/class_50;J)V
 		ARG 1 levelIo
 		ARG 2 name
@@ -86,7 +95,7 @@ CLASS net/minecraft/class_18 net/minecraft/world/level/Level
 		ARG 2 x
 		ARG 3 y
 		ARG 4 z
-		ARG 6 meta
+		ARG 6 face
 	METHOD method_157 setTileEntity (IIILnet/minecraft/class_55;)V
 		ARG 1 x
 		ARG 2 y
@@ -116,13 +125,13 @@ CLASS net/minecraft/class_18 net/minecraft/world/level/Level
 		ARG 2 x
 		ARG 3 y
 		ARG 4 z
-	METHOD method_165 updateLightLevel (Lnet/minecraft/class_56;IIII)V
+	METHOD method_165 setBrightness (Lnet/minecraft/class_56;IIII)V
 		ARG 1 layer
 		ARG 2 x
 		ARG 3 y
 		ARG 4 z
 		ARG 5 lightLevel
-	METHOD method_166 enqueueLightUpdate (Lnet/minecraft/class_56;IIIIII)V
+	METHOD method_166 updateLight (Lnet/minecraft/class_56;IIIIII)V
 		ARG 1 type
 		ARG 2 x0
 		ARG 3 y0
@@ -130,7 +139,7 @@ CLASS net/minecraft/class_18 net/minecraft/world/level/Level
 		ARG 5 x1
 		ARG 6 y1
 		ARG 7 z1
-	METHOD method_167 enqueueLightUpdate (Lnet/minecraft/class_56;IIIIIIZ)V
+	METHOD method_167 updateLight (Lnet/minecraft/class_56;IIIIIIZ)V
 		ARG 1 type
 		ARG 2 x0
 		ARG 3 y0
@@ -138,6 +147,8 @@ CLASS net/minecraft/class_18 net/minecraft/world/level/Level
 		ARG 5 x1
 		ARG 6 y1
 		ARG 7 z1
+	METHOD method_168 isUnobstructed (Lnet/minecraft/class_25;)Z
+		ARG 1 aabb
 	METHOD method_169 isInside (Lnet/minecraft/class_25;Lnet/minecraft/class_15;)Z
 		ARG 1 aabb
 		ARG 2 material
@@ -208,6 +219,7 @@ CLASS net/minecraft/class_18 net/minecraft/world/level/Level
 		ARG 2 target
 	METHOD method_194 tick (Z)Z
 	METHOD method_195 save (ZLnet/minecraft/class_62;)V
+		ARG 2 listener
 	METHOD method_197 createLevelSource ()Lnet/minecraft/class_51;
 	METHOD method_198 getTimeOfDay (F)F
 		ARG 1 partialTick
@@ -225,7 +237,7 @@ CLASS net/minecraft/class_18 net/minecraft/world/level/Level
 		ARG 3 z
 		ARG 4 id
 		ARG 5 meta
-	METHOD method_202 setBlocksDirty (IIIIII)V
+	METHOD method_202 setTilesDirty (IIIIII)V
 		ARG 1 minX
 		ARG 2 minY
 		ARG 3 minZ
@@ -265,7 +277,7 @@ CLASS net/minecraft/class_18 net/minecraft/world/level/Level
 		ARG 2 y
 		ARG 3 z
 		ARG 4 meta
-	METHOD method_216 tickBlock (IIIII)V
+	METHOD method_216 tickTile (IIIII)V
 		ARG 1 x
 		ARG 2 y
 		ARG 3 z
@@ -274,7 +286,7 @@ CLASS net/minecraft/class_18 net/minecraft/world/level/Level
 	METHOD method_220 isDay ()Z
 	METHOD method_221 getRainLevel (F)F
 		ARG 1 partialTick
-	METHOD method_222 getYHeight (II)I
+	METHOD method_222 getTopTileY (II)I
 		ARG 1 x
 		ARG 2 z
 	METHOD method_223 setMeta (IIII)Z
@@ -308,7 +320,7 @@ CLASS net/minecraft/class_18 net/minecraft/world/level/Level
 		ARG 2 y
 		ARG 3 z
 		ARG 4 tile
-	METHOD method_237 updateSkyBrightness ()V
+	METHOD method_237 updateSkyDarken ()V
 	METHOD method_238 hasChunk (II)Z
 		ARG 1 x
 		ARG 2 z
@@ -316,6 +328,10 @@ CLASS net/minecraft/class_18 net/minecraft/world/level/Level
 		ARG 1 x
 		ARG 2 y
 		ARG 3 z
+	METHOD method_240 lightColumnChanged (IIII)V
+		ARG 1 x
+		ARG 2 z
+		ARG 3 y
 	METHOD method_242 tick ()V
 	METHOD method_243 tileChanged (III)V
 		ARG 1 x
@@ -387,6 +403,7 @@ CLASS net/minecraft/class_18 net/minecraft/world/level/Level
 		ARG 3 z
 	METHOD method_269 isThundering ()Z
 	METHOD method_270 isRaining ()Z
+	METHOD method_271 saveLevel ()V
 	METHOD method_272 prepareWeather ()V
 	METHOD method_273 stopWeather ()V
 	METHOD method_274 save (I)Z

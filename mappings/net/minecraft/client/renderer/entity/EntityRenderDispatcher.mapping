@@ -4,8 +4,9 @@ CLASS net/minecraft/class_578 net/minecraft/client/renderer/entity/EntityRenderD
 	FIELD field_2491 yOff D
 	FIELD field_2492 zOff D
 	FIELD field_2493 textureManager Lnet/minecraft/class_76;
-	FIELD field_2494 levelRenderer Lnet/minecraft/class_556;
+	FIELD field_2494 itemInHandRenderer Lnet/minecraft/class_556;
 	FIELD field_2495 level Lnet/minecraft/class_18;
+	FIELD field_2496 cameraEntity Lnet/minecraft/class_127;
 	FIELD field_2497 playerRotY F
 	FIELD field_2498 playerRotX F
 	FIELD field_2499 options Lnet/minecraft/class_322;
@@ -14,15 +15,6 @@ CLASS net/minecraft/class_578 net/minecraft/client/renderer/entity/EntityRenderD
 	FIELD field_2502 cameraZ D
 	FIELD field_2503 renderers Ljava/util/Map;
 	FIELD field_2504 font Lnet/minecraft/class_34;
-	FIELD field_2496 cameraEntity Lnet/minecraft/class_127;
-	METHOD method_1917 prepare (Lnet/minecraft/class_18;Lnet/minecraft/class_76;Lnet/minecraft/class_34;Lnet/minecraft/class_127;Lnet/minecraft/class_322;F)V
-		ARG 1 level
-		ARG 2 textureManager
-		ARG 3 font
-		ARG 4 cameraEntity
-		ARG 5 options
-		ARG 6 partialTick
-	METHOD method_1914 getFontRenderer ()Lnet/minecraft/class_34;
 	METHOD method_1914 getFont ()Lnet/minecraft/class_34;
 	METHOD method_1915 distanceToSqr (DDD)D
 		ARG 1 x
@@ -30,6 +22,13 @@ CLASS net/minecraft/class_578 net/minecraft/client/renderer/entity/EntityRenderD
 		ARG 5 z
 	METHOD method_1916 setLevel (Lnet/minecraft/class_18;)V
 		ARG 1 level
+	METHOD method_1917 prepare (Lnet/minecraft/class_18;Lnet/minecraft/class_76;Lnet/minecraft/class_34;Lnet/minecraft/class_127;Lnet/minecraft/class_322;F)V
+		ARG 1 level
+		ARG 2 textureManager
+		ARG 3 font
+		ARG 4 cameraEntity
+		ARG 5 options
+		ARG 6 partialTick
 	METHOD method_1918 getEntityRenderer (Ljava/lang/Class;)Lnet/minecraft/class_579;
 		ARG 1 entityClass
 	METHOD method_1919 getEntityRenderer (Lnet/minecraft/class_57;)Lnet/minecraft/class_579;

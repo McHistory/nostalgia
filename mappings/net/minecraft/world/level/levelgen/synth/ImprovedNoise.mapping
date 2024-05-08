@@ -1,12 +1,21 @@
 CLASS net/minecraft/class_369 net/minecraft/world/level/levelgen/synth/ImprovedNoise
+	FIELD field_1407 p [I
 	FIELD field_1408 xo D
 	FIELD field_1409 yo D
 	FIELD field_1410 zo D
-	FIELD field_1407 p [I
 	METHOD <init> (Ljava/util/Random;)V
 		ARG 1 random
 	METHOD method_1199 getValue (DDD)D
 		ARG 1 x
 		ARG 3 y
 		ARG 5 z
-	METHOD method_1202 noise ([DDDDIIIDDDD)V
+	METHOD method_1200 grad2 (IDD)D
+	METHOD method_1201 grad (IDDD)D
+	METHOD method_1202 add ([DDDDIIIDDDD)V
+	METHOD method_1203 lerp (DDD)D
+		ARG 1 value
+		ARG 3 start
+		ARG 5 end
+	METHOD method_1204 getValue (DD)D
+		ARG 1 x
+		ARG 3 y

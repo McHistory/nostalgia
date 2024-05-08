@@ -33,6 +33,7 @@ CLASS net/minecraft/class_43 net/minecraft/world/level/chunk/Chunk
 		ARG 2 tiles
 		ARG 3 x
 		ARG 4 z
+	METHOD method_857 recalcBlockLights ()V
 	METHOD method_858 equals (II)Z
 		ARG 1 x
 		ARG 2 z
@@ -69,7 +70,10 @@ CLASS net/minecraft/class_43 net/minecraft/world/level/chunk/Chunk
 		ARG 4 z
 		ARG 5 level
 	METHOD method_866 getEntitiesOfClass (Ljava/lang/Class;Lnet/minecraft/class_25;Ljava/util/List;)V
-	METHOD method_867 placeTileEntity (Lnet/minecraft/class_55;)V
+		ARG 1 type
+		ARG 2 area
+		ARG 3 entities
+	METHOD method_867 addTileEntity (Lnet/minecraft/class_55;)V
 		ARG 1 tileEntity
 	METHOD method_868 addEntity (Lnet/minecraft/class_57;)V
 		ARG 1 entity
@@ -77,10 +81,14 @@ CLASS net/minecraft/class_43 net/minecraft/world/level/chunk/Chunk
 		ARG 1 entity
 		ARG 2 section
 	METHOD method_870 getEntities (Lnet/minecraft/class_57;Lnet/minecraft/class_25;Ljava/util/List;)V
-	METHOD method_871 isUnsaved (Z)Z
+		ARG 1 ignore
+		ARG 2 area
+		ARG 3 entities
+	METHOD method_871 shouldSave (Z)Z
+		ARG 1 force
 	METHOD method_872 setChunkData ([BIIIIIII)I
 		ARG 1 chunkData
-	METHOD method_874 getYHeight (II)I
+	METHOD method_874 getHeightmap (II)I
 		ARG 1 x
 		ARG 2 z
 	METHOD method_875 getMeta (III)I
@@ -113,9 +121,15 @@ CLASS net/minecraft/class_43 net/minecraft/world/level/chunk/Chunk
 		ARG 1 x
 		ARG 2 y
 		ARG 3 z
-	METHOD method_885 setChanged ()V
+	METHOD method_885 markUnsaved ()V
 	METHOD method_886 isEmptyChunk ()Z
-	METHOD method_889 updateSkylight (III)V
+	METHOD method_887 lightGaps (II)V
+		ARG 1 x
+		ARG 2 z
+	METHOD method_888 lightGap (III)V
+		ARG 1 x
+		ARG 2 z
+	METHOD method_889 recalcHeight (III)V
 		ARG 1 x
 		ARG 2 y
 		ARG 3 z

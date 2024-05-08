@@ -1,6 +1,35 @@
 CLASS net/minecraft/class_477 net/minecraft/client/IscoCanvas
+	FIELD field_1955 deltaX I
+	FIELD field_1956 detlaY I
+	FIELD field_1958 zoom I
 	FIELD field_1960 level Lnet/minecraft/class_18;
 	FIELD field_1961 gameDir Ljava/io/File;
+	FIELD field_1962 running Z
+	METHOD keyReleased keyReleased (Ljava/awt/event/KeyEvent;)V
+		ARG 1 event
+	METHOD keyTyped keyTyped (Ljava/awt/event/KeyEvent;)V
+		ARG 1 event
 	METHOD method_1633 getGameDir ()Ljava/io/File;
-	METHOD method_1638 getGameDir (Ljava/lang/String;)Ljava/io/File;
+	METHOD method_1634 setTimeOfDay (I)V
+		ARG 1 time
+	METHOD method_1638 getWorkingDir (Ljava/lang/String;)Ljava/io/File;
+		ARG 1 dir
+	METHOD method_1639 start ()V
+	METHOD method_1640 loadLevel (Ljava/lang/String;)V
+		ARG 1 levelName
+	METHOD method_1641 stop ()V
 	METHOD method_1643 getSystemOS ()Lnet/minecraft/class_343;
+	METHOD mouseClicked mouseClicked (Ljava/awt/event/MouseEvent;)V
+		ARG 1 event
+	METHOD mouseDragged mouseDragged (Ljava/awt/event/MouseEvent;)V
+		ARG 1 event
+	METHOD mouseEntered mouseEntered (Ljava/awt/event/MouseEvent;)V
+		ARG 1 event
+	METHOD mouseExited mouseExited (Ljava/awt/event/MouseEvent;)V
+		ARG 1 event
+	METHOD mouseMoved mouseMoved (Ljava/awt/event/MouseEvent;)V
+		ARG 1 event
+	METHOD mousePressed mousePressed (Ljava/awt/event/MouseEvent;)V
+		ARG 1 event
+	METHOD mouseReleased mouseReleased (Ljava/awt/event/MouseEvent;)V
+		ARG 1 event
