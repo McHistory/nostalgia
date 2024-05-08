@@ -3,20 +3,20 @@ on: [push]
 concurrency: ci-${{ github.ref }}
 jobs:
   publish:
-    if: ${{ github.repository_owner == 'FabricMC' }}
+    if: ${{ github.repository_owner == 'McHistory' }}
     runs-on: ubuntu-22.04
     container:
-      image: eclipse-temurin:18-jdk
+      image: eclipse-temurin:21-jdk
       options: --user root
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       # Generate the build number based on tags to allow per branch build numbers, not something github provides by default.
       - name: Generate build number
         id: buildnumber
-        uses: einaregilsson/build-number@v3
+        uses: onyxmueller/build-tag-number@v1
         with:
           token: ${{ secrets.github_token }}
-          prefix: ${{ github.ref }}
+          prefix: "build/${{ github.ref }}"
 
       - run: ./gradlew build javadocJar checkVersion publish --stacktrace
         env:
