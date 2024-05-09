@@ -4,15 +4,44 @@ CLASS net/minecraft/class_108 net/minecraft/world/level/pathfinder/PathFinder
 	FIELD field_336 neighbors [Lnet/minecraft/class_29;
 	METHOD <init> (Lnet/minecraft/class_14;)V
 		ARG 1 level
+	METHOD method_400 getNode (III)Lnet/minecraft/class_29;
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
 	METHOD method_401 reconstructPath (Lnet/minecraft/class_29;Lnet/minecraft/class_29;)Lnet/minecraft/class_61;
 	METHOD method_402 findPath (Lnet/minecraft/class_57;DDDF)Lnet/minecraft/class_61;
 		ARG 1 entity
+		ARG 2 x
+		ARG 4 y
+		ARG 6 z
+		ARG 8 distance
 	METHOD method_403 findPath (Lnet/minecraft/class_57;IIIF)Lnet/minecraft/class_61;
 		ARG 1 entity
 		ARG 2 targetX
 		ARG 3 targetY
 		ARG 4 targetZ
+		ARG 5 distance
+	METHOD method_404 isFree (Lnet/minecraft/class_57;IIILnet/minecraft/class_29;)I
+		ARG 1 entity
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+	METHOD method_405 getNode (Lnet/minecraft/class_57;IIILnet/minecraft/class_29;I)Lnet/minecraft/class_29;
+		ARG 1 entity
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
 	METHOD method_406 findPath (Lnet/minecraft/class_57;Lnet/minecraft/class_29;Lnet/minecraft/class_29;Lnet/minecraft/class_29;F)Lnet/minecraft/class_61;
+		ARG 1 entity
+		ARG 2 start
+		ARG 3 end
+		ARG 5 distance
 	METHOD method_407 findPath (Lnet/minecraft/class_57;Lnet/minecraft/class_57;F)Lnet/minecraft/class_61;
 		ARG 1 entity
 		ARG 2 target
+		ARG 3 distance
+	METHOD method_408 getNeighbors (Lnet/minecraft/class_57;Lnet/minecraft/class_29;Lnet/minecraft/class_29;Lnet/minecraft/class_29;F)I
+		ARG 1 entity
+		ARG 2 start
+		ARG 4 end
+		ARG 5 distance

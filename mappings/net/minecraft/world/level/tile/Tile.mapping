@@ -103,6 +103,7 @@ CLASS net/minecraft/class_17 net/minecraft/world/level/tile/Tile
 	FIELD field_1924 maxY D
 	FIELD field_1925 maxZ D
 	FIELD field_1926 sound Lnet/minecraft/class_475;
+	FIELD field_1927 gravity F
 	FIELD field_1928 DEFAULT_SOUND Lnet/minecraft/class_475;
 	FIELD field_1929 WOOD_SOUND Lnet/minecraft/class_475;
 	FIELD field_1930 GRAVEL_SOUND Lnet/minecraft/class_475;
@@ -114,10 +115,11 @@ CLASS net/minecraft/class_17 net/minecraft/world/level/tile/Tile
 	FIELD field_1936 SAND_SOUND Lnet/minecraft/class_475;
 	FIELD field_1937 tiles [Lnet/minecraft/class_17;
 	FIELD field_1938 TICKS_RANDOMLY [Z
-	FIELD field_1939 REPLACEABLES [Z
-	FIELD field_1940 tileHasTileEntity [Z
-	FIELD field_1941 OPACITIES [I
-	FIELD field_1943 LIGHT_TILES [I
+	FIELD field_1939 solid [Z
+	FIELD field_1940 isEntityTile [Z
+	FIELD field_1941 lightBlock [I
+	FIELD field_1942 translucent [Z
+	FIELD field_1943 lightEmission [I
 	FIELD field_1945 STONE Lnet/minecraft/class_17;
 	FIELD field_1946 GRASS Lnet/minecraft/class_476;
 	FIELD field_1947 DIRT Lnet/minecraft/class_17;
@@ -196,6 +198,7 @@ CLASS net/minecraft/class_17 net/minecraft/world/level/tile/Tile
 		ARG 2 x
 		ARG 3 y
 		ARG 4 z
+		ARG 5 entity
 	METHOD method_1573 isSolid (Lnet/minecraft/class_14;IIII)Z
 		ARG 1 level
 		ARG 2 x
@@ -338,8 +341,8 @@ CLASS net/minecraft/class_17 net/minecraft/world/level/tile/Tile
 		ARG 4 z
 		ARG 5 direction
 	METHOD method_1619 getRenderLayer ()I
-	METHOD method_1620 isFullBlock ()Z
-	METHOD method_1621 getModelId ()I
+	METHOD method_1620 isCubeShaped ()Z
+	METHOD method_1621 getRenderShape ()I
 	METHOD method_1622 getTileAABB (Lnet/minecraft/class_18;III)Lnet/minecraft/class_25;
 		ARG 1 level
 		ARG 2 x

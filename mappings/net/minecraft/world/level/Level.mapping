@@ -1,9 +1,11 @@
 CLASS net/minecraft/class_18 net/minecraft/world/level/Level
 	FIELD field_180 isClientSide Z
 	FIELD field_181 lightingUpdates Ljava/util/List;
+	FIELD field_182 entitiesToUnload Ljava/util/List;
 	FIELD field_183 tickNextTickList Ljava/util/TreeSet;
 	FIELD field_184 tickNextTickSet Ljava/util/Set;
 	FIELD field_185 pendingTileEntities Ljava/util/List;
+	FIELD field_186 cloudColor J
 	FIELD field_188 allPlayersSleeping Z
 	FIELD field_190 updatingTileEntities Z
 	FIELD field_197 tickFluids Z
@@ -12,6 +14,7 @@ CLASS net/minecraft/class_18 net/minecraft/world/level/Level
 	FIELD field_200 players Ljava/util/List;
 	FIELD field_201 globalEntities Ljava/util/List;
 	FIELD field_202 skyDarken I
+	FIELD field_203 randValue I
 	FIELD field_204 addend I
 	FIELD field_205 oRainLevel F
 	FIELD field_206 rainLevel F
@@ -67,6 +70,8 @@ CLASS net/minecraft/class_18 net/minecraft/world/level/Level
 		ARG 3 y
 		ARG 5 z
 		ARG 7 soundId
+		ARG 8 volume
+		ARG 9 pitch
 	METHOD method_151 getSkyDarken (F)I
 		ARG 1 partialTick
 	METHOD method_152 getHighestTile (II)I
@@ -139,7 +144,7 @@ CLASS net/minecraft/class_18 net/minecraft/world/level/Level
 		ARG 5 x1
 		ARG 6 y1
 		ARG 7 z1
-	METHOD method_167 updateLight (Lnet/minecraft/class_56;IIIIIIZ)V
+	METHOD method_167 runLightUpdates (Lnet/minecraft/class_56;IIIIIIZ)V
 		ARG 1 type
 		ARG 2 x0
 		ARG 3 y0
@@ -149,9 +154,13 @@ CLASS net/minecraft/class_18 net/minecraft/world/level/Level
 		ARG 7 z1
 	METHOD method_168 isUnobstructed (Lnet/minecraft/class_25;)Z
 		ARG 1 aabb
-	METHOD method_169 isInside (Lnet/minecraft/class_25;Lnet/minecraft/class_15;)Z
+	METHOD method_169 containsMaterial (Lnet/minecraft/class_25;Lnet/minecraft/class_15;)Z
 		ARG 1 aabb
 		ARG 2 material
+	METHOD method_170 checkAndHandleWater (Lnet/minecraft/class_25;Lnet/minecraft/class_15;Lnet/minecraft/class_57;)Z
+		ARG 1 aabb
+		ARG 2 material
+		ARG 3 entity
 	METHOD method_171 mayInteract (Lnet/minecraft/class_54;III)Z
 		ARG 1 player
 		ARG 2 x
@@ -182,6 +191,17 @@ CLASS net/minecraft/class_18 net/minecraft/world/level/Level
 		ARG 1 name
 	METHOD method_178 addParticle (Ljava/lang/String;DDDDDD)V
 		ARG 1 particleId
+		ARG 2 x
+		ARG 4 y
+		ARG 6 z
+		ARG 8 xd
+		ARG 10 yd
+		ARG 12 zd
+	METHOD method_179 playMusic (Ljava/lang/String;III)V
+		ARG 1 music
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
 	METHOD method_180 setSavedData (Ljava/lang/String;Lnet/minecraft/class_58;)V
 		ARG 1 id
 		ARG 2 data
@@ -193,6 +213,7 @@ CLASS net/minecraft/class_18 net/minecraft/world/level/Level
 		ARG 1 entity
 		ARG 2 event
 	METHOD method_186 getNearestPlayer (Lnet/minecraft/class_57;D)Lnet/minecraft/class_54;
+		ARG 1 entity
 		ARG 2 range
 	METHOD method_187 explode (Lnet/minecraft/class_57;DDDF)Lnet/minecraft/class_60;
 		ARG 1 entity
@@ -207,6 +228,12 @@ CLASS net/minecraft/class_18 net/minecraft/world/level/Level
 		ARG 6 z
 		ARG 8 radius
 		ARG 9 fire
+	METHOD method_189 findPath (Lnet/minecraft/class_57;IIIF)Lnet/minecraft/class_61;
+		ARG 1 entity
+		ARG 2 targetX
+		ARG 3 targetY
+		ARG 4 targetZ
+		ARG 5 distance
 	METHOD method_190 getEntityCollisions (Lnet/minecraft/class_57;Lnet/minecraft/class_25;)Ljava/util/List;
 		ARG 1 entity
 		ARG 2 area
@@ -214,9 +241,14 @@ CLASS net/minecraft/class_18 net/minecraft/world/level/Level
 		ARG 1 entity
 		ARG 2 soundId
 		ARG 3 volume
-	METHOD method_192 createPath (Lnet/minecraft/class_57;Lnet/minecraft/class_57;F)Lnet/minecraft/class_61;
+		ARG 4 pitch
+	METHOD method_192 findPath (Lnet/minecraft/class_57;Lnet/minecraft/class_57;F)Lnet/minecraft/class_61;
 		ARG 1 entity
 		ARG 2 target
+		ARG 3 distance
+	METHOD method_193 (Lnet/minecraft/class_57;Z)V
+		ARG 1 entity
+		ARG 2 updatePassenger
 	METHOD method_194 tick (Z)Z
 	METHOD method_195 save (ZLnet/minecraft/class_62;)V
 		ARG 2 listener
@@ -257,6 +289,8 @@ CLASS net/minecraft/class_18 net/minecraft/world/level/Level
 		ARG 3 y
 		ARG 4 z
 		ARG 5 level
+	METHOD method_206 containsAnyTiles (Lnet/minecraft/class_25;)Z
+		ARG 1 area
 	METHOD method_207 isTouching (Lnet/minecraft/class_25;Lnet/minecraft/class_15;)Z
 		ARG 1 aabb
 		ARG 2 material
@@ -272,7 +306,7 @@ CLASS net/minecraft/class_18 net/minecraft/world/level/Level
 	METHOD method_214 getChunk (II)Lnet/minecraft/class_43;
 		ARG 1 x
 		ARG 2 z
-	METHOD method_215 setMetaWithUpdate (IIII)V
+	METHOD method_215 setData (IIII)V
 		ARG 1 x
 		ARG 2 y
 		ARG 3 z
@@ -283,13 +317,17 @@ CLASS net/minecraft/class_18 net/minecraft/world/level/Level
 		ARG 3 z
 		ARG 4 tile
 		ARG 5 delay
+	METHOD method_218 containsAnyLiquid (Lnet/minecraft/class_25;)Z
+		ARG 1 area
+	METHOD method_219 trackEntity (Lnet/minecraft/class_57;)V
+		ARG 1 entity
 	METHOD method_220 isDay ()Z
 	METHOD method_221 getRainLevel (F)F
 		ARG 1 partialTick
 	METHOD method_222 getTopTileY (II)I
 		ARG 1 x
 		ARG 2 z
-	METHOD method_223 setMeta (IIII)Z
+	METHOD method_223 setDataNoUpdate (IIII)Z
 		ARG 1 x
 		ARG 2 y
 		ARG 3 z
@@ -300,6 +338,10 @@ CLASS net/minecraft/class_18 net/minecraft/world/level/Level
 		ARG 3 z
 		ARG 4 b0
 		ARG 5 b1
+	METHOD method_225 containsFireTile (Lnet/minecraft/class_25;)Z
+		ARG 1 area
+	METHOD method_226 untrackEntity (Lnet/minecraft/class_57;)V
+		ARG 1 entity
 	METHOD method_228 getTopY (II)I
 		ARG 1 x
 		ARG 2 z
@@ -307,7 +349,7 @@ CLASS net/minecraft/class_18 net/minecraft/world/level/Level
 		ARG 1 x
 		ARG 2 y
 		ARG 3 z
-		ARG 4 blockId
+		ARG 4 tile
 	METHOD method_230 levelEvent (IIIII)V
 		ARG 1 event
 		ARG 2 x
@@ -316,6 +358,9 @@ CLASS net/minecraft/class_18 net/minecraft/world/level/Level
 		ARG 5 data
 	METHOD method_231 removeEntity (Lnet/minecraft/class_57;)V
 		ARG 1 entity
+	METHOD method_233 getTopSolidBlock (II)I
+		ARG 1 x
+		ARG 2 z
 	METHOD method_234 isAir (III)Z
 		ARG 1 x
 		ARG 2 y
@@ -337,6 +382,8 @@ CLASS net/minecraft/class_18 net/minecraft/world/level/Level
 		ARG 1 x
 		ARG 2 z
 		ARG 3 y
+	METHOD method_241 (Lnet/minecraft/class_57;)V
+		ARG 1 entity
 	METHOD method_242 tick ()V
 	METHOD method_243 tileChanged (III)V
 		ARG 1 x
