@@ -7,7 +7,7 @@ To see the current version being targeted, check the branch name!
 
 ## Build Setup
 ```properties
-# https://maven.wispforest.io/io/wispforest/owo-lib/
+# https://maven.wispforest.io/me/alphamode/nostalgia/
 nostalgia_mappings=...
 ```
 
