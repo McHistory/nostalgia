@@ -5,6 +5,24 @@ everyone mod Minecraft freely and openly, while also being able to innovate and 
 
 To see the current version being targeted, check the branch name!
 
+## Build Setup
+```properties
+# https://maven.wispforest.io/io/wispforest/owo-lib/
+nostalgia_mappings=...
+```
+
+```groovy
+repositories {
+    maven { url 'https://maven.wispforest.io' }
+}
+
+<...>
+
+dependencies {
+    mappings "me.alphamode:nostalgia:${project.nostalgia_mappings}:v2"
+}
+```
+
 ## Usage
 To use nostalgia-deobfuscated Minecraft for Minecraft modding or as a dependency in a Java project, you can use [loom](https://github.com/fabricmc/fabric-loom) Gradle plugin. See [fabric wiki tutorial](https://fabricmc.net/wiki/tutorial:setup) for more information.
 
