@@ -2,12 +2,11 @@ package net.fabricmc.filament.task.minecraft;
 
 import java.io.IOException;
 
-import net.fabricmc.stitch.commands.CommandFixNesting;
-
 import org.gradle.api.file.RegularFileProperty;
 import org.gradle.api.tasks.InputFile;
 import org.gradle.api.tasks.TaskAction;
 
+import net.fabricmc.stitch.commands.CommandFixNesting;
 import net.fabricmc.filament.task.base.FileOutputTask;
 import net.fabricmc.loom.configuration.providers.minecraft.MinecraftJarMerger;
 
