@@ -1,0 +1,46 @@
+CLASS net/minecraft/class_198 net/minecraft/world/level/saveddata/MapItemSavedData
+	FIELD field_720 xCenter I
+	FIELD field_721 zCenter I
+	FIELD field_722 dimension B
+	FIELD field_723 scale B
+	FIELD field_724 colors [B
+	FIELD field_726 carriedBy Ljava/util/List;
+	FIELD field_727 icons Ljava/util/List;
+	FIELD field_728 carriedByPlayers Ljava/util/Map;
+	METHOD method_666 markDirty (III)V
+	METHOD method_667 tickCarriedBy (Lnet/minecraft/class_54;Lnet/minecraft/class_31;)V
+		ARG 1 player
+		ARG 2 item
+	METHOD method_668 getColors (Lnet/minecraft/class_31;Lnet/minecraft/class_18;Lnet/minecraft/class_54;)[B
+		ARG 1 item
+		ARG 2 level
+		ARG 3 player
+	METHOD method_669 applyToMap ([B)V
+		ARG 1 colors
+	CLASS class_199 MapDecoration
+		FIELD field_729 image B
+		FIELD field_730 x B
+		FIELD field_731 y B
+		FIELD field_732 rot B
+		FIELD field_733 data Lnet/minecraft/class_198;
+		METHOD <init> (Lnet/minecraft/class_198;BBBB)V
+			ARG 2 image
+			ARG 3 x
+			ARG 4 y
+			ARG 5 rot
+		METHOD <init> (Lnet/minecraft/class_745;BBBB)V
+			ARG 1 data
+	CLASS class_200 HoldingPlayer
+		FIELD field_734 player Lnet/minecraft/class_54;
+		FIELD field_735 dirtyX [I
+		FIELD field_736 dirtyY [I
+		FIELD field_737 parent Lnet/minecraft/class_198;
+		FIELD field_738 tick I
+		FIELD field_739 step I
+		METHOD <init> (Lnet/minecraft/class_198;Lnet/minecraft/class_54;)V
+			ARG 2 player
+		METHOD <init> (Lnet/minecraft/class_745;Lnet/minecraft/class_480;)V
+			ARG 1 parent
+			ARG 2 player
+		METHOD method_670 getColors (Lnet/minecraft/class_31;)[B
+			ARG 1 item
