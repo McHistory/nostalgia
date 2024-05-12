@@ -34,7 +34,7 @@ def ENV = System.getenv()
 // Fetch build number from Github Actions
 def build_number = ENV.BUILD_NUMBER ?: "local"
 
-def nostalgiaVersion = "${minecraft_version}-babric+build.$build_number"
+def nostalgiaVersion = "${minecraft_version}+build.$build_number"
 version = nostalgiaVersion
 
 if (ENV.BRANCH_NAME) {
@@ -625,12 +625,12 @@ publishing {
 // A task to ensure that the version being released has not already been released.
 tasks.register('checkVersion') {
 	doFirst {
-//		def xml = new URL("https://maven.wispforest.io/me/alphamode/nostalgia/maven-metadata.xml").text
-//		def metadata = new XmlSlurper().parseText(xml)
-//		def versions = metadata.versioning.versions.version*.text();
-//		if (versions.contains(version)) { The metadaata litterally doesn't exist because this is the first release
-//			throw new RuntimeException("${version} has already been released!")
-//		}
+		def xml = new URL("https://maven.wispforest.io/me/alphamode/nostalgia/maven-metadata.xml").text
+		def metadata = new XmlSlurper().parseText(xml)
+		def versions = metadata.versioning.versions.version*.text();
+		if (versions.contains(version)) {
+			throw new RuntimeException("${version} has already been released!")
+		}
 	}
 }
 
