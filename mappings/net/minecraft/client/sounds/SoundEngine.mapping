@@ -5,12 +5,16 @@ CLASS net/minecraft/class_617 net/minecraft/client/sounds/SoundEngine
 	FIELD field_2670 music Lnet/minecraft/class_266;
 	FIELD field_2672 options Lnet/minecraft/class_322;
 	FIELD field_2674 random Ljava/util/Random;
+	FIELD field_2675 rainTime I
 	METHOD method_2008 setChanged ()V
 	METHOD method_2009 playSound (Ljava/lang/String;FF)V
 		ARG 1 sound
 	METHOD method_2011 addSoundResource (Ljava/lang/String;Ljava/io/File;)V
 	METHOD method_2012 init (Lnet/minecraft/class_322;)V
 		ARG 1 options
+	METHOD method_2013 updateSource (Lnet/minecraft/class_127;F)V
+		ARG 1 camera
+		ARG 2 partialTick
 	METHOD method_2014 destroy ()V
 	METHOD method_2015 play (Ljava/lang/String;FFFFF)V
 		ARG 1 sound
@@ -20,5 +24,6 @@ CLASS net/minecraft/class_617 net/minecraft/client/sounds/SoundEngine
 		ARG 5 volume
 		ARG 6 pitch
 	METHOD method_2016 addStreamingResource (Ljava/lang/String;Ljava/io/File;)V
+	METHOD method_2017 tick ()V
 	METHOD method_2018 addMusicResource (Ljava/lang/String;Ljava/io/File;)V
 	METHOD method_2019 save ()V
