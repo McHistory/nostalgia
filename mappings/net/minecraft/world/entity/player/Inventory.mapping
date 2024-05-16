@@ -20,7 +20,9 @@ CLASS net/minecraft/class_136 net/minecraft/world/entity/player/Inventory
 	METHOD method_674 getDestroySpeed (Lnet/minecraft/class_17;)F
 		ARG 1 tile
 	METHOD method_675 getSelected ()Lnet/minecraft/class_31;
-	METHOD method_676 hasItem (I)Z
+	METHOD method_676 shoot (I)Z
+		COMMENT Decrements the the item and removes its when its count reaches 0.
+		COMMENT @return Returns true if the inventory contains the item
 		ARG 1 item
 	METHOD method_677 setCarried (Lnet/minecraft/class_31;)V
 		ARG 1 item
