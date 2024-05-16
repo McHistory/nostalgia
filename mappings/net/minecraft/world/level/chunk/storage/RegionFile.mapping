@@ -1,13 +1,4 @@
 CLASS net/minecraft/class_353 net/minecraft/world/level/chunk/storage/RegionFile
-	CLASS class_354 ChunkBuffer
-		FIELD field_1323 region Lnet/minecraft/class_353;
-		FIELD field_1324 x I
-		FIELD field_1325 z I
-		METHOD <init> (Lnet/minecraft/class_589;II)V
-			ARG 1 region
-			ARG 2 x
-			ARG 3 z
-		METHOD close close ()V
 	FIELD field_1315 emptySector [B
 	FIELD field_1316 fileName Ljava/io/File;
 	FIELD field_1317 file Ljava/io/RandomAccessFile;
@@ -71,3 +62,8 @@ CLASS net/minecraft/class_353 net/minecraft/world/level/chunk/storage/RegionFile
 	METHOD method_1173 getOffset (II)I
 		ARG 1 x
 		ARG 2 z
+	CLASS class_354 ChunkBuffer
+		FIELD field_1323 region Lnet/minecraft/class_353;
+		FIELD field_1324 x I
+		FIELD field_1325 z I
+		METHOD close close ()V
