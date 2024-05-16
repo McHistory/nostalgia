@@ -1,0 +1,24 @@
+v2
+
+# Nbt tags
+
+constant nbt net/minecraft/nbt/Tags TAG_END
+constant nbt net/minecraft/nbt/Tags TAG_BYTE
+constant nbt net/minecraft/nbt/Tags TAG_SHORT
+constant nbt net/minecraft/nbt/Tags TAG_INT
+constant nbt net/minecraft/nbt/Tags TAG_LONG
+constant nbt net/minecraft/nbt/Tags TAG_FLOAT
+constant nbt net/minecraft/nbt/Tags TAG_DOUBLE
+constant nbt net/minecraft/nbt/Tags TAG_BYTE_ARRAY
+constant nbt net/minecraft/nbt/Tags TAG_STRING
+constant nbt net/minecraft/nbt/Tags TAG_LIST
+constant nbt net/minecraft/nbt/Tags TAG_COMPOUND
+
+target_method net/minecraft/nbt/Tag getId ()B
+	return nbt
+
+target_method net/minecraft/nbt/Tag fromId (B)Lnet/minecraft/nbt/Tag;
+	param 0 nbt
+
+target_method net/minecraft/nbt/Tag getTypeFromId (B)Ljava/lang/String;
+	param 0 nbt
