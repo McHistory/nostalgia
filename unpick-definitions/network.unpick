@@ -1,10 +1,22 @@
 v2
 
+# Player Animate
+
+constant animate net/minecraft/network/protocol/game/AnimateType SWING
+constant animate net/minecraft/network/protocol/game/AnimateType ANIMATE_HURT
+constant animate net/minecraft/network/protocol/game/AnimateType STOP_SLEEP
+constant animate net/minecraft/network/protocol/game/AnimateType UNUSED
+
 # Game Events
 
 constant game_event net/minecraft/network/protocol/game/GameEventType NO_RESPAWN_TILE_AVAILABLE
 constant game_event net/minecraft/network/protocol/game/GameEventType START_RAINING
 constant game_event net/minecraft/network/protocol/game/GameEventType STOP_RAINING
+
+# Player Interact
+
+constant interact net/minecraft/network/protocol/game/InteractType INTERACT_ON
+constant interact net/minecraft/network/protocol/game/InteractType ATTACK
 
 # Open Screen
 
@@ -13,8 +25,14 @@ constant open_screen net/minecraft/network/protocol/game/OpenScreenType CRAFTING
 constant open_screen net/minecraft/network/protocol/game/OpenScreenType FURNACE
 constant open_screen net/minecraft/network/protocol/game/OpenScreenType DISPENSER
 
+target_method net/minecraft/network/packets/AnimatePacket <init> (Lnet/minecraft/world/entity/Entity;I)V
+	param 1 animate
+
 target_method net/minecraft/network/packets/GameEventPacket <init> (I)V
 	param 0 game_event
+
+target_method net/minecraft/network/packets/InteractPacket <init> (III)V
+	param 2 interact
 
 target_method net/minecraft/network/packets/OpenScreenPacket <init> (IILjava/lang/String;I)V
 	param 1 open_screen
