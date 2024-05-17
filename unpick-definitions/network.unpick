@@ -1,0 +1,20 @@
+v2
+
+# Game Events
+
+constant game_event net/minecraft/network/protocol/game/GameEventType NO_RESPAWN_TILE_AVAILABLE
+constant game_event net/minecraft/network/protocol/game/GameEventType START_RAINING
+constant game_event net/minecraft/network/protocol/game/GameEventType STOP_RAINING
+
+# Open Screen
+
+constant open_screen net/minecraft/network/protocol/game/OpenScreenType CONTAINER
+constant open_screen net/minecraft/network/protocol/game/OpenScreenType CRAFTING
+constant open_screen net/minecraft/network/protocol/game/OpenScreenType FURNACE
+constant open_screen net/minecraft/network/protocol/game/OpenScreenType DISPENSER
+
+target_method net/minecraft/network/packets/GameEventPacket <init> (I)V
+	param 0 game_event
+
+target_method net/minecraft/network/packets/OpenScreenPacket <init> (IILjava/lang/String;I)V
+	param 1 open_screen
