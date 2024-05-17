@@ -2,9 +2,13 @@ CLASS net/minecraft/class_73 net/minecraft/server/level/ServerLevel
 	FIELD field_273 serverCache Lnet/minecraft/class_79;
 	FIELD field_275 noSave Z
 	FIELD field_276 server Lnet/minecraft/server/MinecraftServer;
+	FIELD field_277 entitiesById Lnet/minecraft/class_80;
 	METHOD <init> (Lnet/minecraft/server/MinecraftServer;Lnet/minecraft/class_52;Ljava/lang/String;IJ)V
 		ARG 1 server
 		ARG 2 levelIo
 		ARG 3 name
 		ARG 4 dimension
 		ARG 5 seed
+	METHOD method_328 getEntity (I)Lnet/minecraft/class_57;
+		ARG 1 id
+	METHOD method_331 clear ()V
