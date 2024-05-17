@@ -1,0 +1,8 @@
+v2
+
+constant game_event net/minecraft/network/protocol/game/GameEventType NO_RESPAWN_TILE_AVAILABLE
+constant game_event net/minecraft/network/protocol/game/GameEventType START_RAINING
+constant game_event net/minecraft/network/protocol/game/GameEventType STOP_RAINING
+
+target_method net/minecraft/network/packets/GameEventPacket <init> (I)V
+	param 0 game_event
