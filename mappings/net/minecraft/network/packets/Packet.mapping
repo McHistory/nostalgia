@@ -1,12 +1,16 @@
 CLASS net/minecraft/class_169 net/minecraft/network/packets/Packet
 	FIELD field_899 idToPacket Ljava/util/Map;
 	FIELD field_900 packetToId Ljava/util/Map;
+	FIELD field_901 clientboundPackets Ljava/util/Set;
+	FIELD field_902 serverboundPackets Ljava/util/Set;
+	FIELD field_903 incoming Ljava/util/HashMap;
 	METHOD method_798 getSize ()I
 	METHOD method_799 getPacket (I)Lnet/minecraft/class_169;
 		ARG 0 id
 	METHOD method_800 registerPacket (IZZLjava/lang/Class;)V
 		ARG 0 id
-		ARG 1 packetClass_
+		ARG 1 clientbound
+		ARG 2 serverbound
 		ARG 3 packetClass
 	METHOD method_801 encodePacket (Lnet/minecraft/class_169;Ljava/io/DataOutputStream;)V
 		ARG 0 packet
@@ -16,6 +20,7 @@ CLASS net/minecraft/class_169 net/minecraft/network/packets/Packet
 		ARG 1 length
 	METHOD method_803 getPacketFromData (Ljava/io/DataInputStream;Z)Lnet/minecraft/class_169;
 		ARG 0 data
+		ARG 1 serverbound
 	METHOD method_804 writeString (Ljava/lang/String;Ljava/io/DataOutputStream;)V
 		ARG 0 msg
 		ARG 1 data

@@ -14,6 +14,19 @@ CLASS net/minecraft/class_25 net/minecraft/world/phys/AABB
 		ARG 7 maxX
 		ARG 9 maxY
 		ARG 11 maxZ
+	METHOD method_101 clipZCollide (Lnet/minecraft/class_25;D)D
+		ARG 1 c
+		ARG 2 za
+	METHOD method_102 grow (DDD)Lnet/minecraft/class_25;
+		ARG 1 x
+		ARG 3 y
+		ARG 5 z
+	METHOD method_104 deflate (DDD)Lnet/minecraft/class_25;
+		ARG 1 xa
+		ARG 3 ya
+		ARG 5 za
+	METHOD method_105 clearCache ()V
+	METHOD method_106 getSize ()D
 	METHOD method_85 resetCache ()V
 	METHOD method_86 expand (DDD)Lnet/minecraft/class_25;
 		ARG 1 x
@@ -34,7 +47,7 @@ CLASS net/minecraft/class_25 net/minecraft/world/phys/AABB
 	METHOD method_91 clipXCollide (Lnet/minecraft/class_25;D)D
 		ARG 1 c
 		ARG 2 xa
-	METHOD method_106 getSize ()D
+	METHOD method_92 copy ()Lnet/minecraft/class_25;
 	METHOD method_93 inflate (DDD)Lnet/minecraft/class_25;
 		ARG 1 x
 		ARG 3 y
@@ -51,7 +64,6 @@ CLASS net/minecraft/class_25 net/minecraft/world/phys/AABB
 	METHOD method_97 clipYCollide (Lnet/minecraft/class_25;D)D
 		ARG 1 c
 		ARG 2 ya
-	METHOD method_92 copy ()Lnet/minecraft/class_25;
 	METHOD method_98 offset (DDD)Lnet/minecraft/class_25;
 		ARG 1 x
 		ARG 3 y
@@ -63,11 +75,3 @@ CLASS net/minecraft/class_25 net/minecraft/world/phys/AABB
 		ARG 7 x1
 		ARG 9 y1
 		ARG 11 z1
-	METHOD method_101 clipZCollide (Lnet/minecraft/class_25;D)D
-		ARG 1 c
-		ARG 2 za
-	METHOD method_102 grow (DDD)Lnet/minecraft/class_25;
-		ARG 1 x
-		ARG 3 y
-		ARG 5 z
-	METHOD method_105 clearCache ()V

@@ -11,9 +11,11 @@ CLASS net/minecraft/class_127 net/minecraft/world/entity/LivingEntity
 	FIELD field_1024 deathScore I
 	FIELD field_1026 effectiveAi Z
 	FIELD field_1027 oAttackAnim F
+	FIELD field_1028 ambientSoundTime I
 	FIELD field_1029 zza F
 	FIELD field_1030 yRotA F
 	FIELD field_1031 jumping Z
+	FIELD field_1032 xRotA F
 	FIELD field_1033 movementSpeed F
 	FIELD field_1034 lookTime I
 	FIELD field_1035 attackAnim F
@@ -24,6 +26,8 @@ CLASS net/minecraft/class_127 net/minecraft/world/entity/LivingEntity
 	FIELD field_1040 hurtDir F
 	FIELD field_1041 deathTime I
 	FIELD field_1042 attackTime I
+	FIELD field_1043 oBobIntensity F
+	FIELD field_1044 bobIntensity F
 	FIELD field_1045 dead Z
 	FIELD field_1048 animationSpeedOld F
 	FIELD field_1049 animationSpeed F
@@ -45,10 +49,12 @@ CLASS net/minecraft/class_127 net/minecraft/world/entity/LivingEntity
 	METHOD method_913 getDeathSound ()Ljava/lang/String;
 	METHOD method_914 getDropItem ()I
 	METHOD method_915 getSoundVolume ()F
+	METHOD method_916 getMaxSpawnClusterSize ()I
 	METHOD method_918 playAmbientSound ()V
 	METHOD method_919 spawnAnim ()V
 	METHOD method_920 checkDespawn ()V
 	METHOD method_922 getLookingAt ()Lnet/minecraft/class_57;
+	METHOD method_923 onDeath ()V
 	METHOD method_924 setLookAt (Lnet/minecraft/class_57;FF)V
 		ARG 1 target
 		ARG 2 xRot

@@ -20,16 +20,22 @@ CLASS net/minecraft/class_57 net/minecraft/world/entity/Entity
 	FIELD field_1608 yRotO F
 	FIELD field_1609 xRotO F
 	FIELD field_1610 bb Lnet/minecraft/class_25;
+	FIELD field_1611 nextStep I
 	FIELD field_1612 wasInWater Z
 	FIELD field_1613 invulnerableTime I
 	FIELD field_1614 air I
 	FIELD field_1615 fireImmune Z
 	FIELD field_1616 entityData Lnet/minecraft/class_216;
+	FIELD field_1617 defaultBrightness F
 	FIELD field_1618 inChunk Z
 	FIELD field_1619 xChunk I
 	FIELD field_1620 yChunk I
 	FIELD field_1621 zChunk I
+	FIELD field_1622 noCulling Z
 	FIELD field_1623 onGround Z
+	FIELD field_1624 horizontalCollision Z
+	FIELD field_1625 verticalCollision Z
+	FIELD field_1626 collision Z
 	FIELD field_1627 hurtMarked Z
 	FIELD field_1628 stuckInBlock Z
 	FIELD field_1630 removed Z
@@ -42,11 +48,14 @@ CLASS net/minecraft/class_57 net/minecraft/world/entity/Entity
 	FIELD field_1637 xOld D
 	FIELD field_1638 yOld D
 	FIELD field_1639 zOld D
+	FIELD field_1641 maxUpStep F
 	FIELD field_1642 noPhysics Z
 	FIELD field_1643 pushthrough F
 	FIELD field_1644 random Ljava/util/Random;
 	FIELD field_1645 tickCount I
+	FIELD field_1646 fireImmuneTicks I
 	FIELD field_1647 remainingFireTicks I
+	FIELD field_1648 maxAirSupply I
 	FIELD field_1649 firstTick Z
 	FIELD field_1652 skinUrl Ljava/lang/String;
 	FIELD field_1654 xp I
@@ -66,6 +75,7 @@ CLASS net/minecraft/class_57 net/minecraft/world/entity/Entity
 		ARG 9 lerpSteps
 	METHOD method_1312 animateHurt ()V
 	METHOD method_1313 handleEntityEvent (B)V
+		ARG 1 event
 	METHOD method_1314 getTexture ()Ljava/lang/String;
 	METHOD method_1315 resetPos ()V
 	METHOD method_1317 baseTick ()V
@@ -90,6 +100,7 @@ CLASS net/minecraft/class_57 net/minecraft/world/entity/Entity
 		ARG 2 count
 		ARG 3 heightOffset
 	METHOD method_1326 setSharedFlag (IZ)V
+		ARG 1 flag
 		ARG 2 value
 	METHOD method_1327 spawnAtLocation (Lnet/minecraft/class_31;F)Lnet/minecraft/class_142;
 		ARG 1 item
@@ -131,6 +142,10 @@ CLASS net/minecraft/class_57 net/minecraft/world/entity/Entity
 		ARG 2 xRot
 	METHOD method_1343 saveAsPassenger (Lnet/minecraft/class_8;)Z
 		ARG 1 tag
+	METHOD method_1344 isFree (DDD)Z
+		ARG 1 xa
+		ARG 3 ya
+		ARG 5 za
 	METHOD method_1345 getSharedFlag (I)Z
 		ARG 1 flag
 	METHOD method_1346 saveWithoutId (Lnet/minecraft/class_8;)V
@@ -212,9 +227,11 @@ CLASS net/minecraft/class_57 net/minecraft/world/entity/Entity
 	METHOD method_1385 getRidingHeight ()D
 	METHOD method_1386 remove ()V
 	METHOD method_1387 isInWall ()Z
+	METHOD method_1388 handleInsidePortal ()V
 	METHOD method_1389 causeFallDamage (F)V
 		ARG 1 fallDistance
 	METHOD method_1390 killed (Lnet/minecraft/class_127;)V
+		ARG 1 attacker
 	METHOD method_1391 awardKillScore (Lnet/minecraft/class_57;I)V
 		ARG 1 attacked
 		ARG 2 scoreToAdd
