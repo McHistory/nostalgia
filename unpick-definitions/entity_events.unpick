@@ -1,0 +1,15 @@
+v2
+
+# Events
+
+constant entity_event net/minecraft/world/entity/EntityEvent DAMAGE
+constant entity_event net/minecraft/world/entity/EntityEvent DEATH
+constant entity_event net/minecraft/world/entity/EntityEvent TAMING_FAILED
+constant entity_event net/minecraft/world/entity/EntityEvent TAMING_SUCCEEDED
+constant entity_event net/minecraft/world/entity/EntityEvent SHAKE_WETNESS
+
+target_method net/minecraft/world/level/Level broadcastEntityEvent (Lnet/minecraft/world/entity/Entity;B)V
+	param 1 entity_event
+
+target_method net/minecraft/world/entity/Entity handleEntityEvent (B)V
+	param 0 entity_event
