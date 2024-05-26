@@ -1,7 +1,13 @@
 CLASS net/minecraft/class_359 net/minecraft/world/level/levelgen/HellRandomLevelSource
 	FIELD field_1344 random Ljava/util/Random;
 	FIELD field_1350 level Lnet/minecraft/class_18;
+	FIELD field_1355 carver Lnet/minecraft/class_105;
 	METHOD <init> (Lnet/minecraft/class_18;J)V
 		ARG 1 level
 		ARG 2 seed
-	METHOD method_1181 fillNoiseColumn ([DIIIIII)[D
+	METHOD method_1180 prepareHeights (II[B)V
+		ARG 1 x
+		ARG 2 z
+		ARG 3 tiles
+	METHOD method_1181 getHeights ([DIIIIII)[D
+	METHOD method_1182 buildSurfaces (II[B)V
