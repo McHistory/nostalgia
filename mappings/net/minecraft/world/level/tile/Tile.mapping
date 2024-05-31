@@ -114,12 +114,13 @@ CLASS net/minecraft/class_17 net/minecraft/world/level/tile/Tile
 	FIELD field_1935 WOOL_SOUND Lnet/minecraft/class_475;
 	FIELD field_1936 SAND_SOUND Lnet/minecraft/class_475;
 	FIELD field_1937 tiles [Lnet/minecraft/class_17;
-	FIELD field_1938 ticksRandomly [Z
+	FIELD field_1938 shouldTick [Z
 	FIELD field_1939 solid [Z
 	FIELD field_1940 isEntityTile [Z
 	FIELD field_1941 lightBlock [I
 	FIELD field_1942 translucent [Z
 	FIELD field_1943 lightEmission [I
+	FIELD field_1944 blockUpdate [Z
 	FIELD field_1945 STONE Lnet/minecraft/class_17;
 	FIELD field_1946 GRASS Lnet/minecraft/class_476;
 	FIELD field_1947 DIRT Lnet/minecraft/class_17;
@@ -145,11 +146,13 @@ CLASS net/minecraft/class_17 net/minecraft/world/level/tile/Tile
 		ARG 3 y
 		ARG 4 z
 		ARG 5 face
-	METHOD method_1562 (Lnet/minecraft/class_18;IIILnet/minecraft/class_25;Ljava/util/ArrayList;)V
+	METHOD method_1562 addAABBs (Lnet/minecraft/class_18;IIILnet/minecraft/class_25;Ljava/util/ArrayList;)V
 		ARG 1 level
 		ARG 2 x
 		ARG 3 y
 		ARG 4 z
+		ARG 5 bb
+		ARG 6 boxes
 	METHOD method_1563 triggerEvent (Lnet/minecraft/class_18;IIIII)V
 		ARG 1 level
 		ARG 2 x
@@ -157,11 +160,13 @@ CLASS net/minecraft/class_17 net/minecraft/world/level/tile/Tile
 		ARG 4 z
 		ARG 5 b0
 		ARG 6 b1
-	METHOD method_1564 (Lnet/minecraft/class_18;IIILnet/minecraft/class_26;Lnet/minecraft/class_26;)Lnet/minecraft/class_27;
+	METHOD method_1564 clip (Lnet/minecraft/class_18;IIILnet/minecraft/class_26;Lnet/minecraft/class_26;)Lnet/minecraft/class_27;
 		ARG 1 level
 		ARG 2 x
 		ARG 3 y
 		ARG 4 z
+		ARG 5 vec1
+		ARG 6 vec2
 	METHOD method_1565 getTickDelay ()I
 	METHOD method_1566 canPlace (Lnet/minecraft/class_18;III)Z
 		ARG 1 level
@@ -186,6 +191,9 @@ CLASS net/minecraft/class_17 net/minecraft/world/level/tile/Tile
 		ARG 3 y
 		ARG 4 z
 		ARG 5 direction
+	METHOD method_1571 mayPick (IZ)Z
+		ARG 1 meta
+		ARG 2 checkLiquid
 	METHOD method_1572 handleEntityInside (Lnet/minecraft/class_18;IIILnet/minecraft/class_57;Lnet/minecraft/class_26;)V
 		ARG 1 level
 		ARG 2 x
@@ -201,7 +209,9 @@ CLASS net/minecraft/class_17 net/minecraft/world/level/tile/Tile
 	METHOD method_1574 getPistonPushReaction ()I
 	METHOD method_1575 getExplosionResistance (Lnet/minecraft/class_57;)F
 		ARG 1 entity
+	METHOD method_1576 mayPick ()Z
 	METHOD method_1577 lightLevel (F)Lnet/minecraft/class_17;
+		ARG 1 level
 	METHOD method_1578 setShape (FFFFFF)V
 		ARG 1 minX
 		ARG 2 minY
@@ -209,7 +219,9 @@ CLASS net/minecraft/class_17 net/minecraft/world/level/tile/Tile
 		ARG 4 maxX
 		ARG 5 maxY
 		ARG 6 maxZ
-	METHOD method_1580 sound (Lnet/minecraft/class_475;)Lnet/minecraft/class_17;
+	METHOD method_1579 containsX (Lnet/minecraft/class_26;)Z
+		ARG 1 vec
+	METHOD method_1580 setSoundType (Lnet/minecraft/class_475;)Lnet/minecraft/class_17;
 		ARG 1 sound
 	METHOD method_1581 popResource (Lnet/minecraft/class_18;IIILnet/minecraft/class_31;)V
 		ARG 1 level
@@ -219,17 +231,23 @@ CLASS net/minecraft/class_17 net/minecraft/world/level/tile/Tile
 		ARG 5 item
 	METHOD method_1582 getDestroyProgress (Lnet/minecraft/class_54;)F
 		ARG 1 player
-	METHOD method_1583 setTranslationKey (Ljava/lang/String;)Lnet/minecraft/class_17;
+	METHOD method_1583 setDescriptionId (Ljava/lang/String;)Lnet/minecraft/class_17;
 		ARG 1 name
-	METHOD method_1584 randomTick (Z)Lnet/minecraft/class_17;
+	METHOD method_1584 setTicking (Z)Lnet/minecraft/class_17;
 		ARG 1 ticksRandomly
-	METHOD method_1585 explosionResistance (F)Lnet/minecraft/class_17;
-	METHOD method_1587 strength (F)Lnet/minecraft/class_17;
+	METHOD method_1585 setExplodeable (F)Lnet/minecraft/class_17;
+		ARG 1 resistance
+	METHOD method_1586 containsY (Lnet/minecraft/class_26;)Z
+		ARG 1 vec
+	METHOD method_1587 setDestroyTime (F)Lnet/minecraft/class_17;
 		ARG 1 strength
+	METHOD method_1588 containsZ (Lnet/minecraft/class_26;)Z
+		ARG 1 vec
 	METHOD method_1589 getColor (I)I
 		ARG 1 meta
-	METHOD method_1590 opacity (I)Lnet/minecraft/class_17;
+	METHOD method_1590 setLightBlock (I)Lnet/minecraft/class_17;
 		ARG 1 opacity
+	METHOD method_1591 setBlockUpdate ()Lnet/minecraft/class_17;
 	METHOD method_1592 dropResources (Lnet/minecraft/class_18;IIII)V
 		ARG 1 level
 		ARG 2 x
@@ -249,7 +267,7 @@ CLASS net/minecraft/class_17 net/minecraft/world/level/tile/Tile
 	METHOD method_1601 drops (ILjava/util/Random;)I
 		ARG 1 meta
 		ARG 2 random
-	METHOD method_1602 randomTick (Lnet/minecraft/class_18;IIILjava/util/Random;)V
+	METHOD method_1602 tick (Lnet/minecraft/class_18;IIILjava/util/Random;)V
 		ARG 1 level
 		ARG 2 x
 		ARG 3 y

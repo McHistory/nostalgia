@@ -1,4 +1,5 @@
 CLASS net/minecraft/class_18 net/minecraft/world/level/Level
+	FIELD field_179 lightUpdates I
 	FIELD field_180 isClientSide Z
 	FIELD field_181 lightingUpdates Ljava/util/List;
 	FIELD field_182 entitiesToUnload Ljava/util/List;
@@ -6,13 +7,16 @@ CLASS net/minecraft/class_18 net/minecraft/world/level/Level
 	FIELD field_184 tickNextTickSet Ljava/util/Set;
 	FIELD field_185 pendingTileEntities Ljava/util/List;
 	FIELD field_186 cloudColor J
+	FIELD field_187 since J
 	FIELD field_188 allPlayersSleeping Z
+	FIELD field_189 aabbCache Ljava/util/ArrayList;
 	FIELD field_190 updatingTileEntities Z
-	FIELD field_191 lightUpdates I
+	FIELD field_191 lightTicks I
 	FIELD field_192 spawnMonsters Z
 	FIELD field_193 spawnAnimals Z
 	FIELD field_194 chunksToTick Ljava/util/Set;
 	FIELD field_195 delayUntilNextMoodSound I
+	FIELD field_196 entityCache Ljava/util/List;
 	FIELD field_197 tickFluids Z
 	FIELD field_198 entities Ljava/util/List;
 	FIELD field_199 tileEntityList Ljava/util/List;
@@ -28,13 +32,16 @@ CLASS net/minecraft/class_18 net/minecraft/world/level/Level
 	FIELD field_209 lightingCooldown I
 	FIELD field_210 skyFlashTime I
 	FIELD field_211 tickingBlock Z
+	FIELD field_212 saveInterval I
 	FIELD field_213 difficulty I
 	FIELD field_214 random Ljava/util/Random;
+	FIELD field_215 newWorld Z
 	FIELD field_216 dimension Lnet/minecraft/class_50;
 	FIELD field_217 listeners Ljava/util/List;
 	FIELD field_218 levelSource Lnet/minecraft/class_51;
 	FIELD field_219 levelIo Lnet/minecraft/class_52;
 	FIELD field_220 levelData Lnet/minecraft/class_7;
+	FIELD field_221 calculatingInitialSpawn Z
 	FIELD field_222 dataStorage Lnet/minecraft/class_53;
 	METHOD <init> (Lnet/minecraft/class_18;Lnet/minecraft/class_50;)V
 		ARG 1 level
@@ -112,9 +119,11 @@ CLASS net/minecraft/class_18 net/minecraft/world/level/Level
 	METHOD method_161 clip (Lnet/minecraft/class_26;Lnet/minecraft/class_26;Z)Lnet/minecraft/class_27;
 		ARG 1 from
 		ARG 2 to
+		ARG 3 checkLiquid
 	METHOD method_162 clip (Lnet/minecraft/class_26;Lnet/minecraft/class_26;ZZ)Lnet/minecraft/class_27;
 		ARG 1 from
 		ARG 2 to
+		ARG 3 checkLiquid
 	METHOD method_163 getSeenPercent (Lnet/minecraft/class_26;Lnet/minecraft/class_25;)F
 		ARG 1 explosionVector
 		ARG 2 bb
@@ -208,6 +217,7 @@ CLASS net/minecraft/class_18 net/minecraft/world/level/Level
 		ARG 1 id
 		ARG 2 data
 	METHOD method_181 addAllPendingTileEntities (Ljava/util/Collection;)V
+		ARG 1 tileEntities
 	METHOD method_183 addListener (Lnet/minecraft/class_59;)V
 		ARG 1 listener
 	METHOD method_184 addGlobalEntity (Lnet/minecraft/class_57;)Z
@@ -463,10 +473,12 @@ CLASS net/minecraft/class_18 net/minecraft/world/level/Level
 		ARG 1 x
 		ARG 2 y
 		ARG 3 z
+	METHOD method_266 wakeUpPlayers ()V
 	METHOD method_267 isRainingAt (III)Z
 		ARG 1 x
 		ARG 2 y
 		ARG 3 z
+	METHOD method_268 canSkipToDay ()Z
 	METHOD method_269 isThundering ()Z
 	METHOD method_270 isRaining ()Z
 	METHOD method_271 saveLevel ()V
@@ -482,6 +494,8 @@ CLASS net/minecraft/class_18 net/minecraft/world/level/Level
 	METHOD method_279 getSkyColor (Lnet/minecraft/class_57;F)Lnet/minecraft/class_26;
 		ARG 1 entity
 		ARG 2 partialTick
+	METHOD method_280 save (Lnet/minecraft/class_62;)V
+		ARG 1 listener
 	METHOD method_281 removeListener (Lnet/minecraft/class_59;)V
 		ARG 1 listener
 	METHOD method_282 getCloudColor (F)Lnet/minecraft/class_26;
