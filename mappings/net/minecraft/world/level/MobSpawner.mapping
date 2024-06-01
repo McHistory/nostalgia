@@ -1,14 +1,19 @@
 CLASS net/minecraft/class_567 net/minecraft/world/level/MobSpawner
+	FIELD field_2408 MOBS [Ljava/lang/Class;
 	FIELD field_2409 chunks Ljava/util/Set;
 	METHOD method_1868 getRandomPosWithin (Lnet/minecraft/class_18;II)Lnet/minecraft/class_339;
 		ARG 0 level
 		ARG 1 x
 		ARG 2 z
 	METHOD method_1869 spawnMobs (Lnet/minecraft/class_18;Ljava/util/List;)Z
+		COMMENT Spawns a mob next to the player and wakes them up if the sleeping location is not safe
+		COMMENT @return Returns true if any players had a nightmare
 		ARG 0 level
 		ARG 1 players
 	METHOD method_1870 tick (Lnet/minecraft/class_18;ZZ)I
 		ARG 0 level
+		ARG 1 spawnMonsters
+		ARG 2 spawnAnimals
 	METHOD method_1871 isSpawnPositionOk (Lnet/minecraft/class_238;Lnet/minecraft/class_18;III)Z
 		ARG 0 category
 		ARG 1 level
