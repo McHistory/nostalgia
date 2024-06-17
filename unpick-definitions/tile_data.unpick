@@ -2,9 +2,9 @@ v2
 
 # Bed
 
-constant bed net/minecraft/world/level/tile/TileData BED_ORIENTATION_MASK
-constant bed net/minecraft/world/level/tile/TileData BED_OCCUPIED_FLAG
-constant bed net/minecraft/world/level/tile/TileData BED_HEAD_PIECE_FLAG
+constant bed net/minecraft/world/level/tile/meta/TileData BED_ORIENTATION_MASK
+constant bed net/minecraft/world/level/tile/meta/TileData BED_OCCUPIED_FLAG
+constant bed net/minecraft/world/level/tile/meta/TileData BED_HEAD_PIECE_FLAG
 
 target_method net/minecraft/world/level/tile/BedTile getBedOrientation (I)I
 	return bed
@@ -14,3 +14,19 @@ target_method net/minecraft/world/level/tile/BedTile isHeadPiece (I)Z
 
 target_method net/minecraft/world/level/tile/BedTile isBedOccupied (I)Z
 	return bed
+
+# Rail Shape
+
+constant rail_shape net/minecraft/world/level/tile/meta/RailShape NORTH_SOUTH
+constant rail_shape net/minecraft/world/level/tile/meta/RailShape EAST_WEST
+constant rail_shape net/minecraft/world/level/tile/meta/RailShape ASCENDING_EAST
+constant rail_shape net/minecraft/world/level/tile/meta/RailShape ASCENDING_WEST
+constant rail_shape net/minecraft/world/level/tile/meta/RailShape ASCENDING_NORTH
+constant rail_shape net/minecraft/world/level/tile/meta/RailShape ASCENDING_SOUTH
+constant rail_shape net/minecraft/world/level/tile/meta/RailShape SOUTH_EAST
+constant rail_shape net/minecraft/world/level/tile/meta/RailShape SOUTH_WEST
+constant rail_shape net/minecraft/world/level/tile/meta/RailShape NORTH_WEST
+constant rail_shape net/minecraft/world/level/tile/meta/RailShape NORTH_EAST
+
+target_method net/minecraft/world/level/tile/RailTile$RailState updateConnections (I)V
+	param 0 rail_shape
