@@ -4,6 +4,21 @@ CLASS net/minecraft/class_16 net/minecraft/world/level/tile/RailTile
 		ARG 1 id
 		ARG 2 tex
 		ARG 3 isStraight
+	METHOD method_1103 (Lnet/minecraft/class_18;IIIIZI)Z
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+	METHOD method_1104 updateDir (Lnet/minecraft/class_18;IIIZ)V
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+	METHOD method_1105 (Lnet/minecraft/class_18;IIIZII)Z
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
 	METHOD method_1107 isRail (I)Z
 		ARG 0 id
 	METHOD method_1108 isStraight ()Z
@@ -12,6 +27,42 @@ CLASS net/minecraft/class_16 net/minecraft/world/level/tile/RailTile
 		ARG 1 x
 		ARG 2 y
 		ARG 3 z
-	CLASS class_338
+	CLASS class_338 RailState
 		FIELD field_1263 railBlock Lnet/minecraft/class_16;
 		FIELD field_1264 level Lnet/minecraft/class_18;
+		FIELD field_1265 x I
+		FIELD field_1266 y I
+		FIELD field_1267 z I
+		FIELD field_1268 isStraight Z
+		FIELD field_1269 connections Ljava/util/List;
+		METHOD <init> (Lnet/minecraft/class_16;Lnet/minecraft/class_18;III)V
+			ARG 2 level
+			ARG 3 x
+			ARG 4 y
+			ARG 5 z
+		METHOD method_1110 removeSoftConnections ()V
+		METHOD method_1111 updateConnections (I)V
+			ARG 1 railShape
+		METHOD method_1112 hasRail (III)Z
+			ARG 1 x
+			ARG 2 y
+			ARG 3 z
+		METHOD method_1114 getRail (Lnet/minecraft/class_339;)Lnet/minecraft/class_16$class_338;
+			ARG 1 pos
+		METHOD method_1115 place (ZZ)V
+			ARG 1 hasSignal
+		METHOD method_1116 countPotentialConnections ()I
+		METHOD method_1117 hasConnection (III)Z
+			ARG 1 x
+			ARG 2 y
+			ARG 3 z
+		METHOD method_1118 connectsTo (Lnet/minecraft/class_16$class_338;)Z
+			ARG 1 state
+		METHOD method_1119 hasNeighborRail (III)Z
+			ARG 1 x
+			ARG 2 y
+			ARG 3 z
+		METHOD method_1120 canConnectTo (Lnet/minecraft/class_16$class_338;)Z
+			ARG 1 state
+		METHOD method_1121 connectTo (Lnet/minecraft/class_16$class_338;)V
+			ARG 1 state
