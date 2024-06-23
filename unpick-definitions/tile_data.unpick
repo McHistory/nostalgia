@@ -17,6 +17,8 @@ target_method net/minecraft/world/level/tile/BedTile isBedOccupied (I)Z
 
 # Rail Shape
 
+constant rail_mask net/minecraft/world/level/tile/meta/RailShape SHAPE_MASK
+
 constant rail_shape net/minecraft/world/level/tile/meta/RailShape NORTH_SOUTH
 constant rail_shape net/minecraft/world/level/tile/meta/RailShape EAST_WEST
 constant rail_shape net/minecraft/world/level/tile/meta/RailShape ASCENDING_EAST
@@ -30,3 +32,9 @@ constant rail_shape net/minecraft/world/level/tile/meta/RailShape NORTH_EAST
 
 target_method net/minecraft/world/level/tile/RailTile$RailState updateConnections (I)V
 	param 0 rail_shape
+
+target_method net/minecraft/world/level/tile/RailTile findPoweredRailSignal (Lnet/minecraft/world/level/Level;IIIIZI)Z
+	param 4 rail_mask
+
+target_method net/minecraft/world/level/tile/RailTile isSameRailWithPower (Lnet/minecraft/world/level/Level;IIIZII)Z
+	param 6 rail_shape

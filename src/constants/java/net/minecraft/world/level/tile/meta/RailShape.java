@@ -8,6 +8,7 @@ package net.minecraft.world.level.tile.meta;
  * See {@link net.minecraft.world.level.tile.RailTile$RailState#updateConnections} and {@link net.minecraft.world.level.tile.RailTile$RailState#connectTo}
  */
 public final class RailShape {
+	public static final int SHAPE_MASK = 7;
 	public static final int NORTH_SOUTH = 0;
 	public static final int EAST_WEST = 1;
 	public static final int ASCENDING_EAST = 2;

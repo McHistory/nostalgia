@@ -4,21 +4,26 @@ CLASS net/minecraft/class_16 net/minecraft/world/level/tile/RailTile
 		ARG 1 id
 		ARG 2 tex
 		ARG 3 isStraight
-	METHOD method_1103 (Lnet/minecraft/class_18;IIIIZI)Z
+	METHOD method_1103 findPoweredRailSignal (Lnet/minecraft/class_18;IIIIZI)Z
 		ARG 1 level
 		ARG 2 x
 		ARG 3 y
 		ARG 4 z
+		ARG 5 data
+			COMMENT The rail shape meta data
+		ARG 7 power
 	METHOD method_1104 updateDir (Lnet/minecraft/class_18;IIIZ)V
 		ARG 1 level
 		ARG 2 x
 		ARG 3 y
 		ARG 4 z
-	METHOD method_1105 (Lnet/minecraft/class_18;IIIZII)Z
+	METHOD method_1105 isSameRailWithPower (Lnet/minecraft/class_18;IIIZII)Z
 		ARG 1 level
 		ARG 2 x
 		ARG 3 y
 		ARG 4 z
+		ARG 6 power
+		ARG 7 railShape
 	METHOD method_1107 isRail (I)Z
 		ARG 0 id
 	METHOD method_1108 isStraight ()Z
