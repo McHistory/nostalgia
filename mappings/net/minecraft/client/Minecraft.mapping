@@ -22,6 +22,8 @@ CLASS net/minecraft/client/Minecraft net/minecraft/client/Minecraft
 	FIELD field_2795 waterTexture Lnet/minecraft/class_593;
 	FIELD field_2796 lavaTexture Lnet/minecraft/class_628;
 	FIELD field_2797 gameDir Ljava/io/File;
+	FIELD field_2800 reserve [B
+		COMMENT Memory reserve for when the game crashes
 	FIELD field_2801 gameMode Lnet/minecraft/class_504;
 	FIELD field_2802 displayWidth I
 	FIELD field_2803 displayHeight I
@@ -61,6 +63,9 @@ CLASS net/minecraft/client/Minecraft net/minecraft/client/Minecraft
 	METHOD method_2105 forceReload ()V
 	METHOD method_2106 init ()V
 	METHOD method_2107 startAttack (I)V
+	METHOD method_2108 resize (II)V
+		ARG 1 width
+		ARG 2 height
 	METHOD method_2109 quad (IIIIII)V
 		ARG 1 width
 		ARG 2 height
@@ -76,8 +81,10 @@ CLASS net/minecraft/client/Minecraft net/minecraft/client/Minecraft
 	METHOD method_2116 getOsWorkingDir (Ljava/lang/String;)Ljava/io/File;
 		ARG 0 path
 	METHOD method_2118 setResourceLocation (Ljava/lang/String;Ljava/io/File;)V
-	METHOD method_2121 (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-		ARG 0 playerName
+	METHOD method_2119 main (Ljava/lang/String;Ljava/lang/String;)V
+		ARG 0 username
+	METHOD method_2121 main (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+		ARG 0 username
 	METHOD method_2122 respawn (ZI)V
 	METHOD method_2123 getGameDir ()Ljava/io/File;
 	METHOD method_2124 isCommand (Ljava/lang/String;)Z
@@ -88,8 +95,9 @@ CLASS net/minecraft/client/Minecraft net/minecraft/client/Minecraft
 	METHOD method_2127 getLevelSource ()Lnet/minecraft/class_182;
 	METHOD method_2128 setState (Ljava/lang/String;)V
 		ARG 1 stateName
-	METHOD method_2129 initGame ()V
+	METHOD method_2129 destroy ()V
 	METHOD method_2130 setLoadingStage (Ljava/lang/String;)V
+	METHOD method_2131 emergencySave ()V
 	METHOD method_2132 stop ()V
 	METHOD method_2133 grabMouse ()V
 	METHOD method_2134 releaseMouse ()V
