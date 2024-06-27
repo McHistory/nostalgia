@@ -34,6 +34,21 @@ constant gl_vertex_mode org/lwjgl/opengl/GL11 GL_QUADS
 constant gl_vertex_mode org/lwjgl/opengl/GL11 GL_QUAD_STRIP
 constant gl_vertex_mode org/lwjgl/opengl/GL11 GL_POLYGON
 
+# Blending Factor
+
+constant gl_blend_factor org/lwjgl/opengl/GL11 GL_ZERO
+constant gl_blend_factor org/lwjgl/opengl/GL11 GL_ONE
+constant gl_blend_factor org/lwjgl/opengl/GL11 GL_SRC_COLOR
+constant gl_blend_factor org/lwjgl/opengl/GL11 GL_ONE_MINUS_SRC_COLOR
+constant gl_blend_factor org/lwjgl/opengl/GL11 GL_SRC_ALPHA
+constant gl_blend_factor org/lwjgl/opengl/GL11 GL_ONE_MINUS_SRC_ALPHA
+constant gl_blend_factor org/lwjgl/opengl/GL11 GL_DST_ALPHA
+constant gl_blend_factor org/lwjgl/opengl/GL11 GL_ONE_MINUS_DST_ALPHA
+
+constant gl_blend_factor org/lwjgl/opengl/GL11 GL_DST_COLOR
+constant gl_blend_factor org/lwjgl/opengl/GL11 GL_ONE_MINUS_DST_COLOR
+constant gl_blend_factor org/lwjgl/opengl/GL11 GL_SRC_ALPHA_SATURATE
+
 # GlDebug - Does not have blaze3d const
 constant gl_debug_source org/lwjgl/opengl/GL43 GL_DEBUG_SOURCE_API
 constant gl_debug_source org/lwjgl/opengl/GL43 GL_DEBUG_SOURCE_WINDOW_SYSTEM
@@ -113,6 +128,8 @@ constant gl_enable_state org/lwjgl/opengl/GL11 GL_LIGHT_MODEL_AMBIENT
 constant gl_enable_state org/lwjgl/opengl/GL11 GL_FRONT_AND_BACK
 constant gl_enable_state org/lwjgl/opengl/GL11 GL_AMBIENT_AND_DIFFUSE
 constant gl_enable_state org/lwjgl/opengl/GL11 GL_COLOR_BUFFER_BIT
+constant gl_enable_state org/lwjgl/opengl/GL11 GL_DEPTH_BUFFER_BIT
+constant gl_enable_state net/minecraft/client/renderer/GlConst GL_COLOR_AND_DEPTH_BUFFER_BIT
 constant gl_enable_state org/lwjgl/opengl/GL11 GL_CULL_FACE
 constant gl_enable_state org/lwjgl/opengl/GL11 GL_PROJECTION
 constant gl_enable_state org/lwjgl/opengl/GL11 GL_POLYGON_OFFSET_LINE
@@ -122,6 +139,7 @@ constant gl_enable_state org/lwjgl/opengl/GL11 GL_COLOR_MATERIAL
 constant gl_enable_state org/lwjgl/opengl/GL12 GL_RESCALE_NORMAL
 constant gl_enable_state org/lwjgl/opengl/GL43 GL_DEBUG_OUTPUT
 constant gl_enable_state org/lwjgl/opengl/GL43 GL_DEBUG_OUTPUT_SYNCHRONOUS
+
 
 constant gl_hint_mode org/lwjgl/opengl/GL11 GL_DONT_CARE
 
@@ -175,6 +193,10 @@ target_method org/lwjgl/opengl/GL11 glTexImage2D (IIIIIIIILjava/nio/IntBuffer;)V
 target_method org/lwjgl/opengl/GL11 glDrawArrays (III)V
 	param 0 gl_vertex_mode
 
+target_method org/lwjgl/opengl/GL11 glBlendFunc (II)V
+	param 0 gl_blend_factor
+	param 1 gl_blend_factor
+
 target_method org/lwjgl/opengl/GL11 glMatrixMode (I)V
 	param 0 gl_enable_state
 
@@ -184,10 +206,16 @@ target_method org/lwjgl/opengl/GL11 glEnable (I)V
 target_method org/lwjgl/opengl/GL11 glDisable (I)V
 	param 0 gl_enable_state
 
+target_method org/lwjgl/opengl/GL11 glBindTexture (II)V
+	param 0 gl_enable_state
+
 target_method org/lwjgl/opengl/GL11 glDepthFunc (I)V
 	param 0 gl_enable_state
 
 target_method org/lwjgl/opengl/GL11 glAlphaFunc (I)V
+	param 0 gl_enable_state
+
+target_method org/lwjgl/opengl/GL11 glAlphaFunc (IF)V
 	param 0 gl_enable_state
 
 target_method org/lwjgl/opengl/GL11 glCullFace (I)V
