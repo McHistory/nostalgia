@@ -1,8 +1,11 @@
 CLASS net/minecraft/class_519 net/minecraft/world/level/biome/BiomeSource
 	FIELD field_2235 temperatures [D
 	FIELD field_2236 downfalls [D
-	FIELD field_2239 temperatureNoise Lnet/minecraft/class_458;
-	FIELD field_2240 downfallNoise Lnet/minecraft/class_458;
+	FIELD field_2237 noises [D
+	FIELD field_2238 biomes [Lnet/minecraft/class_153;
+	FIELD field_2239 temperatureMap Lnet/minecraft/class_458;
+	FIELD field_2240 downfallMap Lnet/minecraft/class_458;
+	FIELD field_2241 noiseMap Lnet/minecraft/class_458;
 	METHOD <init> (Lnet/minecraft/class_18;)V
 		ARG 1 level
 	METHOD method_1786 getTemperature (II)D
@@ -11,10 +14,11 @@ CLASS net/minecraft/class_519 net/minecraft/world/level/biome/BiomeSource
 	METHOD method_1787 getBiome (II)Lnet/minecraft/class_153;
 		ARG 1 x
 		ARG 2 z
-	METHOD method_1788 (IIII)[Lnet/minecraft/class_153;
+	METHOD method_1788 getBiomeBlock (IIII)[Lnet/minecraft/class_153;
 		ARG 1 x
 		ARG 2 z
 	METHOD method_1789 getBiome (Lnet/minecraft/class_515;)Lnet/minecraft/class_153;
 		ARG 1 pos
 	METHOD method_1790 getTemperatureBlock ([DIIII)[D
 	METHOD method_1791 getBiomeBlock ([Lnet/minecraft/class_153;IIII)[Lnet/minecraft/class_153;
+		ARG 1 biomes

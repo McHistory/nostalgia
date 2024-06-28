@@ -1,10 +1,12 @@
 CLASS net/minecraft/class_138 net/minecraft/world/level/tile/entity/FurnaceTileEntity
-	FIELD field_1566 burnTime I
+	FIELD field_1566 litTime I
 	FIELD field_1567 litDuration I
-	FIELD field_1568 cookTime I
+	FIELD field_1568 tickCount I
 	FIELD field_1569 items [Lnet/minecraft/class_31;
 	METHOD method_1280 getBurnDuration (Lnet/minecraft/class_31;)I
 		ARG 1 item
 	METHOD method_1281 isLit ()Z
 	METHOD method_1282 burn ()V
 	METHOD method_1283 canBurn ()Z
+	METHOD method_1284 getBurnProgress (I)I
+	METHOD method_1285 getLitProgress (I)I

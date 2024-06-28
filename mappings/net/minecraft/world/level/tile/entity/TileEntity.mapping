@@ -1,17 +1,17 @@
 CLASS net/minecraft/class_55 net/minecraft/world/level/tile/entity/TileEntity
-	FIELD field_1236 idToClass Ljava/util/Map;
-	FIELD field_1237 classToId Ljava/util/Map;
+	FIELD field_1236 idClassMap Ljava/util/Map;
+	FIELD field_1237 classIdMap Ljava/util/Map;
 	FIELD field_1238 level Lnet/minecraft/class_18;
 	FIELD field_1239 x I
 	FIELD field_1240 y I
 	FIELD field_1241 z I
 	FIELD field_1242 remove Z
-	METHOD method_1067 registerTileEntity (Ljava/lang/Class;Ljava/lang/String;)V
+	METHOD method_1067 setId (Ljava/lang/Class;Ljava/lang/String;)V
 		ARG 0 teClass
 		ARG 1 id
-	METHOD method_1068 loadFromNbt (Lnet/minecraft/class_8;)Lnet/minecraft/class_55;
+	METHOD method_1068 loadStatic (Lnet/minecraft/class_8;)Lnet/minecraft/class_55;
 		ARG 0 tag
-	METHOD method_1069 getMeta ()I
+	METHOD method_1069 getData ()I
 	METHOD method_1070 getUpdatePacket ()Lnet/minecraft/class_169;
 	METHOD method_1071 isRemoved ()Z
 	METHOD method_1072 setRemoved ()V

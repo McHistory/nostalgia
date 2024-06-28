@@ -1,30 +1,46 @@
 CLASS net/minecraft/class_617 net/minecraft/client/sounds/SoundEngine
 	FIELD field_2667 soundSystem Lpaulscode/sound/SoundSystem;
 	FIELD field_2668 sounds Lnet/minecraft/class_266;
-	FIELD field_2669 streaming Lnet/minecraft/class_266;
-	FIELD field_2670 music Lnet/minecraft/class_266;
+	FIELD field_2669 streamingSounds Lnet/minecraft/class_266;
+	FIELD field_2670 songs Lnet/minecraft/class_266;
+	FIELD field_2671 idCounter I
 	FIELD field_2672 options Lnet/minecraft/class_322;
+	FIELD field_2673 loaded Z
 	FIELD field_2674 random Ljava/util/Random;
-	FIELD field_2675 rainTime I
-	METHOD method_2008 setChanged ()V
-	METHOD method_2009 playSound (Ljava/lang/String;FF)V
-		ARG 1 sound
+	FIELD field_2675 noMusicDelay I
+	METHOD method_2008 updateOptions ()V
+	METHOD method_2009 playUI (Ljava/lang/String;FF)V
+		ARG 1 name
+		ARG 2 volume
+		ARG 3 pitch
 	METHOD method_2010 playStreaming (Ljava/lang/String;FFFFF)V
-	METHOD method_2011 addSoundResource (Ljava/lang/String;Ljava/io/File;)V
-	METHOD method_2012 init (Lnet/minecraft/class_322;)V
-		ARG 1 options
-	METHOD method_2013 updateSource (Lnet/minecraft/class_127;F)V
-		ARG 1 camera
-		ARG 2 partialTick
-	METHOD method_2014 destroy ()V
-	METHOD method_2015 play (Ljava/lang/String;FFFFF)V
-		ARG 1 sound
+		ARG 1 name
 		ARG 2 x
 		ARG 3 y
 		ARG 4 z
 		ARG 5 volume
 		ARG 6 pitch
-	METHOD method_2016 addStreamingResource (Ljava/lang/String;Ljava/io/File;)V
-	METHOD method_2017 tick ()V
-	METHOD method_2018 addMusicResource (Ljava/lang/String;Ljava/io/File;)V
-	METHOD method_2019 save ()V
+	METHOD method_2011 add (Ljava/lang/String;Ljava/io/File;)V
+		ARG 1 name
+		ARG 2 file
+	METHOD method_2012 init (Lnet/minecraft/class_322;)V
+		ARG 1 options
+	METHOD method_2013 update (Lnet/minecraft/class_127;F)V
+		ARG 1 player
+		ARG 2 a
+	METHOD method_2014 destroy ()V
+	METHOD method_2015 play (Ljava/lang/String;FFFFF)V
+		ARG 1 name
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+		ARG 5 volume
+		ARG 6 pitch
+	METHOD method_2016 addStreaming (Ljava/lang/String;Ljava/io/File;)V
+		ARG 1 name
+		ARG 2 file
+	METHOD method_2017 playMusicTick ()V
+	METHOD method_2018 addMusic (Ljava/lang/String;Ljava/io/File;)V
+		ARG 1 name
+		ARG 2 file
+	METHOD method_2019 loadLibrary ()V

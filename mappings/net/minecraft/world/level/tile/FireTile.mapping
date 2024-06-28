@@ -4,11 +4,11 @@ CLASS net/minecraft/class_474 net/minecraft/world/level/tile/FireTile
 	METHOD <init> (II)V
 		ARG 1 id
 		ARG 2 texture
-	METHOD method_1822 registerBurnable (III)V
+	METHOD method_1822 setFlammable (III)V
 		ARG 1 tile
 		ARG 2 flameOdd
 		ARG 3 burnOdd
-	METHOD method_1823 spreadAndBurn (Lnet/minecraft/class_18;IIIILjava/util/Random;I)V
+	METHOD method_1823 checkBurn (Lnet/minecraft/class_18;IIIILjava/util/Random;I)V
 		ARG 1 level
 		ARG 2 x
 		ARG 3 y
@@ -21,7 +21,7 @@ CLASS net/minecraft/class_474 net/minecraft/world/level/tile/FireTile
 		ARG 2 x
 		ARG 3 y
 		ARG 4 z
-	METHOD method_1825 getFireOdds (Lnet/minecraft/class_18;IIII)I
+	METHOD method_1825 getFlammability (Lnet/minecraft/class_18;IIII)I
 		ARG 1 level
 		ARG 2 x
 		ARG 3 y

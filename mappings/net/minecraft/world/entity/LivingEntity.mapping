@@ -8,10 +8,15 @@ CLASS net/minecraft/class_127 net/minecraft/world/entity/LivingEntity
 	FIELD field_1015 run F
 	FIELD field_1016 yBodyRot F
 	FIELD field_1017 yBodyRotO F
-	FIELD field_1019 entityTexture Ljava/lang/String;
+	FIELD field_1018 hasHair Z
+	FIELD field_1019 textureName Ljava/lang/String;
+	FIELD field_1020 allowAlpha Z
 	FIELD field_1021 rotOffs F
+	FIELD field_1022 modelName Ljava/lang/String;
+	FIELD field_1023 bobStrength F
 	FIELD field_1024 deathScore I
-	FIELD field_1026 effectiveAi Z
+	FIELD field_1025 renderOffset F
+	FIELD field_1026 interpolateOnly Z
 	FIELD field_1027 oAttackAnim F
 	FIELD field_1028 ambientSoundTime I
 	FIELD field_1029 zza F
@@ -31,6 +36,8 @@ CLASS net/minecraft/class_127 net/minecraft/world/entity/LivingEntity
 	FIELD field_1043 oTilt F
 	FIELD field_1044 tilt F
 	FIELD field_1045 dead Z
+	FIELD field_1046 modelNum I
+	FIELD field_1047 animSpeed F
 	FIELD field_1048 animationSpeedOld F
 	FIELD field_1049 animationSpeed F
 	FIELD field_1050 animationPosition F
@@ -40,25 +47,26 @@ CLASS net/minecraft/class_127 net/minecraft/world/entity/LivingEntity
 	FIELD field_1054 lerpZ D
 	FIELD field_1055 lerpYRot D
 	FIELD field_1056 lerpXRot D
+	FIELD field_1057 fallTime F
 	FIELD field_1058 lastHurt I
 	FIELD field_1059 noActionTime I
 	FIELD field_1060 xxa F
 	FIELD field_1061 lookingAt Lnet/minecraft/class_57;
-	METHOD method_909 getItemInHand ()Lnet/minecraft/class_31;
+	METHOD method_909 getCarriedItem ()Lnet/minecraft/class_31;
 	METHOD method_910 serverAiStep ()V
 	METHOD method_911 getAmbientSound ()Ljava/lang/String;
 	METHOD method_912 getHurtSound ()Ljava/lang/String;
 	METHOD method_913 getDeathSound ()Ljava/lang/String;
-	METHOD method_914 getDropItem ()I
+	METHOD method_914 getDeathLoot ()I
 	METHOD method_915 getSoundVolume ()F
 	METHOD method_916 getMaxSpawnClusterSize ()I
-	METHOD method_917 (Lnet/minecraft/class_31;)I
+	METHOD method_917 getItemTexture (Lnet/minecraft/class_31;)I
 		ARG 1 item
 	METHOD method_918 playAmbientSound ()V
 	METHOD method_919 spawnAnim ()V
 	METHOD method_920 checkDespawn ()V
 	METHOD method_922 getLookingAt ()Lnet/minecraft/class_57;
-	METHOD method_923 onDeath ()V
+	METHOD method_923 beforeRemove ()V
 	METHOD method_924 setLookAt (Lnet/minecraft/class_57;FF)V
 		ARG 1 target
 		ARG 2 xRot
@@ -70,7 +78,7 @@ CLASS net/minecraft/class_127 net/minecraft/world/entity/LivingEntity
 		ARG 5 zVel
 	METHOD method_926 getViewVector (F)Lnet/minecraft/class_26;
 		ARG 1 partialTick
-	METHOD method_927 rotateTowards (FFF)F
+	METHOD method_927 rotlerp (FFF)F
 		ARG 1 rot1
 		ARG 2 rot2
 		ARG 3 angle
@@ -81,12 +89,12 @@ CLASS net/minecraft/class_127 net/minecraft/world/entity/LivingEntity
 		ARG 3 partialTick
 	METHOD method_930 getAttackAnim (F)F
 		ARG 1 partialTick
-	METHOD method_931 getEyePosition (F)Lnet/minecraft/class_26;
+	METHOD method_931 getPos (F)Lnet/minecraft/class_26;
 		ARG 1 partialTick
 	METHOD method_932 onLadder ()Z
-	METHOD method_933 dropAllDeathLoot ()V
+	METHOD method_933 dropDeathLoot ()V
 	METHOD method_934 isWaterMob ()Z
-	METHOD method_935 isDarkEnoughToSpawn ()Z
+	METHOD method_935 canSpawn ()Z
 	METHOD method_936 getAmbientSoundInterval ()I
 	METHOD method_937 aiStep ()V
 	METHOD method_938 die (Lnet/minecraft/class_57;)V

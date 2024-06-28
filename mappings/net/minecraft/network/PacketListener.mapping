@@ -33,6 +33,8 @@ CLASS net/minecraft/class_240 net/minecraft/network/PacketListener
 		ARG 1 packet
 	METHOD method_1438 handleTakeItemEntity (Lnet/minecraft/class_435;)V
 		ARG 1 packet
+	METHOD method_1439 handleBlockRegionUpdate (Lnet/minecraft/class_6;)V
+		ARG 1 packet
 	METHOD method_1440 handleSetHealth (Lnet/minecraft/class_36;)V
 		ARG 1 packet
 	METHOD method_1441 handleAddGlobalEntity (Lnet/minecraft/class_45;)V
@@ -75,7 +77,11 @@ CLASS net/minecraft/class_240 net/minecraft/network/PacketListener
 		ARG 1 packet
 	METHOD method_1460 handleRemoveEntity (Lnet/minecraft/class_394;)V
 		ARG 1 packet
+	METHOD method_1461 handleChunkVisibility (Lnet/minecraft/class_403;)V
+		ARG 1 packet
 	METHOD method_1462 handleAddEntity (Lnet/minecraft/class_414;)V
+		ARG 1 packet
+	METHOD method_1463 handleTileUpdate (Lnet/minecraft/class_436;)V
 		ARG 1 packet
 	METHOD method_1464 handleMoveEntity (Lnet/minecraft/class_437;)V
 		ARG 1 packet
@@ -85,14 +91,17 @@ CLASS net/minecraft/class_240 net/minecraft/network/PacketListener
 		ARG 1 packet
 	METHOD method_1467 handleTileEvent (Lnet/minecraft/class_440;)V
 		ARG 1 packet
-	METHOD method_1468 (Lnet/minecraft/class_441;)V
+	METHOD method_1468 handleChunkTilesUpdate (Lnet/minecraft/class_441;)V
 		ARG 1 packet
 	METHOD method_1469 handleMapItemData (Lnet/minecraft/class_161;)V
 		ARG 1 packet
-	METHOD method_1470 handlePacket (Lnet/minecraft/class_169;)V
+	METHOD method_1470 onUnhandledPacket (Lnet/minecraft/class_169;)V
 		ARG 1 packet
-	METHOD method_1471 handleLogin (Lnet/minecraft/class_281;)V
+	METHOD method_1471 handlePreLogin (Lnet/minecraft/class_281;)V
 		ARG 1 packet
-	METHOD method_1472 (Lnet/minecraft/class_118;)V
+	METHOD method_1472 handleLogin (Lnet/minecraft/class_118;)V
 		ARG 1 levelPacket
-	METHOD method_1473 disconnect (Ljava/lang/String;[Ljava/lang/Object;)V
+	METHOD method_1473 onDisconnect (Ljava/lang/String;[Ljava/lang/Object;)V
+		ARG 1 reason
+		ARG 2 args
+	METHOD method_1474 isServer ()Z

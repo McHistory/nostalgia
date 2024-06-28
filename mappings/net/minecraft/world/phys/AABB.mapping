@@ -5,8 +5,8 @@ CLASS net/minecraft/class_25 net/minecraft/world/phys/AABB
 	FIELD field_132 x1 D
 	FIELD field_133 y1 D
 	FIELD field_134 z1 D
-	FIELD field_135 cache Ljava/util/List;
-	FIELD field_136 cacheSize I
+	FIELD field_135 pool Ljava/util/List;
+	FIELD field_136 poolPointer I
 	METHOD <init> (DDDDDD)V
 		ARG 1 minX
 		ARG 3 minY
@@ -14,6 +14,7 @@ CLASS net/minecraft/class_25 net/minecraft/world/phys/AABB
 		ARG 7 maxX
 		ARG 9 maxY
 		ARG 11 maxZ
+	METHOD method_100 containsY (Lnet/minecraft/class_26;)Z
 	METHOD method_101 clipZCollide (Lnet/minecraft/class_25;D)D
 		ARG 1 c
 		ARG 2 za
@@ -21,13 +22,14 @@ CLASS net/minecraft/class_25 net/minecraft/world/phys/AABB
 		ARG 1 x
 		ARG 3 y
 		ARG 5 z
+	METHOD method_103 containsZ (Lnet/minecraft/class_26;)Z
 	METHOD method_104 deflate (DDD)Lnet/minecraft/class_25;
 		ARG 1 xa
 		ARG 3 ya
 		ARG 5 za
 	METHOD method_105 clearCache ()V
 	METHOD method_106 getSize ()D
-	METHOD method_85 resetCache ()V
+	METHOD method_85 resetPool ()V
 	METHOD method_86 expand (DDD)Lnet/minecraft/class_25;
 		ARG 1 x
 		ARG 3 y
@@ -41,7 +43,7 @@ CLASS net/minecraft/class_25 net/minecraft/world/phys/AABB
 		ARG 10 z1
 	METHOD method_88 intersects (Lnet/minecraft/class_26;)Z
 		ARG 1 c
-	METHOD method_89 getBlockHitResult (Lnet/minecraft/class_26;Lnet/minecraft/class_26;)Lnet/minecraft/class_27;
+	METHOD method_89 clip (Lnet/minecraft/class_26;Lnet/minecraft/class_26;)Lnet/minecraft/class_27;
 		ARG 1 vec1
 		ARG 2 vec2
 	METHOD method_90 intersects (Lnet/minecraft/class_25;)Z
@@ -61,6 +63,7 @@ CLASS net/minecraft/class_25 net/minecraft/world/phys/AABB
 		ARG 6 x1
 		ARG 8 y1
 		ARG 10 z1
+	METHOD method_95 containsX (Lnet/minecraft/class_26;)Z
 	METHOD method_96 copyFrom (Lnet/minecraft/class_25;)V
 		ARG 1 c
 	METHOD method_97 clipYCollide (Lnet/minecraft/class_25;D)D

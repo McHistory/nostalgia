@@ -2,13 +2,13 @@ CLASS net/minecraft/class_26 net/minecraft/world/phys/Vec3
 	FIELD field_1585 x D
 	FIELD field_1586 y D
 	FIELD field_1587 z D
-	FIELD field_1588 cache Ljava/util/List;
-	FIELD field_1589 cacheSize I
+	FIELD field_1588 pool Ljava/util/List;
+	FIELD field_1589 poolPointer I
 	METHOD <init> (DDD)V
 		ARG 1 x
 		ARG 3 y
 		ARG 5 z
-	METHOD method_1292 resetCache ()V
+	METHOD method_1292 resetPool ()V
 	METHOD method_1293 create (DDD)Lnet/minecraft/class_26;
 		ARG 0 x
 		ARG 2 y
@@ -41,7 +41,7 @@ CLASS net/minecraft/class_26 net/minecraft/world/phys/Vec3
 	METHOD method_1305 clearCache ()V
 	METHOD method_1306 xRot (F)V
 		ARG 1 pitch
-	METHOD method_1307 subtract (Lnet/minecraft/class_26;)Lnet/minecraft/class_26;
+	METHOD method_1307 vectorTo (Lnet/minecraft/class_26;)Lnet/minecraft/class_26;
 		ARG 1 vec
 	METHOD method_1308 yRot (F)V
 		ARG 1 yaw

@@ -33,21 +33,21 @@ CLASS net/minecraft/class_54 net/minecraft/world/entity/player/Player
 		ARG 2 y
 		ARG 3 z
 	METHOD method_485 openDispenser (Lnet/minecraft/class_137;)V
-		ARG 1 te
+		ARG 1 trap
 	METHOD method_486 openContainer (Lnet/minecraft/class_134;)V
 		ARG 1 container
 	METHOD method_487 openFurnace (Lnet/minecraft/class_138;)V
-		ARG 1 te
+		ARG 1 furnace
 	METHOD method_488 awardStat (Lnet/minecraft/class_139;I)V
 		ARG 1 stat
 		ARG 2 increment
 	METHOD method_489 openSign (Lnet/minecraft/class_140;)V
-		ARG 1 te
+		ARG 1 sign
 	METHOD method_490 displayClientMessage (Ljava/lang/String;)V
 		ARG 1 msg
 	METHOD method_491 take (Lnet/minecraft/class_57;I)V
-		ARG 1 entity
-		ARG 2 amount
+		ARG 1 e
+		ARG 2 orgCount
 	METHOD method_492 respawn ()V
 	METHOD method_493 closeContainer ()V
 	METHOD method_495 startSleepInBed (III)Lnet/minecraft/class_141;
@@ -70,6 +70,8 @@ CLASS net/minecraft/class_54 net/minecraft/world/entity/player/Player
 	METHOD method_507 checkBedValidRespawnPosition (Lnet/minecraft/class_18;Lnet/minecraft/class_63;)Lnet/minecraft/class_63;
 		ARG 0 level
 		ARG 1 pos
+	METHOD method_508 reallyDrop (Lnet/minecraft/class_142;)V
+		ARG 1 itemEntity
 	METHOD method_509 drop (Lnet/minecraft/class_31;Z)V
 		ARG 1 item
 		ARG 2 dropAround
