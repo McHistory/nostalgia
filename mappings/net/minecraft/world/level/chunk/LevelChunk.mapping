@@ -1,18 +1,20 @@
 CLASS net/minecraft/class_43 net/minecraft/world/level/chunk/LevelChunk
-	FIELD field_954 tiles [B
+	FIELD field_953 touchedSky Z
+	FIELD field_954 blocks [B
 	FIELD field_955 loaded Z
 	FIELD field_956 level Lnet/minecraft/class_18;
-	FIELD field_957 tileMeta Lnet/minecraft/class_257;
+	FIELD field_957 data Lnet/minecraft/class_257;
 	FIELD field_958 skyLight Lnet/minecraft/class_257;
 	FIELD field_959 blockLight Lnet/minecraft/class_257;
 	FIELD field_960 heightMap [B
-	FIELD field_962 xPos I
-	FIELD field_963 zPos I
+	FIELD field_961 minHeight I
+	FIELD field_962 x I
+	FIELD field_963 z I
 	FIELD field_964 tileEntities Ljava/util/Map;
-	FIELD field_965 entities [Ljava/util/List;
+	FIELD field_965 entityBlocks [Ljava/util/List;
 	FIELD field_966 terrainPopulated Z
-	FIELD field_967 changed Z
-	FIELD field_968 unsaved Z
+	FIELD field_967 unsaved Z
+	FIELD field_968 dontSave Z
 	FIELD field_969 lastSaveHadEntities Z
 	FIELD field_970 lastSaveTime J
 	METHOD <init> (Lnet/minecraft/class_18;II)V
@@ -25,7 +27,7 @@ CLASS net/minecraft/class_43 net/minecraft/world/level/chunk/LevelChunk
 		ARG 3 x
 		ARG 4 z
 	METHOD method_857 recalcBlockLights ()V
-	METHOD method_858 equals (II)Z
+	METHOD method_858 isAt (II)Z
 		ARG 1 x
 		ARG 2 z
 	METHOD method_859 getTile (III)I
@@ -37,24 +39,24 @@ CLASS net/minecraft/class_43 net/minecraft/world/level/chunk/LevelChunk
 		ARG 2 y
 		ARG 3 z
 		ARG 4 id
-	METHOD method_861 setTile (IIIII)Z
+	METHOD method_861 setTileAndData (IIIII)Z
 		ARG 1 x
 		ARG 2 y
 		ARG 3 z
 		ARG 4 id
 		ARG 5 meta
-	METHOD method_862 placeTileEntity (IIILnet/minecraft/class_55;)V
+	METHOD method_862 setTileEntity (IIILnet/minecraft/class_55;)V
 		ARG 1 x
 		ARG 2 y
 		ARG 3 z
 		ARG 4 tileEntity
 	METHOD method_863 getRandom (J)Ljava/util/Random;
-	METHOD method_864 getLightLevel (Lnet/minecraft/class_56;III)I
+	METHOD method_864 getBrightness (Lnet/minecraft/class_56;III)I
 		ARG 1 layer
 		ARG 2 x
 		ARG 3 y
 		ARG 4 z
-	METHOD method_865 setLightLevel (Lnet/minecraft/class_56;IIII)V
+	METHOD method_865 setBrightness (Lnet/minecraft/class_56;IIII)V
 		ARG 1 layer
 		ARG 2 x
 		ARG 3 y
@@ -77,28 +79,29 @@ CLASS net/minecraft/class_43 net/minecraft/world/level/chunk/LevelChunk
 		ARG 3 entities
 	METHOD method_871 shouldSave (Z)Z
 		ARG 1 force
-	METHOD method_872 setChunkData ([BIIIIIII)I
+	METHOD method_872 setBlocksAndData ([BIIIIIII)I
 		ARG 1 chunkData
 	METHOD method_873 recalcHeightmap ()V
 	METHOD method_874 getHeightmap (II)I
 		ARG 1 x
 		ARG 2 z
-	METHOD method_875 getMeta (III)I
+	METHOD method_875 getData (III)I
 		ARG 1 x
 		ARG 2 y
 		ARG 3 z
-	METHOD method_876 setMeta (IIII)V
+	METHOD method_876 setData (IIII)V
 		ARG 1 x
 		ARG 2 y
 		ARG 3 z
 		ARG 4 meta
 	METHOD method_877 removeEntity (Lnet/minecraft/class_57;)V
 		ARG 1 entity
-	METHOD method_879 isHighestTile (III)Z
+	METHOD method_878 lightLava ()V
+	METHOD method_879 isSkyLit (III)Z
 		ARG 1 x
 		ARG 2 y
 		ARG 3 z
-	METHOD method_880 getLightLevel (IIII)I
+	METHOD method_880 getRawBrightness (IIII)I
 		ARG 1 x
 		ARG 2 y
 		ARG 3 z
@@ -114,7 +117,7 @@ CLASS net/minecraft/class_43 net/minecraft/world/level/chunk/LevelChunk
 		ARG 2 y
 		ARG 3 z
 	METHOD method_885 markUnsaved ()V
-	METHOD method_886 isEmptyChunk ()Z
+	METHOD method_886 isEmpty ()Z
 	METHOD method_887 lightGaps (II)V
 		ARG 1 x
 		ARG 2 z
@@ -125,6 +128,7 @@ CLASS net/minecraft/class_43 net/minecraft/world/level/chunk/LevelChunk
 		ARG 1 x
 		ARG 2 y
 		ARG 3 z
-	METHOD method_891 loadChunkData ([BIIIIIII)I
+	METHOD method_890 onLoad ()V
+	METHOD method_891 getBlocksAndData ([BIIIIIII)I
 		ARG 1 chunkData
 	METHOD method_892 recalcHeightmapOnly ()V

@@ -1,5 +1,5 @@
 CLASS net/minecraft/class_59 net/minecraft/world/level/LevelListener
-	METHOD method_1148 updateSky ()V
+	METHOD method_1148 skyColorChanged ()V
 	METHOD method_1149 tileChanged (III)V
 		ARG 1 x
 		ARG 2 y
@@ -11,7 +11,7 @@ CLASS net/minecraft/class_59 net/minecraft/world/level/LevelListener
 		ARG 4 maxX
 		ARG 5 maxY
 		ARG 6 maxZ
-	METHOD method_1151 setChanged (IIILnet/minecraft/class_55;)V
+	METHOD method_1151 tileEntityChanged (IIILnet/minecraft/class_55;)V
 		ARG 1 x
 		ARG 2 y
 		ARG 3 z
@@ -38,12 +38,12 @@ CLASS net/minecraft/class_59 net/minecraft/world/level/LevelListener
 		ARG 6 z
 		ARG 8 volume
 		ARG 9 pitch
-	METHOD method_1155 playMusic (Ljava/lang/String;III)V
+	METHOD method_1155 playStreamingMusic (Ljava/lang/String;III)V
 		ARG 1 track
 		ARG 2 x
 		ARG 3 y
 		ARG 4 z
-	METHOD method_1156 trackEntity (Lnet/minecraft/class_57;)V
+	METHOD method_1156 entityAdded (Lnet/minecraft/class_57;)V
 		ARG 1 entity
-	METHOD method_1157 untrackEntity (Lnet/minecraft/class_57;)V
+	METHOD method_1157 entityRemoved (Lnet/minecraft/class_57;)V
 		ARG 1 entity

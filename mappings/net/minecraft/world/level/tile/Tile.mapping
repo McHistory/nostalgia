@@ -25,7 +25,7 @@ CLASS net/minecraft/class_17 net/minecraft/world/level/tile/Tile
 	FIELD field_1844 WEB Lnet/minecraft/class_17;
 	FIELD field_1845 TALL_GRASS Lnet/minecraft/class_392;
 	FIELD field_1846 DEAD_BUSH Lnet/minecraft/class_204;
-	FIELD field_1847 translationKey Ljava/lang/String;
+	FIELD field_1847 descriptionId Ljava/lang/String;
 	FIELD field_1848 WHEAT Lnet/minecraft/class_17;
 	FIELD field_1849 FARMLAND Lnet/minecraft/class_17;
 	FIELD field_1850 FURNACE Lnet/minecraft/class_17;
@@ -94,7 +94,7 @@ CLASS net/minecraft/class_17 net/minecraft/world/level/tile/Tile
 	FIELD field_1913 TRAPDOOR Lnet/minecraft/class_17;
 	FIELD field_1914 texture I
 	FIELD field_1915 id I
-	FIELD field_1916 destroyTime F
+	FIELD field_1916 destroySpeed F
 	FIELD field_1917 explosionResistance F
 	FIELD field_1920 minX D
 	FIELD field_1921 minY D
@@ -185,7 +185,7 @@ CLASS net/minecraft/class_17 net/minecraft/world/level/tile/Tile
 		ARG 4 z
 		ARG 5 direction
 	METHOD method_1569 isSignalSource ()Z
-	METHOD method_1570 hasDirectSignal (Lnet/minecraft/class_18;IIII)Z
+	METHOD method_1570 getDirectSignal (Lnet/minecraft/class_18;IIII)Z
 		ARG 1 level
 		ARG 2 x
 		ARG 3 y
@@ -260,13 +260,13 @@ CLASS net/minecraft/class_17 net/minecraft/world/level/tile/Tile
 	METHOD method_1594 unbreakable ()Lnet/minecraft/class_17;
 	METHOD method_1595 getDestroyTime ()F
 	METHOD method_1596 getName ()Ljava/lang/String;
-	METHOD method_1597 getTranslationKey ()Ljava/lang/String;
+	METHOD method_1597 getDescriptionId ()Ljava/lang/String;
 	METHOD method_1600 getFoliageColor (Lnet/minecraft/class_14;III)I
 		ARG 1 level
 		ARG 2 x
 		ARG 3 y
 		ARG 4 z
-	METHOD method_1601 drops (ILjava/util/Random;)I
+	METHOD method_1601 getResource (ILjava/util/Random;)I
 		ARG 1 meta
 		ARG 2 random
 	METHOD method_1602 tick (Lnet/minecraft/class_18;IIILjava/util/Random;)V
@@ -275,13 +275,14 @@ CLASS net/minecraft/class_17 net/minecraft/world/level/tile/Tile
 		ARG 3 y
 		ARG 4 z
 		ARG 5 random
-	METHOD method_1603 getDropAmount (Ljava/util/Random;)I
+	METHOD method_1603 getResourceCount (Ljava/util/Random;)I
 		ARG 1 random
 	METHOD method_1604 getBrightness (Lnet/minecraft/class_14;III)F
 		ARG 1 level
 		ARG 2 x
 		ARG 3 y
 		ARG 4 z
+	METHOD method_1605 updateDefaultShape ()V
 	METHOD method_1606 setPlacedOnFace (Lnet/minecraft/class_18;IIII)V
 		ARG 1 level
 		ARG 2 x
@@ -354,7 +355,7 @@ CLASS net/minecraft/class_17 net/minecraft/world/level/tile/Tile
 		ARG 4 z
 		ARG 5 direction
 	METHOD method_1619 getRenderLayer ()I
-	METHOD method_1620 isCubeShaped ()Z
+	METHOD method_1620 isSolidRender ()Z
 	METHOD method_1621 getRenderShape ()I
 	METHOD method_1622 getTileAABB (Lnet/minecraft/class_18;III)Lnet/minecraft/class_25;
 		ARG 1 level
@@ -389,7 +390,7 @@ CLASS net/minecraft/class_17 net/minecraft/world/level/tile/Tile
 		ARG 4 y
 		ARG 5 z
 		ARG 6 meta
-	METHOD method_1629 getItemMeta (I)I
+	METHOD method_1629 getSpawnResourcesAuxValue (I)I
 		ARG 1 meta
 	METHOD method_1630 onRemove (Lnet/minecraft/class_18;III)V
 		ARG 1 level

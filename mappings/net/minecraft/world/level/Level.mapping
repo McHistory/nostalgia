@@ -74,7 +74,7 @@ CLASS net/minecraft/class_18 net/minecraft/world/level/Level
 		ARG 9 pitch
 	METHOD method_151 getSkyDarken (F)I
 		ARG 1 partialTick
-	METHOD method_152 getHighestTile (II)I
+	METHOD method_152 getTopTile (II)I
 		COMMENT Gets the tile id of the highest block above y=64
 		ARG 1 x
 		ARG 2 z
@@ -89,7 +89,7 @@ CLASS net/minecraft/class_18 net/minecraft/world/level/Level
 		ARG 3 z
 		ARG 4 tile
 		ARG 5 meta
-	METHOD method_155 isRegionLoaded (IIIIII)Z
+	METHOD method_155 hasChunksAt (IIIIII)Z
 		ARG 1 minX
 		ARG 2 minY
 		ARG 3 minZ
@@ -248,7 +248,7 @@ CLASS net/minecraft/class_18 net/minecraft/world/level/Level
 		ARG 3 targetY
 		ARG 4 targetZ
 		ARG 5 distance
-	METHOD method_190 getEntityCollisions (Lnet/minecraft/class_57;Lnet/minecraft/class_25;)Ljava/util/List;
+	METHOD method_190 getCubes (Lnet/minecraft/class_57;Lnet/minecraft/class_25;)Ljava/util/List;
 		ARG 1 entity
 		ARG 2 area
 	METHOD method_191 playSound (Lnet/minecraft/class_57;Ljava/lang/String;FF)V
@@ -489,7 +489,7 @@ CLASS net/minecraft/class_18 net/minecraft/world/level/Level
 	METHOD method_275 loadChunkData (IIIIII[B)V
 	METHOD method_276 setSpawnPos (Lnet/minecraft/class_63;)V
 		ARG 1 spawnPos
-	METHOD method_277 addPlayer (Lnet/minecraft/class_54;)V
+	METHOD method_277 loadPlayer (Lnet/minecraft/class_54;)V
 		ARG 1 player
 	METHOD method_278 getPlayerForProxy (Ljava/lang/Class;)Lnet/minecraft/class_57;
 	METHOD method_279 getSkyColor (Lnet/minecraft/class_57;F)Lnet/minecraft/class_26;
@@ -504,6 +504,7 @@ CLASS net/minecraft/class_18 net/minecraft/world/level/Level
 	METHOD method_283 validateSpawn ()V
 	METHOD method_284 getFogColor (F)Lnet/minecraft/class_26;
 		ARG 1 partialTicks
+	METHOD method_285 clearLoadedPlayerData ()V
 	METHOD method_286 getStarBrightness (F)F
 		ARG 1 partialTick
 	METHOD method_287 loadChunksAroundEntity (Lnet/minecraft/class_57;)V
@@ -512,7 +513,7 @@ CLASS net/minecraft/class_18 net/minecraft/world/level/Level
 	METHOD method_289 setRainLevel (F)V
 		ARG 1 newRainLevel
 	METHOD method_290 getDebugInfo ()Ljava/lang/String;
-	METHOD method_291 getEntities ()Ljava/util/List;
+	METHOD method_291 getAllEntities ()Ljava/util/List;
 	METHOD method_293 disconnect ()V
 	METHOD method_294 animateTick (III)V
 		ARG 1 x

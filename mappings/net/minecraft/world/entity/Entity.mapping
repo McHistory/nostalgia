@@ -3,8 +3,8 @@ CLASS net/minecraft/class_57 net/minecraft/world/entity/Entity
 	FIELD field_1591 id I
 	FIELD field_1592 viewScale D
 	FIELD field_1593 blocksBuilding Z
-	FIELD field_1594 passenger Lnet/minecraft/class_57;
-	FIELD field_1595 vehicle Lnet/minecraft/class_57;
+	FIELD field_1594 rider Lnet/minecraft/class_57;
+	FIELD field_1595 riding Lnet/minecraft/class_57;
 	FIELD field_1596 level Lnet/minecraft/class_18;
 	FIELD field_1597 xo D
 	FIELD field_1598 yo D
@@ -23,7 +23,7 @@ CLASS net/minecraft/class_57 net/minecraft/world/entity/Entity
 	FIELD field_1611 nextStep I
 	FIELD field_1612 wasInWater Z
 	FIELD field_1613 invulnerableTime I
-	FIELD field_1614 air I
+	FIELD field_1614 airSupply I
 	FIELD field_1615 fireImmune Z
 	FIELD field_1616 entityData Lnet/minecraft/class_216;
 	FIELD field_1617 defaultBrightness F
@@ -38,26 +38,31 @@ CLASS net/minecraft/class_57 net/minecraft/world/entity/Entity
 	FIELD field_1626 collision Z
 	FIELD field_1627 hurtMarked Z
 	FIELD field_1628 stuckInBlock Z
+	FIELD field_1629 slide Z
 	FIELD field_1630 removed Z
-	FIELD field_1631 ridingHeight F
-	FIELD field_1632 dimensionsWidth F
-	FIELD field_1633 dimensionsHeight F
+	FIELD field_1631 heightOffset F
+	FIELD field_1632 bbWidth F
+	FIELD field_1633 bbHeight F
 	FIELD field_1634 walkDistO F
 	FIELD field_1635 walkDist F
 	FIELD field_1636 fallDistance F
 	FIELD field_1637 xOld D
 	FIELD field_1638 yOld D
 	FIELD field_1639 zOld D
-	FIELD field_1641 maxUpStep F
+	FIELD field_1640 ySlideOffset F
+	FIELD field_1641 footSize F
 	FIELD field_1642 noPhysics Z
 	FIELD field_1643 pushthrough F
 	FIELD field_1644 random Ljava/util/Random;
 	FIELD field_1645 tickCount I
-	FIELD field_1646 fireImmuneTicks I
-	FIELD field_1647 remainingFireTicks I
+	FIELD field_1646 flameTime I
+	FIELD field_1647 onFire I
 	FIELD field_1648 maxAirSupply I
 	FIELD field_1649 firstTick Z
-	FIELD field_1652 skinUrl Ljava/lang/String;
+	FIELD field_1650 xRideRotA D
+	FIELD field_1651 yRideRotA D
+	FIELD field_1652 customTextureUrl Ljava/lang/String;
+	FIELD field_1653 customTextureUrl2 Ljava/lang/String;
 	FIELD field_1654 xp I
 	FIELD field_1655 yp I
 	FIELD field_1656 zp I
@@ -78,20 +83,21 @@ CLASS net/minecraft/class_57 net/minecraft/world/entity/Entity
 		ARG 1 event
 	METHOD method_1314 getTexture ()Ljava/lang/String;
 	METHOD method_1315 resetPos ()V
+	METHOD method_1316 prepareCustomTextures ()V
 	METHOD method_1317 baseTick ()V
 	METHOD method_1318 isAlive ()Z
 	METHOD method_1319 outOfWorld ()V
 	METHOD method_1320 getLookAngle ()Lnet/minecraft/class_26;
-	METHOD method_1321 setDimensions (FF)V
+	METHOD method_1321 setSize (FF)V
 		ARG 1 width
 		ARG 2 height
-	METHOD method_1322 addDeltaMovement (DDD)V
+	METHOD method_1322 push (DDD)V
 		ARG 1 x
 		ARG 3 y
 		ARG 5 z
 	METHOD method_1323 interact (Lnet/minecraft/class_54;)Z
 		ARG 1 player
-	METHOD method_1324 updateMovement (FFF)V
+	METHOD method_1324 moveRelative (FFF)V
 		ARG 1 inputX
 		ARG 2 inputY
 		ARG 3 inputZ
@@ -105,7 +111,7 @@ CLASS net/minecraft/class_57 net/minecraft/world/entity/Entity
 	METHOD method_1327 spawnAtLocation (Lnet/minecraft/class_31;F)Lnet/minecraft/class_142;
 		ARG 1 item
 		ARG 2 heightOffset
-	METHOD method_1328 isSubmergedInFluid (Lnet/minecraft/class_15;)Z
+	METHOD method_1328 isUnderLiquid (Lnet/minecraft/class_15;)Z
 		ARG 1 material
 	METHOD method_1329 newDoubleList ([D)Lnet/minecraft/class_202;
 		ARG 1 doubles
@@ -114,7 +120,7 @@ CLASS net/minecraft/class_57 net/minecraft/world/entity/Entity
 	METHOD method_1331 getEntityData ()Lnet/minecraft/class_216;
 	METHOD method_1332 lavaHurt ()V
 	METHOD method_1333 isInWaterOrRain ()Z
-	METHOD method_1334 isInWater ()Z
+	METHOD method_1334 wasInWater ()Z
 	METHOD method_1335 isInLava ()Z
 	METHOD method_1336 markHurt ()V
 	METHOD method_1337 getEncodeId ()Ljava/lang/String;
@@ -140,7 +146,7 @@ CLASS net/minecraft/class_57 net/minecraft/world/entity/Entity
 	METHOD method_1342 setRot (FF)V
 		ARG 1 yRot
 		ARG 2 xRot
-	METHOD method_1343 saveAsPassenger (Lnet/minecraft/class_8;)Z
+	METHOD method_1343 save (Lnet/minecraft/class_8;)Z
 		ARG 1 tag
 	METHOD method_1344 isFree (DDD)Z
 		ARG 1 xa
@@ -156,7 +162,7 @@ CLASS net/minecraft/class_57 net/minecraft/world/entity/Entity
 		ARG 5 z
 	METHOD method_1348 load (Lnet/minecraft/class_8;)V
 		ARG 1 nbt
-	METHOD method_1349 setShiftKeyDown (Z)V
+	METHOD method_1349 setSneaking (Z)V
 		ARG 1 sneaking
 	METHOD method_1350 distanceTo (DDD)D
 		ARG 1 x
@@ -177,7 +183,7 @@ CLASS net/minecraft/class_57 net/minecraft/world/entity/Entity
 	METHOD method_1357 getRideHeight ()D
 	METHOD method_1358 isMovementNoisy ()Z
 	METHOD method_1359 displayFireAnimation ()Z
-	METHOD method_1360 isPassenger ()Z
+	METHOD method_1360 isRiding ()Z
 	METHOD method_1361 setItemSlot (III)V
 		ARG 1 slot
 		ARG 2 item
@@ -186,13 +192,14 @@ CLASS net/minecraft/class_57 net/minecraft/world/entity/Entity
 		ARG 1 yDegrees
 		ARG 2 xDegrees
 	METHOD method_1363 addAdditionalSaveData (Lnet/minecraft/class_8;)V
-		ARG 1 entityTag
+		ARG 1 tag
 	METHOD method_1364 shouldRenderAtSqrDistance (D)Z
 		ARG 1 distance
 	METHOD method_1365 lerpMotion (DDD)V
 		ARG 1 x
 		ARG 3 y
 		ARG 5 z
+	METHOD method_1366 getShadowHeightOffs ()F
 	METHOD method_1367 shouldRender (Lnet/minecraft/class_26;)Z
 		ARG 1 other
 	METHOD method_1368 readAdditionalSaveData (Lnet/minecraft/class_8;)V
@@ -207,14 +214,15 @@ CLASS net/minecraft/class_57 net/minecraft/world/entity/Entity
 		ARG 1 x
 		ARG 3 y
 		ARG 5 z
-	METHOD method_1373 isShiftKeyDown ()Z
+	METHOD method_1373 isSneaking ()Z
 	METHOD method_1374 checkFallDamage (DZ)V
 		ARG 1 yVelocity
 		ARG 3 onGround
 	METHOD method_1375 setLevel (Lnet/minecraft/class_18;)V
 		ARG 1 level
-	METHOD method_1376 startRiding (Lnet/minecraft/class_57;)V
+	METHOD method_1376 ride (Lnet/minecraft/class_57;)V
 		ARG 1 entity
+	METHOD method_1377 getEquipmentSlots ()[Lnet/minecraft/class_31;
 	METHOD method_1378 getHeadHeight ()F
 	METHOD method_1379 getCollideAgainstBox (Lnet/minecraft/class_57;)Lnet/minecraft/class_25;
 		ARG 1 entity
@@ -237,6 +245,6 @@ CLASS net/minecraft/class_57 net/minecraft/world/entity/Entity
 		ARG 2 scoreToAdd
 	METHOD method_1392 burn (I)V
 		ARG 1 damage
-	METHOD method_1393 isUnderWater ()Z
+	METHOD method_1393 isInWater ()Z
 	METHOD method_1394 getBrightness (F)F
-		ARG 1 tickDelta
+		ARG 1 partialTick

@@ -1,8 +1,10 @@
 CLASS net/minecraft/class_77 net/minecraft/client/particle/Particle
 	FIELD field_2635 texture I
+	FIELD field_2636 uo F
+	FIELD field_2637 vo F
 	FIELD field_2638 age I
 	FIELD field_2639 lifetime I
-	FIELD field_2640 scale F
+	FIELD field_2640 size F
 	FIELD field_2641 gravity F
 	FIELD field_2642 rCol F
 	FIELD field_2643 gCol F
@@ -15,14 +17,19 @@ CLASS net/minecraft/class_77 net/minecraft/client/particle/Particle
 		ARG 2 x
 		ARG 4 y
 		ARG 6 z
-		ARG 8 xD
-		ARG 10 yD
-		ARG 12 zD
+		ARG 8 xa
+		ARG 10 ya
+		ARG 12 za
 	METHOD method_2000 setPower (F)Lnet/minecraft/class_77;
 		ARG 1 power
 	METHOD method_2001 scale (F)Lnet/minecraft/class_77;
 		ARG 1 scale
 	METHOD method_2002 render (Lnet/minecraft/class_67;FFFFFF)V
-		ARG 1 tesselator
+		ARG 1 t
 		ARG 2 partialTick
-	METHOD method_2003 getRenderType ()I
+		ARG 3 xa
+		ARG 4 ya
+		ARG 5 za
+		ARG 6 xa2
+		ARG 7 za2
+	METHOD method_2003 getParticleTexture ()I
