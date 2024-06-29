@@ -1,7 +1,7 @@
 CLASS net/minecraft/class_240 net/minecraft/network/PacketListener
 	METHOD method_1422 handleInteract (Lnet/minecraft/class_1;)V
 		ARG 1 packet
-	METHOD method_1423 handleContainerClick (Lnet/minecraft/class_145;)V
+	METHOD method_1423 handleUseItem (Lnet/minecraft/class_145;)V
 		ARG 1 packet
 	METHOD method_1424 handleSetCarriedItem (Lnet/minecraft/class_170;)V
 		ARG 1 packet
@@ -47,7 +47,7 @@ CLASS net/minecraft/class_240 net/minecraft/network/PacketListener
 		ARG 1 packet
 	METHOD method_1445 handleContainerSetSlot (Lnet/minecraft/class_171;)V
 		ARG 1 packet
-	METHOD method_1446 openTileInventory (Lnet/minecraft/class_201;)V
+	METHOD method_1446 handleContainerOpen (Lnet/minecraft/class_201;)V
 		ARG 1 packet
 	METHOD method_1447 handleEntityEvent (Lnet/minecraft/class_210;)V
 		ARG 1 packet
@@ -63,11 +63,11 @@ CLASS net/minecraft/class_240 net/minecraft/network/PacketListener
 		ARG 1 packet
 	METHOD method_1453 handleAddItemEntity (Lnet/minecraft/class_295;)V
 		ARG 1 packet
-	METHOD method_1454 handleSetEntityPassengerPacket (Lnet/minecraft/class_308;)V
+	METHOD method_1454 handleRidePacket (Lnet/minecraft/class_308;)V
 		ARG 1 packet
 	METHOD method_1455 handleUpdateStat (Lnet/minecraft/class_319;)V
 		ARG 1 packet
-	METHOD method_1456 setSpawn (Lnet/minecraft/class_373;)V
+	METHOD method_1456 handleSetSpawn (Lnet/minecraft/class_373;)V
 		ARG 1 packet
 	METHOD method_1457 handleTeleportEntity (Lnet/minecraft/class_374;)V
 		ARG 1 packet

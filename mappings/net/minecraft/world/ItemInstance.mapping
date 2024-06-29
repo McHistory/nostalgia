@@ -2,7 +2,7 @@ CLASS net/minecraft/class_31 net/minecraft/world/ItemInstance
 	FIELD field_751 count I
 	FIELD field_752 popTime I
 	FIELD field_753 id I
-	FIELD field_754 damage I
+	FIELD field_754 auxValue I
 	METHOD <init> (III)V
 		ARG 1 id
 		ARG 2 count
@@ -47,7 +47,7 @@ CLASS net/minecraft/class_31 net/minecraft/world/ItemInstance
 		ARG 2 entity
 		ARG 3 inventorySlot
 		ARG 4 isCurrentItem
-	METHOD method_700 onEmpty (Lnet/minecraft/class_54;)V
+	METHOD method_700 snap (Lnet/minecraft/class_54;)V
 		COMMENT Fired right before the game sets the item in the current slot its in to empty
 		ARG 1 player
 	METHOD method_701 useOn (Lnet/minecraft/class_54;Lnet/minecraft/class_18;IIII)Z
@@ -57,7 +57,7 @@ CLASS net/minecraft/class_31 net/minecraft/world/ItemInstance
 		ARG 4 y
 		ARG 5 z
 		ARG 6 face
-	METHOD method_702 equals (Lnet/minecraft/class_31;)Z
+	METHOD method_702 sameItem (Lnet/minecraft/class_31;)Z
 		ARG 1 other
 	METHOD method_703 matches (Lnet/minecraft/class_31;Lnet/minecraft/class_31;)Z
 		ARG 0 item0
@@ -86,16 +86,16 @@ CLASS net/minecraft/class_31 net/minecraft/world/ItemInstance
 	METHOD method_714 canDestroySpecial (Lnet/minecraft/class_17;)Z
 		ARG 1 tile
 	METHOD method_715 isStackable ()Z
-	METHOD method_716 sameItem (Lnet/minecraft/class_31;)Z
+	METHOD method_716 equals (Lnet/minecraft/class_31;)Z
 		ARG 1 other
 	METHOD method_717 isDamageableItem ()Z
 	METHOD method_718 matches (Lnet/minecraft/class_31;)Z
 		ARG 1 other
-	METHOD method_719 hasMeta ()Z
+	METHOD method_719 isStackedByData ()Z
 	METHOD method_720 isDamaged ()Z
 	METHOD method_721 getDamageValue ()I
-	METHOD method_722 getMeta ()I
+	METHOD method_722 getAuxValue ()I
 	METHOD method_723 getMaxDamage ()I
 	METHOD method_724 copy ()Lnet/minecraft/class_31;
-	METHOD method_725 getTexture ()I
+	METHOD method_725 getIcon ()I
 	METHOD method_726 getTranslationKey ()Ljava/lang/String;

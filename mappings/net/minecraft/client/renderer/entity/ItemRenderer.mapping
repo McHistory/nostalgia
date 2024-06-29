@@ -1,16 +1,37 @@
 CLASS net/minecraft/class_92 net/minecraft/client/renderer/entity/ItemRenderer
+	FIELD field_1708 tileRenderer Lnet/minecraft/class_13;
 	FIELD field_1709 random Ljava/util/Random;
+	METHOD method_1483 blit (IIIIII)V
+		ARG 1 x
+		ARG 2 y
+		ARG 3 sx
+		ARG 4 sy
+		ARG 5 w
+		ARG 6 h
 	METHOD method_1485 fillRect (Lnet/minecraft/class_67;IIIII)V
 		ARG 1 tesselator
-		ARG 2 minX
-		ARG 3 minY
-		ARG 4 maxX
-		ARG 5 maxY
+		ARG 2 x
+		ARG 3 y
+		ARG 4 w
+		ARG 5 h
 		ARG 6 color
-	METHOD method_1488 renderGuiItemDecorations (Lnet/minecraft/class_34;Lnet/minecraft/class_76;Lnet/minecraft/class_31;II)V
+	METHOD method_1486 renderGuiItem (Lnet/minecraft/class_34;Lnet/minecraft/class_76;IIIII)V
 		ARG 1 font
-		ARG 2 texureManager
+		ARG 2 textures
+		ARG 3 item
+		ARG 4 data
+		ARG 5 icon
+		ARG 6 x
+		ARG 7 t
+	METHOD method_1487 renderAndDecorateItem (Lnet/minecraft/class_34;Lnet/minecraft/class_76;Lnet/minecraft/class_31;II)V
+		ARG 1 font
+		ARG 2 textures
 		ARG 3 item
 		ARG 4 x
 		ARG 5 y
-	METHOD method_1487 renderAndDecorateItem (Lnet/minecraft/class_34;Lnet/minecraft/class_76;Lnet/minecraft/class_31;II)V
+	METHOD method_1488 renderGuiItemDecorations (Lnet/minecraft/class_34;Lnet/minecraft/class_76;Lnet/minecraft/class_31;II)V
+		ARG 1 font
+		ARG 2 textures
+		ARG 3 item
+		ARG 4 x
+		ARG 5 y

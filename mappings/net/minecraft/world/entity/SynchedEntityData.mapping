@@ -1,6 +1,6 @@
 CLASS net/minecraft/class_216 net/minecraft/world/entity/SynchedEntityData
-	FIELD field_1740 dataTypes Ljava/util/HashMap;
-	FIELD field_1741 dataHolders Ljava/util/Map;
+	FIELD field_1740 typeToConstant Ljava/util/HashMap;
+	FIELD field_1741 itemsById Ljava/util/Map;
 	FIELD field_1742 isDirty Z
 	METHOD method_1500 isDirty ()Z
 	METHOD method_1501 getByte (I)B
@@ -10,7 +10,7 @@ CLASS net/minecraft/class_216 net/minecraft/world/entity/SynchedEntityData
 		ARG 2 data
 	METHOD method_1503 unpack (Ljava/io/DataInputStream;)Ljava/util/List;
 		ARG 0 data
-	METHOD method_1504 write (Ljava/io/DataOutputStream;)V
+	METHOD method_1504 packAll (Ljava/io/DataOutputStream;)V
 		ARG 1 data
 	METHOD method_1505 writeDataItem (Ljava/io/DataOutputStream;Lnet/minecraft/class_270;)V
 		ARG 0 data
@@ -18,7 +18,7 @@ CLASS net/minecraft/class_216 net/minecraft/world/entity/SynchedEntityData
 	METHOD method_1506 pack (Ljava/util/List;Ljava/io/DataOutputStream;)V
 		ARG 0 items
 		ARG 1 data
-	METHOD method_1507 getAll ()Ljava/util/ArrayList;
+	METHOD method_1507 packDirty ()Ljava/util/ArrayList;
 	METHOD method_1508 getInt (I)I
 		ARG 1 id
 	METHOD method_1509 set (ILjava/lang/Object;)V
@@ -27,3 +27,4 @@ CLASS net/minecraft/class_216 net/minecraft/world/entity/SynchedEntityData
 	METHOD method_1510 getString (I)Ljava/lang/String;
 		ARG 1 id
 	METHOD method_1511 assignValues (Ljava/util/List;)V
+		ARG 1 values

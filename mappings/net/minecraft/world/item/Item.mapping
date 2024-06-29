@@ -25,7 +25,7 @@ CLASS net/minecraft/class_124 net/minecraft/world/item/Item
 	FIELD field_399 CHAIN_HELMET Lnet/minecraft/class_124;
 	FIELD field_400 CHAIN_CHESTPLATE Lnet/minecraft/class_124;
 	FIELD field_401 CHAIN_LEGGINGS Lnet/minecraft/class_124;
-	FIELD field_402 durability I
+	FIELD field_402 maxDamage I
 	FIELD field_403 REDSTONE Lnet/minecraft/class_124;
 	FIELD field_404 SNOWBALL Lnet/minecraft/class_124;
 	FIELD field_405 BOAT Lnet/minecraft/class_124;
@@ -87,9 +87,10 @@ CLASS net/minecraft/class_124 net/minecraft/world/item/Item
 	FIELD field_461 id I
 	FIELD field_462 maxStackSize I
 	FIELD field_463 texture I
-	FIELD field_465 hasMeta Z
-	FIELD field_466 remainder Lnet/minecraft/class_124;
-	FIELD field_467 translationKey Ljava/lang/String;
+	FIELD field_464 handEquipped Z
+	FIELD field_465 isStackedByData Z
+	FIELD field_466 craftingRemainingItem Lnet/minecraft/class_124;
+	FIELD field_467 descriptionId Ljava/lang/String;
 	FIELD field_468 items [Lnet/minecraft/class_124;
 	FIELD field_469 IRON_SHOVEL Lnet/minecraft/class_124;
 	FIELD field_470 IRON_PICKAXE Lnet/minecraft/class_124;
@@ -126,15 +127,15 @@ CLASS net/minecraft/class_124 net/minecraft/world/item/Item
 	METHOD method_438 getDestroySpeed (Lnet/minecraft/class_31;Lnet/minecraft/class_17;)F
 		ARG 1 item
 		ARG 2 tile
-	METHOD method_439 getTexture (Lnet/minecraft/class_31;)I
+	METHOD method_439 getIcon (Lnet/minecraft/class_31;)I
 		ARG 1 item
 	METHOD method_440 getItemColor (I)I
+		ARG 1 aux
+	METHOD method_441 getIcon (I)I
 		ARG 1 meta
-	METHOD method_441 getTexture (I)I
-		ARG 1 meta
-	METHOD method_442 getTranslationKey (Lnet/minecraft/class_31;)Ljava/lang/String;
+	METHOD method_442 getDescriptionId (Lnet/minecraft/class_31;)Ljava/lang/String;
 		ARG 1 item
-	METHOD method_443 getTranslationKey ()Ljava/lang/String;
+	METHOD method_443 getDescriptionId ()Ljava/lang/String;
 	METHOD method_444 useOn (Lnet/minecraft/class_31;Lnet/minecraft/class_54;Lnet/minecraft/class_18;IIII)Z
 		ARG 1 item
 		ARG 2 player
@@ -150,18 +151,20 @@ CLASS net/minecraft/class_124 net/minecraft/world/item/Item
 		ARG 3 attacker
 	METHOD method_447 getAttackDamage (Lnet/minecraft/class_57;)I
 		ARG 1 target
-	METHOD method_448 hasToolOffset ()Z
+	METHOD method_448 isHandEquipped ()Z
 		COMMENT Determines if the item should be rendered higher for things such as tools
+	METHOD method_449 isMirroredArt ()Z
 	METHOD method_450 canDestroySpecial (Lnet/minecraft/class_17;)Z
 		ARG 1 tile
 	METHOD method_451 use (Lnet/minecraft/class_31;Lnet/minecraft/class_18;Lnet/minecraft/class_54;)Lnet/minecraft/class_31;
 		ARG 1 item
 		ARG 2 level
 		ARG 3 player
-	METHOD method_452 texture (II)Lnet/minecraft/class_124;
+	METHOD method_452 setIcon (II)Lnet/minecraft/class_124;
 		ARG 1 row
 		ARG 2 column
-	METHOD method_453 getCraftingResult (Lnet/minecraft/class_124;)Lnet/minecraft/class_124;
+	METHOD method_453 setCraftingRemainingItem (Lnet/minecraft/class_124;)Lnet/minecraft/class_124;
+		ARG 1 item
 	METHOD method_454 inventoryTick (Lnet/minecraft/class_31;Lnet/minecraft/class_18;Lnet/minecraft/class_57;IZ)V
 		ARG 1 item
 		ARG 2 level
@@ -171,9 +174,10 @@ CLASS net/minecraft/class_124 net/minecraft/world/item/Item
 	METHOD method_455 interactEnemy (Lnet/minecraft/class_31;Lnet/minecraft/class_127;)V
 		ARG 1 item
 		ARG 2 entity
-	METHOD method_456 setTranslationKey (Ljava/lang/String;)Lnet/minecraft/class_124;
-	METHOD method_457 setMeta (Z)Lnet/minecraft/class_124;
-		ARG 1 hasMeta
+	METHOD method_456 setDescriptionId (Ljava/lang/String;)Lnet/minecraft/class_124;
+		ARG 1 name
+	METHOD method_457 setStackedByData (Z)Lnet/minecraft/class_124;
+		ARG 1 isStackedByData
 	METHOD method_458 texture (I)Lnet/minecraft/class_124;
 		ARG 1 index
 	METHOD method_459 getMaxStackSize ()I
@@ -183,11 +187,13 @@ CLASS net/minecraft/class_124 net/minecraft/world/item/Item
 		ARG 1 item
 		ARG 2 level
 		ARG 3 player
-	METHOD method_462 hasMeta ()Z
-	METHOD method_463 setDurability (I)Lnet/minecraft/class_124;
-		ARG 1 durability
-	METHOD method_464 getDurability ()I
-	METHOD method_467 getRecipeRemainder ()Lnet/minecraft/class_124;
-	METHOD method_468 hasRecipeRemainder ()Z
-	METHOD method_470 getPlacementMeta (I)I
+	METHOD method_462 isStackedByData ()Z
+	METHOD method_463 setMaxDamage (I)Lnet/minecraft/class_124;
+		ARG 1 maxDamage
+	METHOD method_464 getMaxDamage ()I
+	METHOD method_466 handEquipped ()Lnet/minecraft/class_124;
+	METHOD method_467 getCraftingRemainingItem ()Lnet/minecraft/class_124;
+	METHOD method_468 hasCraftingRemainingItem ()Z
+	METHOD method_469 getName ()Ljava/lang/String;
+	METHOD method_470 getLevelDataForAuxValue (I)I
 		ARG 1 itemMeta

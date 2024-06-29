@@ -22,8 +22,8 @@ CLASS net/minecraft/class_127 net/minecraft/world/entity/LivingEntity
 	FIELD field_1029 zza F
 	FIELD field_1030 yRotA F
 	FIELD field_1031 jumping Z
-	FIELD field_1032 xRotA F
-	FIELD field_1033 movementSpeed F
+	FIELD field_1032 defaultLookAngle F
+	FIELD field_1033 runSpeed F
 	FIELD field_1034 lookTime I
 	FIELD field_1035 attackAnim F
 	FIELD field_1036 health I
@@ -38,9 +38,9 @@ CLASS net/minecraft/class_127 net/minecraft/world/entity/LivingEntity
 	FIELD field_1045 dead Z
 	FIELD field_1046 modelNum I
 	FIELD field_1047 animSpeed F
-	FIELD field_1048 animationSpeedOld F
-	FIELD field_1049 animationSpeed F
-	FIELD field_1050 animationPosition F
+	FIELD field_1048 walkAnimSpeedO F
+	FIELD field_1049 walkAnimSpeed F
+	FIELD field_1050 walkAnimPos F
 	FIELD field_1051 lerpSteps I
 	FIELD field_1052 lerpX D
 	FIELD field_1053 lerpY D
@@ -51,7 +51,7 @@ CLASS net/minecraft/class_127 net/minecraft/world/entity/LivingEntity
 	FIELD field_1058 lastHurt I
 	FIELD field_1059 noActionTime I
 	FIELD field_1060 xxa F
-	FIELD field_1061 lookingAt Lnet/minecraft/class_57;
+	FIELD field_1061 lookAt Lnet/minecraft/class_57;
 	METHOD method_909 getCarriedItem ()Lnet/minecraft/class_31;
 	METHOD method_910 serverAiStep ()V
 	METHOD method_911 getAmbientSound ()Ljava/lang/String;
@@ -109,5 +109,5 @@ CLASS net/minecraft/class_127 net/minecraft/world/entity/LivingEntity
 	METHOD method_945 travel (FF)V
 		ARG 1 xxa
 		ARG 2 zza
-	METHOD method_946 hurt (I)V
+	METHOD method_946 actuallyHurt (I)V
 		ARG 1 damage

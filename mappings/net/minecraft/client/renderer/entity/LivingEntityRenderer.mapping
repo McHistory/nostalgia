@@ -1,17 +1,17 @@
 CLASS net/minecraft/class_245 net/minecraft/client/renderer/entity/LivingEntityRenderer
 	FIELD field_909 model Lnet/minecraft/class_173;
-	FIELD field_910 innerModel Lnet/minecraft/class_173;
+	FIELD field_910 armor Lnet/minecraft/class_173;
 	METHOD <init> (Lnet/minecraft/class_173;F)V
 		ARG 1 model
-		ARG 2 shadowRadius
-	METHOD method_815 setInnerModel (Lnet/minecraft/class_173;)V
+		ARG 2 shadow
+	METHOD method_815 setArmor (Lnet/minecraft/class_173;)V
 		ARG 1 model
 	METHOD method_816 getFlipDegrees (Lnet/minecraft/class_127;)F
 		ARG 1 entity
 	METHOD method_817 getOverlayColor (Lnet/minecraft/class_127;FF)I
-		ARG 1 creeper
+		ARG 1 entity
 		ARG 2 brightness
-		ARG 3 partialTick
+		ARG 3 a
 	METHOD method_818 renderNameTag (Lnet/minecraft/class_127;Ljava/lang/String;DDDI)V
 		ARG 1 entity
 		ARG 2 username
@@ -25,7 +25,7 @@ CLASS net/minecraft/class_245 net/minecraft/client/renderer/entity/LivingEntityR
 		ARG 3 partialTick
 	METHOD method_820 getAttackAnim (Lnet/minecraft/class_127;F)F
 		ARG 1 living
-		ARG 2 partialTick
+		ARG 2 a
 	METHOD method_821 renderNameTags (Lnet/minecraft/class_127;DDD)V
 		ARG 1 player
 		ARG 2 x
@@ -33,24 +33,24 @@ CLASS net/minecraft/class_245 net/minecraft/client/renderer/entity/LivingEntityR
 		ARG 6 z
 	METHOD method_823 scale (Lnet/minecraft/class_127;F)V
 		ARG 1 entity
-		ARG 2 partialTick
+		ARG 2 a
 	METHOD method_824 setupRotations (Lnet/minecraft/class_127;FFF)V
 		ARG 1 living
 		ARG 2 bob
-		ARG 3 yHeadRot
-		ARG 4 partialTick
+		ARG 3 bodyRot
+		ARG 4 a
 	METHOD method_825 prepareArmor (Lnet/minecraft/class_127;IF)Z
 		ARG 1 entity
-		ARG 2 model
-		ARG 3 partialTick
+		ARG 2 layer
+		ARG 3 a
 	METHOD method_826 setupPosition (Lnet/minecraft/class_127;DDD)V
 		ARG 1 living
 		ARG 2 x
 		ARG 4 y
 		ARG 6 z
 	METHOD method_827 additionalRendering (Lnet/minecraft/class_127;F)V
-		ARG 1 player
-		ARG 2 partialTick
+		ARG 1 entity
+		ARG 2 a
 	METHOD method_828 getBob (Lnet/minecraft/class_127;F)F
 		ARG 1 living
-		ARG 2 partialTick
+		ARG 2 a

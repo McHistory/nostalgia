@@ -3,7 +3,7 @@ CLASS net/minecraft/class_136 net/minecraft/world/entity/player/Inventory
 	FIELD field_746 armor [Lnet/minecraft/class_31;
 	FIELD field_747 selected I
 	FIELD field_748 player Lnet/minecraft/class_54;
-	FIELD field_749 dirty Z
+	FIELD field_749 changed Z
 	FIELD field_750 carried Lnet/minecraft/class_31;
 	METHOD <init> (Lnet/minecraft/class_54;)V
 		ARG 1 player
@@ -16,7 +16,7 @@ CLASS net/minecraft/class_136 net/minecraft/world/entity/player/Inventory
 	METHOD method_674 getDestroySpeed (Lnet/minecraft/class_17;)F
 		ARG 1 tile
 	METHOD method_675 getSelected ()Lnet/minecraft/class_31;
-	METHOD method_676 shoot (I)Z
+	METHOD method_676 removeResource (I)Z
 		COMMENT Decrements the the item and removes its when its count reaches 0.
 		COMMENT @return Returns true if the inventory contains the item
 		ARG 1 item
@@ -30,9 +30,9 @@ CLASS net/minecraft/class_136 net/minecraft/world/entity/player/Inventory
 		ARG 1 amount
 	METHOD method_681 contains (Lnet/minecraft/class_31;)Z
 		ARG 1 item
-	METHOD method_682 findSlotMatchingItem (I)I
+	METHOD method_682 getSlot (I)I
 		ARG 1 itemId
-	METHOD method_683 findSlotMatchingItem (Lnet/minecraft/class_31;)I
+	METHOD method_683 getSlotWithRemainingSpace (Lnet/minecraft/class_31;)I
 		ARG 1 item
 	METHOD method_684 getSelectionSize ()I
 	METHOD method_685 addResource (Lnet/minecraft/class_31;)I
@@ -42,10 +42,10 @@ CLASS net/minecraft/class_136 net/minecraft/world/entity/player/Inventory
 	METHOD method_688 dropAll ()V
 	METHOD method_689 getCarried ()Lnet/minecraft/class_31;
 	METHOD method_690 getFreeSlot ()I
-	METHOD method_691 setPickedItem (IZ)V
+	METHOD method_691 grabTexture (IZ)V
 		ARG 1 tile
 		ARG 2 isClient
 	METHOD method_692 swapPaint (I)V
 		ARG 1 direction
-	METHOD method_693 getArmorItem (I)Lnet/minecraft/class_31;
+	METHOD method_693 getArmor (I)Lnet/minecraft/class_31;
 		ARG 1 slot
