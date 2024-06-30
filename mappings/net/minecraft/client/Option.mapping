@@ -12,10 +12,16 @@ CLASS net/minecraft/class_271 net/minecraft/client/Option
 	FIELD field_1107 GRAPHICS Lnet/minecraft/class_271;
 	FIELD field_1108 AMBIENT_OCCLUSION Lnet/minecraft/class_271;
 	FIELD field_1109 GUI_SCALE Lnet/minecraft/class_271;
-	FIELD field_1110 slider Z
-	FIELD field_1112 translationKey Ljava/lang/String;
-	METHOD method_966 isSlider ()Z
-	METHOD method_967 getOptionFromid (I)Lnet/minecraft/class_271;
+	FIELD field_1110 isProgress Z
+	FIELD field_1111 isBoolean Z
+	FIELD field_1112 captionId Ljava/lang/String;
+	METHOD <init> (Ljava/lang/String;ILjava/lang/String;ZZ)V
+		ARG 3 captionId
+		ARG 4 isProgress
+		ARG 5 isBoolean
+	METHOD method_966 isProgress ()Z
+	METHOD method_967 getItem (I)Lnet/minecraft/class_271;
 		ARG 0 id
+	METHOD method_968 isBoolean ()Z
 	METHOD method_969 getId ()I
-	METHOD method_970 getTranslationKey ()Ljava/lang/String;
+	METHOD method_970 getCaptionId ()Ljava/lang/String;
