@@ -1,5 +1,20 @@
 CLASS net/minecraft/class_91 net/minecraft/client/gui/screens/StatsScreen
-	FIELD field_303 parent Lnet/minecraft/class_32;
+	FIELD field_303 lastScreen Lnet/minecraft/class_32;
+	FIELD field_304 title Ljava/lang/String;
 	FIELD field_305 itemRenderer Lnet/minecraft/class_92;
+	FIELD field_306 statsList Lnet/minecraft/class_91$class_93;
+	FIELD field_307 blockStatsList Lnet/minecraft/class_91$class_94;
+	FIELD field_308 itemStatsList Lnet/minecraft/class_91$class_95;
+	FIELD field_309 stats Lnet/minecraft/class_96;
+	FIELD field_310 activeList Lnet/minecraft/class_97;
 	METHOD <init> (Lnet/minecraft/class_32;Lnet/minecraft/class_96;)V
-		ARG 1 parent
+		ARG 1 lastScreen
+		ARG 2 stats
+	METHOD method_370 initButtons ()V
+	CLASS class_93 GeneralStatisticsList
+	CLASS class_94 BlockStatisticsList
+	CLASS class_95 ItemStatisticsList
+	CLASS class_99
+		FIELD field_314 headerPressed I
+		FIELD field_315 statItemList Ljava/util/List;
+		FIELD field_316 itemStatSorter Ljava/util/Comparator;

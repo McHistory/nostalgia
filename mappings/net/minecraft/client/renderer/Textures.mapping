@@ -2,8 +2,8 @@ CLASS net/minecraft/class_76 net/minecraft/client/renderer/Textures
 	FIELD field_1245 MIPMAP Z
 	FIELD field_1246 idMap Ljava/util/HashMap;
 	FIELD field_1247 pixelMap Ljava/util/HashMap;
-	FIELD field_1248 byId Ljava/util/HashMap;
-	FIELD field_1249 texureBuffer Ljava/nio/IntBuffer;
+	FIELD field_1248 loadedImages Ljava/util/HashMap;
+	FIELD field_1249 ib Ljava/nio/IntBuffer;
 	FIELD field_1250 pixels Ljava/nio/ByteBuffer;
 	FIELD field_1251 dynamicTextures Ljava/util/List;
 	FIELD field_1252 htt Ljava/util/Map;
@@ -16,36 +16,47 @@ CLASS net/minecraft/class_76 net/minecraft/client/renderer/Textures
 		ARG 1 packManager
 		ARG 2 options
 	METHOD method_1084 tick ()V
-	METHOD method_1085 deleteTexture (I)V
-		ARG 1 texture
+	METHOD method_1085 releaseTexture (I)V
+		ARG 1 id
+	METHOD method_1086 smoothBlend (II)I
+		ARG 1 c0
+		ARG 2 c1
 	METHOD method_1087 addDynamicTexture (Lnet/minecraft/class_336;)V
 		ARG 1 texture
-	METHOD method_1088 generateTexture (Ljava/awt/image/BufferedImage;)I
+	METHOD method_1088 getTexture (Ljava/awt/image/BufferedImage;)I
 		ARG 1 image
-	METHOD method_1089 initTexture (Ljava/awt/image/BufferedImage;I)V
-		ARG 1 image
-		ARG 2 texture
+	METHOD method_1089 loadTexture (Ljava/awt/image/BufferedImage;I)V
+		ARG 1 img
+		ARG 2 id
 	METHOD method_1090 getPixels (Ljava/awt/image/BufferedImage;[I)[I
 		ARG 1 image
 		ARG 2 pixels
 	METHOD method_1091 readImage (Ljava/io/InputStream;)Ljava/awt/image/BufferedImage;
-		ARG 1 input
+		ARG 1 in
 	METHOD method_1092 getPixels (Ljava/lang/String;)[I
 		ARG 1 image
 	METHOD method_1093 loadHttpTexture (Ljava/lang/String;Ljava/lang/String;)I
-		ARG 1 key
-		ARG 2 name
+		ARG 1 url
+		ARG 2 backup
 	METHOD method_1094 addHttpTexture (Ljava/lang/String;Lnet/minecraft/class_131;)Lnet/minecraft/class_130;
-	METHOD method_1095 bindTexture ([IIII)V
+		ARG 1 url
+		ARG 2 processor
+	METHOD method_1095 loadTexture ([IIII)V
 		ARG 1 pixels
 		ARG 2 width
 		ARG 3 height
 		ARG 4 texture
-	METHOD method_1096 reload ()V
+	METHOD method_1096 reloadAll ()V
 	METHOD method_1097 bind (I)V
-		ARG 1 textureId
+		ARG 1 id
+	METHOD method_1098 crispBlend (II)I
+		ARG 1 c0
+		ARG 2 c1
 	METHOD method_1099 getPixels (Ljava/awt/image/BufferedImage;)[I
 		ARG 1 image
 	METHOD method_1100 loadTexture (Ljava/lang/String;)I
 		ARG 1 textureLocation
+	METHOD method_1101 makeStrip (Ljava/awt/image/BufferedImage;)Ljava/awt/image/BufferedImage;
+		ARG 1 source
 	METHOD method_1102 removeHttpTexture (Ljava/lang/String;)V
+		ARG 1 url
