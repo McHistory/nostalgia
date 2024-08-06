@@ -1,11 +1,11 @@
 CLASS net/minecraft/class_34 net/minecraft/client/gui/Font
 	FIELD field_2461 fontTexture I
-	FIELD field_2462 advance [I
-	FIELD field_2463 fontList I
-	FIELD field_2464 glyphBuffer Ljava/nio/IntBuffer;
+	FIELD field_2462 charWidths [I
+	FIELD field_2463 listPos I
+	FIELD field_2464 ib Ljava/nio/IntBuffer;
 	METHOD <init> (Lnet/minecraft/class_322;Ljava/lang/String;Lnet/minecraft/class_76;)V
 		ARG 1 options
-		ARG 2 fontAtlas
+		ARG 2 name
 		ARG 3 textureManager
 	METHOD method_1901 width (Ljava/lang/String;)I
 		ARG 1 text
@@ -14,13 +14,13 @@ CLASS net/minecraft/class_34 net/minecraft/client/gui/Font
 		ARG 2 x
 		ARG 3 y
 		ARG 4 color
-	METHOD method_1905 drawString (Ljava/lang/String;IIIZ)V
+	METHOD method_1905 draw (Ljava/lang/String;IIIZ)V
 		ARG 1 text
 		ARG 2 x
 		ARG 3 y
 		ARG 4 color
 		ARG 5 shadow
-	METHOD method_1906 drawStringWithoutShadow (Ljava/lang/String;III)V
+	METHOD method_1906 draw (Ljava/lang/String;III)V
 		ARG 1 text
 		ARG 2 x
 		ARG 3 y
