@@ -7,6 +7,7 @@ CLASS net/minecraft/class_181 net/minecraft/client/gui/components/EditBox
 	FIELD field_2425 width I
 	FIELD field_2426 height I
 	FIELD field_2427 value Ljava/lang/String;
+	FIELD field_2428 maxLength I
 	FIELD field_2429 tickCount I
 	FIELD field_2430 parent Lnet/minecraft/class_32;
 	METHOD <init> (Lnet/minecraft/class_32;Lnet/minecraft/class_34;IIIILjava/lang/String;)V
@@ -21,6 +22,8 @@ CLASS net/minecraft/class_181 net/minecraft/client/gui/components/EditBox
 	METHOD method_1877 charTyped (CI)V
 		ARG 1 codePoint
 		ARG 2 modifiers
+	METHOD method_1878 setMaxLength (I)V
+		ARG 1 length
 	METHOD method_1879 clicked (III)V
 		ARG 1 mouseX
 		ARG 2 mouseY

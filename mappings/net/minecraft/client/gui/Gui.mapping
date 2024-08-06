@@ -1,12 +1,14 @@
 CLASS net/minecraft/class_588 net/minecraft/client/gui/Gui
+	FIELD field_2541 selectedName Ljava/lang/String;
 	FIELD field_2542 destroyProgress F
+	FIELD field_2543 tbr F
 	FIELD field_2544 itemRenderer Lnet/minecraft/class_92;
-	FIELD field_2545 messages Ljava/util/List;
+	FIELD field_2545 guiMessages Ljava/util/List;
 	FIELD field_2546 random Ljava/util/Random;
 	FIELD field_2547 minecraft Lnet/minecraft/client/Minecraft;
 	FIELD field_2548 tickCount I
-	FIELD field_2549 titleText Ljava/lang/String;
-	FIELD field_2550 overlayMessageTime I
+	FIELD field_2549 nowPlayingString Ljava/lang/String;
+	FIELD field_2550 nowPlayingTime I
 	FIELD field_2551 animateOverlayMessageColor Z
 	METHOD <init> (Lnet/minecraft/client/Minecraft;)V
 		ARG 1 client
@@ -24,9 +26,18 @@ CLASS net/minecraft/class_588 net/minecraft/client/gui/Gui
 		ARG 1 screenWidth
 		ARG 2 screenHeight
 	METHOD method_1948 renderSlot (IIIF)V
+		ARG 1 index
+		ARG 2 x
+		ARG 3 y
+		ARG 4 a
 	METHOD method_1949 addMessage (Ljava/lang/String;)V
-		ARG 1 message
+		ARG 1 msg
 	METHOD method_1950 clearMessages ()V
 	METHOD method_1951 renderPortalOverlay (FII)V
+		ARG 1 portalTime
+		ARG 2 width
+		ARG 3 height
 	METHOD method_1952 setNowPlaying (Ljava/lang/String;)V
 		ARG 1 song
+	METHOD method_1953 addTranslatedMessage (Ljava/lang/String;)V
+		ARG 1 msg
