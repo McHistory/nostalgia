@@ -6,8 +6,8 @@ c	net/minecraft/unmapped/C_0070166
 		p	3			p_3
 		p	4			p_4
 c	net/minecraft/unmapped/C_0289174
-	f	[Lnet/minecraft/unmapped/C_9856888;	f_1032831	f_1032831	
-	f	[Lnet/minecraft/unmapped/C_3589148;	f_7982391	f_7982391	
+	f	[Lnet/minecraft/unmapped/C_9856888;	f_1032831	vertices	
+	f	[Lnet/minecraft/unmapped/C_3589148;	f_7982391	polygons	
 	f	F	f_7405048	f_7405048	
 	f	F	f_0680354	f_0680354	
 	f	F	f_2180913	f_2180913	
@@ -23,8 +23,8 @@ c	net/minecraft/unmapped/C_0289174
 c	net/minecraft/unmapped/C_0878570
 	f	I	f_3996670		f_3996670
 	m	(II)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
+		p	1		id	
+		p	2		plantId	
 	m	(III)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
@@ -138,8 +138,8 @@ c	net/minecraft/unmapped/C_4188659
 		p	3			p_3
 		p	4			p_4
 c	net/minecraft/unmapped/C_4590573
-	f	Z	f_7902626	f_7902626	
-	f	Z	f_6277591	f_6277591	
+	f	Z	f_7902626	holdingLeftHand	
+	f	Z	f_6277591	holdingRightHand	
 	f	I	f_3283039		f_3283039
 	f	I	f_8166391		f_8166391
 	f	Z	f_2437325		f_2437325
@@ -167,18 +167,18 @@ c	net/minecraft/unmapped/C_4948697
 	m	(Z)V	m_5891931		m_5891931
 		p	1			p_1
 c	net/minecraft/unmapped/C_5009044
-	f	I	f_5666560	f_5666560	
+	f	I	f_5666560	dmgSpill	
 	m	(I)V	m_1475953		m_1475953
 		p	1			p_1
 	m	()I	m_0997600		m_0997600
 c	net/minecraft/unmapped/C_5196988
-	f	[I	f_0429802	f_0429802	
-	f	I	f_5199806	f_5199806	
+	f	[I	f_0429802	defensePerSlot	
+	f	I	f_5199806	tier	
 	m	(IIII)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
+		p	1		id	
+		p	2		tier	
+		p	3		icon	
+		p	4		slot	
 	m	(ILnet/minecraft/unmapped/C_5196988$C_7022258;II)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
@@ -234,7 +234,7 @@ c	net/minecraft/unmapped/C_8079712
 		p	3			p_3
 c	net/minecraft/unmapped/C_9143244
 	f	[F	f_3095385		f_3095385
-	m	(II)F	m_8849857	m_8849857	
+	m	(II)F	m_8849857	getTemperature	
 		p	1		p_1	
 		p	2		p_2	
 	m	(III)F	m_1491596		m_1491596
@@ -263,7 +263,7 @@ c	net/minecraft/unmapped/C_9484672
 		p	3			p_3
 		p	4			p_4
 c	net/minecraft/unmapped/C_9746149
-	f	I	f_3569898	f_3569898	
+	f	I	f_3569898	shakeTime	
 	m	(Lnet/minecraft/unmapped/C_5853518;)V	m_3869629		m_3869629
 		p	1			p_1
 	m	(F)F	m_3581619		m_3581619
@@ -273,7 +273,7 @@ c	net/minecraft/unmapped/C_9746149
 c	net/minecraft/unmapped/C_1877543
 	m	()Z	m_2924409		m_2924409
 c	net/minecraft/unmapped/C_0629296
-	m	()I	m_8765674	m_8765674	
+	m	()I	m_8765674	getSizeDelta	
 c	net/minecraft/unmapped/C_4253713
 	f	Ljava/util/List;	f_5894598		f_5894598
 	f	Ljava/util/Set;	f_9014225		f_9014225
@@ -291,10 +291,10 @@ c	net/minecraft/unmapped/C_4253713$C_7426057		C_7426057
 		p	1			p_1
 		p	2			p_2
 c	net/minecraft/unmapped/C_9833698
-	m	(Ljava/io/File;II)I	m_0470438	m_0470438	
-		p	0		p_0	
-		p	1		p_1	
-		p	2		p_2	
+	m	(Ljava/io/File;II)I	m_0470438	getSizeDelta	
+		p	0		basePath	
+		p	1		x	
+		p	2		z	
 c	net/minecraft/unmapped/C_2934264
 	m	(Lnet/minecraft/unmapped/C_9466447;III)Ljava/util/List;	m_0621452		m_0621452
 		p	1			p_1

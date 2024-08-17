@@ -103,13 +103,13 @@ c	net/minecraft/unmapped/C_0559439
 		p	2			p_2
 		p	3			p_3
 c	net/minecraft/unmapped/C_0611937
-	m	(DDD)D	m_9172372	m_9172372	
-		p	1		p_1	
-		p	3		p_3	
-		p	5		p_5	
-	m	(DD)D	m_9636077	m_9636077	
-		p	1		p_1	
-		p	3		p_3	
+	m	(DDD)D	m_9172372	noise	
+		p	1		x	
+		p	3		y	
+		p	5		z	
+	m	(DD)D	m_9636077	getValue	
+		p	1		x	
+		p	3		y	
 c	net/minecraft/unmapped/C_0823907
 	m	(ILjava/util/Random;)I	m_6894859	m_6894859	
 		p	1		p_1	
@@ -137,11 +137,11 @@ c	net/minecraft/unmapped/C_1011144
 c	net/minecraft/unmapped/C_1013763
 	f	Z	f_6814071		f_6814071
 	f	I	f_0883306		f_0883306
-	m	(Z)V	m_5891931	m_5891931	
+	m	(Z)V	m_5891931	dropDeathLoot	
 		p	1		p_1	
 	m	(I)I	m_0070787		m_0070787
 		p	1			p_1
-	m	(ZI)V	m_5891931		m_5891931
+	m	(ZI)V	m_5891931		dropDeathLoot
 		p	1			p_1
 		p	2			p_2
 	m	(Lnet/minecraft/unmapped/C_1283912;)Z	m_8120369		m_8120369
@@ -297,34 +297,34 @@ c	net/minecraft/unmapped/C_3571139
 		p	5			p_5
 c	net/minecraft/unmapped/C_3635204
 	f	Lnet/minecraft/unmapped/C_3635204;	f_7504464		f_7504464
-	m	(ILjava/util/Random;)I	m_6894859	m_6894859	
-		p	1		p_1	
-		p	2		p_2	
-	m	(Lnet/minecraft/unmapped/C_3906126;IIII)V	m_0033065	m_0033065	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-	m	(Lnet/minecraft/unmapped/C_3906126;IIIIF)V	m_5653339	m_5653339	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
+	m	(ILjava/util/Random;)I	m_6894859	getResource	
+		p	1		meta	
+		p	2		random	
+	m	(Lnet/minecraft/unmapped/C_3906126;IIII)V	m_0033065	dropResources	
+		p	1		level	
+		p	2		x	
+		p	3		y	
+		p	4		z	
+		p	5		meta	
+	m	(Lnet/minecraft/unmapped/C_3906126;IIIIF)V	m_5653339	dropResources	
+		p	1		level	
+		p	2		x	
+		p	3		y	
+		p	4		z	
+		p	5		meta	
 		p	6		p_6	
-	m	(ILjava/util/Random;I)I	m_6894859		m_6894859
+	m	(ILjava/util/Random;I)I	m_6894859		getResource
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
-	m	(Lnet/minecraft/unmapped/C_3906126;IIIII)V	m_0033065		m_0033065
+	m	(Lnet/minecraft/unmapped/C_3906126;IIIII)V	m_0033065		dropResources
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
 		p	5			p_5
 		p	6			p_6
-	m	(Lnet/minecraft/unmapped/C_3906126;IIIIFI)V	m_5653339		m_5653339
+	m	(Lnet/minecraft/unmapped/C_3906126;IIIIFI)V	m_5653339		dropResources
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -481,18 +481,18 @@ c	net/minecraft/unmapped/C_5506499
 		p	1			p_1
 		p	2			p_2
 c	net/minecraft/unmapped/C_5687818
-	f	I	f_9492341	f_9492341	
-	f	I	f_9929462	f_9929462	
-	f	I	f_0294932	f_0294932	
-	f	I	f_9873827	f_9873827	
-	f	Z	f_0115303	f_0115303	
-	f	I	f_0701008	f_0701008	
-	f	Lnet/minecraft/unmapped/C_1013763;	f_4255286	f_4255286	
-	f	I	f_4451214	f_4451214	
-	f	I	f_2349227	f_2349227	
+	f	I	f_9492341	xTile	
+	f	I	f_9929462	yTile	
+	f	I	f_0294932	zTile	
+	f	I	f_9873827	inTile	
+	f	Z	f_0115303	inGround	
+	f	I	f_0701008	shakeTime	
+	f	Lnet/minecraft/unmapped/C_1013763;	f_4255286	owner	
+	f	I	f_4451214	life	
+	f	I	f_2349227	flightTime	
 	m	(D)Z	m_8702565	m_8702565	
 		p	1		p_1	
-	m	(DDDFF)V	m_0060836	m_0060836	
+	m	(DDDFF)V	m_0060836	shoot	
 		p	1		p_1	
 		p	3		p_3	
 		p	5		p_5	
@@ -533,7 +533,7 @@ c	net/minecraft/unmapped/C_6151866
 		p	1			p_1
 		p	2			p_2
 c	net/minecraft/unmapped/C_6205974
-	m	(DD)D	m_1189144	m_1189144	
+	m	(DD)D	m_1189144	getValue	
 		p	1		p_1	
 		p	3		p_3	
 c	net/minecraft/unmapped/C_6295037
@@ -601,18 +601,18 @@ c	net/minecraft/unmapped/C_7261559
 		p	6			p_6
 		p	7			p_7
 c	net/minecraft/unmapped/C_7557064
-	f	I	f_7974962	f_7974962	
-	f	I	f_7941944	f_7941944	
-	f	I	f_9526975	f_9526975	
-	f	I	f_5335315	f_5335315	
-	f	Z	f_3294350	f_3294350	
-	f	I	f_9421376	f_9421376	
-	f	Lnet/minecraft/unmapped/C_1013763;	f_0747785	f_0747785	
-	f	I	f_0393788	f_0393788	
-	f	I	f_8042525	f_8042525	
+	f	I	f_7974962	xTile	
+	f	I	f_7941944	yTile	
+	f	I	f_9526975	zTile	
+	f	I	f_5335315	inTile	
+	f	Z	f_3294350	inGround	
+	f	I	f_9421376	shakeTime	
+	f	Lnet/minecraft/unmapped/C_1013763;	f_0747785	owner	
+	f	I	f_0393788	life	
+	f	I	f_8042525	flightTime	
 	m	(D)Z	m_8702565	m_8702565	
 		p	1		p_1	
-	m	(DDDFF)V	m_4522800	m_4522800	
+	m	(DDDFF)V	m_4522800	shoot	
 		p	1		p_1	
 		p	3		p_3	
 		p	5		p_5	
@@ -827,7 +827,7 @@ c	net/minecraft/unmapped/C_8839702
 	f	[D	f_4878189	f_4878189	
 	f	[D	f_4505994	f_4505994	
 	f	[D	f_2850582	f_2850582	
-	f	Lnet/minecraft/unmapped/C_6329603;	f_2530974	f_2530974	
+	f	Lnet/minecraft/unmapped/C_6329603;	f_2530974	carver	
 	m	(Lnet/minecraft/unmapped/C_3906126;Ljava/lang/String;III)Lnet/minecraft/unmapped/C_8032589;	m_8216820		m_8216820
 		p	1			p_1
 		p	2			p_2

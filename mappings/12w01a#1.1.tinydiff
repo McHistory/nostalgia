@@ -1,12 +1,12 @@
 tiny	2	0
 c	net/minecraft/unmapped/C_0324512
-	m	(FFZZFF)V	m_3470055	m_3470055	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-		p	6		p_6	
+	m	(FFZZFF)V	m_3470055	setPlayerInput	
+		p	1		xxa	
+		p	2		zza	
+		p	3		jumping	
+		p	4		sneaking	
+		p	5		xRot	
+		p	6		yRot	
 c	net/minecraft/unmapped/C_1013763
 	f	F	f_3405312		f_3405312
 	f	F	f_1283532		f_1283532
@@ -30,8 +30,8 @@ c	net/minecraft/unmapped/C_3688914
 c	net/minecraft/unmapped/C_3773348
 	m	()I	m_7905054		m_7905054
 c	net/minecraft/unmapped/C_4443804
-	m	(Lnet/minecraft/unmapped/C_8338563;)V	m_8696746	m_8696746	
-		p	1		p_1	
+	m	(Lnet/minecraft/unmapped/C_8338563;)V	m_8696746	handlePlayerInput	
+		p	1		packet	
 c	net/minecraft/unmapped/C_4766485
 	f	F	f_4383675		f_4383675
 	f	F	f_8175698		f_8175698
@@ -56,20 +56,20 @@ c	net/minecraft/unmapped/C_4766485
 c	net/minecraft/unmapped/C_4948697
 	m	()Z	m_4680808		m_4680808
 c	net/minecraft/unmapped/C_5367636
-	m	()I	m_0001281	m_0001281	
+	m	()I	m_0001281	getArmor	
 c	net/minecraft/unmapped/C_8345828
 	m	()V	m_6773208	m_6773208	
 	m	()Z	m_4680808		m_4680808
 c	net/minecraft/unmapped/C_8752044
 	m	(Lnet/minecraft/unmapped/C_8338563;)V	m_8696746	m_8696746	
 		p	1		p_1	
-c	net/minecraft/unmapped/C_8338563	net/minecraft/unmapped/C_8338563	
-	f	F	f_5816359	f_5816359	
-	f	F	f_9091710	f_9091710	
-	f	Z	f_2997580	f_2997580	
-	f	Z	f_8167722	f_8167722	
-	f	F	f_2441004	f_2441004	
-	f	F	f_2454450	f_2454450	
+c	net/minecraft/unmapped/C_8338563	net/minecraft/network/packets/PlayerInputPacket	
+	f	F	f_5816359	xxa	
+	f	F	f_9091710	zza	
+	f	Z	f_2997580	isJumping	
+	f	Z	f_8167722	isShiftKeyDown	
+	f	F	f_2441004	xRot	
+	f	F	f_2454450	yRot	
 	m	()V	<init>	<init>	
 	m	(Ljava/io/DataInputStream;)V	m_8784008	m_8784008	
 		p	1		p_1	
@@ -78,12 +78,12 @@ c	net/minecraft/unmapped/C_8338563	net/minecraft/unmapped/C_8338563
 	m	(Lnet/minecraft/unmapped/C_4443804;)V	m_0240895	m_0240895	
 		p	1		p_1	
 	m	()I	m_0079091	m_0079091	
-	m	()F	m_8122368	m_8122368	
-	m	()F	m_9504974	m_9504974	
-	m	()F	m_3435232	m_3435232	
-	m	()F	m_4697145	m_4697145	
-	m	()Z	m_4213360	m_4213360	
-	m	()Z	m_5797863	m_5797863	
+	m	()F	m_8122368	getXxa	
+	m	()F	m_9504974	getXRot	
+	m	()F	m_3435232	getZza	
+	m	()F	m_4697145	getYRot	
+	m	()Z	m_4213360	isJumping	
+	m	()Z	m_5797863	isShiftKeyDown	
 c	net/minecraft/unmapped/C_0023955
 	m	(Lnet/minecraft/unmapped/C_3906126;IIII)V	m_6252045		m_6252045
 		p	1			p_1

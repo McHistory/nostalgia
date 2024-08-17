@@ -7,14 +7,14 @@ c	net/minecraft/unmapped/C_0336319
 c	net/minecraft/unmapped/C_0820158
 	m	()Lnet/minecraft/unmapped/C_4844124;	m_6528338		m_6528338
 c	net/minecraft/unmapped/C_0901730
-	m	()Lnet/minecraft/unmapped/C_4844124;	m_0636384	m_0636384	
+	m	()Lnet/minecraft/unmapped/C_4844124;	m_0636384	getAddEntityPacket	
 	m	(Lnet/minecraft/unmapped/C_0324512;)V	m_9656289	m_9656289	
 		p	1		p_1	
 c	net/minecraft/unmapped/C_1013763
 	m	()Lnet/minecraft/unmapped/C_4844124;	m_6528338		m_6528338
 c	net/minecraft/unmapped/C_1019530
-	f	I	f_9782340	f_9782340	
-	f	Lnet/minecraft/unmapped/C_5102005;	f_9782340		f_9782340
+	f	I	f_9782340	entityId	
+	f	Lnet/minecraft/unmapped/C_5102005;	f_9782340		entityId
 	m	(Lnet/minecraft/unmapped/C_6385858;II)V	<init>	<init>	
 		p	1		p_1	
 		p	2		p_2	
@@ -127,13 +127,14 @@ c	net/minecraft/unmapped/C_3050136
 		p	2			p_2
 		p	3			p_3
 	m	()Lnet/minecraft/unmapped/C_4844124;	m_6528338		m_6528338
-c	net/minecraft/unmapped/C_3146305	net/minecraft/unmapped/C_3146305	
+c	net/minecraft/unmapped/C_3146305	net/minecraft/world/entity/Syncable	
+	c	A entity that uses {@link net.minecraft.world.entity.SynchedEntityData}.\nSee {@link net.minecraft.server.level.ServerEntity#getAddEntityPacket} and {@link net.minecraft.server.EntityTracker#addTrackedEntity}	
 c	net/minecraft/unmapped/C_3688914
 	m	()Lnet/minecraft/unmapped/C_4844124;	m_6528338		m_6528338
 c	net/minecraft/unmapped/C_3906126
 	f	Lnet/minecraft/unmapped/C_3452584;	f_2900304		f_2900304
-	m	(Lnet/minecraft/unmapped/C_6385858;)Z	m_2019782	m_2019782	
-		p	1		p_1	
+	m	(Lnet/minecraft/unmapped/C_6385858;)Z	m_2019782	addGlobalEntity	
+		p	1		entity	
 	m	(Lnet/minecraft/unmapped/C_6707278;)Z	m_5251090	m_5251090	
 		p	1		p_1	
 	m	(Lnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_7345216;Lnet/minecraft/unmapped/C_7345216;Ljava/util/Set;Lnet/minecraft/unmapped/C_2273071;)Ljava/util/stream/Stream;	m_5878369	m_5878369	
@@ -142,7 +143,7 @@ c	net/minecraft/unmapped/C_3906126
 		p	3		p_3	
 		p	4		p_4	
 		p	5		p_5	
-	m	(Lnet/minecraft/unmapped/C_1992549;)Z	m_2019782		m_2019782
+	m	(Lnet/minecraft/unmapped/C_1992549;)Z	m_2019782		addGlobalEntity
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_5102005;Ljava/util/function/Predicate;)Ljava/util/List;	m_8932502		m_8932502
 		p	1			p_1
@@ -211,18 +212,18 @@ c	net/minecraft/unmapped/C_5367636
 c	net/minecraft/unmapped/C_5584362
 	m	()Lnet/minecraft/unmapped/C_4844124;	m_6528338		m_6528338
 c	net/minecraft/unmapped/C_6385858
-	f	I	f_0446062	f_0446062	
-	f	Ljava/util/concurrent/atomic/AtomicInteger;	f_0446062		f_0446062
-	m	(DDD)Z	m_8179362	m_8179362	
-		p	1		p_1	
-		p	3		p_3	
-		p	5		p_5	
+	f	I	f_0446062	ENTITY_COUNTER	
+	f	Ljava/util/concurrent/atomic/AtomicInteger;	f_0446062		ENTITY_COUNTER
+	m	(DDD)Z	m_8179362	checkInBlock	
+		p	1		x	
+		p	3		y	
+		p	5		z	
 	m	()[Lnet/minecraft/unmapped/C_6385858;	m_1414720	m_1414720	
 	m	(DDD)V	m_3833330		m_3833330
 		p	1			p_1
 		p	3			p_3
 		p	5			p_5
-	m	(DDD)V	m_8179362		m_8179362
+	m	(DDD)V	m_8179362		checkInBlock
 		p	1			p_1
 		p	3			p_3
 		p	5			p_5
@@ -271,7 +272,7 @@ c	net/minecraft/unmapped/C_8546801
 		p	3		p_3	
 		p	5		p_5	
 c	net/minecraft/unmapped/C_9466447
-	f	Ljava/lang/Class;	f_1383371	f_1383371	
+	f	Ljava/lang/Class;	f_1383371	base	
 	f	Lnet/minecraft/unmapped/C_9466447;	f_4501862		f_4501862
 	m	(Ljava/lang/String;ILjava/lang/String;Ljava/lang/Class;IZZ)V	<init>	<init>	
 		p	1		p_1	
@@ -314,7 +315,7 @@ c	net/minecraft/unmapped/C_6707278$C_2165440
 		p	5			p_5
 c	net/minecraft/unmapped/C_1992549
 	m	()Lnet/minecraft/unmapped/C_4844124;	m_6528338		m_6528338
-c	net/minecraft/unmapped/C_6430393	net/minecraft/unmapped/C_6430393	
+c	net/minecraft/unmapped/C_6430393	net/minecraft/world/entity/global/GlobalEntity	
 	m	(Lnet/minecraft/unmapped/C_5102005;Lnet/minecraft/unmapped/C_3906126;)V	<init>	<init>	
 		p	1		p_1	
 		p	2		p_2	

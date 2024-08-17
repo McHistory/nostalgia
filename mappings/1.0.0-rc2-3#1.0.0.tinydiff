@@ -1,29 +1,29 @@
 tiny	2	0
 c	net/minecraft/isom/IsomPreviewApplet	net/minecraft/isom/IsomPreviewApplet	
-	f	Lnet/minecraft/unmapped/C_5586685;	f_0917068	f_0917068	
+	f	Lnet/minecraft/unmapped/C_5586685;	f_0917068	canvas	
 	m	()V	<init>	<init>	
 	m	()V	start	start	
 	m	()V	stop	stop	
-c	net/minecraft/unmapped/C_2941751	net/minecraft/unmapped/C_2941751	
-	f	Ljava/awt/image/BufferedImage;	f_3349358	f_3349358	
-	f	Lnet/minecraft/unmapped/C_3906126;	f_4671375	f_4671375	
-	f	I	f_2691840	f_2691840	
-	f	I	f_0783700	f_0783700	
-	f	Z	f_8781079	f_8781079	
-	f	Z	f_8388581	f_8388581	
-	f	I	f_3297939	f_3297939	
-	f	Z	f_6255679	f_6255679	
+c	net/minecraft/unmapped/C_2941751	net/minecraft/isom/Zone	
+	f	Ljava/awt/image/BufferedImage;	f_3349358	image	
+	f	Lnet/minecraft/unmapped/C_3906126;	f_4671375	level	
+	f	I	f_2691840	x	
+	f	I	f_0783700	z	
+	f	Z	f_8781079	rendered	
+	f	Z	f_8388581	noContent	
+	f	I	f_3297939	lastVisible	
+	f	Z	f_6255679	addedToRenderQueue	
 	m	(Lnet/minecraft/unmapped/C_3906126;II)V	<init>	<init>	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
-	m	(II)V	m_5903322	m_5903322	
-		p	1		p_1	
-		p	2		p_2	
-	m	(Lnet/minecraft/unmapped/C_3906126;II)V	m_2315191	m_2315191	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
+	m	(II)V	m_5903322	init	
+		p	1		x	
+		p	2		z	
+	m	(Lnet/minecraft/unmapped/C_3906126;II)V	m_2315191	init	
+		p	1		level	
+		p	2		x	
+		p	3		z	
 c	net/minecraft/unmapped/C_5586685	net/minecraft/unmapped/C_5586685	
 	f	I	f_5260949	f_5260949	
 	f	I	f_2667138	f_2667138	
@@ -103,15 +103,15 @@ c	net/minecraft/unmapped/C_5586685$C_4814958	C_4814958
 		p	1		p_1	
 		p	2		p_2	
 	m	()V	<clinit>	<clinit>	
-c	net/minecraft/unmapped/C_6726911	net/minecraft/unmapped/C_6726911	
-	f	[F	f_8948415	f_8948415	
-	f	[I	f_8082555	f_8082555	
-	f	[I	f_5319275	f_5319275	
-	f	[I	f_8747005	f_8747005	
-	f	[I	f_0174030	f_0174030	
-	f	[I	f_4034772	f_4034772	
-	f	[I	f_4809244	f_4809244	
+c	net/minecraft/unmapped/C_6726911	net/minecraft/isom/ZoneRenderer	
+	f	[F	f_8948415	texCols	
+	f	[I	f_8082555	pixels	
+	f	[I	f_5319275	zBuf	
+	f	[I	f_8747005	waterBuf	
+	f	[I	f_0174030	waterBr	
+	f	[I	f_4034772	yBuf	
+	f	[I	f_4809244	textures	
 	m	()V	<init>	<init>	
-	m	(Lnet/minecraft/unmapped/C_2941751;)V	m_4394757	m_4394757	
-		p	1		p_1	
-	m	()V	m_6725180	m_6725180	
+	m	(Lnet/minecraft/unmapped/C_2941751;)V	m_4394757	render	
+		p	1		zone	
+	m	()V	m_6725180	postProcess	

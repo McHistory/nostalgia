@@ -3,11 +3,11 @@ c	net/minecraft/unmapped/C_0289174
 	f	Z	f_7948508	f_7948508	
 	f	I	f_3894400	f_3894400	
 	m	()V	m_3430241	m_3430241	
-c	net/minecraft/unmapped/C_0351020	net/minecraft/unmapped/C_0351020	
+c	net/minecraft/unmapped/C_0351020	net/minecraft/world/level/tile/StoneTile	
 	m	(II)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
-c	net/minecraft/unmapped/C_0823907	net/minecraft/unmapped/C_0823907	
+		p	1		id	
+		p	2		texture	
+c	net/minecraft/unmapped/C_0823907	net/minecraft/world/level/tile/GrassTile	
 	m	(I)I	m_9597800	m_9597800	
 		p	1		p_1	
 	m	(Lnet/minecraft/unmapped/C_3906126;IIILjava/util/Random;)V	m_3941370	m_3941370	
@@ -25,11 +25,11 @@ c	net/minecraft/unmapped/C_1044273
 	m	(Lnet/minecraft/unmapped/C_5009044;)V	m_0477995	m_0477995	
 		p	1		p_1	
 c	net/minecraft/unmapped/C_2334550
-	f	I	f_9540616	f_9540616	
-	f	Lnet/minecraft/unmapped/C_2334550;	f_9148274	f_9148274	
+	f	I	f_9540616	p	
+	f	Lnet/minecraft/unmapped/C_2334550;	f_9148274	instance	
 	f	I	f_3590856	f_3590856	
-	f	Ljava/nio/FloatBuffer;	f_8094244	f_8094244	
-	f	[F	f_8611150	f_8611150	
+	f	Ljava/nio/FloatBuffer;	f_8094244	buffer	
+	f	[F	f_8611150	array	
 	f	I	f_7163362	f_7163362	
 	f	I	f_4841604	f_4841604	
 	f	I	f_9043792		f_9043792
@@ -37,13 +37,13 @@ c	net/minecraft/unmapped/C_2334550
 	f	Ljava/nio/FloatBuffer;	f_8632341		f_8632341
 	f	Ljava/nio/FloatBuffer;	f_6109559		f_6109559
 	m	()V	<clinit>	<clinit>	
-	m	(FFFFF)V	m_7710685	m_7710685	
+	m	(FFFFF)V	m_7710685	vertexUV	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
 		p	4		p_4	
 		p	5		p_5	
-c	net/minecraft/unmapped/C_2454294	net/minecraft/unmapped/C_2454294	
+c	net/minecraft/unmapped/C_2454294	net/minecraft/client/particle/ParticleEngine	
 	f	Ljava/util/List;	f_5543693	f_5543693	
 	f	Lnet/minecraft/unmapped/C_3906126;	f_2258233	f_2258233	
 	m	(Lnet/minecraft/unmapped/C_5009044;FI)V	m_5775841	m_5775841	
@@ -58,16 +58,16 @@ c	net/minecraft/unmapped/C_2454294	net/minecraft/unmapped/C_2454294
 c	net/minecraft/unmapped/C_3385278
 	f	I	f_1400095		f_1400095
 c	net/minecraft/unmapped/C_3635204
-	f	[Lnet/minecraft/unmapped/C_3635204;	f_3809114	f_3809114	
-	f	I	f_2860341	f_2860341	
+	f	[Lnet/minecraft/unmapped/C_3635204;	f_3809114	tiles	
+	f	I	f_2860341	id	
 	f	Lnet/minecraft/unmapped/C_3635204;	f_6242213	f_6242213	
 	f	Lnet/minecraft/unmapped/C_3635204;	f_2297673	f_2297673	
 	f	Lnet/minecraft/unmapped/C_3635204;	f_8037066	f_8037066	
 	f	Lnet/minecraft/unmapped/C_3635204;	f_0374553	f_0374553	
-	m	(I)I	m_9597800	m_9597800	
-		p	1		p_1	
-	m	()Z	m_1944525	m_1944525	
-	m	(III)Lnet/minecraft/unmapped/C_1414550;	m_9650578	m_9650578	
+	m	(I)I	m_9597800	getTexture	
+		p	1		side	
+	m	()Z	m_1944525	isSolidRender	
+	m	(III)Lnet/minecraft/unmapped/C_1414550;	m_9650578	getAABB	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
@@ -93,14 +93,14 @@ c	net/minecraft/unmapped/C_3635204
 		p	3		p_3	
 		p	4		p_4	
 		p	5		p_5	
-	m	(Lnet/minecraft/unmapped/C_3906126;IIII)Z	m_8199947	m_8199947	
+	m	(Lnet/minecraft/unmapped/C_3906126;IIII)Z	m_8199947	shouldRenderFace	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
 		p	4		p_4	
 		p	5		p_5	
 c	net/minecraft/unmapped/C_3906126
-	f	Ljava/util/Random;	f_7114289	f_7114289	
+	f	Ljava/util/Random;	f_7114289	random	
 	f	I	f_8845673	f_8845673	
 	f	I	f_5226865	f_5226865	
 	m	(IIII)Z	m_4432142	m_4432142	
@@ -139,23 +139,23 @@ c	net/minecraft/unmapped/C_5283200
 	f	F	f_4814126	f_4814126	
 	f	J	f_3074401	f_3074401	
 	f	J	f_7820675	f_7820675	
-	m	(Lnet/minecraft/unmapped/C_5009044;)F	m_9608130	m_9608130	
+	m	(Lnet/minecraft/unmapped/C_5009044;)F	m_9608130	distanceToSqr	
 		p	1		p_1	
-	m	()V	m_0330444	m_0330444	
+	m	()V	m_0330444	rebuild	
 	m	()Z	m_1389639	m_1389639	
 c	net/minecraft/unmapped/C_6385858
-	f	Z	f_1175468	f_1175468	
-	f	F	f_4042167	f_4042167	
-	f	F	f_5906359	f_5906359	
-	m	(FF)V	m_2788323	m_2788323	
-		p	1		p_1	
-		p	2		p_2	
+	f	Z	f_1175468	removed	
+	f	F	f_4042167	bbWidth	
+	f	F	f_5906359	bbHeight	
+	m	(FF)V	m_2788323	setSize	
+		p	1		width	
+		p	2		height	
 	m	()Z	m_5124480	m_5124480	
 	m	()V	m_0096317	m_0096317	
-c	net/minecraft/unmapped/C_8905061	net/minecraft/unmapped/C_8905061	
-	f	I	f_8606041	f_8606041	
-	f	F	f_4159616	f_4159616	
-	f	F	f_8149664	f_8149664	
+c	net/minecraft/unmapped/C_8905061	net/minecraft/client/particle/Particle	
+	f	I	f_8606041	texture	
+	f	F	f_4159616	uo	
+	f	F	f_8149664	vo	
 	f	F	f_6487551	f_6487551	
 	f	F	f_3194041	f_3194041	
 	f	F	f_0182044	f_0182044	

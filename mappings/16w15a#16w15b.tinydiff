@@ -1,36 +1,36 @@
 tiny	2	0
-c	net/minecraft/unmapped/C_1264342	net/minecraft/unmapped/C_1264342	
+c	net/minecraft/unmapped/C_1264342	net/minecraft/server/util/LongHashMap	
 	f	[Lnet/minecraft/unmapped/C_1264342$C_3038154;	f_4001216	f_4001216	
-	f	I	f_1773023	f_1773023	
-	f	I	f_7803045	f_7803045	
-	f	F	f_9381247	f_9381247	
+	f	I	f_1773023	size	
+	f	I	f_7803045	threshold	
+	f	F	f_9381247	loadFactor	
 	f	I	f_4047028	f_4047028	
 	m	()V	<init>	<init>	
-	m	(J)I	m_5389570	m_5389570	
-		p	0		p_0	
-	m	(II)I	m_5369264	m_5369264	
-		p	0		p_0	
-		p	1		p_1	
-	m	(J)Ljava/lang/Object;	m_3846905	m_3846905	
-		p	1		p_1	
-	m	(JLjava/lang/Object;)V	m_3956489	m_3956489	
-		p	1		p_1	
-		p	3		p_3	
-	m	(I)V	m_2218213	m_2218213	
-		p	1		p_1	
+	m	(J)I	m_5389570	hash	
+		p	0		key	
+	m	(II)I	m_5369264	indexFor	
+		p	0		hash	
+		p	1		size	
+	m	(J)Ljava/lang/Object;	m_3846905	get	
+		p	1		key	
+	m	(JLjava/lang/Object;)V	m_3956489	put	
+		p	1		key	
+		p	3		value	
+	m	(I)V	m_2218213	resize	
+		p	1		newSize	
 	m	([Lnet/minecraft/unmapped/C_1264342$C_3038154;)V	m_7849310	m_7849310	
 		p	1		p_1	
-	m	(J)Ljava/lang/Object;	m_6932044	m_6932044	
-		p	1		p_1	
+	m	(J)Ljava/lang/Object;	m_6932044	remove	
+		p	1		key	
 	m	(J)Lnet/minecraft/unmapped/C_1264342$C_3038154;	m_9212060	m_9212060	
 		p	1		p_1	
-	m	(IJLjava/lang/Object;I)V	m_5913725	m_5913725	
-		p	1		p_1	
-		p	2		p_2	
-		p	4		p_4	
-		p	5		p_5	
-	m	(J)I	m_3495242	m_3495242	
-		p	0		p_0	
+	m	(IJLjava/lang/Object;I)V	m_5913725	addEntry	
+		p	1		hash	
+		p	2		key	
+		p	4		value	
+		p	5		index	
+	m	(J)I	m_3495242	syntheticHash	
+		p	0		key	
 	m	()I	m_8974598	m_8974598	
 	m	(J)Z	m_9388487	m_9388487	
 		p	1		p_1	
@@ -56,19 +56,19 @@ c	net/minecraft/unmapped/C_1896634
 	f	Lnet/minecraft/unmapped/C_1264342;	f_1852320	f_1852320	
 	f	Lit/unimi/dsi/fastutil/longs/Long2ObjectMap;	f_1852320		f_1852320
 c	net/minecraft/unmapped/C_2616453
-	f	Ljava/util/List;	f_4623282	f_4623282	
-	f	Lnet/minecraft/unmapped/C_1264342;	f_5625936	f_5625936	
-	f	Lit/unimi/dsi/fastutil/longs/Long2ObjectMap;	f_5625936		f_5625936
+	f	Ljava/util/List;	f_4623282	loadedChunkList	
+	f	Lnet/minecraft/unmapped/C_1264342;	f_5625936	loadedChunks	
+	f	Lit/unimi/dsi/fastutil/longs/Long2ObjectMap;	f_5625936		loadedChunks
 c	net/minecraft/unmapped/C_3571139
-	f	Ljava/util/List;	f_3004290	f_3004290	
-	f	Lnet/minecraft/unmapped/C_1264342;	f_1083411	f_1083411	
-	f	Lit/unimi/dsi/fastutil/longs/Long2ObjectMap;	f_1083411		f_1083411
-	m	(II)V	m_7368554	m_7368554	
-		p	1		p_1	
-		p	2		p_2	
+	f	Ljava/util/List;	f_3004290	chunks	
+	f	Lnet/minecraft/unmapped/C_1264342;	f_1083411	cache	
+	f	Lit/unimi/dsi/fastutil/longs/Long2ObjectMap;	f_1083411		cache
+	m	(II)V	m_7368554	dropNoneSpawnChunk	
+		p	1		x	
+		p	2		z	
 	m	()Ljava/util/List;	m_8729355	m_8729355	
 	m	()Ljava/util/Collection;	m_8729355		m_8729355
-	m	(Lnet/minecraft/unmapped/C_6755599;)V	m_7368554		m_7368554
+	m	(Lnet/minecraft/unmapped/C_6755599;)V	m_7368554		dropNoneSpawnChunk
 		p	1			p_1
 c	net/minecraft/unmapped/C_3906126
 	m	()Lnet/minecraft/unmapped/C_5863756;	m_7943600	m_7943600	

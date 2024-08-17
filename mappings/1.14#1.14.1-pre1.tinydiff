@@ -1,17 +1,17 @@
 tiny	2	0
 c	net/minecraft/client/Minecraft
-	m	()V	m_7834074	m_7834074	
+	m	()V	m_7834074	pauseGame	
 	m	(Z)V	m_0023254		m_0023254
 		p	1			p_1
 c	net/minecraft/unmapped/C_0459721
-	m	(Lnet/minecraft/unmapped/C_5250955;Lnet/minecraft/unmapped/C_2587956;DDDF)Lnet/minecraft/unmapped/C_7641996;	m_5195779	m_5195779	
+	m	(Lnet/minecraft/unmapped/C_5250955;Lnet/minecraft/unmapped/C_2587956;DDDF)Lnet/minecraft/unmapped/C_7641996;	m_5195779	findPath	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
 		p	5		p_5	
 		p	7		p_7	
 		p	9		p_9	
-	m	(Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_2587956;DDDF)Lnet/minecraft/unmapped/C_7641996;	m_5195779		m_5195779
+	m	(Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_2587956;DDDF)Lnet/minecraft/unmapped/C_7641996;	m_5195779		findPath
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -19,20 +19,20 @@ c	net/minecraft/unmapped/C_0459721
 		p	7			p_7
 		p	9			p_9
 c	net/minecraft/unmapped/C_0546437
-	m	(Lnet/minecraft/unmapped/C_3994775;Lnet/minecraft/unmapped/C_6707278;F)V	m_9576206	m_9576206	
+	m	(Lnet/minecraft/unmapped/C_3994775;Lnet/minecraft/unmapped/C_6707278;F)V	m_9576206	crossection	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
-	m	(Lnet/minecraft/unmapped/C_3994775;Lnet/minecraft/unmapped/C_6707278;)V	m_4851137	m_4851137	
+	m	(Lnet/minecraft/unmapped/C_3994775;Lnet/minecraft/unmapped/C_6707278;)V	m_4851137	foliageCluster	
 		p	1		p_1	
 		p	2		p_2	
-	m	(Ljava/util/Set;Lnet/minecraft/unmapped/C_3994775;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_6707278;Z)I	m_9972056	m_9972056	
+	m	(Ljava/util/Set;Lnet/minecraft/unmapped/C_3994775;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_6707278;Z)I	m_9972056	checkLine	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
 		p	4		p_4	
 		p	5		p_5	
-	m	(Lnet/minecraft/unmapped/C_3994775;ILnet/minecraft/unmapped/C_6707278;Ljava/util/List;)V	m_6812697	m_6812697	
+	m	(Lnet/minecraft/unmapped/C_3994775;ILnet/minecraft/unmapped/C_6707278;Ljava/util/List;)V	m_6812697	makeFoliage	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
@@ -42,7 +42,7 @@ c	net/minecraft/unmapped/C_0546437
 		p	2		p_2	
 		p	3		p_3	
 		p	4		p_4	
-	m	(Ljava/util/Set;Lnet/minecraft/unmapped/C_3994775;ILnet/minecraft/unmapped/C_6707278;Ljava/util/List;)V	m_0709333	m_0709333	
+	m	(Ljava/util/Set;Lnet/minecraft/unmapped/C_3994775;ILnet/minecraft/unmapped/C_6707278;Ljava/util/List;)V	m_0709333	makeBranches	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
@@ -58,25 +58,25 @@ c	net/minecraft/unmapped/C_0546437
 		p	2		p_2	
 		p	3		p_3	
 		p	4		p_4	
-	m	(Lnet/minecraft/unmapped/C_3994775;Lnet/minecraft/unmapped/C_6707278;FLnet/minecraft/unmapped/C_0624720;Ljava/util/Set;)V	m_9576206		m_9576206
+	m	(Lnet/minecraft/unmapped/C_3994775;Lnet/minecraft/unmapped/C_6707278;FLnet/minecraft/unmapped/C_0624720;Ljava/util/Set;)V	m_9576206		crossection
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
 		p	5			p_5
-	m	(Lnet/minecraft/unmapped/C_3994775;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_0624720;Ljava/util/Set;)V	m_4851137		m_4851137
+	m	(Lnet/minecraft/unmapped/C_3994775;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_0624720;Ljava/util/Set;)V	m_4851137		foliageCluster
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
-	m	(Ljava/util/Set;Lnet/minecraft/unmapped/C_3994775;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_6707278;ZLnet/minecraft/unmapped/C_0624720;)I	m_9972056		m_9972056
+	m	(Ljava/util/Set;Lnet/minecraft/unmapped/C_3994775;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_6707278;ZLnet/minecraft/unmapped/C_0624720;)I	m_9972056		checkLine
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
 		p	5			p_5
 		p	6			p_6
-	m	(Lnet/minecraft/unmapped/C_3994775;ILnet/minecraft/unmapped/C_6707278;Ljava/util/List;Lnet/minecraft/unmapped/C_0624720;Ljava/util/Set;)V	m_6812697		m_6812697
+	m	(Lnet/minecraft/unmapped/C_3994775;ILnet/minecraft/unmapped/C_6707278;Ljava/util/List;Lnet/minecraft/unmapped/C_0624720;Ljava/util/Set;)V	m_6812697		makeFoliage
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -89,7 +89,7 @@ c	net/minecraft/unmapped/C_0546437
 		p	3			p_3
 		p	4			p_4
 		p	5			p_5
-	m	(Ljava/util/Set;Lnet/minecraft/unmapped/C_3994775;ILnet/minecraft/unmapped/C_6707278;Ljava/util/List;Lnet/minecraft/unmapped/C_0624720;)V	m_0709333		m_0709333
+	m	(Ljava/util/Set;Lnet/minecraft/unmapped/C_3994775;ILnet/minecraft/unmapped/C_6707278;Ljava/util/List;Lnet/minecraft/unmapped/C_0624720;)V	m_0709333		makeBranches
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -223,7 +223,7 @@ c	net/minecraft/unmapped/C_3635204$6862084		6862084
 	m	(Ljava/lang/Object;)Ljava/lang/Object;	load		load
 		p	1			p_1
 c	net/minecraft/unmapped/C_3906126
-	m	(Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_3544601;)I	m_1164560	m_1164560	
+	m	(Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_3544601;)I	m_1164560	getDirectSignal	
 		p	1		p_1	
 		p	2		p_2	
 c	net/minecraft/unmapped/C_6160704

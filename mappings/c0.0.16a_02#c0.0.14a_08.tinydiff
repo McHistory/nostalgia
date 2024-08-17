@@ -6,7 +6,7 @@ c	net/minecraft/client/Minecraft
 	f	I	f_0132506	f_0132506	
 	f	F	f_9356698	f_9356698	
 	f	Ljava/util/List;	f_0525575	f_0525575	
-	m	()V	m_7834074	m_7834074	
+	m	()V	m_7834074	pauseGame	
 	m	()Z	m_7044458	m_7044458	
 	m	()V	m_2422356	m_2422356	
 	m	()V	m_1963333	m_1963333	
@@ -20,10 +20,10 @@ c	net/minecraft/client/Minecraft
 	m	(I)V	m_1963333		m_1963333
 		p	1			p_1
 c	net/minecraft/unmapped/C_1044273
-	m	(Lnet/minecraft/unmapped/C_5009044;I)I	m_8682700	m_8682700	
+	m	(Lnet/minecraft/unmapped/C_5009044;I)I	m_8682700	render	
 		p	1		p_1	
 		p	2		p_2	
-	m	(Lnet/minecraft/unmapped/C_5009044;I)V	m_8682700		m_8682700
+	m	(Lnet/minecraft/unmapped/C_5009044;I)V	m_8682700		render
 		p	1			p_1
 		p	2			p_2
 c	net/minecraft/unmapped/C_2682589
@@ -36,7 +36,7 @@ c	net/minecraft/unmapped/C_2682589
 c	net/minecraft/unmapped/C_3635204
 	f	[I	f_0375741	f_0375741	
 	f	F	f_8697106	f_8697106	
-	m	(Lnet/minecraft/unmapped/C_3906126;III)F	m_1598263	m_1598263	
+	m	(Lnet/minecraft/unmapped/C_3906126;III)F	m_1598263	getBrightness	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
@@ -45,12 +45,12 @@ c	net/minecraft/unmapped/C_3635204
 	m	(I)V	m_5930259	m_5930259	
 		p	1		p_1	
 c	net/minecraft/unmapped/C_3906126
-	m	(Lnet/minecraft/unmapped/C_1414550;Lnet/minecraft/unmapped/C_8554894;)Z	m_4199410	m_4199410	
-		p	1		p_1	
-		p	2		p_2	
+	m	(Lnet/minecraft/unmapped/C_1414550;Lnet/minecraft/unmapped/C_8554894;)Z	m_4199410	containsMaterial	
+		p	1		bb	
+		p	2		material	
 	m	()V	m_0155430	m_0155430	
 	m	()[B	m_0615700	m_0615700	
-	m	(Lnet/minecraft/unmapped/C_1414550;I)Z	m_4199410		m_4199410
+	m	(Lnet/minecraft/unmapped/C_1414550;I)Z	m_4199410		containsMaterial
 		p	1			p_1
 		p	2			p_2
 c	net/minecraft/unmapped/C_4558465
@@ -68,7 +68,7 @@ c	net/minecraft/unmapped/C_4558465
 	m	(II)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
-c	net/minecraft/unmapped/C_4643161	net/minecraft/unmapped/C_4643161	
+c	net/minecraft/unmapped/C_4643161	net/minecraft/client/gui/screens/ErrorScreen	
 	f	Ljava/lang/String;	f_9782510	f_9782510	
 	f	Ljava/lang/String;	f_1751895	f_1751895	
 	m	()V	m_2060594	m_2060594	
@@ -99,16 +99,16 @@ c	net/minecraft/unmapped/C_6385858
 		p	3		p_3	
 		p	4		p_4	
 		p	5		p_5	
-c	net/minecraft/unmapped/C_8554894	net/minecraft/unmapped/C_8554894	
-	f	Lnet/minecraft/unmapped/C_8554894;	f_1017744	f_1017744	
-	f	Lnet/minecraft/unmapped/C_8554894;	f_3070279	f_3070279	
-	f	Lnet/minecraft/unmapped/C_8554894;	f_3260500	f_3260500	
+c	net/minecraft/unmapped/C_8554894	net/minecraft/world/level/material/Material	
+	f	Lnet/minecraft/unmapped/C_8554894;	f_1017744	WOOD	
+	f	Lnet/minecraft/unmapped/C_8554894;	f_3070279	WATER	
+	f	Lnet/minecraft/unmapped/C_8554894;	f_3260500	LAVA	
 	f	[Lnet/minecraft/unmapped/C_8554894;	f_5419847	f_5419847	
 	m	()V	<clinit>	<clinit>	
 	m	(I)V	<init>	<init>	
 		p	1		p_1	
 c	net/minecraft/unmapped/C_8905061
-	f	F	f_0780390	f_0780390	
+	f	F	f_0780390	gravity	
 	m	(Lnet/minecraft/unmapped/C_3906126;FFFFFFLnet/minecraft/unmapped/C_3635204;)V	<init>	<init>	
 		p	1		p_1	
 		p	2		p_2	

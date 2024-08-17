@@ -1,8 +1,8 @@
 tiny	2	0
 c	net/minecraft/client/Minecraft
-	f	[J	f_4898713	f_4898713	
-	f	[J	f_5977083	f_5977083	
-	f	I	f_9040180	f_9040180	
+	f	[J	f_4898713	frameTimes	
+	f	[J	f_5977083	tickTimes	
+	f	I	f_9040180	frameTimePos	
 	f	Lnet/minecraft/unmapped/C_1392594;	f_2098907		f_2098907
 	m	()V	m_2398116		m_2398116
 c	net/minecraft/client/Minecraft$3943242		3943242
@@ -56,8 +56,8 @@ c	net/minecraft/unmapped/C_1111347$C_2295025		C_2295025
 	f	I	f_0484543		f_0484543
 	m	()V	<init>		<init>
 c	net/minecraft/unmapped/C_1388208
-	f	I	f_0812108	f_0812108	
-	f	I	f_1736912	f_1736912	
+	f	I	f_0812108	lastInventorySendTime	
+	f	I	f_1736912	noSendTime	
 c	net/minecraft/unmapped/C_1613050
 	m	()Z	m_9362922		m_9362922
 	m	(Lnet/minecraft/unmapped/C_4844124;)Z	m_9063255		m_9063255
@@ -82,14 +82,14 @@ c	net/minecraft/unmapped/C_3157620
 		p	1			p_1
 c	net/minecraft/unmapped/C_3906126
 	f	Lnet/minecraft/unmapped/C_1392594;	f_5267963		f_5267963
-	m	(IIIII)V	m_3224255	m_3224255	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-	m	(Lnet/minecraft/unmapped/C_6707278;)V	m_5610495	m_5610495	
-		p	1		p_1	
+	m	(IIIII)V	m_3224255	tileEvent	
+		p	1		x	
+		p	2		y	
+		p	3		z	
+		p	4		b0	
+		p	5		b1	
+	m	(Lnet/minecraft/unmapped/C_6707278;)V	m_5610495	setSpawnPos	
+		p	1		spawnPos	
 	m	(Lnet/minecraft/unmapped/C_9147018;Ljava/lang/String;Lnet/minecraft/unmapped/C_9219192;Lnet/minecraft/unmapped/C_4413269;)V	<init>	<init>	
 		p	1		p_1	
 		p	2		p_2	
@@ -112,22 +112,22 @@ c	net/minecraft/unmapped/C_3906126
 		p	3			p_3
 		p	4			p_4
 		p	5			p_5
-	m	(III)V	m_5610495		m_5610495
+	m	(III)V	m_5610495		setSpawnPos
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
-	m	(IIIIII)V	m_3224255		m_3224255
+	m	(IIIIII)V	m_3224255		tileEvent
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
 		p	5			p_5
 		p	6			p_6
-c	net/minecraft/unmapped/C_4327082	net/minecraft/unmapped/C_4327082	
-	f	I	f_8957324	f_8957324	
+c	net/minecraft/unmapped/C_4327082	net/minecraft/network/packets/RemoveEntityPacket	
+	f	I	f_8957324	id	
 	m	()V	<init>	<init>	
 	m	(I)V	<init>	<init>	
-		p	1		p_1	
+		p	1		entityId	
 	m	(Ljava/io/DataInputStream;)V	m_8784008	m_8784008	
 		p	1		p_1	
 	m	(Ljava/io/DataOutputStream;)V	m_4625396	m_4625396	
@@ -136,9 +136,9 @@ c	net/minecraft/unmapped/C_4327082	net/minecraft/unmapped/C_4327082
 		p	1		p_1	
 	m	()I	m_0079091	m_0079091	
 c	net/minecraft/unmapped/C_4443804
-	m	(Lnet/minecraft/unmapped/C_4327082;)V	m_6600243	m_6600243	
-		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_9890057;)V	m_6600243		m_6600243
+	m	(Lnet/minecraft/unmapped/C_4327082;)V	m_6600243	handleRemoveEntity	
+		p	1		packet	
+	m	(Lnet/minecraft/unmapped/C_9890057;)V	m_6600243		handleRemoveEntity
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_3417986;)V	m_1734880		m_1734880
 		p	1			p_1
@@ -245,11 +245,11 @@ c	net/minecraft/unmapped/C_9814383
 c	net/minecraft/unmapped/C_4288894
 	f	I	f_9266901		f_9266901
 	m	(IIIII)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
+		p	1		x	
+		p	2		y	
+		p	3		z	
+		p	4		b0	
+		p	5		b1	
 	m	(IIIIII)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
@@ -258,12 +258,12 @@ c	net/minecraft/unmapped/C_4288894
 		p	5			p_5
 		p	6			p_6
 c	net/minecraft/unmapped/C_6707278
-	m	(III)D	m_1863000	m_1863000	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
+	m	(III)D	m_1863000	distanceTo	
+		p	1		x	
+		p	2		y	
+		p	3		z	
 c	net/minecraft/unmapped/C_7338567
-	f	Z	f_0518827	f_0518827	
+	f	Z	f_0518827	interested	
 	m	()Z	m_4423681		m_4423681
 c	net/minecraft/unmapped/C_6377547
 	m	(Lnet/minecraft/server/MinecraftServer;Lnet/minecraft/unmapped/C_9147018;Ljava/lang/String;ILnet/minecraft/unmapped/C_4413269;Lnet/minecraft/unmapped/C_7366354;)V	<init>	<init>	
@@ -282,7 +282,7 @@ c	net/minecraft/unmapped/C_6377547
 		p	6			p_6
 		p	7			p_7
 c	net/minecraft/unmapped/C_0956869
-	f	Z	f_0848966	f_0848966	
+	f	Z	f_0848966	updating	
 c	net/minecraft/unmapped/C_1404514
 	m	()Z	m_9362922		m_9362922
 	m	(Lnet/minecraft/unmapped/C_4844124;)Z	m_9063255		m_9063255

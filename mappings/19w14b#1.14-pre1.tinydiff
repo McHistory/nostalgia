@@ -12,10 +12,10 @@ c	net/minecraft/unmapped/C_0309511
 	m	(Z)V	m_0102275		m_0102275
 		p	1			p_1
 c	net/minecraft/unmapped/C_0459721
-	m	(Lnet/minecraft/unmapped/C_7694617;Lnet/minecraft/unmapped/C_7694617;)Lnet/minecraft/unmapped/C_7641996;	m_0129806	m_0129806	
+	m	(Lnet/minecraft/unmapped/C_7694617;Lnet/minecraft/unmapped/C_7694617;)Lnet/minecraft/unmapped/C_7641996;	m_0129806	reconstructPath	
 		p	1		p_1	
 		p	2		p_2	
-	m	(Lnet/minecraft/unmapped/C_7694617;)Lnet/minecraft/unmapped/C_7641996;	m_0129806		m_0129806
+	m	(Lnet/minecraft/unmapped/C_7694617;)Lnet/minecraft/unmapped/C_7641996;	m_0129806		reconstructPath
 		p	1			p_1
 c	net/minecraft/unmapped/C_0639491
 	m	()V	m_0500842	m_0500842	
@@ -23,10 +23,10 @@ c	net/minecraft/unmapped/C_0639491
 		p	1			p_1
 c	net/minecraft/unmapped/C_0786431
 	f	I	f_0323868	f_0323868	
-	m	(ZI)V	m_0021523	m_0021523	
-		p	1		p_1	
-		p	2		p_2	
-	m	(Z)V	m_0021523		m_0021523
+	m	(ZI)V	m_0021523	confirmResult	
+		p	1		result	
+		p	2		id	
+	m	(Z)V	m_0021523		confirmResult
 		p	1			p_1
 c	net/minecraft/unmapped/C_1017062
 	m	(ZI)V	m_9476156	m_9476156	
@@ -87,11 +87,11 @@ c	net/minecraft/unmapped/C_3777975
 	m	(Z)V	m_4391550		m_4391550
 		p	1			p_1
 c	net/minecraft/unmapped/C_4045198
-	m	()V	m_0500842	m_0500842	
-	m	(Z)V	m_0500842		m_0500842
+	m	()V	m_0500842	tick	
+	m	(Z)V	m_0500842		tick
 		p	1			p_1
 c	net/minecraft/unmapped/C_4331994
-	f	Lnet/minecraft/unmapped/C_0786431;	f_8377260	f_8377260	
+	f	Lnet/minecraft/unmapped/C_0786431;	f_8377260	lastScreen	
 	f	Lit/unimi/dsi/fastutil/booleans/BooleanConsumer;	f_3175781		f_3175781
 	m	(Lnet/minecraft/unmapped/C_0786431;Lnet/minecraft/unmapped/C_5769145;)V	<init>	<init>	
 		p	1		p_1	
@@ -116,9 +116,9 @@ c	net/minecraft/unmapped/C_4939758
 		p	2			p_2
 		p	3			p_3
 c	net/minecraft/unmapped/C_5441464
-	f	I	f_5708195	f_5708195	
-	f	Lnet/minecraft/unmapped/C_3268052;	f_1969779	f_1969779	
-	f	Lit/unimi/dsi/fastutil/booleans/BooleanConsumer;	f_1969779		f_1969779
+	f	I	f_5708195	delayTicker	
+	f	Lnet/minecraft/unmapped/C_3268052;	f_1969779	parent	
+	f	Lit/unimi/dsi/fastutil/booleans/BooleanConsumer;	f_1969779		parent
 	m	(Lnet/minecraft/unmapped/C_3268052;Lnet/minecraft/unmapped/C_9550253;Lnet/minecraft/unmapped/C_9550253;I)V	<init>	<init>	
 		p	1		p_1	
 		p	2		p_2	
@@ -152,9 +152,9 @@ c	net/minecraft/unmapped/C_7185906
 		p	0			p_0
 		p	2			p_2
 c	net/minecraft/unmapped/C_7641996
-	f	[Lnet/minecraft/unmapped/C_7694617;	f_6636189	f_6636189	
-	f	I	f_7452557	f_7452557	
-	f	Ljava/util/List;	f_6636189		f_6636189
+	f	[Lnet/minecraft/unmapped/C_7694617;	f_6636189	nodes	
+	f	I	f_7452557	length	
+	f	Ljava/util/List;	f_6636189		nodes
 	m	([Lnet/minecraft/unmapped/C_7694617;)V	<init>	<init>	
 		p	1		p_1	
 	m	()[Lnet/minecraft/unmapped/C_7694617;	m_5498478	m_5498478	
@@ -170,8 +170,8 @@ c	net/minecraft/unmapped/C_1877543
 		p	2			p_2
 		p	3			p_3
 c	net/minecraft/unmapped/C_9574073
-	f	Lnet/minecraft/unmapped/C_3268052;	f_3956118	f_3956118	
-	f	Lit/unimi/dsi/fastutil/booleans/BooleanConsumer;	f_3956118		f_3956118
+	f	Lnet/minecraft/unmapped/C_3268052;	f_3956118	lastScreen	
+	f	Lit/unimi/dsi/fastutil/booleans/BooleanConsumer;	f_3956118		lastScreen
 	m	(Lnet/minecraft/unmapped/C_3268052;Ljava/lang/String;)V	<init>	<init>	
 		p	1		p_1	
 		p	2		p_2	

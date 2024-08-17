@@ -1,32 +1,33 @@
 tiny	2	0
 c	net/minecraft/client/Minecraft
-	f	Lnet/minecraft/unmapped/C_4076851;	f_4615094	f_4615094	
-	f	I	f_2615354	f_2615354	
-	f	Lnet/minecraft/unmapped/C_4590573;	f_5367062	f_5367062	
-	f	Z	f_7696449	f_7696449	
-	f	J	f_7741265	f_7741265	
+	f	Lnet/minecraft/unmapped/C_4076851;	f_4615094	openGLCapabilities	
+	f	I	f_2615354	ticks	
+	f	Lnet/minecraft/unmapped/C_4590573;	f_5367062	humanoidModel	
+	f	Z	f_7696449	isRaining	
+	f	J	f_7741265	sessionTime	
+		c	Anything greater then 0 will make the client behave as its offline	
 	f	I	f_8278041	f_8278041	
 	m	(Ljava/awt/Component;Ljava/awt/Canvas;Lnet/minecraft/client/MinecraftApplet;IIZ)V	<init>	<init>	
+		p	1		component	
+		p	2		canvas	
+		p	3		applet	
+		p	4		displayWidth	
+		p	5		displayHeight	
+		p	6		fullscreen	
+	m	(Lnet/minecraft/unmapped/C_8817873;Ljava/lang/String;)V	m_5784106	setLevel	
+		p	1		p_1	
+		p	2		p_2	
+	m	(Lnet/minecraft/unmapped/C_8817873;Ljava/lang/String;Lnet/minecraft/unmapped/C_5009044;)V	m_5733981	setLevel	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-		p	6		p_6	
-	m	(Lnet/minecraft/unmapped/C_8817873;Ljava/lang/String;)V	m_5784106	m_5784106	
-		p	1		p_1	
-		p	2		p_2	
-	m	(Lnet/minecraft/unmapped/C_8817873;Ljava/lang/String;Lnet/minecraft/unmapped/C_5009044;)V	m_5733981	m_5733981	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-	m	(Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;)V	m_6139283	m_6139283	
+	m	(Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;)V	m_6139283	start	
 		p	0		p_0	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
 		p	4		p_4	
-	m	(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;)V	m_9802560	m_9802560	
+	m	(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;)V	m_9802560	startAndConnectTo	
 		p	0		p_0	
 		p	1		p_1	
 		p	2		p_2	
@@ -39,7 +40,7 @@ c	net/minecraft/client/Minecraft
 		p	3			p_3
 		p	4			p_4
 		p	5			p_5
-	m	(Lnet/minecraft/unmapped/C_8817873;Ljava/lang/String;)V	m_5733981		m_5733981
+	m	(Lnet/minecraft/unmapped/C_8817873;Ljava/lang/String;)V	m_5733981		setLevel
 		p	1			p_1
 		p	2			p_2
 c	net/minecraft/client/Minecraft$3720552	3720552	
@@ -99,14 +100,14 @@ c	net/minecraft/server/MinecraftServer
 	m	(Z)V	m_0278434		m_0278434
 		p	1			p_1
 c	net/minecraft/unmapped/C_1044273
-	f	Lnet/minecraft/unmapped/C_3906126;	f_4415583	f_4415583	
-	f	Lnet/minecraft/unmapped/C_8817873;	f_4415583		f_4415583
-	m	(Lnet/minecraft/unmapped/C_3906126;)V	m_5865103	m_5865103	
-		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_8817873;)V	m_5865103		m_5865103
+	f	Lnet/minecraft/unmapped/C_3906126;	f_4415583	level	
+	f	Lnet/minecraft/unmapped/C_8817873;	f_4415583		level
+	m	(Lnet/minecraft/unmapped/C_3906126;)V	m_5865103	setLevel	
+		p	1		level	
+	m	(Lnet/minecraft/unmapped/C_8817873;)V	m_5865103		setLevel
 		p	1			p_1
 c	net/minecraft/unmapped/C_3172064
-	f	Ljava/lang/String;	f_3299090	f_3299090	
+	f	Ljava/lang/String;	f_3299090	mppass	
 c	net/minecraft/unmapped/C_3466301
 	m	(Lnet/minecraft/unmapped/C_3472870;III)Z	m_4582642		m_4582642
 		p	1			p_1
@@ -116,7 +117,7 @@ c	net/minecraft/unmapped/C_3466301
 c	net/minecraft/unmapped/C_3635204
 	f	Lnet/minecraft/unmapped/C_3635204;	f_0911999		f_0911999
 c	net/minecraft/unmapped/C_4076851
-	f	Z	f_6867014	f_6867014	
+	f	Z	f_6867014	USE_OCCLUSION_QUERY	
 	m	()V	<clinit>	<clinit>	
 c	net/minecraft/unmapped/C_4766485
 	f	I	f_0662552		f_0662552

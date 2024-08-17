@@ -7,7 +7,7 @@ c	net/minecraft/server/MinecraftServer
 	m	()Z	m_0660733	m_0660733	
 c	net/minecraft/unmapped/C_0019534
 	m	(Lnet/minecraft/server/MinecraftServer;)V	<init>	<init>	
-		p	1		p_1	
+		p	1		server	
 	m	(Lnet/minecraft/server/MinecraftServer;I)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
@@ -17,21 +17,21 @@ c	net/minecraft/unmapped/C_0400468
 		p	2		p_2	
 		p	3		p_3	
 		p	4		p_4	
-c	net/minecraft/unmapped/C_0894181	net/minecraft/unmapped/C_0894181	
-	f	Ljava/util/Properties;	f_6829945	f_6829945	
-	f	Ljava/io/File;	f_9978653	f_9978653	
+c	net/minecraft/unmapped/C_0894181	net/minecraft/server/ServerProperties	
+	f	Ljava/util/Properties;	f_6829945	properties	
+	f	Ljava/io/File;	f_9978653	file	
 	f	Lorg/apache/logging/log4j/Logger;	f_7700854	f_7700854	
-	m	()V	m_9945328	m_9945328	
-	m	()V	m_2759017	m_2759017	
-	m	(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;	m_5767189	m_5767189	
-		p	1		p_1	
-		p	2		p_2	
-	m	(Ljava/lang/String;I)I	m_2867688	m_2867688	
-		p	1		p_1	
-		p	2		p_2	
-	m	(Ljava/lang/String;Z)Z	m_1965686	m_1965686	
-		p	1		p_1	
-		p	2		p_2	
+	m	()V	m_9945328	generate	
+	m	()V	m_2759017	save	
+	m	(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;	m_5767189	getString	
+		p	1		key	
+		p	2		defaultValue	
+	m	(Ljava/lang/String;I)I	m_2867688	getInt	
+		p	1		key	
+		p	2		defaultValue	
+	m	(Ljava/lang/String;Z)Z	m_1965686	getBool	
+		p	1		key	
+		p	2		defaultValue	
 	m	()Ljava/io/File;	m_7429731	m_7429731	
 	m	(Ljava/lang/String;Ljava/lang/Object;)V	m_8480327	m_8480327	
 		p	1		p_1	
@@ -143,9 +143,9 @@ c	net/minecraft/unmapped/C_7029902
 c	net/minecraft/unmapped/C_7102748
 	f	Ljava/util/Collection;	f_5384916		f_5384916
 	f	Ljava/util/concurrent/atomic/AtomicBoolean;	f_6209648		f_6209648
-	m	(Lnet/minecraft/unmapped/C_7293551;)V	m_3637472	m_3637472	
+	m	(Lnet/minecraft/unmapped/C_7293551;)V	m_3637472	showFrameFor	
 		p	0		p_0	
-	m	(Lnet/minecraft/unmapped/C_7293551;)Lnet/minecraft/unmapped/C_7102748;	m_3637472		m_3637472
+	m	(Lnet/minecraft/unmapped/C_7293551;)Lnet/minecraft/unmapped/C_7102748;	m_3637472		showFrameFor
 		p	0			p_0
 	m	(Ljava/lang/Runnable;)V	m_6583160		m_6583160
 		p	1			p_1

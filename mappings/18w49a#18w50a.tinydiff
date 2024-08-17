@@ -341,18 +341,18 @@ c	net/minecraft/unmapped/C_3239917
 	f	Ljava/util/Map;	f_4433878	f_4433878	
 	f	I	f_9389887	f_9389887	
 	f	I	f_5365604	f_5365604	
-	m	(Lnet/minecraft/unmapped/C_1013763;FFF)V	m_5265007	m_5265007	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
+	m	(Lnet/minecraft/unmapped/C_1013763;FFF)V	m_5265007	prepareMobModel	
+		p	1		entity	
+		p	2		time	
+		p	3		r	
+		p	4		a	
 	m	(Ljava/lang/String;II)V	m_5769515	m_5769515	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
 	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_9536449;	m_6553988	m_6553988	
 		p	1		p_1	
-	m	(FFFFFFLnet/minecraft/unmapped/C_6385858;)V	m_5805395	m_5805395	
+	m	(FFFFFFLnet/minecraft/unmapped/C_6385858;)V	m_5805395	setupAnim	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
@@ -375,7 +375,7 @@ c	net/minecraft/unmapped/C_3239917
 		p	5			p_5
 		p	6			p_6
 		p	7			p_7
-	m	(Lnet/minecraft/unmapped/C_6385858;FFF)V	m_5265007		m_5265007
+	m	(Lnet/minecraft/unmapped/C_6385858;FFF)V	m_5265007		prepareMobModel
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -423,12 +423,12 @@ c	net/minecraft/unmapped/C_3521779
 		p	6			p_6
 		p	7			p_7
 c	net/minecraft/unmapped/C_3571139
-	f	Lnet/minecraft/unmapped/C_2286002;	f_8518645	f_8518645	
+	f	Lnet/minecraft/unmapped/C_2286002;	f_8518645	chunkIo	
 	f	Lorg/apache/logging/log4j/Logger;	f_3968319	f_3968319	
-	f	Lit/unimi/dsi/fastutil/longs/LongSet;	f_6557144	f_6557144	
+	f	Lit/unimi/dsi/fastutil/longs/LongSet;	f_6557144	toDrop	
 	f	Lnet/minecraft/unmapped/C_3571139$C_5673942;	f_4636032	f_4636032	
 	f	Ljava/lang/Thread;	f_3237884	f_3237884	
-	f	Lit/unimi/dsi/fastutil/longs/Long2ObjectLinkedOpenHashMap;	f_1083411	f_1083411	
+	f	Lit/unimi/dsi/fastutil/longs/Long2ObjectLinkedOpenHashMap;	f_1083411	cache	
 	f	Z	f_0513682	f_0513682	
 	f	Ljava/util/concurrent/ExecutorService;	f_6449133	f_6449133	
 	f	Ljava/util/concurrent/atomic/AtomicInteger;	f_0214878	f_0214878	
@@ -453,7 +453,7 @@ c	net/minecraft/unmapped/C_3571139
 	m	(Lnet/minecraft/unmapped/C_3331146;I)Lnet/minecraft/unmapped/C_3331146;	m_2515318	m_2515318	
 		p	1		p_1	
 		p	2		p_2	
-	m	(Lnet/minecraft/unmapped/C_0636026;Z)V	m_6583950	m_6583950	
+	m	(Lnet/minecraft/unmapped/C_0636026;Z)V	m_6583950	saveChunk	
 		p	1		p_1	
 		p	2		p_2	
 	m	(Z)V	m_6309491	m_6309491	
@@ -921,8 +921,8 @@ c	net/minecraft/unmapped/C_6385858
 		p	2			p_2
 	m	()Z	m_4298313		m_4298313
 c	net/minecraft/unmapped/C_6441735
-	f	Lnet/minecraft/unmapped/C_3239917;	f_1480790	f_1480790	
-	f	Lnet/minecraft/unmapped/C_3645733;	f_1480790		f_1480790
+	f	Lnet/minecraft/unmapped/C_3239917;	f_1480790	boatModel	
+	f	Lnet/minecraft/unmapped/C_3645733;	f_1480790		boatModel
 c	net/minecraft/unmapped/C_6618366
 	f	Lnet/minecraft/unmapped/C_6618366;	f_8354984		f_8354984
 c	net/minecraft/unmapped/C_6692196
@@ -935,9 +935,9 @@ c	net/minecraft/unmapped/C_6755599
 	m	(Lnet/minecraft/unmapped/C_5079592;)V	m_0379505		m_0379505
 		p	1			p_1
 c	net/minecraft/unmapped/C_7192378
-	m	(Lnet/minecraft/unmapped/C_4390289;I)Z	m_6632735	m_6632735	
-		p	1		p_1	
-		p	2		p_2	
+	m	(Lnet/minecraft/unmapped/C_4390289;I)Z	m_6632735	isAt	
+		p	1		container	
+		p	2		slot	
 c	net/minecraft/unmapped/C_7317606
 	m	(Lnet/minecraft/unmapped/C_1013763;FFF)V	m_5265007	m_5265007	
 		p	1		p_1	
@@ -1011,9 +1011,9 @@ c	net/minecraft/unmapped/C_7366354
 c	net/minecraft/unmapped/C_7557064
 	m	()Lnet/minecraft/unmapped/C_4030632;	m_3619323		m_3619323
 c	net/minecraft/unmapped/C_7699185
-	m	(Lnet/minecraft/unmapped/C_4390289;I)Lnet/minecraft/unmapped/C_7192378;	m_1887764	m_1887764	
-		p	1		p_1	
-		p	2		p_2	
+	m	(Lnet/minecraft/unmapped/C_4390289;I)Lnet/minecraft/unmapped/C_7192378;	m_1887764	getSlotFor	
+		p	1		container	
+		p	2		slot	
 c	net/minecraft/unmapped/C_8125832
 	m	(Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6707278;Ljava/util/Random;)V	m_2144430	m_2144430	
 		p	1		p_1	
@@ -1054,7 +1054,7 @@ c	net/minecraft/unmapped/C_9022523$C_4705511
 c	net/minecraft/unmapped/C_9302567
 	m	(Lnet/minecraft/unmapped/C_6385858;)V	m_6133514		m_6133514
 		p	1			p_1
-c	net/minecraft/unmapped/C_9315553	net/minecraft/unmapped/C_9315553	
+c	net/minecraft/unmapped/C_9315553	net/minecraft/client/renderer/entity/FireballRenderer	
 	f	F	f_9393843	f_9393843	
 	m	(Lnet/minecraft/unmapped/C_9746149;DDDFF)V	m_6041455	m_6041455	
 		p	1		p_1	

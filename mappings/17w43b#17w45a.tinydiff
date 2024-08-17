@@ -4,14 +4,14 @@ c	net/minecraft/client/Minecraft
 	f	Lnet/minecraft/unmapped/C_0561170;	f_2252451	f_2252451	
 	f	Lnet/minecraft/unmapped/C_0561170;	f_2881510		f_2881510
 	f	Lnet/minecraft/unmapped/C_3779718;	f_0678280		f_0678280
-	m	(Lnet/minecraft/unmapped/C_3385278;)V	m_0158817	m_0158817	
+	m	(Lnet/minecraft/unmapped/C_3385278;)V	m_0158817	renderLoadingScreen	
 		p	1		p_1	
 	m	()V	m_4393690		m_4393690
 	m	()Lnet/minecraft/unmapped/C_7283471;	m_6273448		m_6273448
 	m	()Lnet/minecraft/unmapped/C_0561170;	m_8911445		m_8911445
 c	net/minecraft/server/MinecraftServer
-	f	Lnet/minecraft/unmapped/C_6015078;	f_3633355	f_3633355	
-	f	Lnet/minecraft/unmapped/C_5521225;	f_3633355		f_3633355
+	f	Lnet/minecraft/unmapped/C_6015078;	f_3633355	commands	
+	f	Lnet/minecraft/unmapped/C_5521225;	f_3633355		commands
 	m	()Lnet/minecraft/unmapped/C_6015078;	m_9353503	m_9353503	
 	m	(ILjava/lang/String;)Z	m_5330743	m_5330743	
 		p	1		p_1	
@@ -49,7 +49,7 @@ c	net/minecraft/unmapped/C_0019534
 	m	(Lcom/mojang/authlib/GameProfile;)V	m_9881331	m_9881331	
 		p	1		p_1	
 	m	()[Ljava/lang/String;	m_0047494	m_0047494	
-	m	(Z)Ljava/lang/String;	m_4855907	m_4855907	
+	m	(Z)Ljava/lang/String;	m_4855907	getPlayerNames	
 		p	1		p_1	
 c	net/minecraft/unmapped/C_0141705
 c	net/minecraft/unmapped/C_0141705$C_0473014
@@ -108,8 +108,8 @@ c	net/minecraft/unmapped/C_0336319
 	m	(Ljava/util/EnumSet;)Lnet/minecraft/unmapped/C_0336319;	m_2995796		m_2995796
 		p	1			p_1
 c	net/minecraft/unmapped/C_0535659
-	f	Lnet/minecraft/unmapped/C_2182707;	f_4647043	f_4647043	
-	f	Lnet/minecraft/unmapped/C_1630803;	f_4647043		f_4647043
+	f	Lnet/minecraft/unmapped/C_2182707;	f_4647043	source	
+	f	Lnet/minecraft/unmapped/C_1630803;	f_4647043		source
 	m	(Ljava/lang/String;Lnet/minecraft/unmapped/C_2182707;)V	<init>	<init>	
 		p	1		p_1	
 		p	2		p_2	
@@ -437,14 +437,14 @@ c	net/minecraft/unmapped/C_2182707
 	m	()Z	m_9266351		m_9266351
 c	net/minecraft/unmapped/C_2250623
 	m	()Lnet/minecraft/unmapped/C_9550253;	m_9837898		m_9837898
-c	net/minecraft/unmapped/C_2293006	net/minecraft/unmapped/C_2293006	
-	f	I	f_4560063	f_4560063	
-	f	I	f_2999022	f_2999022	
-	f	I	f_5496225	f_5496225	
-	f	D	f_9281823	f_9281823	
-	f	D	f_9477477	f_9477477	
-	m	()I	m_8219356	m_8219356	
-	m	()I	m_6363674	m_6363674	
+c	net/minecraft/unmapped/C_2293006	net/minecraft/client/ScreenSizeCalculator	
+	f	I	f_4560063	width	
+	f	I	f_2999022	height	
+	f	I	f_5496225	guiScale	
+	f	D	f_9281823	guiScaledWidth	
+	f	D	f_9477477	guiScaledHeight	
+	m	()I	m_8219356	getWidth	
+	m	()I	m_6363674	getHeight	
 	m	()D	m_2638522	m_2638522	
 	m	()D	m_1017228	m_1017228	
 	m	()I	m_0343331	m_0343331	
@@ -499,7 +499,7 @@ c	net/minecraft/unmapped/C_2782822
 		p	11		p_11	
 		p	13		p_13	
 		p	15		p_15	
-	m	(IZZDDDDDD[I)V	m_5421083	m_5421083	
+	m	(IZZDDDDDD[I)V	m_5421083	spawnParticle	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
@@ -519,7 +519,7 @@ c	net/minecraft/unmapped/C_2782822
 		p	9			p_9
 		p	11			p_11
 		p	13			p_13
-	m	(Lnet/minecraft/unmapped/C_1821693;ZZDDDDDD)V	m_5421083		m_5421083
+	m	(Lnet/minecraft/unmapped/C_1821693;ZZDDDDDD)V	m_5421083		spawnParticle
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -565,12 +565,12 @@ c	net/minecraft/unmapped/C_3699792
 		p	2		p_2	
 	m	(Lnet/minecraft/unmapped/C_2293006;)V	m_9332420	m_9332420	
 		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_2293006;)V	m_9499319	m_9499319	
+	m	(Lnet/minecraft/unmapped/C_2293006;)V	m_9499319	renderPumpkin	
 		p	1		p_1	
-	m	(FLnet/minecraft/unmapped/C_2293006;)V	m_5469572	m_5469572	
+	m	(FLnet/minecraft/unmapped/C_2293006;)V	m_5469572	renderVignette	
 		p	1		p_1	
 		p	2		p_2	
-	m	(FLnet/minecraft/unmapped/C_2293006;)V	m_6770475	m_6770475	
+	m	(FLnet/minecraft/unmapped/C_2293006;)V	m_6770475	renderPortalOverlay	
 		p	1		p_1	
 		p	2		p_2	
 	m	(FLnet/minecraft/unmapped/C_2293006;)V	m_8120281	m_8120281	
@@ -595,10 +595,10 @@ c	net/minecraft/unmapped/C_3699792
 		p	1			p_1
 	m	()V	m_9332420		m_9332420
 	m	()V	m_9770507		m_9770507
-	m	()V	m_9499319		m_9499319
-	m	(F)V	m_5469572		m_5469572
+	m	()V	m_9499319		renderPumpkin
+	m	(F)V	m_5469572		renderVignette
 		p	1			p_1
-	m	(F)V	m_6770475		m_6770475
+	m	(F)V	m_6770475		renderPortalOverlay
 		p	1			p_1
 c	net/minecraft/unmapped/C_3705866
 c	net/minecraft/unmapped/C_3705866$C_1244306
@@ -661,7 +661,7 @@ c	net/minecraft/unmapped/C_3794155$C_5847242
 		p	11			p_11
 		p	13			p_13
 c	net/minecraft/unmapped/C_3906126
-	m	(Lnet/minecraft/unmapped/C_4701530;DDDDDD[I)V	m_6016912	m_6016912	
+	m	(Lnet/minecraft/unmapped/C_4701530;DDDDDD[I)V	m_6016912	addParticle	
 		p	1		p_1	
 		p	2		p_2	
 		p	4		p_4	
@@ -812,7 +812,7 @@ c	net/minecraft/unmapped/C_4620696$C_0762704
 		p	11			p_11
 		p	13			p_13
 c	net/minecraft/unmapped/C_4824661
-	m	()V	m_4946406	m_4946406	
+	m	()V	m_4946406	setScreenProjectionMatrix	
 c	net/minecraft/unmapped/C_4824661$0251248
 	f	Lnet/minecraft/unmapped/C_2293006;	f_0079649	f_0079649	
 	m	(Lnet/minecraft/unmapped/C_4824661;Lnet/minecraft/unmapped/C_2293006;)V	<init>	<init>	
@@ -1152,8 +1152,8 @@ c	net/minecraft/unmapped/C_8479751
 		p	12			p_12
 		p	14			p_14
 c	net/minecraft/unmapped/C_8592380
-	m	(I)Ljava/nio/IntBuffer;	m_3971013	m_3971013	
-		p	0		p_0	
+	m	(I)Ljava/nio/IntBuffer;	m_3971013	createIntBuffer	
+		p	0		size	
 c	net/minecraft/unmapped/C_8752044
 	m	(Lnet/minecraft/unmapped/C_8248479;)V	m_6945033	m_6945033	
 		p	1		p_1	
@@ -1226,11 +1226,11 @@ c	net/minecraft/unmapped/C_1461754$C_4843940
 		p	9			p_9
 		p	11			p_11
 		p	13			p_13
-c	net/minecraft/unmapped/C_6015078	net/minecraft/unmapped/C_6015078	
+c	net/minecraft/unmapped/C_6015078	net/minecraft/server/Commands	
 	m	(Lnet/minecraft/unmapped/C_2182707;)Ljava/util/List;	m_1603169	m_1603169	
 		p	1		p_1	
 	m	()Ljava/util/Map;	m_6487036	m_6487036	
-	m	(Lnet/minecraft/unmapped/C_2182707;Ljava/lang/String;)I	m_2940712	m_2940712	
+	m	(Lnet/minecraft/unmapped/C_2182707;Ljava/lang/String;)I	m_2940712	performCommand	
 		p	1		p_1	
 		p	2		p_2	
 	m	(Lnet/minecraft/unmapped/C_2182707;Ljava/lang/String;Lnet/minecraft/unmapped/C_6707278;)Ljava/util/List;	m_9927156	m_9927156	

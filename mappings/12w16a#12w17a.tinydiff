@@ -12,17 +12,17 @@ c	net/minecraft/unmapped/C_0324512
 		p	1			p_1
 	m	()I	m_5994254		m_5994254
 c	net/minecraft/unmapped/C_0386427
-	f	Lnet/minecraft/unmapped/C_9614477;	f_0220793	f_0220793	
+	f	Lnet/minecraft/unmapped/C_9614477;	f_0220793	loginPacket	
 	f	Z	f_9503386		f_9503386
 	f	Ljavax/crypto/SecretKey;	f_3206795		f_3206795
-	m	(Lnet/minecraft/unmapped/C_9614477;)V	m_7298942	m_7298942	
+	m	(Lnet/minecraft/unmapped/C_9614477;)V	m_7298942	handleAcceptedLogin	
 		p	1		p_1	
 	m	(Lnet/minecraft/unmapped/C_0386427;Lnet/minecraft/unmapped/C_9614477;)Lnet/minecraft/unmapped/C_9614477;	m_8821424	m_8821424	
 		p	0		p_0	
 		p	1		p_1	
 	m	(Lnet/minecraft/unmapped/C_8329233;)V	m_6609228		m_6609228
 		p	1			p_1
-	m	()V	m_7298942		m_7298942
+	m	()V	m_7298942		handleAcceptedLogin
 	m	(Lnet/minecraft/unmapped/C_0386427;)Lnet/minecraft/server/MinecraftServer;	m_1057713		m_1057713
 		p	0			p_0
 	m	(Lnet/minecraft/unmapped/C_0386427;)Ljavax/crypto/SecretKey;	m_0253215		m_0253215
@@ -77,24 +77,24 @@ c	net/minecraft/unmapped/C_2750078
 		p	1			p_1
 		p	2			p_2
 c	net/minecraft/unmapped/C_3635204
-	f	Lnet/minecraft/unmapped/C_3635204;	f_0269729	f_0269729	
-	f	Lnet/minecraft/unmapped/C_3635204;	f_0081657	f_0081657	
-	f	Lnet/minecraft/unmapped/C_1793890;	f_0269729		f_0269729
-	f	Lnet/minecraft/unmapped/C_1793890;	f_0081657		f_0081657
+	f	Lnet/minecraft/unmapped/C_3635204;	f_0269729	DOUBLE_SLAB	
+	f	Lnet/minecraft/unmapped/C_3635204;	f_0081657	SLAB	
+	f	Lnet/minecraft/unmapped/C_1793890;	f_0269729		DOUBLE_SLAB
+	f	Lnet/minecraft/unmapped/C_1793890;	f_0081657		SLAB
 	f	Lnet/minecraft/unmapped/C_1793890;	f_8137524		f_8137524
 	f	Lnet/minecraft/unmapped/C_1793890;	f_7859651		f_7859651
 c	net/minecraft/unmapped/C_3699792
-	f	Ljava/util/List;	f_9851646	f_9851646	
+	f	Ljava/util/List;	f_9851646	guiMessages	
 	f	Ljava/util/List;	f_7278261	f_7278261	
 	f	I	f_1427052	f_1427052	
 	f	Z	f_4574427	f_4574427	
 	f	Lnet/minecraft/unmapped/C_5091011;	f_2326521		f_2326521
-	m	()V	m_6434029	m_6434029	
-	m	(Ljava/lang/String;)V	m_4902001	m_4902001	
-		p	1		p_1	
-	m	(Ljava/lang/String;)V	m_9394394	m_9394394	
-		p	1		p_1	
-	m	()V	m_5633723	m_5633723	
+	m	()V	m_6434029	tick	
+	m	(Ljava/lang/String;)V	m_4902001	addMessage	
+		p	1		msg	
+	m	(Ljava/lang/String;)V	m_9394394	addTranslatedMessage	
+		p	1		msg	
+	m	()V	m_5633723	clearMessages	
 	m	(Lnet/minecraft/unmapped/C_4766485;)V	m_9221872	m_9221872	
 		p	1		p_1	
 	m	()Ljava/util/List;	m_2698274	m_2698274	
@@ -219,11 +219,11 @@ c	net/minecraft/unmapped/C_8752044
 	m	(Lnet/minecraft/unmapped/C_2926512;)V	m_7437314		m_7437314
 		p	1			p_1
 c	net/minecraft/unmapped/C_9165859
-	f	I	f_6175615	f_6175615	
+	f	I	f_6175615	ticks	
 	f	I	f_0837298		f_0837298
 	f	I	f_1095510		f_1095510
 	m	(Ljava/lang/String;)V	<init>	<init>	
-		p	1		p_1	
+		p	1		message	
 	m	(ILjava/lang/String;I)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
@@ -232,7 +232,7 @@ c	net/minecraft/unmapped/C_9165859
 	m	()I	m_3136456		m_3136456
 	m	()I	m_8609414		m_8609414
 c	net/minecraft/unmapped/C_9331929
-	f	Z	f_3052589	f_3052589	
+	f	Z	f_3052589	doubleSlab	
 	m	()Z	m_1944525	m_1944525	
 	m	()Z	m_1538589	m_1538589	
 	m	(Lnet/minecraft/unmapped/C_2627205;IIII)Z	m_8199947	m_8199947	
@@ -275,7 +275,7 @@ c	net/minecraft/unmapped/C_9572077
 c	net/minecraft/unmapped/C_9595287
 	f	I	f_8035245		f_8035245
 	m	(Ljava/lang/String;)V	<init>	<init>	
-		p	1		p_1	
+		p	1		userName	
 	m	(Ljava/lang/String;Ljava/lang/String;I)V	<init>	<init>	
 		p	1		p_1	
 		p	2		p_2	
@@ -286,10 +286,10 @@ c	net/minecraft/unmapped/C_9595287
 	m	()I	m_6706342		m_6706342
 	m	()Ljava/lang/String;	m_2741809		m_2741809
 c	net/minecraft/unmapped/C_9614477
-	f	Ljava/lang/String;	f_6892094	f_6892094	
+	f	Ljava/lang/String;	f_6892094	userName	
 	m	(Ljava/lang/String;I)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
+		p	1		userName	
+		p	2		protocol	
 	m	(Ljava/lang/String;ILnet/minecraft/unmapped/C_3997653;IIBBB)V	<init>	<init>	
 		p	1		p_1	
 		p	2		p_2	

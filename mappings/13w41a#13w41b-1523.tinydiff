@@ -50,8 +50,8 @@ c	net/minecraft/unmapped/C_1249120
 c	net/minecraft/unmapped/C_1613050
 	m	()I	m_2434998		m_2434998
 c	net/minecraft/unmapped/C_2012603
-	f	I	f_2345080	f_2345080	
-	f	I	f_6207328	f_6207328	
+	f	I	f_2345080	xc	
+	f	I	f_6207328	zc	
 	f	[B	f_2320113	f_2320113	
 	f	Lnet/minecraft/unmapped/C_9386942;	f_4673945		f_4673945
 	m	(II[SILnet/minecraft/unmapped/C_3906126;)V	<init>	<init>	
@@ -69,8 +69,8 @@ c	net/minecraft/unmapped/C_2012603
 	m	()I	m_1309873		m_1309873
 c	net/minecraft/unmapped/C_2422346
 	m	(IB)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
+		p	1		entityId	
+		p	2		eventId	
 	m	(Lnet/minecraft/unmapped/C_6385858;B)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
@@ -121,8 +121,8 @@ c	net/minecraft/unmapped/C_4883920
 	m	()Lnet/minecraft/unmapped/C_2750078;	m_9282651		m_9282651
 	m	()I	m_7067120		m_7067120
 c	net/minecraft/unmapped/C_4939758
-	m	(I)Lnet/minecraft/unmapped/C_6385858;	m_7439933	m_7439933	
-		p	1		p_1	
+	m	(I)Lnet/minecraft/unmapped/C_6385858;	m_7439933	getEntity	
+		p	1		id	
 c	net/minecraft/unmapped/C_4939758$0532845	0532845	
 	f	Lnet/minecraft/unmapped/C_9572077;	f_8802269	f_8802269	
 	f	Lnet/minecraft/unmapped/C_4939758;	f_4554035	f_4554035	
@@ -224,8 +224,8 @@ c	net/minecraft/unmapped/C_9381557
 	m	()I	m_8440895		m_8440895
 	m	()Lnet/minecraft/unmapped/C_2750078;	m_2826673		m_2826673
 c	net/minecraft/unmapped/C_9572077
-	f	Ljava/lang/String;	f_5169228	f_5169228	
-	f	Lnet/minecraft/unmapped/C_9550253;	f_5169228		f_5169228
+	f	Ljava/lang/String;	f_5169228	message	
+	f	Lnet/minecraft/unmapped/C_9550253;	f_5169228		message
 	m	(Ljava/lang/String;Z)V	<init>	<init>	
 		p	1		p_1	
 		p	2		p_2	
@@ -291,7 +291,7 @@ c	net/minecraft/unmapped/C_8670302
 	m	()I	m_6145975		m_6145975
 	m	()I	m_6920270		m_6920270
 c	net/minecraft/unmapped/C_1059954
-	f	I	f_5335734	f_5335734	
+	f	I	f_5335734	type	
 	m	(Lnet/minecraft/unmapped/C_6385858;IIII)V	<init>	<init>	
 		p	1		p_1	
 		p	2		p_2	
@@ -324,23 +324,23 @@ c	net/minecraft/unmapped/C_8871379
 	m	()I	m_1778898		m_1778898
 	m	()I	m_4152488		m_4152488
 c	net/minecraft/unmapped/C_6134274
-	f	S	f_8381442	f_8381442	
-	f	S	f_7178362	f_7178362	
-	f	I	f_7178362		f_7178362
+	f	S	f_8381442	item	
+	f	S	f_7178362	mapId	
+	f	I	f_7178362		mapId
 	m	(SS[B)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
+		p	1		item	
+		p	2		mapId	
+		p	3		colors	
 	m	(I[B)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
 	m	()I	m_0024291		m_0024291
 	m	()[B	m_0534637		m_0534637
 c	net/minecraft/unmapped/C_6786653
-	m	(SLnet/minecraft/unmapped/C_3906126;)Lnet/minecraft/unmapped/C_6285226;	m_5708486	m_5708486	
-		p	0		p_0	
-		p	1		p_1	
-	m	(ILnet/minecraft/unmapped/C_3906126;)Lnet/minecraft/unmapped/C_6285226;	m_5708486		m_5708486
+	m	(SLnet/minecraft/unmapped/C_3906126;)Lnet/minecraft/unmapped/C_6285226;	m_5708486	createSavedData	
+		p	0		id	
+		p	1		level	
+	m	(ILnet/minecraft/unmapped/C_3906126;)Lnet/minecraft/unmapped/C_6285226;	m_5708486		createSavedData
 		p	0			p_0
 		p	1			p_1
 c	net/minecraft/unmapped/C_9055414

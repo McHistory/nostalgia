@@ -2,7 +2,7 @@ tiny	2	0
 c	net/minecraft/unmapped/C_0019534
 	m	()Lnet/minecraft/unmapped/C_2800860;	m_7890892		m_7890892
 c	net/minecraft/unmapped/C_1044273
-	f	F	f_6975940	f_6975940	
+	f	F	f_6975940	destroyProgress	
 	f	Ljava/util/Map;	f_0392306		f_0392306
 	m	(Lnet/minecraft/unmapped/C_2334550;Lnet/minecraft/unmapped/C_5009044;F)V	m_4100138		m_4100138
 		p	1			p_1
@@ -37,7 +37,7 @@ c	net/minecraft/unmapped/C_3635204
 		p	2			p_2
 		p	4			p_4
 c	net/minecraft/unmapped/C_3699792
-	f	F	f_8178905	f_8178905	
+	f	F	f_8178905	destroyProgress	
 c	net/minecraft/unmapped/C_3906126
 	m	(IIIII)V	m_0874110		m_0874110
 		p	1			p_1
@@ -46,8 +46,8 @@ c	net/minecraft/unmapped/C_3906126
 		p	4			p_4
 		p	5			p_5
 c	net/minecraft/unmapped/C_4237166
-	m	(F)V	m_2475269	m_2475269	
-		p	1		p_1	
+	m	(F)V	m_2475269	render	
+		p	1		a	
 c	net/minecraft/unmapped/C_4443804
 	m	(Lnet/minecraft/unmapped/C_8318064;)V	m_2812953		m_2812953
 		p	1			p_1
@@ -56,17 +56,17 @@ c	net/minecraft/unmapped/C_4939758
 	m	(Lnet/minecraft/unmapped/C_8318064;)V	m_2812953		m_2812953
 		p	1			p_1
 c	net/minecraft/unmapped/C_6385858
-	m	(III)V	m_0129682	m_0129682	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
+	m	(III)V	m_0129682	setItemSlot	
+		p	1		slot	
+		p	2		item	
+		p	3		meta	
 	m	()V	m_9194759		m_9194759
-	m	(ILnet/minecraft/unmapped/C_2750078;)V	m_0129682		m_0129682
+	m	(ILnet/minecraft/unmapped/C_2750078;)V	m_0129682		setItemSlot
 		p	1			p_1
 		p	2			p_2
 c	net/minecraft/unmapped/C_7146036
-	f	Ljava/util/List;	f_2358101	f_2358101	
-	f	Ljava/util/Map;	f_2358101		f_2358101
+	f	Ljava/util/List;	f_2358101	RECENT_TOGGLES	
+	f	Ljava/util/Map;	f_2358101		RECENT_TOGGLES
 	m	(Lnet/minecraft/unmapped/C_3906126;JJ)V	m_5956654		m_5956654
 		p	1			p_1
 		p	2			p_2
@@ -101,16 +101,16 @@ c	net/minecraft/unmapped/C_8479751
 		p	4			p_4
 		p	5			p_5
 c	net/minecraft/unmapped/C_9701483
-	f	I	f_9882385	f_9882385	
-	f	I	f_9270018	f_9270018	
+	f	I	f_9882385	item	
+	f	I	f_9270018	auxValue	
 	f	Lnet/minecraft/unmapped/C_2750078;	f_6188601		f_6188601
 	m	()Lnet/minecraft/unmapped/C_2750078;	m_3522845		m_3522845
 c	net/minecraft/unmapped/C_9958683
 	f	D	f_0980085		f_0980085
 c	net/minecraft/unmapped/C_3473914
-	m	(Lnet/minecraft/unmapped/C_5009044;)Lnet/minecraft/unmapped/C_2800860;	m_0360296	m_0360296	
+	m	(Lnet/minecraft/unmapped/C_5009044;)Lnet/minecraft/unmapped/C_2800860;	m_0360296	saveWithPlayers	
 		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_2800860;)Lnet/minecraft/unmapped/C_2800860;	m_0360296		m_0360296
+	m	(Lnet/minecraft/unmapped/C_2800860;)Lnet/minecraft/unmapped/C_2800860;	m_0360296		saveWithPlayers
 		p	1			p_1
 c	net/minecraft/unmapped/C_4507027
 	m	(Lnet/minecraft/unmapped/C_3473914;Lnet/minecraft/unmapped/C_5009044;)V	m_5729738	m_5729738	
@@ -134,10 +134,10 @@ c	net/minecraft/unmapped/C_8923543
 		p	1			p_1
 		p	2			p_2
 c	net/minecraft/unmapped/C_9147018
-	m	(Lnet/minecraft/unmapped/C_3473914;Lnet/minecraft/unmapped/C_5009044;)V	m_5729738	m_5729738	
+	m	(Lnet/minecraft/unmapped/C_3473914;Lnet/minecraft/unmapped/C_5009044;)V	m_5729738	saveWithPlayers	
 		p	1		p_1	
 		p	2		p_2	
-	m	(Lnet/minecraft/unmapped/C_3473914;Lnet/minecraft/unmapped/C_2800860;)V	m_5729738		m_5729738
+	m	(Lnet/minecraft/unmapped/C_3473914;Lnet/minecraft/unmapped/C_2800860;)V	m_5729738		saveWithPlayers
 		p	1			p_1
 		p	2			p_2
 c	net/minecraft/unmapped/C_5812542

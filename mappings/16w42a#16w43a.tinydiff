@@ -1,17 +1,17 @@
 tiny	2	0
 c	net/minecraft/unmapped/C_0820158
-	f	Lnet/minecraft/unmapped/C_5009044;	f_7387845	f_7387845	
-	f	I	f_4655045	f_4655045	
-	f	I	f_1510309	f_1510309	
-	f	I	f_9060912	f_9060912	
-	f	D	f_1135637	f_1135637	
-	f	D	f_8713870	f_8713870	
-	f	D	f_5312736	f_5312736	
-	f	D	f_2301503	f_2301503	
-	f	D	f_8063037	f_8063037	
-	f	D	f_4930251	f_4930251	
-	f	D	f_7859426	f_7859426	
-	f	D	f_0680928	f_0680928	
+	f	Lnet/minecraft/unmapped/C_5009044;	f_7387845	owner	
+	f	I	f_4655045	life	
+	f	I	f_1510309	flightTime	
+	f	I	f_9060912	lerpSteps	
+	f	D	f_1135637	lerpX	
+	f	D	f_8713870	lerpY	
+	f	D	f_5312736	lerpZ	
+	f	D	f_2301503	lerpYRot	
+	f	D	f_8063037	lerpXRot	
+	f	D	f_4930251	lxd	
+	f	D	f_7859426	lyd	
+	f	D	f_0680928	lzd	
 	f	I	f_6436134	f_6436134	
 	f	I	f_7994687	f_7994687	
 	f	I	f_5392148	f_5392148	
@@ -25,10 +25,10 @@ c	net/minecraft/unmapped/C_0820158
 	f	Lnet/minecraft/unmapped/C_0820158$C_3536386;	f_8215355		f_8215355
 	m	(Lnet/minecraft/unmapped/C_3906126;)V	<init>	<init>	
 		p	1		p_1	
-	m	(DDDFF)V	m_5213498	m_5213498	
-		p	1		p_1	
-		p	3		p_3	
-		p	5		p_5	
+	m	(DDDFF)V	m_5213498	shoot	
+		p	1		xd	
+		p	3		yd	
+		p	5		zd	
 		p	7		p_7	
 		p	8		p_8	
 	m	(DDD)V	m_9293681	m_9293681	
@@ -41,7 +41,7 @@ c	net/minecraft/unmapped/C_0820158
 		p	4		p_4	
 		p	6		p_6	
 		p	8		p_8	
-	m	()V	m_5213498		m_5213498
+	m	()V	m_5213498		shoot
 	m	()V	m_3729110		m_3729110
 	m	()V	m_9217431		m_9217431
 	m	()V	m_6902605		m_6902605
@@ -127,7 +127,7 @@ c	net/minecraft/unmapped/C_1044273
 	m	(Z)I	m_4892944		m_4892944
 		p	1			p_1
 c	net/minecraft/unmapped/C_2782822
-	m	(IZDDDDDD[I)V	m_5421083	m_5421083	
+	m	(IZDDDDDD[I)V	m_5421083	spawnParticle	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
@@ -147,7 +147,7 @@ c	net/minecraft/unmapped/C_2782822
 		p	11			p_11
 		p	13			p_13
 		p	15			p_15
-	m	(IZZDDDDDD[I)V	m_5421083		m_5421083
+	m	(IZZDDDDDD[I)V	m_5421083		spawnParticle
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -159,9 +159,9 @@ c	net/minecraft/unmapped/C_2782822
 		p	14			p_14
 		p	16			p_16
 c	net/minecraft/unmapped/C_3906126
-	m	(Lnet/minecraft/unmapped/C_1414550;Lnet/minecraft/unmapped/C_8554894;)Z	m_2679365	m_2679365	
-		p	1		p_1	
-		p	2		p_2	
+	m	(Lnet/minecraft/unmapped/C_1414550;Lnet/minecraft/unmapped/C_8554894;)Z	m_2679365	containsLiquid	
+		p	1		bb	
+		p	2		material	
 	m	(IDDDDDD[I)V	m_4863887		m_4863887
 		p	1			p_1
 		p	2			p_2

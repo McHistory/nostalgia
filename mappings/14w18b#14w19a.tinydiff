@@ -79,12 +79,12 @@ c	net/minecraft/unmapped/C_0823197$C_2245281		C_2245281
 		p	13			p_13
 		p	15			p_15
 c	net/minecraft/unmapped/C_1044273
-	m	(F)V	m_1621863	m_1621863	
-		p	1		p_1	
-	m	(F)V	m_8060190	m_8060190	
-		p	1		p_1	
-	m	(F)V	m_8428282	m_8428282	
-		p	1		p_1	
+	m	(F)V	m_1621863	renderSky	
+		p	1		alpha	
+	m	(F)V	m_8060190	renderClouds	
+		p	1		alpha	
+	m	(F)V	m_8428282	renderAdvancedClouds	
+		p	1		alpha	
 	m	(Ljava/lang/String;DDDDDD)V	m_5421083	m_5421083	
 		p	1		p_1	
 		p	2		p_2	
@@ -101,24 +101,24 @@ c	net/minecraft/unmapped/C_1044273
 		p	8		p_8	
 		p	10		p_10	
 		p	12		p_12	
-	m	(Lnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_3333682;D)I	m_8682700	m_8682700	
+	m	(Lnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_3333682;D)I	m_8682700	render	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
-	m	(Lnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_3333682;DI)I	m_8682700		m_8682700
+	m	(Lnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_3333682;DI)I	m_8682700		render
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 		p	5			p_5
 	m	(F)V	m_3653635		m_3653635
 		p	1			p_1
-	m	(FI)V	m_1621863		m_1621863
+	m	(FI)V	m_1621863		renderSky
 		p	1			p_1
 		p	2			p_2
-	m	(FI)V	m_8060190		m_8060190
+	m	(FI)V	m_8060190		renderClouds
 		p	1			p_1
 		p	2			p_2
-	m	(FI)V	m_8428282		m_8428282
+	m	(FI)V	m_8428282		renderAdvancedClouds
 		p	1			p_1
 		p	2			p_2
 	m	(IZDDDDDD[I)V	m_5421083		m_5421083
@@ -176,15 +176,15 @@ c	net/minecraft/unmapped/C_2454294
 	m	(Lnet/minecraft/unmapped/C_8905061;)V	m_1872209		m_1872209
 		p	1			p_1
 c	net/minecraft/unmapped/C_2782822
-	m	(Ljava/lang/String;DDDDDD)V	m_5421083	m_5421083	
-		p	1		p_1	
-		p	2		p_2	
-		p	4		p_4	
-		p	6		p_6	
-		p	8		p_8	
-		p	10		p_10	
-		p	12		p_12	
-	m	(IZDDDDDD[I)V	m_5421083		m_5421083
+	m	(Ljava/lang/String;DDDDDD)V	m_5421083	spawnParticle	
+		p	1		name	
+		p	2		x	
+		p	4		y	
+		p	6		z	
+		p	8		xd	
+		p	10		yd	
+		p	12		zd	
+	m	(IZDDDDDD[I)V	m_5421083		spawnParticle
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -234,15 +234,15 @@ c	net/minecraft/unmapped/C_3794155$C_5847242		C_5847242
 		p	13			p_13
 		p	15			p_15
 c	net/minecraft/unmapped/C_3906126
-	m	(Ljava/lang/String;DDDDDD)V	m_6016912	m_6016912	
-		p	1		p_1	
-		p	2		p_2	
-		p	4		p_4	
-		p	6		p_6	
-		p	8		p_8	
-		p	10		p_10	
-		p	12		p_12	
-	m	(Lnet/minecraft/unmapped/C_4701530;DDDDDD[I)V	m_6016912		m_6016912
+	m	(Ljava/lang/String;DDDDDD)V	m_6016912	addParticle	
+		p	1		particle	
+		p	2		x	
+		p	4		y	
+		p	6		z	
+		p	8		xa	
+		p	10		ya	
+		p	12		za	
+	m	(Lnet/minecraft/unmapped/C_4701530;DDDDDD[I)V	m_6016912		addParticle
 		p	1			p_1
 		p	2			p_2
 		p	4			p_4
@@ -289,14 +289,14 @@ c	net/minecraft/unmapped/C_4824661
 	f	Lnet/minecraft/unmapped/C_1115384;	f_9993769	f_9993769	
 	f	Lnet/minecraft/unmapped/C_1115384;	f_2409303	f_2409303	
 	f	Lnet/minecraft/unmapped/C_1115384;	f_6798866	f_6798866	
-	f	F	f_3885239	f_3885239	
-	f	F	f_0205326	f_0205326	
-	f	F	f_6423115	f_6423115	
-	f	F	f_2850794	f_2850794	
-	f	F	f_8269408	f_8269408	
-	f	F	f_8452396	f_8452396	
-	f	F	f_7249677	f_7249677	
-	f	F	f_5248331	f_5248331	
+	f	F	f_3885239	yRot	
+	f	F	f_0205326	yRotO	
+	f	F	f_6423115	xRot	
+	f	F	f_2850794	xRotO	
+	f	F	f_8269408	fov	
+	f	F	f_8452396	oldFov	
+	f	F	f_7249677	camTilt	
+	f	F	f_5248331	camTiltO	
 	f	F	f_9913782	f_9913782	
 	f	F	f_2364933	f_2364933	
 	f	F	f_5581964	f_5581964	

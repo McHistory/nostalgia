@@ -18,16 +18,16 @@ c	net/minecraft/unmapped/C_0258789
 	m	()Lnet/minecraft/unmapped/C_7721249;	m_6640029		m_6640029
 	m	()Lnet/minecraft/unmapped/C_0561170;	m_3514816		m_3514816
 c	net/minecraft/unmapped/C_1013763
-	m	()Ljava/lang/String;	m_0628689	m_0628689	
-	m	()Ljava/lang/String;	m_6640029	m_6640029	
+	m	()Ljava/lang/String;	m_0628689	getHurtSound	
+	m	()Ljava/lang/String;	m_6640029	getDeathSound	
 	m	(I)Ljava/lang/String;	m_2145525	m_2145525	
 		p	1		p_1	
 	m	(ZILnet/minecraft/unmapped/C_6907923;)V	m_4681282		m_4681282
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
-	m	()Lnet/minecraft/unmapped/C_7721249;	m_0628689		m_0628689
-	m	()Lnet/minecraft/unmapped/C_7721249;	m_6640029		m_6640029
+	m	()Lnet/minecraft/unmapped/C_7721249;	m_0628689		getHurtSound
+	m	()Lnet/minecraft/unmapped/C_7721249;	m_6640029		getDeathSound
 	m	(I)Lnet/minecraft/unmapped/C_7721249;	m_2145525		m_2145525
 		p	1			p_1
 c	net/minecraft/unmapped/C_1044273
@@ -70,9 +70,9 @@ c	net/minecraft/unmapped/C_1044273
 c	net/minecraft/unmapped/C_1111347
 	m	()Lio/netty/buffer/ByteBuf;	m_2963479		m_2963479
 c	net/minecraft/unmapped/C_1124552
-	m	(Lnet/minecraft/unmapped/C_3635204;)Z	m_9338725	m_9338725	
+	m	(Lnet/minecraft/unmapped/C_3635204;)Z	m_9338725	mayPlaceOn	
 		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_2441996;)Z	m_9338725		m_9338725
+	m	(Lnet/minecraft/unmapped/C_2441996;)Z	m_9338725		mayPlaceOn
 		p	1			p_1
 c	net/minecraft/unmapped/C_1233611
 	f	Lnet/minecraft/unmapped/C_0561170;	f_0136042		f_0136042
@@ -117,7 +117,7 @@ c	net/minecraft/unmapped/C_2584919
 	m	()Lnet/minecraft/unmapped/C_7721249;	m_6640029		m_6640029
 	m	()Lnet/minecraft/unmapped/C_0561170;	m_3514816		m_3514816
 c	net/minecraft/unmapped/C_2782822
-	m	(Ljava/lang/String;DDDFF)V	m_2244237	m_2244237	
+	m	(Ljava/lang/String;DDDFF)V	m_2244237	playSound	
 		p	1		p_1	
 		p	2		p_2	
 		p	4		p_4	
@@ -132,10 +132,10 @@ c	net/minecraft/unmapped/C_2782822
 		p	7		p_7	
 		p	9		p_9	
 		p	10		p_10	
-	m	(Ljava/lang/String;Lnet/minecraft/unmapped/C_6707278;)V	m_2838989	m_2838989	
+	m	(Ljava/lang/String;Lnet/minecraft/unmapped/C_6707278;)V	m_2838989	playStreamingMusic	
 		p	1		p_1	
 		p	2		p_2	
-	m	(Lnet/minecraft/unmapped/C_7721249;DDDFF)V	m_2244237		m_2244237
+	m	(Lnet/minecraft/unmapped/C_7721249;DDDFF)V	m_2244237		playSound
 		p	1			p_1
 		p	2			p_2
 		p	4			p_4
@@ -150,7 +150,7 @@ c	net/minecraft/unmapped/C_2782822
 		p	7			p_7
 		p	9			p_9
 		p	10			p_10
-	m	(Lnet/minecraft/unmapped/C_7721249;Lnet/minecraft/unmapped/C_6707278;)V	m_2838989		m_2838989
+	m	(Lnet/minecraft/unmapped/C_7721249;Lnet/minecraft/unmapped/C_6707278;)V	m_2838989		playStreamingMusic
 		p	1			p_1
 		p	2			p_2
 c	net/minecraft/unmapped/C_2923961
@@ -252,17 +252,17 @@ c	net/minecraft/unmapped/C_3635204$9709059	9709059
 	m	()Ljava/lang/String;	m_0137307	m_0137307	
 c	net/minecraft/unmapped/C_3906126
 	f	Lnet/minecraft/unmapped/C_7464728;	f_3476326		f_3476326
-	m	(Lnet/minecraft/unmapped/C_6385858;Ljava/lang/String;FF)V	m_6696906	m_6696906	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
+	m	(Lnet/minecraft/unmapped/C_6385858;Ljava/lang/String;FF)V	m_6696906	playSound	
+		p	1		entity	
+		p	2		sound	
+		p	3		volume	
+		p	4		pitch	
 	m	(Lnet/minecraft/unmapped/C_5009044;Ljava/lang/String;FF)V	m_2984502	m_2984502	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
 		p	4		p_4	
-	m	(DDDLjava/lang/String;FF)V	m_4172995	m_4172995	
+	m	(DDDLjava/lang/String;FF)V	m_4172995	playSound	
 		p	1		p_1	
 		p	3		p_3	
 		p	5		p_5	
@@ -277,10 +277,10 @@ c	net/minecraft/unmapped/C_3906126
 		p	8		p_8	
 		p	9		p_9	
 		p	10		p_10	
-	m	(Lnet/minecraft/unmapped/C_6707278;Ljava/lang/String;)V	m_9197713	m_9197713	
+	m	(Lnet/minecraft/unmapped/C_6707278;Ljava/lang/String;)V	m_9197713	playMusic	
 		p	1		p_1	
 		p	2		p_2	
-	m	(Lnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_7721249;FF)V	m_6696906		m_6696906
+	m	(Lnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_7721249;FF)V	m_6696906		playSound
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -295,7 +295,7 @@ c	net/minecraft/unmapped/C_3906126
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
-	m	(DDDLnet/minecraft/unmapped/C_7721249;FF)V	m_4172995		m_4172995
+	m	(DDDLnet/minecraft/unmapped/C_7721249;FF)V	m_4172995		playSound
 		p	1			p_1
 		p	3			p_3
 		p	5			p_5
@@ -310,7 +310,7 @@ c	net/minecraft/unmapped/C_3906126
 		p	8			p_8
 		p	9			p_9
 		p	10			p_10
-	m	(Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_7721249;)V	m_9197713		m_9197713
+	m	(Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_7721249;)V	m_9197713		playMusic
 		p	1			p_1
 		p	2			p_2
 	m	()Lnet/minecraft/unmapped/C_7464728;	m_6786008		m_6786008

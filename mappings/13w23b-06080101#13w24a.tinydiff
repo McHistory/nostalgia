@@ -1,11 +1,11 @@
 tiny	2	0
 c	net/minecraft/client/Minecraft
-	f	Lnet/minecraft/unmapped/C_1368426;	f_9318274	f_9318274	
+	f	Lnet/minecraft/unmapped/C_1368426;	f_9318274	skins	
 	f	Lnet/minecraft/unmapped/C_0561170;	f_0372152		f_0372152
 	f	Ljava/io/File;	f_2517439		f_2517439
 	f	Lnet/minecraft/unmapped/C_1296613;	f_6159368		f_6159368
 	f	Lnet/minecraft/unmapped/C_8858101;	f_1329796		f_1329796
-	f	Lnet/minecraft/unmapped/C_2983776;	f_9318274		f_9318274
+	f	Lnet/minecraft/unmapped/C_2983776;	f_9318274		skins
 	m	()V	m_7113176	m_7113176	
 	m	()Lnet/minecraft/unmapped/C_5769145;	m_9946940	m_9946940	
 	m	(Lnet/minecraft/unmapped/C_3172064;IIZZLjava/io/File;Ljava/net/Proxy;Ljava/lang/String;)V	<init>	<init>	
@@ -71,7 +71,7 @@ c	net/minecraft/unmapped/C_0974371
 	m	(I)Lnet/minecraft/unmapped/C_5307437;	m_4296123		m_4296123
 		p	1			p_1
 c	net/minecraft/unmapped/C_1013763
-	f	Ljava/lang/String;	f_3689196	f_3689196	
+	f	Ljava/lang/String;	f_3689196	textureName	
 	m	()Ljava/lang/String;	m_4351874	m_4351874	
 c	net/minecraft/unmapped/C_1044273
 	f	Lnet/minecraft/unmapped/C_0561170;	f_7594775		f_7594775
@@ -79,19 +79,20 @@ c	net/minecraft/unmapped/C_1044273
 	f	Lnet/minecraft/unmapped/C_0561170;	f_7106265		f_7106265
 	f	Lnet/minecraft/unmapped/C_0561170;	f_0591129		f_0591129
 	m	()V	<clinit>		<clinit>
-c	net/minecraft/unmapped/C_1368426	net/minecraft/unmapped/C_1368426	
-	f	Ljava/util/List;	f_2540367	f_2540367	
-	f	Lnet/minecraft/unmapped/C_7378130;	f_8696750	f_8696750	
-	f	Lnet/minecraft/unmapped/C_7378130;	f_6507773	f_6507773	
-	f	Ljava/util/Map;	f_5654716	f_5654716	
-	f	Ljava/io/File;	f_3047350	f_3047350	
+c	net/minecraft/unmapped/C_1368426	net/minecraft/client/skins/TexturePackRepository	
+	f	Ljava/util/List;	f_2540367	texturePacks	
+	f	Lnet/minecraft/unmapped/C_7378130;	f_8696750	defaultTexturePack	
+	f	Lnet/minecraft/unmapped/C_7378130;	f_6507773	selected	
+	f	Ljava/util/Map;	f_5654716	skinCache	
+	f	Ljava/io/File;	f_3047350	texturePacksDir	
 	f	Lnet/minecraft/client/Minecraft;	f_9562788	f_9562788	
 	f	Ljava/io/File;	f_5549673	f_5549673	
 	f	Z	f_8515075	f_8515075	
-	m	(Lnet/minecraft/unmapped/C_7378130;)Z	m_6553918	m_6553918	
-		p	1		p_1	
-	m	()V	m_7822048	m_7822048	
-	m	()Ljava/util/List;	m_0484147	m_0484147	
+	m	(Lnet/minecraft/unmapped/C_7378130;)Z	m_6553918	selectSkin	
+		c	Opens the current texture pack.\n@return Retures false if the pass texture pack is already opened	
+		p	1		pack	
+	m	()V	m_7822048	updateList	
+	m	()Ljava/util/List;	m_0484147	getAll	
 	m	()V	m_1502044	m_1502044	
 	m	(Ljava/io/File;)Ljava/lang/String;	m_2544377	m_2544377	
 		p	1		p_1	
@@ -179,7 +180,7 @@ c	net/minecraft/unmapped/C_3385278
 		p	2		p_2	
 	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_4882708;	m_1605001	m_1605001	
 		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_3779718;Ljava/lang/String;)Ljava/lang/String;	m_3538832	m_3538832	
+	m	(Lnet/minecraft/unmapped/C_3779718;Ljava/lang/String;)Ljava/lang/String;	m_3538832	getTexture	
 		p	1		p_1	
 		p	2		p_2	
 	m	(Ljava/lang/String;)V	m_6976760	m_6976760	
@@ -197,7 +198,7 @@ c	net/minecraft/unmapped/C_3385278
 		p	2			p_2
 	m	(Lnet/minecraft/unmapped/C_0561170;)Lnet/minecraft/unmapped/C_4882708;	m_1605001		m_1605001
 		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_3779718;Ljava/lang/String;)Lnet/minecraft/unmapped/C_0561170;	m_3538832		m_3538832
+	m	(Lnet/minecraft/unmapped/C_3779718;Ljava/lang/String;)Lnet/minecraft/unmapped/C_0561170;	m_3538832		getTexture
 		p	1			p_1
 		p	2			p_2
 c	net/minecraft/unmapped/C_3454805
@@ -229,7 +230,7 @@ c	net/minecraft/unmapped/C_3540933
 		p	2			p_2
 		p	3			p_3
 c	net/minecraft/unmapped/C_3604011
-	f	[Ljava/lang/String;	f_6509173	f_6509173	
+	f	[Ljava/lang/String;	f_6509173	MATERIAL_NAMES	
 	f	Lnet/minecraft/unmapped/C_0561170;	f_5885828		f_5885828
 	m	(Lnet/minecraft/unmapped/C_1013763;)V	m_7036687	m_7036687	
 		p	1		p_1	
@@ -258,9 +259,9 @@ c	net/minecraft/unmapped/C_3738109
 		p	1			p_1
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_3831356
-	m	(Ljava/lang/String;)V	m_1828718	m_1828718	
-		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_0561170;)V	m_1828718		m_1828718
+	m	(Ljava/lang/String;)V	m_1828718	bindTexture	
+		p	1		path	
+	m	(Lnet/minecraft/unmapped/C_0561170;)V	m_1828718		bindTexture
 		p	1			p_1
 c	net/minecraft/unmapped/C_3906881
 	m	(Lnet/minecraft/unmapped/C_7221329;)Lnet/minecraft/unmapped/C_0561170;	m_1872176		m_1872176
@@ -332,7 +333,7 @@ c	net/minecraft/unmapped/C_4560329$5160525$8790747
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
-c	net/minecraft/unmapped/C_4608907	net/minecraft/unmapped/C_4608907	
+c	net/minecraft/unmapped/C_4608907	net/minecraft/client/skins/DefaultTexturePack	
 	m	()V	<init>	<init>	
 	m	()V	m_5993409	m_5993409	
 	m	(Ljava/lang/String;)Z	m_3120376	m_3120376	
@@ -359,7 +360,7 @@ c	net/minecraft/unmapped/C_4766485
 		p	1			p_1
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_4784123
-	f	Ljava/lang/String;	f_5553006	f_5553006	
+	f	Ljava/lang/String;	f_5553006	texturePacksFolder	
 	m	(Lnet/minecraft/unmapped/C_4784123;)Lnet/minecraft/client/Minecraft;	m_1288047	m_1288047	
 		p	0		p_0	
 	m	(Lnet/minecraft/unmapped/C_4784123;)Lnet/minecraft/client/Minecraft;	m_7747686	m_7747686	
@@ -453,7 +454,7 @@ c	net/minecraft/unmapped/C_6240881
 	m	(Lnet/minecraft/unmapped/C_9549188;)V	m_3643261	m_3643261	
 		p	1		p_1	
 c	net/minecraft/unmapped/C_6385858
-	m	()Ljava/lang/String;	m_4351874	m_4351874	
+	m	()Ljava/lang/String;	m_4351874	getTexture	
 c	net/minecraft/unmapped/C_6441735
 	f	Lnet/minecraft/unmapped/C_0561170;	f_3056678		f_3056678
 	m	(Lnet/minecraft/unmapped/C_9958683;)Lnet/minecraft/unmapped/C_0561170;	m_3448309		m_3448309
@@ -470,8 +471,8 @@ c	net/minecraft/unmapped/C_6644571
 		p	1		p_1	
 	m	(I)V	<init>		<init>
 		p	1			p_1
-c	net/minecraft/unmapped/C_6899601	net/minecraft/unmapped/C_6899601	
-	f	Ljava/util/zip/ZipFile;	f_0130652	f_0130652	
+c	net/minecraft/unmapped/C_6899601	net/minecraft/client/skins/FileTexturePack	
+	f	Ljava/util/zip/ZipFile;	f_0130652	zf	
 	m	()V	m_5917449	m_5917449	
 	m	(Lnet/minecraft/unmapped/C_3385278;)V	m_9830297	m_9830297	
 		p	1		p_1	
@@ -487,12 +488,12 @@ c	net/minecraft/unmapped/C_6899601	net/minecraft/unmapped/C_6899601
 c	net/minecraft/unmapped/C_7146036
 	m	(Lnet/minecraft/unmapped/C_9549188;)V	m_9955335	m_9955335	
 		p	1		p_1	
-c	net/minecraft/unmapped/C_7378130	net/minecraft/unmapped/C_7378130	
-	m	(Ljava/lang/String;)Ljava/io/InputStream;	m_5609375	m_5609375	
+c	net/minecraft/unmapped/C_7378130	net/minecraft/client/skins/TexturePack	
+	m	(Ljava/lang/String;)Ljava/io/InputStream;	m_5609375	getResource	
+		p	1		name	
+	m	(Lnet/minecraft/unmapped/C_3385278;)V	m_9830297	unload	
 		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_3385278;)V	m_9830297	m_9830297	
-		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_3385278;)V	m_5337323	m_5337323	
+	m	(Lnet/minecraft/unmapped/C_3385278;)V	m_5337323	bindTexture	
 		p	1		p_1	
 	m	()Ljava/lang/String;	m_1412053	m_1412053	
 	m	()Ljava/lang/String;	m_3258720	m_3258720	
@@ -605,15 +606,15 @@ c	net/minecraft/unmapped/C_8817873
 	m	(J)V	m_5711876		m_5711876
 		p	1			p_1
 c	net/minecraft/unmapped/C_9302567
-	f	Lnet/minecraft/unmapped/C_3239917;	f_1722736	f_1722736	
+	f	Lnet/minecraft/unmapped/C_3239917;	f_1722736	defaultModel	
 	f	Lnet/minecraft/unmapped/C_0561170;	f_9151936		f_9151936
-	m	(Ljava/lang/String;)V	m_8417273	m_8417273	
-		p	1		p_1	
+	m	(Ljava/lang/String;)V	m_8417273	bindTexture	
+		p	1		resourceName	
 	m	(Lnet/minecraft/unmapped/C_6385858;)Lnet/minecraft/unmapped/C_0561170;	m_7036687		m_7036687
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_6385858;)V	m_6086480		m_6086480
 		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_0561170;)V	m_8417273		m_8417273
+	m	(Lnet/minecraft/unmapped/C_0561170;)V	m_8417273		bindTexture
 		p	1			p_1
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_9315553
@@ -642,11 +643,11 @@ c	net/minecraft/unmapped/C_3059180
 		p	1			p_1
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_4179150
-	m	(Ljava/util/List;II)V	m_3347930	m_3347930	
-		p	1		p_1	
+	m	(Ljava/util/List;II)V	m_3347930	updateSize	
+		p	1		buttons	
 		p	2		p_2	
 		p	3		p_3	
-	m	(II)V	m_3347930		m_3347930
+	m	(II)V	m_3347930		updateSize
 		p	1			p_1
 		p	2			p_2
 c	net/minecraft/unmapped/C_7338567

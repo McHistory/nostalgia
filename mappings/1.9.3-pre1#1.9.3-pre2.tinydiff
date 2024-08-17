@@ -91,19 +91,19 @@ c	net/minecraft/unmapped/C_1851525$C_5687472
 	m	(Lnet/minecraft/unmapped/C_2800860;)Lnet/minecraft/unmapped/C_2800860;	m_4175205		m_4175205
 		p	1			p_1
 c	net/minecraft/unmapped/C_2074023
-	m	(Lnet/minecraft/unmapped/C_2800860;)V	m_4175205	m_4175205	
-		p	1		p_1	
-	m	()Lnet/minecraft/unmapped/C_4844124;	m_1279143	m_1279143	
-	m	(Lnet/minecraft/server/MinecraftServer;Lnet/minecraft/unmapped/C_2800860;)Lnet/minecraft/unmapped/C_2074023;	m_4625654	m_4625654	
+	m	(Lnet/minecraft/unmapped/C_2800860;)V	m_4175205	save	
+		p	1		tag	
+	m	()Lnet/minecraft/unmapped/C_4844124;	m_1279143	getUpdatePacket	
+	m	(Lnet/minecraft/server/MinecraftServer;Lnet/minecraft/unmapped/C_2800860;)Lnet/minecraft/unmapped/C_2074023;	m_4625654	loadStatic	
 		p	0		p_0	
 		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_2800860;)Lnet/minecraft/unmapped/C_2800860;	m_4175205		m_4175205
+	m	(Lnet/minecraft/unmapped/C_2800860;)Lnet/minecraft/unmapped/C_2800860;	m_4175205		save
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_2800860;)Lnet/minecraft/unmapped/C_2800860;	m_2589056		m_2589056
 		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_2800860;)Lnet/minecraft/unmapped/C_2074023;	m_4625654		m_4625654
+	m	(Lnet/minecraft/unmapped/C_2800860;)Lnet/minecraft/unmapped/C_2074023;	m_4625654		loadStatic
 		p	0			p_0
-	m	()Lnet/minecraft/unmapped/C_1554518;	m_1279143		m_1279143
+	m	()Lnet/minecraft/unmapped/C_1554518;	m_1279143		getUpdatePacket
 	m	()Lnet/minecraft/unmapped/C_2800860;	m_1561927		m_1561927
 c	net/minecraft/unmapped/C_2624096
 	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_3635204;)V	m_6252045	m_6252045	
@@ -164,23 +164,23 @@ c	net/minecraft/unmapped/C_3624347
 		p	1			p_1
 		p	2			p_2
 c	net/minecraft/unmapped/C_3635204
-	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_3635204;)V	m_6252045	m_6252045	
+	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_3635204;)V	m_6252045	neighborChanged	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
 		p	4		p_4	
-	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_2441996;II)Z	m_5333460	m_5333460	
+	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_2441996;II)Z	m_5333460	triggerEvent	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
 		p	4		p_4	
 		p	5		p_5	
-	m	(Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_3635204;)V	m_6252045		m_6252045
+	m	(Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_3635204;)V	m_6252045		neighborChanged
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
-	m	(Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6707278;II)Z	m_5333460		m_5333460
+	m	(Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6707278;II)Z	m_5333460		triggerEvent
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -261,9 +261,9 @@ c	net/minecraft/unmapped/C_6368853
 		p	3			p_3
 		p	4			p_4
 c	net/minecraft/unmapped/C_6385858
-	m	(Lnet/minecraft/unmapped/C_2800860;)V	m_6319588	m_6319588	
-		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_2800860;)Lnet/minecraft/unmapped/C_2800860;	m_6319588		m_6319588
+	m	(Lnet/minecraft/unmapped/C_2800860;)V	m_6319588	saveWithoutId	
+		p	1		nbt	
+	m	(Lnet/minecraft/unmapped/C_2800860;)Lnet/minecraft/unmapped/C_2800860;	m_6319588		saveWithoutId
 		p	1			p_1
 c	net/minecraft/unmapped/C_6391166
 	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_3635204;)V	m_6252045	m_6252045	
@@ -399,10 +399,10 @@ c	net/minecraft/unmapped/C_9764049
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
-c	net/minecraft/unmapped/C_9863509	net/minecraft/unmapped/C_9863509	
+c	net/minecraft/unmapped/C_9863509	net/minecraft/network/packets/SignUpdatePacket	
 	f	Lnet/minecraft/unmapped/C_6707278;	f_0221458	f_0221458	
 	f	Lnet/minecraft/unmapped/C_3906126;	f_5574531	f_5574531	
-	f	[Lnet/minecraft/unmapped/C_9550253;	f_9497569	f_9497569	
+	f	[Lnet/minecraft/unmapped/C_9550253;	f_9497569	lines	
 	m	()V	<init>	<init>	
 	m	(Lnet/minecraft/unmapped/C_4443804;)V	m_0240895	m_0240895	
 		p	1		p_1	
@@ -496,9 +496,9 @@ c	net/minecraft/unmapped/C_0728298
 		p	3			p_3
 		p	4			p_4
 c	net/minecraft/unmapped/C_2678057
-	m	(Lnet/minecraft/unmapped/C_2800860;)V	m_1489858	m_1489858	
-		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_2800860;)Lnet/minecraft/unmapped/C_2800860;	m_1489858		m_1489858
+	m	(Lnet/minecraft/unmapped/C_2800860;)V	m_1489858	save	
+		p	1		tag	
+	m	(Lnet/minecraft/unmapped/C_2800860;)Lnet/minecraft/unmapped/C_2800860;	m_1489858		save
 		p	1			p_1
 c	net/minecraft/unmapped/C_6285226
 	m	(Lnet/minecraft/unmapped/C_2800860;)V	m_1489858	m_1489858	

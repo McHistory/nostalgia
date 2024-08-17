@@ -1,12 +1,12 @@
 tiny	2	0
 c	net/minecraft/unmapped/C_0019534
-	m	(DDDDILnet/minecraft/unmapped/C_4844124;)V	m_4087136	m_4087136	
-		p	1		p_1	
-		p	3		p_3	
-		p	5		p_5	
-		p	7		p_7	
-		p	9		p_9	
-		p	10		p_10	
+	m	(DDDDILnet/minecraft/unmapped/C_4844124;)V	m_4087136	broadcastToAllInRange	
+		p	1		x	
+		p	3		y	
+		p	5		z	
+		p	7		range	
+		p	9		dimension	
+		p	10		packet	
 c	net/minecraft/unmapped/C_0258789
 c	net/minecraft/unmapped/C_0258789$4821391
 	m	(Lnet/minecraft/unmapped/C_0258789;Lnet/minecraft/unmapped/C_3419581;Ljava/lang/Class;DZ)V	<init>	<init>	
@@ -62,7 +62,7 @@ c	net/minecraft/unmapped/C_1233611
 c	net/minecraft/unmapped/C_1693934
 	m	()V	m_8109021		m_8109021
 c	net/minecraft/unmapped/C_2782822
-	m	(Lnet/minecraft/unmapped/C_7721249;DDDFF)V	m_2244237	m_2244237	
+	m	(Lnet/minecraft/unmapped/C_7721249;DDDFF)V	m_2244237	playSound	
 		p	1		p_1	
 		p	2		p_2	
 		p	4		p_4	
@@ -101,7 +101,7 @@ c	net/minecraft/unmapped/C_3906126
 	m	(Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_6707278;)Z	m_1765750	m_1765750	
 		p	0		p_0	
 		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_7721249;FF)V	m_6696906	m_6696906	
+	m	(Lnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_7721249;FF)V	m_6696906	playSound	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
@@ -116,7 +116,7 @@ c	net/minecraft/unmapped/C_3906126
 		p	2		p_2	
 		p	3		p_3	
 		p	4		p_4	
-	m	(DDDLnet/minecraft/unmapped/C_7721249;FF)V	m_4172995	m_4172995	
+	m	(DDDLnet/minecraft/unmapped/C_7721249;FF)V	m_4172995	playSound	
 		p	1		p_1	
 		p	3		p_3	
 		p	5		p_5	
@@ -129,7 +129,7 @@ c	net/minecraft/unmapped/C_3906126
 		p	3			p_3
 		p	4			p_4
 		p	5			p_5
-	m	(Lnet/minecraft/unmapped/C_5009044;DDDLnet/minecraft/unmapped/C_7721249;FF)V	m_4172995		m_4172995
+	m	(Lnet/minecraft/unmapped/C_5009044;DDDLnet/minecraft/unmapped/C_7721249;FF)V	m_4172995		playSound
 		p	1			p_1
 		p	2			p_2
 		p	4			p_4
@@ -144,9 +144,9 @@ c	net/minecraft/unmapped/C_4176306
 	m	(Lnet/minecraft/unmapped/C_2441996;)Z	m_4596341		m_4596341
 		p	1			p_1
 c	net/minecraft/unmapped/C_5009044
-	m	(Lnet/minecraft/unmapped/C_3050136;)V	m_8347472	m_8347472	
-		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_3050136;)Lnet/minecraft/unmapped/C_2750078;	m_8347472		m_8347472
+	m	(Lnet/minecraft/unmapped/C_3050136;)V	m_8347472	reallyDrop	
+		p	1		itemEntity	
+	m	(Lnet/minecraft/unmapped/C_3050136;)Lnet/minecraft/unmapped/C_2750078;	m_8347472		reallyDrop
 		p	1			p_1
 	m	()Z	m_4120079		m_4120079
 c	net/minecraft/unmapped/C_5196988

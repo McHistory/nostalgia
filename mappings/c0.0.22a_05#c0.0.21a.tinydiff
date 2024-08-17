@@ -1,8 +1,8 @@
 tiny	2	0
 c	net/minecraft/client/Minecraft
-	f	Lnet/minecraft/unmapped/C_8425960;	f_5341632	f_5341632	
-	f	Lnet/minecraft/unmapped/C_4824661;	f_9540840	f_9540840	
-	f	Lnet/minecraft/unmapped/C_0139979;	f_3881621	f_3881621	
+	f	Lnet/minecraft/unmapped/C_8425960;	f_5341632	progressRenderer	
+	f	Lnet/minecraft/unmapped/C_4824661;	f_9540840	gameRenderer	
+	f	Lnet/minecraft/unmapped/C_0139979;	f_3881621	bgLoader	
 	f	Lnet/minecraft/unmapped/C_7598507;	f_2497216	f_2497216	
 	f	Lnet/minecraft/unmapped/C_8534347;	f_1501934	f_1501934	
 	f	Ljava/nio/FloatBuffer;	f_2682162		f_2682162
@@ -37,12 +37,12 @@ c	net/minecraft/client/Minecraft
 		p	1			p_1
 	m	(Ljava/lang/String;)V	m_5014509		m_5014509
 		p	1			p_1
-c	net/minecraft/unmapped/C_0139979	net/minecraft/unmapped/C_0139979	
-	f	Ljava/io/File;	f_4560197	f_4560197	
-	f	Z	f_8021028	f_8021028	
+c	net/minecraft/unmapped/C_0139979	net/minecraft/client/BackgroundDownloader	
+	f	Ljava/io/File;	f_4560197	workingDirectory	
+	f	Z	f_8021028	stopped	
 	f	Lnet/minecraft/client/Minecraft;	f_5641420	f_5641420	
 	m	()V	run	run	
-	m	(Ljava/net/URL;Ljava/io/File;)V	m_2535201	m_2535201	
+	m	(Ljava/net/URL;Ljava/io/File;)V	m_2535201	download	
 		p	1		p_1	
 		p	2		p_2	
 	m	(Lnet/minecraft/client/Minecraft;)V	<init>	<init>	
@@ -75,11 +75,11 @@ c	net/minecraft/unmapped/C_3906126
 		p	4		p_4	
 		p	5		p_5	
 		p	6		p_6	
-c	net/minecraft/unmapped/C_4824661	net/minecraft/unmapped/C_4824661	
-	f	Lnet/minecraft/client/Minecraft;	f_8246436	f_8246436	
-	f	I	f_5289597	f_5289597	
-	f	I	f_7860895	f_7860895	
-	f	Ljava/nio/FloatBuffer;	f_4117573	f_4117573	
+c	net/minecraft/unmapped/C_4824661	net/minecraft/client/renderer/GameRenderer	
+	f	Lnet/minecraft/client/Minecraft;	f_8246436	mc	
+	f	I	f_5289597	yMod	
+	f	I	f_7860895	xMod	
+	f	Ljava/nio/FloatBuffer;	f_4117573	lb	
 	f	Z	f_3616371	f_3616371	
 	f	F	f_9070619	f_9070619	
 	f	F	f_3370476	f_3370476	
@@ -87,8 +87,8 @@ c	net/minecraft/unmapped/C_4824661	net/minecraft/unmapped/C_4824661
 	f	F	f_6447311	f_6447311	
 	f	F	f_3735549	f_3735549	
 	m	(Lnet/minecraft/client/Minecraft;)V	<init>	<init>	
-		p	1		p_1	
-	m	()V	m_4946406	m_4946406	
+		p	1		minecraft	
+	m	()V	m_4946406	setScreenProjectionMatrix	
 	m	(Z)V	m_2557984	m_2557984	
 		p	1		p_1	
 	m	()V	m_6382667	m_6382667	
@@ -106,12 +106,12 @@ c	net/minecraft/unmapped/C_6385858
 		p	3		p_3	
 	m	(Lnet/minecraft/unmapped/C_6385858;)F	m_2181884	m_2181884	
 		p	1		p_1	
-c	net/minecraft/unmapped/C_8425960	net/minecraft/unmapped/C_8425960	
-	f	Ljava/lang/String;	f_1486409	f_1486409	
-	f	Lnet/minecraft/client/Minecraft;	f_4801953	f_4801953	
-	f	Ljava/lang/String;	f_8259792	f_8259792	
+c	net/minecraft/unmapped/C_8425960	net/minecraft/client/ProgressRenderer	
+	f	Ljava/lang/String;	f_1486409	status	
+	f	Lnet/minecraft/client/Minecraft;	f_4801953	minecraft	
+	f	Ljava/lang/String;	f_8259792	title	
 	m	(Lnet/minecraft/client/Minecraft;)V	<init>	<init>	
-		p	1		p_1	
+		p	1		minecraft	
 	m	(Ljava/lang/String;)V	m_3915830	m_3915830	
 		p	1		p_1	
 	m	(I)V	m_1991224	m_1991224	

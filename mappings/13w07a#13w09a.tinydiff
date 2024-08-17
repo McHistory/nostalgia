@@ -7,27 +7,27 @@ c	net/minecraft/unmapped/C_0019534
 c	net/minecraft/unmapped/C_1368426
 	m	()Lnet/minecraft/unmapped/C_7378130;	m_1043993		m_1043993
 c	net/minecraft/unmapped/C_2260875
-	m	(Lnet/minecraft/unmapped/C_5009044;)V	m_2233467	m_2233467	
-		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_5009044;)Lnet/minecraft/unmapped/C_2800860;	m_2233467		m_2233467
+	m	(Lnet/minecraft/unmapped/C_5009044;)V	m_2233467	load	
+		p	1		player	
+	m	(Lnet/minecraft/unmapped/C_5009044;)Lnet/minecraft/unmapped/C_2800860;	m_2233467		load
 		p	1			p_1
 c	net/minecraft/unmapped/C_3385278
-	f	Ljava/nio/IntBuffer;	f_8164263	f_8164263	
-	f	Ljava/nio/ByteBuffer;	f_2030366	f_2030366	
-	f	Z	f_9414370	f_9414370	
-	f	Z	f_9265078	f_9265078	
-	f	Ljava/nio/IntBuffer;	f_2030366		f_2030366
-	m	(Ljava/awt/image/BufferedImage;)Ljava/awt/image/BufferedImage;	m_5060881	m_5060881	
-		p	1		p_1	
-	m	(Ljava/awt/image/BufferedImage;I)V	m_5303716	m_5303716	
-		p	1		p_1	
-		p	2		p_2	
+	f	Ljava/nio/IntBuffer;	f_8164263	ib	
+	f	Ljava/nio/ByteBuffer;	f_2030366	pixels	
+	f	Z	f_9414370	clamp	
+	f	Z	f_9265078	blur	
+	f	Ljava/nio/IntBuffer;	f_2030366		pixels
+	m	(Ljava/awt/image/BufferedImage;)Ljava/awt/image/BufferedImage;	m_5060881	makeStrip	
+		p	1		source	
+	m	(Ljava/awt/image/BufferedImage;I)V	m_5303716	loadTexture	
+		p	1		img	
+		p	2		id	
 	m	(Ljava/lang/String;)V	m_4291731		m_4291731
 		p	1			p_1
 	m	(Ljava/awt/image/BufferedImage;I)V	m_7106890		m_7106890
 		p	1			p_1
 		p	2			p_2
-	m	(Ljava/awt/image/BufferedImage;IZZ)V	m_5303716		m_5303716
+	m	(Ljava/awt/image/BufferedImage;IZZ)V	m_5303716		loadTexture
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -47,12 +47,12 @@ c	net/minecraft/unmapped/C_4608907
 	m	(Ljava/lang/String;)Ljava/io/InputStream;	m_3649582		m_3649582
 		p	1			p_1
 c	net/minecraft/unmapped/C_4766485
-	f	I	f_6728583	f_6728583	
-	f	I	f_5774068	f_5774068	
+	f	I	f_6728583	fontTexture	
+	f	I	f_5774068	listPos	
 	f	[I	f_6845882	f_6845882	
 	f	Ljava/lang/String;	f_2097805		f_2097805
 c	net/minecraft/unmapped/C_5009044
-	f	Ljava/lang/String;	f_9967117	f_9967117	
+	f	Ljava/lang/String;	f_9967117	cloakTexture	
 	m	(Lnet/minecraft/unmapped/C_6385858;)V	m_5966517		m_5966517
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_5009044;)Z	m_6918799		m_6918799
@@ -89,16 +89,16 @@ c	net/minecraft/unmapped/C_7378130
 		p	2			p_2
 	m	()Z	m_9415399		m_9415399
 c	net/minecraft/unmapped/C_7688744
-	f	Z	f_7711145	f_7711145	
+	f	Z	f_7711145	ao	
 	f	[Ljava/lang/String;	f_6809790		f_6809790
-	f	I	f_7711145		f_7711145
+	f	I	f_7711145		ao
 c	net/minecraft/unmapped/C_8191584
 	m	(Lnet/minecraft/unmapped/C_1013763;)V	m_7036687		m_7036687
 		p	1			p_1
 c	net/minecraft/unmapped/C_8592380
-	m	(Ljava/nio/IntBuffer;)V	m_6927303	m_6927303	
-		p	0		p_0	
-	m	()I	m_6927303		m_6927303
+	m	(Ljava/nio/IntBuffer;)V	m_6927303	genTextures	
+		p	0		buffer	
+	m	()I	m_6927303		genTextures
 	m	()V	m_3478385		m_3478385
 c	net/minecraft/unmapped/C_7255299
 	m	(Lnet/minecraft/unmapped/C_5009044;)V	m_2233467	m_2233467	
@@ -141,10 +141,10 @@ c	net/minecraft/unmapped/C_4866584
 		p	1			p_1
 	m	([Ljava/lang/Object;)Z	m_1869701		m_1869701
 		p	1			p_1
-c	net/minecraft/unmapped/C_3254405	net/minecraft/unmapped/C_3254405	
-	f	[I	f_6820188	f_6820188	
-	m	([I)V	m_6614053	m_6614053	
-		p	0		p_0	
+c	net/minecraft/unmapped/C_3254405	net/minecraft/world/level/WaterColor	
+	f	[I	f_6820188	pixels	
+	m	([I)V	m_6614053	init	
+		p	0		pixels	
 	m	()V	<clinit>	<clinit>	
 c	net/minecraft/unmapped/C_4615590
 c	net/minecraft/unmapped/C_4615590$C_6985076

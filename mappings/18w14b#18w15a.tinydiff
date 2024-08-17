@@ -1,10 +1,10 @@
 tiny	2	0
 c	net/minecraft/client/Minecraft
-	m	(Lnet/minecraft/unmapped/C_8817873;)V	m_3501995	m_3501995	
+	m	(Lnet/minecraft/unmapped/C_8817873;)V	m_3501995	setLevel	
 		p	1		p_1	
 	m	(Lnet/minecraft/unmapped/C_8817873;)V	m_1632364		m_1632364
 		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_8817873;Lnet/minecraft/unmapped/C_0786431;)V	m_3501995		m_3501995
+	m	(Lnet/minecraft/unmapped/C_8817873;Lnet/minecraft/unmapped/C_0786431;)V	m_3501995		setLevel
 		p	1			p_1
 		p	2			p_2
 	m	(Lnet/minecraft/client/Minecraft;)Z	m_2137954		m_2137954
@@ -23,11 +23,11 @@ c	net/minecraft/unmapped/C_1013763
 		p	3			p_3
 	m	()V	m_1096958		m_1096958
 c	net/minecraft/unmapped/C_1044273
-	m	(DDDF)Z	m_4034602	m_4034602	
-		p	1		p_1	
-		p	3		p_3	
-		p	5		p_5	
-		p	7		p_7	
+	m	(DDDF)Z	m_4034602	hasThickFog	
+		p	1		x	
+		p	3		y	
+		p	5		z	
+		p	7		a	
 c	net/minecraft/unmapped/C_1044273$C_8051783
 	m	(Lnet/minecraft/unmapped/C_1044273$C_8051783;)Lnet/minecraft/unmapped/C_5283200;	m_1203945		m_1203945
 		p	0			p_0
@@ -197,11 +197,11 @@ c	net/minecraft/unmapped/C_3324249
 		p	2			p_2
 c	net/minecraft/unmapped/C_3419581
 	m	()Z	m_1733837	m_1733837	
-	m	(Lnet/minecraft/unmapped/C_6707278;)F	m_4465324	m_4465324	
+	m	(Lnet/minecraft/unmapped/C_6707278;)F	m_4465324	getWalkTargetValue	
 		p	1		p_1	
 	m	(Lnet/minecraft/unmapped/C_6707278;)F	m_1135392		m_1135392
 		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_2627205;)F	m_4465324		m_4465324
+	m	(Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_2627205;)F	m_4465324		getWalkTargetValue
 		p	1			p_1
 		p	2			p_2
 	m	(Lnet/minecraft/unmapped/C_9844932;)Z	m_3712793		m_3712793
@@ -241,13 +241,13 @@ c	net/minecraft/unmapped/C_3837238$C_6094996
 		p	1			p_1
 c	net/minecraft/unmapped/C_3906126
 	f	Ljava/util/Calendar;	f_2473859	f_2473859	
-	m	(F)F	m_2275985	m_2275985	
-		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_1414550;)Z	m_9156319	m_9156319	
-		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_6385858;D)Lnet/minecraft/unmapped/C_5009044;	m_8874150	m_8874150	
-		p	1		p_1	
-		p	2		p_2	
+	m	(F)F	m_2275985	getTimeOfDay	
+		p	1		a	
+	m	(Lnet/minecraft/unmapped/C_1414550;)Z	m_9156319	containsAnyLiquid	
+		p	1		bb	
+	m	(Lnet/minecraft/unmapped/C_6385858;D)Lnet/minecraft/unmapped/C_5009044;	m_8874150	getNearestPlayer	
+		p	1		entity	
+		p	2		range	
 	m	()Ljava/util/Calendar;	m_0055235	m_0055235	
 	m	()I	m_6100722	m_6100722	
 	m	()F	m_6149163	m_6149163	
@@ -269,7 +269,7 @@ c	net/minecraft/unmapped/C_3906126
 	m	(Lnet/minecraft/unmapped/C_6707278;I)Z	m_1426213	m_1426213	
 		p	1		p_1	
 		p	2		p_2	
-	m	(Lnet/minecraft/unmapped/C_6707278;IZ)Z	m_5716737	m_5716737	
+	m	(Lnet/minecraft/unmapped/C_6707278;IZ)Z	m_5716737	hasChunksAt	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
@@ -280,7 +280,7 @@ c	net/minecraft/unmapped/C_3906126
 	m	(Lnet/minecraft/unmapped/C_0624720;Z)Z	m_0178032	m_0178032	
 		p	1		p_1	
 		p	2		p_2	
-	m	(IIIIIIZ)Z	m_2026412	m_2026412	
+	m	(IIIIIIZ)Z	m_2026412	hasChunksAt	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
@@ -288,14 +288,14 @@ c	net/minecraft/unmapped/C_3906126
 		p	5		p_5	
 		p	6		p_6	
 		p	7		p_7	
-	m	(IIZ)Z	m_2079321	m_2079321	
+	m	(IIZ)Z	m_2079321	hasChunk	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
 	m	(Lnet/minecraft/unmapped/C_6385858;D)Lnet/minecraft/unmapped/C_5009044;	m_1211485	m_1211485	
 		p	1		p_1	
 		p	2		p_2	
-	m	(DDDDZ)Lnet/minecraft/unmapped/C_5009044;	m_3078835	m_3078835	
+	m	(DDDDZ)Lnet/minecraft/unmapped/C_5009044;	m_3078835	getNearestPlayer	
 		p	1		p_1	
 		p	3		p_3	
 		p	5		p_5	
@@ -312,7 +312,7 @@ c	net/minecraft/unmapped/C_3906126
 	m	(Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_6707278;)Z	m_1144908	m_1144908	
 		p	1		p_1	
 		p	2		p_2	
-	m	(Lnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_1414550;)Z	m_2023409	m_2023409	
+	m	(Lnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_1414550;)Z	m_2023409	isUnobstructed	
 		p	1		p_1	
 		p	2		p_2	
 	m	(Lnet/minecraft/unmapped/C_7345216;Lnet/minecraft/unmapped/C_7345216;ZZ)Lnet/minecraft/unmapped/C_7345216;	m_0467574	m_0467574	
@@ -384,13 +384,13 @@ c	net/minecraft/unmapped/C_4718187
 	m	(Lnet/minecraft/unmapped/C_9844932;)Z	m_3712793		m_3712793
 		p	1			p_1
 c	net/minecraft/unmapped/C_4824661
-	f	Ljava/nio/FloatBuffer;	f_4117573	f_4117573	
-	f	F	f_4627807	f_4627807	
-	f	F	f_1498815	f_1498815	
-	f	F	f_4930127	f_4930127	
-	f	F	f_9824963	f_9824963	
-	f	F	f_6791677	f_6791677	
-	f	Z	f_4619496	f_4619496	
+	f	Ljava/nio/FloatBuffer;	f_4117573	lb	
+	f	F	f_4627807	fogRed	
+	f	F	f_1498815	fogGreen	
+	f	F	f_4930127	fogBlue	
+	f	F	f_9824963	fogBrO	
+	f	F	f_6791677	fogBr	
+	f	Z	f_4619496	thickFog	
 	f	Z	f_8188428	f_8188428	
 	f	Lnet/minecraft/unmapped/C_3779718;	f_3993609	f_3993609	
 	f	Lnet/minecraft/unmapped/C_0561170;	f_1678977	f_1678977	
@@ -399,14 +399,14 @@ c	net/minecraft/unmapped/C_4824661
 	f	Lnet/minecraft/unmapped/C_7131921;	f_6104882	f_6104882	
 	f	Lnet/minecraft/unmapped/C_3375805;	f_4152979		f_4152979
 	f	Lnet/minecraft/unmapped/C_6423206;	f_5696282		f_5696282
-	m	(F)V	m_5635244	m_5635244	
-		p	1		p_1	
-	m	(FFFF)Ljava/nio/FloatBuffer;	m_3807657	m_3807657	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-	m	(IF)V	m_1114865	m_1114865	
+	m	(F)V	m_5635244	setupClearColor	
+		p	1		partialTicks	
+	m	(FFFF)Ljava/nio/FloatBuffer;	m_3807657	getBuffer	
+		p	1		r	
+		p	2		g	
+		p	3		b	
+		p	4		a	
+	m	(IF)V	m_1114865	setupFog	
 		p	1		p_1	
 		p	2		p_2	
 	m	()V	m_0217005	m_0217005	
@@ -460,7 +460,7 @@ c	net/minecraft/unmapped/C_6618366
 c	net/minecraft/unmapped/C_6674892
 	m	()Lnet/minecraft/unmapped/C_0289174;	m_4723373		m_4723373
 c	net/minecraft/unmapped/C_6755599
-	m	(J)Ljava/util/Random;	m_9000663	m_9000663	
+	m	(J)Ljava/util/Random;	m_9000663	getRandom	
 		p	1		p_1	
 c	net/minecraft/unmapped/C_7146036
 c	net/minecraft/unmapped/C_7146036$C_1186531

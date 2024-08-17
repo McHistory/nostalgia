@@ -2,18 +2,18 @@ tiny	2	0
 c	net/minecraft/client/Minecraft
 	f	Lnet/minecraft/unmapped/C_6015078;	f_8161264		f_8161264
 	f	Z	f_7926619		f_7926619
-	m	(Ljava/lang/String;Ljava/lang/String;)V	m_6139283	m_6139283	
-		p	0		p_0	
-		p	1		p_1	
-	m	(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V	m_9802560	m_9802560	
-		p	0		p_0	
-		p	1		p_1	
-		p	2		p_2	
-	m	(Ljava/lang/String;Ljava/lang/String;Z)V	m_6139283		m_6139283
+	m	(Ljava/lang/String;Ljava/lang/String;)V	m_6139283	start	
+		p	0		username	
+		p	1		sessionId	
+	m	(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V	m_9802560	startAndConnectTo	
+		p	0		username	
+		p	1		sessionId	
+		p	2		ip	
+	m	(Ljava/lang/String;Ljava/lang/String;Z)V	m_6139283		start
 		p	0			p_0
 		p	1			p_1
 		p	2			p_2
-	m	(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V	m_9802560		m_9802560
+	m	(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V	m_9802560		startAndConnectTo
 		p	0			p_0
 		p	1			p_1
 		p	2			p_2
@@ -38,14 +38,14 @@ c	net/minecraft/server/MinecraftServer
 		p	2			p_2
 c	net/minecraft/unmapped/C_0019534
 	m	()I	m_2379740	m_2379740	
-	m	(Ljava/lang/String;Ljava/lang/String;)V	m_7846091	m_7846091	
-		p	1		p_1	
-		p	2		p_2	
+	m	(Ljava/lang/String;Ljava/lang/String;)V	m_7846091	sendMessage	
+		p	1		player	
+		p	2		msg	
 	m	(Ljava/lang/String;)V	m_3616224	m_3616224	
 		p	1		p_1	
-	m	(Ljava/lang/String;Lnet/minecraft/unmapped/C_4844124;)Z	m_9415220	m_9415220	
-		p	1		p_1	
-		p	2		p_2	
+	m	(Ljava/lang/String;Lnet/minecraft/unmapped/C_4844124;)Z	m_9415220	broadcastTo	
+		p	1		name	
+		p	2		packet	
 	m	(I)I	m_2379740		m_2379740
 		p	1			p_1
 	m	(I)I	m_3996020		m_3996020
@@ -123,8 +123,8 @@ c	net/minecraft/unmapped/C_2689622
 		p	4			p_4
 c	net/minecraft/unmapped/C_3906126
 	f	[Lnet/minecraft/unmapped/C_5720232;	f_2992651		f_2992651
-	m	()V	m_5913045	m_5913045	
-	m	(Lnet/minecraft/unmapped/C_4413269;)V	m_5913045		m_5913045
+	m	()V	m_5913045	setInitialSpawn	
+	m	(Lnet/minecraft/unmapped/C_4413269;)V	m_5913045		setInitialSpawn
 		p	1			p_1
 	m	()V	m_4453174		m_4453174
 	m	()V	<clinit>		<clinit>
@@ -224,29 +224,29 @@ c	net/minecraft/unmapped/C_3473914
 	f	Z	f_6377246		f_6377246
 	m	()Z	m_8722473		m_8722473
 c	net/minecraft/unmapped/C_6015078
-	f	Ljava/util/logging/Logger;	f_0495650	f_0495650	
-	f	Lnet/minecraft/server/MinecraftServer;	f_0419001	f_0419001	
+	f	Ljava/util/logging/Logger;	f_0495650	LOGGER	
+	f	Lnet/minecraft/server/MinecraftServer;	f_0419001	server	
 	m	(Lnet/minecraft/server/MinecraftServer;)V	<init>	<init>	
-		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_0535659;)V	m_2940712	m_2940712	
-		p	1		p_1	
+		p	1		server	
+	m	(Lnet/minecraft/unmapped/C_0535659;)V	m_2940712	performCommand	
+		p	1		input	
 	m	(Ljava/lang/String;Ljava/lang/String;Lnet/minecraft/unmapped/C_2182707;)V	m_2414756	m_2414756	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
-	m	(Lnet/minecraft/unmapped/C_2182707;)V	m_0756731	m_0756731	
-		p	1		p_1	
-	m	(Ljava/lang/String;Ljava/lang/String;)V	m_3838308	m_3838308	
-		p	1		p_1	
-		p	2		p_2	
-	m	(Ljava/lang/String;I)I	m_5855929	m_5855929	
+	m	(Lnet/minecraft/unmapped/C_2182707;)V	m_0756731	printHelp	
+		p	1		source	
+	m	(Ljava/lang/String;Ljava/lang/String;)V	m_3838308	success	
 		p	1		p_1	
 		p	2		p_2	
+	m	(Ljava/lang/String;I)I	m_5855929	parseInt	
+		p	1		msg	
+		p	2		fallback	
 	m	()V	<clinit>	<clinit>	
 	m	([Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;	m_6348418	m_6348418	
 		p	1		p_1	
 		p	2		p_2	
-	m	(Lnet/minecraft/unmapped/C_2182707;Ljava/lang/String;)V	m_2940712		m_2940712
+	m	(Lnet/minecraft/unmapped/C_2182707;Ljava/lang/String;)V	m_2940712		performCommand
 		p	1			p_1
 		p	2			p_2
 	m	(Lnet/minecraft/unmapped/C_2182707;Ljava/lang/String;)Ljava/util/List;	m_9927156		m_9927156

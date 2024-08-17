@@ -9,12 +9,12 @@ c	net/minecraft/client/Minecraft$6380374		6380374
 	m	()Ljava/lang/String;	m_5374894		m_5374894
 	m	()Ljava/lang/Object;	call		call
 c	net/minecraft/unmapped/C_1044273
-	f	I	f_6504228	f_6504228	
+	f	I	f_6504228	emptyChunks	
 	f	Lnet/minecraft/unmapped/C_8093177;	f_1523400	f_1523400	
 	f	Lnet/minecraft/unmapped/C_4253627;	f_4398270	f_4398270	
 	f	Lnet/minecraft/unmapped/C_8377075;	f_2168011	f_2168011	
 	f	Lnet/minecraft/unmapped/C_3500307;	f_3201441		f_3201441
-	m	(Lnet/minecraft/unmapped/C_6385858;)Z	m_7785939	m_7785939	
+	m	(Lnet/minecraft/unmapped/C_6385858;)Z	m_7785939	updateDirtyChunks	
 		p	1		p_1	
 	m	(Lnet/minecraft/unmapped/C_5283200;Lnet/minecraft/unmapped/C_8093177;)V	m_0335340	m_0335340	
 		p	1		p_1	
@@ -42,11 +42,11 @@ c	net/minecraft/unmapped/C_1044273$8779800	8779800
 		p	1		p_1	
 		p	2		p_2	
 c	net/minecraft/unmapped/C_5283200
-	f	[Z	f_6592967	f_6592967	
-	f	Z	f_7961176	f_7961176	
-	f	Z	f_8843907	f_8843907	
-	f	Ljava/util/List;	f_3957331	f_3957331	
-	f	Ljava/util/List;	f_1904622	f_1904622	
+	f	[Z	f_6592967	empty	
+	f	Z	f_7961176	occlusion_visible	
+	f	Z	f_8843907	compiled	
+	f	Ljava/util/List;	f_3957331	renderableTileEntities	
+	f	Ljava/util/List;	f_1904622	globalRenderableTileEntities	
 	f	Lnet/minecraft/unmapped/C_9697997;	f_0543293	f_0543293	
 	f	Z	f_8856499	f_8856499	
 	f	[Z	f_8171855	f_8171855	
@@ -56,9 +56,9 @@ c	net/minecraft/unmapped/C_5283200
 	f	Ljava/util/concurrent/locks/ReentrantLock;	f_8833868		f_8833868
 	f	Ljava/util/concurrent/locks/ReentrantLock;	f_7831554		f_7831554
 	f	Lnet/minecraft/unmapped/C_0245906;	f_7580783		f_7580783
-	m	(I)I	m_1829228	m_1829228	
-		p	1		p_1	
-	m	()Z	m_0524223	m_0524223	
+	m	(I)I	m_1829228	getList	
+		p	1		layer	
+	m	()Z	m_0524223	isEmpty	
 	m	(Lnet/minecraft/unmapped/C_3906126;Ljava/util/List;Lnet/minecraft/unmapped/C_6707278;II)V	<init>	<init>	
 		p	1		p_1	
 		p	2		p_2	
@@ -121,7 +121,7 @@ c	net/minecraft/unmapped/C_5283200
 	m	()Lnet/minecraft/unmapped/C_2326439;	m_3725913		m_3725913
 	m	(Lnet/minecraft/unmapped/C_2326439;)V	m_0105632		m_0105632
 		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_3333682;Lnet/minecraft/unmapped/C_2326439;)I	m_1829228		m_1829228
+	m	(Lnet/minecraft/unmapped/C_3333682;Lnet/minecraft/unmapped/C_2326439;)I	m_1829228		getList
 		p	1			p_1
 		p	2			p_2
 	m	()Z	m_8263433		m_8263433

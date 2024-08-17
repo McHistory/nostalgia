@@ -2,16 +2,16 @@ tiny	2	0
 c	net/minecraft/client/Minecraft
 	m	()Lnet/minecraft/unmapped/C_8412059;	m_1744993		m_1744993
 c	net/minecraft/client/MinecraftApplet
-	m	()V	m_5175249	m_5175249	
+	m	()V	m_5175249	clearMemory	
 c	net/minecraft/server/MinecraftServer
 	f	J	f_0805098		f_0805098
 	f	Ljava/lang/String;	f_6952801		f_6952801
-	m	()V	m_7367811	m_7367811	
+	m	()V	m_7367811	save	
 	m	()Ljava/lang/String;	m_8941442	m_8941442	
 	m	(Ljava/lang/String;)V	m_0567988		m_0567988
 		p	1			p_1
 	m	()Ljava/lang/String;	m_3870589		m_3870589
-	m	(Z)V	m_7367811		m_7367811
+	m	(Z)V	m_7367811		save
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_4413269$C_4731123;)V	m_8488656		m_8488656
 		p	1			p_1
@@ -31,13 +31,13 @@ c	net/minecraft/unmapped/C_0019534
 		p	1			p_1
 	m	()V	m_5360048		m_5360048
 c	net/minecraft/unmapped/C_0336319
-	f	Ljava/lang/ThreadLocal;	f_8688668	f_8688668	
-	m	()V	m_8146632	m_8146632	
-	m	(DDD)Lnet/minecraft/unmapped/C_0336319;	m_3880807	m_3880807	
-		p	0		p_0	
-		p	2		p_2	
-		p	4		p_4	
-	m	()V	m_8241350	m_8241350	
+	f	Ljava/lang/ThreadLocal;	f_8688668	poolPointer	
+	m	()V	m_8146632	resetPool	
+	m	(DDD)Lnet/minecraft/unmapped/C_0336319;	m_3880807	newTemp	
+		p	0		x	
+		p	2		y	
+		p	4		z	
+	m	()V	m_8241350	clearCache	
 	m	()Lnet/minecraft/unmapped/C_9562417;	m_2165014		m_2165014
 c	net/minecraft/unmapped/C_0336319$1190200	1190200	
 	m	()V	<init>	<init>	
@@ -49,16 +49,16 @@ c	net/minecraft/unmapped/C_0336319$9733184
 c	net/minecraft/unmapped/C_0386427
 	f	[B	f_5784124		f_5784124
 c	net/minecraft/unmapped/C_1414550
-	f	Ljava/lang/ThreadLocal;	f_5073000	f_5073000	
-	m	()V	m_6304238	m_6304238	
-	m	(DDDDDD)Lnet/minecraft/unmapped/C_1414550;	m_8516426	m_8516426	
-		p	0		p_0	
-		p	2		p_2	
-		p	4		p_4	
-		p	6		p_6	
-		p	8		p_8	
-		p	10		p_10	
-	m	()V	m_8023513	m_8023513	
+	f	Ljava/lang/ThreadLocal;	f_5073000	poolPointer	
+	m	()V	m_6304238	resetPool	
+	m	(DDDDDD)Lnet/minecraft/unmapped/C_1414550;	m_8516426	newTemp	
+		p	0		x0	
+		p	2		y0	
+		p	4		z0	
+		p	6		x1	
+		p	8		y1	
+		p	10		z1	
+	m	()V	m_8023513	clearCache	
 	m	()Lnet/minecraft/unmapped/C_9190691;	m_0688229		m_0688229
 c	net/minecraft/unmapped/C_1414550$6229170
 	m	()Ljava/util/List;	m_1400807	m_1400807	
@@ -73,13 +73,13 @@ c	net/minecraft/unmapped/C_2627205
 		p	2			p_2
 		p	3			p_3
 c	net/minecraft/unmapped/C_2750078
-	m	(IIIILnet/minecraft/unmapped/C_5009044;)V	m_3316715	m_3316715	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-	m	(Lnet/minecraft/unmapped/C_3906126;IIIILnet/minecraft/unmapped/C_5009044;)V	m_3316715		m_3316715
+	m	(IIIILnet/minecraft/unmapped/C_5009044;)V	m_3316715	mineBlock	
+		p	1		tile	
+		p	2		x	
+		p	3		y	
+		p	4		z	
+		p	5		player	
+	m	(Lnet/minecraft/unmapped/C_3906126;IIIILnet/minecraft/unmapped/C_5009044;)V	m_3316715		mineBlock
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -92,44 +92,44 @@ c	net/minecraft/unmapped/C_3134254
 		p	2			p_2
 		p	3			p_3
 c	net/minecraft/unmapped/C_3632207
-	f	Ljava/util/Set;	f_0024531	f_0024531	
-	f	Ljava/util/List;	f_0024531		f_0024531
+	f	Ljava/util/Set;	f_0024531	toBlow	
+	f	Ljava/util/List;	f_0024531		toBlow
 c	net/minecraft/unmapped/C_3635204
 	f	Lnet/minecraft/unmapped/C_3635204;	f_8358939		f_8358939
 	f	Lnet/minecraft/unmapped/C_3635204;	f_0851463		f_0851463
 	f	Lnet/minecraft/unmapped/C_3635204;	f_6899621		f_6899621
-	m	(Lnet/minecraft/unmapped/C_5009044;)F	m_5044046	m_5044046	
-		p	1		p_1	
-	m	()F	m_7976867	m_7976867	
-	m	(Lnet/minecraft/unmapped/C_3906126;III)F	m_7976867		m_7976867
+	m	(Lnet/minecraft/unmapped/C_5009044;)F	m_5044046	getDestroyProgress	
+		p	1		player	
+	m	()F	m_7976867	getDestroyTime	
+	m	(Lnet/minecraft/unmapped/C_3906126;III)F	m_7976867		getDestroyTime
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
-	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_3906126;III)F	m_5044046		m_5044046
+	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_3906126;III)F	m_5044046		getDestroyProgress
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
 		p	5			p_5
 c	net/minecraft/unmapped/C_3688914
-	f	Z	f_5235372	f_5235372	
+	f	Z	f_5235372	player	
 	f	I	f_0210813		f_0210813
 c	net/minecraft/unmapped/C_3906126
-	f	I	f_7319966	f_7319966	
+	f	I	f_7319966	saveInterval	
 	m	(III)Z	m_1611549		m_1611549
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 c	net/minecraft/unmapped/C_4030632
-	m	(Lnet/minecraft/unmapped/C_2750078;IIIILnet/minecraft/unmapped/C_1013763;)Z	m_5872189	m_5872189	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-		p	6		p_6	
-	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_3906126;IIIILnet/minecraft/unmapped/C_1013763;)Z	m_5872189		m_5872189
+	m	(Lnet/minecraft/unmapped/C_2750078;IIIILnet/minecraft/unmapped/C_1013763;)Z	m_5872189	mineBlock	
+		p	1		item	
+		p	2		tile	
+		p	3		x	
+		p	4		y	
+		p	5		z	
+		p	6		entity	
+	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_3906126;IIIILnet/minecraft/unmapped/C_1013763;)Z	m_5872189		mineBlock
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -159,8 +159,8 @@ c	net/minecraft/unmapped/C_5434245
 		p	5			p_5
 		p	6			p_6
 		p	7			p_7
-c	net/minecraft/unmapped/C_6193699	net/minecraft/unmapped/C_6193699	
-	f	I	f_6874208	f_6874208	
+c	net/minecraft/unmapped/C_6193699	net/minecraft/client/gui/screens/LevelConflictScreen	
+	f	I	f_6874208	frame	
 	m	()V	<init>	<init>	
 	m	()V	m_7135145	m_7135145	
 	m	()V	m_2060594	m_2060594	
@@ -180,8 +180,8 @@ c	net/minecraft/unmapped/C_7261559
 		p	2			p_2
 		p	3			p_3
 c	net/minecraft/unmapped/C_7389876
-	f	Ljava/util/Set;	f_3354226	f_3354226	
-	f	Ljava/util/List;	f_3354226		f_3354226
+	f	Ljava/util/Set;	f_3354226	toBlow	
+	f	Ljava/util/List;	f_3354226		toBlow
 	m	(DDDFLjava/util/Set;Lnet/minecraft/unmapped/C_0336319;)V	<init>	<init>	
 		p	1		p_1	
 		p	3		p_3	

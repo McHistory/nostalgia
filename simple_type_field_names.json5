@@ -10,7 +10,7 @@
 	"net/minecraft/client/Minecraft": "minecraft",
 
 	// rendering
-	"net/minecraft/unmapped/C_2334550": "tessellator",
+	"net/minecraft/unmapped/C_2334550": "t",
 	"net/minecraft/unmapped/C_8373595": "bufferBuilder",
 
 	// Server
@@ -72,24 +72,24 @@
 	// Network
 	"net/minecraft/unmapped/C_7240405": "buffer", // PacketByteBuf
 
-	// World
-	"net/minecraft/unmapped/C_3906126": "world",
-	"net/minecraft/unmapped/C_7366354": { // ServerWorld
-		"local_name": "world",
+	// Level
+	"net/minecraft/unmapped/C_3906126": "level",
+	"net/minecraft/unmapped/C_7366354": { // ServerLevel
+		"local_name": "level",
 		"exclusive": true,
 		"fallback": [
-			"serverWorld"
+			"serverLevel"
 		]
 	},
-	"net/minecraft/unmapped/C_8817873": { // ClientWorld
-		"local_name": "world",
+	"net/minecraft/unmapped/C_8817873": { // ClientLevel
+		"local_name": "level",
 		"exclusive": true,
 		"fallback": [
-			"clientWorld"
+			"clientLevel"
 		]
 	},
 	"net/minecraft/unmapped/C_9844932": { // WorldAccess
-		"local_name": "world",
+		"local_name": "level",
 		"exclusive": true,
 		"fallback": [
 			"worldAccess"
@@ -118,7 +118,7 @@
 	},
 
 	// Chunk
-	"net/minecraft/unmapped/C_6755599": "chunk", // WorldChunk
+	"net/minecraft/unmapped/C_6755599": "chunk", // LevelChunk
 	"net/minecraft/unmapped/C_0636026": { // ChunkAccess
 		"local_name": "chunk",
 		"exclusive": true,

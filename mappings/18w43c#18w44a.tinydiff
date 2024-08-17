@@ -68,7 +68,7 @@ c	net/minecraft/unmapped/C_0786431
 		p	2			p_2
 		p	3			p_3
 c	net/minecraft/unmapped/C_1013763
-	m	(ZI)V	m_5891931	m_5891931	
+	m	(ZI)V	m_5891931	dropDeathLoot	
 		p	1		p_1	
 		p	2		p_2	
 	m	(ZI)V	m_1749276	m_1749276	
@@ -110,7 +110,7 @@ c	net/minecraft/unmapped/C_1044273
 		p	4		p_4	
 		p	5		p_5	
 		p	6		p_6	
-	m	(IIIIIIZ)V	m_6084899	m_6084899	
+	m	(IIIIIIZ)V	m_6084899	setDirty	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
@@ -125,7 +125,7 @@ c	net/minecraft/unmapped/C_1044273
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
-	m	(IIIZ)V	m_6084899		m_6084899
+	m	(IIIZ)V	m_6084899		setDirty
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -144,7 +144,7 @@ c	net/minecraft/unmapped/C_1826831
 		p	2			p_2
 		p	3			p_3
 c	net/minecraft/unmapped/C_2616453
-	f	Lit/unimi/dsi/fastutil/longs/Long2ObjectMap;	f_5625936	f_5625936	
+	f	Lit/unimi/dsi/fastutil/longs/Long2ObjectMap;	f_5625936	loadedChunks	
 	f	Lnet/minecraft/client/Minecraft;	f_6731418		f_6731418
 	f	Lnet/minecraft/unmapped/C_2616453$C_0026473;	f_7152168		f_7152168
 	f	I	f_0919140		f_0919140
@@ -234,13 +234,13 @@ c	net/minecraft/unmapped/C_2616453$C_0026473		C_0026473
 	m	(Lnet/minecraft/unmapped/C_2616453$C_0026473;)I	m_1544155		m_1544155
 		p	0			p_0
 c	net/minecraft/unmapped/C_2782822
-	m	(IIIIII)V	m_0171092	m_0171092	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-		p	6		p_6	
+	m	(IIIIII)V	m_0171092	setTilesDirty	
+		p	1		minX	
+		p	2		minY	
+		p	3		minZ	
+		p	4		maxX	
+		p	5		maxY	
+		p	6		maxZ	
 	m	(IIIIII)V	m_4515132		m_4515132
 		p	1			p_1
 		p	2			p_2
@@ -252,7 +252,7 @@ c	net/minecraft/unmapped/C_2782822
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
-	m	(III)V	m_0171092		m_0171092
+	m	(III)V	m_0171092		setTilesDirty
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -424,13 +424,13 @@ c	net/minecraft/unmapped/C_3571139
 c	net/minecraft/unmapped/C_3906126
 	f	Lnet/minecraft/unmapped/C_1392594;	f_5267963	f_5267963	
 	f	Lnet/minecraft/unmapped/C_5142493;	f_5267963		f_5267963
-	m	(IIIIII)V	m_5295298	m_5295298	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-		p	6		p_6	
+	m	(IIIIII)V	m_5295298	setTilesDirty	
+		p	1		x0	
+		p	2		y0	
+		p	3		z0	
+		p	4		x1	
+		p	5		y1	
+		p	6		z1	
 	m	(Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_6707278;)V	m_7277371	m_7277371	
 		p	1		p_1	
 		p	2		p_2	
@@ -462,11 +462,11 @@ c	net/minecraft/unmapped/C_4191835
 	f	Lnet/minecraft/unmapped/C_0336319;	f_1654082	f_1654082	
 	f	Lnet/minecraft/unmapped/C_3748478;	f_3646626		f_3646626
 	f	Lnet/minecraft/unmapped/C_3748478;	f_1654082		f_1654082
-	m	(DDDD)Ljava/nio/FloatBuffer;	m_4630677	m_4630677	
-		p	0		p_0	
-		p	2		p_2	
-		p	4		p_4	
-		p	6		p_6	
+	m	(DDDD)Ljava/nio/FloatBuffer;	m_4630677	getBuffer	
+		p	0		x	
+		p	2		y	
+		p	4		z	
+		p	6		a	
 	m	(FFF)Lnet/minecraft/unmapped/C_3748478;	m_2752251		m_2752251
 		p	0			p_0
 		p	1			p_1
@@ -505,12 +505,12 @@ c	net/minecraft/unmapped/C_5371184
 c	net/minecraft/unmapped/C_6618366
 	m	()Ljava/util/List;	m_9055656		m_9055656
 c	net/minecraft/unmapped/C_6755599
-	m	(Lnet/minecraft/unmapped/C_7240405;IZ)V	m_5229500	m_5229500	
+	m	(Lnet/minecraft/unmapped/C_7240405;IZ)V	m_5229500	getBlocksAndData	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
 	m	()Ljava/util/Set;	m_5824327	m_5824327	
-	m	(Lnet/minecraft/unmapped/C_7240405;Lnet/minecraft/unmapped/C_2800860;IZ)V	m_5229500		m_5229500
+	m	(Lnet/minecraft/unmapped/C_7240405;Lnet/minecraft/unmapped/C_2800860;IZ)V	m_5229500		getBlocksAndData
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3

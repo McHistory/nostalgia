@@ -390,9 +390,9 @@ c	net/minecraft/unmapped/C_3624347$7119818		7119818
 		p	3			p_3
 c	net/minecraft/unmapped/C_3635204
 	f	Ljava/lang/ThreadLocal;	f_4732380		f_4732380
-	m	(Lnet/minecraft/unmapped/C_6385858;)F	m_0371753	m_0371753	
-		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_2441996;)V	m_6138806	m_6138806	
+	m	(Lnet/minecraft/unmapped/C_6385858;)F	m_0371753	getExplosionResistance	
+		p	1		entity	
+	m	(Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_2441996;)V	m_6138806	onRemove	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
@@ -406,13 +406,13 @@ c	net/minecraft/unmapped/C_3635204
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
-	m	(Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_2441996;Z)V	m_6138806		m_6138806
+	m	(Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_2441996;Z)V	m_6138806		onRemove
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
 		p	5			p_5
-	m	()F	m_0371753		m_0371753
+	m	()F	m_0371753		getExplosionResistance
 	m	()Lit/unimi/dsi/fastutil/objects/Object2ByteLinkedOpenHashMap;	m_3248146		m_3248146
 c	net/minecraft/unmapped/C_3635204$4190184		4190184
 	f	[I	f_2099840		f_2099840
@@ -791,10 +791,10 @@ c	net/minecraft/unmapped/C_6664676
 		p	4			p_4
 		p	5			p_5
 c	net/minecraft/unmapped/C_6755599
-	m	(Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_2441996;)Lnet/minecraft/unmapped/C_2441996;	m_5921093	m_5921093	
+	m	(Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_2441996;)Lnet/minecraft/unmapped/C_2441996;	m_5921093	setData	
 		p	1		p_1	
 		p	2		p_2	
-	m	(Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_2441996;Z)Lnet/minecraft/unmapped/C_2441996;	m_5921093		m_5921093
+	m	(Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_2441996;Z)Lnet/minecraft/unmapped/C_2441996;	m_5921093		setData
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -831,8 +831,8 @@ c	net/minecraft/unmapped/C_6755599$3827145	3827145
 	m	()Ljava/lang/String;	m_0650154	m_0650154	
 	m	()Ljava/lang/Object;	call	call	
 c	net/minecraft/unmapped/C_7006834
-	m	(Lnet/minecraft/unmapped/C_7006834;)V	m_2060476	m_2060476	
-		p	0		p_0	
+	m	(Lnet/minecraft/unmapped/C_7006834;)V	m_2060476	StatsComponent$tick	
+		p	0		stats	
 	m	(Ljava/awt/event/ActionEvent;)V	m_6156804		m_6156804
 		p	1			p_1
 c	net/minecraft/unmapped/C_7006834$4816709	4816709	
@@ -851,7 +851,7 @@ c	net/minecraft/unmapped/C_7029902
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
-c	net/minecraft/unmapped/C_7100243	net/minecraft/unmapped/C_7100243	
+c	net/minecraft/unmapped/C_7100243	net/minecraft/client/particle/BubbleParticle	
 	m	(Lnet/minecraft/unmapped/C_3906126;DDDDDD)V	<init>	<init>	
 		p	1		p_1	
 		p	2		p_2	
@@ -882,9 +882,9 @@ c	net/minecraft/unmapped/C_7100243$C_0819032	C_0819032
 		p	11		p_11	
 		p	13		p_13	
 c	net/minecraft/unmapped/C_7102748
-	m	(Lnet/minecraft/unmapped/C_7102748;)Lnet/minecraft/unmapped/C_7293551;	m_0433948	m_0433948	
+	m	(Lnet/minecraft/unmapped/C_7102748;)Lnet/minecraft/unmapped/C_7293551;	m_0433948	shutdown	
 		p	0		p_0	
-	m	(Ljavax/swing/JTextArea;Ljavax/swing/JScrollPane;Ljava/lang/String;)V	m_0433948		m_0433948
+	m	(Ljavax/swing/JTextArea;Ljavax/swing/JScrollPane;Ljava/lang/String;)V	m_0433948		shutdown
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3

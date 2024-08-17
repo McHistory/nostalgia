@@ -1,7 +1,7 @@
 tiny	2	0
 c	net/minecraft/client/Minecraft
-	f	Lnet/minecraft/unmapped/C_3172064;	f_8811754	f_8811754	
-	f	Ljava/lang/String;	f_1371651	f_1371651	
+	f	Lnet/minecraft/unmapped/C_3172064;	f_8811754	user	
+	f	Ljava/lang/String;	f_1371651	host	
 	f	Ljava/lang/String;	f_6753290	f_6753290	
 	f	I	f_5242116	f_5242116	
 	f	Ljava/lang/String;	f_3100662	f_3100662	
@@ -70,11 +70,11 @@ c	net/minecraft/unmapped/C_0611937
 		p	3			p_3
 		p	5			p_5
 c	net/minecraft/unmapped/C_0786431
-	f	Ljava/util/List;	f_3767855	f_3767855	
-	m	(Lnet/minecraft/unmapped/C_2621421;)V	m_9403981	m_9403981	
-		p	1		p_1	
-	m	()V	m_7135145	m_7135145	
-	m	()V	m_5056964	m_5056964	
+	f	Ljava/util/List;	f_3767855	buttons	
+	m	(Lnet/minecraft/unmapped/C_2621421;)V	m_9403981	buttonClicked	
+		p	1		button	
+	m	()V	m_7135145	tick	
+	m	()V	m_5056964	removed	
 	m	(IIIII)V	m_2880262
 		p	0		p_0	
 		p	5			p_5
@@ -174,14 +174,14 @@ c	net/minecraft/unmapped/C_2454294
 		p	1			p_1
 	m	()V	m_1634424		m_1634424
 c	net/minecraft/unmapped/C_2621421
-	f	Z	f_0197900	f_0197900	
-	f	Z	f_5948919	f_5948919	
+	f	Z	f_0197900	active	
+	f	Z	f_5948919	visible	
 c	net/minecraft/unmapped/C_2813741
 	m	(Lnet/minecraft/unmapped/C_5283200;Lnet/minecraft/unmapped/C_5283200;)I	m_3956771		m_3956771
 		p	1			p_1
 		p	2			p_2
-c	net/minecraft/unmapped/C_3172064	net/minecraft/unmapped/C_3172064	
-	f	Ljava/lang/String;	f_6779482	f_6779482	
+c	net/minecraft/unmapped/C_3172064	net/minecraft/client/User	
+	f	Ljava/lang/String;	f_6779482	username	
 	f	Ljava/lang/String;	f_1305529	f_1305529	
 	m	(Ljava/lang/String;Ljava/lang/String;)V	<init>	<init>	
 		p	1		p_1	
@@ -261,7 +261,7 @@ c	net/minecraft/unmapped/C_5283200
 	f	Z	f_8823815	f_8823815	
 	f	J	f_9649581		f_9649581
 	f	J	f_3074401		f_3074401
-	m	()V	m_6088480	m_6088480	
+	m	()V	m_6088480	delete	
 	m	(I)I	m_1157136	m_1157136	
 		p	1		p_1	
 	m	(I)V	m_1157136		m_1157136
