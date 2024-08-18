@@ -1,11 +1,11 @@
 tiny	2	0
 c	net/minecraft/client/Minecraft
-	m	(Ljava/io/File;IIII)Ljava/lang/String;	m_0756011		m_0756011
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
+	m	(Ljava/io/File;IIII)Ljava/lang/String;	m_0756011		grabHugeScreenshot
+		p	1			dir
+		p	2			orgWidth
+		p	3			orgHeight
+		p	4			w
+		p	5			h
 c	net/minecraft/server/MinecraftServer	net/minecraft/server/MinecraftServer	
 	f	Ljava/util/logging/Logger;	f_7446175	LOGGER	
 	f	Ljava/util/HashMap;	f_5715141	f_5715141	
@@ -541,11 +541,11 @@ c	net/minecraft/unmapped/C_2260875	net/minecraft/world/level/storage/PlayerIO
 		p	1		p_1	
 	m	()V	<clinit>	<clinit>	
 c	net/minecraft/unmapped/C_2354122
-	m	(Lnet/minecraft/unmapped/C_4443804;)V	m_5723360	m_5723360	
-		p	1		p_1	
-	m	()Ljava/net/SocketAddress;	m_0697034	m_0697034	
-	m	()V	m_6022756	m_6022756	
-	m	()I	m_4311815	m_4311815	
+	m	(Lnet/minecraft/unmapped/C_4443804;)V	m_5723360	setListener	
+		p	1		listener	
+	m	()Ljava/net/SocketAddress;	m_0697034	getRemoteAddress	
+	m	()V	m_6022756	sendAndQuit	
+	m	()I	m_4311815	countDelayedPackets	
 c	net/minecraft/unmapped/C_2354122$0600562	0600562	
 	f	Lnet/minecraft/unmapped/C_2354122;	f_7277840	f_7277840	
 	m	(Lnet/minecraft/unmapped/C_2354122;)V	<init>	<init>	
@@ -568,26 +568,26 @@ c	net/minecraft/unmapped/C_3157620
 	m	(J)V	<init>	<init>	
 		p	1		time	
 c	net/minecraft/unmapped/C_3187085
-	f	I	f_8438169		f_8438169
-	f	Ljava/io/DataOutputStream;	f_8858656		f_8858656
-	f	[B	f_4271363		f_4271363
-	f	I	f_7610117		f_7610117
-	f	I	f_3093601		f_3093601
-	f	Ljava/io/File;	f_9872106		f_9872106
+	f	I	f_8438169		rowHeight
+	f	Ljava/io/DataOutputStream;	f_8858656		dos
+	f	[B	f_4271363		pb
+	f	I	f_7610117		w
+	f	I	f_3093601		h
+	f	Ljava/io/File;	f_9872106		file
 	m	()V	<init>	<init>	
 	m	(Ljava/io/File;III)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-	m	(Ljava/nio/ByteBuffer;IIII)V	m_6705572		m_6705572
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
-	m	()V	m_9812907		m_9812907
-	m	()Ljava/lang/String;	m_7745323		m_7745323
+		p	1			workDir
+		p	2			w
+		p	3			h
+		p	4			rowHeight
+	m	(Ljava/nio/ByteBuffer;IIII)V	m_6705572		addRegion
+		p	1			pixels
+		p	2			xo
+		p	3			yo
+		p	4			rw
+		p	5			rh
+	m	()V	m_9812907		saveRow
+	m	()Ljava/lang/String;	m_7745323		close
 c	net/minecraft/unmapped/C_3571139	net/minecraft/server/level/ServerChunkCache	
 	f	Ljava/util/Set;	f_6557144	toDrop	
 	f	Lnet/minecraft/unmapped/C_6755599;	f_8146109	emptyChunks	
@@ -668,32 +668,32 @@ c	net/minecraft/unmapped/C_4796873
 		p	1		entityId	
 c	net/minecraft/unmapped/C_4796873$C_4137949
 	m	(IBBB)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
+		p	1		id	
+		p	2		xa	
+		p	3		ya	
+		p	4		za	
 c	net/minecraft/unmapped/C_4796873$C_4614408
 	m	(IBBBBB)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-		p	6		p_6	
+		p	1		id	
+		p	2		xa	
+		p	3		ya	
+		p	4		za	
+		p	5		yRot	
+		p	6		xRot	
 c	net/minecraft/unmapped/C_4796873$C_4858115
 	m	(IBB)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
+		p	1		id	
+		p	2		yRot	
+		p	3		xRot	
 c	net/minecraft/unmapped/C_4824661
 	f	D	f_6807291		zoom
 	f	D	f_9163834		zoom_x
 	f	D	f_0069519		zoom_y
-	m	(DDD)V	m_3044613		m_3044613
+	m	(DDD)V	m_3044613		zoomRegion
 		p	1			p_1
 		p	3			p_3
 		p	5			p_5
-	m	()V	m_8888188		m_8888188
+	m	()V	m_8888188		unZoomRegion
 c	net/minecraft/unmapped/C_4978736	net/minecraft/server/gui/PlayerListComponent	
 	f	Lnet/minecraft/server/MinecraftServer;	f_3618267	server	
 	f	I	f_5586020	tickCount	

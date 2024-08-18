@@ -42,17 +42,17 @@ c	net/minecraft/unmapped/C_0019534
 		p	2			level
 c	net/minecraft/unmapped/C_0070166
 	f	[Lnet/minecraft/unmapped/C_6755599;	f_6510170	chunks	
-	f	I	f_2563350	f_2563350	
-	f	I	f_2498441	f_2498441	
-	f	Lnet/minecraft/unmapped/C_6755599;	f_4622140	f_4622140	
-	f	I	f_9595077	f_9595077	
-	f	I	f_8347114	f_8347114	
+	f	I	f_2563350	xLast	
+	f	I	f_2498441	zLast	
+	f	Lnet/minecraft/unmapped/C_6755599;	f_4622140	last	
+	f	I	f_9595077	xCenter	
+	f	I	f_8347114	yCenter	
 	f	Ljava/util/Set;	f_0430880		toDrop
 	f	Ljava/util/Map;	f_8148180		cache
 	f	Ljava/util/List;	f_6510170		chunks
-	m	(II)Z	m_9180346	m_9180346	
-		p	1		p_1	
-		p	2		p_2	
+	m	(II)Z	m_9180346	fits	
+		p	1		x	
+		p	2		z	
 c	net/minecraft/unmapped/C_0324512
 	m	(Lnet/minecraft/unmapped/C_3906126;)V	m_6683300		m_6683300
 		p	1			p_1
@@ -106,7 +106,7 @@ c	net/minecraft/unmapped/C_2354122
 	f	Z	f_8691632		f_8691632
 	f	[I	f_8462042		f_8462042
 	f	[I	f_8293326		f_8293326
-	m	()V	m_2881878		m_2881878
+	m	()V	m_2881878		interrupt
 	m	(Lnet/minecraft/unmapped/C_2354122;)Z	m_5377130		m_5377130
 		p	0			p_0
 	m	(Lnet/minecraft/unmapped/C_2354122;Z)Z	m_0424203		m_0424203
@@ -166,9 +166,9 @@ c	net/minecraft/unmapped/C_3484604
 c	net/minecraft/unmapped/C_3571139
 	f	Z	f_6261642		f_6261642
 c	net/minecraft/unmapped/C_3635204
-	f	Lnet/minecraft/unmapped/C_3635204;	f_0271504	TALL_GRASS	
-	f	Lnet/minecraft/unmapped/C_6588851;	f_0271504		TALL_GRASS
-	f	Lnet/minecraft/unmapped/C_3635204;	f_8634642		TRAPDOOR
+	f	Lnet/minecraft/unmapped/C_3635204;	f_0271504	tallGrass	
+	f	Lnet/minecraft/unmapped/C_6588851;	f_0271504		tallGrass
+	f	Lnet/minecraft/unmapped/C_3635204;	f_8634642		trapdoor
 	m	(Lnet/minecraft/unmapped/C_2627205;IIII)Z	m_8199947	shouldRenderFace	
 		p	1		level	
 		p	2		x	
@@ -197,15 +197,15 @@ c	net/minecraft/unmapped/C_3874327
 c	net/minecraft/unmapped/C_3906126
 	f	Lnet/minecraft/unmapped/C_8407692;	f_5338772		dataStorage
 	m	(Lnet/minecraft/unmapped/C_0336319;Lnet/minecraft/unmapped/C_0336319;Z)Lnet/minecraft/unmapped/C_5853518;	m_1107910	clip	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
+		p	1		from	
+		p	2		to	
+		p	3		checkLiquid	
 	m	(IIIIZ)Z	m_2921988	mayPlace	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
+		p	1		tileId	
+		p	2		x	
+		p	3		y	
+		p	4		z	
+		p	5		checkLiquid	
 	m	(III)I	m_7150412		getRawBrightness
 		p	1			x
 		p	2			y

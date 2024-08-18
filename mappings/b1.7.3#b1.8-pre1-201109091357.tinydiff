@@ -513,7 +513,7 @@ c	net/minecraft/unmapped/C_2627205
 	m	()I	m_0662443		m_0662443
 c	net/minecraft/unmapped/C_2750078
 	m	(Lnet/minecraft/unmapped/C_2800860;)V	<init>	<init>	
-		p	1		p_1	
+		p	1		tag	
 	m	(Lnet/minecraft/unmapped/C_2800860;)Lnet/minecraft/unmapped/C_2750078;	m_5546215		m_5546215
 		p	0			p_0
 	m	()V	<init>		<init>
@@ -575,7 +575,7 @@ c	net/minecraft/unmapped/C_3134254
 	m	()I	m_0662443		m_0662443
 c	net/minecraft/unmapped/C_3187085
 	m	(Ljava/io/File;II)Ljava/lang/String;	m_2872564	grab	
-		p	0		name	
+		p	0		workDir	
 		p	1		width	
 		p	2		height	
 	m	(Ljava/io/File;II)Ljava/lang/String;	m_2520735		m_2520735
@@ -1199,10 +1199,10 @@ c	net/minecraft/unmapped/C_4839087
 		p	6			p_6
 		p	7			p_7
 c	net/minecraft/unmapped/C_4844124
-	f	Ljava/util/Map;	f_8724546	f_8724546	
-	f	Ljava/util/HashMap;	f_7666900	f_7666900	
-	f	Lnet/minecraft/unmapped/C_3837238;	f_8724546		f_8724546
-	f	Lnet/minecraft/unmapped/C_3837238;	f_7666900		f_7666900
+	f	Ljava/util/Map;	f_8724546	idToClassMap	
+	f	Ljava/util/HashMap;	f_7666900	incoming	
+	f	Lnet/minecraft/unmapped/C_3837238;	f_8724546		idToClassMap
+	f	Lnet/minecraft/unmapped/C_3837238;	f_7666900		incoming
 c	net/minecraft/unmapped/C_4939758
 	f	Ljava/util/Map;	f_1445305		f_1445305
 	f	Ljava/util/List;	f_4780907		f_4780907
@@ -1411,8 +1411,8 @@ c	net/minecraft/unmapped/C_6385858
 	f	F	f_2682000	defaultBrightness	
 	f	Z	f_8701594		f_8701594
 	m	(Lnet/minecraft/unmapped/C_6385858;I)Z	m_3238154	hurt	
-		p	1		entity	
-		p	2		damage	
+		p	1		source	
+		p	2		dmg	
 	m	(F)I	m_8582980		m_8582980
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_6907923;I)Z	m_3238154		hurt

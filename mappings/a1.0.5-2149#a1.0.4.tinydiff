@@ -46,12 +46,12 @@ c	net/minecraft/unmapped/C_0806362	net/minecraft/client/particle/BreakingItemPar
 		p	2		p_2	
 		p	4		p_4	
 		p	6		p_6	
-c	net/minecraft/unmapped/C_0932780	net/minecraft/unmapped/C_0932780	
-	f	I	f_7177981	f_7177981	
-	f	I	f_0809651	f_0809651	
+c	net/minecraft/unmapped/C_0932780	net/minecraft/client/multiplayer/ChunkPos	
+	f	I	f_7177981	x	
+	f	I	f_0809651	z	
 	m	(II)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
+		p	1		x	
+		p	2		z	
 	m	(Ljava/lang/Object;)Z	equals	equals	
 		p	1		p_1	
 	m	()I	hashCode	hashCode	
@@ -94,32 +94,32 @@ c	net/minecraft/unmapped/C_2118872	net/minecraft/world/item/SnowballItem
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
-c	net/minecraft/unmapped/C_2354122	net/minecraft/unmapped/C_2354122	
-	f	Ljava/net/Socket;	f_4852909	f_4852909	
-	f	Ljava/io/DataInputStream;	f_7480399	f_7480399	
-	f	Ljava/io/DataOutputStream;	f_1012589	f_1012589	
-	f	Z	f_8380807	f_8380807	
-	f	Ljava/util/List;	f_2922837	f_2922837	
-	f	Ljava/util/List;	f_6158504	f_6158504	
-	f	Ljava/util/List;	f_3167608	f_3167608	
-	f	Lnet/minecraft/unmapped/C_4443804;	f_5087504	f_5087504	
-	f	Z	f_9101341	f_9101341	
-	f	Ljava/lang/Thread;	f_2374678	f_2374678	
-	f	Ljava/lang/Thread;	f_0566420	f_0566420	
-	f	Z	f_6479725	f_6479725	
-	f	Ljava/lang/String;	f_5422241	f_5422241	
+c	net/minecraft/unmapped/C_2354122	net/minecraft/network/Connection	
+	f	Ljava/net/Socket;	f_4852909	socket	
+	f	Ljava/io/DataInputStream;	f_7480399	dis	
+	f	Ljava/io/DataOutputStream;	f_1012589	dos	
+	f	Z	f_8380807	running	
+	f	Ljava/util/List;	f_2922837	incoming	
+	f	Ljava/util/List;	f_6158504	outgoing	
+	f	Ljava/util/List;	f_3167608	outgoing_slow	
+	f	Lnet/minecraft/unmapped/C_4443804;	f_5087504	packetListener	
+	f	Z	f_9101341	quitting	
+	f	Ljava/lang/Thread;	f_2374678	writeThread	
+	f	Ljava/lang/Thread;	f_0566420	readThread	
+	f	Z	f_6479725	disconnected	
+	f	Ljava/lang/String;	f_5422241	disconnectReason	
 	f	I	f_8851260	f_8851260	
 	m	(Ljava/net/Socket;Ljava/lang/String;Lnet/minecraft/unmapped/C_4443804;)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-	m	(Lnet/minecraft/unmapped/C_4844124;)V	m_5183790	m_5183790	
-		p	1		p_1	
-	m	()V	m_6416101	m_6416101	
-	m	()V	m_9328634	m_9328634	
-	m	(Ljava/lang/Exception;)V	m_9503844	m_9503844	
-		p	1		p_1	
-	m	()V	m_3757750	m_3757750	
+		p	1		socket	
+		p	2		name	
+		p	3		listener	
+	m	(Lnet/minecraft/unmapped/C_4844124;)V	m_5183790	send	
+		p	1		packet	
+	m	()V	m_6416101	writeTick	
+	m	()V	m_9328634	readTick	
+	m	(Ljava/lang/Exception;)V	m_9503844	exceptionCaught	
+		p	1		exception	
+	m	()V	m_3757750	tick	
 	m	(Lnet/minecraft/unmapped/C_2354122;)Z	m_1362279	m_1362279	
 		p	0		p_0	
 	m	(Lnet/minecraft/unmapped/C_2354122;)Z	m_0464679	m_0464679	
@@ -128,7 +128,7 @@ c	net/minecraft/unmapped/C_2354122	net/minecraft/unmapped/C_2354122
 		p	0		p_0	
 	m	(Lnet/minecraft/unmapped/C_2354122;)V	m_0527525	m_0527525	
 		p	0		p_0	
-	m	(Ljava/lang/String;)V	m_1282084	m_1282084	
+	m	(Ljava/lang/String;)V	m_1282084	disconnect	
 		p	1		p_1	
 c	net/minecraft/unmapped/C_2616453	net/minecraft/client/multiplayer/MultiplayerChunkCache	
 	f	Lnet/minecraft/unmapped/C_6755599;	f_7773801	emptyChunk	
@@ -159,7 +159,7 @@ c	net/minecraft/unmapped/C_2616453	net/minecraft/client/multiplayer/MultiplayerC
 		p	2		p_2	
 		p	3		p_3	
 c	net/minecraft/unmapped/C_3635204
-	f	Lnet/minecraft/unmapped/C_3635204;	f_1043766	SNOW	
+	f	Lnet/minecraft/unmapped/C_3635204;	f_1043766	snow	
 c	net/minecraft/unmapped/C_3837238	net/minecraft/util/IntHashMap	
 	f	I	f_6401111	size	
 	f	I	f_8751660	threshold	
@@ -191,21 +191,21 @@ c	net/minecraft/unmapped/C_3837238	net/minecraft/util/IntHashMap
 		p	1		p_1	
 c	net/minecraft/unmapped/C_3906126
 	f	Z	f_2117871	isOnline	
-	m	(II)I	m_0299234	m_0299234	
-		p	1		p_1	
-		p	2		p_2	
+	m	(II)I	m_0299234	getTopSolidBlock	
+		p	1		x	
+		p	2		z	
 	m	(IIIIII[B)V	m_3353779	getBlocksAndData	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-		p	6		p_6	
-		p	7		p_7	
+		p	1		x0	
+		p	2		y0	
+		p	3		z0	
+		p	4		x1	
+		p	5		y1	
+		p	6		z1	
+		p	7		data	
 	m	(Ljava/lang/String;)V	<init>	<init>	
 		p	1		p_1	
 c	net/minecraft/unmapped/C_4030632
-	f	Lnet/minecraft/unmapped/C_4030632;	f_2264337	SNOWBALL	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_2264337	snowBall	
 c	net/minecraft/unmapped/C_4176306
 	m	(Lnet/minecraft/unmapped/C_2627205;IIII)Z	m_8199947	m_8199947	
 		p	1		p_1	
@@ -230,22 +230,22 @@ c	net/minecraft/unmapped/C_4443804	net/minecraft/network/PacketListener
 c	net/minecraft/unmapped/C_4824661
 	m	(F)V	m_6462464	m_6462464	
 		p	1		p_1	
-c	net/minecraft/unmapped/C_4844124	net/minecraft/unmapped/C_4844124	
+c	net/minecraft/unmapped/C_4844124	net/minecraft/network/packets/Packet	
 	m	()V	<init>	<init>	
-	m	(I)Lnet/minecraft/unmapped/C_4844124;	m_9610935	m_9610935	
+	m	(I)Lnet/minecraft/unmapped/C_4844124;	m_9610935	getPacket	
+		p	0		id	
+	m	()I	m_3019759	getId	
+	m	(Ljava/io/DataInputStream;)Lnet/minecraft/unmapped/C_4844124;	m_1333463	readPacket	
 		p	0		p_0	
-	m	()I	m_3019759	m_3019759	
-	m	(Ljava/io/DataInputStream;)Lnet/minecraft/unmapped/C_4844124;	m_1333463	m_1333463	
-		p	0		p_0	
-	m	(Lnet/minecraft/unmapped/C_4844124;Ljava/io/DataOutputStream;)V	m_9731199	m_9731199	
-		p	0		p_0	
-		p	1		p_1	
-	m	(Ljava/io/DataInputStream;)V	m_8784008	m_8784008	
-		p	1		p_1	
-	m	(Ljava/io/DataOutputStream;)V	m_4625396	m_4625396	
-		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_4443804;)V	m_0240895	m_0240895	
-		p	1		p_1	
+	m	(Lnet/minecraft/unmapped/C_4844124;Ljava/io/DataOutputStream;)V	m_9731199	writePacket	
+		p	0		packet	
+		p	1		data	
+	m	(Ljava/io/DataInputStream;)V	m_8784008	read	
+		p	1		data	
+	m	(Ljava/io/DataOutputStream;)V	m_4625396	write	
+		p	1		data	
+	m	(Lnet/minecraft/unmapped/C_4443804;)V	m_0240895	handle	
+		p	1		listener	
 c	net/minecraft/unmapped/C_4939758	net/minecraft/client/multiplayer/ClientPacketListener	
 	f	Z	f_2460848	done	
 	f	Lnet/minecraft/unmapped/C_2354122;	f_5760561	connection	
@@ -326,14 +326,14 @@ c	net/minecraft/unmapped/C_6295037	net/minecraft/world/level/tile/SnowTile
 		p	5		p_5	
 c	net/minecraft/unmapped/C_6755599
 	m	([BIIIIIII)I	m_5229500	getBlocksAndData	
-		p	1		chunkData	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-		p	6		p_6	
-		p	7		p_7	
-		p	8		p_8	
+		p	1		data	
+		p	2		x0	
+		p	3		y0	
+		p	4		z0	
+		p	5		x1	
+		p	6		y1	
+		p	7		z1	
+		p	8		size	
 c	net/minecraft/unmapped/C_6794191	net/minecraft/client/multiplayer/MultiplayerGameMode	
 	f	I	f_8483393	destroyPosX	
 	f	I	f_1716105	destroyPosY	
@@ -488,7 +488,7 @@ c	net/minecraft/unmapped/C_7593858	net/minecraft/unmapped/C_7593858
 		p	1		p_1	
 		p	2		p_2	
 	m	()V	run	run	
-c	net/minecraft/unmapped/C_8094787	net/minecraft/unmapped/C_8094787	
+c	net/minecraft/unmapped/C_8094787	net/minecraft/unmapped/PosRot	
 	f	D	f_5314337	f_5314337	
 	f	D	f_3747767	f_3747767	
 	f	D	f_9142942	f_9142942	

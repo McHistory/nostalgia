@@ -51,9 +51,9 @@ c	net/minecraft/unmapped/C_1893016	net/minecraft/world/level/tile/GlassTile
 		p	1		p_1	
 c	net/minecraft/unmapped/C_1893966	net/minecraft/client/renderer/entity/SheepRenderer	
 	m	(Lnet/minecraft/unmapped/C_3239917;Lnet/minecraft/unmapped/C_3239917;F)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
+		p	1		model	
+		p	2		armor	
+		p	3		shadow	
 	m	(Lnet/minecraft/unmapped/C_1013763;I)Z	m_5098475	m_5098475	
 		p	1		p_1	
 		p	2		p_2	
@@ -99,19 +99,21 @@ c	net/minecraft/unmapped/C_3604011	net/minecraft/client/renderer/entity/PlayerRe
 		p	1		p_1	
 		p	2		p_2	
 c	net/minecraft/unmapped/C_3635204
-	f	Lnet/minecraft/unmapped/C_0823907;	f_0804334	GRASS	
-	f	Lnet/minecraft/unmapped/C_1124552;	f_7565331	FLOWER	
-	f	Lnet/minecraft/unmapped/C_1124552;	f_3027250	ROSE	
-	f	Lnet/minecraft/unmapped/C_1124552;	f_4214731	BROWN_MUSHROOM	
-	f	Lnet/minecraft/unmapped/C_1124552;	f_1176361	RED_MUSHROOM	
-	f	Lnet/minecraft/unmapped/C_5846486;	f_1700703	f_1700703	
-	f	Lnet/minecraft/unmapped/C_5846486;	f_2822143	f_2822143	
-	f	Lnet/minecraft/unmapped/C_5846486;	f_1228070	f_1228070	
-	f	Lnet/minecraft/unmapped/C_3635204;	f_0804334		GRASS
-	f	Lnet/minecraft/unmapped/C_3635204;	f_7565331		FLOWER
-	f	Lnet/minecraft/unmapped/C_3635204;	f_3027250		ROSE
-	f	Lnet/minecraft/unmapped/C_3635204;	f_4214731		BROWN_MUSHROOM
-	f	Lnet/minecraft/unmapped/C_3635204;	f_1176361		RED_MUSHROOM
+	f	Lnet/minecraft/unmapped/C_0823907;	f_0804334	grass	
+	f	Lnet/minecraft/unmapped/C_1124552;	f_7565331	flower	
+	f	Lnet/minecraft/unmapped/C_1124552;	f_3027250	rose	
+	f	Lnet/minecraft/unmapped/C_1124552;	f_4214731	mushroom1	
+		c	Brown Mushroom	
+	f	Lnet/minecraft/unmapped/C_1124552;	f_1176361	mushroom2	
+		c	Red mushroom	
+	f	Lnet/minecraft/unmapped/C_5846486;	f_1700703	SOUND_GLASS	
+	f	Lnet/minecraft/unmapped/C_5846486;	f_2822143	SOUND_CLOTH	
+	f	Lnet/minecraft/unmapped/C_5846486;	f_1228070	SOUND_SAND	
+	f	Lnet/minecraft/unmapped/C_3635204;	f_0804334		grass
+	f	Lnet/minecraft/unmapped/C_3635204;	f_7565331		flower
+	f	Lnet/minecraft/unmapped/C_3635204;	f_3027250		rose
+	f	Lnet/minecraft/unmapped/C_3635204;	f_4214731		mushroom1
+	f	Lnet/minecraft/unmapped/C_3635204;	f_1176361		mushroom2
 	m	(Lnet/minecraft/unmapped/C_3906126;IIII)V	m_3586843	setPlacedOnFace	
 		p	1		level	
 		p	2		x	
@@ -173,26 +175,26 @@ c	net/minecraft/unmapped/C_3911481
 		p	4		p_4	
 		p	5		p_5	
 c	net/minecraft/unmapped/C_4030632
-	f	Lnet/minecraft/unmapped/C_4030632;	f_7020203	LEATHER_HELMET	
-	f	Lnet/minecraft/unmapped/C_4030632;	f_6171387	LEATHER_CHESTPLATE	
-	f	Lnet/minecraft/unmapped/C_4030632;	f_7179169	LEATHER_LEGGINGS	
-	f	Lnet/minecraft/unmapped/C_4030632;	f_6314546	LEATHER_BOOTS	
-	f	Lnet/minecraft/unmapped/C_4030632;	f_0222887	CHAIN_HELMET	
-	f	Lnet/minecraft/unmapped/C_4030632;	f_4770385	CHAIN_CHESTPLATE	
-	f	Lnet/minecraft/unmapped/C_4030632;	f_6981216	CHAIN_LEGGINGS	
-	f	Lnet/minecraft/unmapped/C_4030632;	f_9172194	CHAIN_BOOTS	
-	f	Lnet/minecraft/unmapped/C_4030632;	f_8104327	IRON_HELMET	
-	f	Lnet/minecraft/unmapped/C_4030632;	f_7812132	IRON_CHESTPLATE	
-	f	Lnet/minecraft/unmapped/C_4030632;	f_9423823	IRON_LEGGINGS	
-	f	Lnet/minecraft/unmapped/C_4030632;	f_9966856	IRON_BOOTS	
-	f	Lnet/minecraft/unmapped/C_4030632;	f_4095949	DIAMOND_HELMET	
-	f	Lnet/minecraft/unmapped/C_4030632;	f_0202604	DIAMOND_CHESTPLATE	
-	f	Lnet/minecraft/unmapped/C_4030632;	f_4501537	DIAMOND_LEGGINGS	
-	f	Lnet/minecraft/unmapped/C_4030632;	f_6913651	DIAMOND_BOOTS	
-	f	Lnet/minecraft/unmapped/C_4030632;	f_3925125	GOLD_HELMET	
-	f	Lnet/minecraft/unmapped/C_4030632;	f_0810948	GOLD_CHESTPLATE	
-	f	Lnet/minecraft/unmapped/C_4030632;	f_5377435	GOLD_LEGGINGS	
-	f	Lnet/minecraft/unmapped/C_4030632;	f_1037523	GOLD_BOOTS	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_7020203	helmet_cloth	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_6171387	chestplate_cloth	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_7179169	leggings_cloth	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_6314546	boots_cloth	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_0222887	helmet_chain	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_4770385	chestplate_chain	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_6981216	leggings_chain	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_9172194	boots_chain	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_8104327	helmet_iron	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_7812132	chestplate_iron	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_9423823	leggings_iron	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_9966856	boots_iron	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_4095949	helmet_diamond	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_0202604	chestplate_diamond	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_4501537	leggings_diamond	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_6913651	boots_diamond	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_3925125	helmet_gold	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_0810948	chestplate_gold	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_5377435	leggings_gold	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_1037523	boots_gold	
 c	net/minecraft/unmapped/C_4450135	net/minecraft/world/item/crafting/ArmorRecipes	
 	f	[[Ljava/lang/String;	f_1218964	shapes	
 	f	[[Ljava/lang/Object;	f_5493481	map	
@@ -317,8 +319,8 @@ c	net/minecraft/unmapped/C_4528419	net/minecraft/unmapped/C_4528419
 		p	3		p_3	
 	m	()Ljava/lang/String;	m_6108844	m_6108844	
 c	net/minecraft/unmapped/C_5846486
-	m	()Ljava/lang/String;	m_6108844	m_6108844	
-	m	()Ljava/lang/String;	m_0137307	m_0137307	
+	m	()Ljava/lang/String;	m_6108844	getBreakSound	
+	m	()Ljava/lang/String;	m_0137307	getStepSound	
 c	net/minecraft/unmapped/C_7968884
 	m	(Lnet/minecraft/client/Minecraft;Ljava/lang/String;)V	<init>	<init>	
 		p	1		p_1	

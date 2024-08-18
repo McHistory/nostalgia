@@ -282,50 +282,50 @@ c	net/minecraft/unmapped/C_2334550
 		p	3			p_3
 	m	(Lnet/minecraft/unmapped/C_3679149;)V	m_1797444		m_1797444
 		p	1			p_1
-c	net/minecraft/unmapped/C_2354122	net/minecraft/unmapped/C_2354122	
-	f	Ljava/lang/Object;	f_9701999	f_9701999	
-	f	Ljava/net/Socket;	f_4852909	f_4852909	
-	f	Ljava/net/SocketAddress;	f_6662160	f_6662160	
-	f	Ljava/io/DataInputStream;	f_7480399	f_7480399	
-	f	Ljava/io/DataOutputStream;	f_1012589	f_1012589	
-	f	Z	f_8380807	f_8380807	
-	f	Ljava/util/List;	f_6158504	f_6158504	
-	f	Ljava/util/List;	f_3167608	f_3167608	
-	f	Lnet/minecraft/unmapped/C_4443804;	f_5087504	f_5087504	
-	f	Z	f_9101341	f_9101341	
-	f	Ljava/lang/Thread;	f_2374678	f_2374678	
-	f	Ljava/lang/Thread;	f_0566420	f_0566420	
-	f	Z	f_6479725	f_6479725	
-	f	Ljava/lang/String;	f_5422241	f_5422241	
-	f	[Ljava/lang/Object;	f_1969803	f_1969803	
-	f	I	f_9649046	f_9649046	
-	f	I	f_7688848	f_7688848	
+c	net/minecraft/unmapped/C_2354122	net/minecraft/network/Connection	
+	f	Ljava/lang/Object;	f_9701999	writeLock	
+	f	Ljava/net/Socket;	f_4852909	socket	
+	f	Ljava/net/SocketAddress;	f_6662160	address	
+	f	Ljava/io/DataInputStream;	f_7480399	dis	
+	f	Ljava/io/DataOutputStream;	f_1012589	dos	
+	f	Z	f_8380807	running	
+	f	Ljava/util/List;	f_6158504	outgoing	
+	f	Ljava/util/List;	f_3167608	outgoing_slow	
+	f	Lnet/minecraft/unmapped/C_4443804;	f_5087504	packetListener	
+	f	Z	f_9101341	quitting	
+	f	Ljava/lang/Thread;	f_2374678	writeThread	
+	f	Ljava/lang/Thread;	f_0566420	readThread	
+	f	Z	f_6479725	disconnected	
+	f	Ljava/lang/String;	f_5422241	disconnectReason	
+	f	[Ljava/lang/Object;	f_1969803	disconnectReasonObjects	
+	f	I	f_9649046	noInputTicks	
+	f	I	f_7688848	estimatedRemaining	
 	f	I	f_1619983	f_1619983	
 	f	I	f_8851260	f_8851260	
 	f	[I	f_8462042	f_8462042	
 	f	[I	f_8293326	f_8293326	
-	f	Ljava/util/concurrent/atomic/AtomicInteger;	f_2874325	f_2874325	
-	f	Ljava/util/concurrent/atomic/AtomicInteger;	f_8256911	f_8256911	
+	f	Ljava/util/concurrent/atomic/AtomicInteger;	f_2874325	readThreads	
+	f	Ljava/util/concurrent/atomic/AtomicInteger;	f_8256911	writeThreads	
 	f	Z	f_4274151	f_4274151	
 	f	Z	f_5459810	f_5459810	
 	f	Ljavax/crypto/SecretKey;	f_1494275	f_1494275	
 	f	Ljava/security/PrivateKey;	f_1389554	f_1389554	
-	f	Ljava/util/Queue;	f_2922837	f_2922837	
+	f	Ljava/util/Queue;	f_2922837	incoming	
 	f	Ljava/util/concurrent/atomic/AtomicInteger;	f_5492312	f_5492312	
 	f	Lorg/apache/logging/log4j/Logger;	f_7764543	f_7764543	
-	m	(Lnet/minecraft/unmapped/C_4443804;)V	m_5723360	m_5723360	
-		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_4844124;)V	m_5183790	m_5183790	
-		p	1		p_1	
-	m	(Ljava/lang/Exception;)V	m_9503844	m_9503844	
-		p	1		p_1	
-	m	(Ljava/lang/String;[Ljava/lang/Object;)V	m_1282084	m_1282084	
-		p	1		p_1	
-		p	2		p_2	
-	m	()V	m_3757750	m_3757750	
-	m	()Ljava/net/SocketAddress;	m_0697034	m_0697034	
-	m	()V	m_6022756	m_6022756	
-	m	()I	m_4311815	m_4311815	
+	m	(Lnet/minecraft/unmapped/C_4443804;)V	m_5723360	setListener	
+		p	1		listener	
+	m	(Lnet/minecraft/unmapped/C_4844124;)V	m_5183790	send	
+		p	1		packet	
+	m	(Ljava/lang/Exception;)V	m_9503844	exceptionCaught	
+		p	1		exception	
+	m	(Ljava/lang/String;[Ljava/lang/Object;)V	m_1282084	disconnect	
+		p	1		reason	
+		p	2		objects	
+	m	()V	m_3757750	tick	
+	m	()Ljava/net/SocketAddress;	m_0697034	getRemoteAddress	
+	m	()V	m_6022756	sendAndQuit	
+	m	()I	m_4311815	countDelayedPackets	
 	m	(Lnet/minecraft/unmapped/C_2354122;)Z	m_1362279	m_1362279	
 		p	0		p_0	
 	m	(Lnet/minecraft/unmapped/C_2354122;)Z	m_0464679	m_0464679	
@@ -335,13 +335,13 @@ c	net/minecraft/unmapped/C_2354122	net/minecraft/unmapped/C_2354122
 	m	(Lnet/minecraft/unmapped/C_2354122;)Ljava/lang/Thread;	m_8056164	m_8056164	
 		p	0		p_0	
 	m	()V	<clinit>	<clinit>	
-	m	()V	m_2881878	m_2881878	
+	m	()V	m_2881878	interrupt	
 	m	(Lnet/minecraft/unmapped/C_2354122;)Z	m_5377130	m_5377130	
 		p	0		p_0	
 	m	(Lnet/minecraft/unmapped/C_2354122;)Ljava/io/DataOutputStream;	m_7819813	m_7819813	
 		p	0		p_0	
-	m	()Z	m_6416101	m_6416101	
-	m	()Z	m_9328634	m_9328634	
+	m	()Z	m_6416101	writeTick	
+	m	()Z	m_9328634	readTick	
 	m	(Lnet/minecraft/unmapped/C_2354122;)Z	m_6730947	m_6730947	
 		p	0		p_0	
 	m	(Lnet/minecraft/unmapped/C_2354122;)Z	m_0527525	m_0527525	
@@ -767,23 +767,23 @@ c	net/minecraft/unmapped/C_4796873$C_4858115
 	m	(Lnet/minecraft/unmapped/C_4443804;)V	m_0240895		m_0240895
 		p	1			p_1
 c	net/minecraft/unmapped/C_4844124
-	f	Ljava/util/Map;	f_2386161	f_2386161	
-	f	J	f_5328643	f_5328643	
-	f	Z	f_1779277	f_1779277	
-	f	Ljava/util/Set;	f_0999637	f_0999637	
-	f	Ljava/util/Set;	f_7693614	f_7693614	
-	f	Lnet/minecraft/unmapped/C_3837238;	f_8724546	f_8724546	
+	f	Ljava/util/Map;	f_2386161	classToIdMap	
+	f	J	f_5328643	createTime	
+	f	Z	f_1779277	shouldDelay	
+	f	Ljava/util/Set;	f_0999637	clientboundPackets	
+	f	Ljava/util/Set;	f_7693614	serverboundPackets	
+	f	Lnet/minecraft/unmapped/C_3837238;	f_8724546	idToClassMap	
 	f	J	f_8511397	f_8511397	
 	f	J	f_9152901	f_9152901	
 	f	J	f_1566706	f_1566706	
 	f	J	f_1865178	f_1865178	
-	m	()I	m_3019759	m_3019759	
-	m	()I	m_0079091	m_0079091	
-	m	(IZZLjava/lang/Class;)V	m_8319107	m_8319107	
-		p	0		p_0	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
+	m	()I	m_3019759	getId	
+	m	()I	m_0079091	getEstimatedSize	
+	m	(IZZLjava/lang/Class;)V	m_8319107	map	
+		p	0		id	
+		p	1		clientbound	
+		p	2		serverbound	
+		p	3		packetClass	
 	m	()Z	m_9362922	m_9362922	
 	m	(Lnet/minecraft/unmapped/C_4844124;)Z	m_9063255	m_9063255	
 		p	1		p_1	
@@ -793,18 +793,18 @@ c	net/minecraft/unmapped/C_4844124
 		p	1		p_1	
 	m	(Ljava/io/DataInput;)[B	m_8607430	m_8607430	
 		p	0		p_0	
-	m	(Lnet/minecraft/unmapped/C_4844124;Ljava/io/DataOutput;)V	m_9731199	m_9731199	
+	m	(Lnet/minecraft/unmapped/C_4844124;Ljava/io/DataOutput;)V	m_9731199	writePacket	
 		p	0		p_0	
 		p	1		p_1	
-	m	(Ljava/lang/String;Ljava/io/DataOutput;)V	m_4083045	m_4083045	
+	m	(Ljava/lang/String;Ljava/io/DataOutput;)V	m_4083045	writeString	
 		p	0		p_0	
 		p	1		p_1	
-	m	(Ljava/io/DataInput;I)Ljava/lang/String;	m_0727242	m_0727242	
+	m	(Ljava/io/DataInput;I)Ljava/lang/String;	m_0727242	readString	
 		p	0		p_0	
 		p	1		p_1	
-	m	(Ljava/io/DataInput;)V	m_8784008	m_8784008	
+	m	(Ljava/io/DataInput;)V	m_8784008	read	
 		p	1		p_1	
-	m	(Ljava/io/DataOutput;)V	m_4625396	m_4625396	
+	m	(Ljava/io/DataOutput;)V	m_4625396	write	
 		p	1		p_1	
 	m	(Ljava/io/DataInput;)Lnet/minecraft/unmapped/C_2750078;	m_4582369	m_4582369	
 		p	0		p_0	
@@ -816,9 +816,9 @@ c	net/minecraft/unmapped/C_4844124
 	m	(Lnet/minecraft/unmapped/C_2800860;Ljava/io/DataOutput;)V	m_1834624	m_1834624	
 		p	0		p_0	
 		p	1		p_1	
-	m	(I)Lnet/minecraft/unmapped/C_4844124;	m_9610935	m_9610935	
+	m	(I)Lnet/minecraft/unmapped/C_4844124;	m_9610935	getPacket	
 		p	0		p_0	
-	m	(Ljava/io/DataInput;ZLjava/net/Socket;)Lnet/minecraft/unmapped/C_4844124;	m_1333463	m_1333463	
+	m	(Ljava/io/DataInput;ZLjava/net/Socket;)Lnet/minecraft/unmapped/C_4844124;	m_1333463	readPacket	
 		p	0		p_0	
 		p	1		p_1	
 		p	2		p_2	
@@ -830,9 +830,9 @@ c	net/minecraft/unmapped/C_4844124
 		p	1			p_1
 	m	(Lio/netty/buffer/ByteBuf;)[B	m_9172794		m_9172794
 		p	0			p_0
-	m	(Lnet/minecraft/unmapped/C_7240405;)V	m_8784008		m_8784008
+	m	(Lnet/minecraft/unmapped/C_7240405;)V	m_8784008		read
 		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_7240405;)V	m_4625396		m_4625396
+	m	(Lnet/minecraft/unmapped/C_7240405;)V	m_4625396		write
 		p	1			p_1
 	m	()Z	m_7208514		m_7208514
 	m	()Ljava/lang/String;	m_4149431		m_4149431
@@ -1870,12 +1870,12 @@ c	net/minecraft/unmapped/C_3197851	net/minecraft/unmapped/C_3197851
 		p	1		p_1	
 	m	(Ljava/io/DataOutput;)V	m_4625396	m_4625396	
 		p	1		p_1	
-c	net/minecraft/unmapped/C_6161719	net/minecraft/unmapped/C_6161719	
+c	net/minecraft/unmapped/C_6161719	net/minecraft/unmapped/IncomingPacket	
 	f	Z	f_7507673	f_7507673	
 	f	Ljava/util/Map;	f_7554692	f_7554692	
 	f	Ljava/util/Map;	f_9528505	f_9528505	
 	f	Ljava/lang/Object;	f_1341187	f_1341187	
-	m	(IJ)V	m_1992449	m_1992449	
+	m	(IJ)V	m_1992449	addPacket	
 		p	0		p_0	
 		p	1		p_1	
 	m	()V	<clinit>	<clinit>	

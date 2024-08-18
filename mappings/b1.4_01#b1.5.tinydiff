@@ -1,11 +1,11 @@
 tiny	2	0
 c	net/minecraft/client/Minecraft
-	m	(Ljava/io/File;IIII)Ljava/lang/String;	m_0756011	m_0756011	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
+	m	(Ljava/io/File;IIII)Ljava/lang/String;	m_0756011	grabHugeScreenshot	
+		p	1		dir	
+		p	2		orgWidth	
+		p	3		orgHeight	
+		p	4		w	
+		p	5		h	
 c	net/minecraft/client/Minecraft$0497028		0497028
 	f	Lnet/minecraft/client/Minecraft;	f_5797501		f_5797501
 	m	(Lnet/minecraft/client/Minecraft;)V	<init>		<init>
@@ -123,32 +123,32 @@ c	net/minecraft/unmapped/C_2624096$C_6469655
 	m	(I)V	m_7355016		m_7355016
 		p	1			p_1
 c	net/minecraft/unmapped/C_3187085
-	f	I	f_8438169	f_8438169	
-	f	Ljava/io/DataOutputStream;	f_8858656	f_8858656	
-	f	[B	f_4271363	f_4271363	
-	f	I	f_7610117	f_7610117	
-	f	I	f_3093601	f_3093601	
-	f	Ljava/io/File;	f_9872106	f_9872106	
+	f	I	f_8438169	rowHeight	
+	f	Ljava/io/DataOutputStream;	f_8858656	dos	
+	f	[B	f_4271363	pb	
+	f	I	f_7610117	w	
+	f	I	f_3093601	h	
+	f	Ljava/io/File;	f_9872106	file	
 	m	(Ljava/io/File;III)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-	m	(Ljava/nio/ByteBuffer;IIII)V	m_6705572	m_6705572	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-	m	()V	m_9812907	m_9812907	
-	m	()Ljava/lang/String;	m_7745323	m_7745323	
+		p	1		workDir	
+		p	2		w	
+		p	3		h	
+		p	4		rowHeight	
+	m	(Ljava/nio/ByteBuffer;IIII)V	m_6705572	addRegion	
+		p	1		pixels	
+		p	2		xo	
+		p	3		yo	
+		p	4		rw	
+		p	5		rh	
+	m	()V	m_9812907	saveRow	
+	m	()Ljava/lang/String;	m_7745323	close	
 c	net/minecraft/unmapped/C_3466301
 	f	Z	f_6711480		fancy
 	m	(Lnet/minecraft/unmapped/C_3635204;III)Z	m_9806368	tesselateRailInWorld	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
+		p	1		tt	
+		p	2		x	
+		p	3		y	
+		p	4		z	
 	m	(Lnet/minecraft/unmapped/C_2624096;III)Z	m_9806368		tesselateRailInWorld
 		p	1			rail
 		p	2			x
@@ -196,7 +196,7 @@ c	net/minecraft/unmapped/C_3906126
 		p	3			z
 c	net/minecraft/unmapped/C_4030632
 	m	(Lnet/minecraft/unmapped/C_2750078;)I	m_1532371	getIcon	
-		p	1		p_1	
+		p	1		item	
 	m	(I)I	m_1532371		getIcon
 		p	1			meta
 	m	(Lnet/minecraft/unmapped/C_2750078;)I	m_8620274		getIcon
@@ -248,38 +248,38 @@ c	net/minecraft/unmapped/C_4824661
 	f	I	f_6644116		rainSoundTime
 	m	(I)V	m_1114865	setupFog	
 		p	1		p_1	
-	m	(DDD)V	m_3044613	m_3044613	
+	m	(DDD)V	m_3044613	zoomRegion	
 		p	1		p_1	
 		p	3		p_3	
 		p	5		p_5	
-	m	()V	m_8888188	m_8888188	
+	m	()V	m_8888188	unZoomRegion	
 	m	(F)V	m_7235148		renderSnowAndRain
 		p	1			partialTick
 	m	(IF)V	m_1114865		setupFog
 		p	1			p_1
 		p	2			p_2
 c	net/minecraft/unmapped/C_4844124
-	f	Ljava/util/Set;	f_0999637		f_0999637
-	f	Ljava/util/Set;	f_7693614		f_7693614
-	m	(ILjava/lang/Class;)V	m_8319107	m_8319107	
+	f	Ljava/util/Set;	f_0999637		clientboundPackets
+	f	Ljava/util/Set;	f_7693614		serverboundPackets
+	m	(ILjava/lang/Class;)V	m_8319107	map	
 		p	0		p_0	
 		p	1		p_1	
-	m	(Ljava/io/DataInputStream;)Lnet/minecraft/unmapped/C_4844124;	m_1333463	m_1333463	
+	m	(Ljava/io/DataInputStream;)Lnet/minecraft/unmapped/C_4844124;	m_1333463	readPacket	
 		p	0		p_0	
-	m	(IZZLjava/lang/Class;)V	m_8319107		m_8319107
-		p	0			p_0
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-	m	(Ljava/io/DataInputStream;Z)Lnet/minecraft/unmapped/C_4844124;	m_1333463		m_1333463
-		p	0			p_0
-		p	1			p_1
-	m	(Ljava/lang/String;Ljava/io/DataOutputStream;)V	m_4083045		m_4083045
-		p	0			p_0
-		p	1			p_1
-	m	(Ljava/io/DataInputStream;I)Ljava/lang/String;	m_0727242		m_0727242
-		p	0			p_0
-		p	1			p_1
+	m	(IZZLjava/lang/Class;)V	m_8319107		map
+		p	0			id
+		p	1			clientbound
+		p	2			serverbound
+		p	3			packetClass
+	m	(Ljava/io/DataInputStream;Z)Lnet/minecraft/unmapped/C_4844124;	m_1333463		readPacket
+		p	0			data
+		p	1			serverbound
+	m	(Ljava/lang/String;Ljava/io/DataOutputStream;)V	m_4083045		writeString
+		p	0			msg
+		p	1			data
+	m	(Ljava/io/DataInputStream;I)Ljava/lang/String;	m_0727242		readString
+		p	0			data
+		p	1			length
 c	net/minecraft/unmapped/C_4883920
 	f	Z	f_0122511		quickMove
 	m	(IIILnet/minecraft/unmapped/C_2750078;S)V	<init>	<init>	
@@ -572,22 +572,22 @@ c	net/minecraft/unmapped/C_5260684
 	m	(Lnet/minecraft/unmapped/C_2750078;)V	m_7573710		m_7573710
 		p	1			p_1
 c	net/minecraft/unmapped/C_5525347
-	f	Z	f_1559337		f_1559337
-	f	Lnet/minecraft/unmapped/C_7646636;	f_8043222		f_8043222
-	f	Ljava/text/NumberFormat;	f_6185429		f_6185429
-	f	Lnet/minecraft/unmapped/C_7646636;	f_6968976		f_6968976
-	f	Ljava/text/DecimalFormat;	f_6066041		f_6066041
-	f	Lnet/minecraft/unmapped/C_7646636;	f_8697868		f_8697868
-	f	Lnet/minecraft/unmapped/C_7646636;	f_5628217		f_5628217
+	f	Z	f_1559337		root
+	f	Lnet/minecraft/unmapped/C_7646636;	f_8043222		formatter
+	f	Ljava/text/NumberFormat;	f_6185429		NUMBER_FORMAT
+	f	Lnet/minecraft/unmapped/C_7646636;	f_6968976		DEFAULT
+	f	Ljava/text/DecimalFormat;	f_6066041		DECIMAL_FORMAT
+	f	Lnet/minecraft/unmapped/C_7646636;	f_8697868		TIME
+	f	Lnet/minecraft/unmapped/C_7646636;	f_5628217		DISTANCE
 	m	()Z	m_3651694	m_3651694	
 	m	(ILjava/lang/String;Lnet/minecraft/unmapped/C_7646636;)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-	m	()Lnet/minecraft/unmapped/C_5525347;	m_4898738		m_4898738
-	m	()Z	m_1818304		m_1818304
-	m	(I)Ljava/lang/String;	m_9322525		m_9322525
-		p	1			p_1
+		p	1			id
+		p	2			name
+		p	3			formatter
+	m	()Lnet/minecraft/unmapped/C_5525347;	m_4898738		root
+	m	()Z	m_1818304		isAchievement
+	m	(I)Ljava/lang/String;	m_9322525		format
+		p	1			i
 	m	()Ljava/lang/String;	toString		toString
 	m	()Ljava/text/NumberFormat;	m_7294228		m_7294228
 	m	()Ljava/text/DecimalFormat;	m_5173146		m_5173146
@@ -622,26 +622,26 @@ c	net/minecraft/unmapped/C_7281219
 		p	5		p_5	
 	m	()Z	m_3651694	m_3651694	
 	m	(ILjava/lang/String;IILnet/minecraft/unmapped/C_4030632;Lnet/minecraft/unmapped/C_7281219;)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
-		p	6			p_6
+		p	1			id
+		p	2			name
+		p	3			x
+		p	4			y
+		p	5			icon
+		p	6			parent
 	m	(ILjava/lang/String;IILnet/minecraft/unmapped/C_3635204;Lnet/minecraft/unmapped/C_7281219;)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
-		p	6			p_6
+		p	1			id
+		p	2			name
+		p	3			x
+		p	4			y
+		p	5			icon
+		p	6			parent
 	m	(ILjava/lang/String;IILnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_7281219;)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
-		p	6			p_6
+		p	1			id
+		p	2			name
+		p	3			x
+		p	4			y
+		p	5			icon
+		p	6			parent
 	m	()Lnet/minecraft/unmapped/C_7281219;	m_2205937		m_2205937
 	m	()Lnet/minecraft/unmapped/C_7281219;	m_1632348		challenge
 	m	()Lnet/minecraft/unmapped/C_7281219;	m_0233212		m_0233212

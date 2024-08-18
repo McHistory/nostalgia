@@ -360,7 +360,7 @@ c	net/minecraft/unmapped/C_2750078
 	m	()I	m_8095974		m_8095974
 c	net/minecraft/unmapped/C_2751481
 	m	(FI)V	m_9425643	renderTex	
-		p	1		partialTick	
+		p	1		a	
 		p	2		tex	
 	m	(Lnet/minecraft/unmapped/C_2334550;FFFFF)V	m_7446315	m_7446315	
 		p	0		p_0	
@@ -434,7 +434,7 @@ c	net/minecraft/unmapped/C_3466301
 		p	2		x	
 		p	3		y	
 		p	4		z	
-		p	5		destroyProgress	
+		p	5		fixedTexture	
 	m	(Lnet/minecraft/unmapped/C_3635204;III)Z	m_9161570	tesselateFireInWorld	
 		p	1		tile	
 		p	2		x	
@@ -471,11 +471,11 @@ c	net/minecraft/unmapped/C_3466301
 		p	6		z	
 		p	8		texture	
 	m	(Lnet/minecraft/unmapped/C_3635204;DDDI)V	m_1674778	renderEast	
-		p	1		tile	
+		p	1		tt	
 		p	2		x	
 		p	4		y	
 		p	6		z	
-		p	8		texture	
+		p	8		tex	
 	m	(Lnet/minecraft/unmapped/C_3635204;IIDDDD)V	m_1973209	m_1973209	
 		p	1		p_1	
 		p	2		p_2	
@@ -615,20 +615,20 @@ c	net/minecraft/unmapped/C_3604011
 c	net/minecraft/unmapped/C_3632207
 	m	()Lnet/minecraft/unmapped/C_1013763;	m_2781355		m_2781355
 c	net/minecraft/unmapped/C_3635204
-	f	Lnet/minecraft/unmapped/C_3635204;	f_1761026	FLOWING_WATER	
-	f	Lnet/minecraft/unmapped/C_3635204;	f_6455504	FLOWING_LAVA	
-	f	Lnet/minecraft/unmapped/C_3635204;	f_1662678	STICKY_PISTON	
-	f	Lnet/minecraft/unmapped/C_3635204;	f_2004321	PISTON	
-	f	Lnet/minecraft/unmapped/C_3635204;	f_7707315	REDSTONE	
+	f	Lnet/minecraft/unmapped/C_3635204;	f_1761026	water	
+	f	Lnet/minecraft/unmapped/C_3635204;	f_6455504	lava	
+	f	Lnet/minecraft/unmapped/C_3635204;	f_1662678	stickyPiston	
+	f	Lnet/minecraft/unmapped/C_3635204;	f_2004321	piston	
+	f	Lnet/minecraft/unmapped/C_3635204;	f_7707315	redStoneDust	
 	f	I	f_2648035	tex	
 	f	Lnet/minecraft/unmapped/C_3635204;	f_7092302	f_7092302	
 	f	Lnet/minecraft/unmapped/C_3635204;	f_8971165	f_8971165	
 	f	Lnet/minecraft/unmapped/C_3635204;	f_4245728	f_4245728	
-	f	Lnet/minecraft/unmapped/C_4558465;	f_1761026		FLOWING_WATER
-	f	Lnet/minecraft/unmapped/C_4558465;	f_6455504		FLOWING_LAVA
-	f	Lnet/minecraft/unmapped/C_0956869;	f_1662678		STICKY_PISTON
-	f	Lnet/minecraft/unmapped/C_0956869;	f_2004321		PISTON
-	f	Lnet/minecraft/unmapped/C_2689622;	f_7707315		REDSTONE
+	f	Lnet/minecraft/unmapped/C_4558465;	f_1761026		water
+	f	Lnet/minecraft/unmapped/C_4558465;	f_6455504		lava
+	f	Lnet/minecraft/unmapped/C_0956869;	f_1662678		stickyPiston
+	f	Lnet/minecraft/unmapped/C_0956869;	f_2004321		piston
+	f	Lnet/minecraft/unmapped/C_2689622;	f_7707315		redStoneDust
 	f	Lnet/minecraft/unmapped/C_0154218;	f_7092302		f_7092302
 	f	Lnet/minecraft/unmapped/C_5788730;	f_8971165		f_8971165
 	f	Lnet/minecraft/unmapped/C_4018501;	f_4245728		f_4245728
@@ -637,9 +637,9 @@ c	net/minecraft/unmapped/C_3635204
 	f	Lnet/minecraft/unmapped/C_3635204;	f_1752890		f_1752890
 	f	Lnet/minecraft/unmapped/C_5307437;	f_9229557		f_9229557
 	m	(IILnet/minecraft/unmapped/C_8554894;)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
+		p	1		id	
+		p	2		tex	
+		p	3		material	
 	m	(Lnet/minecraft/unmapped/C_2627205;IIII)I	m_6954536	getTexture	
 		p	1		level	
 		p	2		x	
@@ -796,51 +796,51 @@ c	net/minecraft/unmapped/C_3906126
 		p	7			p_7
 		p	8			p_8
 c	net/minecraft/unmapped/C_4030632
-	f	Lnet/minecraft/unmapped/C_4030632;	f_1430064	BOW	
-	f	Lnet/minecraft/unmapped/C_4030632;	f_7020203	LEATHER_HELMET	
-	f	Lnet/minecraft/unmapped/C_4030632;	f_6171387	LEATHER_CHESTPLATE	
-	f	Lnet/minecraft/unmapped/C_4030632;	f_7179169	LEATHER_LEGGINGS	
-	f	Lnet/minecraft/unmapped/C_4030632;	f_6314546	LEATHER_BOOTS	
-	f	Lnet/minecraft/unmapped/C_4030632;	f_0222887	CHAIN_HELMET	
-	f	Lnet/minecraft/unmapped/C_4030632;	f_4770385	CHAIN_CHESTPLATE	
-	f	Lnet/minecraft/unmapped/C_4030632;	f_6981216	CHAIN_LEGGINGS	
-	f	Lnet/minecraft/unmapped/C_4030632;	f_9172194	CHAIN_BOOTS	
-	f	Lnet/minecraft/unmapped/C_4030632;	f_8104327	IRON_HELMET	
-	f	Lnet/minecraft/unmapped/C_4030632;	f_7812132	IRON_CHESTPLATE	
-	f	Lnet/minecraft/unmapped/C_4030632;	f_9423823	IRON_LEGGINGS	
-	f	Lnet/minecraft/unmapped/C_4030632;	f_9966856	IRON_BOOTS	
-	f	Lnet/minecraft/unmapped/C_4030632;	f_4095949	DIAMOND_HELMET	
-	f	Lnet/minecraft/unmapped/C_4030632;	f_0202604	DIAMOND_CHESTPLATE	
-	f	Lnet/minecraft/unmapped/C_4030632;	f_4501537	DIAMOND_LEGGINGS	
-	f	Lnet/minecraft/unmapped/C_4030632;	f_6913651	DIAMOND_BOOTS	
-	f	Lnet/minecraft/unmapped/C_4030632;	f_3925125	GOLD_HELMET	
-	f	Lnet/minecraft/unmapped/C_4030632;	f_0810948	GOLD_CHESTPLATE	
-	f	Lnet/minecraft/unmapped/C_4030632;	f_5377435	GOLD_LEGGINGS	
-	f	Lnet/minecraft/unmapped/C_4030632;	f_1037523	GOLD_BOOTS	
-	f	Lnet/minecraft/unmapped/C_4030632;	f_9746914	FISHING_ROD	
-	f	I	f_4914550	texture	
-	f	Lnet/minecraft/unmapped/C_3773348;	f_1430064		BOW
-	f	Lnet/minecraft/unmapped/C_5196988;	f_7020203		LEATHER_HELMET
-	f	Lnet/minecraft/unmapped/C_5196988;	f_6171387		LEATHER_CHESTPLATE
-	f	Lnet/minecraft/unmapped/C_5196988;	f_7179169		LEATHER_LEGGINGS
-	f	Lnet/minecraft/unmapped/C_5196988;	f_6314546		LEATHER_BOOTS
-	f	Lnet/minecraft/unmapped/C_5196988;	f_0222887		CHAIN_HELMET
-	f	Lnet/minecraft/unmapped/C_5196988;	f_4770385		CHAIN_CHESTPLATE
-	f	Lnet/minecraft/unmapped/C_5196988;	f_6981216		CHAIN_LEGGINGS
-	f	Lnet/minecraft/unmapped/C_5196988;	f_9172194		CHAIN_BOOTS
-	f	Lnet/minecraft/unmapped/C_5196988;	f_8104327		IRON_HELMET
-	f	Lnet/minecraft/unmapped/C_5196988;	f_7812132		IRON_CHESTPLATE
-	f	Lnet/minecraft/unmapped/C_5196988;	f_9423823		IRON_LEGGINGS
-	f	Lnet/minecraft/unmapped/C_5196988;	f_9966856		IRON_BOOTS
-	f	Lnet/minecraft/unmapped/C_5196988;	f_4095949		DIAMOND_HELMET
-	f	Lnet/minecraft/unmapped/C_5196988;	f_0202604		DIAMOND_CHESTPLATE
-	f	Lnet/minecraft/unmapped/C_5196988;	f_4501537		DIAMOND_LEGGINGS
-	f	Lnet/minecraft/unmapped/C_5196988;	f_6913651		DIAMOND_BOOTS
-	f	Lnet/minecraft/unmapped/C_5196988;	f_3925125		GOLD_HELMET
-	f	Lnet/minecraft/unmapped/C_5196988;	f_0810948		GOLD_CHESTPLATE
-	f	Lnet/minecraft/unmapped/C_5196988;	f_5377435		GOLD_LEGGINGS
-	f	Lnet/minecraft/unmapped/C_5196988;	f_1037523		GOLD_BOOTS
-	f	Lnet/minecraft/unmapped/C_8794786;	f_9746914		FISHING_ROD
+	f	Lnet/minecraft/unmapped/C_4030632;	f_1430064	bow	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_7020203	helmet_cloth	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_6171387	chestplate_cloth	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_7179169	leggings_cloth	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_6314546	boots_cloth	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_0222887	helmet_chain	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_4770385	chestplate_chain	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_6981216	leggings_chain	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_9172194	boots_chain	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_8104327	helmet_iron	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_7812132	chestplate_iron	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_9423823	leggings_iron	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_9966856	boots_iron	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_4095949	helmet_diamond	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_0202604	chestplate_diamond	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_4501537	leggings_diamond	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_6913651	boots_diamond	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_3925125	helmet_gold	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_0810948	chestplate_gold	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_5377435	leggings_gold	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_1037523	boots_gold	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_9746914	fishingRod	
+	f	I	f_4914550	icon	
+	f	Lnet/minecraft/unmapped/C_3773348;	f_1430064		bow
+	f	Lnet/minecraft/unmapped/C_5196988;	f_7020203		helmet_cloth
+	f	Lnet/minecraft/unmapped/C_5196988;	f_6171387		chestplate_cloth
+	f	Lnet/minecraft/unmapped/C_5196988;	f_7179169		leggings_cloth
+	f	Lnet/minecraft/unmapped/C_5196988;	f_6314546		boots_cloth
+	f	Lnet/minecraft/unmapped/C_5196988;	f_0222887		helmet_chain
+	f	Lnet/minecraft/unmapped/C_5196988;	f_4770385		chestplate_chain
+	f	Lnet/minecraft/unmapped/C_5196988;	f_6981216		leggings_chain
+	f	Lnet/minecraft/unmapped/C_5196988;	f_9172194		boots_chain
+	f	Lnet/minecraft/unmapped/C_5196988;	f_8104327		helmet_iron
+	f	Lnet/minecraft/unmapped/C_5196988;	f_7812132		chestplate_iron
+	f	Lnet/minecraft/unmapped/C_5196988;	f_9423823		leggings_iron
+	f	Lnet/minecraft/unmapped/C_5196988;	f_9966856		boots_iron
+	f	Lnet/minecraft/unmapped/C_5196988;	f_4095949		helmet_diamond
+	f	Lnet/minecraft/unmapped/C_5196988;	f_0202604		chestplate_diamond
+	f	Lnet/minecraft/unmapped/C_5196988;	f_4501537		leggings_diamond
+	f	Lnet/minecraft/unmapped/C_5196988;	f_6913651		boots_diamond
+	f	Lnet/minecraft/unmapped/C_5196988;	f_3925125		helmet_gold
+	f	Lnet/minecraft/unmapped/C_5196988;	f_0810948		chestplate_gold
+	f	Lnet/minecraft/unmapped/C_5196988;	f_5377435		leggings_gold
+	f	Lnet/minecraft/unmapped/C_5196988;	f_1037523		boots_gold
+	f	Lnet/minecraft/unmapped/C_8794786;	f_9746914		fishingRod
 	f	Lnet/minecraft/unmapped/C_4030632;	f_6267964		f_6267964
 	f	Lnet/minecraft/unmapped/C_5307437;	f_6293884		f_6293884
 	m	(I)Lnet/minecraft/unmapped/C_4030632;	m_1364135	texture	

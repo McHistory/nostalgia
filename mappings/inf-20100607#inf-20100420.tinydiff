@@ -153,9 +153,9 @@ c	net/minecraft/unmapped/C_3484604	net/minecraft/world/level/tile/DoorTile
 		p	3		p_3	
 		p	4		p_4	
 c	net/minecraft/unmapped/C_3635204
-	f	Lnet/minecraft/unmapped/C_3635204;	f_4670379	SIGN	
-	f	Lnet/minecraft/unmapped/C_3635204;	f_4721173	DOOR	
-	f	Lnet/minecraft/unmapped/C_3635204;	f_2858032	LADDER	
+	f	Lnet/minecraft/unmapped/C_3635204;	f_4670379	sign	
+	f	Lnet/minecraft/unmapped/C_3635204;	f_4721173	door_wood	
+	f	Lnet/minecraft/unmapped/C_3635204;	f_2858032	ladder	
 	f	[Z	f_5383163		f_5383163
 	m	(Lnet/minecraft/unmapped/C_3906126;III)Lnet/minecraft/unmapped/C_1414550;	m_5529828	getTileAABB	
 		p	1		level	
@@ -220,8 +220,8 @@ c	net/minecraft/unmapped/C_3906126
 		p	5		y1	
 		p	6		z1	
 c	net/minecraft/unmapped/C_4030632
-	f	Lnet/minecraft/unmapped/C_4030632;	f_8571612	SIGN	
-	f	Lnet/minecraft/unmapped/C_4030632;	f_2401834	WOOD_DOOR	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_8571612	sign	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_2401834	door_wood	
 	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_3906126;IIII)Z	m_9844872	useOn	
 		p	1		item	
 		p	2		player	
@@ -363,22 +363,22 @@ c	net/minecraft/unmapped/C_7153081	net/minecraft/client/renderer/tileentity/Tile
 	f	Lnet/minecraft/unmapped/C_3906126;	f_6792633	level	
 	m	()V	<init>	<init>	
 	m	(Ljava/lang/Class;)Lnet/minecraft/unmapped/C_3831356;	m_7963132	getRenderer	
-		p	1		teClass	
-	m	(Lnet/minecraft/unmapped/C_2074023;)Z	m_9293503	hasTileEntityRenderer	
-		p	1		te	
+		p	1		e	
+	m	(Lnet/minecraft/unmapped/C_2074023;)Z	m_9293503	hasRenderer	
+		p	1		e	
 	m	(Lnet/minecraft/unmapped/C_2074023;)Lnet/minecraft/unmapped/C_3831356;	m_0179048	getRenderer	
-		p	1		te	
+		p	1		e	
 	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_3385278;Lnet/minecraft/unmapped/C_4766485;Lnet/minecraft/unmapped/C_5009044;F)V	m_6301959	prepare	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
+		p	1		level	
+		p	2		textures	
+		p	3		font	
+		p	4		player	
+		p	5		a	
 	m	(Lnet/minecraft/unmapped/C_2074023;F)V	m_7219009	render	
-		p	1		te	
+		p	1		e	
 		p	2		a	
 	m	(Lnet/minecraft/unmapped/C_2074023;DDDF)V	m_1726036	render	
-		p	1		te	
+		p	1		entity	
 		p	2		x	
 		p	4		y	
 		p	6		z	

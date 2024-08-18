@@ -552,8 +552,8 @@ c	net/minecraft/unmapped/C_2621421
 		p	2			p_2
 		p	4			p_4
 c	net/minecraft/unmapped/C_3187085
-	f	[I	f_5034816	colors	
-	f	Ljava/nio/IntBuffer;	f_5459073	pixelsBuffer	
+	f	[I	f_5034816	pixelBuffer	
+	f	Ljava/nio/IntBuffer;	f_5459073	pixels	
 	m	(IILnet/minecraft/unmapped/C_5207848;)Ljava/awt/image/BufferedImage;	m_5670753	m_5670753	
 		p	0		p_0	
 		p	1		p_1	
@@ -1410,11 +1410,11 @@ c	net/minecraft/unmapped/C_7688744
 	f	D	f_1078661		f_1078661
 	f	D	f_6973912		f_6973912
 	f	D	f_7566119		f_7566119
-	m	(Lnet/minecraft/unmapped/C_7688744$C_0457152;F)V	m_5484939	m_5484939	
-		p	1		p_1	
-		p	2		p_2	
-	m	(Lnet/minecraft/unmapped/C_7688744$C_0457152;)F	m_5755792	m_5755792	
-		p	1		p_1	
+	m	(Lnet/minecraft/unmapped/C_7688744$C_0457152;F)V	m_5484939	set	
+		p	1		option	
+		p	2		value	
+	m	(Lnet/minecraft/unmapped/C_7688744$C_0457152;)F	m_5755792	getProgressValue	
+		p	1		option	
 	m	(I)Ljava/lang/String;	m_6035754	m_6035754	
 		p	0		p_0	
 	m	(Lnet/minecraft/unmapped/C_5027199;)Z	m_3382328	m_3382328	
@@ -1425,15 +1425,15 @@ c	net/minecraft/unmapped/C_7688744
 	m	(Lnet/minecraft/unmapped/C_5027199;Lnet/minecraft/unmapped/C_8881785$C_5424057;)V	m_2975444		setKey
 		p	1			p_1
 		p	2			p_2
-	m	(Lnet/minecraft/unmapped/C_7688744$C_0457152;D)V	m_5484939		m_5484939
+	m	(Lnet/minecraft/unmapped/C_7688744$C_0457152;D)V	m_5484939		set
 		p	1			p_1
 		p	2			p_2
-	m	(Lnet/minecraft/unmapped/C_7688744$C_0457152;)D	m_5755792		m_5755792
+	m	(Lnet/minecraft/unmapped/C_7688744$C_0457152;)D	m_5755792		getProgressValue
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_1832899;)V	m_5329884		m_5329884
 		p	1			p_1
 c	net/minecraft/unmapped/C_7688744$C_0457152
-	f	Lnet/minecraft/unmapped/C_7688744$C_0457152;	f_6493644	f_6493644	
+	f	Lnet/minecraft/unmapped/C_7688744$C_0457152;	f_6493644	ANAGLYPH	
 	f	F	f_5397209	f_5397209	
 	f	F	f_9167611	f_9167611	
 	f	Lnet/minecraft/unmapped/C_7688744$C_0457152;	f_5179422		f_5179422
@@ -3548,12 +3548,12 @@ c	net/minecraft/unmapped/C_1492128
 	m	()Lnet/minecraft/unmapped/C_1492128$C_7723875;	m_8975255		m_8975255
 	m	()Lorg/apache/logging/log4j/Logger;	m_0754564		m_0754564
 	m	()V	<clinit>		<clinit>
-c	net/minecraft/unmapped/C_1492128$C_1774538	C_1774538	
-	f	Lnet/minecraft/unmapped/C_1492128$C_1774538;	f_4626673	f_4626673	
-	f	Lnet/minecraft/unmapped/C_1492128$C_1774538;	f_0646261	f_0646261	
-	f	Lnet/minecraft/unmapped/C_1492128$C_1774538;	f_7845959	f_7845959	
-	f	Lnet/minecraft/unmapped/C_1492128$C_1774538;	f_1225923	f_1225923	
-	f	Lnet/minecraft/unmapped/C_1492128$C_1774538;	f_8010491	f_8010491	
+c	net/minecraft/unmapped/C_1492128$C_1774538	OS	
+	f	Lnet/minecraft/unmapped/C_1492128$C_1774538;	f_4626673	LINUX	
+	f	Lnet/minecraft/unmapped/C_1492128$C_1774538;	f_0646261	SOLARIS	
+	f	Lnet/minecraft/unmapped/C_1492128$C_1774538;	f_7845959	WINDOWS	
+	f	Lnet/minecraft/unmapped/C_1492128$C_1774538;	f_1225923	MACOS	
+	f	Lnet/minecraft/unmapped/C_1492128$C_1774538;	f_8010491	UNKNOWN	
 	f	[Lnet/minecraft/unmapped/C_1492128$C_1774538;	f_7342243	f_7342243	
 	m	()[Lnet/minecraft/unmapped/C_1492128$C_1774538;	values	values	
 	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_1492128$C_1774538;	valueOf	valueOf	

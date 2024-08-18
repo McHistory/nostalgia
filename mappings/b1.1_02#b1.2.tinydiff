@@ -2,14 +2,14 @@ tiny	2	0
 c	net/minecraft/client/Minecraft
 	m	()Ljava/lang/String;	m_4199269		getDebugInfo
 c	net/minecraft/unmapped/C_0070166
-	f	I	f_9595077		f_9595077
-	f	I	f_8347114		f_8347114
-	m	(II)V	m_7165193		m_7165193
-		p	1			p_1
-		p	2			p_2
-	m	(II)Z	m_9180346		m_9180346
-		p	1			p_1
-		p	2			p_2
+	f	I	f_9595077		xCenter
+	f	I	f_8347114		yCenter
+	m	(II)V	m_7165193		centerOn
+		p	1			xCenter
+		p	2			yCenter
+	m	(II)Z	m_9180346		fits
+		p	1			x
+		p	2			z
 	m	()Ljava/lang/String;	m_9569946		m_9569946
 c	net/minecraft/unmapped/C_0258789
 	m	()V	m_5891931		m_5891931
@@ -170,13 +170,13 @@ c	net/minecraft/unmapped/C_2750078
 		p	1		p_1	
 		p	2		p_2	
 	m	(Lnet/minecraft/unmapped/C_3635204;II)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+		p	1			tile
+		p	2			count
+		p	3			auxValue
 	m	(Lnet/minecraft/unmapped/C_4030632;II)V	<init>		<init>
 		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+		p	2			count
+		p	3			auxValue
 	m	()Z	m_0614792		isStackable
 	m	()Z	m_8157302		isDamageableItem
 	m	()Z	m_3846365		isStackedByData
@@ -223,8 +223,8 @@ c	net/minecraft/unmapped/C_3466301
 	m	(Lnet/minecraft/unmapped/C_3635204;)V	m_6974549	renderTile	
 		p	1		p_1	
 	m	(Lnet/minecraft/unmapped/C_3635204;I)V	m_6974549		renderTile
-		p	1			p_1
-		p	2			p_2
+		p	1			tile
+		p	2			data
 c	net/minecraft/unmapped/C_3604011
 	m	(Lnet/minecraft/unmapped/C_5009044;I)Z	m_4566032	m_4566032	
 		p	1		p_1	
@@ -241,7 +241,7 @@ c	net/minecraft/unmapped/C_3604011
 		p	2			p_2
 		p	3			p_3
 c	net/minecraft/unmapped/C_3635204
-	f	Lnet/minecraft/unmapped/C_3635204;	f_3947294		CAKE
+	f	Lnet/minecraft/unmapped/C_3635204;	f_3947294		cake
 	m	(I)I	m_3974337		getSpawnResourcesAuxValue
 		p	1			meta
 	m	(Lnet/minecraft/unmapped/C_3906126;IIIII)V	m_5333460		triggerEvent
@@ -309,10 +309,10 @@ c	net/minecraft/unmapped/C_3911481
 		p	12			p_12
 		p	14			p_14
 c	net/minecraft/unmapped/C_4030632
-	f	Lnet/minecraft/unmapped/C_4030632;	f_8260660		DYE
-	f	Lnet/minecraft/unmapped/C_4030632;	f_7522033		BONE
-	f	Lnet/minecraft/unmapped/C_4030632;	f_5981679		SUGAR
-	f	Lnet/minecraft/unmapped/C_4030632;	f_1926682		CAKE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_8260660		dye_powder
+	f	Lnet/minecraft/unmapped/C_4030632;	f_7522033		bone
+	f	Lnet/minecraft/unmapped/C_4030632;	f_5981679		sugar
+	f	Lnet/minecraft/unmapped/C_4030632;	f_1926682		cake
 	f	Z	f_3488224		isStackedByData
 	f	Lnet/minecraft/unmapped/C_4030632;	f_8299807		craftingRemainingItem
 	m	(I)Lnet/minecraft/unmapped/C_4030632;	m_0050263		stacksTo
@@ -330,16 +330,16 @@ c	net/minecraft/unmapped/C_4030632
 		p	1			item
 	m	()Lnet/minecraft/unmapped/C_4030632;	m_9671847		getCraftingRemainingItem
 	m	()Z	m_6540388		hasCraftingRemainingItem
-c	net/minecraft/unmapped/C_4030632$C_5478196		C_5478196
-	f	Lnet/minecraft/unmapped/C_4030632$C_5478196;	f_7849035		f_7849035
-	f	Lnet/minecraft/unmapped/C_4030632$C_5478196;	f_2207273		f_2207273
-	f	Lnet/minecraft/unmapped/C_4030632$C_5478196;	f_4504648		f_4504648
-	f	Lnet/minecraft/unmapped/C_4030632$C_5478196;	f_7243276		f_7243276
-	f	Lnet/minecraft/unmapped/C_4030632$C_5478196;	f_3268656		f_3268656
-	f	I	f_6212882		f_6212882
-	f	I	f_5962588		f_5962588
-	f	F	f_5999863		f_5999863
-	f	I	f_0011367		f_0011367
+c	net/minecraft/unmapped/C_4030632$C_5478196		Tier
+	f	Lnet/minecraft/unmapped/C_4030632$C_5478196;	f_7849035		WOOD
+	f	Lnet/minecraft/unmapped/C_4030632$C_5478196;	f_2207273		STONE
+	f	Lnet/minecraft/unmapped/C_4030632$C_5478196;	f_4504648		IRON
+	f	Lnet/minecraft/unmapped/C_4030632$C_5478196;	f_7243276		EMERALD
+	f	Lnet/minecraft/unmapped/C_4030632$C_5478196;	f_3268656		GOLD
+	f	I	f_6212882		level
+	f	I	f_5962588		uses
+	f	F	f_5999863		speed
+	f	I	f_0011367		damage
 	f	[Lnet/minecraft/unmapped/C_4030632$C_5478196;	f_4952499		f_4952499
 	m	()[Lnet/minecraft/unmapped/C_4030632$C_5478196;	values		values
 	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_4030632$C_5478196;	valueOf		valueOf
@@ -347,14 +347,14 @@ c	net/minecraft/unmapped/C_4030632$C_5478196		C_5478196
 	m	(Ljava/lang/String;IIIFI)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
-		p	6			p_6
-	m	()I	m_7028273		m_7028273
-	m	()F	m_4202567		m_4202567
-	m	()I	m_8471659		m_8471659
-	m	()I	m_2839066		m_2839066
+		p	3			level
+		p	4			uses
+		p	5			speed
+		p	6			damage
+	m	()I	m_7028273		getUses
+	m	()F	m_4202567		getSpeed
+	m	()I	m_8471659		getAttackDamageBonus
+	m	()I	m_2839066		getLevel
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_4078372
 	m	()Ljava/lang/String;	m_9569946		m_9569946
@@ -426,11 +426,11 @@ c	net/minecraft/unmapped/C_5590212
 c	net/minecraft/unmapped/C_5687818
 	m	()V	m_5855336		m_5855336
 c	net/minecraft/unmapped/C_5853518
-	f	I	f_6529375	f_6529375	
-	f	Lnet/minecraft/unmapped/C_5853518$C_4115743;	f_6529375		f_6529375
-c	net/minecraft/unmapped/C_5853518$C_4115743		C_4115743
-	f	Lnet/minecraft/unmapped/C_5853518$C_4115743;	f_8936034		f_8936034
-	f	Lnet/minecraft/unmapped/C_5853518$C_4115743;	f_3576408		f_3576408
+	f	I	f_6529375	type	
+	f	Lnet/minecraft/unmapped/C_5853518$C_4115743;	f_6529375		type
+c	net/minecraft/unmapped/C_5853518$C_4115743		Type
+	f	Lnet/minecraft/unmapped/C_5853518$C_4115743;	f_8936034		TILE
+	f	Lnet/minecraft/unmapped/C_5853518$C_4115743;	f_3576408		ENTITY
 	f	[Lnet/minecraft/unmapped/C_5853518$C_4115743;	f_8774375		f_8774375
 	m	()[Lnet/minecraft/unmapped/C_5853518$C_4115743;	values		values
 	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_5853518$C_4115743;	valueOf		valueOf
@@ -455,7 +455,7 @@ c	net/minecraft/unmapped/C_6385858
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
-	m	(II)V	m_0129682	setItemSlot	
+	m	(II)V	m_0129682	setEquippedSlot	
 		p	1		p_1	
 		p	2		p_2	
 	m	()[I	m_9919834	getEquipmentSlots	
@@ -468,10 +468,10 @@ c	net/minecraft/unmapped/C_6385858
 	m	(Lnet/minecraft/unmapped/C_2750078;F)Lnet/minecraft/unmapped/C_3050136;	m_4351561		spawnAtLocation
 		p	1			item
 		p	2			heightOffset
-	m	(III)V	m_0129682		setItemSlot
+	m	(III)V	m_0129682		setEquippedSlot
 		p	1			slot
-		p	2			item
-		p	3			meta
+		p	2			itemId
+		p	3			auxValue
 	m	()Z	m_2708319		displayFireAnimation
 	m	()Z	m_4500577		isRiding
 	m	()[Lnet/minecraft/unmapped/C_2750078;	m_9919834		getEquipmentSlots

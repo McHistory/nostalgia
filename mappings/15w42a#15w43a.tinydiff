@@ -189,24 +189,24 @@ c	net/minecraft/unmapped/C_3624347
 		p	1			p_1
 		p	2			p_2
 c	net/minecraft/unmapped/C_3635204
-	f	Lnet/minecraft/unmapped/C_3635204$C_5846486;	f_5707007	f_5707007	
-	f	Lnet/minecraft/unmapped/C_3635204$C_5846486;	f_0459313	f_0459313	
-	f	Lnet/minecraft/unmapped/C_3635204$C_5846486;	f_8984632	f_8984632	
-	f	Lnet/minecraft/unmapped/C_3635204$C_5846486;	f_5398383	f_5398383	
-	f	Lnet/minecraft/unmapped/C_3635204$C_5846486;	f_6150858	f_6150858	
-	f	Lnet/minecraft/unmapped/C_3635204$C_5846486;	f_8906311	f_8906311	
-	f	Lnet/minecraft/unmapped/C_3635204$C_5846486;	f_1700703	f_1700703	
-	f	Lnet/minecraft/unmapped/C_3635204$C_5846486;	f_2822143	f_2822143	
-	f	Lnet/minecraft/unmapped/C_3635204$C_5846486;	f_1228070	f_1228070	
-	f	Lnet/minecraft/unmapped/C_3635204$C_5846486;	f_9315156	f_9315156	
+	f	Lnet/minecraft/unmapped/C_3635204$C_5846486;	f_5707007	SOUND_NORMAL	
+	f	Lnet/minecraft/unmapped/C_3635204$C_5846486;	f_0459313	SOUND_WOOD	
+	f	Lnet/minecraft/unmapped/C_3635204$C_5846486;	f_8984632	SOUND_GRAVEL	
+	f	Lnet/minecraft/unmapped/C_3635204$C_5846486;	f_5398383	SOUND_GRASS	
+	f	Lnet/minecraft/unmapped/C_3635204$C_5846486;	f_6150858	SOUND_STONE	
+	f	Lnet/minecraft/unmapped/C_3635204$C_5846486;	f_8906311	SOUND_METAL	
+	f	Lnet/minecraft/unmapped/C_3635204$C_5846486;	f_1700703	SOUND_GLASS	
+	f	Lnet/minecraft/unmapped/C_3635204$C_5846486;	f_2822143	SOUND_CLOTH	
+	f	Lnet/minecraft/unmapped/C_3635204$C_5846486;	f_1228070	SOUND_SAND	
+	f	Lnet/minecraft/unmapped/C_3635204$C_5846486;	f_9315156	soundType	
 	f	Lnet/minecraft/unmapped/C_3635204$C_5846486;	f_0221049	f_0221049	
 	f	Lnet/minecraft/unmapped/C_3635204$C_5846486;	f_5273639	f_5273639	
 	f	Lnet/minecraft/unmapped/C_3635204$C_5846486;	f_0449268	f_0449268	
 	f	Lnet/minecraft/unmapped/C_3635204$C_5846486;	f_1532856	f_1532856	
 	f	Lnet/minecraft/unmapped/C_0529894;	f_2961400		f_2961400
-	m	(Lnet/minecraft/unmapped/C_3635204$C_5846486;)Lnet/minecraft/unmapped/C_3635204;	m_1743091	m_1743091	
-		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_0529894;)Lnet/minecraft/unmapped/C_3635204;	m_1743091		m_1743091
+	m	(Lnet/minecraft/unmapped/C_3635204$C_5846486;)Lnet/minecraft/unmapped/C_3635204;	m_1743091	setSoundType	
+		p	1		soundType	
+	m	(Lnet/minecraft/unmapped/C_0529894;)Lnet/minecraft/unmapped/C_3635204;	m_1743091		setSoundType
 		p	1			p_1
 	m	()Lnet/minecraft/unmapped/C_0529894;	m_6558574		m_6558574
 c	net/minecraft/unmapped/C_3635204$3937074	3937074	
@@ -222,18 +222,18 @@ c	net/minecraft/unmapped/C_3635204$4528419	4528419
 		p	2		p_2	
 		p	3		p_3	
 	m	()Ljava/lang/String;	m_6108844	m_6108844	
-c	net/minecraft/unmapped/C_3635204$C_5846486	C_5846486	
-	f	Ljava/lang/String;	f_0826372	f_0826372	
-	f	F	f_8605110	f_8605110	
-	f	F	f_7323920	f_7323920	
+c	net/minecraft/unmapped/C_3635204$C_5846486	SoundType	
+	f	Ljava/lang/String;	f_0826372	name	
+	f	F	f_8605110	volume	
+	f	F	f_7323920	pitch	
 	m	(Ljava/lang/String;FF)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-	m	()F	m_6893266	m_6893266	
-	m	()F	m_9283314	m_9283314	
-	m	()Ljava/lang/String;	m_6108844	m_6108844	
-	m	()Ljava/lang/String;	m_0137307	m_0137307	
+		p	1		name	
+		p	2		volume	
+		p	3		pitch	
+	m	()F	m_6893266	getVolume	
+	m	()F	m_9283314	getPitch	
+	m	()Ljava/lang/String;	m_6108844	getBreakSound	
+	m	()Ljava/lang/String;	m_0137307	getStepSound	
 	m	()Ljava/lang/String;	m_9659622	m_9659622	
 c	net/minecraft/unmapped/C_3635204$7005331	7005331	
 	m	(Ljava/lang/String;FF)V	<init>	<init>	

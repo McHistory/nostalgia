@@ -1943,13 +1943,13 @@ c	net/minecraft/unmapped/C_7688744
 	f	Lnet/minecraft/unmapped/C_2319494;	f_7699321		f_7699321
 	f	Lnet/minecraft/unmapped/C_8976534;	f_2447056		f_2447056
 	m	()V	<init>	<init>	
-	m	(Lnet/minecraft/unmapped/C_7688744$C_0457152;I)V	m_7701855	m_7701855	
-		p	1		p_1	
-		p	2		p_2	
-	m	(Lnet/minecraft/unmapped/C_7688744$C_0457152;)Z	m_0346740	m_0346740	
-		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_7688744$C_0457152;)Ljava/lang/String;	m_7672927	m_7672927	
-		p	1		p_1	
+	m	(Lnet/minecraft/unmapped/C_7688744$C_0457152;I)V	m_7701855	toggle	
+		p	1		option	
+		p	2		flag	
+	m	(Lnet/minecraft/unmapped/C_7688744$C_0457152;)Z	m_0346740	getBooleanValue	
+		p	1		option	
+	m	(Lnet/minecraft/unmapped/C_7688744$C_0457152;)Ljava/lang/String;	m_7672927	getMessage	
+		p	1		option	
 	m	(Ljava/lang/String;)F	m_3838593
 		p	1		val	
 		p	0			p_0
@@ -1957,22 +1957,22 @@ c	net/minecraft/unmapped/C_7688744
 		p	0		p_0	
 		p	1		p_1	
 	m	()I	m_6628790	m_6628790	
-	m	(Lnet/minecraft/unmapped/C_7688744$C_0457152;D)V	m_5484939	m_5484939	
+	m	(Lnet/minecraft/unmapped/C_7688744$C_0457152;D)V	m_5484939	set	
 		p	1		p_1	
 		p	2		p_2	
-	m	(Lnet/minecraft/unmapped/C_7688744$C_0457152;)D	m_5755792	m_5755792	
+	m	(Lnet/minecraft/unmapped/C_7688744$C_0457152;)D	m_5755792	getProgressValue	
 		p	1		p_1	
 	m	()Lnet/minecraft/unmapped/C_0500974;	m_6628790		m_6628790
-c	net/minecraft/unmapped/C_7688744$C_0457152	C_0457152	
-	f	Lnet/minecraft/unmapped/C_7688744$C_0457152;	f_2961425	f_2961425	
-	f	Lnet/minecraft/unmapped/C_7688744$C_0457152;	f_5775500	f_5775500	
-	f	Lnet/minecraft/unmapped/C_7688744$C_0457152;	f_1628358	f_1628358	
-	f	Lnet/minecraft/unmapped/C_7688744$C_0457152;	f_6290972	f_6290972	
-	f	Lnet/minecraft/unmapped/C_7688744$C_0457152;	f_9659272	f_9659272	
-	f	Lnet/minecraft/unmapped/C_7688744$C_0457152;	f_6311636	f_6311636	
-	f	Z	f_3166373	f_3166373	
-	f	Z	f_3664655	f_3664655	
-	f	Ljava/lang/String;	f_7957319	f_7957319	
+c	net/minecraft/unmapped/C_7688744$C_0457152	Option	
+	f	Lnet/minecraft/unmapped/C_7688744$C_0457152;	f_2961425	INVERT_MOUSE	
+	f	Lnet/minecraft/unmapped/C_7688744$C_0457152;	f_5775500	SENSITIVITY	
+	f	Lnet/minecraft/unmapped/C_7688744$C_0457152;	f_1628358	RENDER_DISTANCE	
+	f	Lnet/minecraft/unmapped/C_7688744$C_0457152;	f_6290972	VIEW_BOBBING	
+	f	Lnet/minecraft/unmapped/C_7688744$C_0457152;	f_9659272	LIMIT_FRAMERATE	
+	f	Lnet/minecraft/unmapped/C_7688744$C_0457152;	f_6311636	GRAPHICS	
+	f	Z	f_3166373	isProgress	
+	f	Z	f_3664655	isBoolean	
+	f	Ljava/lang/String;	f_7957319	captionId	
 	f	[Lnet/minecraft/unmapped/C_7688744$C_0457152;	f_7323550	f_7323550	
 	f	Lnet/minecraft/unmapped/C_7688744$C_0457152;	f_7300569	f_7300569	
 	f	Lnet/minecraft/unmapped/C_7688744$C_0457152;	f_0872206	f_0872206	
@@ -2015,18 +2015,18 @@ c	net/minecraft/unmapped/C_7688744$C_0457152	C_0457152
 	m	()[Lnet/minecraft/unmapped/C_7688744$C_0457152;	values	values	
 	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_7688744$C_0457152;	valueOf	valueOf	
 		p	0		p_0	
-	m	(I)Lnet/minecraft/unmapped/C_7688744$C_0457152;	m_6682796	m_6682796	
-		p	0		p_0	
+	m	(I)Lnet/minecraft/unmapped/C_7688744$C_0457152;	m_6682796	getItem	
+		p	0		id	
 	m	(Ljava/lang/String;ILjava/lang/String;ZZ)V	<init>	<init>	
 		p	1		p_1	
 		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-	m	()Z	m_8313961	m_8313961	
-	m	()Z	m_1032021	m_1032021	
-	m	()I	m_6064955	m_6064955	
-	m	()Ljava/lang/String;	m_5598854	m_5598854	
+		p	3		captionId	
+		p	4		isProgress	
+		p	5		isBoolean	
+	m	()Z	m_8313961	isProgress	
+	m	()Z	m_1032021	isBoolean	
+	m	()I	m_6064955	getId	
+	m	()Ljava/lang/String;	m_5598854	getCaptionId	
 	m	()V	<clinit>	<clinit>	
 	m	(F)V	m_6118867	m_6118867	
 		p	1		p_1	
@@ -6670,7 +6670,7 @@ c	net/minecraft/unmapped/C_0318732		net/minecraft/unmapped/C_0318732
 	m	(Lnet/minecraft/unmapped/C_6577431;Lnet/minecraft/unmapped/C_5142493;)Ljava/lang/Object;	m_5783030		m_5783030
 		p	1			p_1
 		p	2			p_2
-c	net/minecraft/unmapped/C_0457152		net/minecraft/unmapped/C_0457152
+c	net/minecraft/unmapped/C_0457152		net/minecraft/unmapped/Option
 	f	Lnet/minecraft/unmapped/C_4245348;	f_4212239		f_4212239
 	f	Lnet/minecraft/unmapped/C_4245348;	f_4415051		f_4415051
 	f	Lnet/minecraft/unmapped/C_4245348;	f_1602545		f_1602545
@@ -6678,17 +6678,17 @@ c	net/minecraft/unmapped/C_0457152		net/minecraft/unmapped/C_0457152
 	f	Lnet/minecraft/unmapped/C_4245348;	f_8467556		f_8467556
 	f	Lnet/minecraft/unmapped/C_4245348;	f_9925789		f_9925789
 	f	Lnet/minecraft/unmapped/C_4245348;	f_6989738		f_6989738
-	f	Lnet/minecraft/unmapped/C_4245348;	f_9659272		f_9659272
+	f	Lnet/minecraft/unmapped/C_4245348;	f_9659272		LIMIT_FRAMERATE
 	f	Lnet/minecraft/unmapped/C_4245348;	f_5179422		f_5179422
 	f	Lnet/minecraft/unmapped/C_4245348;	f_6048805		f_6048805
 	f	Lnet/minecraft/unmapped/C_4245348;	f_5223181		f_5223181
 	f	Lnet/minecraft/unmapped/C_4245348;	f_0386123		f_0386123
-	f	Lnet/minecraft/unmapped/C_4245348;	f_1628358		f_1628358
-	f	Lnet/minecraft/unmapped/C_4245348;	f_5775500		f_5775500
+	f	Lnet/minecraft/unmapped/C_4245348;	f_1628358		RENDER_DISTANCE
+	f	Lnet/minecraft/unmapped/C_4245348;	f_5775500		SENSITIVITY
 	f	Lnet/minecraft/unmapped/C_0895994;	f_7300569		f_7300569
 	f	Lnet/minecraft/unmapped/C_0895994;	f_7639407		f_7639407
 	f	Lnet/minecraft/unmapped/C_0895994;	f_2078769		f_2078769
-	f	Lnet/minecraft/unmapped/C_0895994;	f_6311636		f_6311636
+	f	Lnet/minecraft/unmapped/C_0895994;	f_6311636		GRAPHICS
 	f	Lnet/minecraft/unmapped/C_0895994;	f_0872206		f_0872206
 	f	Lnet/minecraft/unmapped/C_0895994;	f_8191812		f_8191812
 	f	Lnet/minecraft/unmapped/C_0895994;	f_3269659		f_3269659
@@ -6702,15 +6702,15 @@ c	net/minecraft/unmapped/C_0457152		net/minecraft/unmapped/C_0457152
 	f	Lnet/minecraft/unmapped/C_4429340;	f_0011151		f_0011151
 	f	Lnet/minecraft/unmapped/C_4429340;	f_4606336		f_4606336
 	f	Lnet/minecraft/unmapped/C_4429340;	f_8940043		f_8940043
-	f	Lnet/minecraft/unmapped/C_4429340;	f_2961425		f_2961425
+	f	Lnet/minecraft/unmapped/C_4429340;	f_2961425		INVERT_MOUSE
 	f	Lnet/minecraft/unmapped/C_4429340;	f_5431024		f_5431024
 	f	Lnet/minecraft/unmapped/C_4429340;	f_0237145		f_0237145
 	f	Lnet/minecraft/unmapped/C_4429340;	f_6799774		f_6799774
 	f	Lnet/minecraft/unmapped/C_4429340;	f_2819309		f_2819309
 	f	Lnet/minecraft/unmapped/C_4429340;	f_0484214		f_0484214
 	f	Lnet/minecraft/unmapped/C_4429340;	f_3406742		f_3406742
-	f	Lnet/minecraft/unmapped/C_4429340;	f_6290972		f_6290972
-	f	Ljava/lang/String;	f_7957319		f_7957319
+	f	Lnet/minecraft/unmapped/C_4429340;	f_6290972		VIEW_BOBBING
+	f	Ljava/lang/String;	f_7957319		captionId
 	m	(Ljava/lang/String;)V	<init>		<init>
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_7688744;III)Lnet/minecraft/unmapped/C_2621421;	m_5025463		m_5025463

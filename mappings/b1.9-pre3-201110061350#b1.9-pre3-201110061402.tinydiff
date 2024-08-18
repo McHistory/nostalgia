@@ -609,10 +609,10 @@ c	net/minecraft/unmapped/C_2260875	net/minecraft/world/level/storage/PlayerIO
 	m	(Lnet/minecraft/unmapped/C_5009044;)V	m_2233467	load	
 		p	1		player	
 c	net/minecraft/unmapped/C_2354122
-	m	(Lnet/minecraft/unmapped/C_4443804;)V	m_5723360	m_5723360	
-		p	1		p_1	
-	m	()Ljava/net/SocketAddress;	m_0697034	m_0697034	
-	m	()I	m_4311815	m_4311815	
+	m	(Lnet/minecraft/unmapped/C_4443804;)V	m_5723360	setListener	
+		p	1		listener	
+	m	()Ljava/net/SocketAddress;	m_0697034	getRemoteAddress	
+	m	()I	m_4311815	countDelayedPackets	
 	m	()Ljava/net/Socket;	m_7422269	m_7422269	
 c	net/minecraft/unmapped/C_2422346
 	m	(IB)V	<init>	<init>	
@@ -720,23 +720,23 @@ c	net/minecraft/unmapped/C_4796873
 		p	1		entityId	
 c	net/minecraft/unmapped/C_4796873$C_4137949
 	m	(IBBB)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
+		p	1		id	
+		p	2		xa	
+		p	3		ya	
+		p	4		za	
 c	net/minecraft/unmapped/C_4796873$C_4614408
 	m	(IBBBBB)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-		p	6		p_6	
+		p	1		id	
+		p	2		xa	
+		p	3		ya	
+		p	4		za	
+		p	5		yRot	
+		p	6		xRot	
 c	net/minecraft/unmapped/C_4796873$C_4858115
 	m	(IBB)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
+		p	1		id	
+		p	2		yRot	
+		p	3		xRot	
 c	net/minecraft/unmapped/C_4978736	net/minecraft/server/gui/PlayerListComponent	
 	f	Lnet/minecraft/server/MinecraftServer;	f_3618267	server	
 	f	I	f_5586020	tickCount	

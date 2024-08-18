@@ -222,7 +222,7 @@ c	net/minecraft/unmapped/C_1414550
 		p	1		c	
 c	net/minecraft/unmapped/C_1464460	net/minecraft/world/level/biome/SwampBiome	
 	m	()V	<init>	<init>	
-c	net/minecraft/unmapped/C_1659910	net/minecraft/world/level/tile/GlowstoneTile	
+c	net/minecraft/unmapped/C_1659910	net/minecraft/world/level/tile/LightGemTile	
 	m	(IILnet/minecraft/unmapped/C_8554894;)V	<init>	<init>	
 		p	1		p_1	
 		p	2		p_2	
@@ -273,13 +273,13 @@ c	net/minecraft/unmapped/C_2984832	net/minecraft/world/entity/monster/Ghast
 c	net/minecraft/unmapped/C_3134254
 	m	()Lnet/minecraft/unmapped/C_9143244;	m_9380668	m_9380668	
 c	net/minecraft/unmapped/C_3187085	net/minecraft/client/Screenshot	
-	f	Ljava/text/DateFormat;	f_9739291	DATE_FORMAT	
-	f	Ljava/nio/ByteBuffer;	f_5459073	pixelsBuffer	
-	f	[B	f_1076717	pixels	
-	f	[I	f_5034816	colors	
+	f	Ljava/text/DateFormat;	f_9739291	df	
+	f	Ljava/nio/ByteBuffer;	f_5459073	pixels	
+	f	[B	f_1076717	buffer	
+	f	[I	f_5034816	pixelBuffer	
 	m	()V	<init>	<init>	
 	m	(Ljava/io/File;II)Ljava/lang/String;	m_2872564	grab	
-		p	0		name	
+		p	0		workDir	
 		p	1		width	
 		p	2		height	
 	m	()V	<clinit>	<clinit>	
@@ -288,7 +288,7 @@ c	net/minecraft/unmapped/C_3271339
 	f	Lnet/minecraft/unmapped/C_9377562;	f_5616045		f_5616045
 c	net/minecraft/unmapped/C_3385278
 	f	Z	f_9414370	clamp	
-c	net/minecraft/unmapped/C_3447974	net/minecraft/world/level/tile/SoulSand	
+c	net/minecraft/unmapped/C_3447974	net/minecraft/world/level/tile/HellSandTile	
 	m	(II)V	<init>	<init>	
 		p	1		id	
 		p	2		tex	
@@ -315,12 +315,12 @@ c	net/minecraft/unmapped/C_3632207
 	f	Z	f_7936240	fire	
 	f	Ljava/util/Random;	f_4346293	random	
 c	net/minecraft/unmapped/C_3635204
-	f	Lnet/minecraft/unmapped/C_3635204;	f_1744570	PUMPKIN	
-	f	Lnet/minecraft/unmapped/C_3635204;	f_6878220	NETHERRACK	
-	f	Lnet/minecraft/unmapped/C_3635204;	f_1077062	SOUL_SAND	
-	f	Lnet/minecraft/unmapped/C_3635204;	f_3789164	GLOWSTONE	
-	f	Lnet/minecraft/unmapped/C_1236108;	f_9757302	PORTAL	
-	f	Lnet/minecraft/unmapped/C_3635204;	f_5874408	LIT_PUMPKIN	
+	f	Lnet/minecraft/unmapped/C_3635204;	f_1744570	pumpkin	
+	f	Lnet/minecraft/unmapped/C_3635204;	f_6878220	hellRock	
+	f	Lnet/minecraft/unmapped/C_3635204;	f_1077062	hellSand	
+	f	Lnet/minecraft/unmapped/C_3635204;	f_3789164	lightGem	
+	f	Lnet/minecraft/unmapped/C_1236108;	f_9757302	portalTile	
+	f	Lnet/minecraft/unmapped/C_3635204;	f_5874408	litPumpkin	
 	m	(Lnet/minecraft/unmapped/C_3906126;IIILnet/minecraft/unmapped/C_1013763;)V	m_0797987	setPlacedBy	
 		p	1		level	
 		p	2		x	
@@ -357,7 +357,7 @@ c	net/minecraft/unmapped/C_3831458	net/minecraft/client/renderer/ptexture/ClockT
 c	net/minecraft/unmapped/C_3906126
 	f	Z	f_9208377	instaTick	
 	f	Lnet/minecraft/unmapped/C_9219192;	f_6597519	dimension	
-	f	Ljava/io/File;	f_1707582	f_1707582	
+	f	Ljava/io/File;	f_1707582	workDir	
 	f	I	f_7370886	maxRecurse	
 	f	I	f_0889426	maxLoop	
 	f	Z	f_3034762		f_3034762
@@ -366,9 +366,9 @@ c	net/minecraft/unmapped/C_3906126
 	f	[F	f_1693351		f_1693351
 	m	()Lnet/minecraft/unmapped/C_9143244;	m_9380668	m_9380668	
 	m	(Ljava/lang/String;Lnet/minecraft/unmapped/C_9219192;J)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
+		p	1		name	
+		p	2		dimension	
+		p	3		seed	
 	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_9219192;)V	<init>	<init>	
 		p	1		level	
 		p	2		dimension	
@@ -376,7 +376,7 @@ c	net/minecraft/unmapped/C_3906126
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
-		p	5		p_5	
+		p	5		dimension	
 	m	()V	m_8530625	clearLoadedPlayerData	
 	m	(Lnet/minecraft/unmapped/C_6385858;F)Lnet/minecraft/unmapped/C_0336319;	m_2613927	getSkyColor	
 		p	1		entity	
@@ -396,10 +396,10 @@ c	net/minecraft/unmapped/C_3906126
 	m	(Lnet/minecraft/unmapped/C_6385858;)V	m_3502009		tick
 		p	1			p_1
 c	net/minecraft/unmapped/C_4030632
-	f	Lnet/minecraft/unmapped/C_4030632;	f_8449599	CLOCK	
-	f	Lnet/minecraft/unmapped/C_4030632;	f_6611184	GLOW_STONE	
-	f	Lnet/minecraft/unmapped/C_4030632;	f_3496950	FISH	
-	f	Lnet/minecraft/unmapped/C_4030632;	f_8790046	COOKED_FISH	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_8449599	clock	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_6611184	yellowDust	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_3496950	fish_raw	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_8790046	fish_cooked	
 	m	()Z	m_0231735	isMirroredArt	
 c	net/minecraft/unmapped/C_4078372
 	f	[Lnet/minecraft/unmapped/C_4636105;	f_5383852	biomes	
@@ -604,15 +604,15 @@ c	net/minecraft/unmapped/C_5164011	net/minecraft/world/level/levelgen/feature/He
 		p	4		p_4	
 		p	5		p_5	
 c	net/minecraft/unmapped/C_5367636
-	f	I	f_8379278	f_8379278	
-	f	Z	f_5148824	f_5148824	
-	f	F	f_1781958	f_1781958	
-	f	F	f_4698060	f_4698060	
+	f	I	f_8379278	changingDimensionDelay	
+	f	Z	f_5148824	isInsidePortal	
+	f	F	f_1781958	portalTime	
+	f	F	f_4698060	oPortalTime	
 	m	(Lnet/minecraft/client/Minecraft;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_3172064;I)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
+		p	1		minecraft	
+		p	2		level	
+		p	3		user	
+		p	4		dimension	
 	m	()V	m_2698485	m_2698485	
 	m	(Lnet/minecraft/client/Minecraft;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_3172064;)V	<init>		<init>
 		p	1			p_1
@@ -933,8 +933,8 @@ c	net/minecraft/unmapped/C_9219192	net/minecraft/world/level/dimension/Dimension
 	m	()V	m_5242136	updateLightRamp	
 	m	()V	m_1057452	init	
 	m	()Lnet/minecraft/unmapped/C_9484672;	m_7695518	createRandomLevelSource	
-	m	(Ljava/io/File;)Lnet/minecraft/unmapped/C_2286002;	m_6041517	m_6041517	
-		p	1		p_1	
+	m	(Ljava/io/File;)Lnet/minecraft/unmapped/C_2286002;	m_6041517	createStorage	
+		p	1		dir	
 	m	(II)Z	m_8691549	isValidSpawn	
 		p	1		x	
 		p	2		z	
@@ -1049,7 +1049,7 @@ c	net/minecraft/unmapped/C_9746149	net/minecraft/world/entity/projectile/Firebal
 		p	1		p_1	
 		p	2		p_2	
 	m	()F	m_3413954	m_3413954	
-c	net/minecraft/unmapped/C_9839783	net/minecraft/world/level/tile/NetherrackTile	
+c	net/minecraft/unmapped/C_9839783	net/minecraft/world/level/tile/HellStoneTile	
 	m	(II)V	<init>	<init>	
 		p	1		id	
 		p	2		texture	

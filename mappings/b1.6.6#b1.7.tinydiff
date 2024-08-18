@@ -36,7 +36,7 @@ c	net/minecraft/unmapped/C_2689622
 c	net/minecraft/unmapped/C_2695821
 	m	()I	m_3547750		getDefaultColor
 c	net/minecraft/unmapped/C_3419581
-	m	()V	m_5345939		m_5345939
+	m	()V	m_5345939		updatePath
 c	net/minecraft/unmapped/C_3466301
 	f	Z	f_8112689		f_8112689
 	f	I	f_8030859		f_8030859
@@ -46,8 +46,8 @@ c	net/minecraft/unmapped/C_3466301
 	f	I	f_7460460		f_7460460
 	f	I	f_4644800		f_4644800
 	m	(Lnet/minecraft/unmapped/C_3635204;I)V	m_6974549	renderTile	
-		p	1		p_1	
-		p	2		p_2	
+		p	1		tile	
+		p	2		data	
 	m	(Lnet/minecraft/unmapped/C_3635204;III)V	m_3187906		tesselateInWorldNoCulling
 		p	1			tile
 		p	2			x
@@ -108,10 +108,10 @@ c	net/minecraft/unmapped/C_3466301
 		p	2			meta
 		p	3			p_3
 c	net/minecraft/unmapped/C_3635204
-	f	Lnet/minecraft/unmapped/C_3635204;	f_1214063	PISTON_HEAD	
-	f	Lnet/minecraft/unmapped/C_3635204;	f_1998913	MOVING_PISTON	
-	f	Lnet/minecraft/unmapped/C_1272651;	f_1214063		PISTON_HEAD
-	f	Lnet/minecraft/unmapped/C_8621747;	f_1998913		MOVING_PISTON
+	f	Lnet/minecraft/unmapped/C_3635204;	f_1214063	pistonHead	
+	f	Lnet/minecraft/unmapped/C_3635204;	f_1998913	movingPiston	
+	f	Lnet/minecraft/unmapped/C_1272651;	f_1214063		pistonHead
+	f	Lnet/minecraft/unmapped/C_8621747;	f_1998913		movingPiston
 	m	()Lnet/minecraft/unmapped/C_3635204;	m_9657999		unbreakable
 	m	()F	m_7976867		getDestroyTime
 	m	(Lnet/minecraft/unmapped/C_3906126;IIILnet/minecraft/unmapped/C_2750078;)V	m_1243396		popResource

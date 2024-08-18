@@ -169,7 +169,7 @@ c	net/minecraft/unmapped/C_3466301
 		p	3		y	
 		p	4		z	
 	m	(I)Z	m_8167613	canRender	
-		p	0		model	
+		p	0		renderShape	
 c	net/minecraft/unmapped/C_3484604
 	m	(ILnet/minecraft/unmapped/C_8554894;)V	<init>	<init>	
 		p	1		p_1	
@@ -183,16 +183,16 @@ c	net/minecraft/unmapped/C_3484604
 	m	(I)V	<init>		<init>
 		p	1			p_1
 c	net/minecraft/unmapped/C_3635204
-	f	Lnet/minecraft/unmapped/C_3635204;	f_6946483	WALL_SIGN	
-	f	Lnet/minecraft/unmapped/C_3635204;	f_8910516	LEVER	
-	f	Lnet/minecraft/unmapped/C_3635204;	f_1260801	STONE_PRESSURE_PLATE	
-	f	Lnet/minecraft/unmapped/C_3635204;	f_4695495	IRON_DOOR	
-	f	Lnet/minecraft/unmapped/C_3635204;	f_0979854	WOOD_PRESSURE_PLATE	
-	f	Lnet/minecraft/unmapped/C_3635204;	f_1428317	REDSTONE_ORE	
-	f	Lnet/minecraft/unmapped/C_3635204;	f_5611108	LIT_REDSTONE_ORE	
-	f	Lnet/minecraft/unmapped/C_3635204;	f_9139930	UNLIT_REDSTONE_TORCH	
-	f	Lnet/minecraft/unmapped/C_3635204;	f_3737951	REDSTONE_TORCH	
-	f	Lnet/minecraft/unmapped/C_3635204;	f_6463431	STONE_BUTTON	
+	f	Lnet/minecraft/unmapped/C_3635204;	f_6946483	wallSign	
+	f	Lnet/minecraft/unmapped/C_3635204;	f_8910516	lever	
+	f	Lnet/minecraft/unmapped/C_3635204;	f_1260801	pressurePlate_stone	
+	f	Lnet/minecraft/unmapped/C_3635204;	f_4695495	door_iron	
+	f	Lnet/minecraft/unmapped/C_3635204;	f_0979854	pressurePlate_wood	
+	f	Lnet/minecraft/unmapped/C_3635204;	f_1428317	redStoneOre	
+	f	Lnet/minecraft/unmapped/C_3635204;	f_5611108	redStoneOre_lit	
+	f	Lnet/minecraft/unmapped/C_3635204;	f_9139930	notGate_off	
+	f	Lnet/minecraft/unmapped/C_3635204;	f_3737951	notGate_on	
+	f	Lnet/minecraft/unmapped/C_3635204;	f_6463431	button	
 	m	(Lnet/minecraft/unmapped/C_2627205;IIII)Z	m_1482273	getSignal	
 		p	1		levelReader	
 		p	2		x	
@@ -233,8 +233,8 @@ c	net/minecraft/unmapped/C_3906126
 		p	2		y	
 		p	3		z	
 c	net/minecraft/unmapped/C_4030632
-	f	Lnet/minecraft/unmapped/C_4030632;	f_7063605	DOOR	
-	f	Lnet/minecraft/unmapped/C_4030632;	f_8056023	REDSTONE	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_7063605	door_iron	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_8056023	redStone	
 c	net/minecraft/unmapped/C_4824661
 	f	J	f_6102821	lastActiveTime	
 	f	Z	f_3616371		f_3616371
@@ -324,9 +324,9 @@ c	net/minecraft/unmapped/C_6259709	net/minecraft/world/item/DoorItem
 		p	5		p_5	
 		p	6		p_6	
 		p	7		p_7	
-c	net/minecraft/unmapped/C_7146036	net/minecraft/world/level/tile/RedstoneTorchTile	
-	f	Z	f_2911022	lit	
-	f	Ljava/util/List;	f_2358101	RECENT_TOGGLES	
+c	net/minecraft/unmapped/C_7146036	net/minecraft/world/level/tile/NotGateTile	
+	f	Z	f_2911022	on	
+	f	Ljava/util/List;	f_2358101	recentToggles	
 	m	(Lnet/minecraft/unmapped/C_3906126;IIIZ)Z	m_8322223	isToggledTooFrequently	
 		p	1		level	
 		p	2		x	
@@ -558,11 +558,11 @@ c	net/minecraft/unmapped/C_9846877
 	f	Ljava/awt/Robot;	f_3509429		f_3509429
 	f	I	f_4312758		f_4312758
 	f	I	f_2969124		f_2969124
-c	net/minecraft/unmapped/C_1186531	net/minecraft/unmapped/C_1186531	
-	f	I	f_5776277	f_5776277	
-	f	I	f_3569574	f_3569574	
-	f	I	f_4131942	f_4131942	
-	f	J	f_6700832	f_6700832	
+c	net/minecraft/unmapped/C_1186531	net/minecraft/unmapped/Toggle	
+	f	I	f_5776277	x	
+	f	I	f_3569574	y	
+	f	I	f_4131942	z	
+	f	J	f_6700832	when	
 	m	(IIIJ)V	<init>	<init>	
 		p	1		p_1	
 		p	2		p_2	

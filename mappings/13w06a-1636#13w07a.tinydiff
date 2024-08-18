@@ -62,9 +62,9 @@ c	net/minecraft/unmapped/C_1591456
 c	net/minecraft/unmapped/C_2354122
 	f	Lnet/minecraft/unmapped/C_6001689;	f_7061977		f_7061977
 	m	(Ljava/net/Socket;Ljava/lang/String;Lnet/minecraft/unmapped/C_4443804;)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
+		p	1		socket	
+		p	2		name	
+		p	3		listener	
 	m	(Ljava/net/Socket;Ljava/lang/String;Lnet/minecraft/unmapped/C_4443804;Ljava/security/PrivateKey;)V	<init>	<init>	
 		p	1		p_1	
 		p	2		p_2	
@@ -113,16 +113,16 @@ c	net/minecraft/unmapped/C_3906126
 	m	()Lnet/minecraft/unmapped/C_6001689;	m_8582136		m_8582136
 c	net/minecraft/unmapped/C_4844124
 	f	Lnet/minecraft/unmapped/C_6001689;	f_2144617		f_2144617
-	m	(I)Lnet/minecraft/unmapped/C_4844124;	m_9610935	m_9610935	
-		p	0		p_0	
-	m	(Ljava/io/DataInputStream;ZLjava/net/Socket;)Lnet/minecraft/unmapped/C_4844124;	m_1333463	m_1333463	
+	m	(I)Lnet/minecraft/unmapped/C_4844124;	m_9610935	getPacket	
+		p	0		id	
+	m	(Ljava/io/DataInputStream;ZLjava/net/Socket;)Lnet/minecraft/unmapped/C_4844124;	m_1333463	readPacket	
 		p	0		p_0	
 		p	1		p_1	
 		p	2		p_2	
-	m	(Lnet/minecraft/unmapped/C_6001689;I)Lnet/minecraft/unmapped/C_4844124;	m_9610935		m_9610935
+	m	(Lnet/minecraft/unmapped/C_6001689;I)Lnet/minecraft/unmapped/C_4844124;	m_9610935		getPacket
 		p	0			p_0
 		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_6001689;Ljava/io/DataInputStream;ZLjava/net/Socket;)Lnet/minecraft/unmapped/C_4844124;	m_1333463		m_1333463
+	m	(Lnet/minecraft/unmapped/C_6001689;Ljava/io/DataInputStream;ZLjava/net/Socket;)Lnet/minecraft/unmapped/C_4844124;	m_1333463		readPacket
 		p	0			p_0
 		p	1			p_1
 		p	2			p_2

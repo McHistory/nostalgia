@@ -136,7 +136,7 @@ c	net/minecraft/unmapped/C_2339776
 	m	()Ljava/lang/String;	m_1061793	m_1061793	
 c	net/minecraft/unmapped/C_2750078
 	m	(Lnet/minecraft/unmapped/C_2800860;)V	<init>	<init>	
-		p	1		p_1	
+		p	1		tag	
 	m	(Lnet/minecraft/unmapped/C_2800860;)Lnet/minecraft/unmapped/C_2800860;	m_0066855	save	
 		p	1		vase	
 c	net/minecraft/unmapped/C_2758065
@@ -246,25 +246,25 @@ c	net/minecraft/unmapped/C_3688914
 		p	1		p_1	
 	m	()Ljava/lang/String;	m_1061793	m_1061793	
 c	net/minecraft/unmapped/C_3906126
-	f	J	f_1618367	f_1618367	
-	f	I	f_6988360	f_6988360	
-	f	I	f_9398901	f_9398901	
-	f	I	f_7237409	f_7237409	
-	f	Ljava/io/File;	f_2537859	f_2537859	
-	f	J	f_1783857	f_1783857	
-	f	Lnet/minecraft/unmapped/C_2800860;	f_0762360	levelData	
-	f	J	f_8535327	f_8535327	
-	f	I	f_1618367		f_1618367
-	f	F	f_6988360		f_6988360
-	f	F	f_9398901		f_9398901
-	f	F	f_7237409		f_7237409
-	m	(Ljava/io/File;Ljava/lang/String;)Lnet/minecraft/unmapped/C_2800860;	m_9312594	m_9312594	
-		p	0		p_0	
-		p	1		p_1	
-	m	(Ljava/io/File;Ljava/lang/String;)V	m_9583644	m_9583644	
-		p	0		p_0	
-		p	1		p_1	
-	m	([Ljava/io/File;)V	m_4805602	m_4805602	
+	f	J	f_1618367	time	
+	f	I	f_6988360	xSpawn	
+	f	I	f_9398901	ySpawn	
+	f	I	f_7237409	zSpawn	
+	f	Ljava/io/File;	f_2537859	dir	
+	f	J	f_1783857	seed	
+	f	Lnet/minecraft/unmapped/C_2800860;	f_0762360	loadedPlayerTag	
+	f	J	f_8535327	sizeOnDisk	
+	f	I	f_1618367		time
+	f	F	f_6988360		xSpawn
+	f	F	f_9398901		ySpawn
+	f	F	f_7237409		zSpawn
+	m	(Ljava/io/File;Ljava/lang/String;)Lnet/minecraft/unmapped/C_2800860;	m_9312594	getDataTagFor	
+		p	0		source	
+		p	1		name	
+	m	(Ljava/io/File;Ljava/lang/String;)V	m_9583644	deleteLevel	
+		p	0		source	
+		p	1		name	
+	m	([Ljava/io/File;)V	m_4805602	delete	
 		p	0		p_0	
 	m	(Ljava/io/File;Ljava/lang/String;)V	<init>	<init>	
 		p	1		p_1	
@@ -391,9 +391,9 @@ c	net/minecraft/unmapped/C_6698663	net/minecraft/client/gui/screens/SelectWorldS
 	f	Lnet/minecraft/unmapped/C_0786431;	f_1901615	lastScreen	
 	f	Ljava/lang/String;	f_2624142	title	
 	m	(Lnet/minecraft/unmapped/C_0786431;)V	<init>	<init>	
-		p	1		p_1	
+		p	1		lastScreen	
 	m	()V	m_2060594	m_2060594	
-	m	(I)Ljava/lang/String;	m_4884417	getLegacyWorldName	
+	m	(I)Ljava/lang/String;	m_4884417	getWorldName	
 		p	1		p_1	
 	m	()V	m_7766669	addButons	
 	m	(Lnet/minecraft/unmapped/C_2621421;)V	m_9403981	m_9403981	
@@ -463,7 +463,7 @@ c	net/minecraft/unmapped/C_9079950	net/minecraft/nbt/ByteTag
 		p	1		p_1	
 	m	()B	m_0326927	m_0326927	
 	m	()Ljava/lang/String;	toString	toString	
-c	net/minecraft/unmapped/C_9092862	net/minecraft/unmapped/C_9092862	
+c	net/minecraft/unmapped/C_9092862	net/minecraft/client/gui/DeleteWorldScreen	
 	m	(Lnet/minecraft/unmapped/C_0786431;)V	<init>	<init>	
 		p	1		p_1	
 	m	()V	m_7766669	m_7766669	

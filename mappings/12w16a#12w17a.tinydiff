@@ -56,11 +56,11 @@ c	net/minecraft/unmapped/C_1591456
 	m	(Ljava/net/InetAddress;)Z	m_8727692		m_8727692
 		p	0			p_0
 c	net/minecraft/unmapped/C_2354122
-	f	Ljava/lang/Object;	f_3464520	f_3464520	
-	f	I	f_2874325	f_2874325	
-	f	I	f_8256911	f_8256911	
-	f	Ljava/util/concurrent/atomic/AtomicInteger;	f_2874325		f_2874325
-	f	Ljava/util/concurrent/atomic/AtomicInteger;	f_8256911		f_8256911
+	f	Ljava/lang/Object;	f_3464520	threadCounterLock	
+	f	I	f_2874325	readThreads	
+	f	I	f_8256911	writeThreads	
+	f	Ljava/util/concurrent/atomic/AtomicInteger;	f_2874325		readThreads
+	f	Ljava/util/concurrent/atomic/AtomicInteger;	f_8256911		writeThreads
 	f	Z	f_4274151		f_4274151
 	f	Z	f_5459810		f_5459810
 	f	Ljavax/crypto/SecretKey;	f_1494275		f_1494275
@@ -77,10 +77,10 @@ c	net/minecraft/unmapped/C_2750078
 		p	1			p_1
 		p	2			p_2
 c	net/minecraft/unmapped/C_3635204
-	f	Lnet/minecraft/unmapped/C_3635204;	f_0269729	DOUBLE_SLAB	
-	f	Lnet/minecraft/unmapped/C_3635204;	f_0081657	SLAB	
-	f	Lnet/minecraft/unmapped/C_1793890;	f_0269729		DOUBLE_SLAB
-	f	Lnet/minecraft/unmapped/C_1793890;	f_0081657		SLAB
+	f	Lnet/minecraft/unmapped/C_3635204;	f_0269729	slab	
+	f	Lnet/minecraft/unmapped/C_3635204;	f_0081657	slabHalf	
+	f	Lnet/minecraft/unmapped/C_1793890;	f_0269729		slab
+	f	Lnet/minecraft/unmapped/C_1793890;	f_0081657		slabHalf
 	f	Lnet/minecraft/unmapped/C_1793890;	f_8137524		f_8137524
 	f	Lnet/minecraft/unmapped/C_1793890;	f_7859651		f_7859651
 c	net/minecraft/unmapped/C_3699792

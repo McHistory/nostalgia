@@ -278,7 +278,7 @@ c	net/minecraft/unmapped/C_3324249	net/minecraft/world/entity/monster/Giant
 	m	(Lnet/minecraft/unmapped/C_3906126;)V	<init>	<init>	
 		p	1		p_1	
 	m	()Ljava/lang/String;	m_3588390	m_3588390	
-c	net/minecraft/unmapped/C_3419581	net/minecraft/world/entity/Mob	
+c	net/minecraft/unmapped/C_3419581	net/minecraft/world/entity/PathfinderMob	
 	f	Lnet/minecraft/unmapped/C_7641996;	f_1141703	path	
 	f	Lnet/minecraft/unmapped/C_6385858;	f_8101227	attackTarget	
 	f	Z	f_3611045	holdGround	
@@ -328,8 +328,8 @@ c	net/minecraft/unmapped/C_3466301
 		p	3			p_3
 		p	4			p_4
 c	net/minecraft/unmapped/C_3635204
-	f	Lnet/minecraft/unmapped/C_3635204;	f_0173494	WHEAT	
-	f	Lnet/minecraft/unmapped/C_3635204;	f_2438624	FARMLAND	
+	f	Lnet/minecraft/unmapped/C_3635204;	f_0173494	crops	
+	f	Lnet/minecraft/unmapped/C_3635204;	f_2438624	farmland	
 	m	(II)I	m_5024410	getTexture	
 		p	1		side	
 		p	2		meta	
@@ -431,14 +431,14 @@ c	net/minecraft/unmapped/C_3906126
 	m	()V	m_3287315	m_3287315	
 	m	()Ljava/lang/String;	m_6248674		m_6248674
 c	net/minecraft/unmapped/C_4030632
-	f	Lnet/minecraft/unmapped/C_4030632;	f_8662003	WOOD_HOE	
-	f	Lnet/minecraft/unmapped/C_4030632;	f_5009261	STONE_HOE	
-	f	Lnet/minecraft/unmapped/C_4030632;	f_6276240	IRON_HOE	
-	f	Lnet/minecraft/unmapped/C_4030632;	f_8555829	DIAMOND_HOE	
-	f	Lnet/minecraft/unmapped/C_4030632;	f_8678602	HOLD_HOE	
-	f	Lnet/minecraft/unmapped/C_4030632;	f_1239548	SEEDS	
-	f	Lnet/minecraft/unmapped/C_4030632;	f_1026117	WHEAT	
-	f	Lnet/minecraft/unmapped/C_4030632;	f_4413916	BREAD	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_8662003	hoe_wood	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_5009261	hoe_stone	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_6276240	hoe_iron	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_8555829	hoe_emerald	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_8678602	hoe_gold	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_1239548	seeds	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_1026117	wheat	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_4413916	bread	
 	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_3906126;IIII)Z	m_9844872	useOn	
 		p	1		p_1	
 		p	2		p_2	
@@ -517,9 +517,9 @@ c	net/minecraft/unmapped/C_5009044
 c	net/minecraft/unmapped/C_5027796	net/minecraft/client/renderer/entity/GiantMobRenderer	
 	f	F	f_1676262	scale	
 	m	(Lnet/minecraft/unmapped/C_3239917;FF)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
+		p	1		model	
+		p	2		shadow	
+		p	3		scale	
 	m	(Lnet/minecraft/unmapped/C_1013763;F)V	m_2860795	m_2860795	
 		p	1		p_1	
 		p	2		p_2	
@@ -542,8 +542,8 @@ c	net/minecraft/unmapped/C_6151866
 	m	()I	m_6894859		m_6894859
 c	net/minecraft/unmapped/C_6385858
 	m	(Lnet/minecraft/unmapped/C_6385858;I)Z	m_3238154	hurt	
-		p	1		entity	
-		p	2		damage	
+		p	1		source	
+		p	2		dmg	
 	m	()Z	m_4184737	isAlive	
 	m	(Lnet/minecraft/unmapped/C_6385858;)F	m_1103396	distanceToSqr	
 		p	1		p_1	
