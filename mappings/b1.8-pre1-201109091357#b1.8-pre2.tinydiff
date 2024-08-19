@@ -70,17 +70,17 @@ c	net/minecraft/unmapped/C_5009044
 	m	()Z	m_8892536		m_8892536
 	m	()I	m_8932431		m_8932431
 	m	()Z	m_9110226		m_9110226
-	m	(Z)Z	m_4212846		m_4212846
-		p	1			p_1
+	m	(Z)Z	m_4212846		canEat
+		p	1			alwaysEat
 c	net/minecraft/unmapped/C_5367636
 	f	F	f_6525121		f_6525121
 	f	F	f_4129222		f_4129222
 	f	F	f_4403149		f_4403149
 	f	F	f_5784487		f_5784487
 c	net/minecraft/unmapped/C_6385858
-	m	()Z	m_8657369		m_8657369
-	m	(Z)V	m_2716190		m_2716190
-		p	1			p_1
+	m	()Z	m_8657369		getMobFlag
+	m	(Z)V	m_2716190		setMobFlag
+		p	1			flag
 c	net/minecraft/unmapped/C_6644571
 	m	(Lnet/minecraft/unmapped/C_3906126;IIILjava/util/Random;)V	m_6779924	m_6779924	
 		p	1		p_1	
@@ -152,23 +152,23 @@ c	net/minecraft/unmapped/C_1481722
 	f	I	f_7406225	f_7406225	
 	f	I	f_0727960	f_0727960	
 	m	()V	m_5855336		m_5855336
-	m	(I)V	m_7470329		m_7470329
-		p	1			p_1
-	m	()I	m_2008550		m_2008550
-	m	(I)V	m_0722125		m_0722125
-		p	1			p_1
-	m	()I	m_6083596		m_6083596
+	m	(I)V	m_7470329		setCarriedData
+		p	1			data
+	m	()I	m_2008550		getCarried
+	m	(I)V	m_0722125		setCarried
+		p	1			tile
+	m	()I	m_6083596		getCarriedData
 c	net/minecraft/unmapped/C_4539334
-	f	Lnet/minecraft/unmapped/C_1013763;	f_9156792	f_9156792	
-	f	Lnet/minecraft/unmapped/C_6385858;	f_9156792		f_9156792
+	f	Lnet/minecraft/unmapped/C_1013763;	f_9156792	owner	
+	f	Lnet/minecraft/unmapped/C_6385858;	f_9156792		owner
 	m	(Ljava/lang/String;Lnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_1013763;)V	<init>	<init>	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
 	m	(Ljava/lang/String;Lnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_6385858;)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+		p	1			msgId
+		p	2			entity
+		p	3			owner
 c	net/minecraft/unmapped/C_4873144
 	f	I	f_8434619	f_8434619	
 	f	I	f_4819872	f_4819872	
@@ -184,24 +184,24 @@ c	net/minecraft/unmapped/C_6028060$C_7731590
 		p	3			p_3
 		p	4			p_4
 c	net/minecraft/unmapped/C_6907923
-	m	(Lnet/minecraft/unmapped/C_3688914;Lnet/minecraft/unmapped/C_1013763;)Lnet/minecraft/unmapped/C_6907923;	m_1002898	m_1002898	
+	m	(Lnet/minecraft/unmapped/C_3688914;Lnet/minecraft/unmapped/C_1013763;)Lnet/minecraft/unmapped/C_6907923;	m_1002898	arrow	
 		p	0		p_0	
 		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_9746149;Lnet/minecraft/unmapped/C_1013763;)Lnet/minecraft/unmapped/C_6907923;	m_8649664	m_8649664	
+	m	(Lnet/minecraft/unmapped/C_9746149;Lnet/minecraft/unmapped/C_1013763;)Lnet/minecraft/unmapped/C_6907923;	m_8649664	fireball	
 		p	0		p_0	
 		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_1013763;)Lnet/minecraft/unmapped/C_6907923;	m_6087183	m_6087183	
+	m	(Lnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_1013763;)Lnet/minecraft/unmapped/C_6907923;	m_6087183	thrown	
 		p	0		p_0	
 		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_3688914;Lnet/minecraft/unmapped/C_6385858;)Lnet/minecraft/unmapped/C_6907923;	m_1002898		m_1002898
-		p	0			p_0
-		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_9746149;Lnet/minecraft/unmapped/C_6385858;)Lnet/minecraft/unmapped/C_6907923;	m_8649664		m_8649664
-		p	0			p_0
-		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_6385858;)Lnet/minecraft/unmapped/C_6907923;	m_6087183		m_6087183
-		p	0			p_0
-		p	1			p_1
+	m	(Lnet/minecraft/unmapped/C_3688914;Lnet/minecraft/unmapped/C_6385858;)Lnet/minecraft/unmapped/C_6907923;	m_1002898		arrow
+		p	0			arrow
+		p	1			owner
+	m	(Lnet/minecraft/unmapped/C_9746149;Lnet/minecraft/unmapped/C_6385858;)Lnet/minecraft/unmapped/C_6907923;	m_8649664		fireball
+		p	0			fireball
+		p	1			owner
+	m	(Lnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_6385858;)Lnet/minecraft/unmapped/C_6907923;	m_6087183		thrown
+		p	0			entity
+		p	1			owner
 c	net/minecraft/unmapped/C_7015659
 	m	(Lnet/minecraft/unmapped/C_3906126;III)V	m_8601467		m_8601467
 		p	1			p_1
@@ -209,21 +209,21 @@ c	net/minecraft/unmapped/C_7015659
 		p	3			p_3
 		p	4			p_4
 c	net/minecraft/unmapped/C_8667269
-	f	I	f_3038267		f_3038267
+	f	I	f_3038267		value
 	m	(Lnet/minecraft/unmapped/C_3906126;DDD)V	<init>	<init>	
 		p	1		p_1	
 		p	2		p_2	
 		p	4		p_4	
 		p	6		p_6	
 	m	(Lnet/minecraft/unmapped/C_3906126;DDDI)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-		p	4			p_4
-		p	6			p_6
-		p	8			p_8
-	m	()I	m_8836295		m_8836295
-	m	()I	m_8899658		m_8899658
-	m	(I)I	m_9165834		m_9165834
+		p	1			level
+		p	2			x
+		p	4			y
+		p	6			z
+		p	8			value
+	m	()I	m_8836295		getValue
+	m	()I	m_8899658		getIcon
+	m	(I)I	m_9165834		getExperienceValue
 		p	0			p_0
 c	net/minecraft/unmapped/C_2756771		net/minecraft/unmapped/C_2756771
 	f	I	f_2413948		f_2413948

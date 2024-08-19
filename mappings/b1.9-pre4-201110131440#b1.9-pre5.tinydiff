@@ -206,11 +206,11 @@ c	net/minecraft/unmapped/C_2250623
 c	net/minecraft/unmapped/C_2624096
 	m	()I	m_0839636		m_0839636
 c	net/minecraft/unmapped/C_2627205
-	m	(IIII)I	m_7282006		m_7282006
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
+	m	(IIII)I	m_7282006		getLightColor
+		p	1			x
+		p	2			y
+		p	3			z
+		p	4			emission
 	m	(IIII)F	m_2125740		getBrightness
 		p	1			x
 		p	2			y
@@ -706,7 +706,7 @@ c	net/minecraft/unmapped/C_6385858
 	m	(FF)V	m_9598325		turn
 		p	1			yDegrees
 		p	2			xDegrees
-	m	(F)I	m_8582980		m_8582980
+	m	(F)I	m_8582980		getLightColor
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_0336319;)Z	m_5739228		shouldRender
 		p	1			other
@@ -735,7 +735,7 @@ c	net/minecraft/unmapped/C_6385858
 		p	2			itemId
 		p	3			auxValue
 	m	()Z	m_4500577		isRiding
-	m	()Z	m_8657369		m_8657369
+	m	()Z	m_8657369		getMobFlag
 c	net/minecraft/unmapped/C_6391166
 	m	()I	m_0839636		m_0839636
 c	net/minecraft/unmapped/C_6692735
@@ -1345,10 +1345,10 @@ c	net/minecraft/unmapped/C_7015659
 		p	3			p_3
 		p	4			p_4
 c	net/minecraft/unmapped/C_7324071
-	m	()I	m_5236134		m_5236134
-	m	(I)V	m_4275849		m_4275849
+	m	()I	m_5236134		getLastFoodLevel
+	m	(I)V	m_4275849		setFoodLevel
 		p	1			p_1
-	m	(F)V	m_9021258		m_9021258
+	m	(F)V	m_9021258		setSaturation
 		p	1			p_1
 c	net/minecraft/unmapped/C_8588387
 	m	(II)F	m_4596335		m_4596335
@@ -1361,7 +1361,7 @@ c	net/minecraft/unmapped/C_8588387$C_4149823
 c	net/minecraft/unmapped/C_8667269
 	m	(F)I	m_8582980		m_8582980
 		p	1			p_1
-	m	()I	m_8899658		m_8899658
+	m	()I	m_8899658		getIcon
 c	net/minecraft/unmapped/C_9282614
 	m	()Lnet/minecraft/unmapped/C_8032589;	m_3771290		m_3771290
 c	net/minecraft/unmapped/C_1756552
@@ -2128,14 +2128,14 @@ c	net/minecraft/unmapped/C_0387400		net/minecraft/client/gui/screens/inventory/C
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
-c	net/minecraft/unmapped/C_0396750		net/minecraft/unmapped/C_0396750
-	f	Lnet/minecraft/unmapped/C_6385858;	f_9882419		f_9882419
-	f	I	f_2543153		f_2543153
-	f	I	f_8390819		f_8390819
+c	net/minecraft/unmapped/C_0396750		net/minecraft/client/particle/CritEmitter
+	f	Lnet/minecraft/unmapped/C_6385858;	f_9882419		entity
+	f	I	f_2543153		life
+	f	I	f_8390819		lifeTime
 	f	Ljava/lang/String;	f_4674169		f_4674169
 	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6385858;)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
+		p	1			level
+		p	2			entity
 	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6385858;Ljava/lang/String;)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
@@ -6445,8 +6445,8 @@ c	net/minecraft/unmapped/C_5324911		net/minecraft/client/gui/screens/ChatScreen
 c	net/minecraft/unmapped/C_5367636		net/minecraft/client/player/LocalPlayer
 	f	Lnet/minecraft/unmapped/C_4045198;	f_3990690		input
 	f	Lnet/minecraft/client/Minecraft;	f_3252474		minecraft
-	f	I	f_0810583		f_0810583
-	f	I	f_7470945		f_7470945
+	f	I	f_0810583		sprintTime
+	f	I	f_7470945		sprintTriggerTime
 	f	F	f_6525121		f_6525121
 	f	F	f_4129222		f_4129222
 	f	F	f_4403149		f_4403149
@@ -6524,7 +6524,7 @@ c	net/minecraft/unmapped/C_5367636		net/minecraft/client/player/LocalPlayer
 		p	5			p_5
 	m	(Z)V	m_4619223		m_4619223
 		p	1			p_1
-	m	(FII)V	m_0691625		m_0691625
+	m	(FII)V	m_0691625		setExperienceValues
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -8732,13 +8732,13 @@ c	net/minecraft/unmapped/C_8905061		net/minecraft/client/particle/Particle
 	f	D	f_1735994		yOff
 	f	D	f_6449107		zOff
 	m	(Lnet/minecraft/unmapped/C_3906126;DDDDDD)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-		p	4			p_4
-		p	6			p_6
-		p	8			p_8
-		p	10			p_10
-		p	12			p_12
+		p	1			level
+		p	2			x
+		p	4			y
+		p	6			z
+		p	8			xa
+		p	10			ya
+		p	12			za
 	m	(F)Lnet/minecraft/unmapped/C_8905061;	m_2307222		setPower
 		p	1			power
 	m	(F)Lnet/minecraft/unmapped/C_8905061;	m_6408979		scale
@@ -9111,7 +9111,7 @@ c	net/minecraft/unmapped/C_9610577		net/minecraft/client/renderer/entity/EntityR
 		p	5			z
 	m	()Lnet/minecraft/unmapped/C_4766485;	m_3740594		getFont
 	m	()V	<clinit>		<clinit>
-c	net/minecraft/unmapped/C_9741626		net/minecraft/unmapped/C_9741626
+c	net/minecraft/unmapped/C_9741626		net/minecraft/client/renderer/entity/ExperienceOrbRenderer
 	f	Lnet/minecraft/unmapped/C_3466301;	f_7545892		f_7545892
 	f	Z	f_1371023		f_1371023
 	m	()V	<init>		<init>

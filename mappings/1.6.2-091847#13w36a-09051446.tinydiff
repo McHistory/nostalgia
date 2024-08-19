@@ -150,11 +150,11 @@ c	net/minecraft/unmapped/C_0526782
 		p	3		meat	
 	m	()I	m_3303795	getNutrition	
 	m	(IIFZ)V	<init>	<init>	
-		p	1		p_1	
+		p	1		id	
 		p	2		p_2	
 		p	3		p_3	
 		p	4		p_4	
-	m	()F	m_1245423	m_1245423	
+	m	()F	m_1245423	getSaturationModifier	
 	m	(IFZ)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
@@ -164,7 +164,7 @@ c	net/minecraft/unmapped/C_0526782
 		p	2			p_2
 	m	(Lnet/minecraft/unmapped/C_2750078;)I	m_3303795		getNutrition
 		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_2750078;)F	m_1245423		m_1245423
+	m	(Lnet/minecraft/unmapped/C_2750078;)F	m_1245423		getSaturationModifier
 		p	1			p_1
 c	net/minecraft/unmapped/C_0546437
 	m	(IIIFBI)V	m_9576206	crossection	
@@ -4916,14 +4916,14 @@ c	net/minecraft/unmapped/C_0890425
 	m	(I)I	m_8611140		m_8611140
 		p	1			p_1
 c	net/minecraft/unmapped/C_1481722
-	m	(I)V	m_7470329	m_7470329	
-		p	1		p_1	
-	m	()I	m_2008550	m_2008550	
+	m	(I)V	m_7470329	setCarriedData	
+		p	1		data	
+	m	()I	m_2008550	getCarried	
 	m	()I	m_2225185	m_2225185	
 	m	()Lnet/minecraft/unmapped/C_4030632;	m_2225185		m_2225185
-	m	(Lnet/minecraft/unmapped/C_3635204;)V	m_7470329		m_7470329
+	m	(Lnet/minecraft/unmapped/C_3635204;)V	m_7470329		setCarriedData
 		p	1			p_1
-	m	()Lnet/minecraft/unmapped/C_3635204;	m_2008550		m_2008550
+	m	()Lnet/minecraft/unmapped/C_3635204;	m_2008550		getCarried
 c	net/minecraft/unmapped/C_1862778
 	f	[Lnet/minecraft/unmapped/C_4636105;	f_5331693	f_5331693	
 	f	[Lnet/minecraft/unmapped/C_4636105;	f_6963629		f_6963629
@@ -5183,9 +5183,9 @@ c	net/minecraft/unmapped/C_7019197
 		p	4			p_4
 		p	5			p_5
 c	net/minecraft/unmapped/C_7324071
-	m	(Lnet/minecraft/unmapped/C_0526782;)V	m_9660568	m_9660568	
-		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_0526782;Lnet/minecraft/unmapped/C_2750078;)V	m_9660568		m_9660568
+	m	(Lnet/minecraft/unmapped/C_0526782;)V	m_9660568	eat	
+		p	1		item	
+	m	(Lnet/minecraft/unmapped/C_0526782;Lnet/minecraft/unmapped/C_2750078;)V	m_9660568		eat
 		p	1			p_1
 		p	2			p_2
 c	net/minecraft/unmapped/C_7653691
