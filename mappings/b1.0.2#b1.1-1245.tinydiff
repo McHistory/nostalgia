@@ -165,13 +165,13 @@ c	net/minecraft/unmapped/C_6385858
 	m	()[I	m_9919834		getEquipmentSlots
 c	net/minecraft/unmapped/C_6755599
 	m	([BIIIIIII)I	m_5989424		setBlocksAndData
-		p	1			chunkData
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
-		p	6			p_6
-		p	7			p_7
+		p	1			data
+		p	2			x0
+		p	3			y0
+		p	4			z0
+		p	5			x1
+		p	6			y1
+		p	7			z1
 		p	8			p_8
 c	net/minecraft/unmapped/C_7192378
 	m	(Lnet/minecraft/unmapped/C_4390289;I)Z	m_6632735		isAt
@@ -579,7 +579,7 @@ c	net/minecraft/unmapped/C_0901730		net/minecraft/server/level/ServerEntity
 	m	(Lnet/minecraft/unmapped/C_0324512;)V	m_9656289		m_9656289
 		p	1			p_1
 c	net/minecraft/unmapped/C_1264342		net/minecraft/server/util/LongHashMap
-	f	[Lnet/minecraft/unmapped/C_1264342$C_3038154;	f_4001216		f_4001216
+	f	[Lnet/minecraft/unmapped/C_1264342$C_3038154;	f_4001216		table
 	f	I	f_1773023		size
 	f	I	f_7803045		threshold
 	f	F	f_9381247		loadFactor
@@ -599,12 +599,12 @@ c	net/minecraft/unmapped/C_1264342		net/minecraft/server/util/LongHashMap
 		p	3			value
 	m	(I)V	m_2218213		resize
 		p	1			newSize
-	m	([Lnet/minecraft/unmapped/C_1264342$C_3038154;)V	m_7849310		m_7849310
-		p	1			p_1
+	m	([Lnet/minecraft/unmapped/C_1264342$C_3038154;)V	m_7849310		transfer
+		p	1			entries
 	m	(J)Ljava/lang/Object;	m_6932044		remove
 		p	1			key
-	m	(J)Lnet/minecraft/unmapped/C_1264342$C_3038154;	m_9212060		m_9212060
-		p	1			p_1
+	m	(J)Lnet/minecraft/unmapped/C_1264342$C_3038154;	m_9212060		removeEntryForKey
+		p	1			key
 	m	(IJLjava/lang/Object;I)V	m_5913725		addEntry
 		p	1			hash
 		p	2			key
@@ -612,20 +612,20 @@ c	net/minecraft/unmapped/C_1264342		net/minecraft/server/util/LongHashMap
 		p	5			index
 	m	(J)I	m_3495242		syntheticHash
 		p	0			key
-c	net/minecraft/unmapped/C_1264342$C_3038154		C_3038154
-	f	J	f_9003581		f_9003581
-	f	Ljava/lang/Object;	f_0254707		f_0254707
-	f	Lnet/minecraft/unmapped/C_1264342$C_3038154;	f_2254761		f_2254761
-	f	I	f_6264513		f_6264513
+c	net/minecraft/unmapped/C_1264342$C_3038154		Entry
+	f	J	f_9003581		key
+	f	Ljava/lang/Object;	f_0254707		value
+	f	Lnet/minecraft/unmapped/C_1264342$C_3038154;	f_2254761		next
+	f	I	f_6264513		hash
 	m	(IJLjava/lang/Object;Lnet/minecraft/unmapped/C_1264342$C_3038154;)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-		p	4			p_4
-		p	5			p_5
-	m	()J	m_6641906		m_6641906
-	m	()Ljava/lang/Object;	m_1359214		m_1359214
+		p	1			hash
+		p	2			key
+		p	4			value
+		p	5			next
+	m	()J	m_6641906		getKey
+	m	()Ljava/lang/Object;	m_1359214		getValue
 	m	(Ljava/lang/Object;)Z	equals		equals
-		p	1			p_1
+		p	1			other
 	m	()I	hashCode		hashCode
 	m	()Ljava/lang/String;	toString		toString
 c	net/minecraft/unmapped/C_1591456		net/minecraft/server/network/ServerConnectionListener

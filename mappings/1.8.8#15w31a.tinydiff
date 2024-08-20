@@ -113,9 +113,9 @@ c	net/minecraft/unmapped/C_0400468
 		p	9			p_9
 		p	10			p_10
 c	net/minecraft/unmapped/C_0526782
-	f	I	f_6943245	f_6943245	
-	f	I	f_6489687	f_6489687	
-	f	I	f_6707307	f_6707307	
+	f	I	f_6943245	effect	
+	f	I	f_6489687	effectSeconds	
+	f	I	f_6707307	effectAmplifier	
 	f	Lnet/minecraft/unmapped/C_1283912;	f_2632565		f_2632565
 	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_5009044;)Lnet/minecraft/unmapped/C_2750078;	m_6337043	m_6337043	
 		p	1		p_1	
@@ -125,11 +125,11 @@ c	net/minecraft/unmapped/C_0526782
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
-	m	(IIIF)Lnet/minecraft/unmapped/C_0526782;	m_0671837	m_0671837	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
+	m	(IIIF)Lnet/minecraft/unmapped/C_0526782;	m_0671837	setEffect	
+		p	1		effect	
+		p	2		seconds	
+		p	3		amplifier	
+		p	4		chance	
 	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_1013763;)Lnet/minecraft/unmapped/C_2750078;	m_2093079		m_2093079
 		p	1			p_1
 		p	2			p_2
@@ -139,7 +139,7 @@ c	net/minecraft/unmapped/C_0526782
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
-	m	(Lnet/minecraft/unmapped/C_1283912;F)Lnet/minecraft/unmapped/C_0526782;	m_0671837		m_0671837
+	m	(Lnet/minecraft/unmapped/C_1283912;F)Lnet/minecraft/unmapped/C_0526782;	m_0671837		setEffect
 		p	1			p_1
 		p	2			p_2
 c	net/minecraft/unmapped/C_0732654
@@ -384,9 +384,9 @@ c	net/minecraft/unmapped/C_2750078
 	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_5009044;)Lnet/minecraft/unmapped/C_2750078;	m_9264093	use	
 		p	1		level	
 		p	2		player	
-	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_5009044;)Lnet/minecraft/unmapped/C_2750078;	m_6293284	m_6293284	
-		p	1		p_1	
-		p	2		p_2	
+	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_5009044;)Lnet/minecraft/unmapped/C_2750078;	m_6293284	finishUsingItem	
+		p	1		level	
+		p	2		player	
 	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_5009044;I)V	m_7985586	releaseUsing	
 		p	1		level	
 		p	2		player	
@@ -418,7 +418,7 @@ c	net/minecraft/unmapped/C_2750078
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
-	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_1013763;)Lnet/minecraft/unmapped/C_2750078;	m_6293284		m_6293284
+	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_1013763;)Lnet/minecraft/unmapped/C_2750078;	m_6293284		finishUsingItem
 		p	1			p_1
 		p	2			p_2
 	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_1013763;Lnet/minecraft/unmapped/C_4360192;)Z	m_8234787		interactEnemy
@@ -750,9 +750,9 @@ c	net/minecraft/unmapped/C_3688914
 	f	I	f_8736312		f_8736312
 	f	I	f_6237736		f_6237736
 	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_1013763;F)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
+		p	1		level	
+		p	2		owner	
+		p	3		power	
 	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_1013763;Lnet/minecraft/unmapped/C_1013763;FF)V	<init>	<init>	
 		p	1		p_1	
 		p	2		p_2	
@@ -906,10 +906,10 @@ c	net/minecraft/unmapped/C_4030632
 		p	1		item	
 		p	2		level	
 		p	3		player	
-	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_5009044;)Lnet/minecraft/unmapped/C_2750078;	m_2093079	m_2093079	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
+	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_5009044;)Lnet/minecraft/unmapped/C_2750078;	m_2093079	finishUsingItem	
+		p	1		item	
+		p	2		level	
+		p	3		player	
 	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_5009044;I)V	m_7163367	releaseUsing	
 		p	1		item	
 		p	2		level	
@@ -956,7 +956,7 @@ c	net/minecraft/unmapped/C_4030632
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
-	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_1013763;)Lnet/minecraft/unmapped/C_2750078;	m_2093079		m_2093079
+	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_1013763;)Lnet/minecraft/unmapped/C_2750078;	m_2093079		finishUsingItem
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -1245,13 +1245,13 @@ c	net/minecraft/unmapped/C_5009044
 		p	1		p_1	
 		p	2		p_2	
 	m	()V	m_7299718	completeUsingItem	
-	m	(Lnet/minecraft/unmapped/C_2750078;I)V	m_8344088	m_8344088	
-		p	1		p_1	
-		p	2		p_2	
-	m	()Lnet/minecraft/unmapped/C_2750078;	m_5966708	m_5966708	
-	m	()I	m_5886782	m_5886782	
-	m	()Z	m_8892536	m_8892536	
-	m	()I	m_8932431	m_8932431	
+	m	(Lnet/minecraft/unmapped/C_2750078;I)V	m_8344088	startUsingItem	
+		p	1		item	
+		p	2		useDuration	
+	m	()Lnet/minecraft/unmapped/C_2750078;	m_5966708	getUseItem	
+	m	()I	m_5886782	getUseItemRemainingTicks	
+	m	()Z	m_8892536	isUsingItem	
+	m	()I	m_8932431	getTicksUsingItem	
 	m	(Lnet/minecraft/unmapped/C_6385858;)Z	m_4777054	interact	
 		p	1		p_1	
 	m	(I)Lnet/minecraft/unmapped/C_2750078;	m_5260880	m_5260880	
@@ -1440,8 +1440,8 @@ c	net/minecraft/unmapped/C_6385858
 	f	I	f_9764342		f_9764342
 	f	Ljava/util/List;	f_7703824		f_7703824
 	f	Z	f_5273971		f_5273971
-	m	()Z	m_8657369	getMobFlag	
-	m	(Z)V	m_2716190	setMobFlag	
+	m	()Z	m_8657369	isUsingItem	
+	m	(Z)V	m_2716190	setUsingItem	
 		p	1		flag	
 	m	(ILnet/minecraft/unmapped/C_2750078;)V	m_0129682	setEquippedSlot	
 		p	1		p_1	

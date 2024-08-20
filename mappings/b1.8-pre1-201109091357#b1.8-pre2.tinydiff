@@ -2,10 +2,10 @@ tiny	2	0
 c	net/minecraft/client/Minecraft
 	m	()V	m_1150059		m_1150059
 c	net/minecraft/unmapped/C_0070166
-	f	I	f_1539940		f_1539940
-	m	(II)V	m_4733887		m_4733887
-		p	1			p_1
-		p	2			p_2
+	f	I	f_1539940		loadedChunks
+	m	(II)V	m_4733887		drop
+		p	1			x
+		p	2			z
 c	net/minecraft/unmapped/C_0823907
 	m	(II)I	m_5024410		m_5024410
 		p	1			p_1
@@ -29,7 +29,7 @@ c	net/minecraft/unmapped/C_0914500
 		p	1			p_1
 		p	2			p_2
 c	net/minecraft/unmapped/C_1013763
-	m	()Z	m_9110226		m_9110226
+	m	()Z	m_9110226		isBlocking
 c	net/minecraft/unmapped/C_1309851
 	f	Lnet/minecraft/unmapped/C_2750078;	f_8439349	f_8439349	
 	f	I	f_6260444	f_6260444	
@@ -59,16 +59,16 @@ c	net/minecraft/unmapped/C_4286596
 		p	1			p_1
 		p	2			p_2
 c	net/minecraft/unmapped/C_4443804
-	m	(Lnet/minecraft/unmapped/C_2756771;)V	m_9576139		m_9576139
-		p	1			p_1
+	m	(Lnet/minecraft/unmapped/C_2756771;)V	m_9576139		handleAddExperienceOrb
+		p	1			packet
 c	net/minecraft/unmapped/C_4939758
 	m	(Lnet/minecraft/unmapped/C_2756771;)V	m_9576139		m_9576139
 		p	1			p_1
 c	net/minecraft/unmapped/C_5009044
-	m	()Lnet/minecraft/unmapped/C_2750078;	m_5966708		m_5966708
-	m	()I	m_5886782		m_5886782
-	m	()Z	m_8892536		m_8892536
-	m	()I	m_8932431		m_8932431
+	m	()Lnet/minecraft/unmapped/C_2750078;	m_5966708		getUseItem
+	m	()I	m_5886782		getUseItemRemainingTicks
+	m	()Z	m_8892536		isUsingItem
+	m	()I	m_8932431		getTicksUsingItem
 	m	()Z	m_9110226		m_9110226
 	m	(Z)Z	m_4212846		canEat
 		p	1			alwaysEat
@@ -78,8 +78,8 @@ c	net/minecraft/unmapped/C_5367636
 	f	F	f_4403149		f_4403149
 	f	F	f_5784487		f_5784487
 c	net/minecraft/unmapped/C_6385858
-	m	()Z	m_8657369		getMobFlag
-	m	(Z)V	m_2716190		setMobFlag
+	m	()Z	m_8657369		isUsingItem
+	m	(Z)V	m_2716190		setUsingItem
 		p	1			flag
 c	net/minecraft/unmapped/C_6644571
 	m	(Lnet/minecraft/unmapped/C_3906126;IIILjava/util/Random;)V	m_6779924	m_6779924	
@@ -98,7 +98,7 @@ c	net/minecraft/unmapped/C_6794191
 	m	(Lnet/minecraft/unmapped/C_2750078;)V	m_5091708		m_5091708
 		p	1			p_1
 c	net/minecraft/unmapped/C_7688744
-	f	Lnet/minecraft/unmapped/C_5027199;	f_3128526		f_3128526
+	f	Lnet/minecraft/unmapped/C_5027199;	f_3128526		keyPickItem
 	f	Lnet/minecraft/unmapped/C_5027199;	f_4841931		f_4841931
 c	net/minecraft/unmapped/C_7699185
 	m	(IIZLnet/minecraft/unmapped/C_5009044;)V	m_1109710		m_1109710
@@ -225,15 +225,15 @@ c	net/minecraft/unmapped/C_8667269
 	m	()I	m_8899658		getIcon
 	m	(I)I	m_9165834		getExperienceValue
 		p	0			p_0
-c	net/minecraft/unmapped/C_2756771		net/minecraft/unmapped/C_2756771
-	f	I	f_2413948		f_2413948
-	f	I	f_4336445		f_4336445
-	f	I	f_8923071		f_8923071
-	f	I	f_0775994		f_0775994
-	f	I	f_2387612		f_2387612
+c	net/minecraft/unmapped/C_2756771		net/minecraft/network/packets/AddExperienceOrbPacket
+	f	I	f_2413948		id
+	f	I	f_4336445		xp
+	f	I	f_8923071		yp
+	f	I	f_0775994		zp
+	f	I	f_2387612		value
 	m	()V	<init>		<init>
 	m	(Lnet/minecraft/unmapped/C_8667269;)V	<init>		<init>
-		p	1			p_1
+		p	1			orb
 	m	(Ljava/io/DataInputStream;)V	m_8784008		m_8784008
 		p	1			p_1
 	m	(Ljava/io/DataOutputStream;)V	m_4625396		m_4625396

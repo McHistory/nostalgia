@@ -960,13 +960,13 @@ c	net/minecraft/unmapped/C_4824661
 	f	Lnet/minecraft/unmapped/C_1115384;	f_2696165	smoothTurnY	
 	f	Z	f_5397977	anaglyph3d	
 	f	I	f_6686988	currentRenderLayer	
-	f	[I	f_6104882	f_6104882	
+	f	[I	f_6104882	lightPixels	
 	f	F	f_9994954	f_9994954	
 	f	F	f_1200570	f_1200570	
 	f	F	f_7276783	f_7276783	
 	f	F	f_8447988	f_8447988	
 	f	F	f_8551600	f_8551600	
-	f	Lnet/minecraft/unmapped/C_7131921;	f_6104882		f_6104882
+	f	Lnet/minecraft/unmapped/C_7131921;	f_6104882		lightPixels
 	m	(FI)V	m_5868212	setupCamera	
 		p	1		partialTick	
 		p	2		nanoSeconds	
@@ -1013,16 +1013,16 @@ c	net/minecraft/unmapped/C_4824661
 		p	7			p_7
 c	net/minecraft/unmapped/C_5027199
 	f	I	f_6140098	key	
-	f	Lnet/minecraft/unmapped/C_3837238;	f_1272004	f_1272004	
+	f	Lnet/minecraft/unmapped/C_3837238;	f_1272004	MAP	
 	f	I	f_1119861	f_1119861	
-	f	Ljava/util/Map;	f_1272004		f_1272004
+	f	Ljava/util/Map;	f_1272004		MAP
 	f	Lnet/minecraft/unmapped/C_8881785$C_5424057;	f_1119861		f_1119861
 	f	Lnet/minecraft/unmapped/C_8881785$C_5424057;	f_6140098		key
-	m	(I)V	m_4506226	m_4506226	
-		p	0		p_0	
-	m	(IZ)V	m_6979550	m_6979550	
-		p	0		p_0	
-		p	1		p_1	
+	m	(I)V	m_4506226	click	
+		p	0		key	
+	m	(IZ)V	m_6979550	set	
+		p	0		key	
+		p	1		down	
 	m	()Ljava/util/Set;	m_1337063	m_1337063	
 	m	()I	m_7100058	m_7100058	
 	m	()I	m_8397518	m_8397518	
@@ -1030,9 +1030,9 @@ c	net/minecraft/unmapped/C_5027199
 		p	1		p_1	
 	m	(Lnet/minecraft/unmapped/C_5027199;)Ljava/lang/String;	m_1402907	m_1402907	
 		p	0		p_0	
-	m	(Lnet/minecraft/unmapped/C_8881785$C_5424057;)V	m_4506226		m_4506226
+	m	(Lnet/minecraft/unmapped/C_8881785$C_5424057;)V	m_4506226		click
 		p	0			p_0
-	m	(Lnet/minecraft/unmapped/C_8881785$C_5424057;Z)V	m_6979550		m_6979550
+	m	(Lnet/minecraft/unmapped/C_8881785$C_5424057;Z)V	m_6979550		set
 		p	0			p_0
 		p	1			p_1
 	m	(Ljava/lang/String;Lnet/minecraft/unmapped/C_8881785$C_0726783;ILjava/lang/String;)V	<init>		<init>
@@ -1394,8 +1394,8 @@ c	net/minecraft/unmapped/C_7662486$1441379		1441379
 c	net/minecraft/unmapped/C_7688744
 	f	F	f_3164418	sensitivity	
 	f	Z	f_4447879	anaglyph3d	
-	f	F	f_6973912	f_6973912	
-	f	F	f_7566119	f_7566119	
+	f	F	f_6973912	fov	
+	f	F	f_7566119	gamma	
 	f	F	f_6812914	f_6812914	
 	f	F	f_6196277	f_6196277	
 	f	F	f_5543734	f_5543734	
@@ -1408,8 +1408,8 @@ c	net/minecraft/unmapped/C_7688744
 	f	D	f_5543734		f_5543734
 	f	D	f_4089725		f_4089725
 	f	D	f_1078661		f_1078661
-	f	D	f_6973912		f_6973912
-	f	D	f_7566119		f_7566119
+	f	D	f_6973912		fov
+	f	D	f_7566119		gamma
 	m	(Lnet/minecraft/unmapped/C_7688744$C_0457152;F)V	m_5484939	set	
 		p	1		option	
 		p	2		value	

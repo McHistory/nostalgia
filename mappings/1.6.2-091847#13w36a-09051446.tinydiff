@@ -151,9 +151,9 @@ c	net/minecraft/unmapped/C_0526782
 	m	()I	m_3303795	getNutrition	
 	m	(IIFZ)V	<init>	<init>	
 		p	1		id	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
+		p	2		nutrition	
+		p	3		saturationModifier	
+		p	4		isMeat	
 	m	()F	m_1245423	getSaturationModifier	
 	m	(IFZ)V	<init>		<init>
 		p	1			p_1
@@ -1209,10 +1209,10 @@ c	net/minecraft/unmapped/C_3635204
 	f	Lnet/minecraft/unmapped/C_3635204;	f_9387614	f_9387614	
 	f	Lnet/minecraft/unmapped/C_3635204;	f_5502913	f_5502913	
 	f	Lnet/minecraft/unmapped/C_3635204;	f_6942369	f_6942369	
-	f	Lnet/minecraft/unmapped/C_3635204;	f_0808963	f_0808963	
-	f	Lnet/minecraft/unmapped/C_3635204;	f_6018146	f_6018146	
-	f	Lnet/minecraft/unmapped/C_3635204;	f_3350901	f_3350901	
-	f	Lnet/minecraft/unmapped/C_3635204;	f_7755852	f_7755852	
+	f	Lnet/minecraft/unmapped/C_3635204;	f_0808963	vine	
+	f	Lnet/minecraft/unmapped/C_3635204;	f_6018146	fenceGate	
+	f	Lnet/minecraft/unmapped/C_3635204;	f_3350901	stairsBrick	
+	f	Lnet/minecraft/unmapped/C_3635204;	f_7755852	stairsStoneBrickSmooth	
 	f	Lnet/minecraft/unmapped/C_5065131;	f_8039648	f_8039648	
 	f	Lnet/minecraft/unmapped/C_3635204;	f_4950481	f_4950481	
 	f	Lnet/minecraft/unmapped/C_3635204;	f_9995370	f_9995370	
@@ -1766,20 +1766,20 @@ c	net/minecraft/unmapped/C_4030632
 	f	Lnet/minecraft/unmapped/C_4030632;	f_7522033	bone	
 	f	Lnet/minecraft/unmapped/C_4030632;	f_5981679	sugar	
 	f	Lnet/minecraft/unmapped/C_4030632;	f_1926682	cake	
-	f	Lnet/minecraft/unmapped/C_4030632;	f_6191564	BED	
-	f	Lnet/minecraft/unmapped/C_4030632;	f_2269548	REPEATER	
-	f	Lnet/minecraft/unmapped/C_4030632;	f_3508508	COOKIE	
-	f	Lnet/minecraft/unmapped/C_6786653;	f_2716157	MAP	
-	f	Lnet/minecraft/unmapped/C_7199020;	f_5055361	SHEARS	
-	f	Lnet/minecraft/unmapped/C_4030632;	f_3102413	f_3102413	
-	f	Lnet/minecraft/unmapped/C_4030632;	f_4969850	f_4969850	
-	f	Lnet/minecraft/unmapped/C_4030632;	f_1038007	f_1038007	
-	f	Lnet/minecraft/unmapped/C_4030632;	f_4708294	f_4708294	
-	f	Lnet/minecraft/unmapped/C_4030632;	f_4518350	f_4518350	
-	f	Lnet/minecraft/unmapped/C_4030632;	f_4457485	f_4457485	
-	f	Lnet/minecraft/unmapped/C_4030632;	f_9516332	f_9516332	
-	f	Lnet/minecraft/unmapped/C_4030632;	f_9217435	f_9217435	
-	f	Lnet/minecraft/unmapped/C_4030632;	f_1801609	f_1801609	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_6191564	bed	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_2269548	diode	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_3508508	cookie	
+	f	Lnet/minecraft/unmapped/C_6786653;	f_2716157	map	
+	f	Lnet/minecraft/unmapped/C_7199020;	f_5055361	shears	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_3102413	melon	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_4969850	seeds_pumpkin	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_1038007	seeds_melon	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_4708294	beefRaw	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_4518350	beefCooked	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_4457485	chickenRaw	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_9516332	chickenCooked	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_9217435	rottenFlesh	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_1801609	enderPearl	
 	f	Lnet/minecraft/unmapped/C_4030632;	f_4336999	f_4336999	
 	f	Lnet/minecraft/unmapped/C_4030632;	f_0626042	f_0626042	
 	f	Lnet/minecraft/unmapped/C_4030632;	f_8168785	f_8168785	
@@ -5080,9 +5080,9 @@ c	net/minecraft/unmapped/C_5769145
 	m	()Z	m_8001703		m_8001703
 c	net/minecraft/unmapped/C_5908980
 	m	(I)V	<init>	<init>	
-		p	1		p_1	
-	m	(I)Z	m_9957351	m_9957351	
-		p	1		p_1	
+		p	1		id	
+	m	(I)Z	m_9957351	isAcceptableNeighbour	
+		p	1		id	
 	m	(Lnet/minecraft/unmapped/C_3906126;IIII)V	m_6252045	m_6252045	
 		p	1		p_1	
 		p	2		p_2	
@@ -5094,7 +5094,7 @@ c	net/minecraft/unmapped/C_5908980
 		p	2		p_2	
 		p	3		p_3	
 	m	()V	<init>		<init>
-	m	(Lnet/minecraft/unmapped/C_3635204;)Z	m_9957351		m_9957351
+	m	(Lnet/minecraft/unmapped/C_3635204;)Z	m_9957351		isAcceptableNeighbour
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_3906126;IIILnet/minecraft/unmapped/C_3635204;)V	m_6252045		m_6252045
 		p	1			p_1
