@@ -113,7 +113,7 @@ c	net/minecraft/client/MinecraftApplet$7226165	7226165
 		p	6		p_6	
 	m	()V	m_7481558	m_7481558	
 c	net/minecraft/server/MinecraftServer
-	f	Ljava/net/Proxy;	f_0958627		f_0958627
+	f	Ljava/net/Proxy;	f_0958627		proxy
 	f	Z	f_1740570		f_1740570
 	m	(Z)V	m_7926418		m_7926418
 		p	1			p_1
@@ -218,8 +218,8 @@ c	net/minecraft/unmapped/C_0309511$3031773		3031773
 		p	1			p_1
 	m	()V	run		run
 c	net/minecraft/unmapped/C_0324512
-	f	I	f_5431237	f_5431237	
-	f	F	f_5431237		f_5431237
+	f	I	f_5431237	lastSentHealth	
+	f	F	f_5431237		lastSentHealth
 	m	(Lnet/minecraft/unmapped/C_6907923;I)Z	m_3238154	m_3238154	
 		p	1		p_1	
 		p	2		p_2	
@@ -328,7 +328,7 @@ c	net/minecraft/unmapped/C_1013763
 	f	Z	f_9177400	f_9177400	
 	f	[F	f_8275501	f_8275501	
 	f	Z	f_7041576	f_7041576	
-	f	Lnet/minecraft/unmapped/C_9549387;	f_0217020		f_0217020
+	f	Lnet/minecraft/unmapped/C_9549387;	f_0217020		attributes
 	f	F	f_3084778		f_3084778
 	f	Z	f_9066731		f_9066731
 	f	F	f_0196418		f_0196418
@@ -998,9 +998,9 @@ c	net/minecraft/unmapped/C_4844124
 	m	(Lnet/minecraft/unmapped/C_2750078;Ljava/io/DataOutputStream;)V	m_0927322	m_0927322	
 		p	1		p_1	
 		p	0		p_0	
-	m	(Ljava/io/DataInputStream;)Lnet/minecraft/unmapped/C_2800860;	m_7405563	m_7405563	
+	m	(Ljava/io/DataInputStream;)Lnet/minecraft/unmapped/C_2800860;	m_7405563	readNbt	
 		p	0		p_0	
-	m	(Lnet/minecraft/unmapped/C_2800860;Ljava/io/DataOutputStream;)V	m_1834624	m_1834624	
+	m	(Lnet/minecraft/unmapped/C_2800860;Ljava/io/DataOutputStream;)V	m_1834624	writeNbt	
 		p	1		p_1	
 		p	0		p_0	
 	m	(Ljava/io/DataOutputStream;[B)V	m_9223305	m_9223305	
@@ -1033,19 +1033,19 @@ c	net/minecraft/unmapped/C_4844124
 		p	0			p_0
 		p	1			p_1
 	m	(Ljava/io/DataInput;)V	m_8784008		read
-		p	1			p_1
+		p	1			input
 	m	(Ljava/io/DataOutput;)V	m_4625396		write
-		p	1			p_1
+		p	1			output
 	m	(Ljava/io/DataInput;)Lnet/minecraft/unmapped/C_2750078;	m_4582369		m_4582369
 		p	0			p_0
 	m	(Lnet/minecraft/unmapped/C_2750078;Ljava/io/DataOutput;)V	m_0927322		m_0927322
 		p	0			p_0
 		p	1			p_1
-	m	(Ljava/io/DataInput;)Lnet/minecraft/unmapped/C_2800860;	m_7405563		m_7405563
-		p	0			p_0
-	m	(Lnet/minecraft/unmapped/C_2800860;Ljava/io/DataOutput;)V	m_1834624		m_1834624
-		p	0			p_0
-		p	1			p_1
+	m	(Ljava/io/DataInput;)Lnet/minecraft/unmapped/C_2800860;	m_7405563		readNbt
+		p	0			input
+	m	(Lnet/minecraft/unmapped/C_2800860;Ljava/io/DataOutput;)V	m_1834624		writeNbt
+		p	0			tag
+		p	1			output
 c	net/minecraft/unmapped/C_4883920
 	m	(Ljava/io/DataInputStream;)V	m_8784008	m_8784008	
 		p	1		p_1	
@@ -1155,7 +1155,7 @@ c	net/minecraft/unmapped/C_5315820
 		p	1			p_1
 c	net/minecraft/unmapped/C_5367636
 	f	I	f_0326408		f_0326408
-	f	F	f_9299141		f_9299141
+	f	F	f_9299141		jumpRidingScale
 	m	(I)V	m_4561784	hurtTo	
 		p	1		health	
 	m	(DDD)V	m_2801634	m_2801634	
@@ -1164,8 +1164,8 @@ c	net/minecraft/unmapped/C_5367636
 		p	5		p_5	
 	m	(F)V	m_4561784		hurtTo
 		p	1			p_1
-	m	()Z	m_6234479		m_6234479
-	m	()F	m_0064923		m_0064923
+	m	()Z	m_6234479		isRidingJumpable
+	m	()F	m_0064923		getJumpRidingScale
 	m	()V	m_9030471		m_9030471
 c	net/minecraft/unmapped/C_5371184
 	f	[F	f_0464084	f_0464084	
@@ -3838,24 +3838,24 @@ c	net/minecraft/unmapped/C_3182765
 	m	(Lnet/minecraft/unmapped/C_5009044;)Z	m_7097998		m_7097998
 		p	1			p_1
 c	net/minecraft/unmapped/C_6954368
-	m	(Lnet/minecraft/unmapped/C_6907923;II)V	m_8419797	m_8419797	
+	m	(Lnet/minecraft/unmapped/C_6907923;II)V	m_8419797	recordDamage	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
-	m	(Lnet/minecraft/unmapped/C_6907923;FF)V	m_8419797		m_8419797
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+	m	(Lnet/minecraft/unmapped/C_6907923;FF)V	m_8419797		recordDamage
+		p	1			source
+		p	2			health
+		p	3			damage
 c	net/minecraft/unmapped/C_7465586
 	m	(Lnet/minecraft/unmapped/C_5009044;)Z	m_7287105	m_7287105	
 		p	1		p_1	
 	m	(Lnet/minecraft/unmapped/C_5009044;)Z	m_7097998		m_7097998
 		p	1			p_1
 c	net/minecraft/unmapped/C_8012190
-	f	I	f_5410297	f_5410297	
-	f	I	f_7529061	f_7529061	
-	f	F	f_5410297		f_5410297
-	f	F	f_7529061		f_7529061
+	f	I	f_5410297	damage	
+	f	I	f_7529061	health	
+	f	F	f_5410297		damage
+	f	F	f_7529061		health
 	m	(Lnet/minecraft/unmapped/C_6907923;IIILjava/lang/String;F)V	<init>	<init>	
 		p	1		p_1	
 		p	2		p_2	
@@ -3863,15 +3863,15 @@ c	net/minecraft/unmapped/C_8012190
 		p	4		p_4	
 		p	5		p_5	
 		p	6		p_6	
-	m	()I	m_7585655	m_7585655	
+	m	()I	m_7585655	getDamage	
 	m	(Lnet/minecraft/unmapped/C_6907923;IFFLjava/lang/String;F)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
-		p	6			p_6
-	m	()F	m_7585655		m_7585655
+		p	1			source
+		p	2			time
+		p	3			health
+		p	4			damage
+		p	5			location
+		p	6			fallDistance
+	m	()F	m_7585655		getDamage
 c	net/minecraft/unmapped/C_0027843
 	m	(Ljava/lang/String;Ljava/lang/String;II)Lnet/minecraft/unmapped/C_0027843;	m_3154375		m_3154375
 		p	0			p_0
@@ -4188,8 +4188,8 @@ c	net/minecraft/unmapped/C_1485454		net/minecraft/unmapped/C_1485454
 	m	(Ljava/lang/String;I)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
-c	net/minecraft/unmapped/C_1492128		net/minecraft/unmapped/C_1492128
-	m	()Lnet/minecraft/unmapped/C_1492128$C_1774538;	m_8975255		m_8975255
+c	net/minecraft/unmapped/C_1492128		net/minecraft/Util
+	m	()Lnet/minecraft/unmapped/C_1492128$C_1774538;	m_8975255		getPlatform
 c	net/minecraft/unmapped/C_1492128$C_1774538		OS
 	f	Lnet/minecraft/unmapped/C_1492128$C_1774538;	f_4626673		LINUX
 	f	Lnet/minecraft/unmapped/C_1492128$C_1774538;	f_0646261		SOLARIS
@@ -4309,24 +4309,24 @@ c	net/minecraft/unmapped/C_2236455		net/minecraft/unmapped/C_2236455
 	m	()F	m_8316336		m_8316336
 	m	()Z	m_5352884		m_5352884
 	m	()Z	m_6413918		m_6413918
-c	net/minecraft/unmapped/C_2237759		net/minecraft/unmapped/C_2237759
-	f	D	f_9335792		f_9335792
-	f	I	f_7105671		f_7105671
-	f	Ljava/lang/String;	f_4299085		f_4299085
-	f	Ljava/util/UUID;	f_7555880		f_7555880
+c	net/minecraft/unmapped/C_2237759		net/minecraft/world/entity/ai/attributes/AttributeModifier
+	f	D	f_9335792		amount
+	f	I	f_7105671		operation
+	f	Ljava/lang/String;	f_4299085		name
+	f	Ljava/util/UUID;	f_7555880		id
 	m	(Ljava/lang/String;DI)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-		p	4			p_4
+		p	1			name
+		p	2			amount
+		p	4			operation
 	m	(Ljava/util/UUID;Ljava/lang/String;DI)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	5			p_5
-	m	()Ljava/util/UUID;	m_5088289		m_5088289
-	m	()Ljava/lang/String;	m_0878223		m_0878223
-	m	()I	m_8746986		m_8746986
-	m	()D	m_7370935		m_7370935
+		p	1			id
+		p	2			name
+		p	3			amount
+		p	5			operation
+	m	()Ljava/util/UUID;	m_5088289		getId
+	m	()Ljava/lang/String;	m_0878223		getName
+	m	()I	m_8746986		getOperation
+	m	()D	m_7370935		getAmount
 	m	(Ljava/lang/Object;)Z	equals		equals
 		p	1			p_1
 	m	()I	hashCode		hashCode
@@ -4840,11 +4840,11 @@ c	net/minecraft/unmapped/C_3719935		net/minecraft/unmapped/C_3719935
 		p	0			p_0
 		p	1			p_1
 	m	()V	<clinit>		<clinit>
-c	net/minecraft/unmapped/C_3731908		net/minecraft/unmapped/C_3731908
-	m	()Ljava/lang/String;	m_3960723		m_3960723
-	m	(D)D	m_5220434		m_5220434
-		p	1			p_1
-	m	()D	m_1255457		m_1255457
+c	net/minecraft/unmapped/C_3731908		net/minecraft/world/entity/ai/attributes/Attribute
+	m	()Ljava/lang/String;	m_3960723		getName
+	m	(D)D	m_5220434		sanitizeValue
+		p	1			value
+	m	()D	m_1255457		getDefaultValue
 c	net/minecraft/unmapped/C_4412160		net/minecraft/unmapped/C_4412160
 	m	(Lnet/minecraft/unmapped/C_3239917;F)V	<init>		<init>
 		p	1			p_1
@@ -4893,22 +4893,22 @@ c	net/minecraft/unmapped/C_5403531		net/minecraft/unmapped/C_5403531
 	m	()Ljava/lang/String;	m_3960723		m_3960723
 	m	()D	m_1255457		m_1255457
 	m	()I	hashCode		hashCode
-c	net/minecraft/unmapped/C_5801153		net/minecraft/unmapped/C_5801153
-	f	Lnet/minecraft/unmapped/C_3731908;	f_3071314		f_3071314
-	f	Ljava/util/Map;	f_6718964		f_6718964
-	f	Ljava/util/Map;	f_4665848		f_4665848
-	f	Ljava/util/Map;	f_0940083		f_0940083
-	f	D	f_7814362		f_7814362
-	f	Z	f_2321298		f_2321298
-	f	D	f_4176946		f_4176946
+c	net/minecraft/unmapped/C_5801153		net/minecraft/world/entity/ai/attributes/ModifiableAttributeInstance
+	f	Lnet/minecraft/unmapped/C_3731908;	f_3071314		attribute
+	f	Ljava/util/Map;	f_6718964		modifiers
+	f	Ljava/util/Map;	f_4665848		modifiersByName
+	f	Ljava/util/Map;	f_0940083		modifierById
+	f	D	f_7814362		baseValue
+	f	Z	f_2321298		dirty
+	f	D	f_4176946		cachedValue
 	m	(Lnet/minecraft/unmapped/C_3731908;)V	<init>		<init>
 		p	1			p_1
 	m	()Lnet/minecraft/unmapped/C_3731908;	m_9689010		m_9689010
 	m	()D	m_3259491		m_3259491
 	m	(D)V	m_4631477		m_4631477
 		p	1			p_1
-	m	(I)Ljava/util/Collection;	m_3070322		m_3070322
-		p	1			p_1
+	m	(I)Ljava/util/Collection;	m_3070322		getAppliedModifiers
+		p	1			operation
 	m	()Ljava/util/Collection;	m_1612387		m_1612387
 	m	(Ljava/util/UUID;)Lnet/minecraft/unmapped/C_2237759;	m_9212014		m_9212014
 		p	1			p_1
@@ -4919,7 +4919,7 @@ c	net/minecraft/unmapped/C_5801153		net/minecraft/unmapped/C_5801153
 	m	(Ljava/util/UUID;)V	m_5506204		m_5506204
 		p	1			p_1
 	m	()D	m_2983528		m_2983528
-	m	()D	m_7021868		m_7021868
+	m	()D	m_7021868		calculateValue
 c	net/minecraft/unmapped/C_6006943		net/minecraft/unmapped/C_6006943
 	m	(Lnet/minecraft/unmapped/C_3906126;)V	<init>		<init>
 		p	1			p_1
@@ -5050,14 +5050,14 @@ c	net/minecraft/unmapped/C_9420145		net/minecraft/unmapped/C_9420145
 	m	()V	m_5289183		m_5289183
 	m	()Z	m_1332509		m_1332509
 	m	()V	m_4528414		m_4528414
-c	net/minecraft/unmapped/C_9549387		net/minecraft/unmapped/C_9549387
-	f	Ljava/util/Map;	f_7636934		f_7636934
-	f	Ljava/util/Map;	f_9823442		f_9823442
+c	net/minecraft/unmapped/C_9549387		net/minecraft/world/entity/ai/attributes/BaseAttributeMap
+	f	Ljava/util/Map;	f_7636934		attributesByObject
+	f	Ljava/util/Map;	f_9823442		attributesByName
 	m	()V	<init>		<init>
-	m	(Lnet/minecraft/unmapped/C_3731908;)Lnet/minecraft/unmapped/C_5801153;	m_6904530		m_6904530
+	m	(Lnet/minecraft/unmapped/C_3731908;)Lnet/minecraft/unmapped/C_5801153;	m_6904530		getInstance
 		p	1			p_1
-	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_5801153;	m_2417065		m_2417065
+	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_5801153;	m_2417065		getInstance
 		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_3731908;)Lnet/minecraft/unmapped/C_5801153;	m_1621097		m_1621097
+	m	(Lnet/minecraft/unmapped/C_3731908;)Lnet/minecraft/unmapped/C_5801153;	m_1621097		createAttributeInstance
 		p	1			p_1
-	m	()Ljava/util/Collection;	m_1606856		m_1606856
+	m	()Ljava/util/Collection;	m_1606856		getAttributes

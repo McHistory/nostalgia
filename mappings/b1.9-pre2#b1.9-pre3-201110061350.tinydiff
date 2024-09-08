@@ -144,8 +144,8 @@ c	net/minecraft/unmapped/C_2751481
 		p	4			p_4
 		p	5			p_5
 c	net/minecraft/unmapped/C_2800860
-	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_3984704;	m_9198727		m_9198727
-		p	1			p_1
+	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_3984704;	m_9198727		get
+		p	1			key
 c	net/minecraft/unmapped/C_3215913
 	m	(Lnet/minecraft/unmapped/C_5371184;IF)Z	m_0156125	m_0156125	
 		p	1		p_1	
@@ -567,9 +567,9 @@ c	net/minecraft/unmapped/C_6028060
 		p	2			p_2
 		p	3			p_3
 c	net/minecraft/unmapped/C_6907923
-	f	Z	f_4650597		f_4650597
-	m	()Z	m_2374060		m_2374060
-	m	()Lnet/minecraft/unmapped/C_6907923;	m_8677237		m_8677237
+	f	Z	f_4650597		isProjectile
+	m	()Z	m_2374060		isProjectile
+	m	()Lnet/minecraft/unmapped/C_6907923;	m_8677237		setProjectile
 c	net/minecraft/unmapped/C_6932701
 	m	(I)V	<init>	<init>	
 		p	1		p_1	
@@ -773,7 +773,7 @@ c	net/minecraft/unmapped/C_1335865		net/minecraft/unmapped/C_1335865
 		p	4			p_4
 		p	5			p_5
 		p	6			p_6
-c	net/minecraft/unmapped/C_1392594		net/minecraft/unmapped/C_1392594
+c	net/minecraft/unmapped/C_1392594		net/minecraft/util/Profiler
 	f	Z	f_1159822		f_1159822
 	f	Ljava/util/List;	f_8627868		f_8627868
 	f	Ljava/util/List;	f_5441755		f_5441755
@@ -781,9 +781,9 @@ c	net/minecraft/unmapped/C_1392594		net/minecraft/unmapped/C_1392594
 	f	Ljava/util/Map;	f_2766007		f_2766007
 	m	()V	<init>		<init>
 	m	()V	m_7423528		m_7423528
-	m	(Ljava/lang/String;)V	m_9692481		m_9692481
+	m	(Ljava/lang/String;)V	m_9692481		push
 		p	0			p_0
-	m	()V	m_6364701		m_6364701
+	m	()V	m_6364701		pop
 	m	(Ljava/lang/String;)Ljava/util/List;	m_0528647		m_0528647
 		p	0			p_0
 	m	(Ljava/lang/String;)V	m_7808852		m_7808852
@@ -980,15 +980,15 @@ c	net/minecraft/unmapped/C_4821901		net/minecraft/unmapped/C_4821901
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
-c	net/minecraft/unmapped/C_4865434		net/minecraft/unmapped/C_4865434
-	f	Lnet/minecraft/unmapped/C_4865434;	f_1938897		f_1938897
-	f	Lnet/minecraft/unmapped/C_4865434;	f_7751220		f_7751220
-	f	Lnet/minecraft/unmapped/C_4865434;	f_1985646		f_1985646
-	f	Lnet/minecraft/unmapped/C_4865434;	f_6915541		f_6915541
-	f	Lnet/minecraft/unmapped/C_4865434;	f_7857872		f_7857872
-	f	Lnet/minecraft/unmapped/C_4865434;	f_7866396		f_7866396
-	f	Lnet/minecraft/unmapped/C_4865434;	f_9723321		f_9723321
-	f	Lnet/minecraft/unmapped/C_4865434;	f_5958772		f_5958772
+c	net/minecraft/unmapped/C_4865434		net/minecraft/world/items/enchantment/EnchantmentCategory
+	f	Lnet/minecraft/unmapped/C_4865434;	f_1938897		ALL
+	f	Lnet/minecraft/unmapped/C_4865434;	f_7751220		ARMOR
+	f	Lnet/minecraft/unmapped/C_4865434;	f_1985646		ARMOR_FEET
+	f	Lnet/minecraft/unmapped/C_4865434;	f_6915541		ARMOR_LEGS
+	f	Lnet/minecraft/unmapped/C_4865434;	f_7857872		ARMOR_TORSO
+	f	Lnet/minecraft/unmapped/C_4865434;	f_7866396		ARMOR_HEAD
+	f	Lnet/minecraft/unmapped/C_4865434;	f_9723321		WEAPON
+	f	Lnet/minecraft/unmapped/C_4865434;	f_5958772		DIGGER
 	f	[Lnet/minecraft/unmapped/C_4865434;	f_6837357		f_6837357
 	m	()[Lnet/minecraft/unmapped/C_4865434;	values		values
 	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_4865434;	valueOf		valueOf

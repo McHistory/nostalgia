@@ -11,11 +11,11 @@ c	net/minecraft/client/Minecraft
 		p	2			p_2
 		p	3			p_3
 c	net/minecraft/server/MinecraftServer
-	f	Ljava/lang/String;	f_4794869		f_4794869
+	f	Ljava/lang/String;	f_4794869		motd
 c	net/minecraft/unmapped/C_0019534
 	f	I	f_2618674		f_2618674
-	m	()I	m_3408806		m_3408806
-	m	()I	m_4876951		m_4876951
+	m	()I	m_3408806		getPlayerCount
+	m	()I	m_4876951		getMaxPlayers
 c	net/minecraft/unmapped/C_0070166
 	f	Ljava/util/Map;	f_8148180	cache	
 	f	Lnet/minecraft/unmapped/C_1264342;	f_8148180		cache
@@ -319,10 +319,10 @@ c	net/minecraft/unmapped/C_1233611
 	f	Lnet/minecraft/unmapped/C_1233611;	f_9990843		f_9990843
 	f	Lnet/minecraft/unmapped/C_1233611;	f_8163510		f_8163510
 	f	Lnet/minecraft/unmapped/C_1233611;	f_4943942		f_4943942
-	f	F	f_7130198		f_7130198
-	f	F	f_7604466		f_7604466
-	f	I	f_0001718		f_0001718
-	f	I	f_9157409		f_9157409
+	f	F	f_7130198		openness
+	f	F	f_7604466		oOpenness
+	f	I	f_0001718		openCount
+	f	I	f_9157409		tickInterval
 	m	()V	m_2336495		m_2336495
 	m	()V	m_2871740		m_2871740
 	m	()V	m_1420044		m_1420044
@@ -437,12 +437,12 @@ c	net/minecraft/unmapped/C_1826831
 	m	(Lnet/minecraft/unmapped/C_6907923;)V	m_4650833		m_4650833
 		p	1			p_1
 c	net/minecraft/unmapped/C_2074023
-	f	I	f_7569484		f_7569484
-	f	Lnet/minecraft/unmapped/C_3635204;	f_7438990		f_7438990
-	m	(II)V	m_3887641		m_3887641
+	f	I	f_7569484		data
+	f	Lnet/minecraft/unmapped/C_3635204;	f_7438990		block
+	m	(II)V	m_3887641		triggerEvent
 		p	1			p_1
 		p	2			p_2
-	m	()V	m_2336495		m_2336495
+	m	()V	m_2336495		clearCache
 c	net/minecraft/unmapped/C_2178068
 	m	()V	m_7342000		m_7342000
 	m	()V	m_1388832		m_1388832
@@ -1042,8 +1042,8 @@ c	net/minecraft/unmapped/C_4331994
 		p	1			p_1
 		p	2			p_2
 c	net/minecraft/unmapped/C_4390289
-	m	()V	m_7342000		m_7342000
-	m	()V	m_1388832		m_1388832
+	m	()V	m_7342000		startOpen
+	m	()V	m_1388832		stopOpen
 c	net/minecraft/unmapped/C_4443804
 	m	(Lnet/minecraft/unmapped/C_4522670;)V	m_8063398		m_8063398
 		p	1			p_1
@@ -1090,7 +1090,7 @@ c	net/minecraft/unmapped/C_4636105
 	f	Lnet/minecraft/unmapped/C_4636105;	f_7226811	ICE_DESERT	
 	f	Lnet/minecraft/unmapped/C_4636105;	f_9026466	TUNDRA	
 	f	[Lnet/minecraft/unmapped/C_4636105;	f_3006990	BIOMES	
-	f	[Lnet/minecraft/unmapped/C_4636105;	f_7328142		f_7328142
+	f	[Lnet/minecraft/unmapped/C_4636105;	f_7328142		BIOMES
 	f	Lnet/minecraft/unmapped/C_4636105;	f_7062400		f_7062400
 	f	Lnet/minecraft/unmapped/C_4636105;	f_0504497		f_0504497
 	f	Lnet/minecraft/unmapped/C_4636105;	f_5710937		f_5710937

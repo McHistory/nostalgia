@@ -25,12 +25,12 @@ c	net/minecraft/unmapped/C_3682532
 		p	2			p_2
 		p	3			p_3
 c	net/minecraft/unmapped/C_4030632
-	f	Lnet/minecraft/unmapped/C_6619871;	f_7809013		f_7809013
-	m	(ILnet/minecraft/unmapped/C_6619871;Ljava/util/List;)V	m_2766706		m_2766706
+	f	Lnet/minecraft/unmapped/C_6619871;	f_7809013		category
+	m	(ILnet/minecraft/unmapped/C_6619871;Ljava/util/List;)V	m_2766706		fillItemCategory
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
-	m	()Lnet/minecraft/unmapped/C_6619871;	m_0134906		m_0134906
+	m	()Lnet/minecraft/unmapped/C_6619871;	m_0134906		getItemCategory
 	m	(Lnet/minecraft/unmapped/C_6619871;)Lnet/minecraft/unmapped/C_4030632;	m_2899211		m_2899211
 		p	1			p_1
 c	net/minecraft/unmapped/C_5422301
@@ -144,32 +144,32 @@ c	net/minecraft/unmapped/C_0181745	net/minecraft/unmapped/C_0181745
 		p	3		p_3	
 c	net/minecraft/unmapped/C_6378766
 	m	()Ljava/io/File;	m_4851205	m_4851205	
-c	net/minecraft/unmapped/C_6619871		net/minecraft/unmapped/C_6619871
-	f	[Lnet/minecraft/unmapped/C_6619871;	f_6773222		f_6773222
-	f	Lnet/minecraft/unmapped/C_6619871;	f_0189740		f_0189740
-	f	Lnet/minecraft/unmapped/C_6619871;	f_2610643		f_2610643
-	f	Lnet/minecraft/unmapped/C_6619871;	f_9124884		f_9124884
-	f	Lnet/minecraft/unmapped/C_6619871;	f_7387975		f_7387975
-	f	Lnet/minecraft/unmapped/C_6619871;	f_4806595		f_4806595
-	f	Lnet/minecraft/unmapped/C_6619871;	f_6120162		f_6120162
-	f	Lnet/minecraft/unmapped/C_6619871;	f_1058316		f_1058316
-	f	Lnet/minecraft/unmapped/C_6619871;	f_7804881		f_7804881
-	f	Lnet/minecraft/unmapped/C_6619871;	f_5131388		f_5131388
-	f	Lnet/minecraft/unmapped/C_6619871;	f_1726073		f_1726073
-	f	Lnet/minecraft/unmapped/C_6619871;	f_5106413		f_5106413
-	f	Lnet/minecraft/unmapped/C_6619871;	f_6654792		f_6654792
-	f	I	f_7717427		f_7717427
-	f	Ljava/lang/String;	f_9337893		f_9337893
+c	net/minecraft/unmapped/C_6619871		net/minecraft/world/item/CreativeModeTab
+	f	[Lnet/minecraft/unmapped/C_6619871;	f_6773222		TABS
+	f	Lnet/minecraft/unmapped/C_6619871;	f_0189740		TAB_BUILDING_BLOCKS
+	f	Lnet/minecraft/unmapped/C_6619871;	f_2610643		TAB_DECORATIONS
+	f	Lnet/minecraft/unmapped/C_6619871;	f_9124884		TAB_REDSTONE
+	f	Lnet/minecraft/unmapped/C_6619871;	f_7387975		TAB_TRANSPORTATION
+	f	Lnet/minecraft/unmapped/C_6619871;	f_4806595		TAB_MISC
+	f	Lnet/minecraft/unmapped/C_6619871;	f_6120162		TAB_SEARCH
+	f	Lnet/minecraft/unmapped/C_6619871;	f_1058316		TAB_FOOD
+	f	Lnet/minecraft/unmapped/C_6619871;	f_7804881		TAB_TOOLS
+	f	Lnet/minecraft/unmapped/C_6619871;	f_5131388		TAB_COMBAT
+	f	Lnet/minecraft/unmapped/C_6619871;	f_1726073		TAB_BREWING
+	f	Lnet/minecraft/unmapped/C_6619871;	f_5106413		TAB_MATERIALS
+	f	Lnet/minecraft/unmapped/C_6619871;	f_6654792		TAB_INVENTORY
+	f	I	f_7717427		id
+	f	Ljava/lang/String;	f_9337893		langId
 	m	(ILjava/lang/String;)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-	m	()I	m_6606375		m_6606375
-	m	()Ljava/lang/String;	m_0670835		m_0670835
-	m	()Ljava/lang/String;	m_1852516		m_1852516
-	m	()Lnet/minecraft/unmapped/C_4030632;	m_1581887		m_1581887
-	m	()I	m_3000683		m_3000683
-	m	()I	m_6777351		m_6777351
-	m	()Z	m_2892783		m_2892783
+		p	1			id
+		p	2			langId
+	m	()I	m_6606375		getId
+	m	()Ljava/lang/String;	m_0670835		getLangId
+	m	()Ljava/lang/String;	m_1852516		getName
+	m	()Lnet/minecraft/unmapped/C_4030632;	m_1581887		getIconItem
+	m	()I	m_3000683		getIcon
+	m	()I	m_6777351		getColumn
+	m	()Z	m_2892783		isTopRow
 	m	(Ljava/util/List;)V	m_8656326		m_8656326
 		p	1			p_1
 	m	()V	<clinit>		<clinit>

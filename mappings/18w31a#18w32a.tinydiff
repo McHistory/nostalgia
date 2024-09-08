@@ -48,10 +48,10 @@ c	net/minecraft/unmapped/C_3571139
 		p	4			p_4
 		p	5			p_5
 c	net/minecraft/unmapped/C_3635204
-	f	Lnet/minecraft/unmapped/C_1033240;	f_7603144	f_7603144	
+	f	Lnet/minecraft/unmapped/C_1033240;	f_7603144	REGISTRY	
 	f	Lnet/minecraft/unmapped/C_0561170;	f_2682529	f_2682529	
-	m	(I)Lnet/minecraft/unmapped/C_3635204;	m_3971259	m_3971259	
-		p	0		p_0	
+	m	(I)Lnet/minecraft/unmapped/C_3635204;	m_3971259	byId	
+		p	0		id	
 	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_3635204;	m_3638151	m_3638151	
 		p	0		p_0	
 c	net/minecraft/unmapped/C_3906126
@@ -247,8 +247,8 @@ c	net/minecraft/unmapped/C_3514359
 c	net/minecraft/unmapped/C_7574603
 	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_3635204;	m_8811167		m_8811167
 		p	0			p_0
-c	net/minecraft/unmapped/C_4598210	net/minecraft/unmapped/C_4598210	
-	f	Ljava/util/Map;	f_1481872	f_1481872	
+c	net/minecraft/unmapped/C_4598210	net/minecraft/core/MappedRegistry	
+	f	Ljava/util/Map;	f_1481872	storage	
 	f	Lorg/apache/logging/log4j/Logger;	f_2474619	f_2474619	
 	f	[Ljava/lang/Object;	f_4947366	f_4947366	
 	m	()V	<init>	<init>	
@@ -260,18 +260,18 @@ c	net/minecraft/unmapped/C_4598210	net/minecraft/unmapped/C_4598210
 	m	(Ljava/lang/Object;)Z	m_4761976	m_4761976	
 		p	1		p_1	
 	m	()V	<clinit>	<clinit>	
-	m	()Ljava/util/Map;	m_4675656	m_4675656	
+	m	()Ljava/util/Map;	m_4675656	createStorage	
 	m	()Ljava/util/Iterator;	iterator	iterator	
 	m	(Ljava/util/Random;)Ljava/lang/Object;	m_4179863	m_4179863	
 		p	1		p_1	
 	m	()Ljava/util/Set;	m_0448370	m_0448370	
 	m	()Z	m_7228376	m_7228376	
-c	net/minecraft/unmapped/C_8295645	net/minecraft/unmapped/C_8295645	
-	m	(Ljava/lang/Object;)Ljava/lang/Object;	m_6111517	m_6111517	
-		p	1		p_1	
-	m	(Ljava/lang/Object;Ljava/lang/Object;)V	m_6586356	m_6586356	
-		p	1		p_1	
-		p	2		p_2	
+c	net/minecraft/unmapped/C_8295645	net/minecraft/core/Registry	
+	m	(Ljava/lang/Object;)Ljava/lang/Object;	m_6111517	get	
+		p	1		value	
+	m	(Ljava/lang/Object;Ljava/lang/Object;)V	m_6586356	register	
+		p	1		key	
+		p	2		value	
 	m	()Z	m_7228376	m_7228376	
 	m	()Ljava/util/stream/Stream;	m_2093582	m_2093582	
 c	net/minecraft/unmapped/C_9303266	net/minecraft/unmapped/C_9303266	
@@ -317,7 +317,7 @@ c	net/minecraft/unmapped/C_9241136
 	m	(Ljava/lang/Object;)Z	m_4761976	m_4761976	
 		p	1		p_1	
 	m	()Ljava/util/Map;	m_4675656	m_4675656	
-	m	(ILjava/lang/Object;Ljava/lang/Object;)V	m_4380168	m_4380168	
+	m	(ILjava/lang/Object;Ljava/lang/Object;)V	m_4380168	registerMapping	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
@@ -326,7 +326,7 @@ c	net/minecraft/unmapped/C_9241136
 	m	(Ljava/lang/Object;Ljava/lang/Object;)V	m_6586356	m_6586356	
 		p	1		p_1	
 		p	2		p_2	
-	m	(ILnet/minecraft/unmapped/C_0561170;Ljava/lang/Object;)V	m_4380168		m_4380168
+	m	(ILnet/minecraft/unmapped/C_0561170;Ljava/lang/Object;)V	m_4380168		registerMapping
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3

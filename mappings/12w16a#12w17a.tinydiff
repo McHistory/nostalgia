@@ -1,8 +1,8 @@
 tiny	2	0
 c	net/minecraft/server/MinecraftServer
-	f	Ljava/security/KeyPair;	f_9068580		f_9068580
+	f	Ljava/security/KeyPair;	f_9068580		keyPair
 	m	()Lnet/minecraft/unmapped/C_6015078;	m_9353503		m_9353503
-	m	()Ljava/security/KeyPair;	m_8059729		m_8059729
+	m	()Ljava/security/KeyPair;	m_8059729		getKeyPair
 c	net/minecraft/unmapped/C_0324512
 	f	I	f_4486234		f_4486234
 	f	Z	f_6970468		f_6970468
@@ -88,7 +88,7 @@ c	net/minecraft/unmapped/C_3699792
 	f	Ljava/util/List;	f_7278261	f_7278261	
 	f	I	f_1427052	f_1427052	
 	f	Z	f_4574427	f_4574427	
-	f	Lnet/minecraft/unmapped/C_5091011;	f_2326521		f_2326521
+	f	Lnet/minecraft/unmapped/C_5091011;	f_2326521		chat
 	m	()V	m_6434029	tick	
 	m	(Ljava/lang/String;)V	m_4902001	addMessage	
 		p	1		msg	
@@ -584,35 +584,35 @@ c	net/minecraft/unmapped/C_4114007		net/minecraft/unmapped/C_4114007
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_2750078;)Ljava/lang/String;	m_9222746		m_9222746
 		p	1			p_1
-c	net/minecraft/unmapped/C_5091011		net/minecraft/unmapped/C_5091011
-	f	Lnet/minecraft/client/Minecraft;	f_6257813		f_6257813
-	f	Ljava/util/List;	f_7988098		f_7988098
-	f	Ljava/util/List;	f_3072025		f_3072025
-	f	I	f_7825952		f_7825952
-	f	Z	f_8263825		f_8263825
+c	net/minecraft/unmapped/C_5091011		net/minecraft/client/gui/components/ChatComponent
+	f	Lnet/minecraft/client/Minecraft;	f_6257813		minecraft
+	f	Ljava/util/List;	f_7988098		recentChat
+	f	Ljava/util/List;	f_3072025		allMessages
+	f	I	f_7825952		chatScrollbarPos
+	f	Z	f_8263825		newMessageSinceScroll
 	m	(Lnet/minecraft/client/Minecraft;)V	<init>		<init>
 		p	1			p_1
-	m	(I)V	m_3091898		m_3091898
+	m	(I)V	m_3091898		render
 		p	1			p_1
-	m	()V	m_2321808		m_2321808
-	m	(Ljava/lang/String;)V	m_4094256		m_4094256
+	m	()V	m_2321808		clearMessages
+	m	(Ljava/lang/String;)V	m_4094256		addMessage
 		p	1			p_1
-	m	(Ljava/lang/String;I)V	m_2910357		m_2910357
-		p	1			p_1
-		p	2			p_2
-	m	()Ljava/util/List;	m_0673229		m_0673229
-	m	(Ljava/lang/String;)V	m_7465377		m_7465377
-		p	1			p_1
-	m	()V	m_3074124		m_3074124
-	m	(I)V	m_8956461		m_8956461
-		p	1			p_1
-	m	(II)Lnet/minecraft/unmapped/C_7623767;	m_5217291		m_5217291
+	m	(Ljava/lang/String;I)V	m_2910357		addMessage
 		p	1			p_1
 		p	2			p_2
+	m	()Ljava/util/List;	m_0673229		getRecentChat
+	m	(Ljava/lang/String;)V	m_7465377		addRecentChat
+		p	1			p_1
+	m	()V	m_3074124		resetChatScroll
+	m	(I)V	m_8956461		scrollChat
+		p	1			p_1
+	m	(II)Lnet/minecraft/unmapped/C_7623767;	m_5217291		getClickedComponentAt
+		p	1			x
+		p	2			y
 	m	(Ljava/lang/String;)V	m_8639946		m_8639946
 		p	1			p_1
-	m	()Z	m_7312980		m_7312980
-	m	(I)V	m_7634683		m_7634683
+	m	()Z	m_7312980		isChatFocused
+	m	(I)V	m_7634683		removeById
 		p	1			p_1
 c	net/minecraft/unmapped/C_5293696		net/minecraft/unmapped/C_5293696
 	f	[Ljava/lang/String;	f_5465716		f_5465716

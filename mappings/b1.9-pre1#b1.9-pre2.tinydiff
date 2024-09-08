@@ -97,7 +97,7 @@ c	net/minecraft/unmapped/C_3466301
 c	net/minecraft/unmapped/C_3544017
 	m	()Lnet/minecraft/unmapped/C_3984704;	m_9394961		m_9394961
 c	net/minecraft/unmapped/C_3984704
-	m	()Lnet/minecraft/unmapped/C_3984704;	m_9394961		m_9394961
+	m	()Lnet/minecraft/unmapped/C_3984704;	m_9394961		copy
 c	net/minecraft/unmapped/C_4030632
 	f	Lnet/minecraft/unmapped/C_4030632;	f_2596382		f_2596382
 	f	Lnet/minecraft/unmapped/C_4030632;	f_5399970		f_5399970
@@ -142,9 +142,9 @@ c	net/minecraft/unmapped/C_4844124
 	m	(Lnet/minecraft/unmapped/C_2750078;Ljava/io/DataOutputStream;)V	m_0927322		m_0927322
 		p	1			p_1
 		p	2			p_2
-	m	(Ljava/io/DataInputStream;)Lnet/minecraft/unmapped/C_2800860;	m_7405563		m_7405563
+	m	(Ljava/io/DataInputStream;)Lnet/minecraft/unmapped/C_2800860;	m_7405563		readNbt
 		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_2800860;Ljava/io/DataOutputStream;)V	m_1834624		m_1834624
+	m	(Lnet/minecraft/unmapped/C_2800860;Ljava/io/DataOutputStream;)V	m_1834624		writeNbt
 		p	1			p_1
 		p	2			p_2
 c	net/minecraft/unmapped/C_4917405
@@ -201,8 +201,8 @@ c	net/minecraft/unmapped/C_7688744
 c	net/minecraft/unmapped/C_8135468
 	m	([B)Lnet/minecraft/unmapped/C_2800860;	m_6426323		m_6426323
 		p	0			p_0
-	m	(Lnet/minecraft/unmapped/C_2800860;)[B	m_0916758		m_0916758
-		p	0			p_0
+	m	(Lnet/minecraft/unmapped/C_2800860;)[B	m_0916758		write
+		p	0			tag
 c	net/minecraft/unmapped/C_8345828
 	m	()I	m_8512153		m_8512153
 	m	()I	m_0997600		m_0997600
@@ -322,9 +322,9 @@ c	net/minecraft/unmapped/C_5486012
 c	net/minecraft/unmapped/C_6141910
 	f	Lnet/minecraft/unmapped/C_6141910;	f_4172705		f_4172705
 c	net/minecraft/unmapped/C_6907923
-	f	Z	f_0141126		f_0141126
-	m	()Lnet/minecraft/unmapped/C_6907923;	m_1075922		m_1075922
-	m	()Z	m_2236663		m_2236663
+	f	Z	f_0141126		isFireSource
+	m	()Lnet/minecraft/unmapped/C_6907923;	m_1075922		setIsFire
+	m	()Z	m_2236663		isFire
 c	net/minecraft/unmapped/C_6932701
 	m	()Z	m_1878798		m_1878798
 c	net/minecraft/unmapped/C_0043375

@@ -88,8 +88,8 @@ c	net/minecraft/unmapped/C_1851525$C_5687472
 	f	I	f_7452194	f_7452194	
 	f	Lnet/minecraft/unmapped/C_2750078;	f_7452194		f_7452194
 c	net/minecraft/unmapped/C_2074023
-	m	(Lnet/minecraft/unmapped/C_4519256;)V	m_3059718		m_3059718
-		p	1			p_1
+	m	(Lnet/minecraft/unmapped/C_4519256;)V	m_3059718		fillCrashReportCategory
+		p	1			category
 	m	()Ljava/util/Map;	m_0043888		m_0043888
 c	net/minecraft/unmapped/C_2074023$1659515		1659515
 	f	Lnet/minecraft/unmapped/C_2074023;	f_1820652		f_1820652
@@ -869,41 +869,41 @@ c	net/minecraft/unmapped/C_7109321
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
-c	net/minecraft/unmapped/C_4519256		net/minecraft/unmapped/C_4519256
-	f	Lnet/minecraft/unmapped/C_5269767;	f_7642554		f_7642554
-	f	Ljava/lang/String;	f_5098640		f_5098640
-	f	Ljava/util/List;	f_6703941		f_6703941
-	f	[Ljava/lang/StackTraceElement;	f_0943128		f_0943128
+c	net/minecraft/unmapped/C_4519256		net/minecraft/CrashReportCategory
+	f	Lnet/minecraft/unmapped/C_5269767;	f_7642554		report
+	f	Ljava/lang/String;	f_5098640		title
+	f	Ljava/util/List;	f_6703941		entries
+	f	[Ljava/lang/StackTraceElement;	f_0943128		stackTrace
 	m	(Lnet/minecraft/unmapped/C_5269767;Ljava/lang/String;)V	<init>		<init>
+		p	1			report
+		p	2			title
+	m	(DDD)Ljava/lang/String;	m_0981028		formatLocation
+		p	0			x
+		p	2			y
+		p	4			z
+	m	(III)Ljava/lang/String;	m_5288143		formatLocation
+		p	0			x
+		p	1			y
+		p	2			z
+	m	(Ljava/lang/String;Ljava/util/concurrent/Callable;)V	m_0611731		setDetail
 		p	1			p_1
 		p	2			p_2
-	m	(DDD)Ljava/lang/String;	m_0981028		m_0981028
-		p	0			p_0
-		p	2			p_2
-		p	4			p_4
-	m	(III)Ljava/lang/String;	m_5288143		m_5288143
-		p	0			p_0
+	m	(Ljava/lang/String;Ljava/lang/Object;)V	m_1784501		setDetail
 		p	1			p_1
 		p	2			p_2
-	m	(Ljava/lang/String;Ljava/util/concurrent/Callable;)V	m_0611731		m_0611731
+	m	(Ljava/lang/String;Ljava/lang/Throwable;)V	m_7430309		setDetailError
 		p	1			p_1
 		p	2			p_2
-	m	(Ljava/lang/String;Ljava/lang/Object;)V	m_1784501		m_1784501
+	m	(I)I	m_3974096		fillInStackTrace
+		p	1			p_1
+	m	(Ljava/lang/StackTraceElement;Ljava/lang/StackTraceElement;)Z	m_0599636		validateStackTrace
 		p	1			p_1
 		p	2			p_2
-	m	(Ljava/lang/String;Ljava/lang/Throwable;)V	m_7430309		m_7430309
+	m	(I)V	m_8753226		trimStacktrace
 		p	1			p_1
-		p	2			p_2
-	m	(I)I	m_3974096		m_3974096
+	m	(Ljava/lang/StringBuilder;)V	m_3055516		getDetails
 		p	1			p_1
-	m	(Ljava/lang/StackTraceElement;Ljava/lang/StackTraceElement;)Z	m_0599636		m_0599636
-		p	1			p_1
-		p	2			p_2
-	m	(I)V	m_8753226		m_8753226
-		p	1			p_1
-	m	(Ljava/lang/StringBuilder;)V	m_3055516		m_3055516
-		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_4519256;IIIII)V	m_3849663		m_3849663
+	m	(Lnet/minecraft/unmapped/C_4519256;IIIII)V	m_3849663		populateBlockDetails
 		p	0			p_0
 		p	1			p_1
 		p	2			p_2
@@ -932,14 +932,14 @@ c	net/minecraft/unmapped/C_4519256$9328221		9328221
 		p	1			p_1
 	m	()Ljava/lang/String;	m_3555168		m_3555168
 	m	()Ljava/lang/Object;	call		call
-c	net/minecraft/unmapped/C_4519256$C_1748564		C_1748564
-	f	Ljava/lang/String;	f_9317071		f_9317071
-	f	Ljava/lang/String;	f_7778634		f_7778634
+c	net/minecraft/unmapped/C_4519256$C_1748564		Entry
+	f	Ljava/lang/String;	f_9317071		key
+	f	Ljava/lang/String;	f_7778634		value
 	m	(Ljava/lang/String;Ljava/lang/Object;)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-	m	()Ljava/lang/String;	m_5830447		m_5830447
-	m	()Ljava/lang/String;	m_3034024		m_3034024
+		p	1			key
+		p	2			value
+	m	()Ljava/lang/String;	m_5830447		getKey
+	m	()Ljava/lang/String;	m_3034024		getValue
 c	net/minecraft/unmapped/C_5632138		net/minecraft/unmapped/C_5632138
 	f	Lnet/minecraft/unmapped/C_2178068;	f_1901828		f_1901828
 	m	(Lnet/minecraft/unmapped/C_1415320;F)V	<init>		<init>

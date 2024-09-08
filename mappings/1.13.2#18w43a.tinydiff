@@ -3470,18 +3470,18 @@ c	net/minecraft/unmapped/C_1492128
 		p	0			p_0
 		p	1			p_1
 c	net/minecraft/unmapped/C_2237759
-	f	I	f_7105671	f_7105671	
-	f	Lnet/minecraft/unmapped/C_2237759$C_7000130;	f_7105671		f_7105671
+	f	I	f_7105671	operation	
+	f	Lnet/minecraft/unmapped/C_2237759$C_7000130;	f_7105671		operation
 	m	(Ljava/lang/String;DI)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
-		p	4		p_4	
+		p	1		name	
+		p	2		amount	
+		p	4		operation	
 	m	(Ljava/util/UUID;Ljava/lang/String;DI)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	5		p_5	
-	m	()I	m_8746986	m_8746986	
+		p	1		id	
+		p	2		name	
+		p	3		amount	
+		p	5		operation	
+	m	()I	m_8746986	getOperation	
 	m	(Ljava/util/UUID;Ljava/util/function/Supplier;DI)V	<init>	<init>	
 		p	1		p_1	
 		p	2		p_2	
@@ -3501,7 +3501,7 @@ c	net/minecraft/unmapped/C_2237759
 		p	2			p_2
 		p	3			p_3
 		p	5			p_5
-	m	()Lnet/minecraft/unmapped/C_2237759$C_7000130;	m_8746986		m_8746986
+	m	()Lnet/minecraft/unmapped/C_2237759$C_7000130;	m_8746986		getOperation
 c	net/minecraft/unmapped/C_2237759$C_7000130		C_7000130
 	f	Lnet/minecraft/unmapped/C_2237759$C_7000130;	f_2317834		f_2317834
 	f	Lnet/minecraft/unmapped/C_2237759$C_7000130;	f_6981478		f_6981478
@@ -3544,11 +3544,11 @@ c	net/minecraft/unmapped/C_2587956
 c	net/minecraft/unmapped/C_3719935
 	f	Lnet/minecraft/unmapped/C_3731908;	f_9018307		f_9018307
 c	net/minecraft/unmapped/C_5801153
-	m	(I)Ljava/util/Collection;	m_3070322	m_3070322	
-		p	1		p_1	
+	m	(I)Ljava/util/Collection;	m_3070322	getAppliedModifiers	
+		p	1		operation	
 	m	(I)Ljava/util/Collection;	m_6034809	m_6034809	
 		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_2237759$C_7000130;)Ljava/util/Collection;	m_3070322		m_3070322
+	m	(Lnet/minecraft/unmapped/C_2237759$C_7000130;)Ljava/util/Collection;	m_3070322		getAppliedModifiers
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_2237759$C_7000130;)Ljava/util/Collection;	m_6034809		m_6034809
 		p	1			p_1
@@ -3739,8 +3739,8 @@ c	net/minecraft/unmapped/C_6917250
 		p	1			p_1
 		p	2			p_2
 c	net/minecraft/unmapped/C_6923540
-	m	(I)Ljava/lang/Object;	m_4640952	m_4640952	
-		p	1		p_1	
+	m	(I)Ljava/lang/Object;	m_4640952	byId	
+		p	1		id	
 	m	(I)Ljava/lang/Object;	m_4368911		m_4368911
 		p	1			p_1
 c	net/minecraft/unmapped/C_7915035
@@ -4321,7 +4321,7 @@ c	net/minecraft/unmapped/C_8089590
 c	net/minecraft/unmapped/C_8997200
 	f	I	f_8652438		f_8652438
 c	net/minecraft/unmapped/C_9241136
-	m	(ILnet/minecraft/unmapped/C_0561170;Ljava/lang/Object;)V	m_4380168	m_4380168	
+	m	(ILnet/minecraft/unmapped/C_0561170;Ljava/lang/Object;)V	m_4380168	registerMapping	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	

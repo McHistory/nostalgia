@@ -516,7 +516,7 @@ c	net/minecraft/unmapped/C_4030632
 		p	3		x	
 		p	4		y	
 		p	5		z	
-	m	()Z	m_8831628		m_8831628
+	m	()Z	m_8831628		canBeDepleted
 	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_1013763;Lnet/minecraft/unmapped/C_1013763;)Z	m_9532015		hurtEnemy
 		p	1			weapon
 		p	2			enemy
@@ -1462,7 +1462,7 @@ c	net/minecraft/unmapped/C_0324512		net/minecraft/server/level/ServerPlayer
 	f	D	f_1801340		f_1801340
 	f	Ljava/util/List;	f_1683304		f_1683304
 	f	Ljava/util/Set;	f_5806656		f_5806656
-	f	I	f_5431237		f_5431237
+	f	I	f_5431237		lastSentHealth
 	f	I	f_1478225		spawnInvulnerableTime
 	f	[Lnet/minecraft/unmapped/C_2750078;	f_5960888		f_5960888
 	f	I	f_3098613		containerCounter
@@ -2458,7 +2458,7 @@ c	net/minecraft/unmapped/C_2835550		net/minecraft/stats/CustomStat
 		p	1			p_1
 		p	2			p_2
 	m	()V	<clinit>		<clinit>
-c	net/minecraft/unmapped/C_2942118		net/minecraft/world/level/storage/LevelFormat
+c	net/minecraft/unmapped/C_2942118		net/minecraft/world/level/storage/LevelStorageSource
 	m	()Ljava/lang/String;	m_3513722		getName
 	m	(Ljava/lang/String;Z)Lnet/minecraft/unmapped/C_9147018;	m_5678133		m_5678133
 		p	1			p_1
@@ -2474,7 +2474,7 @@ c	net/minecraft/unmapped/C_2942118		net/minecraft/world/level/storage/LevelForma
 		p	2			levelName
 	m	(Ljava/lang/String;)Z	m_1749980		requiresConversion
 		p	1			levelName
-	m	(Ljava/lang/String;Lnet/minecraft/unmapped/C_7918626;)Z	m_0480713		convert
+	m	(Ljava/lang/String;Lnet/minecraft/unmapped/C_7918626;)Z	m_0480713		convertLevel
 		p	1			p_1
 		p	2			p_2
 c	net/minecraft/unmapped/C_2947053		net/minecraft/client/gui/screens/worldselection/CreateWorldScreen
@@ -3282,7 +3282,7 @@ c	net/minecraft/unmapped/C_8649417		net/minecraft/world/item/BedItem
 		p	5			p_5
 		p	6			p_6
 		p	7			p_7
-c	net/minecraft/unmapped/C_8664891		net/minecraft/world/level/storage/OldLevelFormat
+c	net/minecraft/unmapped/C_8664891		net/minecraft/world/level/storage/OldLevelSource
 	f	Ljava/io/File;	f_6173714		basePath
 	m	(Ljava/io/File;)V	<init>		<init>
 		p	1			baseDir

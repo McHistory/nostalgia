@@ -1,7 +1,7 @@
 tiny	2	0
 c	net/minecraft/server/MinecraftServer
 	f	Ljava/lang/String;	f_3284830		f_3284830
-	f	I	f_1445625		f_1445625
+	f	I	f_1445625		port
 	f	Lnet/minecraft/unmapped/C_8347941;	f_9724860		f_9724860
 	f	Lnet/minecraft/unmapped/C_8550120;	f_7846984		f_7846984
 	m	(Ljava/lang/String;I)I	m_5848886		m_5848886
@@ -18,20 +18,20 @@ c	net/minecraft/server/MinecraftServer
 	m	()Ljava/lang/String;	m_1202870		m_1202870
 	m	()I	m_8512448		m_8512448
 	m	()Ljava/lang/String;	m_6800460		m_6800460
-	m	()Ljava/lang/String;	m_2522607		m_2522607
-	m	()I	m_1208092		m_1208092
-	m	()I	m_6469578		m_6469578
+	m	()Ljava/lang/String;	m_2522607		getServerVersion
+	m	()I	m_1208092		getPlayerCount
+	m	()I	m_6469578		getMaxPlayers
 	m	()[Ljava/lang/String;	m_1705957		m_1705957
-	m	()Ljava/lang/String;	m_5197250		m_5197250
+	m	()Ljava/lang/String;	m_5197250		getLevelIdName
 	m	()Ljava/lang/String;	m_1043304		m_1043304
 	m	()V	m_9413617		m_9413617
 	m	(Ljava/lang/String;)Ljava/lang/String;	m_2998752		m_2998752
 		p	1			p_1
-	m	()Z	m_8035547		m_8035547
-	m	(Ljava/lang/String;)V	m_4579448		m_4579448
-		p	1			p_1
-	m	(Ljava/lang/String;)V	m_8344574		m_8344574
-		p	1			p_1
+	m	()Z	m_8035547		isDebugging
+	m	(Ljava/lang/String;)V	m_4579448		error
+		p	1			error
+	m	(Ljava/lang/String;)V	m_8344574		debug
+		p	1			msg
 	m	()[Ljava/lang/String;	m_6167886		m_6167886
 	m	()[Ljava/lang/String;	m_6507606		m_6507606
 c	net/minecraft/unmapped/C_0019534
@@ -1147,8 +1147,8 @@ c	net/minecraft/unmapped/C_4821901
 		p	4			p_4
 		p	5			p_5
 c	net/minecraft/unmapped/C_4865434
-	m	(Lnet/minecraft/unmapped/C_4030632;)Z	m_0694518		m_0694518
-		p	1			p_1
+	m	(Lnet/minecraft/unmapped/C_4030632;)Z	m_0694518		canEnchant
+		p	1			item
 c	net/minecraft/unmapped/C_5613525
 	f	I	f_6457456	f_6457456	
 	f	Lnet/minecraft/unmapped/C_5613525;	f_7406632		f_7406632

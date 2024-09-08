@@ -1398,8 +1398,8 @@ c	net/minecraft/unmapped/C_4821901
 		p	4			p_4
 		p	5			p_5
 c	net/minecraft/unmapped/C_4865434
-	m	(Lnet/minecraft/unmapped/C_4030632;)Z	m_0694518		m_0694518
-		p	1			p_1
+	m	(Lnet/minecraft/unmapped/C_4030632;)Z	m_0694518		canEnchant
+		p	1			item
 c	net/minecraft/unmapped/C_5613525
 	f	I	f_6457456	f_6457456	
 	f	Lnet/minecraft/unmapped/C_5613525;	f_7406632		f_7406632
@@ -1569,9 +1569,9 @@ c	net/minecraft/server/MinecraftServer		net/minecraft/server/MinecraftServer
 	f	Z	f_9476002		animals
 	f	Z	f_3140624		allowPvp
 	f	Z	f_5361901		allowFlight
-	f	Ljava/lang/String;	f_4794869		f_4794869
+	f	Ljava/lang/String;	f_4794869		motd
 	f	Ljava/lang/String;	f_3284830		f_3284830
-	f	I	f_1445625		f_1445625
+	f	I	f_1445625		port
 	f	Lnet/minecraft/unmapped/C_8347941;	f_9724860		f_9724860
 	f	Lnet/minecraft/unmapped/C_8550120;	f_7846984		f_7846984
 	m	()V	<init>		<init>
@@ -1625,20 +1625,20 @@ c	net/minecraft/server/MinecraftServer		net/minecraft/server/MinecraftServer
 	m	()Ljava/lang/String;	m_1202870		m_1202870
 	m	()I	m_8512448		m_8512448
 	m	()Ljava/lang/String;	m_6800460		m_6800460
-	m	()Ljava/lang/String;	m_2522607		m_2522607
-	m	()I	m_1208092		m_1208092
-	m	()I	m_6469578		m_6469578
+	m	()Ljava/lang/String;	m_2522607		getServerVersion
+	m	()I	m_1208092		getPlayerCount
+	m	()I	m_6469578		getMaxPlayers
 	m	()[Ljava/lang/String;	m_1705957		m_1705957
-	m	()Ljava/lang/String;	m_5197250		m_5197250
+	m	()Ljava/lang/String;	m_5197250		getLevelIdName
 	m	()Ljava/lang/String;	m_1043304		m_1043304
 	m	()V	m_9413617		m_9413617
 	m	(Ljava/lang/String;)Ljava/lang/String;	m_2998752		m_2998752
 		p	1			p_1
-	m	()Z	m_8035547		m_8035547
-	m	(Ljava/lang/String;)V	m_4579448		m_4579448
-		p	1			p_1
-	m	(Ljava/lang/String;)V	m_8344574		m_8344574
-		p	1			p_1
+	m	()Z	m_8035547		isDebugging
+	m	(Ljava/lang/String;)V	m_4579448		error
+		p	1			error
+	m	(Ljava/lang/String;)V	m_8344574		debug
+		p	1			msg
 	m	()[Ljava/lang/String;	m_6167886		m_6167886
 	m	()[Ljava/lang/String;	m_6507606		m_6507606
 c	net/minecraft/server/MinecraftServer$3360339		3360339
@@ -1787,10 +1787,10 @@ c	net/minecraft/unmapped/C_0019534		net/minecraft/server/PlayerList
 	m	(Lnet/minecraft/unmapped/C_0324512;Lnet/minecraft/unmapped/C_7366354;)V	m_2955866		m_2955866
 		p	1			player
 		p	2			level
-	m	(Lnet/minecraft/unmapped/C_0324512;)V	m_7059229		m_7059229
+	m	(Lnet/minecraft/unmapped/C_0324512;)V	m_7059229		sendAllPlayerInfo
 		p	1			player
-	m	()I	m_3408806		m_3408806
-	m	()I	m_4876951		m_4876951
+	m	()I	m_3408806		getPlayerCount
+	m	()I	m_4876951		getMaxPlayers
 	m	()V	<clinit>		<clinit>
 	m	()[Ljava/lang/String;	m_2012244		m_2012244
 	m	()Ljava/util/Set;	m_5059379		m_5059379
@@ -1803,7 +1803,7 @@ c	net/minecraft/unmapped/C_0324512		net/minecraft/server/level/ServerPlayer
 	f	D	f_1801340		f_1801340
 	f	Ljava/util/List;	f_1683304		f_1683304
 	f	Ljava/util/Set;	f_5806656		f_5806656
-	f	I	f_5431237		f_5431237
+	f	I	f_5431237		lastSentHealth
 	f	I	f_0301828		f_0301828
 	f	Z	f_2371118		f_2371118
 	f	I	f_1096552		f_1096552
@@ -1884,8 +1884,8 @@ c	net/minecraft/unmapped/C_0324512		net/minecraft/server/level/ServerPlayer
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
-	m	(Lnet/minecraft/unmapped/C_7699185;)V	m_0753902		m_0753902
-		p	1			p_1
+	m	(Lnet/minecraft/unmapped/C_7699185;)V	m_0753902		refreshContainer
+		p	1			menu
 	m	(Lnet/minecraft/unmapped/C_7699185;Ljava/util/List;)V	m_0076107		m_0076107
 		p	1			p_1
 		p	2			p_2
@@ -1909,7 +1909,7 @@ c	net/minecraft/unmapped/C_0324512		net/minecraft/server/level/ServerPlayer
 		p	1			p_1
 		p	2			p_2
 	m	()V	m_4740817		m_4740817
-	m	()V	m_2339273		m_2339273
+	m	()V	m_2339273		resetSentInfo
 	m	(Ljava/lang/String;)V	m_0278228		m_0278228
 		p	1			p_1
 	m	()V	m_7299718		m_7299718

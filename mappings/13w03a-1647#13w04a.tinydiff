@@ -1,6 +1,6 @@
 tiny	2	0
 c	net/minecraft/client/Minecraft
-	f	Lnet/minecraft/unmapped/C_1013763;	f_9451027		f_9451027
+	f	Lnet/minecraft/unmapped/C_1013763;	f_9451027		crosshairPickEntity
 c	net/minecraft/unmapped/C_0019534
 	m	(Lnet/minecraft/unmapped/C_6707278;IIIIII)Ljava/util/List;	m_4817680	m_4817680	
 		p	1		p_1	
@@ -60,7 +60,7 @@ c	net/minecraft/unmapped/C_3699792
 		p	3			p_3
 		p	4			p_4
 c	net/minecraft/unmapped/C_3906126
-	f	Lnet/minecraft/unmapped/C_0814381;	f_5394744		f_5394744
+	f	Lnet/minecraft/unmapped/C_0814381;	f_5394744		scoreboard
 	m	()Lnet/minecraft/unmapped/C_0814381;	m_5847414		m_5847414
 c	net/minecraft/unmapped/C_4443804
 	m	(Lnet/minecraft/unmapped/C_1234758;)V	m_2863758		m_2863758
@@ -164,7 +164,7 @@ c	net/minecraft/unmapped/C_0567922
 		p	5			p_5
 		p	6			p_6
 c	net/minecraft/unmapped/C_4895885
-	f	Ljava/lang/String;	f_8690573		f_8690573
+	f	Ljava/lang/String;	f_8690573		name
 	m	(Ljava/lang/String;)V	m_5021587		m_5021587
 		p	1			p_1
 c	net/minecraft/unmapped/C_8878495
@@ -239,17 +239,17 @@ c	net/minecraft/unmapped/C_0432398		net/minecraft/unmapped/C_0432398
 	m	(Ljava/lang/String;)V	<init>		<init>
 		p	1			p_1
 	m	()Ljava/lang/String;	m_3921073		m_3921073
-c	net/minecraft/unmapped/C_0814381		net/minecraft/unmapped/C_0814381
-	f	Ljava/util/Map;	f_1917006		f_1917006
+c	net/minecraft/unmapped/C_0814381		net/minecraft/world/scores/Scoreboard
+	f	Ljava/util/Map;	f_1917006		objectivesByName
 	f	Ljava/util/Map;	f_3439338		f_3439338
 	f	Ljava/util/Map;	f_4395324		f_4395324
 	f	[Lnet/minecraft/unmapped/C_3945557;	f_1352209		f_1352209
 	m	()V	<init>		<init>
 	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_3945557;	m_7155338		m_7155338
 		p	1			p_1
-	m	(Ljava/lang/String;Lnet/minecraft/unmapped/C_1028001;)Lnet/minecraft/unmapped/C_3945557;	m_8272217		m_8272217
-		p	1			p_1
-		p	2			p_2
+	m	(Ljava/lang/String;Lnet/minecraft/unmapped/C_1028001;)Lnet/minecraft/unmapped/C_3945557;	m_8272217		addObjective
+		p	1			name
+		p	2			criteria
 	m	(Lnet/minecraft/unmapped/C_1028001;)Ljava/util/List;	m_7336780		m_7336780
 		p	1			p_1
 	m	(Ljava/lang/String;Lnet/minecraft/unmapped/C_3945557;)Lnet/minecraft/unmapped/C_3526030;	m_4288528		m_4288528
@@ -271,24 +271,24 @@ c	net/minecraft/unmapped/C_0814381		net/minecraft/unmapped/C_0814381
 		p	2			p_2
 	m	(I)Lnet/minecraft/unmapped/C_3945557;	m_8757270		m_8757270
 		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_3945557;)V	m_4549981		m_4549981
-		p	1			p_1
+	m	(Lnet/minecraft/unmapped/C_3945557;)V	m_4549981		onObjectiveAdded
+		p	1			objective
 	m	(Lnet/minecraft/unmapped/C_3945557;)V	m_9659134		m_9659134
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_3526030;)V	m_7410212		m_7410212
 		p	1			p_1
 	m	(Ljava/lang/String;)V	m_8952572		m_8952572
 		p	1			p_1
-	m	(I)Ljava/lang/String;	m_7716018		m_7716018
-		p	0			p_0
-	m	(Ljava/lang/String;)I	m_9710479		m_9710479
-		p	0			p_0
-c	net/minecraft/unmapped/C_1028001		net/minecraft/unmapped/C_1028001
-	f	Ljava/util/Map;	f_4625302		f_4625302
-	f	Lnet/minecraft/unmapped/C_1028001;	f_9119493		f_9119493
-	f	Lnet/minecraft/unmapped/C_1028001;	f_2716238		f_2716238
-	f	Lnet/minecraft/unmapped/C_1028001;	f_0339598		f_0339598
-	f	Lnet/minecraft/unmapped/C_1028001;	f_2245103		f_2245103
+	m	(I)Ljava/lang/String;	m_7716018		getDisplaySlotName
+		p	0			slot
+	m	(Ljava/lang/String;)I	m_9710479		getDisplaySlotByName
+		p	0			name
+c	net/minecraft/unmapped/C_1028001		net/minecraft/world/scores/criteria/ObjectiveCriteria
+	f	Ljava/util/Map;	f_4625302		CRITERIA_BY_NAME
+	f	Lnet/minecraft/unmapped/C_1028001;	f_9119493		DUMMY
+	f	Lnet/minecraft/unmapped/C_1028001;	f_2716238		DEATH_COUNT
+	f	Lnet/minecraft/unmapped/C_1028001;	f_0339598		KILL_COUNT_PLAYERS
+	f	Lnet/minecraft/unmapped/C_1028001;	f_2245103		KILL_COUNT_ALL
 	m	()Ljava/lang/String;	m_3921073		m_3921073
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_1234758		net/minecraft/unmapped/C_1234758
@@ -357,21 +357,21 @@ c	net/minecraft/unmapped/C_3526030$0934552		0934552
 	m	(Ljava/lang/Object;Ljava/lang/Object;)I	compare		compare
 		p	1			p_1
 		p	2			p_2
-c	net/minecraft/unmapped/C_3945557		net/minecraft/unmapped/C_3945557
-	f	Lnet/minecraft/unmapped/C_0814381;	f_0818355		f_0818355
-	f	Ljava/lang/String;	f_7668639		f_7668639
-	f	Lnet/minecraft/unmapped/C_1028001;	f_3950611		f_3950611
-	f	Ljava/lang/String;	f_0283668		f_0283668
+c	net/minecraft/unmapped/C_3945557		net/minecraft/world/scores/Objective
+	f	Lnet/minecraft/unmapped/C_0814381;	f_0818355		scoreboard
+	f	Ljava/lang/String;	f_7668639		name
+	f	Lnet/minecraft/unmapped/C_1028001;	f_3950611		criteria
+	f	Ljava/lang/String;	f_0283668		displayName
 	m	(Lnet/minecraft/unmapped/C_0814381;Ljava/lang/String;Lnet/minecraft/unmapped/C_1028001;)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-	m	()Lnet/minecraft/unmapped/C_0814381;	m_2944653		m_2944653
-	m	()Ljava/lang/String;	m_8794961		m_8794961
-	m	()Lnet/minecraft/unmapped/C_1028001;	m_0893821		m_0893821
-	m	()Ljava/lang/String;	m_0646168		m_0646168
-	m	(Ljava/lang/String;)V	m_5869412		m_5869412
-		p	1			p_1
+		p	1			scoreboard
+		p	2			displayName
+		p	3			criteria
+	m	()Lnet/minecraft/unmapped/C_0814381;	m_2944653		getScoreboard
+	m	()Ljava/lang/String;	m_8794961		getName
+	m	()Lnet/minecraft/unmapped/C_1028001;	m_0893821		getCriteria
+	m	()Ljava/lang/String;	m_0646168		getDisplayName
+	m	(Ljava/lang/String;)V	m_5869412		setDisplayName
+		p	1			name
 c	net/minecraft/unmapped/C_4192341		net/minecraft/unmapped/C_4192341
 	m	()V	<init>		<init>
 	m	()Ljava/lang/String;	m_5375943		m_5375943

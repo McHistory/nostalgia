@@ -633,8 +633,8 @@ c	net/minecraft/unmapped/C_4443804
 		p	1		p_1	
 	m	(Lnet/minecraft/unmapped/C_7097377;)V	m_2067371	m_2067371	
 		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_1554518;)V	m_2046656	m_2046656	
-		p	1		p_1	
+	m	(Lnet/minecraft/unmapped/C_1554518;)V	m_2046656	handleTileEntityData	
+		p	1		packet	
 	m	(Lnet/minecraft/unmapped/C_3089081;)V	m_9246699	m_9246699	
 		p	1		p_1	
 	m	(Lnet/minecraft/unmapped/C_1495604;)V	m_6945033	m_6945033	
@@ -803,19 +803,19 @@ c	net/minecraft/unmapped/C_4844124
 		p	0		p_0	
 		p	1		p_1	
 	m	(Ljava/io/DataInput;)V	m_8784008	read	
-		p	1		p_1	
+		p	1		input	
 	m	(Ljava/io/DataOutput;)V	m_4625396	write	
-		p	1		p_1	
+		p	1		output	
 	m	(Ljava/io/DataInput;)Lnet/minecraft/unmapped/C_2750078;	m_4582369	m_4582369	
 		p	0		p_0	
 	m	(Lnet/minecraft/unmapped/C_2750078;Ljava/io/DataOutput;)V	m_0927322	m_0927322	
 		p	0		p_0	
 		p	1		p_1	
-	m	(Ljava/io/DataInput;)Lnet/minecraft/unmapped/C_2800860;	m_7405563	m_7405563	
-		p	0		p_0	
-	m	(Lnet/minecraft/unmapped/C_2800860;Ljava/io/DataOutput;)V	m_1834624	m_1834624	
-		p	0		p_0	
-		p	1		p_1	
+	m	(Ljava/io/DataInput;)Lnet/minecraft/unmapped/C_2800860;	m_7405563	readNbt	
+		p	0		input	
+	m	(Lnet/minecraft/unmapped/C_2800860;Ljava/io/DataOutput;)V	m_1834624	writeNbt	
+		p	0		tag	
+		p	1		output	
 	m	(I)Lnet/minecraft/unmapped/C_4844124;	m_9610935	getPacket	
 		p	0		p_0	
 	m	(Ljava/io/DataInput;ZLjava/net/Socket;)Lnet/minecraft/unmapped/C_4844124;	m_1333463	readPacket	

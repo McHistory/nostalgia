@@ -5,7 +5,7 @@ c	net/minecraft/client/Minecraft
 	f	Lnet/minecraft/unmapped/C_6015078;	f_8161264	f_8161264	
 	f	I	f_8278041		f_8278041
 	f	Lnet/minecraft/unmapped/C_5769145;	f_6793117		f_6793117
-	f	Lnet/minecraft/unmapped/C_3133904;	f_7288166		f_7288166
+	f	Lnet/minecraft/unmapped/C_3133904;	f_7288166		snooper
 	f	Lnet/minecraft/unmapped/C_8817873;	f_5337597		level
 	f	Lnet/minecraft/unmapped/C_1388208;	f_5473933		player
 	f	Lnet/minecraft/unmapped/C_6378766;	f_1791985		f_1791985
@@ -89,12 +89,12 @@ c	net/minecraft/client/Minecraft$7488048	7488048
 	f	[I	f_4862808	f_4862808	
 	m	()V	<clinit>	<clinit>	
 c	net/minecraft/server/MinecraftServer
-	f	Lnet/minecraft/unmapped/C_2942118;	f_8418006		f_8418006
-	f	Lnet/minecraft/unmapped/C_3133904;	f_6694876		f_6694876
-	f	Ljava/io/File;	f_3189378		f_3189378
-	f	Ljava/lang/String;	f_1157744		f_1157744
-	f	Ljava/lang/String;	f_2674805		f_2674805
-	f	Z	f_0631642		f_0631642
+	f	Lnet/minecraft/unmapped/C_2942118;	f_8418006		storageSource
+	f	Lnet/minecraft/unmapped/C_3133904;	f_6694876		snooper
+	f	Ljava/io/File;	f_3189378		universe
+	f	Ljava/lang/String;	f_1157744		singleplayerName
+	f	Ljava/lang/String;	f_2674805		levelIdName
+	f	Z	f_0631642		isDemo
 	f	Z	f_4990459		f_4990459
 	f	Ljava/lang/String;	f_7466427		f_7466427
 	m	()V	<init>	<init>	
@@ -109,20 +109,20 @@ c	net/minecraft/server/MinecraftServer
 		p	1			p_1
 		p	2			p_2
 		p	4			p_4
-	m	(I)V	m_5389810		m_5389810
+	m	(I)V	m_5389810		setPort
+		p	1			port
+	m	()Ljava/lang/String;	m_9851029		getSingleplayerName
+	m	(Ljava/lang/String;)V	m_2187077		setSingleplayerName
 		p	1			p_1
-	m	()Ljava/lang/String;	m_9851029		m_9851029
-	m	(Ljava/lang/String;)V	m_2187077		m_2187077
-		p	1			p_1
-	m	()Z	m_4411655		m_4411655
-	m	(Ljava/lang/String;)V	m_3738333		m_3738333
+	m	()Z	m_4411655		isSingleplayer
+	m	(Ljava/lang/String;)V	m_3738333		setLevelIdName
 		p	1			p_1
 	m	(I)V	m_9014213		m_9014213
 		p	1			p_1
-	m	()Z	m_2731902		m_2731902
-	m	(Z)V	m_7948758		m_7948758
+	m	()Z	m_2731902		isDemo
+	m	(Z)V	m_7948758		setDemo
 		p	1			p_1
-	m	()Lnet/minecraft/unmapped/C_2942118;	m_0896298		m_0896298
+	m	()Lnet/minecraft/unmapped/C_2942118;	m_0896298		getStorageSource
 	m	()V	m_6470409		m_6470409
 	m	()Ljava/lang/String;	m_0681311		m_0681311
 	m	(Lnet/minecraft/unmapped/C_3133904;)V	m_1865667		m_1865667
@@ -1097,11 +1097,11 @@ c	net/minecraft/unmapped/C_3746770$C_1189838	C_1189838
 c	net/minecraft/unmapped/C_7276582
 	m	()I	m_7966672		m_7966672
 c	net/minecraft/unmapped/C_3133904
-	f	Ljava/lang/String;	f_0004397		f_0004397
-	f	Lnet/minecraft/unmapped/C_2225350;	f_5036685		f_5036685
-	f	Ljava/util/Timer;	f_1498168		f_1498168
-	f	Ljava/lang/Object;	f_6056099		f_6056099
-	f	Z	f_8903686		f_8903686
+	f	Ljava/lang/String;	f_0004397		token
+	f	Lnet/minecraft/unmapped/C_2225350;	f_5036685		populator
+	f	Ljava/util/Timer;	f_1498168		timer
+	f	Ljava/lang/Object;	f_6056099		lock
+	f	Z	f_8903686		started
 	f	I	f_2205313		f_2205313
 	m	()V	m_0200530	m_0200530	
 	m	(Ljava/lang/String;)V	<init>	<init>	
@@ -1110,10 +1110,10 @@ c	net/minecraft/unmapped/C_3133904
 		p	1			p_1
 		p	2			p_2
 	m	()V	m_3473723		m_3473723
-	m	()V	m_0055222		m_0055222
-	m	()V	m_7371991		m_7371991
-	m	()V	m_5753320		m_5753320
-	m	()Z	m_2828881		m_2828881
+	m	()V	m_0055222		init
+	m	()V	m_7371991		setArgs
+	m	()V	m_5753320		prepare
+	m	()Z	m_2828881		isStarted
 	m	(Lnet/minecraft/unmapped/C_3133904;)Ljava/lang/Object;	m_1516948		m_1516948
 		p	0			p_0
 	m	(Lnet/minecraft/unmapped/C_3133904;)I	m_1072515		m_1072515
@@ -1368,11 +1368,11 @@ c	net/minecraft/unmapped/C_1778121		net/minecraft/unmapped/C_1778121
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_2750078;)Ljava/lang/String;	m_9222746		m_9222746
 		p	1			p_1
-c	net/minecraft/unmapped/C_2225350		net/minecraft/unmapped/C_2225350
-	m	(Lnet/minecraft/unmapped/C_3133904;)V	m_1865667		m_1865667
-		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_3133904;)V	m_8494745		m_8494745
-		p	1			p_1
+c	net/minecraft/unmapped/C_2225350		net/minecraft/world/SnooperPopulator
+	m	(Lnet/minecraft/unmapped/C_3133904;)V	m_1865667		populateSnooper
+		p	1			snooper
+	m	(Lnet/minecraft/unmapped/C_3133904;)V	m_8494745		initData
+		p	1			snooper
 c	net/minecraft/unmapped/C_2974713		net/minecraft/unmapped/C_2974713
 	f	Lnet/minecraft/unmapped/C_4718193;	f_0614099		f_0614099
 	m	(Lnet/minecraft/unmapped/C_4718193;)V	<init>		<init>

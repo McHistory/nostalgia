@@ -19,7 +19,7 @@ c	net/minecraft/server/MinecraftServer	net/minecraft/server/MinecraftServer
 	f	Z	f_5361901	allowFlight	
 	f	[Lnet/minecraft/unmapped/C_7366354;	f_3723005	levels	
 	f	[Lnet/minecraft/unmapped/C_8546801;	f_4955494	trackers	
-	f	Ljava/lang/String;	f_4794869	f_4794869	
+	f	Ljava/lang/String;	f_4794869	motd	
 	m	()V	<init>	<init>	
 	m	()Z	m_0615401	start	
 	m	(Ljava/lang/String;I)V	m_4174934	progress	
@@ -201,10 +201,10 @@ c	net/minecraft/unmapped/C_0019534	net/minecraft/server/PlayerList
 	m	(Lnet/minecraft/unmapped/C_4844124;I)V	m_0284930	broadcastAll	
 		p	1		packet	
 		p	2		dimension	
-	m	(Lnet/minecraft/unmapped/C_0324512;)V	m_7059229	m_7059229	
+	m	(Lnet/minecraft/unmapped/C_0324512;)V	m_7059229	sendAllPlayerInfo	
 		p	1		player	
-	m	()I	m_3408806	m_3408806	
-	m	()I	m_4876951	m_4876951	
+	m	()I	m_3408806	getPlayerCount	
+	m	()I	m_4876951	getMaxPlayers	
 	m	(Lnet/minecraft/unmapped/C_0324512;I)V	m_7438796	changeDimension	
 		p	1		p_1	
 		p	2		p_2	
@@ -216,7 +216,7 @@ c	net/minecraft/unmapped/C_0324512	net/minecraft/server/level/ServerPlayer
 	f	D	f_1801340	f_1801340	
 	f	Ljava/util/List;	f_1683304	f_1683304	
 	f	Ljava/util/Set;	f_5806656	f_5806656	
-	f	I	f_5431237	f_5431237	
+	f	I	f_5431237	lastSentHealth	
 	f	I	f_1478225	spawnInvulnerableTime	
 	f	I	f_3098613	containerCounter	
 	f	Z	f_2104338	ignoreSlotUpdateHack	
@@ -304,10 +304,10 @@ c	net/minecraft/unmapped/C_0324512	net/minecraft/server/level/ServerPlayer
 		p	2		p_2	
 	m	(Lnet/minecraft/unmapped/C_3906126;)V	m_6683300	m_6683300	
 		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_7699185;)V	m_0753902	m_0753902	
-		p	1		p_1	
+	m	(Lnet/minecraft/unmapped/C_7699185;)V	m_0753902	refreshContainer	
+		p	1		menu	
 	m	()V	m_4740817	m_4740817	
-	m	()V	m_2339273	m_2339273	
+	m	()V	m_2339273	resetSentInfo	
 	m	(Ljava/lang/String;)V	m_0278228	m_0278228	
 		p	1		p_1	
 	m	(Lnet/minecraft/unmapped/C_2800860;)V	m_9618795	m_9618795	

@@ -319,7 +319,7 @@ c	net/minecraft/unmapped/C_7293551
 		p	1			p_1
 		p	2			p_2
 c	net/minecraft/unmapped/C_8412059
-	f	Lnet/minecraft/unmapped/C_4982441;	f_6817617		f_6817617
+	f	Lnet/minecraft/unmapped/C_4982441;	f_6817617		lanPinger
 	m	()Ljava/lang/String;	m_8941442	m_8941442	
 	m	(Lnet/minecraft/unmapped/C_4413269$C_4731123;Z)Ljava/lang/String;	m_8941442		m_8941442
 		p	1			p_1
@@ -343,23 +343,23 @@ c	net/minecraft/unmapped/C_3857599		net/minecraft/unmapped/C_3857599
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
-c	net/minecraft/unmapped/C_4982441		net/minecraft/unmapped/C_4982441
+c	net/minecraft/unmapped/C_4982441		net/minecraft/client/server/LanServerPinger
 	f	Ljava/util/logging/Logger;	f_1934317		f_1934317
-	f	Ljava/lang/String;	f_3349854		f_3349854
-	f	Ljava/net/DatagramSocket;	f_1447884		f_1447884
-	f	Z	f_4807803		f_4807803
-	f	Ljava/lang/String;	f_8215301		f_8215301
+	f	Ljava/lang/String;	f_3349854		motd
+	f	Ljava/net/DatagramSocket;	f_1447884		socket
+	f	Z	f_4807803		isRunning
+	f	Ljava/lang/String;	f_8215301		serverAddress
 	m	(Ljava/lang/String;Ljava/lang/String;)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
+		p	1			motd
+		p	2			serverAddress
 	m	()V	run		run
 	m	()V	interrupt		interrupt
-	m	(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;	m_1801812		m_1801812
+	m	(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;	m_1801812		createPingString
+		p	0			title
+		p	1			ad
+	m	(Ljava/lang/String;)Ljava/lang/String;	m_9736601		parseMotd
 		p	0			p_0
-		p	1			p_1
-	m	(Ljava/lang/String;)Ljava/lang/String;	m_9736601		m_9736601
-		p	0			p_0
-	m	(Ljava/lang/String;)Ljava/lang/String;	m_4568806		m_4568806
+	m	(Ljava/lang/String;)Ljava/lang/String;	m_4568806		parseAddress
 		p	0			p_0
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_7600583		net/minecraft/unmapped/C_7600583

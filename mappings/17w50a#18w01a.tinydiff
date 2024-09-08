@@ -69,7 +69,7 @@ c	net/minecraft/unmapped/C_1203617
 	m	(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;	m_4947611	get	
 		p	1		key	
 		p	2		format	
-	m	(Ljava/lang/String;)Z	m_5288968	m_5288968	
+	m	(Ljava/lang/String;)Z	m_5288968	exists	
 		p	1		p_1	
 c	net/minecraft/unmapped/C_1233611
 	m	()Ljava/lang/String;	m_6689989	m_6689989	
@@ -133,8 +133,8 @@ c	net/minecraft/unmapped/C_3635204
 	f	Ljava/util/EnumMap;	f_9244610	f_9244610	
 	f	Ljava/util/Map;	f_9244610		f_9244610
 	m	()Ljava/lang/String;	m_0757767	getName	
-	m	(Lnet/minecraft/unmapped/C_3635204;)I	m_1344846	m_1344846	
-		p	0		p_0	
+	m	(Lnet/minecraft/unmapped/C_3635204;)I	m_1344846	getId	
+		p	0		tile	
 	m	(Lnet/minecraft/unmapped/C_3635204;)Z	m_9214095	m_9214095	
 		p	1		p_1	
 	m	(Lnet/minecraft/unmapped/C_3635204;Lnet/minecraft/unmapped/C_3635204;)Z	m_4091359	m_4091359	
@@ -152,7 +152,7 @@ c	net/minecraft/unmapped/C_3635204
 	m	()Lnet/minecraft/unmapped/C_9550253;	m_0757767		getName
 	m	()Ljava/util/Map;	m_9010686		m_9010686
 c	net/minecraft/unmapped/C_3906126
-	f	Lnet/minecraft/unmapped/C_0814381;	f_5394744	f_5394744	
+	f	Lnet/minecraft/unmapped/C_0814381;	f_5394744	scoreboard	
 	f	Lnet/minecraft/unmapped/C_7464728;	f_3476326	f_3476326	
 	f	Lnet/minecraft/unmapped/C_0890491;	f_8903282	f_8903282	
 	f	Lnet/minecraft/unmapped/C_3285536;	f_0943479	f_0943479	
@@ -376,9 +376,9 @@ c	net/minecraft/unmapped/C_5956135	net/minecraft/util/Language
 		p	0		key	
 		p	1		format	
 	m	()V	<clinit>	<clinit>	
-	m	(Ljava/lang/String;)Z	m_6652218	m_6652218	
-		p	0		p_0	
-	m	()J	m_7511347	m_7511347	
+	m	(Ljava/lang/String;)Z	m_6652218	exists	
+		p	0		key	
+	m	()J	m_7511347	getLastUpdateTime	
 	m	(Ljava/lang/String;)Ljava/lang/String;	m_1758869	m_1758869	
 		p	0		p_0	
 c	net/minecraft/unmapped/C_9574073
@@ -541,22 +541,22 @@ c	net/minecraft/unmapped/C_3041060
 c	net/minecraft/unmapped/C_4192341
 	f	Lcom/mojang/brigadier/exceptions/ParameterizedCommandExceptionType;	f_1635741	f_1635741	
 c	net/minecraft/unmapped/C_4143404
-	f	Ljava/lang/String;	f_5648606	f_5648606	
-	f	Ljava/lang/String;	f_2640471	f_2640471	
-	m	()Ljava/lang/String;	m_1445072	m_1445072	
-	m	(Ljava/lang/String;)V	m_0708798	m_0708798	
-		p	1		p_1	
-	m	()Ljava/lang/String;	m_6964130	m_6964130	
-	m	(Ljava/lang/String;)V	m_4550496	m_4550496	
-		p	1		p_1	
+	f	Ljava/lang/String;	f_5648606	playerPrefix	
+	f	Ljava/lang/String;	f_2640471	playerSuffix	
+	m	()Ljava/lang/String;	m_1445072	getPlayerPrefix	
+	m	(Ljava/lang/String;)V	m_0708798	setPlayerPrefix	
+		p	1		prefix	
+	m	()Ljava/lang/String;	m_6964130	getPlayerSuffix	
+	m	(Ljava/lang/String;)V	m_4550496	setPlayerSuffix	
+		p	1		suffix	
 	m	(Ljava/lang/String;)Ljava/lang/String;	m_6071816	m_6071816	
 		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_7238162;Ljava/lang/String;)Ljava/lang/String;	m_3771660	m_3771660	
-		p	0		p_0	
-		p	1		p_1	
+	m	(Lnet/minecraft/unmapped/C_7238162;Ljava/lang/String;)Ljava/lang/String;	m_3771660	formatNameForTeam	
+		p	0		team	
+		p	1		name	
 	m	(Lnet/minecraft/unmapped/C_9550253;)Lnet/minecraft/unmapped/C_9550253;	m_6071816		m_6071816
 		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_7238162;Lnet/minecraft/unmapped/C_9550253;)Lnet/minecraft/unmapped/C_9550253;	m_3771660		m_3771660
+	m	(Lnet/minecraft/unmapped/C_7238162;Lnet/minecraft/unmapped/C_9550253;)Lnet/minecraft/unmapped/C_9550253;	m_3771660		formatNameForTeam
 		p	0			p_0
 		p	1			p_1
 c	net/minecraft/unmapped/C_8475339
@@ -583,9 +583,9 @@ c	net/minecraft/unmapped/C_9550253$C_9313132
 		p	0			p_0
 	m	()Ljava/lang/reflect/Field;	m_9864785		m_9864785
 c	net/minecraft/unmapped/C_7238162
-	m	(Ljava/lang/String;)Ljava/lang/String;	m_6071816	m_6071816	
-		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_9550253;)Lnet/minecraft/unmapped/C_9550253;	m_6071816		m_6071816
+	m	(Ljava/lang/String;)Ljava/lang/String;	m_6071816	getFormattedName	
+		p	1		name	
+	m	(Lnet/minecraft/unmapped/C_9550253;)Lnet/minecraft/unmapped/C_9550253;	m_6071816		getFormattedName
 		p	1			p_1
 c	net/minecraft/unmapped/C_8473935
 	m	(Ljava/lang/String;)V	m_5266201	m_5266201	

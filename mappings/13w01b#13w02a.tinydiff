@@ -173,14 +173,14 @@ c	net/minecraft/unmapped/C_0974371
 	m	(Lnet/minecraft/unmapped/C_9549188;)V	m_9955335		m_9955335
 		p	1			p_1
 c	net/minecraft/unmapped/C_1013763
-	f	Lnet/minecraft/unmapped/C_6954368;	f_6249670		f_6249670
+	f	Lnet/minecraft/unmapped/C_6954368;	f_6249670		combatTracker
 	m	(Lnet/minecraft/unmapped/C_2750078;I)I	m_3422399	getItemTexture	
 		p	1		p_1	
 		p	2		p_2	
 	m	(Lnet/minecraft/unmapped/C_2750078;I)Lnet/minecraft/unmapped/C_5307437;	m_3422399		getItemTexture
 		p	1			p_1
 		p	2			p_2
-	m	()Lnet/minecraft/unmapped/C_1013763;	m_1048888		m_1048888
+	m	()Lnet/minecraft/unmapped/C_1013763;	m_1048888		getKillCredit
 	m	()Ljava/lang/String;	m_5573014		m_5573014
 	m	(Ljava/lang/String;)V	m_3910252		m_3910252
 		p	1			p_1
@@ -223,7 +223,7 @@ c	net/minecraft/unmapped/C_1203617
 	m	(Ljava/lang/String;Z)V	m_1592969		m_1592969
 		p	1			p_1
 		p	2			p_2
-	m	(Ljava/lang/String;)Z	m_5288968		m_5288968
+	m	(Ljava/lang/String;)Z	m_5288968		exists
 		p	1			p_1
 	m	(Ljava/lang/String;Ljava/io/File;)V	m_5876773		m_5876773
 		p	1			p_1
@@ -613,7 +613,7 @@ c	net/minecraft/unmapped/C_3604011
 		p	4		p_4	
 		p	6		p_6	
 c	net/minecraft/unmapped/C_3632207
-	m	()Lnet/minecraft/unmapped/C_1013763;	m_2781355		m_2781355
+	m	()Lnet/minecraft/unmapped/C_1013763;	m_2781355		getSourceMob
 c	net/minecraft/unmapped/C_3635204
 	f	Lnet/minecraft/unmapped/C_3635204;	f_1761026	water	
 	f	Lnet/minecraft/unmapped/C_3635204;	f_6455504	lava	
@@ -1039,7 +1039,7 @@ c	net/minecraft/unmapped/C_5506499
 		p	1			p_1
 		p	2			p_2
 c	net/minecraft/unmapped/C_5584362
-	f	Lnet/minecraft/unmapped/C_1013763;	f_6612998		f_6612998
+	f	Lnet/minecraft/unmapped/C_1013763;	f_6612998		owner
 	m	(Lnet/minecraft/unmapped/C_3906126;DDD)V	<init>	<init>	
 		p	1		p_1	
 		p	2		p_2	
@@ -1051,7 +1051,7 @@ c	net/minecraft/unmapped/C_5584362
 		p	4			p_4
 		p	6			p_6
 		p	8			p_8
-	m	()Lnet/minecraft/unmapped/C_1013763;	m_8918178		m_8918178
+	m	()Lnet/minecraft/unmapped/C_1013763;	m_8918178		getOwner
 c	net/minecraft/unmapped/C_5602753
 	m	(IILnet/minecraft/unmapped/C_8554894;Lnet/minecraft/unmapped/C_5602753$C_7629809;)V	<init>	<init>	
 		p	1		p_1	
@@ -1946,13 +1946,13 @@ c	net/minecraft/unmapped/C_6028060$C_9946201
 c	net/minecraft/unmapped/C_6907923
 	f	Lnet/minecraft/unmapped/C_6907923;	f_0360704	EXPLOSION	
 	f	Lnet/minecraft/unmapped/C_6907923;	f_3838036	f_3838036	
-	f	Z	f_7888263		f_7888263
+	f	Z	f_7888263		isExplosion
 	m	(Lnet/minecraft/unmapped/C_5009044;)Ljava/lang/String;	m_7501958	getLocalizedDeathMessage	
 		p	1		player	
-	m	(Lnet/minecraft/unmapped/C_3632207;)Lnet/minecraft/unmapped/C_6907923;	m_0386080		m_0386080
-		p	0			p_0
-	m	()Z	m_5316759		m_5316759
-	m	()Lnet/minecraft/unmapped/C_6907923;	m_7606071		m_7606071
+	m	(Lnet/minecraft/unmapped/C_3632207;)Lnet/minecraft/unmapped/C_6907923;	m_0386080		explosion
+		p	0			explosion
+	m	()Z	m_5316759		isExplosion
+	m	()Lnet/minecraft/unmapped/C_6907923;	m_7606071		setExplosion
 	m	(Lnet/minecraft/unmapped/C_1013763;)Ljava/lang/String;	m_7501958		getLocalizedDeathMessage
 		p	1			p_1
 c	net/minecraft/unmapped/C_7015659
@@ -2959,29 +2959,29 @@ c	net/minecraft/unmapped/C_6088271		net/minecraft/unmapped/C_6088271
 	m	()Lnet/minecraft/unmapped/C_2686552;	m_6524175		m_6524175
 	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_5307437;	m_3135860		m_3135860
 		p	1			p_1
-c	net/minecraft/unmapped/C_6954368		net/minecraft/unmapped/C_6954368
-	f	Ljava/util/List;	f_7084708		f_7084708
-	f	Lnet/minecraft/unmapped/C_1013763;	f_5026048		f_5026048
-	f	I	f_9244814		f_9244814
-	f	Z	f_8001123		f_8001123
-	f	Z	f_1879497		f_1879497
-	f	Ljava/lang/String;	f_0089290		f_0089290
+c	net/minecraft/unmapped/C_6954368		net/minecraft/world/damagesource/CombatTracker
+	f	Ljava/util/List;	f_7084708		entries
+	f	Lnet/minecraft/unmapped/C_1013763;	f_5026048		mob
+	f	I	f_9244814		lastDamageTime
+	f	Z	f_8001123		inCombat
+	f	Z	f_1879497		takingDamage
+	f	Ljava/lang/String;	f_0089290		nextLocation
 	m	(Lnet/minecraft/unmapped/C_1013763;)V	<init>		<init>
-		p	1			p_1
-	m	()V	m_9159023		m_9159023
-	m	(Lnet/minecraft/unmapped/C_6907923;II)V	m_8419797		m_8419797
+		p	1			mob
+	m	()V	m_9159023		prepareForDamage
+	m	(Lnet/minecraft/unmapped/C_6907923;II)V	m_8419797		recordDamage
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
-	m	()Ljava/lang/String;	m_2950008		m_2950008
-	m	()Lnet/minecraft/unmapped/C_1013763;	m_5999831		m_5999831
-	m	()Lnet/minecraft/unmapped/C_8012190;	m_1966575		m_1966575
+	m	()Ljava/lang/String;	m_2950008		getDeathMessage
+	m	()Lnet/minecraft/unmapped/C_1013763;	m_5999831		getKiller
+	m	()Lnet/minecraft/unmapped/C_8012190;	m_1966575		getMostSignificantFall
 	m	(Lnet/minecraft/unmapped/C_8012190;)Ljava/lang/String;	m_3809800		m_3809800
 		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_8012190;)Ljava/lang/String;	m_9920636		m_9920636
-		p	1			p_1
-	m	()V	m_0040501		m_0040501
-	m	()V	m_6321009		m_6321009
+	m	(Lnet/minecraft/unmapped/C_8012190;)Ljava/lang/String;	m_9920636		getFallLocation
+		p	1			entry
+	m	()V	m_0040501		resetPreparedStatus
+	m	()V	m_6321009		recheckStatus
 c	net/minecraft/unmapped/C_7465586		net/minecraft/unmapped/C_7465586
 	f	I	f_4856188		f_4856188
 	f	D	f_7296404		f_7296404
@@ -3022,13 +3022,13 @@ c	net/minecraft/unmapped/C_7804167		net/minecraft/unmapped/C_7804167
 	m	(II)Lnet/minecraft/unmapped/C_5307437;	m_5024410		m_5024410
 		p	1			p_1
 		p	2			p_2
-c	net/minecraft/unmapped/C_8012190		net/minecraft/unmapped/C_8012190
-	f	Lnet/minecraft/unmapped/C_6907923;	f_4230004		f_4230004
-	f	I	f_1103911		f_1103911
-	f	I	f_5410297		f_5410297
-	f	I	f_7529061		f_7529061
-	f	Ljava/lang/String;	f_8704508		f_8704508
-	f	F	f_4542032		f_4542032
+c	net/minecraft/unmapped/C_8012190		net/minecraft/world/damagesource/CombatEntry
+	f	Lnet/minecraft/unmapped/C_6907923;	f_4230004		source
+	f	I	f_1103911		time
+	f	I	f_5410297		damage
+	f	I	f_7529061		health
+	f	Ljava/lang/String;	f_8704508		location
+	f	F	f_4542032		fallDistance
 	m	(Lnet/minecraft/unmapped/C_6907923;IIILjava/lang/String;F)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
@@ -3036,12 +3036,12 @@ c	net/minecraft/unmapped/C_8012190		net/minecraft/unmapped/C_8012190
 		p	4			p_4
 		p	5			p_5
 		p	6			p_6
-	m	()Lnet/minecraft/unmapped/C_6907923;	m_5250323		m_5250323
-	m	()I	m_7585655		m_7585655
-	m	()Z	m_0786209		m_0786209
-	m	()Ljava/lang/String;	m_8330008		m_8330008
-	m	()Ljava/lang/String;	m_2027866		m_2027866
-	m	()F	m_4221971		m_4221971
+	m	()Lnet/minecraft/unmapped/C_6907923;	m_5250323		getSource
+	m	()I	m_7585655		getDamage
+	m	()Z	m_0786209		isCombatRelated
+	m	()Ljava/lang/String;	m_8330008		getLocation
+	m	()Ljava/lang/String;	m_2027866		getAttackerName
+	m	()F	m_4221971		getFallDistance
 c	net/minecraft/unmapped/C_8052145		net/minecraft/unmapped/C_8052145
 	m	(I)V	<init>		<init>
 		p	1			p_1

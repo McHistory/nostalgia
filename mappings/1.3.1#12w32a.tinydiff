@@ -88,7 +88,7 @@ c	net/minecraft/unmapped/C_1388208
 	m	()V	m_2752266	m_2752266	
 	m	()V	m_5308766		m_5308766
 c	net/minecraft/unmapped/C_2074023
-	m	()D	m_1145665		m_1145665
+	m	()D	m_1145665		getViewDistance
 c	net/minecraft/unmapped/C_2182707
 	m	(Ljava/lang/String;)Z	m_5330743	m_5330743	
 		p	1		p_1	
@@ -494,7 +494,7 @@ c	net/minecraft/unmapped/C_4389375
 	m	(Lnet/minecraft/unmapped/C_6907923;)V	m_4650833		m_4650833
 		p	1			p_1
 c	net/minecraft/unmapped/C_3133904
-	m	()Ljava/lang/String;	m_5120157		m_5120157
+	m	()Ljava/lang/String;	m_5120157		getToken
 c	net/minecraft/unmapped/C_0675137
 	m	()I	m_5251718		m_5251718
 c	net/minecraft/unmapped/C_1237929
@@ -671,7 +671,7 @@ c	net/minecraft/unmapped/C_2992329		net/minecraft/unmapped/C_2992329
 		p	1			p_1
 		p	2			p_2
 	m	()V	<clinit>		<clinit>
-c	net/minecraft/unmapped/C_3514359		net/minecraft/unmapped/C_3514359
+c	net/minecraft/unmapped/C_3514359		net/minecraft/client/renderer/tileentity/BeaconRenderer
 	m	()V	<init>		<init>
 	m	(Lnet/minecraft/unmapped/C_6989019;DDDF)V	m_9671526		m_9671526
 		p	1			p_1
@@ -699,8 +699,8 @@ c	net/minecraft/unmapped/C_3941657		net/minecraft/unmapped/C_3941657
 		p	2			p_2
 	m	(I)Z	m_5755145		m_5755145
 		p	1			p_1
-c	net/minecraft/unmapped/C_4895885		net/minecraft/unmapped/C_4895885
-	f	Ljava/lang/String;	f_8459964		f_8459964
+c	net/minecraft/unmapped/C_4895885		net/minecraft/world/level/tile/entity/CommandBlockEntity
+	f	Ljava/lang/String;	f_8459964		command
 	m	()V	<init>		<init>
 	m	(Ljava/lang/String;)V	m_5210480		m_5210480
 		p	1			p_1
@@ -831,14 +831,14 @@ c	net/minecraft/unmapped/C_6816964		net/minecraft/unmapped/C_6816964
 	m	(Lnet/minecraft/unmapped/C_2182707;[Ljava/lang/String;)Ljava/util/List;	m_6019388		m_6019388
 		p	1			p_1
 		p	2			p_2
-c	net/minecraft/unmapped/C_6989019		net/minecraft/unmapped/C_6989019
-	f	[[Lnet/minecraft/unmapped/C_0591668;	f_0663163		f_0663163
+c	net/minecraft/unmapped/C_6989019		net/minecraft/world/level/tile/entity/BeaconTileEntity
+	f	[[Lnet/minecraft/unmapped/C_0591668;	f_0663163		BEACON_EFFECTS
 	f	J	f_8498546		f_8498546
 	f	F	f_2556684		f_2556684
 	f	Z	f_6924186		f_6924186
-	f	I	f_4434091		f_4434091
-	f	I	f_6729022		f_6729022
-	f	I	f_2734514		f_2734514
+	f	I	f_4434091		levels
+	f	I	f_6729022		primaryPower
+	f	I	f_2734514		secondaryPower
 	f	Lnet/minecraft/unmapped/C_2750078;	f_3397958		f_3397958
 	m	()V	<init>		<init>
 	m	()V	m_1420044		m_1420044

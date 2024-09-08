@@ -1,6 +1,6 @@
 tiny	2	0
 c	net/minecraft/client/Minecraft
-	f	Z	f_1955208		f_1955208
+	f	Z	f_1955208		ON_OSX
 	m	(Lnet/minecraft/client/Minecraft;)Lnet/minecraft/unmapped/C_6176478;	m_2590561		m_2590561
 		p	0			p_0
 c	net/minecraft/client/Minecraft$3097073		3097073
@@ -168,14 +168,14 @@ c	net/minecraft/unmapped/C_5681355
 c	net/minecraft/unmapped/C_5794148
 	f	Ljava/lang/String;	f_0788338	f_0788338	
 c	net/minecraft/unmapped/C_4143404
-	m	(Lnet/minecraft/unmapped/C_4143404;Ljava/lang/String;)Ljava/lang/String;	m_3771660	m_3771660	
+	m	(Lnet/minecraft/unmapped/C_4143404;Ljava/lang/String;)Ljava/lang/String;	m_3771660	formatNameForTeam	
 		p	0		p_0	
 		p	1		p_1	
 	m	(Ljava/lang/String;)Ljava/lang/String;	m_6071816		m_6071816
 		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_7238162;Ljava/lang/String;)Ljava/lang/String;	m_3771660		m_3771660
-		p	0			p_0
-		p	1			p_1
+	m	(Lnet/minecraft/unmapped/C_7238162;Ljava/lang/String;)Ljava/lang/String;	m_3771660		formatNameForTeam
+		p	0			team
+		p	1			name
 c	net/minecraft/unmapped/C_3478281
 	m	(Lnet/minecraft/unmapped/C_0640744$C_9713437;)V	<init>	<init>	
 		p	1		p_1	
@@ -250,7 +250,7 @@ c	net/minecraft/unmapped/C_5968220$C_3490095		C_3490095
 	m	()D	m_8388219		m_8388219
 	m	()Ljava/util/Collection;	m_8642013		m_8642013
 c	net/minecraft/unmapped/C_6232047
-	m	()V	m_9751868		m_9751868
+	m	()V	m_9751868		removeModifiers
 c	net/minecraft/unmapped/C_2764761
 	m	([Ljava/lang/String;I)Z	m_5755145		m_5755145
 		p	1			p_1
@@ -273,12 +273,12 @@ c	net/minecraft/unmapped/C_5657810		net/minecraft/unmapped/C_5657810
 	m	(Ljava/io/DataOutput;)V	m_4625396		m_4625396
 		p	1			p_1
 	m	()I	m_0079091		m_0079091
-c	net/minecraft/unmapped/C_7238162		net/minecraft/unmapped/C_7238162
+c	net/minecraft/unmapped/C_7238162		net/minecraft/world/scores/Team
 	m	()V	<init>		<init>
-	m	(Lnet/minecraft/unmapped/C_7238162;)Z	m_8654662		m_8654662
-		p	1			p_1
-	m	()Ljava/lang/String;	m_5300469		m_5300469
-	m	(Ljava/lang/String;)Ljava/lang/String;	m_6071816		m_6071816
-		p	1			p_1
-	m	()Z	m_1979947		m_1979947
-	m	()Z	m_0205039		m_0205039
+	m	(Lnet/minecraft/unmapped/C_7238162;)Z	m_8654662		isAlliedTo
+		p	1			t
+	m	()Ljava/lang/String;	m_5300469		getName
+	m	(Ljava/lang/String;)Ljava/lang/String;	m_6071816		getFormattedName
+		p	1			name
+	m	()Z	m_1979947		canSeeFriendlyInvisibles
+	m	()Z	m_0205039		isAllowFriendlyFire

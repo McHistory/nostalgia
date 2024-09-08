@@ -30,7 +30,7 @@ c	net/minecraft/server/MinecraftServer
 	m	()Ljava/lang/String;	m_6042725	m_6042725	
 	m	()[Ljava/lang/String;	m_6167886	m_6167886	
 	m	()[Ljava/lang/String;	m_6507606	m_6507606	
-	m	(Ljava/lang/String;)V	m_2836178		m_2836178
+	m	(Ljava/lang/String;)V	m_2836178		ensureLevelConversion
 		p	1			p_1
 	m	()V	m_3388263		m_3388263
 	m	()Z	m_7786469		m_7786469
@@ -46,11 +46,11 @@ c	net/minecraft/server/MinecraftServer
 	m	()V	m_4743533		m_4743533
 	m	()Z	m_1474840		m_1474840
 	m	()V	m_9432659		m_9432659
-	m	()I	m_4427350		m_4427350
-	m	()Ljava/lang/String;	m_4103591		m_4103591
-	m	(Ljava/security/KeyPair;)V	m_4915267		m_4915267
+	m	()I	m_4427350		getPort
+	m	()Ljava/lang/String;	m_4103591		getLevelName
+	m	(Ljava/security/KeyPair;)V	m_4915267		setKeyPair
 		p	1			p_1
-	m	()Z	m_3355092		m_3355092
+	m	()Z	m_3355092		getSpawnMonsters
 	m	(Ljava/lang/String;)V	m_9209200		m_9209200
 		p	1			p_1
 	m	()Z	m_9093294		m_9093294
@@ -247,10 +247,10 @@ c	net/minecraft/unmapped/C_1851525
 	m	(Lnet/minecraft/unmapped/C_3906126;)Lnet/minecraft/unmapped/C_2074023;	m_0502820		m_0502820
 		p	1			p_1
 c	net/minecraft/unmapped/C_2074023
-	m	()Lnet/minecraft/unmapped/C_3906126;	m_8428742		m_8428742
-	m	(Lnet/minecraft/unmapped/C_3906126;)V	m_8729729		m_8729729
-		p	1			p_1
-	m	()Z	m_8376598		m_8376598
+	m	()Lnet/minecraft/unmapped/C_3906126;	m_8428742		getLevel
+	m	(Lnet/minecraft/unmapped/C_3906126;)V	m_8729729		setLevel
+		p	1			level
+	m	()Z	m_8376598		hasLevel
 c	net/minecraft/unmapped/C_2293006
 	m	()D	m_2638522		m_2638522
 	m	()D	m_1017228		m_1017228
@@ -1602,31 +1602,31 @@ c	net/minecraft/unmapped/C_5441940		net/minecraft/unmapped/C_5441940
 		p	2			p_2
 	m	()Ljava/lang/Object;	m_6563140		m_6563140
 	m	()Ljava/lang/Object;	m_8472543		m_8472543
-c	net/minecraft/unmapped/C_6264512		net/minecraft/unmapped/C_6264512
-	f	Ljava/util/Map;	f_1106945		f_1106945
+c	net/minecraft/unmapped/C_6264512		net/minecraft/util/InsensitiveStringMap
+	f	Ljava/util/Map;	f_1106945		map
 	m	()V	<init>		<init>
 	m	()I	size		size
 	m	()Z	isEmpty		isEmpty
 	m	(Ljava/lang/Object;)Z	containsKey		containsKey
-		p	1			p_1
+		p	1			key
 	m	(Ljava/lang/Object;)Z	containsValue		containsValue
-		p	1			p_1
+		p	1			value
 	m	(Ljava/lang/Object;)Ljava/lang/Object;	get		get
-		p	1			p_1
+		p	1			key
 	m	(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;	m_4138770		m_4138770
 		p	1			p_1
 		p	2			p_2
 	m	(Ljava/lang/Object;)Ljava/lang/Object;	remove		remove
-		p	1			p_1
+		p	1			key
 	m	(Ljava/util/Map;)V	putAll		putAll
-		p	1			p_1
+		p	1			entries
 	m	()V	clear		clear
 	m	()Ljava/util/Set;	keySet		keySet
 	m	()Ljava/util/Collection;	values		values
 	m	()Ljava/util/Set;	entrySet		entrySet
 	m	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;	put		put
-		p	1			p_1
-		p	2			p_2
+		p	1			key
+		p	2			value
 c	net/minecraft/unmapped/C_6332166		net/minecraft/unmapped/C_6332166
 	m	()V	<init>		<init>
 c	net/minecraft/unmapped/C_6465479		net/minecraft/unmapped/C_6465479
@@ -1834,9 +1834,9 @@ c	net/minecraft/unmapped/C_8208660$C_0102106		C_0102106
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
-c	net/minecraft/unmapped/C_8412059		net/minecraft/unmapped/C_8412059
-	f	Lnet/minecraft/client/Minecraft;	f_6598508		f_6598508
-	f	Lnet/minecraft/unmapped/C_4413269;	f_8309569		f_8309569
+c	net/minecraft/unmapped/C_8412059		net/minecraft/client/server/IntegratedServer
+	f	Lnet/minecraft/client/Minecraft;	f_6598508		minecraft
+	f	Lnet/minecraft/unmapped/C_4413269;	f_8309569		settings
 	f	Lnet/minecraft/unmapped/C_7393413;	f_1003550		f_1003550
 	m	(Lnet/minecraft/client/Minecraft;Ljava/lang/String;Lnet/minecraft/unmapped/C_4413269;)V	<init>		<init>
 		p	1			p_1
@@ -1878,11 +1878,11 @@ c	net/minecraft/unmapped/C_8618725		net/minecraft/unmapped/C_8618725
 		p	1			p_1
 	m	()Lnet/minecraft/unmapped/C_7293551;	m_6617293		m_6617293
 	m	()Lnet/minecraft/server/MinecraftServer;	m_5160729		m_5160729
-c	net/minecraft/unmapped/C_8768220		net/minecraft/unmapped/C_8768220
-	f	F	f_5637820		f_5637820
-	f	F	f_6566988		f_6566988
-	f	I	f_5421226		f_5421226
-	f	I	f_8306293		f_8306293
+c	net/minecraft/unmapped/C_8768220		net/minecraft/world/level/tile/entity/EnderChestTileEntity
+	f	F	f_5637820		openness
+	f	F	f_6566988		oOpenness
+	f	I	f_5421226		openCount
+	f	I	f_8306293		tickInterval
 	f	Lnet/minecraft/unmapped/C_4390289;	f_3164006		f_3164006
 	m	()V	<init>		<init>
 	m	(Lnet/minecraft/unmapped/C_3906126;)V	<init>		<init>

@@ -496,7 +496,7 @@ c	net/minecraft/unmapped/C_5091011
 c	net/minecraft/unmapped/C_6342641
 	f	Lorg/apache/logging/log4j/Logger;	f_3426419		f_3426419
 c	net/minecraft/unmapped/C_2225350
-	m	()Lnet/minecraft/unmapped/C_6001689;	m_0623619	m_0623619	
+	m	()Lnet/minecraft/unmapped/C_6001689;	m_0623619	getLogger	
 c	net/minecraft/unmapped/C_8825356
 	f	Lorg/apache/logging/log4j/Logger;	f_0672283		f_0672283
 	m	()V	<clinit>		<clinit>
@@ -544,7 +544,7 @@ c	net/minecraft/unmapped/C_7393413
 c	net/minecraft/unmapped/C_8208660
 	f	Lorg/apache/logging/log4j/Logger;	f_9412249		f_9412249
 c	net/minecraft/unmapped/C_8412059
-	f	Lnet/minecraft/unmapped/C_6001689;	f_5954619	f_5954619	
+	f	Lnet/minecraft/unmapped/C_6001689;	f_5954619	logger	
 	f	Lorg/apache/logging/log4j/Logger;	f_6323750		f_6323750
 	m	()Lnet/minecraft/unmapped/C_6001689;	m_0623619	m_0623619	
 	m	()V	<clinit>		<clinit>
@@ -607,12 +607,12 @@ c	net/minecraft/unmapped/C_1567697
 	f	Lorg/apache/logging/log4j/Logger;	f_6807283		f_6807283
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_4895885
-	f	Ljava/lang/String;	f_8459964	f_8459964	
-	f	I	f_5271846	f_5271846	
-	f	Ljava/lang/String;	f_8690573	f_8690573	
-	f	Ljava/text/SimpleDateFormat;	f_3490562	f_3490562	
-	f	Z	f_3640470	f_3640470	
-	f	Lnet/minecraft/unmapped/C_9550253;	f_1433092	f_1433092	
+	f	Ljava/lang/String;	f_8459964	command	
+	f	I	f_5271846	successCount	
+	f	Ljava/lang/String;	f_8690573	name	
+	f	Ljava/text/SimpleDateFormat;	f_3490562	TIME_FORMAT	
+	f	Z	f_3640470	trackOutput	
+	f	Lnet/minecraft/unmapped/C_9550253;	f_1433092	lastOutput	
 	f	Lnet/minecraft/unmapped/C_6758882;	f_3030249		f_3030249
 	m	(Ljava/lang/String;)V	m_5210480	m_5210480	
 		p	1		p_1	
@@ -744,19 +744,19 @@ c	net/minecraft/unmapped/C_8280553
 c	net/minecraft/unmapped/C_5916564
 	f	Lorg/apache/logging/log4j/Logger;	f_7953417		f_7953417
 	m	()V	<clinit>		<clinit>
-c	net/minecraft/unmapped/C_6001689	net/minecraft/unmapped/C_6001689	
+c	net/minecraft/unmapped/C_6001689	net/minecraft/util/Logger	
 	m	()Ljava/util/logging/Logger;	m_5737281	m_5737281	
-	m	(Ljava/lang/String;)V	m_1693890	m_1693890	
-		p	1		p_1	
-	m	(Ljava/lang/String;)V	m_4405731	m_4405731	
-		p	1		p_1	
+	m	(Ljava/lang/String;)V	m_1693890	info	
+		p	1		msg	
+	m	(Ljava/lang/String;)V	m_4405731	warn	
+		p	1		msg	
 	m	(Ljava/lang/String;[Ljava/lang/Object;)V	m_6524297	m_6524297	
 		p	1		p_1	
 		p	2		p_2	
 	m	(Ljava/lang/String;Ljava/lang/Throwable;)V	m_9161686	m_9161686	
 		p	1		p_1	
 		p	2		p_2	
-	m	(Ljava/lang/String;)V	m_6906605	m_6906605	
+	m	(Ljava/lang/String;)V	m_6906605	error	
 		p	1		p_1	
 	m	(Ljava/lang/String;Ljava/lang/Throwable;)V	m_4839314	m_4839314	
 		p	1		p_1	

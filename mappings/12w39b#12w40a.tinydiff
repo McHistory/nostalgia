@@ -667,13 +667,13 @@ c	net/minecraft/unmapped/C_3431714		net/minecraft/unmapped/C_3431714
 		p	3			p_3
 		p	4			p_4
 		p	5			p_5
-c	net/minecraft/unmapped/C_3544601		net/minecraft/unmapped/C_3544601
-	f	Lnet/minecraft/unmapped/C_3544601;	f_2500742		f_2500742
-	f	Lnet/minecraft/unmapped/C_3544601;	f_0139095		f_0139095
-	f	Lnet/minecraft/unmapped/C_3544601;	f_8388893		f_8388893
-	f	Lnet/minecraft/unmapped/C_3544601;	f_7538577		f_7538577
-	f	Lnet/minecraft/unmapped/C_3544601;	f_9776724		f_9776724
-	f	Lnet/minecraft/unmapped/C_3544601;	f_9395349		f_9395349
+c	net/minecraft/unmapped/C_3544601		net/minecraft/core/Direction
+	f	Lnet/minecraft/unmapped/C_3544601;	f_2500742		DOWN
+	f	Lnet/minecraft/unmapped/C_3544601;	f_0139095		UP
+	f	Lnet/minecraft/unmapped/C_3544601;	f_8388893		NORTH
+	f	Lnet/minecraft/unmapped/C_3544601;	f_7538577		SOUTH
+	f	Lnet/minecraft/unmapped/C_3544601;	f_9776724		EAST
+	f	Lnet/minecraft/unmapped/C_3544601;	f_9395349		WEST
 	f	I	f_6664559		f_6664559
 	f	I	f_1294522		f_1294522
 	f	I	f_7246705		f_7246705
@@ -697,8 +697,8 @@ c	net/minecraft/unmapped/C_3544601		net/minecraft/unmapped/C_3544601
 	m	(I)Lnet/minecraft/unmapped/C_3544601;	m_2424309		m_2424309
 		p	0			p_0
 	m	()V	<clinit>		<clinit>
-c	net/minecraft/unmapped/C_4598210		net/minecraft/unmapped/C_4598210
-	f	Ljava/util/Map;	f_1481872		f_1481872
+c	net/minecraft/unmapped/C_4598210		net/minecraft/core/MappedRegistry
+	f	Ljava/util/Map;	f_1481872		storage
 	m	()V	<init>		<init>
 	m	(Ljava/lang/Object;)Ljava/lang/Object;	m_6111517		m_6111517
 		p	1			p_1
@@ -730,12 +730,12 @@ c	net/minecraft/unmapped/C_8018164		net/minecraft/unmapped/C_8018164
 		p	3			p_3
 		p	4			p_4
 		p	5			p_5
-c	net/minecraft/unmapped/C_8295645		net/minecraft/unmapped/C_8295645
-	m	(Ljava/lang/Object;)Ljava/lang/Object;	m_6111517		m_6111517
-		p	1			p_1
-	m	(Ljava/lang/Object;Ljava/lang/Object;)V	m_6586356		m_6586356
-		p	1			p_1
-		p	2			p_2
+c	net/minecraft/unmapped/C_8295645		net/minecraft/core/Registry
+	m	(Ljava/lang/Object;)Ljava/lang/Object;	m_6111517		get
+		p	1			value
+	m	(Ljava/lang/Object;Ljava/lang/Object;)V	m_6586356		register
+		p	1			key
+		p	2			value
 c	net/minecraft/unmapped/C_8402690		net/minecraft/unmapped/C_8402690
 	m	()V	<init>		<init>
 	m	(Lnet/minecraft/unmapped/C_3335560;Lnet/minecraft/unmapped/C_2750078;)Lnet/minecraft/unmapped/C_2750078;	m_3792046		m_3792046
