@@ -115,7 +115,7 @@ class GradleProcess:
     def __init__(self, build_dir: str, version: str):
         self._version: str = version
         self._build_dir: str = build_dir
-        self._version_dir: str = os.path.join(self._build_dir, self._version.replace(":", " "))
+        self._version_dir: str = os.path.join(self._build_dir, self._version)
         self._gradle_command: str = "gradlew" if os.name == "nt" else "./gradlew"
         self._process: Optional[subprocess.Popen] = None
         self._times_run: int = 0
