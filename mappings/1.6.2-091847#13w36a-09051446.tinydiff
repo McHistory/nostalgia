@@ -4375,7 +4375,7 @@ c	net/minecraft/unmapped/C_2032983	net/minecraft/util/MD5MessageDigest
 		p	1		salt	
 	m	(Ljava/lang/String;)Ljava/lang/String;	m_6132767	digest	
 		p	1		s	
-c	net/minecraft/unmapped/C_3298564
+c	net/minecraft/unmapped/C_3298564	net/minecraft/network/packet/StatPacket	net/minecraft/network/packet/StatsPacket
 	f	I	f_9128496	statId	
 	f	I	f_3460613	value	
 	f	Ljava/util/Map;	f_1907201		stats
@@ -4383,7 +4383,7 @@ c	net/minecraft/unmapped/C_3298564
 		p	1		statId	
 		p	2		value	
 	m	(Lnet/minecraft/unmapped/C_6120683;)V	<init>		<init>
-		p	1			statHandler
+		p	1			stats
 c	net/minecraft/unmapped/C_3413703	net/minecraft/stat/StatsSyncer	
 	f	Z	f_4741712	busy	
 	f	Ljava/util/Map;	f_8386834	stats	
@@ -9432,3 +9432,5 @@ c	net/minecraft/unmapped/C_9928623		net/minecraft/world/gen/feature/IcePatchFeat
 		p	5			p_5
 c	net/minecraft/unmapped/C_7255299
 	m	()Ljava/io/File;	m_6501199	getDirectory	m_6501199
+c	net/minecraft/unmapped/C_4443804
+	m	(Lnet/minecraft/unmapped/C_3298564;)V	m_2415920	handleStat	handleStats
