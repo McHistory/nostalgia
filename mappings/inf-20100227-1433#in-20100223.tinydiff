@@ -511,7 +511,7 @@ c	net/minecraft/unmapped/C_3906126
 	f	Ljava/util/List;	f_4235072		blockEntities
 	f	[I	f_6234407		heightMap
 	f	Ljava/util/Random;	f_3522738		randomTickRandom
-	f	I	f_5915199		f_5915199
+	f	I	f_5915199		randomTickLCG
 	f	Lnet/minecraft/unmapped/C_4838406;	f_7148360		blockMap
 	f	I	f_8873427		surroundingWaterHeight
 	f	I	f_0183464		surroundingGroundHeight
@@ -527,10 +527,14 @@ c	net/minecraft/unmapped/C_3906126
 	f	I	f_5627840		sunLight
 	f	Lnet/minecraft/unmapped/C_7079324;	f_4330482		lightEngine
 	f	I	f_6512025		timeOfDay
-	f	S	f_8692135		f_8692135
-	f	[S	f_6243074		f_6243074
-	f	[I	f_1752025		f_1752025
-	f	[I	f_9254905		f_9254905
+	f	S	f_8692135		initialLiquidCheckIndex
+		c		The index in the {@link liquidCheckColumns} array for the XZ-column that had the\ninitial liquid check.
+	f	[S	f_6243074		liquidCheckIndices
+		c		The index in the {@link liquidCheckColumns} array for each XZ-column.
+	f	[I	f_1752025		liquidCheckColumns
+		c		All XZ-columns that that have pending liquid checks.
+	f	[I	f_9254905		pendingLiquidUpdateColumns
+		c		All XZ-columns in the next Y-layer that that have pending liquid checks.
 	m	(III)I	m_9052708	getBlock	
 		p	1		x	
 		p	2		y	
@@ -564,8 +568,8 @@ c	net/minecraft/unmapped/C_3906126
 	m	()V	m_5250554		initialized
 	m	(III[B[B)V	m_2817546		assemble
 		p	1			sizeX
-		p	2			sizeZ
-		p	3			sizeY
+		p	2			sizeY
+		p	3			sizeZ
 		p	4			blocks
 		p	5			blockData
 	m	()V	m_9594040		findSpawnPoint
@@ -594,7 +598,7 @@ c	net/minecraft/unmapped/C_3906126
 		p	2			y
 		p	3			z
 		p	4			block
-	m	(IIII)Z	m_6881939		setBlockButSpecial
+	m	(IIII)Z	m_6881939		setBlockNoUpdate
 		p	1			x
 		p	2			y
 		p	3			z
@@ -690,19 +694,21 @@ c	net/minecraft/unmapped/C_3906126
 		p	1			pos
 		p	2			bounds
 	m	(Ljava/lang/Class;)Lnet/minecraft/unmapped/C_6385858;	m_9603080		getEntityOfSubtype
-		p	1			p_1
-	m	(IIIII)I	m_9956589		m_9956589
+		p	1			type
+	m	(IIIII)I	m_9956589		findLiquidBodyEdge
+		c		Searches through the body of connected liquid blocks around the given position at and\nabove the given height, and returns the position of the liquid block furthest horizontal\ndistance to the given position.
 		p	1			x
 		p	2			y
 		p	3			z
-		p	4			liquid
-		p	5			adjacentSources
-	m	(IIIII)I	m_2945921		m_2945921
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
+		p	4			flowingLiquid
+		p	5			sourceLiquid
+	m	(IIIII)I	m_2945921		findLiquidLayerBoundaryType
+		c		Searches through the layer of connected liquid blocks around the given position at the\ngiven height, and checks what kind of blocks are present in the boundary surrounding\nit. Based on that, it returns a boundary type:\n<br> 0: boundary contains air or given position is outside the world\n<br> 1: boundary contains only non-air blocks\n<br> 2: boundary is outside the world
+		p	1			x
+		p	2			y
+		p	3			z
+		p	4			flowingLiquid
+		p	5			sourceLiquid
 	m	(FFFLjava/lang/String;F)V	m_0699887		playMusic
 		p	1			x
 		p	2			y
@@ -806,8 +812,8 @@ c	net/minecraft/unmapped/C_4558465
 		p	2			x
 		p	3			y
 		p	4			z
-	m	(Lnet/minecraft/unmapped/C_3906126;III)Z	m_9828053		lightOnFire
-		p	0			wrorld
+	m	(Lnet/minecraft/unmapped/C_3906126;III)Z	m_9828053		handleLavaCollisions
+		p	0			world
 		p	1			x
 		p	2			y
 		p	3			z
@@ -1073,11 +1079,11 @@ c	net/minecraft/unmapped/C_7693268
 		p	5			x
 		p	6			y
 		p	7			z
-	m	(Lnet/minecraft/unmapped/C_3906126;IIIIII)Z	m_3542998		m_3542998
+	m	(Lnet/minecraft/unmapped/C_3906126;IIIIII)Z	m_3542998		spreadFromLiquidBody
 		p	1			world
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
+		p	2			fromX
+		p	3			fromY
+		p	4			fromZ
 		p	5			x
 		p	6			y
 		p	7			z
@@ -1088,12 +1094,12 @@ c	net/minecraft/unmapped/C_7693268
 		p	4			p_4
 		p	5			p_5
 	m	()I	m_9474325		m_9474325
-	m	(Lnet/minecraft/unmapped/C_3906126;III)Z	m_2767602		spreadWaterTo
+	m	(Lnet/minecraft/unmapped/C_3906126;III)Z	m_2767602		handleWaterCollisions
 		p	0			world
 		p	1			x
 		p	2			y
 		p	3			z
-	m	(Lnet/minecraft/unmapped/C_3906126;III)Z	m_2525033		lightOnFire
+	m	(Lnet/minecraft/unmapped/C_3906126;III)Z	m_2525033		handleLavaCollisions
 		p	0			world
 		p	1			x
 		p	2			y
@@ -1122,7 +1128,7 @@ c	net/minecraft/unmapped/C_8345828
 	m	()Ljava/lang/String;	m_3588390		m_3588390
 c	net/minecraft/unmapped/C_8554894
 	m	()Z	m_7284382		isNotLiquidBlocking
-	m	()Z	m_5256523		m_5256523
+	m	()Z	m_5256523		isOpaque
 c	net/minecraft/unmapped/C_8565077
 	m	(Lnet/minecraft/unmapped/C_3906126;IIILjava/util/Random;)V	m_3941370		m_3941370
 		p	1			p_1
@@ -1279,9 +1285,9 @@ c	net/minecraft/unmapped/C_1044273
 		p	1		culler	
 	m	()V	m_8889498		m_8889498
 	m	(Lnet/minecraft/unmapped/C_0336319;Lnet/minecraft/unmapped/C_9265122;F)V	m_1380727		renderEntities
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+		p	1			cameraPos
+		p	2			culler
+		p	3			tickDelta
 	m	()V	m_6633291		m_6633291
 	m	()V	m_9621842		m_9621842
 	m	()V	m_7874783		m_7874783
@@ -1413,16 +1419,16 @@ c	net/minecraft/unmapped/C_3911481
 		p	6		z	
 		p	8		scale	
 	m	(Lnet/minecraft/unmapped/C_3906126;FFF)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
+		p	1			world
+		p	2			x
+		p	3			y
+		p	4			z
 	m	(Lnet/minecraft/unmapped/C_3906126;FFFF)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
+		p	1			world
+		p	2			x
+		p	3			y
+		p	4			z
+		p	5			scale
 c	net/minecraft/unmapped/C_3945099
 	m	(Lnet/minecraft/unmapped/C_6385858;DDDFF)V	m_5501825	m_5501825	
 		p	1		p_1	
@@ -1455,21 +1461,21 @@ c	net/minecraft/unmapped/C_4620696
 		p	4		y	
 		p	6		z	
 	m	(Lnet/minecraft/unmapped/C_3906126;FFF)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
+		p	1			world
+		p	2			x
+		p	3			y
+		p	4			z
 c	net/minecraft/unmapped/C_4824661
 	f	Ljava/text/DecimalFormat;	f_8054979		f_8054979
-	f	Ljava/nio/ByteBuffer;	f_1776972		f_1776972
+	f	Ljava/nio/ByteBuffer;	f_1776972		screenshotBuffer
 	f	Ljava/nio/FloatBuffer;	f_7066741		f_7066741
-	m	()V	m_8540370		m_8540370
-	m	(Ljava/nio/ByteBuffer;II)Ljava/awt/image/BufferedImage;	m_2576693		m_2576693
-		p	0			p_0
-		p	1			p_1
-		p	2			p_2
-	m	(F)V	m_2952549		m_2952549
-		p	1			p_1
+	m	()V	m_8540370		takeLargeScreenshot
+	m	(Ljava/nio/ByteBuffer;II)Ljava/awt/image/BufferedImage;	m_2576693		createImage
+		p	0			buffer
+		p	1			x
+		p	2			y
+	m	(F)V	m_2952549		clearFog
+		p	1			tickDelta
 c	net/minecraft/unmapped/C_4917405
 	m	(Lnet/minecraft/unmapped/C_6385858;DDDFF)V	m_5501825	m_5501825	
 		p	1		p_1	
@@ -1509,7 +1515,7 @@ c	net/minecraft/unmapped/C_5283200
 	m	(Lnet/minecraft/unmapped/C_6516244;)V	m_5092852	cull	
 		p	1		culler	
 	m	(Lnet/minecraft/unmapped/C_9265122;)V	m_5092852		cull
-		p	1			p_1
+		p	1			culler
 c	net/minecraft/unmapped/C_5367636
 	m	(Lnet/minecraft/unmapped/C_2800860;)V	m_0758434		m_0758434
 		p	1			p_1
@@ -1572,10 +1578,10 @@ c	net/minecraft/unmapped/C_7132859
 		p	4		y	
 		p	6		z	
 	m	(Lnet/minecraft/unmapped/C_3906126;FFF)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
+		p	1			world
+		p	2			x
+		p	3			y
+		p	4			z
 c	net/minecraft/unmapped/C_7564962
 	f	Lnet/minecraft/unmapped/C_1051907;	f_9765119		naturalSpawner
 	m	(Lnet/minecraft/unmapped/C_3906126;)V	m_9659430		m_9659430
@@ -1587,10 +1593,10 @@ c	net/minecraft/unmapped/C_7966473
 		p	4		y	
 		p	6		z	
 	m	(Lnet/minecraft/unmapped/C_3906126;FFF)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
+		p	1			world
+		p	2			x
+		p	3			y
+		p	4			z
 c	net/minecraft/unmapped/C_8191584
 	m	(Lnet/minecraft/unmapped/C_1013763;DDDFF)V	m_9861626	m_9861626	
 		p	1		p_1	
@@ -1627,9 +1633,9 @@ c	net/minecraft/unmapped/C_8425960
 	m	(Ljava/io/InputStream;)Lnet/minecraft/unmapped/C_2800860;	m_3357503		readCompressed
 		p	0			is
 c	net/minecraft/unmapped/C_8905061
-	f	F	f_6487551		f_6487551
-	f	F	f_3194041		f_3194041
-	f	F	f_0182044		f_0182044
+	f	F	f_6487551		velocityX
+	f	F	f_3194041		velocityY
+	f	F	f_0182044		velocityZ
 	m	(Lnet/minecraft/unmapped/C_3906126;DDDDDD)V	<init>	<init>	
 		p	1		world	
 		p	2		x	
@@ -1639,15 +1645,15 @@ c	net/minecraft/unmapped/C_8905061
 		p	10		velocityY	
 		p	12		velocityZ	
 	m	(Lnet/minecraft/unmapped/C_3906126;FFFFFF)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
-		p	6			p_6
-		p	7			p_7
-	m	(F)Lnet/minecraft/unmapped/C_8905061;	m_3489622		m_3489622
-		p	1			p_1
+		p	1			world
+		p	2			x
+		p	3			y
+		p	4			z
+		p	5			velocityX
+		p	6			velocityY
+		p	7			velocityZ
+	m	(F)Lnet/minecraft/unmapped/C_8905061;	m_3489622		multiplyVelocity
+		p	1			scalar
 	m	(Lnet/minecraft/unmapped/C_2800860;)V	m_0758434		m_0758434
 		p	1			p_1
 	m	()Ljava/lang/String;	m_3588390		m_3588390
@@ -1668,18 +1674,18 @@ c	net/minecraft/unmapped/C_9302567
 		p	6		dz	
 		p	8		tickDelta	
 	m	(Lnet/minecraft/unmapped/C_6385858;FFFFF)V	m_5501825		render
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
-		p	6			p_6
+		p	1			entity
+		p	2			x
+		p	3			y
+		p	4			z
+		p	5			yaw
+		p	6			tickDelta
 	m	(Lnet/minecraft/unmapped/C_6385858;FFFF)V	m_3685532		renderShadow
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
+		p	1			entity
+		p	2			x
+		p	3			y
+		p	4			z
+		p	5			tickDelta
 c	net/minecraft/unmapped/C_9610577
 	f	D	f_4047515	cameraX	
 	f	D	f_4020224	cameraY	
@@ -1699,16 +1705,16 @@ c	net/minecraft/unmapped/C_9610577
 		p	3		y	
 		p	5		z	
 	m	(Lnet/minecraft/unmapped/C_6385858;FFFFF)V	m_7948449		render
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
-		p	6			p_6
+		p	1			entity
+		p	2			x
+		p	3			y
+		p	4			z
+		p	5			yaw
+		p	6			tickDelta
 	m	(FFF)F	m_4834975		squaredDistanceToCamera
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+		p	1			x
+		p	2			y
+		p	3			z
 c	net/minecraft/unmapped/C_9232749
 	m	(Ljava/lang/String;DDDFF)V	m_2244237	playSound	
 		p	1		sound	
@@ -1998,7 +2004,7 @@ c	net/minecraft/unmapped/C_4713165		net/minecraft/client/entity/particle/EntityP
 		p	1			world
 		p	2			entity
 		p	3			mob
-		p	4			p_4
+		p	4			scale
 	m	(Lnet/minecraft/unmapped/C_2334550;FFFFFF)V	m_7521183		m_7521183
 		p	1			p_1
 		p	2			p_2
@@ -2016,16 +2022,16 @@ c	net/minecraft/unmapped/C_4793608		net/minecraft/client/render/NonCuller
 c	net/minecraft/unmapped/C_5376418		net/minecraft/world/WorldGenerator
 	f	Lnet/minecraft/unmapped/C_2411117;	f_4854350		listener
 	f	I	f_3656430		sizeX
-	f	I	f_0729654		sizeY
-	f	I	f_3160490		sizeZ
+	f	I	f_0729654		sizeZ
+	f	I	f_3160490		sizeY
 	f	Ljava/util/Random;	f_3235868		random
 	f	[B	f_5268170		blocks
 	f	I	f_9811652		surroundingWaterHeight
 	f	I	f_7113452		surroundingGroundHeight
-	f	Z	f_8767089		f_8767089
-	f	Z	f_1849679		f_1849679
-	f	Z	f_0645994		f_0645994
-	f	I	f_5831401		type
+	f	Z	f_8767089		island
+	f	Z	f_1849679		floating
+	f	Z	f_0645994		flat
+	f	I	f_5831401		theme
 	f	I	f_6894446		phase
 	f	I	f_8664228		phaseCount
 	f	F	f_1231443		f_1231443
@@ -2035,8 +2041,8 @@ c	net/minecraft/unmapped/C_5376418		net/minecraft/world/WorldGenerator
 	m	(Ljava/lang/String;III)Lnet/minecraft/unmapped/C_3906126;	m_3824488		generate
 		p	1			username
 		p	2			sizeX
-		p	3			sizeY
-		p	4			sizeZ
+		p	3			sizeZ
+		p	4			sizeY
 	m	(Lnet/minecraft/unmapped/C_3906126;)V	m_9836895		placeSpawnBuilding
 		p	0			world
 	m	(Lnet/minecraft/unmapped/C_3906126;)V	m_0638488		placeGrass

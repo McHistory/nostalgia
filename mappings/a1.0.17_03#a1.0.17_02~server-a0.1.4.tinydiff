@@ -36,19 +36,18 @@ c	net/minecraft/unmapped/C_2354122$0600562		0600562
 	m	(Lnet/minecraft/unmapped/C_2354122;)V	<init>		<init>
 		p	1			p_1
 	m	()V	run		run
-c	net/minecraft/unmapped/C_2422346
-	m	(IB)V	<init>		<init>
-		p	1			id
-		p	2			event
 c	net/minecraft/unmapped/C_3157620
 	m	(J)V	<init>		<init>
 		p	1			p_1
 c	net/minecraft/unmapped/C_3837238
-	m	(I)Z	m_1415693		contains
+	m	(I)Z	m_1415693		containsKey
 		p	1			key
 	m	(I)Lnet/minecraft/unmapped/C_3837238$C_6094996;	m_3147383		getNode
 		p	1			key
 c	net/minecraft/unmapped/C_3906126
+	f	I	f_7319966	lastSaveTime	
+	m	(Lnet/minecraft/unmapped/C_6385858;)V	m_4614615	addEntityAlways	
+		p	1		entity	
 	m	(IIIIII)[B	m_8350794		packChunkData
 		p	1			minX
 		p	2			minY
@@ -96,14 +95,6 @@ c	net/minecraft/unmapped/C_4796873$C_4858115
 		p	1			id
 		p	2			yaw
 		p	3			pitch
-c	net/minecraft/unmapped/C_5315820
-	m	(III)V	<init>		<init>
-		p	1			x
-		p	2			y
-		p	3			z
-c	net/minecraft/unmapped/C_6020368
-	m	(I)V	<init>		<init>
-		p	1			health
 c	net/minecraft/unmapped/C_6755599
 	m	([BIIIIIII)I	m_5989424		packChunkData
 		p	1			data
@@ -114,26 +105,9 @@ c	net/minecraft/unmapped/C_6755599
 		p	6			maxY
 		p	7			maxZ
 		p	8			size
-c	net/minecraft/unmapped/C_8321936
-	m	(Lnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_6385858;)V	<init>		<init>
-		p	1			entity
-		p	2			mount
-c	net/minecraft/unmapped/C_9155522
-	m	(IDDD)V	<init>		<init>
-		p	1			id
-		p	2			velocityX
-		p	4			velocityY
-		p	6			velocityZ
 c	net/minecraft/unmapped/C_9386942
 	m	(Lnet/minecraft/unmapped/C_6385858;)D	m_4819229		squaredDistanceToCenter
 		p	1			entity
-c	net/minecraft/unmapped/C_9614477
-	m	(Ljava/lang/String;Ljava/lang/String;IJB)V	<init>		<init>
-		p	1			username
-		p	2			password
-		p	3			id
-		p	4			seed
-		p	6			dimensionId
 c	net/minecraft/unmapped/C_9814383
 	m	(IIIIBB)V	<init>		<init>
 		p	1			id
@@ -146,6 +120,8 @@ c	net/minecraft/unmapped/C_8710490
 	m	(Lnet/minecraft/unmapped/C_2750078;I)V	<init>		<init>
 		p	1			stack
 		p	2			count
+c	net/minecraft/client/Minecraft
+	f	I	f_4695611	joinPlayerCounter	
 c	net/minecraft/server/MinecraftServer		net/minecraft/server/MinecraftServer
 	f	Ljava/util/logging/Logger;	f_7446175		LOGGER
 	f	Ljava/util/HashMap;	f_5715141		GIVE_COMMANDS_COOLDOWNS
@@ -162,8 +138,6 @@ c	net/minecraft/server/MinecraftServer		net/minecraft/server/MinecraftServer
 	f	Ljava/util/List;	f_6405794		pendingCommands
 	f	Lnet/minecraft/unmapped/C_8546801;	f_4955494		entityTracker
 	f	Z	f_2598215		onlineMode
-	f	Z	f_9476002		spawnAnimals
-	f	Z	f_3140624		pvpEnabled
 	m	()V	<init>		<init>
 	m	()Z	m_0615401		init
 	m	(Ljava/lang/String;)V	m_2695328		loadWorld
@@ -227,11 +201,8 @@ c	net/minecraft/unmapped/C_0019534		net/minecraft/server/PlayerManager
 	f	Ljava/io/File;	f_3318119		bansFile
 	f	Ljava/io/File;	f_2444020		ipBansFile
 	f	Ljava/io/File;	f_8764252		opsFile
-	f	Lnet/minecraft/unmapped/C_2260875;	f_4295519		dataStorage
 	m	(Lnet/minecraft/server/MinecraftServer;)V	<init>		<init>
 		p	1			server
-	m	(Lnet/minecraft/unmapped/C_7366354;)V	m_8887204		setWorld
-		p	1			world
 	m	()I	m_2379740		getChunkViewDistance
 	m	(Lnet/minecraft/unmapped/C_0324512;)V	m_5986822		add
 		p	1			player
@@ -281,12 +252,6 @@ c	net/minecraft/unmapped/C_0019534		net/minecraft/server/PlayerManager
 	m	(Ljava/lang/String;Lnet/minecraft/unmapped/C_4844124;)Z	m_9415220		sendPacket
 		p	1			player
 		p	2			packet
-	m	(IIILnet/minecraft/unmapped/C_2074023;)V	m_8169613		onBlockEntityChanged
-		p	1			x
-		p	2			y
-		p	3			z
-		p	4			blockEntity
-	m	()V	m_0632391		saveAll
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_0324512		net/minecraft/server/entity/mob/player/ServerPlayerEntity
 	f	Lnet/minecraft/unmapped/C_8752044;	f_3231607		networkHandler
@@ -298,7 +263,6 @@ c	net/minecraft/unmapped/C_0324512		net/minecraft/server/entity/mob/player/Serve
 		c		Coordinates of chunks that have come within view of the player, but have not yet\nbeen sent to the client.
 	f	Ljava/util/Set;	f_5806656		allLoadedChunks
 	f	D	f_7252894		f_7252894
-	f	I	f_5431237		lastHealth
 	m	(Lnet/minecraft/server/MinecraftServer;Lnet/minecraft/unmapped/C_3906126;Ljava/lang/String;Lnet/minecraft/unmapped/C_7897127;)V	<init>		<init>
 		p	1			server
 		p	2			world
@@ -319,15 +283,6 @@ c	net/minecraft/unmapped/C_0324512		net/minecraft/server/entity/mob/player/Serve
 		p	2			p_2
 	m	()V	m_2752266		m_2752266
 	m	()F	m_9119163		m_9119163
-	m	(Lnet/minecraft/unmapped/C_6385858;)V	m_5966517		m_5966517
-		p	1			p_1
-	m	()V	m_7664484		m_7664484
-	m	(DZ)V	m_5838082		m_5838082
-		p	1			p_1
-		p	3			p_3
-	m	(DZ)V	m_7783162		handleFall
-		p	1			distance
-		p	3			onGround
 c	net/minecraft/unmapped/C_0386427		net/minecraft/server/network/handler/ServerLoginNetworkHandler
 	f	Ljava/util/logging/Logger;	f_7882156		LOGGER
 	f	Ljava/util/Random;	f_6184966		RANDOM
@@ -395,8 +350,6 @@ c	net/minecraft/unmapped/C_0894181		net/minecraft/server/ServerProperties
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_0901730		net/minecraft/server/entity/EntityTrackerEntry
 	f	Lnet/minecraft/unmapped/C_6385858;	f_7181571		currentTrackedEntity
-	f	Z	f_3322088		f_3322088
-	f	Z	f_6048660		f_6048660
 	f	I	f_2248933		trackedDistance
 	f	I	f_7565514		trackingFrequency
 	f	I	f_2016635		lastX
@@ -404,22 +357,17 @@ c	net/minecraft/unmapped/C_0901730		net/minecraft/server/entity/EntityTrackerEnt
 	f	I	f_9375515		lastZ
 	f	I	f_6110859		lastYaw
 	f	I	f_1657273		lastPitch
-	f	D	f_6813137		velocityX
-	f	D	f_4709038		velocityY
-	f	D	f_9298322		velocityZ
 	f	I	f_9637545		ticks
 	f	D	f_9148217		x
 	f	D	f_0347914		y
 	f	D	f_7468472		z
 	f	Z	f_6862607		isInitialized
-	f	Z	f_4957386		alwaysUpdateVelocity
 	f	Z	f_6324525		newPlayerDataUpdated
 	f	Ljava/util/Set;	f_5593093		listeners
-	m	(Lnet/minecraft/unmapped/C_6385858;IIZ)V	<init>		<init>
+	m	(Lnet/minecraft/unmapped/C_6385858;II)V	<init>		<init>
 		p	1			entity
 		p	2			trackedDistance
-		p	3			tracingFrequency
-		p	4			alwaysUpdateVelocity
+		p	3			trackingFrequency
 	m	(Ljava/lang/Object;)Z	equals		equals
 		p	1			p_1
 	m	()I	hashCode		hashCode
@@ -532,11 +480,6 @@ c	net/minecraft/unmapped/C_1896634		net/minecraft/server/ChunkMap
 		p	1			chunkX
 		p	2			chunkZ
 		p	3			add
-	m	(Lnet/minecraft/unmapped/C_4844124;III)V	m_4982139		m_4982139
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
 	m	(III)V	m_1779924		onBlockChanged
 		p	1			x
 		p	2			y
@@ -593,16 +536,6 @@ c	net/minecraft/unmapped/C_2182707		net/minecraft/command/source/CommandSource
 	m	(Ljava/lang/String;)V	m_7400010		sendMessage
 		p	1			message
 	m	()Ljava/lang/String;	m_7291241		getSourceName
-c	net/minecraft/unmapped/C_2260875		net/minecraft/world/storage/PlayerDataStorage
-	f	Ljava/util/logging/Logger;	f_2561336		LOGGER
-	f	Ljava/io/File;	f_9370701		dir
-	m	(Ljava/io/File;)V	<init>		<init>
-		p	1			dir
-	m	(Lnet/minecraft/unmapped/C_0324512;)V	m_3491877		savePlayerData
-		p	1			player
-	m	(Lnet/minecraft/unmapped/C_0324512;)V	m_2233467		loadPlayerData
-		p	1			player
-	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_3146305		net/minecraft/entity/SpawnableEntity
 	c		An entity that spawns naturally.
 c	net/minecraft/unmapped/C_3571139		net/minecraft/server/world/chunk/ServerChunkCache
@@ -736,40 +669,36 @@ c	net/minecraft/unmapped/C_7366354		net/minecraft/server/world/ServerWorld
 	f	Lnet/minecraft/unmapped/C_3571139;	f_4355570		chunkCache
 	f	Z	f_8250949		bypassSpawnProtection
 	f	Z	f_8586684		savingDisabled
-	f	Lnet/minecraft/server/MinecraftServer;	f_1177250		server
-	f	Lnet/minecraft/unmapped/C_3837238;	f_3045964		entitiesById
-	m	(Lnet/minecraft/server/MinecraftServer;Ljava/io/File;Ljava/lang/String;I)V	<init>		<init>
-		p	1			server
-		p	2			dir
-		p	3			saveName
-		p	4			dimension
+	f	Lnet/minecraft/unmapped/C_9377562;	f_4313004		f_4313004
+	f	Lnet/minecraft/unmapped/C_9377562;	f_5543225		f_5543225
 	m	()V	m_0624358		m_0624358
-	m	(Lnet/minecraft/unmapped/C_6385858;Z)V	m_3502009		m_3502009
-		p	1			p_1
-		p	2			p_2
 	m	(Ljava/io/File;)Lnet/minecraft/unmapped/C_9484672;	m_7447312		m_7447312
 		p	1			p_1
-	m	(IIIIII)Ljava/util/List;	m_6912507		getBlockEntities
-		p	1			minX
-		p	2			minY
-		p	3			minZ
-		p	4			maxX
-		p	5			maxY
-		p	6			maxZ
-	m	(Lnet/minecraft/unmapped/C_5009044;III)Z	m_6974620		m_6974620
+	m	(Ljava/io/File;Ljava/lang/String;)V	<init>		<init>
+		p	1			p_1
+		p	2			p_2
+	m	(IIIII)Z	m_2111420		m_2111420
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
-	m	(Lnet/minecraft/unmapped/C_6385858;)V	m_3687959		m_3687959
-		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_6385858;)V	m_5171225		m_5171225
-		p	1			p_1
-	m	(I)Lnet/minecraft/unmapped/C_6385858;	m_4177568		getEntity
-		p	1			networkId
-	m	(Lnet/minecraft/unmapped/C_6385858;B)V	m_7993438		m_7993438
+		p	5			p_5
+	m	(IIII)Z	m_6927039		m_6927039
 		p	1			p_1
 		p	2			p_2
+		p	3			p_3
+		p	4			p_4
+c	net/minecraft/unmapped/C_7366354$8376366		8376366
+	f	Lnet/minecraft/unmapped/C_7366354;	f_7892840		f_7892840
+	m	(Lnet/minecraft/unmapped/C_7366354;ILjava/lang/Class;[Ljava/lang/Class;)V	<init>		<init>
+		p	1			p_1
+		p	2			p_2
+		p	3			p_3
+		p	4			p_4
+	m	(Lnet/minecraft/unmapped/C_3906126;II)Lnet/minecraft/unmapped/C_8032589;	m_0572155		m_0572155
+		p	1			p_1
+		p	2			p_2
+		p	3			p_3
 c	net/minecraft/unmapped/C_7897127		net/minecraft/server/ServerPlayerInteractionManager
 	f	Lnet/minecraft/unmapped/C_3906126;	f_7087740		world
 	f	Lnet/minecraft/unmapped/C_5009044;	f_5832068		player
@@ -800,10 +729,6 @@ c	net/minecraft/unmapped/C_7897127		net/minecraft/server/ServerPlayerInteraction
 		p	1			x
 		p	2			y
 		p	3			z
-	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_2750078;)Z	m_1509177		useItem
-		p	1			player
-		p	2			world
-		p	3			stack
 	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_2750078;IIII)Z	m_7617621		useBlock
 		p	1			player
 		p	2			world
@@ -852,11 +777,6 @@ c	net/minecraft/unmapped/C_8479751		net/minecraft/server/world/ServerWorldEventL
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
-	m	(IIILnet/minecraft/unmapped/C_2074023;)V	m_7701030		m_7701030
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
 c	net/minecraft/unmapped/C_8546801		net/minecraft/server/entity/EntityTracker
 	f	Ljava/util/Set;	f_6289612		entries
 	f	Lnet/minecraft/unmapped/C_3837238;	f_4296190		entriesById
@@ -866,15 +786,10 @@ c	net/minecraft/unmapped/C_8546801		net/minecraft/server/entity/EntityTracker
 		p	1			server
 	m	(Lnet/minecraft/unmapped/C_6385858;)V	m_3801660		onEntityAdded
 		p	1			entity
-	m	(Lnet/minecraft/unmapped/C_6385858;II)V	m_1065567		startTracking
+	m	(Lnet/minecraft/unmapped/C_6385858;II)V	m_4679752		startTracking
 		p	1			entity
 		p	2			trackedDistance
-		p	3			tracingFrequency
-	m	(Lnet/minecraft/unmapped/C_6385858;IIZ)V	m_4679752		startTracking
-		p	1			entity
-		p	2			trackedDistance
-		p	3			tracingFrequency
-		p	4			alwaysUpdateVelocity
+		p	3			trackingFrequency
 	m	(Lnet/minecraft/unmapped/C_6385858;)V	m_9053164		onEntityRemoved
 		p	1			entity
 	m	()V	m_6150524		tick
@@ -892,7 +807,6 @@ c	net/minecraft/unmapped/C_8752044		net/minecraft/server/network/handler/ServerP
 	f	D	f_7342191		teleportTargetY
 	f	D	f_5569700		teleportTargetZ
 	f	Z	f_9678880		teleported
-	f	Lnet/minecraft/unmapped/C_2750078;	f_8747355		f_8747355
 	m	(Lnet/minecraft/server/MinecraftServer;Lnet/minecraft/unmapped/C_2354122;Lnet/minecraft/unmapped/C_0324512;)V	<init>		<init>
 		p	1			server
 		p	2			connection
@@ -934,15 +848,6 @@ c	net/minecraft/unmapped/C_8752044		net/minecraft/server/network/handler/ServerP
 	m	(Ljava/lang/String;)V	m_7400010		m_7400010
 		p	1			p_1
 	m	()Ljava/lang/String;	m_7291241		m_7291241
-	m	(Lnet/minecraft/unmapped/C_6489668;)V	m_6175764		m_6175764
-		p	1			p_1
-	m	()V	m_9958829		m_9958829
-	m	(Lnet/minecraft/unmapped/C_8748575;)V	m_9632316		m_9632316
-		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_4946369;)V	m_9704705		m_9704705
-		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_4177687;)V	m_5512038		m_5512038
-		p	1			p_1
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_9048725		net/minecraft/server/ServerLog
 	f	Ljava/util/logging/Logger;	f_0211931		LOGGER
