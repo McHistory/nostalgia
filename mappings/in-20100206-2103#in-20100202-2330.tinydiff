@@ -892,14 +892,14 @@ c	net/minecraft/unmapped/C_7181464		net/minecraft/unmapped/C_7181464
 	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_1013763;)V	m_1710270		m_1710270
 		p	1			p_1
 		p	2			p_2
-c	net/minecraft/unmapped/C_8199124		net/minecraft/unmapped/C_8199124
-	f	Lnet/minecraft/unmapped/C_8199124;	f_3284628		f_3284628
-	f	Ljava/nio/FloatBuffer;	f_7388569		f_7388569
-	f	Ljava/nio/FloatBuffer;	f_6924582		f_6924582
+c	net/minecraft/unmapped/C_8199124		net/minecraft/client/render/Frustrum
+	f	Lnet/minecraft/unmapped/C_8199124;	f_3284628		INSTANCE
+	f	Ljava/nio/FloatBuffer;	f_7388569		projectionMatrix
+	f	Ljava/nio/FloatBuffer;	f_6924582		modelViewMatrix
 	f	Ljava/nio/FloatBuffer;	f_9644453		f_9644453
 	m	()V	<init>		<init>
-	m	()Lnet/minecraft/unmapped/C_0669153;	m_4703353		m_4703353
-	m	([[FI)V	m_5256054		m_5256054
+	m	()Lnet/minecraft/unmapped/C_0669153;	m_4703353		getInstance
+	m	([[FI)V	m_5256054		normalizeSide
 		p	0			p_0
-		p	1			p_1
+		p	1			frustrum
 	m	()V	<clinit>		<clinit>

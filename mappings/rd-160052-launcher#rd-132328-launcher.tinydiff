@@ -63,7 +63,7 @@ c	net/minecraft/unmapped/C_0289174
 	m	()V	m_3430241	m_3430241	
 c	net/minecraft/unmapped/C_1044273
 	f	I	f_1898565	f_1898565	
-	f	Lnet/minecraft/unmapped/C_2334550;	f_7101910		f_7101910
+	f	Lnet/minecraft/unmapped/C_2334550;	f_7101910		tesselator
 	m	()Ljava/util/List;	m_2981807	m_2981807	
 	m	(Lnet/minecraft/unmapped/C_0693652;)V	m_0477995	m_0477995	
 		p	1		p_1	
@@ -75,10 +75,10 @@ c	net/minecraft/unmapped/C_2334550
 	f	[F	f_8611150	vertexBuffer	
 	f	I	f_7163362	f_7163362	
 	f	I	f_4841604	f_4841604	
-	f	I	f_9043792		f_9043792
-	f	Ljava/nio/FloatBuffer;	f_5077027		f_5077027
-	f	Ljava/nio/FloatBuffer;	f_8632341		f_8632341
-	f	Ljava/nio/FloatBuffer;	f_6109559		f_6109559
+	f	I	f_9043792		MAX_VERTEX_COUNT
+	f	Ljava/nio/FloatBuffer;	f_5077027		vertexBuffer
+	f	Ljava/nio/FloatBuffer;	f_8632341		textureBuffer
+	f	Ljava/nio/FloatBuffer;	f_6109559		colorBuffer
 	m	()V	<clinit>	<clinit>	
 	m	(FFFFF)V	m_7710685	vertex	
 		p	1		x	
@@ -99,7 +99,7 @@ c	net/minecraft/unmapped/C_2454294	net/minecraft/client/ParticleManager
 	m	(Lnet/minecraft/unmapped/C_6495127;)V	<init>	<init>	
 		p	1		p_1	
 c	net/minecraft/unmapped/C_3385278
-	f	I	f_1400095		f_1400095
+	f	I	f_1400095		id
 c	net/minecraft/unmapped/C_5283200
 	f	F	f_7537396	f_7537396	
 	f	F	f_1919969	f_1919969	
@@ -150,23 +150,23 @@ c	net/minecraft/unmapped/C_6495127
 		p	1		x	
 		p	2		y	
 		p	3		z	
-	m	()Z	m_9026199	m_9026199	
+	m	()Z	m_9026199	readLevelData	
 	m	()V	m_1544961	m_1544961	
 	m	()V	m_5273376	m_5273376	
-	m	()V	m_9026199		m_9026199
-	m	(III)Z	m_5253448		m_5253448
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-	m	(III)F	m_9637473		m_9637473
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+	m	()V	m_9026199		readLevelData
+	m	(III)Z	m_5253448		isSolid
+		p	1			x
+		p	2			y
+		p	3			z
+	m	(III)F	m_9637473		getBrightness
+		p	1			x
+		p	2			y
+		p	3			z
 	m	(IIII)V	m_8573098		setBlockQuietly
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
+		p	1			x
+		p	2			y
+		p	3			z
+		p	4			blockID
 c	net/minecraft/unmapped/C_6501689
 	f	Lnet/minecraft/unmapped/C_7898033;	f_6031782	f_6031782	
 	f	Lnet/minecraft/unmapped/C_0289174;	f_6816342		f_6816342

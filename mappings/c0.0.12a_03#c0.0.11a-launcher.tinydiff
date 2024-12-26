@@ -58,7 +58,7 @@ c	net/minecraft/unmapped/C_3635204
 		p	4		p_4	
 		p	5		p_5	
 	m	()Z	m_9310917	m_9310917	
-	m	(Lnet/minecraft/unmapped/C_0693652;Lnet/minecraft/unmapped/C_2334550;IIII)V	m_8104522	m_8104522	
+	m	(Lnet/minecraft/unmapped/C_0693652;Lnet/minecraft/unmapped/C_2334550;IIII)V	m_8104522	renderFace	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
@@ -75,12 +75,12 @@ c	net/minecraft/unmapped/C_3635204
 		p	3		y	
 		p	4		z	
 		p	5		neighborBlock	
-	m	(Lnet/minecraft/unmapped/C_2334550;IIII)V	m_8104522		m_8104522
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
+	m	(Lnet/minecraft/unmapped/C_2334550;IIII)V	m_8104522		renderFace
+		p	1			tessellator
+		p	2			x
+		p	3			y
+		p	4			z
+		p	5			face
 c	net/minecraft/unmapped/C_4558465	net/minecraft/block/LiquidBlock	
 	f	I	f_9509159	sourceBlock	
 	f	I	f_9203262	flowingBlock	
@@ -177,8 +177,8 @@ c	net/minecraft/unmapped/C_1044273
 	f	F	f_4269846	prevCameraZ	
 	f	I	f_9039970	f_9039970	
 	f	I	f_1898565		f_1898565
-	f	I	f_9838191		f_9838191
-	m	(Lnet/minecraft/unmapped/C_0693652;Lnet/minecraft/unmapped/C_5853518;II)V	m_3006844	m_3006844	
+	f	I	f_9838191		CHUNK_SIZE
+	m	(Lnet/minecraft/unmapped/C_0693652;Lnet/minecraft/unmapped/C_5853518;II)V	m_3006844	renderBlockSelection	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
@@ -189,10 +189,10 @@ c	net/minecraft/unmapped/C_1044273
 	m	()Ljava/util/List;	m_2981807		m_2981807
 	m	(Lnet/minecraft/unmapped/C_0693652;)V	m_0477995		m_0477995
 		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_0693652;Lnet/minecraft/unmapped/C_8199124;)V	m_3613911		m_3613911
+	m	(Lnet/minecraft/unmapped/C_0693652;Lnet/minecraft/unmapped/C_8199124;)V	m_3613911		renderBlocksNearPlayer
 		p	1			p_1
 		p	2			p_2
-	m	(Lnet/minecraft/unmapped/C_5853518;II)V	m_3006844		m_3006844
+	m	(Lnet/minecraft/unmapped/C_5853518;II)V	m_3006844		renderBlockSelection
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -213,17 +213,17 @@ c	net/minecraft/unmapped/C_2334550
 		p	1		r	
 		p	2		g	
 		p	3		b	
-	m	(BBB)V	m_3482462	m_3482462	
+	m	(BBB)V	m_3482462	setColor	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
-	m	(FF)V	m_7884283		m_7884283
-		p	1			p_1
-		p	2			p_2
-	m	(FFF)V	m_3482462		m_3482462
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+	m	(FF)V	m_7884283		setUVs
+		p	1			u
+		p	2			v
+	m	(FFF)V	m_3482462		setColor
+		p	1			r
+		p	2			g
+		p	3			b
 c	net/minecraft/unmapped/C_2454294
 	f	Lnet/minecraft/unmapped/C_6495127;	f_2258233		f_2258233
 	m	(Lnet/minecraft/unmapped/C_6749951;)V	m_2704131		m_2704131
@@ -251,12 +251,12 @@ c	net/minecraft/unmapped/C_5283200
 	m	()V	m_0499834	reset	
 	m	(Lnet/minecraft/unmapped/C_0693652;)F	m_9608130	m_9608130	squaredDistanceToCenter
 c	net/minecraft/unmapped/C_5974036
-	f	J	f_2069125		f_2069125
-	f	J	f_6322592		f_6322592
-	f	I	f_9920113		f_9920113
+	f	J	f_2069125		NANOS_PER_SECOND
+	f	J	f_6322592		NANOS_PER_SECOND1
+	f	I	f_9920113		MAX_TICKS
 	f	F	f_6567507		partialTick
-	f	F	f_6634432	partialTick	f_6634432
-	m	()V	m_2550551		m_2550551
+	f	F	f_6634432	partialTick	ticksPassed
+	m	()V	m_2550551		update
 c	net/minecraft/unmapped/C_8688622	net/minecraft/client/render/world/DistanceChunkSorter	net/minecraft/unmapped/C_8688622
 	f	Lnet/minecraft/unmapped/C_8199124;	f_1226031		f_1226031
 	f	J	f_0566945		f_0566945
@@ -284,31 +284,31 @@ c	net/minecraft/unmapped/C_8199124
 	f	I	f_4870409		f_4870409
 	m	([[FI)V	m_5256054
 		p	0		p_0	
-		p	2			p_2
-	m	()V	m_3418415		m_3418415
-	m	(FFF)Z	m_2710320		m_2710320
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-	m	(FFFF)Z	m_9058344		m_9058344
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-	m	(FFFFFF)Z	m_7482034		m_7482034
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
-		p	6			p_6
-	m	(FFFFFF)Z	m_6314255		m_6314255
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
-		p	6			p_6
+		p	2			side
+	m	()V	m_3418415		generateFrustrum
+	m	(FFF)Z	m_2710320		isInside
+		p	1			x
+		p	2			y
+		p	3			z
+	m	(FFFF)Z	m_9058344		isInside
+		p	1			x
+		p	2			y
+		p	3			z
+		p	4			radius
+	m	(FFFFFF)Z	m_7482034		isFullyInside
+		p	1			minX
+		p	2			minY
+		p	3			minZ
+		p	4			maxX
+		p	5			maxY
+		p	6			maxZ
+	m	(FFFFFF)Z	m_6314255		isPartiallyInside
+		p	1			minX
+		p	2			minY
+		p	3			minZ
+		p	4			maxX
+		p	5			maxY
+		p	6			maxZ
 c	com/mojang/minecraft/MinecraftApplet
 	m	()V	m_0598229		m_0598229
 c	com/mojang/minecraft/MinecraftApplet$2322793	2322793	
@@ -327,23 +327,23 @@ c	net/minecraft/unmapped/C_7898033
 	m	(F)V	m_2456266		m_2456266
 		p	1			p_1
 c	net/minecraft/unmapped/C_3499172
-	m	(FFF)Lnet/minecraft/unmapped/C_3499172;	m_6152302		m_6152302
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-	m	(FFF)Lnet/minecraft/unmapped/C_3499172;	m_4157271		m_4157271
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-	m	(Lnet/minecraft/unmapped/C_3499172;F)F	m_5984123		m_5984123
-		p	1			p_1
-		p	2			p_2
-	m	(Lnet/minecraft/unmapped/C_3499172;F)F	m_1137652		m_1137652
-		p	1			p_1
-		p	2			p_2
-	m	(Lnet/minecraft/unmapped/C_3499172;F)F	m_5832453		m_5832453
-		p	1			p_1
-		p	2			p_2
+	m	(FFF)Lnet/minecraft/unmapped/C_3499172;	m_6152302		expandOneSided
+		p	1			dx
+		p	2			dy
+		p	3			dz
+	m	(FFF)Lnet/minecraft/unmapped/C_3499172;	m_4157271		expandCentred
+		p	1			dx
+		p	2			dy
+		p	3			dz
+	m	(Lnet/minecraft/unmapped/C_3499172;F)F	m_5984123		isWithinXDist
+		p	1			box
+		p	2			dx
+	m	(Lnet/minecraft/unmapped/C_3499172;F)F	m_1137652		isWithinYDist
+		p	1			box
+		p	2			dy
+	m	(Lnet/minecraft/unmapped/C_3499172;F)F	m_5832453		isWithinZDist
+		p	1			box
+		p	2			dz
 c	net/minecraft/unmapped/C_6495127
 	f	I	f_5915199	f_5915199	
 	f	Lnet/minecraft/client/Minecraft;	f_7026537	f_7026537	
@@ -375,23 +375,23 @@ c	net/minecraft/unmapped/C_6495127
 		p	4		p_4	
 		p	5		p_5	
 	m	(III)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-	m	(Lnet/minecraft/unmapped/C_4502654;)V	m_6604813		m_6604813
-		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_4502654;)V	m_1632456		m_1632456
-		p	1			p_1
-	m	(III)Z	m_1890831		m_1890831
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-	m	(Lnet/minecraft/unmapped/C_3499172;)Ljava/util/ArrayList;	m_6533345		m_6533345
-		p	1			p_1
-	m	(III)Z	m_4094026		m_4094026
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+		p	1			sizeX
+		p	2			sizeZ
+		p	3			sizeY
+	m	(Lnet/minecraft/unmapped/C_4502654;)V	m_6604813		addUpdateListener
+		p	1			updateListener
+	m	(Lnet/minecraft/unmapped/C_4502654;)V	m_1632456		removeUpdateListener
+		p	1			updateListener
+	m	(III)Z	m_1890831		isSolid3
+		p	1			x
+		p	2			y
+		p	3			z
+	m	(Lnet/minecraft/unmapped/C_3499172;)Ljava/util/ArrayList;	m_6533345		getBlocksInBox
+		p	1			box
+	m	(III)Z	m_4094026		isSolid2
+		p	1			x
+		p	2			y
+		p	3			z
 	m	()V	m_1544961		m_1544961
 c	net/minecraft/unmapped/C_6749951
 	m	(Lnet/minecraft/unmapped/C_2334550;FFFFFF)V	m_6133468		m_6133468
@@ -449,17 +449,17 @@ c	net/minecraft/unmapped/C_2971394		net/minecraft/unmapped/C_2971394
 	m	(Ljava/lang/Exception;)V	m_7297931		m_7297931
 		p	1			p_1
 	m	()V	m_0662649		m_0662649
-c	net/minecraft/unmapped/C_4502654		net/minecraft/unmapped/C_4502654
-	m	(III)V	m_6028586		m_6028586
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-	m	(IIII)V	m_0269289		m_0269289
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-	m	()V	m_4670696		m_4670696
+c	net/minecraft/unmapped/C_4502654		net/minecraft/world/WorldEventListener
+	m	(III)V	m_6028586		setPosDirty
+		p	1			x
+		p	2			y
+		p	3			z
+	m	(IIII)V	m_0269289		setColumnDirty
+		p	1			x
+		p	2			z
+		p	3			minY
+		p	4			maxY
+	m	()V	m_4670696		setWorldDirty
 c	net/minecraft/unmapped/C_5558122		net/minecraft/unmapped/C_5558122
 	m	(Lnet/minecraft/unmapped/C_8184723;)V	m_9131252		m_9131252
 		p	1			p_1

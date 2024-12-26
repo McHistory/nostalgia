@@ -124,7 +124,7 @@ c	net/minecraft/unmapped/C_3635204
 		p	2		x	
 		p	3		y	
 		p	4		z	
-	m	(Lnet/minecraft/unmapped/C_2334550;Lcom/mojang/minecraft/level/Level;IIII)Z	m_5198489	m_5198489	
+	m	(Lnet/minecraft/unmapped/C_2334550;Lcom/mojang/minecraft/level/Level;IIII)Z	m_5198489	renderVertices	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
@@ -148,14 +148,14 @@ c	net/minecraft/unmapped/C_3635204
 		p	0		p_0	
 		p	1		p_1	
 		p	2		p_2	
-	m	(Lcom/mojang/minecraft/player/Player;Lnet/minecraft/unmapped/C_2334550;IIII)V	m_8104522	m_8104522	
+	m	(Lcom/mojang/minecraft/player/Player;Lnet/minecraft/unmapped/C_2334550;IIII)V	m_8104522	renderFace	
 		p	0		p_0	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
 		p	4		p_4	
 		p	5		p_5	
-	m	(Lnet/minecraft/unmapped/C_2334550;Lnet/minecraft/unmapped/C_6495127;IIII)Z	m_5198489		m_5198489
+	m	(Lnet/minecraft/unmapped/C_2334550;Lnet/minecraft/unmapped/C_6495127;IIII)Z	m_5198489		renderVertices
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -169,7 +169,7 @@ c	net/minecraft/unmapped/C_3635204
 		p	4			p_4
 		p	5			p_5
 		p	6			p_6
-	m	(Lnet/minecraft/unmapped/C_0693652;Lnet/minecraft/unmapped/C_2334550;IIII)V	m_8104522		m_8104522
+	m	(Lnet/minecraft/unmapped/C_0693652;Lnet/minecraft/unmapped/C_2334550;IIII)V	m_8104522		renderFace
 		p	0			p_0
 		p	1			p_1
 		p	2			p_2
@@ -353,7 +353,7 @@ c	net/minecraft/unmapped/C_1044273
 	m	(Lnet/minecraft/unmapped/C_8199124;F)V	m_7867114	m_7867114	
 		p	1		p_1	
 		p	2		p_2	
-	m	(Lcom/mojang/minecraft/player/Player;Lnet/minecraft/unmapped/C_5853518;II)V	m_3006844	m_3006844	
+	m	(Lcom/mojang/minecraft/player/Player;Lnet/minecraft/unmapped/C_5853518;II)V	m_3006844	renderBlockSelection	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
@@ -367,9 +367,9 @@ c	net/minecraft/unmapped/C_1044273
 		p	1			p_1
 		p	2			p_2
 	m	(Lnet/minecraft/unmapped/C_0693652;I)V	m_8682700		render
-		p	1			p_1
-		p	2			p_2
-	m	(Lnet/minecraft/unmapped/C_0693652;Lnet/minecraft/unmapped/C_5853518;II)V	m_3006844		m_3006844
+		p	1			player
+		p	2			layer
+	m	(Lnet/minecraft/unmapped/C_0693652;Lnet/minecraft/unmapped/C_5853518;II)V	m_3006844		renderBlockSelection
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -379,7 +379,7 @@ c	net/minecraft/unmapped/C_2334550
 		p	1		r	
 		p	2		g	
 		p	3		b	
-	m	(BBB)V	m_3482462		m_3482462
+	m	(BBB)V	m_3482462		setColor
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -523,10 +523,10 @@ c	net/minecraft/unmapped/C_8199124
 		p	4		p_4	
 		p	5		p_5	
 		p	6		p_6	
-	m	(Lcom/mojang/minecraft/phys/AABB;)Z	m_0183273	m_0183273	
+	m	(Lcom/mojang/minecraft/phys/AABB;)Z	m_0183273	isPartiallyInside	
 		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_3499172;)Z	m_0183273		m_0183273
-		p	1			p_1
+	m	(Lnet/minecraft/unmapped/C_3499172;)Z	m_0183273		isPartiallyInside
+		p	1			box
 c	com/mojang/minecraft/Entity	com/mojang/minecraft/Entity	
 	f	J	serialVersionUID	serialVersionUID	
 	f	Lcom/mojang/minecraft/level/Level;	level	level	
@@ -888,10 +888,10 @@ c	com/mojang/minecraft/character/Zombie	com/mojang/minecraft/character/Zombie
 c	net/minecraft/unmapped/C_0693652		net/minecraft/entity/mob/player/PlayerEntity
 	f	[Z	f_2575121		f_2575121
 	m	(Lnet/minecraft/unmapped/C_6495127;)V	<init>		<init>
-		p	1			p_1
-	m	()V	m_8155790		m_8155790
+		p	1			world
+	m	()V	m_8155790		tick
 c	net/minecraft/unmapped/C_3499172		net/minecraft/util/math/Box
-	f	F	f_2672156		f_2672156
+	f	F	f_2672156		epsilon
 	f	F	f_3180898		minX
 	f	F	f_1251944		minY
 	f	F	f_4669930		minZ
@@ -909,8 +909,8 @@ c	net/minecraft/unmapped/C_3499172		net/minecraft/util/math/Box
 		p	1			dx
 		p	2			dy
 		p	3			dz
-	m	(Lnet/minecraft/unmapped/C_3499172;)Z	m_4863516		m_4863516
-		p	1			p_1
+	m	(Lnet/minecraft/unmapped/C_3499172;)Z	m_4863516		isTouching
+		p	1			box
 	m	(FFF)V	m_3408982		move
 		p	1			dx
 		p	2			dy
@@ -921,7 +921,7 @@ c	net/minecraft/unmapped/C_6495127		net/minecraft/world/World
 	f	I	f_0105010		sizeY
 	f	[B	f_4800445		blocks
 	f	[I	f_6234407		heightMap
-	f	Ljava/util/ArrayList;	f_9572477		f_9572477
+	f	Ljava/util/ArrayList;	f_9572477		updateListeners
 	f	Ljava/util/Random;	f_4448706		random
 	f	I	f_5915199		f_5915199
 	f	Ljava/lang/String;	f_9682862		f_9682862
@@ -934,11 +934,11 @@ c	net/minecraft/unmapped/C_6495127		net/minecraft/world/World
 		p	2			sizeZ
 		p	3			sizeY
 		p	4			blocks
-	m	(IIII)V	m_1853614		m_1853614
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
+	m	(IIII)V	m_1853614		updateHeightmap
+		p	1			minX
+		p	2			minZ
+		p	3			maxX
+		p	4			maxZ
 	m	(Lnet/minecraft/unmapped/C_3499172;)Ljava/util/ArrayList;	m_4786343		getCollisions
 		p	1			shape
 	m	(IIII)Z	m_8573098		setBlockQuietly
