@@ -40,7 +40,7 @@ c	net/minecraft/unmapped/C_3635204
 	f	Z	f_8002233		f_8002233
 	m	()I	m_5117733	getRenderLayer	
 		c	Returns this block's render layer. The possible values are as follows:\n<br>0: solid\n<br>1: mipped cutout\n<br>2: cutout\n<br>3: translucent	
-	m	(Lnet/minecraft/unmapped/C_2334550;)V	m_5198489	m_5198489	
+	m	(Lnet/minecraft/unmapped/C_2334550;)V	m_5198489	renderVertices	
 		p	1		p_1	
 	m	(Lcom/mojang/minecraft/level/Level;IIII)Z	m_8199947	shouldRenderFace	
 		p	1		world	
@@ -56,7 +56,7 @@ c	net/minecraft/unmapped/C_3635204
 		p	5		p_5	
 	m	(F)V	m_5317075	dropItems	
 		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_2334550;Lcom/mojang/minecraft/level/Level;IIII)Z	m_5198489		m_5198489
+	m	(Lnet/minecraft/unmapped/C_2334550;Lcom/mojang/minecraft/level/Level;IIII)Z	m_5198489		renderVertices
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -167,7 +167,7 @@ c	net/minecraft/unmapped/C_1044273
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
-	m	(Lnet/minecraft/unmapped/C_5853518;II)V	m_3006844		m_3006844
+	m	(Lnet/minecraft/unmapped/C_5853518;II)V	m_3006844		renderBlockSelection
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -263,10 +263,10 @@ c	net/minecraft/unmapped/C_0669153	net/minecraft/client/render/FrustumData
 		p	5		maxY	
 		p	6		maxZ	
 c	net/minecraft/unmapped/C_8199124
-	f	[[F	f_2943825		f_2943825
-	f	[F	f_6016742		f_6016742
-	f	[F	f_3267753		f_3267753
-	f	[F	f_8138591		f_8138591
+	f	[[F	f_2943825		frustum
+	f	[F	f_6016742		projectionArr
+	f	[F	f_3267753		modelViewArr
+	f	[F	f_8138591		transformArr
 	m	()Lnet/minecraft/unmapped/C_0669153;	m_4703353	compute	
 	m	()Lnet/minecraft/unmapped/C_8199124;	m_4703353		compute
 	m	(FFFFFF)Z	m_0617681		m_0617681
@@ -283,7 +283,7 @@ c	net/minecraft/unmapped/C_8199124
 		p	4			p_4
 		p	5			p_5
 		p	6			p_6
-	m	(Lcom/mojang/minecraft/phys/AABB;)Z	m_0183273		m_0183273
+	m	(Lcom/mojang/minecraft/phys/AABB;)Z	m_0183273		isPartiallyInside
 		p	1			p_1
 c	com/mojang/minecraft/Entity
 	f	Z	noPhysics	noPhysics	
