@@ -30,7 +30,7 @@ c	net/minecraft/unmapped/C_1044273
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
-	m	(Ljava/util/Collection;Ljava/util/Collection;)V	m_3516984		updateGlobalBlockEntities
+	m	(Ljava/util/Collection;Ljava/util/Collection;)V	m_3516984		updateBlockEntitiesToBeRendered
 		p	1			remove
 		p	2			add
 c	net/minecraft/unmapped/C_1044273$8779800	8779800	
@@ -45,8 +45,8 @@ c	net/minecraft/unmapped/C_5283200
 	f	[Z	f_6592967	empty	
 	f	Z	f_7961176	occlusionVisible	
 	f	Z	f_8843907	compiled	
-	f	Ljava/util/List;	f_3957331	blockEntities	
-	f	Ljava/util/List;	f_1904622	globalBlockEntities	
+	f	Ljava/util/List;	f_3957331	renderableBlockEntities	
+	f	Ljava/util/List;	f_1904622	blockEntitiesToBeRendered	
 	f	Lnet/minecraft/unmapped/C_9697997;	f_0543293	blockRenderDispatcher	
 	f	Z	f_8856499	empty	
 	f	[Z	f_8171855	layers	
@@ -61,7 +61,7 @@ c	net/minecraft/unmapped/C_5283200
 	m	()Z	m_0524223	isEmpty	
 	m	(Lnet/minecraft/unmapped/C_3906126;Ljava/util/List;Lnet/minecraft/unmapped/C_6707278;II)V	<init>	<init>	
 		p	1		world	
-		p	2		globalBlockEntities	
+		p	2		blockEntitiesToBeRendered	
 		p	3		origin	
 		p	4		glList	
 		p	5		index	
@@ -187,7 +187,7 @@ c	net/minecraft/unmapped/C_2326439		net/minecraft/client/render/world/CompiledCh
 	f	[Z	f_9537000		blocks
 	f	[Z	f_3797308		layers
 	f	Z	f_1712836		empty
-	f	Ljava/util/List;	f_3218958		blockEntities
+	f	Ljava/util/List;	f_3218958		renderableBlockEntities
 	m	()V	<init>		<init>
 	m	()Z	m_6185521		isEmpty
 	m	(Lnet/minecraft/unmapped/C_3333682;)V	m_7453299		setBlock
@@ -198,8 +198,8 @@ c	net/minecraft/unmapped/C_2326439		net/minecraft/client/render/world/CompiledCh
 		p	1			layer
 	m	(Lnet/minecraft/unmapped/C_3333682;)Z	m_4720049		hasLayer
 		p	1			layer
-	m	()Ljava/util/List;	m_0971712		getBlockEntities
-	m	(Lnet/minecraft/unmapped/C_2074023;)V	m_5156586		addBlockEntity
+	m	()Ljava/util/List;	m_0971712		getRenderableBlockEntities
+	m	(Lnet/minecraft/unmapped/C_2074023;)V	m_5156586		addRenderableBlockEntity
 		p	1			blockEntity
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_2326439$8328177		8328177
