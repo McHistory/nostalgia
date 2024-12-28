@@ -82,8 +82,8 @@ c	net/minecraft/unmapped/C_4443804
 		p	1		packet	
 	m	(Lnet/minecraft/unmapped/C_4946369;)V	m_9704705	handleInteractEntity	
 		p	1		packet	
-	m	(Lnet/minecraft/unmapped/C_0879853;)V	m_8291592		m_8291592
-		p	1			p_1
+	m	(Lnet/minecraft/unmapped/C_0879853;)V	m_8291592		handleAddFishingBobber
+		p	1			packet
 c	net/minecraft/unmapped/C_4558465
 	f	I	f_7066206		decay
 c	net/minecraft/unmapped/C_4946369	net/minecraft/network/packet/PlayerInteractEntityPacket	
@@ -376,18 +376,18 @@ c	net/minecraft/unmapped/C_7688744
 	f	Ljava/lang/String;	f_9107873	skin	
 c	net/minecraft/unmapped/C_8783002
 	f	D	f_6919176		f_6919176
-c	net/minecraft/unmapped/C_0879853		net/minecraft/unmapped/C_0879853
-	f	I	f_5289635		f_5289635
-	f	I	f_6846331		f_6846331
-	f	I	f_3562911		f_3562911
-	f	I	f_6962703		f_6962703
-	f	B	f_8604800		f_8604800
-	f	B	f_1403336		f_1403336
-	f	B	f_1253815		f_1253815
+c	net/minecraft/unmapped/C_0879853		net/minecraft/network/packet/AddFishingBobberPacket
+	f	I	f_5289635		id
+	f	I	f_6846331		x
+	f	I	f_3562911		y
+	f	I	f_6962703		z
+	f	B	f_8604800		velocityX
+	f	B	f_1403336		velocityY
+	f	B	f_1253815		velocityZ
 	f	I	f_6908798		f_6908798
 	m	()V	<init>		<init>
 	m	(Lnet/minecraft/unmapped/C_6385858;I)V	<init>		<init>
-		p	1			p_1
+		p	1			entity
 		p	2			p_2
 	m	(Ljava/io/DataInputStream;)V	m_8784008		m_8784008
 		p	1			p_1
