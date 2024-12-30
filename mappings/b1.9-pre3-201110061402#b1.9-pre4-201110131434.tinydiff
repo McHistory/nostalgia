@@ -858,9 +858,9 @@ c	net/minecraft/unmapped/C_9381557
 		p	2			slotId
 		p	3			stack
 c	net/minecraft/unmapped/C_9386942
-	m	()I	m_4849408		getCenterBlockPosX
-	m	()I	m_6554651		getCenterBlockPosZ
-	m	(I)Lnet/minecraft/unmapped/C_8032589;	m_6929488		getCenterBlockPos
+	m	()I	m_4849408		getCenterX
+	m	()I	m_6554651		getCenterZ
+	m	(I)Lnet/minecraft/unmapped/C_8032589;	m_6929488		getCenterPos
 		p	1			y
 c	net/minecraft/unmapped/C_9432227
 	m	(Ljava/lang/Object;)Z	equals		equals
@@ -1266,12 +1266,14 @@ c	net/minecraft/unmapped/C_7433365
 		p	1			entityId
 		p	2			effect
 c	net/minecraft/unmapped/C_9006197
-	m	(Lnet/minecraft/unmapped/C_3906126;III)Lnet/minecraft/unmapped/C_8032589;	m_4958963		findNearestStructure
+	m	(Lnet/minecraft/unmapped/C_3906126;III)Lnet/minecraft/unmapped/C_8032589;	m_4958963		findNearestStructurePosition
+		c		Find the nearest position where this structure has generated.
 		p	1			world
 		p	2			x
 		p	3			y
 		p	4			z
-	m	()Ljava/util/List;	m_7859946		getPotentialStructurePos
+	m	()Ljava/util/List;	m_7859946		getPotentialStructurePositions
+		c		Returns all positions where this structure may generate.
 c	net/minecraft/unmapped/C_9151514
 	f	Z	f_1053333		placeLakes
 c	net/minecraft/unmapped/C_9232780

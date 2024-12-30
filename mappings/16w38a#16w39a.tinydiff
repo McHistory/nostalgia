@@ -473,9 +473,9 @@ c	net/minecraft/unmapped/C_9219192
 	f	Z	f_0459227		hasSkyLight
 	m	()Z	m_4456296		hasSkyLight
 c	net/minecraft/unmapped/C_9386942
-	m	()I	m_4849408	getCenterBlockPosX	
-	m	()I	m_6554651	getCenterBlockPosZ	
-	m	(I)Lnet/minecraft/unmapped/C_6707278;	m_6929488	getCenterBlockPos	
+	m	()I	m_4849408	getCenterX	
+	m	()I	m_6554651	getCenterZ	
+	m	(I)Lnet/minecraft/unmapped/C_6707278;	m_6929488	getCenterPos	
 		p	1		y	
 c	net/minecraft/unmapped/C_9404371
 c	net/minecraft/unmapped/C_9404371$8749673
@@ -944,15 +944,18 @@ c	net/minecraft/unmapped/C_8336555
 		p	2			p_2
 		p	3			p_3
 c	net/minecraft/unmapped/C_9006197
-	m	()Ljava/util/List;	m_7859946	getPotentialStructurePos	
-	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6707278;)Lnet/minecraft/unmapped/C_6707278;	m_4958963	findNearestStructure	
+	m	()Ljava/util/List;	m_7859946	getPotentialStructurePositions	
+		c	Returns all positions where this structure may generate.	
+	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6707278;)Lnet/minecraft/unmapped/C_6707278;	m_4958963	findNearestStructurePosition	
+		c	Find the nearest position where this structure has generated.	
 		p	1		world	
 		p	2		pos	
-	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6707278;Z)Lnet/minecraft/unmapped/C_6707278;	m_4958963		findNearest
+	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6707278;Z)Lnet/minecraft/unmapped/C_6707278;	m_4958963		findNearestStructurePosition
+		c		Find the nearest position where this structure has generated.
 		p	1			world
 		p	2			pos
 		p	3			reference
-	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_9006197;Lnet/minecraft/unmapped/C_6707278;IIIZIZ)Lnet/minecraft/unmapped/C_6707278;	m_1227682		findNearest
+	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_9006197;Lnet/minecraft/unmapped/C_6707278;IIIZIZ)Lnet/minecraft/unmapped/C_6707278;	m_1227682		findNearestStructurePosition
 		p	0			world
 		p	1			feature
 		p	2			pos
