@@ -465,7 +465,7 @@ c	net/minecraft/unmapped/C_0309511	net/minecraft/client/gui/screen/TitleScreen
 	f	Ljava/lang/String;	f_4349665	splashText	
 	f	Lnet/minecraft/unmapped/C_2621421;	f_5303157	buttonResetDemo	
 	f	I	f_4323764	time	
-	f	I	f_5921833	f_5921833	
+	f	I	f_5921833	backgroundTexture	
 	m	()V	<init>	<init>	
 	m	()V	m_7135145	m_7135145	
 	m	(CI)V	m_2815482	m_2815482	
@@ -1990,7 +1990,7 @@ c	net/minecraft/unmapped/C_3466301	net/minecraft/client/render/block/BlockRender
 	f	I	f_5966579	eastFaceRotation	
 	f	I	f_7460460	topFaceRotation	
 	f	I	f_4644800	bottomFaceRotation	
-	f	[Z	f_1770010	f_1770010	
+	f	[Z	f_1770010	solidRender	
 	f	I	f_6001454	bottomNorthWestVertexLightColor	
 	f	I	f_3261722	bottomWestEdgeLightColor	
 	f	I	f_7997649	bottomSouthWestVertexLightColor	
@@ -2257,15 +2257,15 @@ c	net/minecraft/unmapped/C_3466301	net/minecraft/client/render/block/BlockRender
 		p	2		metadata	
 		p	3		brightness	
 	m	(IIII)Z	m_7190054	m_7190054	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
+		p	1		x	
+		p	2		y	
+		p	3		z	
+		p	4		layer	
 	m	(IIII)Z	m_4186529	m_4186529	
 		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
+		p	2		x	
+		p	3		y	
+		p	4		z	
 	m	(Lnet/minecraft/unmapped/C_3635204;III)Z	m_8215247	tesselateVine	
 		p	1		block	
 		p	2		x	
@@ -3348,12 +3348,12 @@ c	net/minecraft/unmapped/C_4766485	net/minecraft/client/render/TextRenderer
 		p	4		maxWidth	
 		p	5		color	
 	m	(Ljava/lang/String;IIIIZ)V	m_1015860	drawSplit	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-		p	6		p_6	
+		p	1		text	
+		p	2		x	
+		p	3		y	
+		p	4		maxWidth	
+		p	5		color	
+		p	6		shadow	
 c	net/minecraft/unmapped/C_4784123	net/minecraft/client/gui/screen/TexturePacksScreen	
 	f	Lnet/minecraft/unmapped/C_0786431;	f_3227650	parent	
 	f	I	f_2670663	cooldown	
@@ -3463,15 +3463,15 @@ c	net/minecraft/unmapped/C_4824661	net/minecraft/client/render/GameRenderer
 	f	Z	f_5397977	anaglyphEnabled	
 	f	I	f_6686988	anaglyphFilter	
 	f	J	f_6359657	lastWorldRenderTime	
-	f	I	f_3993609	f_3993609	
-	f	[I	f_6104882	lightmapTexturePixels	
+	f	I	f_3993609	lightMapTexture	
+	f	[I	f_6104882	lightMapPixels	
 	f	F	f_9913782	movementFovMultiplier	
 	f	F	f_8901288	lastFov	
 	f	F	f_7911361	fov	
 	f	Z	f_8188428	lightMapDirty	
-	f	F	f_2364933	lightmapFlicker	
+	f	F	f_2364933	lightMapFlicker	
 	f	F	f_5581964	lightMapRandoms	
-	f	F	f_8042509	lightMapFlicker2	
+	f	F	f_8042509	lightMapTexture	
 	f	F	f_2513974	lightMapRandoms2	
 	f	[F	f_8781472	weatherChunkDistanceNormalizedX	
 	f	[F	f_7440170	weatherChunkDistanceNormalizedY	
@@ -3775,7 +3775,7 @@ c	net/minecraft/unmapped/C_5009044
 	m	()V	m_4306841	m_4306841	
 	m	()I	m_9334300	getScore	
 	m	()V	m_7664484	respawn	
-	m	()V	m_1342999	m_1342999	
+	m	()V	m_1342999	addRespawnParticles	
 	m	()F	m_1300357	getRespawnFacingAngle	
 	m	()I	m_8319947	getSleepTimer	
 	m	(B)V	m_9129586	m_9129586	
@@ -4558,7 +4558,7 @@ c	net/minecraft/unmapped/C_6923352	net/minecraft/client/gui/screen/inventory/men
 	m	(Lnet/minecraft/unmapped/C_2621421;)V	m_9403981	m_9403981	
 		p	1		p_1	
 	m	()V	m_7135145	m_7135145	
-	m	()V	m_9498773	m_9498773	
+	m	()V	m_9498773	renderStatusEffects	
 	m	(FII)V	m_3483387	m_3483387	
 		p	1		p_1	
 		p	2		p_2	
@@ -5604,7 +5604,7 @@ c	net/minecraft/unmapped/C_9072802
 		p	5		p_5	
 	m	()I	m_0839636	m_0839636	
 c	net/minecraft/unmapped/C_9143244
-	f	[Lnet/minecraft/unmapped/C_4636105;	f_8855749	f_8855749	
+	f	[Lnet/minecraft/unmapped/C_4636105;	f_8855749	biomesBuffer	
 	m	(IIII)[Lnet/minecraft/unmapped/C_4636105;	m_2836963	getBiomes	
 		p	1		x	
 		p	2		z	
@@ -7729,7 +7729,7 @@ c	net/minecraft/unmapped/C_2105000	net/minecraft/client/network/PlayerInfo
 	m	(Ljava/lang/String;)V	<init>	<init>	
 		p	1		name	
 c	net/minecraft/unmapped/C_2194207	net/minecraft/client/render/entity/SilverfishRenderer	
-	f	I	f_7371596	f_7371596	
+	f	I	f_7371596	version	
 	m	()V	<init>	<init>	
 	m	(Lnet/minecraft/unmapped/C_0509876;)F	m_5107167	m_5107167	
 		p	1		p_1	
@@ -7834,7 +7834,7 @@ c	net/minecraft/unmapped/C_4232266	net/minecraft/client/render/model/entity/Silv
 	f	[[I	f_0923323	SEGMENT_LOCATIONS	
 	f	[[I	f_5693218	SEGMENT_SIZES	
 	m	()V	<init>	<init>	
-	m	()I	m_7405097	m_7405097	
+	m	()I	m_7405097	getVersion	
 	m	(Lnet/minecraft/unmapped/C_6385858;FFFFFF)V	m_2324866	m_2324866	
 		p	1		p_1	
 		p	2		p_2	
@@ -8066,12 +8066,12 @@ c	net/minecraft/unmapped/C_7324071
 	m	(F)V	m_9021258	setSaturationLevel	
 		p	1		saturationLevel	
 c	net/minecraft/unmapped/C_7653691	net/minecraft/client/gui/screen/multiplayer/MultiplayerScreen	
-	f	I	f_3074377	f_3074377	
-	f	Ljava/lang/Object;	f_4926361	f_4926361	
+	f	I	f_3074377	runningAttempts	
+	f	Ljava/lang/Object;	f_4926361	LOCK	
 	f	Lnet/minecraft/unmapped/C_0786431;	f_7285035	parent	
-	f	Lnet/minecraft/unmapped/C_7653691$C_9130685;	f_2052411	f_2052411	
-	f	Ljava/util/List;	f_8940274	serverList	
-	f	I	f_8181919	f_8181919	
+	f	Lnet/minecraft/unmapped/C_7653691$C_9130685;	f_2052411	serverList	
+	f	Ljava/util/List;	f_8940274	servers	
+	f	I	f_8181919	selectedServer	
 	f	Lnet/minecraft/unmapped/C_2621421;	f_4288547	editButton	
 	f	Lnet/minecraft/unmapped/C_2621421;	f_5693053	joinButton	
 	f	Lnet/minecraft/unmapped/C_2621421;	f_7325728	deleteButton	
@@ -8079,14 +8079,14 @@ c	net/minecraft/unmapped/C_7653691	net/minecraft/client/gui/screen/multiplayer/M
 	f	Z	f_0758247	addServerDialogOpen	
 	f	Z	f_6210848	editServerDialogOpen	
 	f	Z	f_4105773	serverOpen	
-	f	Ljava/lang/String;	f_4771345	tooltipText	
-	f	Lnet/minecraft/unmapped/C_5769145;	f_5311961	serverEntry	
+	f	Ljava/lang/String;	f_4771345	tooltip	
+	f	Lnet/minecraft/unmapped/C_5769145;	f_5311961	newServer	
 	m	(Lnet/minecraft/unmapped/C_0786431;)V	<init>	<init>	
 		p	1		parent	
 	m	()V	m_7135145	m_7135145	
 	m	()V	m_2060594	m_2060594	
-	m	()V	m_0740833	m_0740833	
-	m	()V	m_7629925	m_7629925	
+	m	()V	m_0740833	loadServerList	
+	m	()V	m_7629925	saveServerList	
 	m	()V	m_7387310	addButtons	
 		c	Button Ids:\n    - 0: Cancel Button\n    - 1: Select Server Button\n    - 2: Delete Server Button\n    - 3: Add Server button\n    - 4: Select Server Directly\n    - 5:\n    - 6:\n    - 7: Edit Server Button\n    - 8: Refresh Server Button	
 	m	()V	m_5056964	m_5056964	
@@ -8095,9 +8095,9 @@ c	net/minecraft/unmapped/C_7653691	net/minecraft/client/gui/screen/multiplayer/M
 	m	(ZI)V	m_0021523	m_0021523	
 		p	1		p_1	
 		p	2		p_2	
-	m	(Ljava/lang/String;I)I	m_9807974	m_9807974	
-		p	1		p_1	
-		p	2		p_2	
+	m	(Ljava/lang/String;I)I	m_9807974	parseInt	
+		p	1		s	
+		p	2		defaultValue	
 	m	(CI)V	m_2815482	m_2815482	
 		p	1		p_1	
 		p	2		p_2	
@@ -8109,16 +8109,16 @@ c	net/minecraft/unmapped/C_7653691	net/minecraft/client/gui/screen/multiplayer/M
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
-	m	(I)V	m_2684115	m_2684115	
-		p	1		p_1	
+	m	(I)V	m_2684115	selectServer	
+		p	1		index	
 	m	(Lnet/minecraft/unmapped/C_5769145;)V	m_1752258	connect	
 		p	1		entry	
-	m	(Lnet/minecraft/unmapped/C_5769145;)V	m_2343328	m_2343328	
-		p	1		p_1	
-	m	(Ljava/lang/String;II)V	m_8556946	connect	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
+	m	(Lnet/minecraft/unmapped/C_5769145;)V	m_2343328	poll	
+		p	1		server	
+	m	(Ljava/lang/String;II)V	m_8556946	drawTooltip	
+		p	1		tooltip	
+		p	2		mouseX	
+		p	3		mouseY	
 	m	(Lnet/minecraft/unmapped/C_7653691;)Ljava/util/List;	m_5137837	m_5137837	
 		p	0		p_0	
 	m	(Lnet/minecraft/unmapped/C_7653691;I)I	m_5401174	m_5401174	
@@ -8773,11 +8773,11 @@ c	net/minecraft/unmapped/C_6241022	net/minecraft/client/render/block/entity/EndP
 		p	4		p_4	
 		p	6		p_6	
 		p	8		p_8	
-	m	(FFFF)Ljava/nio/FloatBuffer;	m_7436410	m_7436410	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
+	m	(FFFF)Ljava/nio/FloatBuffer;	m_7436410	getBuffer	
+		p	1		f1	
+		p	2		f2	
+		p	3		f3	
+		p	4		f4	
 	m	(Lnet/minecraft/unmapped/C_2074023;DDDF)V	m_7825810	m_7825810	
 		p	1		p_1	
 		p	2		p_2	

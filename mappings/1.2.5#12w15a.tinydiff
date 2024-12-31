@@ -41,7 +41,7 @@ c	net/minecraft/unmapped/C_0324512
 		p	1		p_1	
 	m	(Lnet/minecraft/unmapped/C_2750078;)V	m_3202550	m_3202550	
 		p	1		p_1	
-	m	()V	m_0146757	m_0146757	
+	m	()V	m_0146757	afterRespawn	
 	m	(Lnet/minecraft/unmapped/C_3906126;)V	m_6683300	m_6683300	
 		p	1		p_1	
 	m	()Lnet/minecraft/unmapped/C_7366354;	m_0985996		getServerWorld
@@ -247,7 +247,7 @@ c	net/minecraft/unmapped/C_4948697
 c	net/minecraft/unmapped/C_5009044
 	m	(Lnet/minecraft/unmapped/C_2750078;)V	m_3202550	onCursorStackChanged	
 		p	1		stack	
-	m	()V	m_1342999	m_1342999	
+	m	()V	m_1342999	addRespawnParticles	
 c	net/minecraft/unmapped/C_5269767
 	f	Ljava/util/Map;	f_5066540		details
 	m	()V	m_4006579		fillSystemDetails
@@ -701,7 +701,8 @@ c	net/minecraft/unmapped/C_7653691
 		p	3		p_3	
 c	net/minecraft/unmapped/C_8259395
 	m	(Ljava/util/ArrayList;)I	m_0782017	getTotalWeight	
-		p	0		p_0	
+		c	Will return the total weight of the given piece weights if more pieces can still be generated, or -1.	
+		p	0		weights	
 	m	(Ljava/util/List;)I	m_0782017		getTotalWeight
 		c		Will return the total weight of the given piece weights if more pieces can still be generated, or -1.
 		p	0			weights
@@ -872,11 +873,11 @@ c	net/minecraft/unmapped/C_7362472$C_2550848
 	f	Lnet/minecraft/unmapped/C_7362472;	f_3283431	f_3283431	
 	m	(Lnet/minecraft/unmapped/C_7362472;Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_4390289;III)V	<init>	<init>	
 		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-		p	6		p_6	
+		p	2		player	
+		p	3		inventory	
+		p	4		id	
+		p	5		x	
+		p	6		z	
 	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_4390289;III)V	<init>		<init>
 		p	1			player
 		p	2			inventory

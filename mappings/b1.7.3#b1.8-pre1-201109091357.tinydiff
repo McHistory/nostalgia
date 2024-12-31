@@ -51,7 +51,7 @@ c	net/minecraft/unmapped/C_0289174
 		p	1			other
 c	net/minecraft/unmapped/C_0309511
 	f	I	f_4323764		time
-	f	I	f_5921833		f_5921833
+	f	I	f_5921833		backgroundTexture
 	m	()Z	m_6957805		m_6957805
 	m	(IIF)V	m_1091867		drawBackgroundBase
 		p	1			mouseX
@@ -635,7 +635,7 @@ c	net/minecraft/unmapped/C_3454805
 		p	1			p_1
 		p	2			p_2
 c	net/minecraft/unmapped/C_3466301
-	f	[Z	f_1770010		f_1770010
+	f	[Z	f_1770010		solidRender
 	f	I	f_6001454		bottomNorthWestVertexLightColor
 	f	I	f_3261722		bottomWestEdgeLightColor
 	f	I	f_7997649		bottomSouthWestVertexLightColor
@@ -666,15 +666,15 @@ c	net/minecraft/unmapped/C_3466301
 		p	3		y	
 		p	4		z	
 	m	(IIII)Z	m_7190054		m_7190054
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
+		p	1			x
+		p	2			y
+		p	3			z
+		p	4			layer
 	m	(IIII)Z	m_4186529		m_4186529
 		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
+		p	2			x
+		p	3			y
+		p	4			z
 	m	(Lnet/minecraft/unmapped/C_3635204;III)Z	m_8215247		tesselateVine
 		p	1			block
 		p	2			x
@@ -1163,15 +1163,15 @@ c	net/minecraft/unmapped/C_4784123
 	m	(Lnet/minecraft/unmapped/C_4784123;)Lnet/minecraft/client/Minecraft;	m_4080126		m_4080126
 		p	0			p_0
 c	net/minecraft/unmapped/C_4824661
-	f	I	f_3993609		f_3993609
-	f	[I	f_6104882		lightmapTexturePixels
+	f	I	f_3993609		lightMapTexture
+	f	[I	f_6104882		lightMapPixels
 	f	F	f_9913782		movementFovMultiplier
 	f	F	f_8901288		lastFov
 	f	F	f_7911361		fov
 	f	Z	f_8188428		lightMapDirty
-	f	F	f_2364933		lightmapFlicker
+	f	F	f_2364933		lightMapFlicker
 	f	F	f_5581964		lightMapRandoms
-	f	F	f_8042509		lightMapFlicker2
+	f	F	f_8042509		lightMapTexture
 	f	F	f_2513974		lightMapRandoms2
 	f	[F	f_8781472		weatherChunkDistanceNormalizedX
 	f	[F	f_7440170		weatherChunkDistanceNormalizedY
@@ -2076,8 +2076,8 @@ c	net/minecraft/unmapped/C_0023955		net/minecraft/block/FenceGateBlock
 		p	5			p_5
 	m	(I)Z	m_3953123		isOpen
 		p	0			metadata
-	m	(I)I	m_0018560		m_0018560
-		p	0			p_0
+	m	(I)I	m_0018560		getFacing
+		p	0			metadata
 c	net/minecraft/unmapped/C_0319883		net/minecraft/world/biome/layer/IslandLayer
 	m	(J)V	<init>		<init>
 		p	1			p_1
@@ -2534,7 +2534,7 @@ c	net/minecraft/unmapped/C_2105000		net/minecraft/client/network/PlayerInfo
 	m	(Ljava/lang/String;)V	<init>		<init>
 		p	1			name
 c	net/minecraft/unmapped/C_2194207		net/minecraft/client/render/entity/SilverfishRenderer
-	f	I	f_7371596		f_7371596
+	f	I	f_7371596		version
 	m	()V	<init>		<init>
 	m	(Lnet/minecraft/unmapped/C_0509876;)F	m_5107167		m_5107167
 		p	1			p_1
@@ -2754,7 +2754,7 @@ c	net/minecraft/unmapped/C_4232266		net/minecraft/client/render/model/entity/Sil
 	f	[[I	f_0923323		SEGMENT_LOCATIONS
 	f	[[I	f_5693218		SEGMENT_SIZES
 	m	()V	<init>		<init>
-	m	()I	m_7405097		m_7405097
+	m	()I	m_7405097		getVersion
 	m	(Lnet/minecraft/unmapped/C_6385858;FFFFFF)V	m_2324866		m_2324866
 		p	1			p_1
 		p	2			p_2
@@ -3318,12 +3318,12 @@ c	net/minecraft/unmapped/C_5680707		net/minecraft/network/packet/CreativeMenuSlo
 		p	1			p_1
 	m	()I	m_0079091		m_0079091
 c	net/minecraft/unmapped/C_5720232		net/minecraft/world/gen/structure/LootEntry
-	f	I	f_6239170		itemId
+	f	I	f_6239170		item
 	f	I	f_7787887		itemMetadata
 	f	I	f_8577648		minItemChance
 	f	I	f_1735746		maxItemChance
 	m	(IIIII)V	<init>		<init>
-		p	1			itemId
+		p	1			item
 		p	2			itemMetadata
 		p	3			minItemChance
 		p	4			maxItemChance
@@ -3776,12 +3776,12 @@ c	net/minecraft/unmapped/C_7433365		net/minecraft/network/packet/EntityRemoveSta
 		p	1			p_1
 	m	()I	m_0079091		m_0079091
 c	net/minecraft/unmapped/C_7653691		net/minecraft/client/gui/screen/multiplayer/MultiplayerScreen
-	f	I	f_3074377		f_3074377
-	f	Ljava/lang/Object;	f_4926361		f_4926361
+	f	I	f_3074377		runningAttempts
+	f	Ljava/lang/Object;	f_4926361		LOCK
 	f	Lnet/minecraft/unmapped/C_0786431;	f_7285035		parent
-	f	Lnet/minecraft/unmapped/C_7653691$C_9130685;	f_2052411		f_2052411
-	f	Ljava/util/List;	f_8940274		serverList
-	f	I	f_8181919		f_8181919
+	f	Lnet/minecraft/unmapped/C_7653691$C_9130685;	f_2052411		serverList
+	f	Ljava/util/List;	f_8940274		servers
+	f	I	f_8181919		selectedServer
 	f	Lnet/minecraft/unmapped/C_2621421;	f_4288547		editButton
 	f	Lnet/minecraft/unmapped/C_2621421;	f_5693053		joinButton
 	f	Lnet/minecraft/unmapped/C_2621421;	f_7325728		deleteButton
@@ -3789,14 +3789,14 @@ c	net/minecraft/unmapped/C_7653691		net/minecraft/client/gui/screen/multiplayer/
 	f	Z	f_0758247		addServerDialogOpen
 	f	Z	f_6210848		editServerDialogOpen
 	f	Z	f_4105773		serverOpen
-	f	Ljava/lang/String;	f_4771345		tooltipText
-	f	Lnet/minecraft/unmapped/C_5769145;	f_5311961		serverEntry
+	f	Ljava/lang/String;	f_4771345		tooltip
+	f	Lnet/minecraft/unmapped/C_5769145;	f_5311961		newServer
 	m	(Lnet/minecraft/unmapped/C_0786431;)V	<init>		<init>
 		p	1			parent
 	m	()V	m_7135145		m_7135145
 	m	()V	m_2060594		m_2060594
-	m	()V	m_0740833		m_0740833
-	m	()V	m_7629925		m_7629925
+	m	()V	m_0740833		loadServerList
+	m	()V	m_7629925		saveServerList
 	m	()V	m_7387310		addButtons
 		c		Button Ids:\n    - 0: Cancel Button\n    - 1: Select Server Button\n    - 2: Delete Server Button\n    - 3: Add Server button\n    - 4: Select Server Directly\n    - 5:\n    - 6:\n    - 7: Edit Server Button\n    - 8: Refresh Server Button
 	m	()V	m_5056964		m_5056964
@@ -3805,9 +3805,9 @@ c	net/minecraft/unmapped/C_7653691		net/minecraft/client/gui/screen/multiplayer/
 	m	(ZI)V	m_0021523		m_0021523
 		p	1			p_1
 		p	2			p_2
-	m	(Ljava/lang/String;I)I	m_9807974		m_9807974
-		p	1			p_1
-		p	2			p_2
+	m	(Ljava/lang/String;I)I	m_9807974		parseInt
+		p	1			s
+		p	2			defaultValue
 	m	(CI)V	m_2815482		m_2815482
 		p	1			p_1
 		p	2			p_2
@@ -3819,16 +3819,16 @@ c	net/minecraft/unmapped/C_7653691		net/minecraft/client/gui/screen/multiplayer/
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
-	m	(I)V	m_2684115		m_2684115
-		p	1			p_1
+	m	(I)V	m_2684115		selectServer
+		p	1			index
 	m	(Lnet/minecraft/unmapped/C_5769145;)V	m_1752258		connect
 		p	1			entry
-	m	(Lnet/minecraft/unmapped/C_5769145;)V	m_2343328		m_2343328
-		p	1			p_1
-	m	(Ljava/lang/String;II)V	m_8556946		connect
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+	m	(Lnet/minecraft/unmapped/C_5769145;)V	m_2343328		poll
+		p	1			server
+	m	(Ljava/lang/String;II)V	m_8556946		drawTooltip
+		p	1			tooltip
+		p	2			mouseX
+		p	3			mouseY
 	m	(Lnet/minecraft/unmapped/C_7653691;)Ljava/util/List;	m_5137837		m_5137837
 		p	0			p_0
 	m	(Lnet/minecraft/unmapped/C_7653691;I)I	m_5401174		m_5401174
@@ -3909,16 +3909,17 @@ c	net/minecraft/unmapped/C_8259395		net/minecraft/world/gen/structure/VillagePie
 		p	0			random
 		p	1			weight
 	m	(Ljava/util/ArrayList;)I	m_0782017		getTotalWeight
-		p	0			p_0
+		c		Will return the total weight of the given piece weights if more pieces can still be generated, or -1.
+		p	0			weights
 	m	(Lnet/minecraft/unmapped/C_8259395$C_3276230;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/unmapped/C_8259395$C_0865390;	m_1791627		createPiece
-		p	0			p_0
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
-		p	6			p_6
-		p	7			p_7
+		p	0			weight
+		p	1			pieces
+		p	2			random
+		p	3			x
+		p	4			y
+		p	5			z
+		p	6			facing
+		p	7			generationDepth
 	m	(Lnet/minecraft/unmapped/C_8259395$C_9855653;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/unmapped/C_8259395$C_0865390;	m_5065044		generateNextPiece
 		p	0			startPiece
 		p	1			pieces
@@ -3967,22 +3968,22 @@ c	net/minecraft/unmapped/C_8259395		net/minecraft/world/gen/structure/VillagePie
 c	net/minecraft/unmapped/C_8259395$C_0661471		SmallHouse
 	f	I	f_9555468		hpos
 	m	(ILjava/util/Random;Lnet/minecraft/unmapped/C_0624720;I)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
+		p	1			generationDepth
+		p	2			random
+		p	3			bounds
+		p	4			facing
 	m	(Lnet/minecraft/unmapped/C_9282614;Ljava/util/List;Ljava/util/Random;)V	m_8574751		m_8574751
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 	m	(Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/unmapped/C_8259395$C_0661471;	m_9898065		of
-		p	0			p_0
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
-		p	6			p_6
+		p	0			pieces
+		p	1			random
+		p	2			x
+		p	3			y
+		p	4			z
+		p	5			facing
+		p	6			generationDepth
 	m	(Lnet/minecraft/unmapped/C_3906126;Ljava/util/Random;Lnet/minecraft/unmapped/C_0624720;)Z	m_4431516		m_4431516
 		p	1			p_1
 		p	2			p_2
@@ -4010,22 +4011,22 @@ c	net/minecraft/unmapped/C_8259395$C_0865390		VillagePiece
 c	net/minecraft/unmapped/C_8259395$C_2135405		ClerkHouse
 	f	I	f_6990037		hpos
 	m	(ILjava/util/Random;Lnet/minecraft/unmapped/C_0624720;I)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
+		p	1			generationDepth
+		p	2			random
+		p	3			bounds
+		p	4			facing
 	m	(Lnet/minecraft/unmapped/C_9282614;Ljava/util/List;Ljava/util/Random;)V	m_8574751		m_8574751
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 	m	(Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/unmapped/C_8259395$C_2135405;	m_2705574		of
-		p	0			p_0
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
-		p	6			p_6
+		p	0			pieces
+		p	1			random
+		p	2			x
+		p	3			y
+		p	4			z
+		p	5			facing
+		p	6			generationDepth
 	m	(Lnet/minecraft/unmapped/C_3906126;Ljava/util/Random;Lnet/minecraft/unmapped/C_0624720;)Z	m_4431516		m_4431516
 		p	1			p_1
 		p	2			p_2
@@ -4033,10 +4034,10 @@ c	net/minecraft/unmapped/C_8259395$C_2135405		ClerkHouse
 c	net/minecraft/unmapped/C_8259395$C_2494335		Road
 	f	I	f_8792834		length
 	m	(ILjava/util/Random;Lnet/minecraft/unmapped/C_0624720;I)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
+		p	1			generationDepth
+		p	2			random
+		p	3			bounds
+		p	4			facing
 	m	(Lnet/minecraft/unmapped/C_9282614;Ljava/util/List;Ljava/util/Random;)V	m_8574751		m_8574751
 		p	1			p_1
 		p	2			p_2
@@ -4068,22 +4069,22 @@ c	net/minecraft/unmapped/C_8259395$C_3276230		VillagePieceWeight
 c	net/minecraft/unmapped/C_8259395$C_3785796		LargeFarm
 	f	I	f_3515234		hpos
 	m	(ILjava/util/Random;Lnet/minecraft/unmapped/C_0624720;I)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
+		p	1			generationDepth
+		p	2			random
+		p	3			bounds
+		p	4			facing
 	m	(Lnet/minecraft/unmapped/C_9282614;Ljava/util/List;Ljava/util/Random;)V	m_8574751		m_8574751
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 	m	(Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/unmapped/C_8259395$C_3785796;	m_5100859		of
-		p	0			p_0
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
-		p	6			p_6
+		p	0			pieces
+		p	1			random
+		p	2			x
+		p	3			y
+		p	4			z
+		p	5			facing
+		p	6			generationDepth
 	m	(Lnet/minecraft/unmapped/C_3906126;Ljava/util/Random;Lnet/minecraft/unmapped/C_0624720;)Z	m_4431516		m_4431516
 		p	1			p_1
 		p	2			p_2
@@ -4091,21 +4092,21 @@ c	net/minecraft/unmapped/C_8259395$C_3785796		LargeFarm
 c	net/minecraft/unmapped/C_8259395$C_4479092		LampPost
 	f	I	f_5605766		hpos
 	m	(ILjava/util/Random;Lnet/minecraft/unmapped/C_0624720;I)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
+		p	1			generationDepth
+		p	2			random
+		p	3			bounds
+		p	4			facing
 	m	(Lnet/minecraft/unmapped/C_9282614;Ljava/util/List;Ljava/util/Random;)V	m_8574751		m_8574751
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 	m	(Ljava/util/List;Ljava/util/Random;IIII)Lnet/minecraft/unmapped/C_0624720;	m_0570958		findSize
-		p	0			p_0
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
+		p	0			pieces
+		p	1			random
+		p	2			x
+		p	3			y
+		p	4			z
+		p	5			facing
 	m	(Lnet/minecraft/unmapped/C_3906126;Ljava/util/Random;Lnet/minecraft/unmapped/C_0624720;)Z	m_4431516		m_4431516
 		p	1			p_1
 		p	2			p_2
@@ -4114,10 +4115,10 @@ c	net/minecraft/unmapped/C_8259395$C_4551720		Well
 	f	Z	f_5909605		f_5909605
 	f	I	f_0214752		hpos
 	m	(ILjava/util/Random;II)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
+		p	1			generationDepth
+		p	2			random
+		p	3			x
+		p	4			z
 	m	(Lnet/minecraft/unmapped/C_9282614;Ljava/util/List;Ljava/util/Random;)V	m_8574751		m_8574751
 		p	1			p_1
 		p	2			p_2
@@ -4129,22 +4130,22 @@ c	net/minecraft/unmapped/C_8259395$C_4551720		Well
 c	net/minecraft/unmapped/C_8259395$C_4750010		Farm
 	f	I	f_7359082		cropAId
 	m	(ILjava/util/Random;Lnet/minecraft/unmapped/C_0624720;I)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
+		p	1			generationDepth
+		p	2			random
+		p	3			bounds
+		p	4			facing
 	m	(Lnet/minecraft/unmapped/C_9282614;Ljava/util/List;Ljava/util/Random;)V	m_8574751		m_8574751
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 	m	(Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/unmapped/C_8259395$C_4750010;	m_8041400		create
-		p	0			p_0
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
-		p	6			p_6
+		p	0			pieces
+		p	1			random
+		p	2			x
+		p	3			y
+		p	4			z
+		p	5			facing
+		p	6			generationDepth
 	m	(Lnet/minecraft/unmapped/C_3906126;Ljava/util/Random;Lnet/minecraft/unmapped/C_0624720;)Z	m_4431516		m_4431516
 		p	1			p_1
 		p	2			p_2
@@ -4152,22 +4153,22 @@ c	net/minecraft/unmapped/C_8259395$C_4750010		Farm
 c	net/minecraft/unmapped/C_8259395$C_5563287		BlacksmithHouse
 	f	I	f_6990764		hpos
 	m	(ILjava/util/Random;Lnet/minecraft/unmapped/C_0624720;I)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
+		p	1			generationDepth
+		p	2			random
+		p	3			bounds
+		p	4			facing
 	m	(Lnet/minecraft/unmapped/C_9282614;Ljava/util/List;Ljava/util/Random;)V	m_8574751		m_8574751
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 	m	(Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/unmapped/C_8259395$C_5563287;	m_6358475		of
-		p	0			p_0
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
-		p	6			p_6
+		p	0			pieces
+		p	1			random
+		p	2			x
+		p	3			y
+		p	4			z
+		p	5			facing
+		p	6			generationDepth
 	m	(Lnet/minecraft/unmapped/C_3906126;Ljava/util/Random;Lnet/minecraft/unmapped/C_0624720;)Z	m_4431516		m_4431516
 		p	1			p_1
 		p	2			p_2
@@ -4175,22 +4176,22 @@ c	net/minecraft/unmapped/C_8259395$C_5563287		BlacksmithHouse
 c	net/minecraft/unmapped/C_8259395$C_5769148		PriestHouse
 	f	I	f_3931861		hpos
 	m	(ILjava/util/Random;Lnet/minecraft/unmapped/C_0624720;I)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
+		p	1			generationDepth
+		p	2			random
+		p	3			bounds
+		p	4			facing
 	m	(Lnet/minecraft/unmapped/C_9282614;Ljava/util/List;Ljava/util/Random;)V	m_8574751		m_8574751
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 	m	(Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/unmapped/C_8259395$C_5769148;	m_7126054		of
-		p	0			p_0
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
-		p	6			p_6
+		p	0			pieces
+		p	1			random
+		p	2			x
+		p	3			y
+		p	4			z
+		p	5			facing
+		p	6			generationDepth
 	m	(Lnet/minecraft/unmapped/C_3906126;Ljava/util/Random;Lnet/minecraft/unmapped/C_0624720;)Z	m_4431516		m_4431516
 		p	1			p_1
 		p	2			p_2
@@ -4203,22 +4204,22 @@ c	net/minecraft/unmapped/C_8259395$C_8063266		TallHouse
 	f	Z	f_5464124		tall
 	f	I	f_9442039		tablePlacement
 	m	(ILjava/util/Random;Lnet/minecraft/unmapped/C_0624720;I)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
+		p	1			generationDepth
+		p	2			random
+		p	3			bounds
+		p	4			facing
 	m	(Lnet/minecraft/unmapped/C_9282614;Ljava/util/List;Ljava/util/Random;)V	m_8574751		m_8574751
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 	m	(Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/unmapped/C_8259395$C_8063266;	m_4893735		of
-		p	0			p_0
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
-		p	6			p_6
+		p	0			pieces
+		p	1			random
+		p	2			x
+		p	3			y
+		p	4			z
+		p	5			facing
+		p	6			generationDepth
 	m	(Lnet/minecraft/unmapped/C_3906126;Ljava/util/Random;Lnet/minecraft/unmapped/C_0624720;)Z	m_4431516		m_4431516
 		p	1			p_1
 		p	2			p_2
@@ -4226,22 +4227,22 @@ c	net/minecraft/unmapped/C_8259395$C_8063266		TallHouse
 c	net/minecraft/unmapped/C_8259395$C_8613653		TinyHouse
 	f	I	f_8027207		hpos
 	m	(ILjava/util/Random;Lnet/minecraft/unmapped/C_0624720;I)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
+		p	1			generationDepth
+		p	2			random
+		p	3			bounds
+		p	4			facing
 	m	(Lnet/minecraft/unmapped/C_9282614;Ljava/util/List;Ljava/util/Random;)V	m_8574751		m_8574751
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 	m	(Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/unmapped/C_8259395$C_8613653;	m_6271897		of
-		p	0			p_0
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
-		p	6			p_6
+		p	0			pieces
+		p	1			random
+		p	2			x
+		p	3			y
+		p	4			z
+		p	5			facing
+		p	6			generationDepth
 	m	(Lnet/minecraft/unmapped/C_3906126;Ljava/util/Random;Lnet/minecraft/unmapped/C_0624720;)Z	m_4431516		m_4431516
 		p	1			p_1
 		p	2			p_2
@@ -4250,22 +4251,22 @@ c	net/minecraft/unmapped/C_8259395$C_8800620		BalconyHouse
 	f	I	f_9777823		hpos
 	f	Z	f_5677947		terrace
 	m	(ILjava/util/Random;Lnet/minecraft/unmapped/C_0624720;I)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
+		p	1			generationDepth
+		p	2			random
+		p	3			bounds
+		p	4			facing
 	m	(Lnet/minecraft/unmapped/C_9282614;Ljava/util/List;Ljava/util/Random;)V	m_8574751		m_8574751
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 	m	(Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/unmapped/C_8259395$C_8800620;	m_3175657		of
-		p	0			p_0
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
-		p	6			p_6
+		p	0			pieces
+		p	1			random
+		p	2			x
+		p	3			y
+		p	4			z
+		p	5			facing
+		p	6			generationDepth
 	m	(Lnet/minecraft/unmapped/C_3906126;Ljava/util/Random;Lnet/minecraft/unmapped/C_0624720;)Z	m_4431516		m_4431516
 		p	1			p_1
 		p	2			p_2
@@ -4299,10 +4300,10 @@ c	net/minecraft/unmapped/C_8336555		net/minecraft/world/gen/structure/VillageStr
 c	net/minecraft/unmapped/C_8336555$C_8291597		Start
 	f	Z	f_4282265		valid
 	m	(Lnet/minecraft/unmapped/C_3906126;Ljava/util/Random;II)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
+		p	1			world
+		p	2			random
+		p	3			chunkX
+		p	4			chunkZ
 	m	()Z	m_3292892		m_3292892
 c	net/minecraft/unmapped/C_8372808		net/minecraft/client/render/model/entity/EndermanModel
 	f	Z	f_1259427		carryingBlock
@@ -4538,11 +4539,11 @@ c	net/minecraft/unmapped/C_9282614		net/minecraft/world/gen/structure/StructureP
 		p	1			x
 		p	2			z
 	m	(II)I	m_8688467		postProcessBlockMetadata
-		p	1			blockId
+		p	1			block
 		p	2			metadata
 	m	(Lnet/minecraft/unmapped/C_3906126;IIIIILnet/minecraft/unmapped/C_0624720;)V	m_9230853		setBlockWithMetadata
 		p	1			world
-		p	2			blockId
+		p	2			block
 		p	3			metadata
 		p	4			x
 		p	5			y
@@ -4598,7 +4599,7 @@ c	net/minecraft/unmapped/C_9282614		net/minecraft/world/gen/structure/StructureP
 		p	3			random
 		p	4			threshold
 		p	5			z
-		p	6			blockId
+		p	6			block
 		p	7			metadata
 		p	8			x
 		p	9			y
@@ -4611,7 +4612,7 @@ c	net/minecraft/unmapped/C_9282614		net/minecraft/world/gen/structure/StructureP
 		p	6			maxX
 		p	7			maxY
 		p	8			maxZ
-		p	9			blockId
+		p	9			block
 		p	10			avoidAir
 	m	(Lnet/minecraft/unmapped/C_3906126;IIILnet/minecraft/unmapped/C_0624720;)V	m_8950388		fillAirColumnUp
 		p	1			world
@@ -4621,26 +4622,26 @@ c	net/minecraft/unmapped/C_9282614		net/minecraft/world/gen/structure/StructureP
 		p	5			bounds
 	m	(Lnet/minecraft/unmapped/C_3906126;IIIIILnet/minecraft/unmapped/C_0624720;)V	m_0776917		fillColumnDown
 		p	1			world
-		p	2			blockId
+		p	2			block
 		p	3			metadata
 		p	4			x
 		p	5			y
 		p	6			z
 		p	7			bounds
 	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_0624720;Ljava/util/Random;III[Lnet/minecraft/unmapped/C_5720232;I)V	m_4758219		placeChestWithLoot
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
-		p	6			p_6
-		p	7			p_7
-		p	8			p_8
-	m	(Ljava/util/Random;[Lnet/minecraft/unmapped/C_5720232;Lnet/minecraft/unmapped/C_1233611;I)V	m_6969917		m_6969917
-		p	0			p_0
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+		p	1			world
+		p	2			bounds
+		p	3			random
+		p	4			x
+		p	5			y
+		p	6			z
+		p	7			loot
+		p	8			attempts
+	m	(Ljava/util/Random;[Lnet/minecraft/unmapped/C_5720232;Lnet/minecraft/unmapped/C_1233611;I)V	m_6969917		placeLootInChest
+		p	0			random
+		p	1			loot
+		p	2			chest
+		p	3			attempts
 	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_0624720;Ljava/util/Random;IIII)V	m_8238221		placeWoodenDoor
 		p	1			world
 		p	2			bounds
@@ -4650,7 +4651,7 @@ c	net/minecraft/unmapped/C_9282614		net/minecraft/world/gen/structure/StructureP
 		p	6			z
 		p	7			metadata
 c	net/minecraft/unmapped/C_9282614$C_6844122		BlockPicker
-	f	I	f_0616194		blockId
+	f	I	f_0616194		block
 	f	I	f_9119896		metadata
 	m	()V	<init>		<init>
 	m	(Ljava/util/Random;IIIZ)V	m_3295185		pick
@@ -4659,7 +4660,7 @@ c	net/minecraft/unmapped/C_9282614$C_6844122		BlockPicker
 		p	3			y
 		p	4			z
 		p	5			isNonAir
-	m	()I	m_9778771		getBlockId
+	m	()I	m_9778771		getBlock
 	m	()I	m_6901241		getMetadata
 c	net/minecraft/unmapped/C_9450438		net/minecraft/unmapped/C_9450438
 	m	(Lnet/minecraft/unmapped/C_6297854;)V	<init>		<init>
