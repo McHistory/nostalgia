@@ -277,12 +277,12 @@ c	net/minecraft/unmapped/C_3239917
 c	net/minecraft/unmapped/C_3385278
 	f	Ljava/awt/image/BufferedImage;	f_6553417		image
 c	net/minecraft/unmapped/C_3419581
-	m	()Z	m_9931077		wasAttacking
+	m	()Z	m_9931077		hasStoppedMoving
 	m	()Z	m_9519109		hasPath
 	m	(Lnet/minecraft/unmapped/C_7641996;)V	m_6175736		setPath
 		p	1			path
-	m	()Lnet/minecraft/unmapped/C_6385858;	m_1767552		getTarget
-	m	(Lnet/minecraft/unmapped/C_6385858;)V	m_3711704		setTarget
+	m	()Lnet/minecraft/unmapped/C_6385858;	m_1767552		getWalkTarget
+	m	(Lnet/minecraft/unmapped/C_6385858;)V	m_3711704		setWalkTarget
 		p	1			target
 c	net/minecraft/unmapped/C_3466301
 	f	Z	f_8394126		ambientOcclusion
@@ -745,7 +745,7 @@ c	net/minecraft/unmapped/C_5009044
 	m	()Z	m_9040877		m_9040877
 	m	()V	m_9844463		setEyeHeight
 	m	(Lnet/minecraft/unmapped/C_1013763;Z)V	m_2535479		m_2535479
-		p	1			livingEntity
+		p	1			p_1
 		p	2			p_2
 	m	()V	m_1342999		m_1342999
 	m	()Z	m_9320812		m_9320812
@@ -3131,11 +3131,11 @@ c	net/minecraft/unmapped/C_7302585		net/minecraft/client/entity/particle/Emotion
 		p	7			p_7
 	m	()V	m_0718337		m_0718337
 c	net/minecraft/unmapped/C_7338567		net/minecraft/entity/mob/animal/tamable/WolfEntity
-	f	Z	f_0518827		f_0518827
-	f	F	f_8834819		begAnimationProgress
-	f	F	f_9497596		lastBegAnimationProgress
-	f	Z	f_3768344		furWet
-	f	Z	f_2582494		canShakeWaterOff
+	f	Z	f_0518827		interested
+	f	F	f_8834819		interestedAngle
+	f	F	f_9497596		lastInterestedAngle
+	f	Z	f_3768344		wet
+	f	Z	f_2582494		shaking
 	f	F	f_6924990		shakeProgress
 	f	F	f_3320469		lastShakeProgress
 	m	(Lnet/minecraft/unmapped/C_3906126;)V	<init>		<init>
@@ -3156,19 +3156,19 @@ c	net/minecraft/unmapped/C_7338567		net/minecraft/entity/mob/animal/tamable/Wolf
 	m	()V	m_6773208		m_6773208
 	m	()V	m_5818797		m_5818797
 	m	()V	m_0718337		m_0718337
-	m	()Z	m_2222117		isFurWet
-	m	(F)F	m_4255578		shakeLerp
+	m	()Z	m_2222117		isWet
+	m	(F)F	m_4255578		getShakeProgress
 		p	1			tickDelta
 	m	(FF)F	m_3071815		getShakeAngle
 		p	1			tickdelta
 		p	2			offset
-	m	(F)F	m_2590050		begLerp
+	m	(F)F	m_2590050		getHeadRollAngle
 		p	1			tickDelta
 	m	()F	m_9119163		m_9119163
 	m	()I	m_8524049		m_8524049
-	m	(Lnet/minecraft/unmapped/C_6385858;F)V	m_9768920		m_9768920
-		p	1			p_1
-		p	2			p_2
+	m	(Lnet/minecraft/unmapped/C_6385858;F)V	m_9768920		walkOrTeleportToOwner
+		p	1			owner
+		p	2			distance
 	m	()Z	m_9931077		m_9931077
 	m	(Lnet/minecraft/unmapped/C_6385858;I)Z	m_3238154		m_3238154
 		p	1			p_1
@@ -3179,8 +3179,8 @@ c	net/minecraft/unmapped/C_7338567		net/minecraft/entity/mob/animal/tamable/Wolf
 		p	2			p_2
 	m	(Lnet/minecraft/unmapped/C_5009044;)Z	m_7287105		m_7287105
 		p	1			p_1
-	m	(Z)V	m_3938100		m_3938100
-		p	1			p_1
+	m	(Z)V	m_3938100		addFeedingParticle
+		p	1			breeding
 	m	(B)V	m_9129586		m_9129586
 		p	1			p_1
 	m	()F	m_5518543		age

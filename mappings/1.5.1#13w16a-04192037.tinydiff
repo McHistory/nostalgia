@@ -307,8 +307,8 @@ c	net/minecraft/unmapped/C_1013763	net/minecraft/entity/mob/MobEntity	net/minecr
 	f	F	f_0531186	walkSpeed	
 	f	Lnet/minecraft/unmapped/C_6385858;	f_2937920	lookTarget	
 	f	I	f_3169143	lookTimer	
-	f	I	f_3946859	experienceDroppe	
-		c	The amount of experience points (XP) the LivingEntity drops	
+	f	I	f_3946859	xpDrop	
+		c	The amount of experience points (XP) this mob drops on death.	
 	f	I	f_8438712	residualDamage	
 		c	The minecraft health bar only displays in chunks of half hearts. The damage calculations often results in values not being exactly this (e.g. 1.25 hears of damge). If this is the case, 1 heart of damge is being dealt and .25 hears of damge is being stored and is then used in the next step or next damage calculation.	
 	f	Z	f_6814071	hasStatusEffect	
@@ -320,7 +320,7 @@ c	net/minecraft/unmapped/C_1013763	net/minecraft/entity/mob/MobEntity	net/minecr
 	f	Lnet/minecraft/unmapped/C_4878230;	f_4138559	bodyControl	
 	f	Lnet/minecraft/unmapped/C_0425827;	f_9564384	visibilityCache	
 	f	Lnet/minecraft/unmapped/C_6285024;	f_8649839	targetGoals	
-	f	Lnet/minecraft/unmapped/C_1013763;	f_4746125	target	
+	f	Lnet/minecraft/unmapped/C_1013763;	f_4746125	attackTarget	
 	f	Lnet/minecraft/unmapped/C_1611709;	f_4647937	navigation	
 	f	Lnet/minecraft/unmapped/C_6707278;	f_1750519	housePosition	
 	f	F	f_7384626	maxHouseDistance	
@@ -372,7 +372,7 @@ c	net/minecraft/unmapped/C_1013763	net/minecraft/entity/mob/MobEntity	net/minecr
 		p	1		target	
 		p	2		maxPitch	
 		p	3		maxYaw	
-	m	()V	m_2703843	tryDespawn	
+	m	()V	m_2703843	checkDespawn	
 		c	Checks if the entity can despawn and should despawn.	
 	m	(Lnet/minecraft/unmapped/C_6907923;I)Z	m_3238154	m_3238154	
 		p	1		p_1	
@@ -406,12 +406,12 @@ c	net/minecraft/unmapped/C_1013763	net/minecraft/entity/mob/MobEntity	net/minecr
 	m	(F)V	m_6420337	setForwardSpeed	
 		p	1		forwardSpeed	
 	m	()Lnet/minecraft/unmapped/C_3106558;	m_5062605	getJumpControl	
-	m	()Lnet/minecraft/unmapped/C_1013763;	m_7259726	getAttackTarget	
+	m	()Lnet/minecraft/unmapped/C_1013763;	m_7259726	getLastAttackedMob	
 	m	()Lnet/minecraft/unmapped/C_0425827;	m_0073997	getVisibilityCache	
 	m	(F)V	m_9756987	setMovementSpeed	
 		p	1		movementSpeed	
-	m	()Lnet/minecraft/unmapped/C_1013763;	m_2753045	getTarget	
-	m	(Lnet/minecraft/unmapped/C_1013763;)V	m_9085174	setTarget	
+	m	()Lnet/minecraft/unmapped/C_1013763;	m_2753045	getAttackTarget	
+	m	(Lnet/minecraft/unmapped/C_1013763;)V	m_9085174	setAttackTarget	
 		p	1		target	
 	m	()Lnet/minecraft/unmapped/C_1611709;	m_1724752	getPathNavigation	
 	m	()V	m_0116135	eatGrass	
@@ -468,7 +468,7 @@ c	net/minecraft/unmapped/C_1013763	net/minecraft/entity/mob/MobEntity	net/minecr
 	m	()V	m_1987632		initAttributes
 	m	()Ljava/util/Random;	m_0855573		getRandom
 	m	()Lnet/minecraft/unmapped/C_1013763;	m_0939387		getAttacker
-	m	()Lnet/minecraft/unmapped/C_1013763;	m_7768349		getAttackTarget
+	m	()Lnet/minecraft/unmapped/C_1013763;	m_7768349		getLastAttackedMob
 	m	()I	m_9643976		getDespawnTimer
 	m	()V	m_7085627		tickStatusEffects
 	m	(Lnet/minecraft/unmapped/C_0591668;)Z	m_4107240		hasStatusEffect
@@ -4596,7 +4596,8 @@ c	net/minecraft/unmapped/C_2420402		net/minecraft/entity/living/attribute/Ranged
 		p	1			p_1
 c	net/minecraft/unmapped/C_2587956		net/minecraft/entity/living/mob/MobEntity
 	f	I	f_9649611		ambientSoundDelay
-	f	I	f_2200663		experiencePoints
+	f	I	f_2200663		xpDrop
+		c		The amount of experience points (XP) this mob drops on death.
 	f	Lnet/minecraft/unmapped/C_9418483;	f_0260845		lookControl
 	f	Lnet/minecraft/unmapped/C_5640967;	f_9910988		movementControl
 	f	Lnet/minecraft/unmapped/C_3106558;	f_8705772		jumpControl
@@ -4604,7 +4605,7 @@ c	net/minecraft/unmapped/C_2587956		net/minecraft/entity/living/mob/MobEntity
 	f	Lnet/minecraft/unmapped/C_1611709;	f_7887421		entityNavigation
 	f	Lnet/minecraft/unmapped/C_6285024;	f_6459692		goalSelector
 	f	Lnet/minecraft/unmapped/C_6285024;	f_1460195		targetSelector
-	f	Lnet/minecraft/unmapped/C_1013763;	f_1645706		targetEntity
+	f	Lnet/minecraft/unmapped/C_1013763;	f_1645706		attackTarget
 	f	Lnet/minecraft/unmapped/C_0425827;	f_2182528		mobVisibilityCache
 	f	[Lnet/minecraft/unmapped/C_2750078;	f_1279871		inventorySlots
 	f	[F	f_8910412		inventoryDropChances
@@ -4614,10 +4615,9 @@ c	net/minecraft/unmapped/C_2587956		net/minecraft/entity/living/mob/MobEntity
 	f	Z	f_8483359		persistent
 	f	F	f_6191886		standardPitch
 	f	F	f_8576112		f_8576112
-	f	Lnet/minecraft/unmapped/C_6385858;	f_0618839		currentTarget
-	f	I	f_5671183		angryCountdown
-		c		The countdown that decids how long it should keep attacking the same target
-	f	Z	f_4640679		isLeashed
+	f	Lnet/minecraft/unmapped/C_6385858;	f_0618839		lookTarget
+	f	I	f_5671183		lookTimer
+	f	Z	f_4640679		leashed
 	f	Lnet/minecraft/unmapped/C_6385858;	f_6291580		leashHolder
 	f	Lnet/minecraft/unmapped/C_2800860;	f_2068123		leashNbt
 	m	(Lnet/minecraft/unmapped/C_3906126;)V	<init>		<init>
@@ -4628,11 +4628,11 @@ c	net/minecraft/unmapped/C_2587956		net/minecraft/entity/living/mob/MobEntity
 	m	()Lnet/minecraft/unmapped/C_3106558;	m_8139549		getJumpControl
 	m	()Lnet/minecraft/unmapped/C_1611709;	m_0358477		getNavigation
 	m	()Lnet/minecraft/unmapped/C_0425827;	m_3890284		getMobVisibilityCache
-	m	()Lnet/minecraft/unmapped/C_1013763;	m_6377850		getTargetEntity
+	m	()Lnet/minecraft/unmapped/C_1013763;	m_6377850		getAttackTarget
 	m	(Lnet/minecraft/unmapped/C_1013763;)V	m_3729248		setAttackTarget
-		p	1			targetEntity
-	m	(Ljava/lang/Class;)Z	m_4733413		canAttackEntity
-		p	1			entityClass
+		p	1			target
+	m	(Ljava/lang/Class;)Z	m_4733413		canAttack
+		p	1			type
 	m	()V	m_1412170		onEatingGrass
 	m	()V	m_5855336		m_5855336
 	m	()I	m_4585987		getAmbientSoundInterval
@@ -4666,7 +4666,7 @@ c	net/minecraft/unmapped/C_2587956		net/minecraft/entity/living/mob/MobEntity
 	m	()V	m_4958068		m_4958068
 	m	()V	m_6773208		m_6773208
 	m	()I	m_3238586		getLookPitchSpeed
-	m	(Lnet/minecraft/unmapped/C_6385858;FF)V	m_2797400		lookAtEntity
+	m	(Lnet/minecraft/unmapped/C_6385858;FF)V	m_2797400		lookAt
 		p	1			target
 		p	2			maxYawChange
 		p	3			maxPitchChange
@@ -5101,11 +5101,11 @@ c	net/minecraft/unmapped/C_9549387		net/minecraft/entity/living/attribute/Abstra
 	f	Ljava/util/Map;	f_9823442		byName
 	m	()V	<init>		<init>
 	m	(Lnet/minecraft/unmapped/C_3731908;)Lnet/minecraft/unmapped/C_5801153;	m_6904530		get
-		p	1			p_1
+		p	1			attribute
 	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_5801153;	m_2417065		get
-		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_3731908;)Lnet/minecraft/unmapped/C_5801153;	m_1621097		m_1621097
-		p	1			p_1
+		p	1			name
+	m	(Lnet/minecraft/unmapped/C_3731908;)Lnet/minecraft/unmapped/C_5801153;	m_1621097		register
+		p	1			attribute
 	m	()Ljava/util/Collection;	m_1606856		getAll
 c	net/minecraft/unmapped/C_0639491	net/minecraft/client/entity/mob/player/KeyboardInput	net/minecraft/client/entity/living/player/KeyboardInput
 c	net/minecraft/unmapped/C_4045198	net/minecraft/client/entity/mob/player/Input	net/minecraft/client/entity/living/player/Input

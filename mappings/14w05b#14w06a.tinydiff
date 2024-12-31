@@ -201,19 +201,19 @@ c	net/minecraft/unmapped/C_3080471
 c	net/minecraft/unmapped/C_3324249
 	m	()F	m_6131251		m_6131251
 c	net/minecraft/unmapped/C_3419581
-	f	Lnet/minecraft/unmapped/C_6385858;	f_8101227	attackTarget	
-	f	Z	f_3611045	wasAttacking	
+	f	Lnet/minecraft/unmapped/C_6385858;	f_8101227	walkTarget	
+	f	Z	f_3611045	stoppedMoving	
 	f	I	f_0864517	fastMovementCooldown	
 	m	()V	m_6773208	m_6773208	
-	m	(Lnet/minecraft/unmapped/C_6385858;F)V	m_4604691	checkDamageTarget	
+	m	(Lnet/minecraft/unmapped/C_6385858;F)V	m_4604691	targetInSight	
 		p	1		target	
 		p	2		distance	
-	m	()Lnet/minecraft/unmapped/C_6385858;	m_3715716	findAttackTarget	
-	m	()Z	m_9931077	wasAttacking	
-	m	()Lnet/minecraft/unmapped/C_6385858;	m_1767552	getTarget	
-	m	(Lnet/minecraft/unmapped/C_6385858;)V	m_3711704	setTarget	
+	m	()Lnet/minecraft/unmapped/C_6385858;	m_3715716	findTarget	
+	m	()Z	m_9931077	hasStoppedMoving	
+	m	()Lnet/minecraft/unmapped/C_6385858;	m_1767552	getWalkTarget	
+	m	(Lnet/minecraft/unmapped/C_6385858;)V	m_3711704	setWalkTarget	
 		p	1		target	
-	m	()V	m_5345939	setNewWanderingPath	
+	m	()V	m_5345939	updateWanderingPath	
 c	net/minecraft/unmapped/C_3447974
 	m	()I	m_0839636		m_0839636
 c	net/minecraft/unmapped/C_3466301
@@ -1107,9 +1107,8 @@ c	net/minecraft/unmapped/C_2340941
 	m	()F	m_6131251		m_6131251
 c	net/minecraft/unmapped/C_2587956
 	f	F	f_6191886	standardPitch	
-	f	Lnet/minecraft/unmapped/C_6385858;	f_0618839	currentTarget	
-	f	I	f_5671183	angryCountdown	
-		c	The countdown that decids how long it should keep attacking the same target	
+	f	Lnet/minecraft/unmapped/C_6385858;	f_0618839	lookTarget	
+	f	I	f_5671183	lookTimer	
 	m	()Z	m_4680808	m_4680808	
 	m	()V	m_6773208	m_6773208	
 	m	()V	m_6941201	initSpawningEquipment	

@@ -628,8 +628,8 @@ c	net/minecraft/unmapped/C_0990852
 c	net/minecraft/unmapped/C_1013763
 	f	F	f_0541165		landSpeed
 	f	F	f_9411361		airSpeed
-	f	I	f_3946859		experienceDroppe
-		c		The amount of experience points (XP) the LivingEntity drops
+	f	I	f_3946859		xpDrop
+		c		The amount of experience points (XP) this mob drops on death.
 	f	Lnet/minecraft/unmapped/C_5009044;	f_2326521		attackingPlayer
 	f	I	f_0734403		playerHitTimer
 	f	I	f_5992476		f_5992476
@@ -1785,8 +1785,8 @@ c	net/minecraft/unmapped/C_4718187
 	m	(Lnet/minecraft/unmapped/C_6907923;I)Z	m_3238154		m_3238154
 		p	1			p_1
 		p	2			p_2
-	m	(Lnet/minecraft/unmapped/C_6385858;)Z	m_9004216		m_9004216
-		p	1			p_1
+	m	(Lnet/minecraft/unmapped/C_6385858;)Z	m_9004216		attack
+		p	1			target
 c	net/minecraft/unmapped/C_4753572	net/minecraft/util/Tickable	
 	m	()V	m_5506965	tick	
 c	net/minecraft/unmapped/C_4784123
@@ -3570,7 +3570,7 @@ c	net/minecraft/unmapped/C_1406783$C_5274932		Entry
 c	net/minecraft/unmapped/C_1481722		net/minecraft/entity/mob/hostile/EndermanEntity
 	f	I	f_7406225		f_7406225
 	f	I	f_0727960		f_0727960
-	f	Z	f_8130184		f_8130184
+	f	Z	f_8130184		angry
 	f	I	f_0046203		teleportCountdown
 		c		A 30 tick countdown that delays enderman teleportation after it becomes possible
 	f	I	f_0609975		angryStareCooldown

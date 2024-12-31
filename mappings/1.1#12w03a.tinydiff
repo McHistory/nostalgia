@@ -2,21 +2,21 @@ tiny	2	0
 c	net/minecraft/unmapped/C_0901730
 	f	I	f_4116423		lastHeadPitch
 c	net/minecraft/unmapped/C_1013763
-	f	Lnet/minecraft/unmapped/C_1013763;	f_8361527		attackTarget
-		c		The target that this entity is currently attacking.
+	f	Lnet/minecraft/unmapped/C_1013763;	f_8361527		lastAttackedMob
+		c		The last mob this entity attacked.
 	f	Lnet/minecraft/unmapped/C_4878230;	f_4138559		bodyControl
-	f	Lnet/minecraft/unmapped/C_7566952;	f_4746125		target
+	f	Lnet/minecraft/unmapped/C_7566952;	f_4746125		attackTarget
 	f	Lnet/minecraft/unmapped/C_1013763;	f_7863798
 		c	The target that this entity is currently attacking.	
 	m	()F	m_0292482	getTargetSpeed	
-	m	()Lnet/minecraft/unmapped/C_7566952;	m_2753045		getTarget
-	m	()Lnet/minecraft/unmapped/C_1013763;	m_7259726		getAttackTarget
-	m	(Lnet/minecraft/unmapped/C_6385858;)V	m_0313631		setAttackTarget
-		p	1			target
+	m	()Lnet/minecraft/unmapped/C_7566952;	m_2753045		getAttackTarget
+	m	()Lnet/minecraft/unmapped/C_1013763;	m_7259726		getLastAttackedMob
+	m	(Lnet/minecraft/unmapped/C_6385858;)V	m_0313631		setLastAttackedMob
+		p	1			entity
 	m	(F)V	m_3300694		m_3300694
 		p	1			p_1
 	m	()F	m_6481881		m_6481881
-	m	(Lnet/minecraft/unmapped/C_6385858;)Z	m_9004216		damageAttackTarget
+	m	(Lnet/minecraft/unmapped/C_6385858;)Z	m_9004216		attack
 		p	1			target
 c	net/minecraft/unmapped/C_1415320
 	m	()Z	m_9276055		isInLove
@@ -462,3 +462,6 @@ c	net/minecraft/unmapped/C_9913950		net/minecraft/entity/ai/goal/PounceAtTargetG
 	m	()V	m_4528414		m_4528414
 	m	()V	m_2223255		m_2223255
 	m	()Z	m_3298012		m_3298012
+c	net/minecraft/unmapped/C_4718187
+	m	(Lnet/minecraft/unmapped/C_6385858;)Z	m_9004216	attack	m_9004216
+		p	1		target	p_1
