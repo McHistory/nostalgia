@@ -283,7 +283,7 @@ c	net/minecraft/unmapped/C_0324512	net/minecraft/server/entity/mob/player/Server
 	f	I	f_1478225	spawnProtectionTicks	
 	f	I	f_3098613	menuId	
 	f	Z	f_2104338	useItemCooldown	
-	f	[Lnet/minecraft/unmapped/C_2750078;	f_5960888	equipmentStacks	
+	f	[Lnet/minecraft/unmapped/C_2750078;	f_5960888	equipment	
 	m	(Lnet/minecraft/server/MinecraftServer;Lnet/minecraft/unmapped/C_3906126;Ljava/lang/String;Lnet/minecraft/unmapped/C_7897127;)V	<init>	<init>	
 		p	1		server	
 		p	2		world	
@@ -340,8 +340,8 @@ c	net/minecraft/unmapped/C_0324512	net/minecraft/server/entity/mob/player/Server
 	m	()V	m_0769147	use	
 	m	()V	m_1952736	doCloseMenu	
 	m	()[Lnet/minecraft/unmapped/C_2750078;	m_9919834	m_9919834	
-	m	(I)Lnet/minecraft/unmapped/C_2750078;	m_4716717	getItem	
-		p	1		p_1	
+	m	(I)Lnet/minecraft/unmapped/C_2750078;	m_4716717	getEquipment	
+		p	1		slot	
 	m	(Lnet/minecraft/unmapped/C_0356559;)V	m_2791355	m_2791355	
 		p	1		p_1	
 	m	()V	m_9844463	m_9844463	
@@ -370,7 +370,7 @@ c	net/minecraft/unmapped/C_0324512	net/minecraft/server/entity/mob/player/Server
 	m	(Lnet/minecraft/unmapped/C_3906126;)V	m_6683300	m_6683300	
 		p	1		p_1	
 	m	(Lnet/minecraft/unmapped/C_7699185;)V	m_0753902	setMenu	
-		p	1		handler	
+		p	1		menu	
 	m	()V	m_4740817	onDisconnect	
 	m	()V	m_2339273	markHealthDirty	
 	m	(Ljava/lang/String;)V	m_0278228	m_0278228	
@@ -749,7 +749,7 @@ c	net/minecraft/unmapped/C_1233611
 c	net/minecraft/unmapped/C_1249120
 	m	(ILjava/util/List;)V	<init>	<init>	
 		p	1		menuId	
-		p	2		stacks	
+		p	2		items	
 c	net/minecraft/unmapped/C_1264342
 	m	()I	m_8974598		size
 	m	(J)Z	m_9388487		contains
@@ -1086,9 +1086,9 @@ c	net/minecraft/unmapped/C_2758065
 c	net/minecraft/unmapped/C_2782822
 	m	()V	m_2968224	notifyAmbientDarknessChanged	
 c	net/minecraft/unmapped/C_2786920
-	m	(Lnet/minecraft/unmapped/C_7699185;Ljava/util/List;)V	m_0076107	updateMenu	
+	m	(Lnet/minecraft/unmapped/C_7699185;Ljava/util/List;)V	m_0076107	onMenuChanged	
 		p	1		menu	
-		p	2		stacks	
+		p	2		items	
 c	net/minecraft/unmapped/C_2923961
 	m	()V	m_1336552		m_1336552
 	m	()F	m_2157691		spiderScale
@@ -1642,9 +1642,9 @@ c	net/minecraft/unmapped/C_4237166
 	m	()Z	m_0984858		hasAttackCooldown
 	m	()Z	m_9164916		hasCreativeInventory
 	m	()Z	m_8715252		hasExtendedReach
-	m	(Lnet/minecraft/unmapped/C_2750078;I)V	m_0004519		addStackToCreativeMenu
-		p	1			stack
-		p	2			slotId
+	m	(Lnet/minecraft/unmapped/C_2750078;I)V	m_0004519		addItemToCreativeMenu
+		p	1			item
+		p	2			slot
 c	net/minecraft/unmapped/C_4286596
 	m	(IZ)V	m_8632037	selectSlot	
 		p	1		block	
@@ -1938,8 +1938,8 @@ c	net/minecraft/unmapped/C_5009044
 		p	1			amount
 	m	()Lnet/minecraft/unmapped/C_7324071;	m_3979111		getHungerManager
 	m	()Z	m_8904315		needsHealing
-	m	(Lnet/minecraft/unmapped/C_2750078;I)V	m_8344088		setUseItem
-		p	1			stack
+	m	(Lnet/minecraft/unmapped/C_2750078;I)V	m_8344088		setItemInUse
+		p	1			item
 		p	2			maxUseTime
 	m	(III)Z	m_0733834		canMineBlock
 		p	1			x
@@ -2108,7 +2108,7 @@ c	net/minecraft/unmapped/C_6385858
 	m	(Lnet/minecraft/unmapped/C_6385858;I)Z	m_3238154	takeDamage	
 		p	1		source	
 		p	2		amount	
-	m	()[Lnet/minecraft/unmapped/C_2750078;	m_9919834	getEquipmentStacks	
+	m	()[Lnet/minecraft/unmapped/C_2750078;	m_9919834	getEquipment	
 	m	(Z)V	m_8609807	setSneaking	
 		p	1		sneaking	
 	m	(F)I	m_8582980		getLightLevel
@@ -2392,7 +2392,7 @@ c	net/minecraft/unmapped/C_7439439
 		p	1			p_1
 c	net/minecraft/unmapped/C_7542541
 	m	(Lnet/minecraft/unmapped/C_7192378;IIZ)V	m_0260318		clickSlot
-		p	1			invSlot
+		p	1			actualSlot
 		p	2			slot
 		p	3			button
 		p	4			quickMove
@@ -2453,7 +2453,7 @@ c	net/minecraft/unmapped/C_7699185
 	m	(Lnet/minecraft/unmapped/C_5009044;Z)V	m_0697184	setSynced	
 		p	1		player	
 		p	2		synced	
-	m	()Ljava/util/List;	m_6211562	getStacks	
+	m	()Ljava/util/List;	m_6211562	getItems	
 c	net/minecraft/unmapped/C_7897127	net/minecraft/server/ServerPlayerInteractionManager	
 	f	Lnet/minecraft/unmapped/C_5009044;	f_5832068	player	
 	f	I	f_2112129	targetX	
@@ -2479,11 +2479,11 @@ c	net/minecraft/unmapped/C_7897127	net/minecraft/server/ServerPlayerInteractionM
 	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_2750078;)Z	m_1509177	useItem	
 		p	1		player	
 		p	2		world	
-		p	3		stack	
+		p	3		itemInHand	
 	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_2750078;IIII)Z	m_7617621	useBlock	
 		p	1		player	
 		p	2		world	
-		p	3		stack	
+		p	3		itemInHand	
 		p	4		x	
 		p	5		y	
 		p	6		z	
@@ -2851,8 +2851,8 @@ c	net/minecraft/unmapped/C_9377562
 c	net/minecraft/unmapped/C_9381557
 	m	(IILnet/minecraft/unmapped/C_2750078;)V	<init>	<init>	
 		p	1		menuId	
-		p	2		slotId	
-		p	3		stack	
+		p	2		slot	
+		p	3		item	
 c	net/minecraft/unmapped/C_9386942
 	m	(II)I	m_3278400	toInt	
 		p	0		chunkX	
@@ -2877,8 +2877,8 @@ c	net/minecraft/unmapped/C_9614477
 c	net/minecraft/unmapped/C_9701483
 	m	(IILnet/minecraft/unmapped/C_2750078;)V	<init>	<init>	
 		p	1		id	
-		p	2		equipmentSlot	
-		p	3		stack	
+		p	2		slot	
+		p	3		item	
 c	net/minecraft/unmapped/C_9746149
 	m	(Lnet/minecraft/unmapped/C_6385858;I)Z	m_3238154	m_3238154	
 		p	1		p_1	
@@ -3114,14 +3114,14 @@ c	net/minecraft/unmapped/C_6134274
 		p	3		data	
 c	net/minecraft/unmapped/C_6285226
 	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_5009044;)[B	m_5765838	getUpdateData	
-		p	1		stack	
+		p	1		item	
 		p	2		world	
 		p	3		player	
 c	net/minecraft/unmapped/C_6285226$C_2230951
 	f	[B	f_5086351	decorations	
 	m	(Lnet/minecraft/unmapped/C_2750078;)[B	m_2378782	getUpdateData	
 		c	Packs data for a map update packet in a byte array. The first byte encodes the type\nof update:\n<br>0: colors\n<br>1: decorations\n<br>2: scale	
-		p	1		stack	
+		p	1		item	
 c	net/minecraft/unmapped/C_6377547	net/minecraft/server/world/ReadOnlyServerWorld	
 	m	(Lnet/minecraft/server/MinecraftServer;Lnet/minecraft/unmapped/C_9147018;Ljava/lang/String;IJLnet/minecraft/unmapped/C_7366354;)V	<init>	<init>	
 		p	1		server	
@@ -4289,7 +4289,7 @@ c	net/minecraft/unmapped/C_5552928		net/minecraft/block/InfestedBlock
 	m	(I)I	m_8148066		getVariant
 		p	0			blockId
 c	net/minecraft/unmapped/C_5680707		net/minecraft/network/packet/CreativeMenuSlotPacket
-	f	I	f_6887190		slotId
+	f	I	f_6887190		slot
 	f	I	f_9790123		f_9790123
 	f	I	f_5979485		f_5979485
 	f	I	f_9531792		f_9531792

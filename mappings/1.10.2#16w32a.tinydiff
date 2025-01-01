@@ -139,10 +139,10 @@ c	net/minecraft/unmapped/C_1233611
 	f	[Lnet/minecraft/unmapped/C_2750078;	f_4205669	inventory	
 	f	Lnet/minecraft/unmapped/C_0160011;	f_4205669		inventory
 c	net/minecraft/unmapped/C_1249120
-	f	[Lnet/minecraft/unmapped/C_2750078;	f_8204238	stacks	
-	f	Ljava/util/List;	f_8204238		stacks
-	m	()[Lnet/minecraft/unmapped/C_2750078;	m_5933710	getStacks	
-	m	()Ljava/util/List;	m_5933710		getStacks
+	f	[Lnet/minecraft/unmapped/C_2750078;	f_8204238	items	
+	f	Ljava/util/List;	f_8204238		items
+	m	()[Lnet/minecraft/unmapped/C_2750078;	m_5933710	getItems	
+	m	()Ljava/util/List;	m_5933710		getItems
 c	net/minecraft/unmapped/C_1415320
 	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_4360192;Lnet/minecraft/unmapped/C_2750078;)Z	m_8048017	m_8048017	
 		p	1		p_1	
@@ -214,8 +214,8 @@ c	net/minecraft/unmapped/C_2154975
 		p	1			inventory
 		p	2			world
 c	net/minecraft/unmapped/C_2178068
-	f	[Lnet/minecraft/unmapped/C_2750078;	f_2413097	stacks	
-	f	Lnet/minecraft/unmapped/C_0160011;	f_2413097		stacks
+	f	[Lnet/minecraft/unmapped/C_2750078;	f_2413097	items	
+	f	Lnet/minecraft/unmapped/C_0160011;	f_2413097		items
 c	net/minecraft/unmapped/C_2339776
 	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_4360192;Lnet/minecraft/unmapped/C_2750078;)Z	m_8048017	m_8048017	
 		p	1		p_1	
@@ -232,8 +232,8 @@ c	net/minecraft/unmapped/C_2419714
 	m	(Ljava/util/Random;)Lnet/minecraft/unmapped/C_0561170;	m_3766314		pickDungeonType
 		p	1			random
 c	net/minecraft/unmapped/C_2488469
-	f	[Lnet/minecraft/unmapped/C_2750078;	f_9296835	stacks	
-	f	Lnet/minecraft/unmapped/C_0160011;	f_9296835		stacks
+	f	[Lnet/minecraft/unmapped/C_2750078;	f_9296835	items	
+	f	Lnet/minecraft/unmapped/C_0160011;	f_9296835		items
 c	net/minecraft/unmapped/C_2584919
 	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_4360192;Lnet/minecraft/unmapped/C_2750078;)Z	m_8048017	m_8048017	
 		p	1		p_1	
@@ -375,7 +375,7 @@ c	net/minecraft/unmapped/C_3635204
 		p	1		world	
 		p	2		pos	
 		p	3		face	
-		p	4		stack	
+		p	4		item	
 	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_4360192;Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_3544601;FFF)Z	m_2543653	use	
 		c	Handles a player interacting with this block, i.e. a player holding the <i>use</i> key\nwhile looking at this block.\n\n@return whether the interaction was consumed,\ni.e. whether further processing of the use action should be blocked.	
 		p	1		world	
@@ -383,7 +383,7 @@ c	net/minecraft/unmapped/C_3635204
 		p	3		state	
 		p	4		player	
 		p	5		hand	
-		p	6		stack	
+		p	6		item	
 		p	7		face	
 		p	8		dx	
 		p	9		dy	
@@ -452,7 +452,7 @@ c	net/minecraft/unmapped/C_3906126
 		p	3		skipCollisionChecks	
 		p	4		face	
 		p	5		entity	
-		p	6		stack	
+		p	6		item	
 	m	(Lnet/minecraft/unmapped/C_3635204;Lnet/minecraft/unmapped/C_6707278;ZLnet/minecraft/unmapped/C_3544601;Lnet/minecraft/unmapped/C_6385858;)Z	m_2921988		canPlace
 		p	1			block
 		p	2			pos
@@ -493,9 +493,9 @@ c	net/minecraft/unmapped/C_4030632
 		p	2			player
 		p	3			hand
 	m	(Lnet/minecraft/unmapped/C_4030632;Lnet/minecraft/unmapped/C_6619871;Lnet/minecraft/unmapped/C_0160011;)V	m_2766706		addToCreativeMenu
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+		p	1			item
+		p	2			tab
+		p	3			inventory
 c	net/minecraft/unmapped/C_4030632$1975916
 	m	(Lnet/minecraft/unmapped/C_2750078;)Ljava/lang/String;	m_7853793	m_7853793	
 		p	1		p_1	
@@ -619,7 +619,7 @@ c	net/minecraft/unmapped/C_4237166
 	m	(Lnet/minecraft/unmapped/C_5367636;Lnet/minecraft/unmapped/C_8817873;Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_3544601;Lnet/minecraft/unmapped/C_0336319;Lnet/minecraft/unmapped/C_4360192;)Lnet/minecraft/unmapped/C_6544668;	m_0257155	useBlock	
 		p	1		player	
 		p	2		world	
-		p	3		stack	
+		p	3		item	
 		p	4		pos	
 		p	5		face	
 		p	6		hitPos	
@@ -627,18 +627,18 @@ c	net/minecraft/unmapped/C_4237166
 	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_4360192;)Lnet/minecraft/unmapped/C_6544668;	m_9228380	useItem	
 		p	1		player	
 		p	2		world	
-		p	3		stack	
+		p	3		item	
 		p	4		hand	
 	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_4360192;)Lnet/minecraft/unmapped/C_6544668;	m_8854017	interactEntity	
 		p	1		player	
 		p	2		target	
-		p	3		stack	
+		p	3		item	
 		p	4		hand	
 	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_5853518;Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_4360192;)Lnet/minecraft/unmapped/C_6544668;	m_5522768	interactEntityAt	
 		p	1		player	
 		p	2		target	
-		p	3		result	
-		p	4		stack	
+		p	3		hit	
+		p	4		item	
 		p	5		hand	
 	m	(Lnet/minecraft/unmapped/C_5367636;Lnet/minecraft/unmapped/C_8817873;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_3544601;Lnet/minecraft/unmapped/C_0336319;Lnet/minecraft/unmapped/C_4360192;)Lnet/minecraft/unmapped/C_6544668;	m_0257155		useBlock
 		p	1			player
@@ -661,12 +661,12 @@ c	net/minecraft/unmapped/C_4237166
 		p	3			result
 		p	4			hand
 c	net/minecraft/unmapped/C_4286596
-	f	[Lnet/minecraft/unmapped/C_2750078;	f_3513265	inventorySlots	
-	f	[Lnet/minecraft/unmapped/C_2750078;	f_7176564	armorSlots	
+	f	[Lnet/minecraft/unmapped/C_2750078;	f_3513265	items	
+	f	[Lnet/minecraft/unmapped/C_2750078;	f_7176564	armor	
 	f	[Lnet/minecraft/unmapped/C_2750078;	f_7838934	offhand	
 	f	[[Lnet/minecraft/unmapped/C_2750078;	f_8042569	compartments	
-	f	Lnet/minecraft/unmapped/C_0160011;	f_3513265		inventorySlots
-	f	Lnet/minecraft/unmapped/C_0160011;	f_7176564		armorSlots
+	f	Lnet/minecraft/unmapped/C_0160011;	f_3513265		items
+	f	Lnet/minecraft/unmapped/C_0160011;	f_7176564		armor
 	f	Lnet/minecraft/unmapped/C_0160011;	f_7838934		offhand
 	f	Ljava/util/List;	f_8042569		compartments
 c	net/minecraft/unmapped/C_4378169
@@ -724,7 +724,7 @@ c	net/minecraft/unmapped/C_5009044
 		p	1		message	
 	m	(Lnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_4360192;)Lnet/minecraft/unmapped/C_6544668;	m_4777054	interact	
 		p	1		entity	
-		p	2		stack	
+		p	2		item	
 		p	3		hand	
 	m	(Lnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_4360192;)Lnet/minecraft/unmapped/C_6544668;	m_4777054		interact
 		p	1			p_1
@@ -847,8 +847,8 @@ c	net/minecraft/unmapped/C_5422301
 		p	2			p_2
 		p	3			p_3
 c	net/minecraft/unmapped/C_6095546
-	f	[Lnet/minecraft/unmapped/C_2750078;	f_8023306	stacks	
-	f	Lnet/minecraft/unmapped/C_0160011;	f_8023306		stacks
+	f	[Lnet/minecraft/unmapped/C_2750078;	f_8023306	items	
+	f	Lnet/minecraft/unmapped/C_0160011;	f_8023306		items
 c	net/minecraft/unmapped/C_6108840
 	m	()Ljava/lang/String;	m_4059676	getType	
 	m	(Ljava/lang/String;)V	m_5028143	setType	
@@ -909,7 +909,7 @@ c	net/minecraft/unmapped/C_6259709
 c	net/minecraft/unmapped/C_6385858
 	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_4360192;)Z	m_7097998	interact	
 		p	1		player	
-		p	2		stack	
+		p	2		itemInHand	
 		p	3		hand	
 	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_0336319;Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_4360192;)Lnet/minecraft/unmapped/C_6544668;	m_9473672	interact	
 		p	1		p_1	
@@ -986,10 +986,10 @@ c	net/minecraft/unmapped/C_7137679
 		p	7			p_7
 		p	8			p_8
 c	net/minecraft/unmapped/C_7192378
-	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_2750078;)V	m_7573710	onItemsRemoved	
+	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_2750078;)V	m_7573710	onItemRemoved	
 		p	1		player	
-		p	2		stack	
-	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_2750078;)Lnet/minecraft/unmapped/C_2750078;	m_7573710		onItemsRemoved
+		p	2		item	
+	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_2750078;)Lnet/minecraft/unmapped/C_2750078;	m_7573710		onItemRemoved
 		p	1			player
 		p	2			stack
 c	net/minecraft/unmapped/C_7213435
@@ -1080,15 +1080,15 @@ c	net/minecraft/unmapped/C_7450537
 		p	2			p_2
 		p	3			p_3
 c	net/minecraft/unmapped/C_7699185
-	f	Ljava/util/List;	f_6134689	stacks	
-	f	Lnet/minecraft/unmapped/C_0160011;	f_6134689		stacks
-	m	([Lnet/minecraft/unmapped/C_2750078;)V	m_3443025	setStacks	
-		p	1		stacks	
+	f	Ljava/util/List;	f_6134689	items	
+	f	Lnet/minecraft/unmapped/C_0160011;	f_6134689		items
+	m	([Lnet/minecraft/unmapped/C_2750078;)V	m_3443025	setItems	
+		p	1		items	
 	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_2750078;)Z	m_9615055	m_9615055	
 		p	0		p_0	
 		p	1		p_1	
-	m	(Ljava/util/List;)V	m_3443025		setStacks
-		p	1			stacks
+	m	(Ljava/util/List;)V	m_3443025		setItems
+		p	1			items
 c	net/minecraft/unmapped/C_7881648
 	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_4360192;Lnet/minecraft/unmapped/C_3544601;FFF)Lnet/minecraft/unmapped/C_6544668;	m_9844872	m_9844872	
 		p	1		p_1	
@@ -1847,9 +1847,9 @@ c	net/minecraft/unmapped/C_4806482
 		p	8			p_8
 		p	9			p_9
 c	net/minecraft/unmapped/C_5613525
-	m	(Lnet/minecraft/unmapped/C_1013763;)Ljava/lang/Iterable;	m_0465986	getSlotItems	
+	m	(Lnet/minecraft/unmapped/C_1013763;)Ljava/lang/Iterable;	m_0465986	getEquipment	
 		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_1013763;)Ljava/util/List;	m_0465986		getSlotItems
+	m	(Lnet/minecraft/unmapped/C_1013763;)Ljava/util/List;	m_0465986		getEquipment
 		p	1			entity
 c	net/minecraft/unmapped/C_7362472
 c	net/minecraft/unmapped/C_7362472$C_2550848
@@ -1949,7 +1949,7 @@ c	net/minecraft/unmapped/C_0368523
 		p	0			stack
 		p	1			type
 	m	(Lnet/minecraft/unmapped/C_2750078;)Lnet/minecraft/unmapped/C_0561170;	m_1436272		readTypeFromNbt
-		p	0			stack
+		p	0			item
 c	net/minecraft/unmapped/C_7275075
 	m	()Lnet/minecraft/unmapped/C_0336319;	m_2448672		getTarget
 c	net/minecraft/unmapped/C_0380387
@@ -2124,10 +2124,10 @@ c	net/minecraft/unmapped/C_4718007$5022798
 		p	1		p_1	
 c	net/minecraft/unmapped/C_4718007$C_5778667		KeyProvider
 	m	(Lnet/minecraft/unmapped/C_2750078;)Ljava/lang/String;	m_2708149		getKey
-		p	1			stack
+		p	1			item
 c	net/minecraft/unmapped/C_0209711
-	f	[Lnet/minecraft/unmapped/C_2750078;	f_5222493	stacks	
-	f	Lnet/minecraft/unmapped/C_0160011;	f_5222493		stacks
+	f	[Lnet/minecraft/unmapped/C_2750078;	f_5222493	items	
+	f	Lnet/minecraft/unmapped/C_0160011;	f_5222493		items
 c	net/minecraft/unmapped/C_3338433
 	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_2750078;)V	m_7573710	m_7573710	
 		p	1		p_1	
@@ -2550,8 +2550,8 @@ c	net/minecraft/unmapped/C_6150373
 		p	2			p_2
 		p	3			p_3
 c	net/minecraft/unmapped/C_0778972
-	f	[Lnet/minecraft/unmapped/C_2750078;	f_3160181	stacks	
-	f	Lnet/minecraft/unmapped/C_0160011;	f_3160181		stacks
+	f	[Lnet/minecraft/unmapped/C_2750078;	f_3160181	items	
+	f	Lnet/minecraft/unmapped/C_0160011;	f_3160181		items
 	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_4360192;)Z	m_7097998	m_7097998	
 		p	1		p_1	
 		p	2		p_2	
@@ -2716,7 +2716,7 @@ c	net/minecraft/unmapped/C_2340941
 		p	1			sounds
 	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_2750078;)Z	m_8210696		receiveFood
 		p	1			player
-		p	2			stack
+		p	2			item
 	m	(Lnet/minecraft/unmapped/C_9571530;Ljava/lang/Class;)V	m_4408469		registerSchema
 		p	0			dfu
 		p	1			type
@@ -2731,10 +2731,10 @@ c	net/minecraft/unmapped/C_2340941$C_2370997	Data
 		p	1		type	
 		p	2		variant	
 c	net/minecraft/unmapped/C_2587956
-	f	[Lnet/minecraft/unmapped/C_2750078;	f_7480058	handSlots	
-	f	[Lnet/minecraft/unmapped/C_2750078;	f_2018921	armorSlots	
-	f	Lnet/minecraft/unmapped/C_0160011;	f_7480058		handSlots
-	f	Lnet/minecraft/unmapped/C_0160011;	f_2018921		armorSlots
+	f	[Lnet/minecraft/unmapped/C_2750078;	f_7480058	itemsInHands	
+	f	[Lnet/minecraft/unmapped/C_2750078;	f_2018921	armor	
+	f	Lnet/minecraft/unmapped/C_0160011;	f_7480058		itemsInHands
+	f	Lnet/minecraft/unmapped/C_0160011;	f_2018921		armor
 	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_4360192;)Z	m_7097998	m_7097998	
 		p	1		p_1	
 		p	2		p_2	
@@ -2742,7 +2742,7 @@ c	net/minecraft/unmapped/C_2587956
 	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_4360192;Lnet/minecraft/unmapped/C_2750078;)Z	m_8048017	interactMob	
 		p	1		player	
 		p	2		hand	
-		p	3		stack	
+		p	3		itemInHand	
 	m	(Lnet/minecraft/unmapped/C_9571530;Ljava/lang/String;)V	m_7886608	registerSchema	
 		p	0		p_0	
 		p	1		p_1	
@@ -3287,11 +3287,11 @@ c	net/minecraft/unmapped/C_4840589
 		p	0		p_0	
 		p	1		p_1	
 	m	(Ljava/util/List;II)Lnet/minecraft/unmapped/C_2750078;	m_3189792		split
-		p	0			stacks
+		p	0			inventory
 		p	1			slot
 		p	2			amount
 	m	(Ljava/util/List;I)Lnet/minecraft/unmapped/C_2750078;	m_7453796		remove
-		p	0			stacks
+		p	0			inventory
 		p	1			slot
 c	net/minecraft/unmapped/C_1607405
 	f	[Lnet/minecraft/unmapped/C_2750078;	f_8607953	f_8607953	
@@ -3602,7 +3602,7 @@ c	net/minecraft/unmapped/C_5479313		net/minecraft/entity/living/mob/passive/anim
 	m	()[Ljava/lang/String;	m_3513672		getVariantTextures
 	m	()V	m_0331274		m_0331274
 	m	(Lnet/minecraft/unmapped/C_2750078;)V	m_2279552		setArmor
-		p	1			stack
+		p	1			item
 	m	()Lnet/minecraft/unmapped/C_4622345;	m_8792436		getArmor
 	m	(Lnet/minecraft/unmapped/C_4390289;)V	m_8601362		m_8601362
 		p	1			p_1

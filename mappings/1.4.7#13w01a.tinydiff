@@ -297,7 +297,7 @@ c	net/minecraft/unmapped/C_4917405
 		c		Render an item info overlay conaining info such as the number of items in a stack or\nthe damage for armour or tools.
 		p	1			textRenderer
 		p	2			textureManager
-		p	3			stack
+		p	3			item
 		p	4			x
 		p	5			y
 		p	6			overlayText
@@ -505,18 +505,18 @@ c	net/minecraft/unmapped/C_7423695
 		p	5			p_5
 c	net/minecraft/unmapped/C_7542541
 	f	Ljava/util/Set;	f_7814617		draggedInvSlots
-	f	Z	f_2607651		isDraggingStack
+	f	Z	f_2607651		isDraggingItem
 	f	I	f_5838093		clickDragMode
 		c		The mode of dragging the item stack.\n<br>0: split evenly across all slots\n<br>1: add 1 item to every slot
 	f	I	f_7346892		clickDragButton
 		c		The mouse button that is used to drag the item stack
 	f	Z	f_3260124		cancelNextMouseRelease
-	f	I	f_6997741		draggedStackRemainder
+	f	I	f_6997741		draggedItemRemainder
 	f	J	f_7419928		lastButtonClickTime
 	f	Lnet/minecraft/unmapped/C_7192378;	f_9270221		clickedInvSlot
 	f	I	f_9603973		lastClickedButton
 	f	Z	f_0154299		isDoubleClicking
-	f	Lnet/minecraft/unmapped/C_2750078;	f_5414338		shiftClickedStack
+	f	Lnet/minecraft/unmapped/C_2750078;	f_5414338		shiftClickedItem
 	m	(Lnet/minecraft/unmapped/C_2750078;II)V	m_8573495	drawItem	
 		p	1		p_1	
 		p	2		p_2	
@@ -524,7 +524,7 @@ c	net/minecraft/unmapped/C_7542541
 	m	(Lnet/minecraft/unmapped/C_7192378;)Z	m_7317504	m_7317504	
 		p	1		p_1	
 	m	(Lnet/minecraft/unmapped/C_2750078;IILjava/lang/String;)V	m_8573495		drawItem
-		p	1			stack
+		p	1			item
 		p	2			x
 		p	3			y
 		p	4			itemInfo
@@ -534,8 +534,8 @@ c	net/minecraft/unmapped/C_7699185
 	f	I	f_9463862		clickDragStage
 	f	Ljava/util/Set;	f_7263020		clickDragSlots
 	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_7192378;)Z	m_3697340		canRemoveForPickupAll
-		p	1			stack
-		p	2			invSlot
+		p	1			item
+		p	2			slot
 	m	(I)I	m_3720882		unpackClickDragMode
 		p	0			clickData
 	m	(I)I	m_6927272		unpackClickDragStage
@@ -547,13 +547,13 @@ c	net/minecraft/unmapped/C_7699185
 		p	0			clickDragMode
 	m	()V	m_0574254		dropClickDragging
 	m	(Lnet/minecraft/unmapped/C_7192378;Lnet/minecraft/unmapped/C_2750078;Z)Z	m_7894050		canClickDragInto
-		p	0			invSlot
-		p	1			stack
+		p	0			slot
+		p	1			item
 		p	2			stackable
 	m	(Ljava/util/Set;ILnet/minecraft/unmapped/C_2750078;I)V	m_5909733		updateClickDragStackSize
 		p	0			slots
 		p	1			clickDragMode
-		p	2			stack
+		p	2			item
 		p	3			stackSize
 	m	(Lnet/minecraft/unmapped/C_7192378;)Z	m_7975171		canClickDragInto
 		p	1			invSlot
@@ -825,7 +825,7 @@ c	net/minecraft/unmapped/C_0024265		net/minecraft/block/entity/HopperBlockEntity
 	m	()V	m_1420044		m_1420044
 	m	(Lnet/minecraft/unmapped/C_4390289;)I	m_6595383		getFirstAvailableSlot
 		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_4390289;Lnet/minecraft/unmapped/C_2750078;)Lnet/minecraft/unmapped/C_2750078;	m_6130482		pushItems
+	m	(Lnet/minecraft/unmapped/C_4390289;Lnet/minecraft/unmapped/C_2750078;)Lnet/minecraft/unmapped/C_2750078;	m_6130482		pushItem
 		p	1			p_1
 		p	2			p_2
 	m	()Lnet/minecraft/unmapped/C_4390289;	m_1101229		getTargetInventory
@@ -836,7 +836,7 @@ c	net/minecraft/unmapped/C_0024265		net/minecraft/block/entity/HopperBlockEntity
 		p	2			p_2
 		p	3			p_3
 	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_2750078;)Z	m_8010811		canMergeItems
-		p	1			stack2
+		p	1			item2
 		p	2			p_2
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_0024265$9131040		9131040
@@ -934,7 +934,7 @@ c	net/minecraft/unmapped/C_2539806		net/minecraft/client/gui/screen/inventory/me
 		p	2			p_2
 		p	3			p_3
 c	net/minecraft/unmapped/C_2636714		net/minecraft/inventory/menu/HopperMenu
-	f	Lnet/minecraft/unmapped/C_0024265;	f_6939995		hopper
+	f	Lnet/minecraft/unmapped/C_0024265;	f_6939995		inventory
 	m	(Lnet/minecraft/unmapped/C_4286596;Lnet/minecraft/unmapped/C_0024265;)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2

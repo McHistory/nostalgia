@@ -6026,7 +6026,7 @@ c	net/minecraft/unmapped/C_6786653
 	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_3906126;)Lnet/minecraft/unmapped/C_6285226;	m_7833556
 		p	2		world	
 		p	0			stack
-		p	1		stack	world
+		p	1		item	world
 	m	(ILnet/minecraft/unmapped/C_3906126;)Lnet/minecraft/unmapped/C_6285226;	m_5708486	getMapData	
 		p	0		id	
 		p	1		world	
@@ -6992,9 +6992,9 @@ c	net/minecraft/unmapped/C_5908980$5807694
 	f	[I	f_0404099	f_0404099	
 c	net/minecraft/unmapped/C_6142023
 	m	(Lnet/minecraft/unmapped/C_2750078;)V	m_2610812	render	
-		p	1		stack	
+		p	1		item	
 	m	(Lnet/minecraft/unmapped/C_2750078;F)V	m_7015504	render	
-		p	1		stack	
+		p	1		item	
 		p	2		tickDelta	
 	m	(Lnet/minecraft/unmapped/C_2750078;)V	m_7015504		render
 		p	1			p_1
@@ -7244,7 +7244,7 @@ c	net/minecraft/unmapped/C_1168245$C_8432700
 		p	1			block
 		p	2			amount
 	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_1168245$C_3447681;)V	<init>		<init>
-		p	1			stack
+		p	1			item
 		p	2			cost
 c	net/minecraft/unmapped/C_2111048
 	f	[Lnet/minecraft/unmapped/C_1414550;	f_6576409	SHAPES	
@@ -7824,7 +7824,7 @@ c	net/minecraft/unmapped/C_0368523
 		p	0		stack	
 		p	1		type	
 	m	(Lnet/minecraft/unmapped/C_2750078;)Lnet/minecraft/unmapped/C_0561170;	m_1436272	readTypeFromNbt	
-		p	0		stack	
+		p	0		item	
 	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6707278;)D	m_9212743	getSpawnOffset	
 		p	1		world	
 		p	2		pos	
@@ -7860,8 +7860,8 @@ c	net/minecraft/unmapped/C_0368523
 c	net/minecraft/unmapped/C_0380387
 	f	Lnet/minecraft/unmapped/C_0241772;	f_8217107		TAMING_INGREDIENT
 c	net/minecraft/unmapped/C_1441870
-	f	Ljava/util/Set;	f_7476410	f_7476410	
-	f	Lnet/minecraft/unmapped/C_0241772;	f_7476410		f_7476410
+	f	Ljava/util/Set;	f_7476410	temptingItems	
+	f	Lnet/minecraft/unmapped/C_0241772;	f_7476410		temptingItems
 	m	(Lnet/minecraft/unmapped/C_3419581;DLnet/minecraft/unmapped/C_4030632;Z)V	<init>	<init>	
 		p	1		entity	
 		p	2		speed	
@@ -7871,7 +7871,7 @@ c	net/minecraft/unmapped/C_1441870
 		p	1		entity	
 		p	2		speed	
 		p	4		scaredByMovement	
-		p	5		p_5	
+		p	5		temptingItems	
 	m	(Lnet/minecraft/unmapped/C_3419581;DLnet/minecraft/unmapped/C_0241772;Z)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
@@ -8103,7 +8103,7 @@ c	net/minecraft/unmapped/C_1793890
 		p	2		p_2	
 		p	3		p_3	
 	m	(Lnet/minecraft/unmapped/C_2750078;)Ljava/lang/Comparable;	m_5383675	getVariant	
-		p	1		stack	
+		p	1		item	
 	m	()Lnet/minecraft/unmapped/C_9264598;	m_3079613		m_3079613
 	m	(Lnet/minecraft/unmapped/C_2441996;)Z	m_1726265		m_1726265
 		p	1			p_1
@@ -8180,7 +8180,7 @@ c	net/minecraft/unmapped/C_4718007$5022798	5022798
 		p	1		p_1	
 c	net/minecraft/unmapped/C_4718007$C_5778667	KeyProvider	
 	m	(Lnet/minecraft/unmapped/C_2750078;)Ljava/lang/String;	m_2708149	getKey	
-		p	1		stack	
+		p	1		item	
 c	net/minecraft/unmapped/C_3472870
 	f	[Lnet/minecraft/unmapped/C_1414550;	f_3906226	EAST_SHAPE	
 	f	[Lnet/minecraft/unmapped/C_1414550;	f_8812115	WEST_SHAPE	
@@ -8939,7 +8939,7 @@ c	net/minecraft/unmapped/C_9685768
 		p	4		p_4	
 		p	5		p_5	
 	m	(Lnet/minecraft/unmapped/C_2750078;)Z	m_7170135	isPottablePlant	
-		p	1		stack	
+		p	1		item	
 	m	(Lnet/minecraft/unmapped/C_3635204;)V	<init>		<init>
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_6707278;)Lnet/minecraft/unmapped/C_7345216;	m_5728949		m_5728949
@@ -9117,10 +9117,10 @@ c	net/minecraft/unmapped/C_7112719	net/minecraft/block/SkullBlock	net/minecraft/
 		p	1		world	pos
 		p	2		pos	skull
 	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_2750078;)Z	m_5392716
-		p	3		stack	
+		p	3		item	
 		p	0			world
 		p	1		world	pos
-		p	2		pos	stack
+		p	2		pos	item
 	m	(Lnet/minecraft/unmapped/C_2441996;)I	m_5249160	m_5249160	
 		p	1		p_1	
 	m	()Lnet/minecraft/unmapped/C_9264598;	m_3079613	m_3079613	
@@ -11499,7 +11499,7 @@ c	net/minecraft/unmapped/C_9216441	net/minecraft/block/entity/FlowerPotBlockEnti
 	m	(Lnet/minecraft/unmapped/C_9571530;)V	m_2669878	registerSchema	
 		p	0		dfu	
 	m	(Lnet/minecraft/unmapped/C_2750078;)V	m_4632097	setPlant	
-		p	1		stack	
+		p	1		item	
 c	net/minecraft/unmapped/C_9241136
 	f	I	f_9244864		nextId
 	m	(Ljava/lang/Object;Ljava/lang/Object;)V	m_6586356		m_6586356
@@ -12398,7 +12398,7 @@ c	net/minecraft/unmapped/C_3059682
 		p	2			p_2
 c	net/minecraft/unmapped/C_4423959	net/minecraft/client/resource/model/ItemModelProvider	
 	m	(Lnet/minecraft/unmapped/C_2750078;)Lnet/minecraft/unmapped/C_6390485;	m_1991184	provide	
-		p	1		stack	
+		p	1		item	
 c	net/minecraft/unmapped/C_6975013
 	f	Ljava/util/Map;	f_1757086	models	
 	f	Ljava/util/Map;	f_8951577	modelCache	
@@ -12406,7 +12406,7 @@ c	net/minecraft/unmapped/C_6975013
 	f	Lit/unimi/dsi/fastutil/ints/Int2ObjectMap;	f_1757086		models
 	f	Lit/unimi/dsi/fastutil/ints/Int2ObjectMap;	f_8951577		modelCache
 	m	(Lnet/minecraft/unmapped/C_2750078;)I	m_2360845	getModelMetadata	
-		p	1		stack	
+		p	1		item	
 	m	(Lnet/minecraft/unmapped/C_4030632;I)I	m_5999180	index	
 		p	1		item	
 		p	2		metadata	
@@ -12649,14 +12649,14 @@ c	net/minecraft/unmapped/C_8249338$C_9551380	Standing
 		p	5		p_5	
 c	net/minecraft/unmapped/C_9398647
 	m	(Lnet/minecraft/unmapped/C_2750078;)Lnet/minecraft/unmapped/C_5291991;	m_3724750	getColor	
-		p	0		stack	
+		p	0		item	
 	m	(Lnet/minecraft/unmapped/C_2750078;Z)V	m_1225539	set	
-		p	1		stack	
+		p	1		item	
 		p	2		colorFromNbt	
 	m	(Lnet/minecraft/unmapped/C_5291991;)V	<init>		<init>
 		p	1			baseColor
 	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_5291991;)V	m_1225539		set
-		p	1			stack
+		p	1			item
 		p	2			baseColor
 	m	(Lnet/minecraft/unmapped/C_3906126;)V	m_9504289		m_9504289
 		p	1			p_1
@@ -13387,7 +13387,7 @@ c	net/minecraft/unmapped/C_1170004
 	m	(Lnet/minecraft/unmapped/C_2750078;)Ljava/lang/String;	m_9222746		m_9222746
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_2750078;)Lnet/minecraft/unmapped/C_5291991;	m_3450156		getBaseColor
-		p	0			stack
+		p	0			item
 c	net/minecraft/unmapped/C_4763356	net/minecraft/crafting/recipe/ShieldRecipes	
 c	net/minecraft/unmapped/C_4763356$C_7952719	Decoration	
 	m	()V	<init>	<init>	
@@ -13902,9 +13902,9 @@ c	net/minecraft/unmapped/C_4012495
 		p	1		p_1	
 c	net/minecraft/unmapped/C_7410869
 	m	(Lnet/minecraft/unmapped/C_2750078;)V	m_3371757	setSwag	
-		p	1		stack	
+		p	1		item	
 	m	(Lnet/minecraft/unmapped/C_2750078;)Lnet/minecraft/unmapped/C_5291991;	m_3764390		getColorFromCarpet
-		p	0			stack
+		p	0			item
 c	net/minecraft/unmapped/C_7895426	net/minecraft/crafting/recipe/ShulkerBoxRecipes	
 c	net/minecraft/unmapped/C_7895426$C_6892573	Coloring	
 	m	()V	<init>	<init>	
@@ -14182,7 +14182,7 @@ c	net/minecraft/unmapped/C_2927159
 	m	()I	m_3484653	getVersion	
 c	net/minecraft/unmapped/C_5576958
 	m	(Lnet/minecraft/unmapped/C_2750078;)V	m_7667576	setColor	
-		p	1		stack	
+		p	1		item	
 	m	(Lnet/minecraft/unmapped/C_2800860;)V	m_0576365	m_0576365	
 		p	1		p_1	
 	m	(Lnet/minecraft/unmapped/C_2800860;)Lnet/minecraft/unmapped/C_2800860;	m_4175205	m_4175205	
@@ -14212,8 +14212,8 @@ c	net/minecraft/unmapped/C_3002182	net/minecraft/block/StainedHardenedClayBlock
 c	net/minecraft/unmapped/C_0241772
 	m	(Lnet/minecraft/unmapped/C_4030632;)Lnet/minecraft/unmapped/C_0241772;	m_9055470	of	
 		p	0		item	
-	m	([Lnet/minecraft/unmapped/C_3635204;)Lnet/minecraft/unmapped/C_0241772;	m_3218892		m_3218892
-		p	0			p_0
+	m	([Lnet/minecraft/unmapped/C_3635204;)Lnet/minecraft/unmapped/C_0241772;	m_3218892		of
+		p	0			blocks
 c	net/minecraft/unmapped/C_7363426
 	m	()[J	m_9494062		getLongArray
 c	net/minecraft/unmapped/C_5530649
@@ -14241,7 +14241,7 @@ c	net/minecraft/unmapped/C_9782452
 		p	1			builder
 c	net/minecraft/unmapped/C_5942367
 	m	(Lnet/minecraft/unmapped/C_2750078;)V	m_2486569		addInput
-		p	1			stack
+		p	1			item
 c	net/minecraft/unmapped/C_0899618
 	f	Lnet/minecraft/unmapped/C_2940457;	f_5727193		f_5727193
 c	net/minecraft/unmapped/C_0899618$C_1407395
@@ -16124,8 +16124,8 @@ c	net/minecraft/unmapped/C_6592720		net/minecraft/block/PipeBlock
 c	net/minecraft/unmapped/C_6671067		net/minecraft/block/DoublePlantBlock
 	f	Lnet/minecraft/unmapped/C_3635204;	f_3998406		base
 	m	(Lnet/minecraft/unmapped/C_8554894;Lnet/minecraft/unmapped/C_3635204;)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
+		p	1			material
+		p	2			base
 	m	(Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_2750078;)V	m_0875007		m_0875007
 		p	1			p_1
 		p	2			p_2
@@ -16489,11 +16489,11 @@ c	net/minecraft/unmapped/C_8458958		net/minecraft/item/ItemUseContext
 	f	F	f_2414248		dz
 	f	Lnet/minecraft/unmapped/C_3544601;	f_0682426		face
 	f	Lnet/minecraft/unmapped/C_3906126;	f_6312016		world
-	f	Lnet/minecraft/unmapped/C_2750078;	f_6482309		stack
+	f	Lnet/minecraft/unmapped/C_2750078;	f_6482309		item
 	f	Lnet/minecraft/unmapped/C_6707278;	f_4349300		pos
 	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_3544601;FFF)V	<init>		<init>
 		p	1			player
-		p	2			stack
+		p	2			item
 		p	3			pos
 		p	4			face
 		p	5			dx
@@ -16502,14 +16502,14 @@ c	net/minecraft/unmapped/C_8458958		net/minecraft/item/ItemUseContext
 	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_3544601;FFF)V	<init>		<init>
 		p	1			world
 		p	2			player
-		p	3			stack
+		p	3			item
 		p	4			pos
 		p	5			face
 		p	6			dx
 		p	7			dy
 		p	8			dz
 	m	()Lnet/minecraft/unmapped/C_6707278;	m_4809133		getPos
-	m	()Lnet/minecraft/unmapped/C_2750078;	m_8954499		getStack
+	m	()Lnet/minecraft/unmapped/C_2750078;	m_8954499		getItem
 	m	()Lnet/minecraft/unmapped/C_5009044;	m_6332804		getPlayer
 	m	()Lnet/minecraft/unmapped/C_3906126;	m_9496608		getWorld
 	m	()Lnet/minecraft/unmapped/C_3544601;	m_9587648		getFace
@@ -16562,7 +16562,7 @@ c	net/minecraft/unmapped/C_8730867		net/minecraft/block/BushBlock
 		p	1			state
 		p	2			world
 		p	3			pos
-		p	4			stack
+		p	4			itemInHand
 	m	()Lnet/minecraft/unmapped/C_9264598;	m_3079613		m_3079613
 	m	()Lnet/minecraft/unmapped/C_3635204$C_5604282;	m_0622199		m_0622199
 	m	()V	<clinit>		<clinit>

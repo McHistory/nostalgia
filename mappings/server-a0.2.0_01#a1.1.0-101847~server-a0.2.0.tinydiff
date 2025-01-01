@@ -124,7 +124,7 @@ c	net/minecraft/unmapped/C_2750078
 	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_5009044;)Lnet/minecraft/unmapped/C_2750078;	m_9264093		startUsing
 		p	1			world
 		p	2			player
-	m	(Lnet/minecraft/unmapped/C_1013763;)V	m_3149288		attackEntity
+	m	(Lnet/minecraft/unmapped/C_1013763;)V	m_3149288		attack
 		p	1			entity
 	m	(Lnet/minecraft/unmapped/C_6385858;)I	m_8066283		getAttackDamage
 		p	1			target
@@ -293,7 +293,7 @@ c	net/minecraft/unmapped/C_4030632
 		p	1			stack
 		p	2			world
 		p	3			player
-	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_1013763;)V	m_9532015		attackEntity
+	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_1013763;)V	m_9532015		attack
 		p	1			stack
 		p	2			target
 	m	(Lnet/minecraft/unmapped/C_6385858;)I	m_1072215		getAttackDamage
@@ -311,14 +311,14 @@ c	net/minecraft/unmapped/C_4176306
 		p	4			p_4
 		p	5			p_5
 c	net/minecraft/unmapped/C_4286596
-	f	Lnet/minecraft/unmapped/C_2750078;	f_4113055		cursorStack
+	f	Lnet/minecraft/unmapped/C_2750078;	f_4113055		cursorItem
 	m	(I)I	m_9683374		getSlot
 		p	1			item
 	m	(IZ)V	m_8632037		selectSlot
 		p	1			block
 		p	2			creative
 	m	(I)V	m_5576257		scrollInHotbar
-		p	1			scroll
+		p	1			amount
 	m	(I)Z	m_7237595		removeOne
 		p	1			item
 	m	(II)Lnet/minecraft/unmapped/C_2750078;	m_7197418		m_7197418
@@ -337,12 +337,12 @@ c	net/minecraft/unmapped/C_4286596
 		p	2			p_2
 	m	()Lnet/minecraft/unmapped/C_4286596;	m_4775289		copy
 c	net/minecraft/unmapped/C_4390289
-	m	(II)Lnet/minecraft/unmapped/C_2750078;	m_7197418		removeItems
+	m	(II)Lnet/minecraft/unmapped/C_2750078;	m_7197418		removeItem
 		p	1			slot
 		p	2			amount
-	m	(ILnet/minecraft/unmapped/C_2750078;)V	m_3820824		setStack
+	m	(ILnet/minecraft/unmapped/C_2750078;)V	m_3820824		setItem
 		p	1			slot
-		p	2			stack
+		p	2			item
 	m	()Ljava/lang/String;	m_0700518		getInventoryName
 	m	()I	m_6204563		getMaxStackSize
 	m	()V	m_0762864		markDirty
@@ -429,9 +429,9 @@ c	net/minecraft/unmapped/C_6368853
 		p	5			p_5
 c	net/minecraft/unmapped/C_6385858
 	f	Ljava/lang/String;	f_1581698		skin
-	f	I	f_5217252		packetX
-	f	I	f_8162682		packetY
-	f	I	f_5639636		packetZ
+	f	I	f_5217252		lastKnownX
+	f	I	f_8162682		lastKnownY
+	f	I	f_5639636		lastKnownZ
 	m	()V	m_4306841		resetPos
 	m	(FF)V	m_9598325		updateLocalPlayerCamera
 		c		Called by @see GameRenderer#render(float, long) every frame when not spectating an entity.\nThis is only ever called on the local player entity.\nThis causes the local player entity's prevPitch/Yaw to always be the same as its pitch/yaw.
@@ -1293,13 +1293,13 @@ c	net/minecraft/unmapped/C_1044273		net/minecraft/client/render/world/WorldRende
 		p	1			camera
 		p	2			hit
 		p	3			p_3
-		p	4			mainHandStack
-		p	5			stack
+		p	4			itemInHand
+		p	5			tickDelta
 	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_5853518;ILnet/minecraft/unmapped/C_2750078;F)V	m_4049049		renderBlockOutline
 		p	1			camera
 		p	2			hit
 		p	3			p_3
-		p	4			mainHandStack
+		p	4			itemInHand
 		p	5			tickDelta
 	m	(Lnet/minecraft/unmapped/C_1414550;)V	m_3614850		renderOutline
 		p	1			shape
@@ -1523,16 +1523,16 @@ c	net/minecraft/unmapped/C_2154975$7900111		7900111
 		p	1			p_1
 		p	2			p_2
 c	net/minecraft/unmapped/C_2178068		net/minecraft/inventory/CraftingInventory
-	f	[Lnet/minecraft/unmapped/C_2750078;	f_2413097		stacks
+	f	[Lnet/minecraft/unmapped/C_2750078;	f_2413097		items
 	f	I	f_1604289		size
 	f	Lnet/minecraft/unmapped/C_3202835;	f_5304773		menu
 	m	(Lnet/minecraft/unmapped/C_3202835;II)V	<init>		<init>
-		p	1			p_1
+		p	1			menu
 		p	2			width
 		p	3			height
 	m	(Lnet/minecraft/unmapped/C_3202835;[Lnet/minecraft/unmapped/C_2750078;)V	<init>		<init>
 		p	1			menu
-		p	2			stacks
+		p	2			items
 	m	()I	m_5322905		m_5322905
 	m	(I)Lnet/minecraft/unmapped/C_2750078;	m_8258340		m_8258340
 		p	1			p_1
@@ -1787,14 +1787,14 @@ c	net/minecraft/unmapped/C_2725397		net/minecraft/crafting/WeaponRecipes
 		p	1			manager
 c	net/minecraft/unmapped/C_2751481		net/minecraft/client/render/ItemInHandRenderer
 	f	Lnet/minecraft/client/Minecraft;	f_1515651		minecraft
-	f	Lnet/minecraft/unmapped/C_2750078;	f_0997266		item
+	f	Lnet/minecraft/unmapped/C_2750078;	f_0997266		itemInHand
 	f	F	f_4282606		handHeight
 	f	F	f_2262411		lastHandHeight
 	f	Lnet/minecraft/unmapped/C_3466301;	f_9447755		blockRenderer
 	m	(Lnet/minecraft/client/Minecraft;)V	<init>		<init>
 		p	1			minecraft
 	m	(Lnet/minecraft/unmapped/C_2750078;)V	m_7986777		render
-		p	1			stack
+		p	1			item
 	m	(F)V	m_0066103		renderHand
 		p	1			tickDelta
 	m	(F)V	m_2544514		renderScreenEffects
@@ -1986,7 +1986,7 @@ c	net/minecraft/unmapped/C_3424057		net/minecraft/client/gui/screen/inventory/me
 	f	Lnet/minecraft/unmapped/C_2178068;	f_9008078		craftingInventory
 	f	Lnet/minecraft/unmapped/C_4390289;	f_0044212		resultInventory
 	m	([Lnet/minecraft/unmapped/C_2750078;)V	<init>		<init>
-		p	1			stacks
+		p	1			items
 	m	(Lnet/minecraft/unmapped/C_4390289;)V	m_2326383		m_2326383
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_5009044;)V	m_3964499		m_3964499
@@ -2593,7 +2593,7 @@ c	net/minecraft/unmapped/C_4237166		net/minecraft/client/ClientPlayerInteraction
 	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_2750078;IIII)Z	m_0257155		useBlock
 		p	1			player
 		p	2			world
-		p	3			stack
+		p	3			itemInHand
 		p	4			x
 		p	5			y
 		p	6			z
@@ -2872,13 +2872,13 @@ c	net/minecraft/unmapped/C_4917405		net/minecraft/client/render/entity/ItemRende
 	m	(Lnet/minecraft/unmapped/C_4766485;Lnet/minecraft/unmapped/C_3385278;Lnet/minecraft/unmapped/C_2750078;II)V	m_7605997		renderGuiItem
 		p	1			textRenderer
 		p	2			textureManager
-		p	3			stack
+		p	3			item
 		p	4			x
 		p	5			y
 	m	(Lnet/minecraft/unmapped/C_4766485;Lnet/minecraft/unmapped/C_3385278;Lnet/minecraft/unmapped/C_2750078;II)V	m_1813870		renderGuiItemDecoration
 		p	1			textRenderer
 		p	2			textureManager
-		p	3			stack
+		p	3			item
 		p	4			x
 		p	5			y
 	m	(Lnet/minecraft/unmapped/C_2334550;IIIII)V	m_6589435		fillRect
@@ -3328,7 +3328,7 @@ c	net/minecraft/unmapped/C_6008755		net/minecraft/crafting/BlockRecipes
 	m	(Lnet/minecraft/unmapped/C_2154975;)V	m_0736421		register
 		p	1			manager
 c	net/minecraft/unmapped/C_6095546		net/minecraft/inventory/ResultInventory
-	f	[Lnet/minecraft/unmapped/C_2750078;	f_8023306		stacks
+	f	[Lnet/minecraft/unmapped/C_2750078;	f_8023306		items
 	m	()V	<init>		<init>
 	m	()I	m_5322905		m_5322905
 	m	(I)Lnet/minecraft/unmapped/C_2750078;	m_8258340		m_8258340
@@ -3624,12 +3624,12 @@ c	net/minecraft/unmapped/C_7192378		net/minecraft/inventory/slot/InventorySlot
 	m	(Lnet/minecraft/unmapped/C_4390289;I)V	<init>		<init>
 		p	1			inventory
 		p	2			id
-	m	()V	m_7573710		onItemsRemoved
-	m	(Lnet/minecraft/unmapped/C_2750078;)Z	m_6628482		canSetStack
-		p	1			stack
-	m	()Lnet/minecraft/unmapped/C_2750078;	m_0472919		getStack
-	m	(Lnet/minecraft/unmapped/C_2750078;)V	m_6342010		setStack
-		p	1			stack
+	m	()V	m_7573710		onItemRemoved
+	m	(Lnet/minecraft/unmapped/C_2750078;)Z	m_6628482		isItemAllowed
+		p	1			item
+	m	()Lnet/minecraft/unmapped/C_2750078;	m_0472919		getItem
+	m	(Lnet/minecraft/unmapped/C_2750078;)V	m_6342010		setItem
+		p	1			item
 	m	()I	m_9006711		getTexture
 	m	()V	m_3611799		markDirty
 c	net/minecraft/unmapped/C_7213435		net/minecraft/crafting/Recipe

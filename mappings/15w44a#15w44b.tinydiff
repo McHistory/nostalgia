@@ -53,7 +53,7 @@ c	net/minecraft/unmapped/C_2105000
 		p	0			p_0
 c	net/minecraft/unmapped/C_4696879
 	m	(Lnet/minecraft/unmapped/C_2750078;)Ljava/util/List;	m_3618292	getPotionEffects	
-		p	0		p_0	
+		p	0		stack	
 	m	(Lnet/minecraft/unmapped/C_8703287;)I	m_3188363	getColor	
 		p	0		potion	
 	m	(Ljava/util/Collection;)I	m_1986855	getColor	
@@ -183,15 +183,15 @@ c	net/minecraft/unmapped/C_9881691
 	f	Lnet/minecraft/unmapped/C_2750078;	f_3956311	potion	
 	f	Lnet/minecraft/unmapped/C_8703287;	f_3956311		potion
 	m	(Lnet/minecraft/unmapped/C_3906126;DDDLnet/minecraft/unmapped/C_2750078;)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
-		p	4		p_4	
-		p	6		p_6	
-		p	8		p_8	
+		p	1		world	
+		p	2		x	
+		p	4		y	
+		p	6		z	
+		p	8		effects	
 	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_1013763;Lnet/minecraft/unmapped/C_2750078;)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
+		p	1		world	
+		p	2		thrower	
+		p	3		effects	
 	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_1013763;)V	<init>		<init>
 		p	1			world
 		p	2			owner
@@ -294,11 +294,11 @@ c	net/minecraft/unmapped/C_9034508
 		p	3			rolls
 		p	4			bonusRolls
 	m	(Ljava/util/Collection;Ljava/util/Random;Lnet/minecraft/unmapped/C_7630919;)V	m_3124982		addRandomItem
-		p	1			stacks
+		p	1			items
 		p	2			random
 		p	3			context
 	m	(Ljava/util/Collection;Ljava/util/Random;Lnet/minecraft/unmapped/C_7630919;)V	m_4343566		addRandomItems
-		p	1			stacks
+		p	1			items
 		p	2			random
 		p	3			context
 	m	(Lnet/minecraft/unmapped/C_9034508;)Lnet/minecraft/unmapped/C_8197819;	m_0240462		m_0240462
@@ -465,7 +465,7 @@ c	net/minecraft/unmapped/C_3077376		net/minecraft/client/render/entity/AbstractA
 		p	9			p_9
 c	net/minecraft/unmapped/C_7670273		net/minecraft/potion/PotionUtils
 	m	(Lnet/minecraft/unmapped/C_2750078;)Ljava/util/List;	m_8728117		getPotionEffects
-		p	0			stack
+		p	0			item
 	m	(Lnet/minecraft/unmapped/C_8703287;Ljava/util/Collection;)Ljava/util/List;	m_4983353		getPotionEffects
 		p	0			potion
 		p	1			statusEffects
@@ -481,17 +481,17 @@ c	net/minecraft/unmapped/C_7670273		net/minecraft/potion/PotionUtils
 	m	(Ljava/util/Collection;)I	m_7331369		getColor
 		p	0			effects
 	m	(Lnet/minecraft/unmapped/C_2750078;)Lnet/minecraft/unmapped/C_8703287;	m_7257022		getPotion
-		p	0			stack
+		p	0			item
 	m	(Lnet/minecraft/unmapped/C_2800860;)Lnet/minecraft/unmapped/C_8703287;	m_6923159		getPotion
 		p	0			nbt
 	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_8703287;)Lnet/minecraft/unmapped/C_2750078;	m_8832349		setPotion
-		p	0			stack
+		p	0			item
 		p	1			potion
 	m	(Lnet/minecraft/unmapped/C_2750078;Ljava/util/Collection;)Lnet/minecraft/unmapped/C_2750078;	m_0679151		setCustomPotionEffects
-		p	0			stack
+		p	0			item
 		p	1			effects
 	m	(Lnet/minecraft/unmapped/C_2750078;Ljava/util/List;F)V	m_1760908		buildTooltip
-		p	0			stack
+		p	0			item
 		p	1			tooltip
 		p	2			durationMultiplier
 c	net/minecraft/unmapped/C_8279735		net/minecraft/client/render/entity/SpectralArrowRenderer

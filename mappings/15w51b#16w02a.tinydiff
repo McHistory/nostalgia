@@ -701,9 +701,9 @@ c	net/minecraft/unmapped/C_5385173
 		p	2			settings
 c	net/minecraft/unmapped/C_1793890
 	m	(Lnet/minecraft/unmapped/C_2750078;)Ljava/lang/Object;	m_5383675	getVariant	
-		p	1		stack	
+		p	1		item	
 	m	(Lnet/minecraft/unmapped/C_2750078;)Ljava/lang/Comparable;	m_5383675		getVariant
-		p	1			stack
+		p	1			item
 c	net/minecraft/unmapped/C_5293696
 	m	(Lnet/minecraft/unmapped/C_2750078;)Ljava/lang/Object;	m_5383675	m_5383675	
 		p	1		p_1	
@@ -1300,23 +1300,23 @@ c	net/minecraft/unmapped/C_2520115		net/minecraft/world/biome/TallBirchForestBio
 	m	(Ljava/util/Random;)Lnet/minecraft/unmapped/C_6049345;	m_0608438		m_0608438
 		p	1			p_1
 c	net/minecraft/unmapped/C_3137818		net/minecraft/client/world/color/ItemColor
-	m	(Lnet/minecraft/unmapped/C_2750078;I)I	m_3833255		m_3833255
-		p	1			stack
-		p	2			p_2
+	m	(Lnet/minecraft/unmapped/C_2750078;I)I	m_3833255		getColor
+		p	1			item
+		p	2			tint
 c	net/minecraft/unmapped/C_3155795		net/minecraft/client/world/color/ItemColors
 	f	Lnet/minecraft/unmapped/C_2991535;	f_5834138		registry
 	m	()V	<init>		<init>
 	m	(Lnet/minecraft/unmapped/C_6471932;)Lnet/minecraft/unmapped/C_3155795;	m_4011384		create
 		p	0			blockColors
 	m	(Lnet/minecraft/unmapped/C_2750078;I)I	m_0756318		get
-		p	1			stack
+		p	1			item
 		p	2			tint
-	m	(Lnet/minecraft/unmapped/C_3137818;[Lnet/minecraft/unmapped/C_3635204;)V	m_3388958		m_3388958
-		p	1			p_1
-		p	2			p_2
+	m	(Lnet/minecraft/unmapped/C_3137818;[Lnet/minecraft/unmapped/C_3635204;)V	m_3388958		register
+		p	1			color
+		p	2			blocks
 	m	(Lnet/minecraft/unmapped/C_3137818;[Lnet/minecraft/unmapped/C_4030632;)V	m_7710722		register
-		p	1			p_1
-		p	2			p_2
+		p	1			color
+		p	2			items
 c	net/minecraft/unmapped/C_3155795$1285213		1285213
 	m	()V	<init>		<init>
 	m	(Lnet/minecraft/unmapped/C_2750078;I)I	m_3833255		m_3833255
@@ -1402,7 +1402,7 @@ c	net/minecraft/unmapped/C_3718302		net/minecraft/client/world/color/BlockColor
 		p	1			state
 		p	2			world
 		p	3			pos
-		p	4			p_4
+		p	4			tint
 c	net/minecraft/unmapped/C_5440864		net/minecraft/block/BedrockBlock
 	m	(Lnet/minecraft/unmapped/C_8554894;)V	<init>		<init>
 		p	1			p_1
@@ -1420,7 +1420,7 @@ c	net/minecraft/unmapped/C_6471932		net/minecraft/client/world/color/BlockColors
 		p	1			state
 		p	2			world
 		p	3			pos
-		p	4			p_4
+		p	4			tint
 	m	(Lnet/minecraft/unmapped/C_3718302;[Lnet/minecraft/unmapped/C_3635204;)V	m_6331876		register
 		p	1			color
 		p	2			blocks

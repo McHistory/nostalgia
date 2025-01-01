@@ -38,8 +38,8 @@ c	net/minecraft/unmapped/C_1013763
 		p	1		distance	
 		p	3		tickDelta	
 	m	()V	m_2877648		updateVisibility
-	m	(I)Lnet/minecraft/unmapped/C_2750078;	m_5901136		getArmorStack
-		p	1			armorSlot
+	m	(I)Lnet/minecraft/unmapped/C_2750078;	m_5901136		getArmor
+		p	1			slot
 	m	(Lnet/minecraft/unmapped/C_6385858;)V	m_5966517		m_5966517
 		p	1			p_1
 c	net/minecraft/unmapped/C_1044273
@@ -157,11 +157,11 @@ c	net/minecraft/unmapped/C_2178068
 	m	()I	m_8082873		getWidth
 c	net/minecraft/unmapped/C_2314868
 	m	(Lnet/minecraft/unmapped/C_4390289;Lnet/minecraft/unmapped/C_4390289;)V	<init>	<init>	
-		p	1		chest	
-		p	2		playerInventory	
+		p	1		playerInventory	
+		p	2		inventory	
 	m	(Lnet/minecraft/unmapped/C_4390289;Lnet/minecraft/unmapped/C_4390289;Lnet/minecraft/unmapped/C_5009044;)V	<init>		<init>
-		p	1			chest
-		p	2			playerInventory
+		p	1			playerInventory
+		p	2			inventory
 		p	3			player
 c	net/minecraft/unmapped/C_2334550
 	f	Ljava/nio/FloatBuffer;	f_0731382	floatBuffer	
@@ -2600,7 +2600,7 @@ c	net/minecraft/unmapped/C_2636714
 		p	2		hopper	
 	m	(Lnet/minecraft/unmapped/C_4286596;Lnet/minecraft/unmapped/C_4390289;Lnet/minecraft/unmapped/C_5009044;)V	<init>		<init>
 		p	1			playerInventory
-		p	2			hopper
+		p	2			inventory
 		p	3			player
 c	net/minecraft/unmapped/C_5374641
 	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6707278;)Z	m_6650160	m_6650160	
@@ -2711,7 +2711,7 @@ c	net/minecraft/unmapped/C_7684054
 		p	3		horse	
 	m	(Lnet/minecraft/unmapped/C_4390289;Lnet/minecraft/unmapped/C_4390289;Lnet/minecraft/unmapped/C_2340941;Lnet/minecraft/unmapped/C_5009044;)V	<init>		<init>
 		p	1			playerInventory
-		p	2			horseInventory
+		p	2			inventory
 		p	3			horse
 		p	4			player
 c	net/minecraft/unmapped/C_3064756
@@ -3203,7 +3203,7 @@ c	net/minecraft/unmapped/C_9604741		net/minecraft/client/render/entity/layer/End
 		p	6			yaw
 		p	7			pitch
 		p	8			scale
-c	net/minecraft/unmapped/C_9751000		net/minecraft/client/render/entity/layer/HeldItemLayer
+c	net/minecraft/unmapped/C_9751000		net/minecraft/client/render/entity/layer/ItemInHandLayer
 	f	Lnet/minecraft/unmapped/C_8191584;	f_1787665		parent
 	m	(Lnet/minecraft/unmapped/C_8191584;)V	<init>		<init>
 		p	1			parent
@@ -3217,5 +3217,5 @@ c	net/minecraft/unmapped/C_9751000		net/minecraft/client/render/entity/layer/Hel
 		p	7			pitch
 		p	8			scale
 c	net/minecraft/unmapped/C_2587956
-	m	(I)Lnet/minecraft/unmapped/C_2750078;	m_5901136	getArmorStack	m_5901136
-		p	1		armorSlot	p_1
+	m	(I)Lnet/minecraft/unmapped/C_2750078;	m_5901136	getArmor	m_5901136
+		p	1		slot	p_1

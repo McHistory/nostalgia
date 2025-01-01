@@ -249,7 +249,7 @@ c	net/minecraft/unmapped/C_2293006
 c	net/minecraft/unmapped/C_2750078
 	m	(I)V	m_7305709	damageAndBreak	
 		p	1		damage	
-	m	(Lnet/minecraft/unmapped/C_1013763;)V	m_3149288	attackEntity	
+	m	(Lnet/minecraft/unmapped/C_1013763;)V	m_3149288	attack	
 		p	1		entity	
 	m	(IIII)V	m_3316715	mineBlock	
 		p	1		x	
@@ -259,7 +259,7 @@ c	net/minecraft/unmapped/C_2750078
 	m	(ILnet/minecraft/unmapped/C_6385858;)V	m_7305709		damageAndBreak
 		p	1			damage
 		p	2			entity
-	m	(Lnet/minecraft/unmapped/C_1013763;Lnet/minecraft/unmapped/C_5009044;)V	m_3149288		attackEntity
+	m	(Lnet/minecraft/unmapped/C_1013763;Lnet/minecraft/unmapped/C_5009044;)V	m_3149288		attack
 		p	1			target
 		p	2			attacker
 	m	(IIIILnet/minecraft/unmapped/C_5009044;)V	m_3316715		mineBlock
@@ -547,7 +547,7 @@ c	net/minecraft/unmapped/C_4030632
 	f	Lnet/minecraft/unmapped/C_4030632;	f_6191564		BED
 	f	Lnet/minecraft/unmapped/C_4030632;	f_2269548		REPEATER
 	f	Lnet/minecraft/unmapped/C_4030632;	f_3508508		COOKIE
-	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_1013763;)V	m_9532015	attackEntity	
+	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_1013763;)V	m_9532015	attack	
 		p	1		stack	
 		p	2		target	
 	m	(Lnet/minecraft/unmapped/C_2750078;IIII)V	m_5872189	mineBlock	
@@ -557,7 +557,7 @@ c	net/minecraft/unmapped/C_4030632
 		p	4		z	
 		p	5		face	
 	m	()Z	m_8831628		isDamageable
-	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_1013763;Lnet/minecraft/unmapped/C_1013763;)Z	m_9532015		attackEntity
+	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_1013763;Lnet/minecraft/unmapped/C_1013763;)Z	m_9532015		attack
 		p	1			stack
 		p	2			target
 		p	3			attacker
@@ -969,9 +969,9 @@ c	net/minecraft/unmapped/C_7185906
 	m	(Ljava/lang/String;)Z	m_3618110		isEmpty
 		p	0			string
 c	net/minecraft/unmapped/C_7192378
-	m	()V	m_7573710	onItemsRemoved	
-	m	(Lnet/minecraft/unmapped/C_2750078;)V	m_7573710		onItemsRemoved
-		p	1			stack
+	m	()V	m_7573710	onItemRemoved	
+	m	(Lnet/minecraft/unmapped/C_2750078;)V	m_7573710		onItemRemoved
+		p	1			item
 	m	()Z	m_2323486		isResult
 c	net/minecraft/unmapped/C_7213435
 	m	()Lnet/minecraft/unmapped/C_2750078;	m_5522858		m_5522858

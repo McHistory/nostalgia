@@ -368,7 +368,7 @@ c	net/minecraft/unmapped/C_7261559
 c	net/minecraft/unmapped/C_7542541
 	m	()Z	m_6957805	m_6957805	
 	m	(Lnet/minecraft/unmapped/C_2750078;II)V	m_6434721		renderTooltip
-		p	1			stack
+		p	1			item
 		p	2			x
 		p	3			y
 	m	(IIIIII)Z	m_2024938		isMouseInRegion
@@ -408,8 +408,8 @@ c	net/minecraft/unmapped/C_9958683
 c	net/minecraft/unmapped/C_0356559
 	m	()Lnet/minecraft/unmapped/C_2750078;	m_7904056	pickNonEmptySlot	
 	m	()I	m_7904056		pickNonEmptySlot
-	m	(Lnet/minecraft/unmapped/C_2750078;)I	m_5693627		insertStack
-		p	1			stack
+	m	(Lnet/minecraft/unmapped/C_2750078;)I	m_5693627		insertItem
+		p	1			item
 c	net/minecraft/unmapped/C_1139046
 	m	()Lnet/minecraft/unmapped/C_2074023;	m_0502820	m_0502820	
 	m	(Lnet/minecraft/unmapped/C_3906126;)Lnet/minecraft/unmapped/C_2074023;	m_0502820		m_0502820
@@ -418,7 +418,7 @@ c	net/minecraft/unmapped/C_2289462
 	m	()Lnet/minecraft/unmapped/C_2074023;	m_0502820	m_0502820	
 	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_2750078;Ljava/util/Random;IIIIIDDD)Z	m_9355968	dispense	
 		p	0		world	
-		p	1		stack	
+		p	1		item	
 		p	2		random	
 		p	3		x	
 		p	4		y	
@@ -432,7 +432,7 @@ c	net/minecraft/unmapped/C_2289462
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_2750078;Ljava/util/Random;IIIDDD)V	m_8603701		dispenseItem
 		p	0			world
-		p	1			stack
+		p	1			item
 		p	2			random
 		p	3			velocity
 		p	4			dx
@@ -443,7 +443,7 @@ c	net/minecraft/unmapped/C_2289462
 	m	(Lnet/minecraft/unmapped/C_0356559;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_2750078;Ljava/util/Random;IIIIIDDD)I	m_9355968		dispense
 		p	0			dispenser
 		p	1			world
-		p	2			stack
+		p	2			item
 		p	3			random
 		p	4			x
 		p	5			y
@@ -938,9 +938,9 @@ c	net/minecraft/unmapped/C_1168245
 	f	Lnet/minecraft/unmapped/C_6499672;	f_0028905		traderOffers
 	f	I	f_4961878		levelUpCountdown
 	f	I	f_0805697		riches
-	f	Ljava/util/Map;	f_4434315		BUY_OFFER_MAP
+	f	Ljava/util/Map;	f_4434315		BUY_OFFERS
 		c		Items that the villager will buy from the player
-	f	Ljava/util/Map;	f_9618164		SELL_OFFER_MAP
+	f	Ljava/util/Map;	f_9618164		SELL_OFFERS
 		c		Items that the villager will sell to the player
 	m	(Lnet/minecraft/unmapped/C_5009044;)Z	m_7287105		m_7287105
 		p	1			p_1
@@ -957,24 +957,24 @@ c	net/minecraft/unmapped/C_1168245
 			c		Unused param, it is always 1
 	m	(Lnet/minecraft/unmapped/C_6499672;)V	m_3406185		m_3406185
 		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_6499672;ILjava/util/Random;F)V	m_7243822		makeBuyTradeOffer
-		p	0			tradeOffers
-		p	1			size
+	m	(Lnet/minecraft/unmapped/C_6499672;ILjava/util/Random;F)V	m_7243822		addBuyTradeOffer
+		p	0			offers
+		p	1			item
 		p	2			random
-		p	3			baseChance
-	m	(ILjava/util/Random;)Lnet/minecraft/unmapped/C_2750078;	m_7758199		getItemStack
-		p	0			size
+		p	3			chance
+	m	(ILjava/util/Random;)Lnet/minecraft/unmapped/C_2750078;	m_7758199		makeTradeItem
+		p	0			item
 		p	1			random
-	m	(ILjava/util/Random;)I	m_9514471		getBuyItemAmount
-		p	0			size
+	m	(ILjava/util/Random;)I	m_9514471		pickBuyTradeItemAmount
+		p	0			item
 		p	1			random
-	m	(Lnet/minecraft/unmapped/C_6499672;ILjava/util/Random;F)V	m_2849120		makeSellTradeOffer
-		p	0			tradeOffers
-		p	1			size
+	m	(Lnet/minecraft/unmapped/C_6499672;ILjava/util/Random;F)V	m_2849120		addSellTradeOffer
+		p	0			offers
+		p	1			item
 		p	2			random
-		p	3			baseChance
-	m	(ILjava/util/Random;)I	m_9348893		getSellItemAmount
-		p	0			size
+		p	3			chance
+	m	(ILjava/util/Random;)I	m_9348893		pickSellTradeItemAmount
+		p	0			item
 		p	1			random
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_3583868
@@ -1285,7 +1285,7 @@ c	net/minecraft/unmapped/C_0097022		net/minecraft/server/BanList
 		p	1			header
 c	net/minecraft/unmapped/C_0209711		net/minecraft/world/village/trade/TraderInventory
 	f	Lnet/minecraft/unmapped/C_7834269;	f_2075345		trader
-	f	[Lnet/minecraft/unmapped/C_2750078;	f_5222493		stacks
+	f	[Lnet/minecraft/unmapped/C_2750078;	f_5222493		items
 	f	Lnet/minecraft/unmapped/C_5009044;	f_6736903		player
 	f	Lnet/minecraft/unmapped/C_4960738;	f_7299827		offer
 	f	I	f_2922447		offerIndex
@@ -1333,7 +1333,7 @@ c	net/minecraft/unmapped/C_1629414		net/minecraft/unmapped/C_1629414
 	m	()V	<init>		<init>
 c	net/minecraft/unmapped/C_2283638		net/minecraft/inventory/menu/TraderMenu
 	f	Lnet/minecraft/unmapped/C_7834269;	f_5611945		trader
-	f	Lnet/minecraft/unmapped/C_0209711;	f_8629733		traderInventory
+	f	Lnet/minecraft/unmapped/C_0209711;	f_8629733		inventory
 	f	Lnet/minecraft/unmapped/C_3906126;	f_2512907		world
 	m	(Lnet/minecraft/unmapped/C_4286596;Lnet/minecraft/unmapped/C_7834269;Lnet/minecraft/unmapped/C_3906126;)V	<init>		<init>
 		p	1			playerInventory
@@ -1831,9 +1831,9 @@ c	net/minecraft/unmapped/C_8208660		net/minecraft/client/gui/screen/inventory/me
 	f	Lnet/minecraft/unmapped/C_8208660$C_0102106;	f_0198129		buttonBack
 	f	I	f_9216943		currentPage
 	m	(Lnet/minecraft/unmapped/C_4286596;Lnet/minecraft/unmapped/C_7834269;Lnet/minecraft/unmapped/C_3906126;)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+		p	1			playerInventory
+		p	2			trader
+		p	3			world
 	m	()V	m_2060594		m_2060594
 	m	()V	m_5630231		m_5630231
 	m	()V	m_7135145		m_7135145

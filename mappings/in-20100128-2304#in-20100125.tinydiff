@@ -61,7 +61,7 @@ c	net/minecraft/unmapped/C_0387400	net/minecraft/client/gui/screen/inventory/men
 	m	(Lnet/minecraft/unmapped/C_0387400;)Lnet/minecraft/unmapped/C_0387400$C_2178068;	m_8571357	m_8571357	
 		p	0		p_0	
 c	net/minecraft/unmapped/C_0387400$C_2178068	CraftingInventory	
-	f	[Lnet/minecraft/unmapped/C_2750078;	f_2413097	stacks	
+	f	[Lnet/minecraft/unmapped/C_2750078;	f_2413097	items	
 	f	Lnet/minecraft/unmapped/C_0387400;	f_5304773	menu	
 	m	(Lnet/minecraft/unmapped/C_0387400;B)V	<init>	<init>	
 		p	1		p_1	
@@ -79,7 +79,7 @@ c	net/minecraft/unmapped/C_0387400$C_2178068	CraftingInventory
 	m	(Lnet/minecraft/unmapped/C_0387400$C_2178068;)[Lnet/minecraft/unmapped/C_2750078;	m_7061829	m_7061829	
 		p	0		p_0	
 c	net/minecraft/unmapped/C_0387400$C_6095546	ResultInventory	
-	f	[Lnet/minecraft/unmapped/C_2750078;	f_8023306	stacks	
+	f	[Lnet/minecraft/unmapped/C_2750078;	f_8023306	items	
 	m	(Lnet/minecraft/unmapped/C_0387400;B)V	<init>	<init>	
 		p	1		p_1	
 		p	2		p_2	
@@ -137,12 +137,12 @@ c	net/minecraft/unmapped/C_7542541
 		p	3			p_3
 		p	4			p_4
 c	net/minecraft/unmapped/C_7542541$C_7192378
-	m	()V	m_7573710	onStackRemovedByPlayer	
-	m	()Z	m_6628482	canSetStack	
-	m	()Lnet/minecraft/unmapped/C_2750078;	m_8536395	m_8536395	
-	m	(Lnet/minecraft/unmapped/C_2750078;)V	m_6342010	setStack	
-		p	1		stack	
-	m	(Lnet/minecraft/unmapped/C_7542541$C_7192378;)V	m_6342010		setStack
+	m	()V	m_7573710	onItemRemoved	
+	m	()Z	m_6628482	isItemAllowed	
+	m	()Lnet/minecraft/unmapped/C_2750078;	m_8536395	getItem	
+	m	(Lnet/minecraft/unmapped/C_2750078;)V	m_6342010	setItem	
+		p	1		item	
+	m	(Lnet/minecraft/unmapped/C_7542541$C_7192378;)V	m_6342010		setItem
 		p	1			p_1
 c	net/minecraft/unmapped/C_7564962
 	m	()V	m_1894352		m_1894352

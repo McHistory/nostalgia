@@ -1029,7 +1029,7 @@ c	net/minecraft/unmapped/C_6134274
 		p	1			mapData
 c	net/minecraft/unmapped/C_6285226
 	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_5009044;)[B	m_5765838	getUpdateData	
-		p	1		stack	
+		p	1		item	
 		p	2		world	
 		p	3		player	
 	m	(III)V	m_1841181	markDirty	
@@ -1039,7 +1039,7 @@ c	net/minecraft/unmapped/C_6285226
 	m	([B)V	m_6074324	update	
 		p	1		data	
 	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_5009044;)Lnet/minecraft/unmapped/C_4844124;	m_5765838		createUpdatePacket
-		p	1			stack
+		p	1			item
 		p	2			world
 		p	3			player
 	m	(II)V	m_6125040		markDirty
@@ -1059,9 +1059,9 @@ c	net/minecraft/unmapped/C_6285226$C_2230951
 	f	I	f_3777072		ticks
 	m	(Lnet/minecraft/unmapped/C_2750078;)[B	m_2378782	getUpdateData	
 		c	Packs data for a map update packet in a byte array. The first byte encodes the type\nof update:\n<br>0: colors\n<br>1: decorations\n<br>2: scale	
-		p	1		stack	
+		p	1		item	
 	m	(Lnet/minecraft/unmapped/C_2750078;)Lnet/minecraft/unmapped/C_4844124;	m_0134628		createUpdatePacket
-		p	1			stack
+		p	1			item
 	m	(II)V	m_8866123		markDirty
 		p	1			x
 		p	2			y
@@ -1724,7 +1724,7 @@ c	net/minecraft/unmapped/C_7750936
 c	net/minecraft/unmapped/C_0979881
 	f	I	f_4340425	textureMinFilter	
 	f	I	f_9874094	textureMagFilter	
-	m	()V	m_6713515	setHeldItemNonBlock	
+	m	()V	m_6713515	resetTextureFilter	
 	m	(II)V	m_6997653	setTextureFilter	
 		p	0		min	
 		p	1		mag	
@@ -2609,26 +2609,26 @@ c	net/minecraft/unmapped/C_2382185		net/minecraft/util/MapBuilder
 		p	2			map
 c	net/minecraft/unmapped/C_3061083		net/minecraft/inventory/InventoryUtils
 	f	Ljava/util/Random;	f_1567774		RANDOM
-	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_4390289;)V	m_0147581		dropContents
+	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_4390289;)V	m_0147581		dropItems
 		p	0			world
 		p	1			pos
 		p	2			inventory
-	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_4390289;)V	m_5020472		dropContents
+	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_4390289;)V	m_5020472		dropItems
 		p	0			world
 		p	1			owner
 		p	2			inventory
-	m	(Lnet/minecraft/unmapped/C_3906126;DDDLnet/minecraft/unmapped/C_4390289;)V	m_3610992		dropContents
+	m	(Lnet/minecraft/unmapped/C_3906126;DDDLnet/minecraft/unmapped/C_4390289;)V	m_3610992		dropItems
 		p	0			world
 		p	1			x
 		p	3			y
 		p	5			z
 		p	7			inventory
-	m	(Lnet/minecraft/unmapped/C_3906126;DDDLnet/minecraft/unmapped/C_2750078;)V	m_8004743		dropStack
+	m	(Lnet/minecraft/unmapped/C_3906126;DDDLnet/minecraft/unmapped/C_2750078;)V	m_8004743		dropItem
 		p	0			world
 		p	1			x
 		p	3			y
 		p	5			z
-		p	7			stack
+		p	7			item
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_4253627		net/minecraft/client/render/vertex/BufferUploader
 	m	()V	<init>		<init>

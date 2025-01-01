@@ -39,7 +39,7 @@ c	net/minecraft/unmapped/C_0324512
 	m	()Lnet/minecraft/unmapped/C_5405916;	m_2249138		getRecipeBook
 	m	()Lnet/minecraft/unmapped/C_3180769;	m_2449843		getAdvancements
 c	net/minecraft/unmapped/C_0387400
-	f	Lnet/minecraft/unmapped/C_8545792;	f_7333376		f_7333376
+	f	Lnet/minecraft/unmapped/C_8545792;	f_7333376		recipeBookButton
 	f	Lnet/minecraft/unmapped/C_5487241;	f_1153379		recipeBook
 	f	Z	f_2813468		f_2813468
 	m	()V	m_2060594		m_2060594
@@ -183,7 +183,7 @@ c	net/minecraft/unmapped/C_3906126
 c	net/minecraft/unmapped/C_4237166
 	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_7974592;)Lnet/minecraft/unmapped/C_5367636;	m_8774636	createPlayer	
 		p	1		world	
-		p	2		statHandler	
+		p	2		stats	
 	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_7974592;Lnet/minecraft/unmapped/C_6188183;)Lnet/minecraft/unmapped/C_5367636;	m_8774636		createPlayer
 		p	1			world
 		p	2			statHandler
@@ -194,19 +194,19 @@ c	net/minecraft/unmapped/C_4237166
 		p	3			p_3
 		p	4			p_4
 c	net/minecraft/unmapped/C_4286596
-	m	(Lnet/minecraft/unmapped/C_2750078;)Z	m_1691146	addStack	
-		p	1		stack	
-	m	(ILnet/minecraft/unmapped/C_2750078;)I	m_6343646		putStackInInventory
+	m	(Lnet/minecraft/unmapped/C_2750078;)Z	m_1691146	addItem	
+		p	1		item	
+	m	(ILnet/minecraft/unmapped/C_2750078;)I	m_6343646		addItemStack
 		p	1			slot
-		p	2			stack
-	m	(Lnet/minecraft/unmapped/C_2750078;)Z	m_4381741		add
-		p	1			stack
-	m	(ILnet/minecraft/unmapped/C_2750078;)Z	m_1691146		addStack
+		p	2			item
+	m	(Lnet/minecraft/unmapped/C_2750078;)Z	m_4381741		addItem
+		p	1			item
+	m	(ILnet/minecraft/unmapped/C_2750078;)Z	m_1691146		addItem
 		p	1			slot
-		p	2			stack
-	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_2750078;)V	m_8232326		offerStack
+		p	2			item
+	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_2750078;)V	m_8232326		offerItem
 		p	1			world
-		p	2			stack
+		p	2			item
 	m	(Lnet/minecraft/unmapped/C_2750078;)I	m_3566912		m_3566912
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_2750078;)I	m_7163192		m_7163192
@@ -221,18 +221,18 @@ c	net/minecraft/unmapped/C_4917405
 	m	(Z)V	m_0322892	setUseCustomDisplayColor	
 		p	1		useCustomDisplayColor	
 	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_8675191;)V	m_3659303	renderItem	
-		p	1		stack	
+		p	1		item	
 		p	2		model	
 	m	(Lnet/minecraft/unmapped/C_8675191;Lnet/minecraft/unmapped/C_2750078;)V	m_2643636	render	
 		p	1		model	
-		p	2		stack	
+		p	2		item	
 	m	(Lnet/minecraft/unmapped/C_8675191;I)V	m_9388000	render	
 		p	1		model	
 		p	2		color	
 	m	(Lnet/minecraft/unmapped/C_8675191;ILnet/minecraft/unmapped/C_2750078;)V	m_8410024	render	
 		p	1		model	
 		p	2		color	
-		p	3		stack	
+		p	3		item	
 	m	(Lnet/minecraft/unmapped/C_8675191;)V	m_3967818	renderEnchantmentGlint	
 		p	1		model	
 	m	(Lnet/minecraft/unmapped/C_8373595;Lnet/minecraft/unmapped/C_7579090;I)V	m_1106133	renderQuad	
@@ -240,15 +240,15 @@ c	net/minecraft/unmapped/C_4917405
 		p	2		quad	
 		p	3		color	
 	m	(Lnet/minecraft/unmapped/C_2750078;IILnet/minecraft/unmapped/C_8675191;)V	m_7605997	renderGuiItemModel	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
+		p	1		item	
+		p	2		x	
+		p	3		y	
+		p	4		model	
 	m	(Lnet/minecraft/unmapped/C_1013763;Lnet/minecraft/unmapped/C_2750078;II)V	m_3023684	renderGuiItem	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
+		p	1		entity	
+		p	2		item	
+		p	3		x	
+		p	4		y	
 	m	(Lnet/minecraft/unmapped/C_8373595;Ljava/util/List;ILnet/minecraft/unmapped/C_2750078;)V	m_8644792	renderQuads	
 		p	1		p_1	
 		p	2		p_2	
@@ -517,10 +517,10 @@ c	net/minecraft/unmapped/C_7688744
 	f	Z	f_5341624	showInventoryAchievementHint	
 	f	Z	f_1070822		f_1070822
 c	net/minecraft/unmapped/C_7699185
-	m	(IIZLnet/minecraft/unmapped/C_5009044;)V	m_1109710	quickMoveStack	
-		p	1		id	
-		p	2		clickData	
-		p	3		p_3	
+	m	(IIZLnet/minecraft/unmapped/C_5009044;)V	m_1109710	clickSlot	
+		p	1		slot	
+		p	2		button	
+		p	3		quickMove	
 		p	4		player	
 	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_2178068;Lnet/minecraft/unmapped/C_6095546;)V	m_5334703		updateCraftingMenuSlot
 		p	1			world
@@ -1009,11 +1009,11 @@ c	net/minecraft/unmapped/C_6028060$C_7731590
 		p	4		p_4	
 c	net/minecraft/unmapped/C_6142023
 	m	(Lnet/minecraft/unmapped/C_2750078;)V	m_7015504	render	
-		p	1		stack	
+		p	1		item	
 	m	(Lnet/minecraft/unmapped/C_2750078;)V	m_2610812		render
-		p	1			stack
+		p	1			item
 	m	(Lnet/minecraft/unmapped/C_2750078;F)V	m_7015504		render
-		p	1			stack
+		p	1			item
 		p	2			tickDelta
 c	net/minecraft/unmapped/C_6600815
 	m	(Lnet/minecraft/unmapped/C_1233611;DDDFI)V	m_5405326	m_5405326	
@@ -2339,7 +2339,7 @@ c	net/minecraft/unmapped/C_1025264		net/minecraft/client/gui/screen/TabType
 		p	2			y
 		p	3			index
 		p	4			itemRenderer
-		p	5			stack
+		p	5			item
 	m	(I)I	m_1819784		getX
 		p	1			index
 	m	(I)I	m_7866140		getY
@@ -2562,7 +2562,7 @@ c	net/minecraft/unmapped/C_2239528		net/minecraft/advancement/criterion/Enchante
 		p	2			p_2
 	m	(Lnet/minecraft/unmapped/C_0324512;Lnet/minecraft/unmapped/C_2750078;I)V	m_2840883		run
 		p	1			player
-		p	2			stack
+		p	2			item
 		p	3			levels
 	m	(Lcom/google/gson/JsonObject;Lcom/google/gson/JsonDeserializationContext;)Lnet/minecraft/unmapped/C_1868871;	m_9246234		m_9246234
 		p	1			p_1
@@ -2580,7 +2580,7 @@ c	net/minecraft/unmapped/C_2239528$C_1308105		PlayerListeners
 	m	(Lnet/minecraft/unmapped/C_5438948$C_9972612;)V	m_6330228		remove
 		p	1			listener
 	m	(Lnet/minecraft/unmapped/C_2750078;I)V	m_5430118		run
-		p	1			stack
+		p	1			item
 		p	2			levels
 c	net/minecraft/unmapped/C_2239528$C_8223767		Instance
 	f	Lnet/minecraft/unmapped/C_4246226;	f_3262115		item
@@ -2589,7 +2589,7 @@ c	net/minecraft/unmapped/C_2239528$C_8223767		Instance
 		p	1			item
 		p	2			levels
 	m	(Lnet/minecraft/unmapped/C_2750078;I)Z	m_5143326		run
-		p	1			stack
+		p	1			item
 		p	2			levels
 c	net/minecraft/unmapped/C_2282465		net/minecraft/advancement/criterion/UsedEnderEyeTrigger
 	f	Lnet/minecraft/unmapped/C_0561170;	f_8836746		ID
@@ -2978,13 +2978,13 @@ c	net/minecraft/unmapped/C_4246226		net/minecraft/advancement/criterion/ItemPred
 	f	Lnet/minecraft/unmapped/C_8703287;	f_9035508		potion
 	m	()V	<init>		<init>
 	m	(Lnet/minecraft/unmapped/C_4030632;Ljava/lang/Integer;Lnet/minecraft/unmapped/C_9548941;[Lnet/minecraft/unmapped/C_1335017;Lnet/minecraft/unmapped/C_8703287;)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
+		p	1			item
+		p	2			metadata
+		p	3			count
+		p	4			enchantments
+		p	5			potion
 	m	(Lnet/minecraft/unmapped/C_2750078;)Z	m_5698763		matches
-		p	1			stack
+		p	1			item
 	m	(Lcom/google/gson/JsonElement;)Lnet/minecraft/unmapped/C_4246226;	m_0284951		fromJson
 		p	0			json
 	m	(Lcom/google/gson/JsonElement;)[Lnet/minecraft/unmapped/C_4246226;	m_5803070		fromJsonArray
@@ -3611,7 +3611,7 @@ c	net/minecraft/unmapped/C_5802230$C_4910499		Instance
 	m	(Lnet/minecraft/unmapped/C_6989019;)Z	m_6795112		run
 		p	1			beacon
 c	net/minecraft/unmapped/C_5872628		net/minecraft/client/gui/recipebook/GhostIngredient
-	f	Lnet/minecraft/unmapped/C_2750078;	f_3344057		stack
+	f	Lnet/minecraft/unmapped/C_2750078;	f_3344057		item
 	f	I	f_6334237		x
 	f	I	f_0320275		y
 	f	Z	f_5435281		f_5435281

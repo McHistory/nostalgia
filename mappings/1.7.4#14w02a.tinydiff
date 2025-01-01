@@ -473,13 +473,13 @@ c	net/minecraft/unmapped/C_0559439
 c	net/minecraft/unmapped/C_0619399
 	f	Lnet/minecraft/unmapped/C_1196485;	f_0624650	furnace	
 	f	Lnet/minecraft/unmapped/C_4286596;	f_5568068		playerInventory
-	f	Lnet/minecraft/unmapped/C_4390289;	f_0624650		furnace
+	f	Lnet/minecraft/unmapped/C_4390289;	f_0624650		inventory
 	m	(Lnet/minecraft/unmapped/C_4286596;Lnet/minecraft/unmapped/C_1196485;)V	<init>	<init>	
 		p	1		playerInventory	
 		p	2		furnace	
 	m	(Lnet/minecraft/unmapped/C_4286596;Lnet/minecraft/unmapped/C_4390289;)V	<init>		<init>
 		p	1			playerInventory
-		p	2			furnace
+		p	2			inventory
 	m	(I)I	m_6573067		m_6573067
 		p	1			p_1
 	m	(I)I	m_7051754		m_7051754
@@ -495,7 +495,7 @@ c	net/minecraft/unmapped/C_0732654
 		p	2		y	
 		p	3		z	
 		p	4		face	
-		p	5		stack	
+		p	5		itemInHand	
 		p	6		dx	
 		p	7		dy	
 		p	8		dz	
@@ -503,11 +503,11 @@ c	net/minecraft/unmapped/C_0732654
 	m	()I	m_3624065	getY	
 	m	()I	m_3732533	getZ	
 	m	(Lnet/minecraft/unmapped/C_2750078;)V	<init>		<init>
-		p	1			stack
+		p	1			itemInHand
 	m	(Lnet/minecraft/unmapped/C_6707278;ILnet/minecraft/unmapped/C_2750078;FFF)V	<init>		<init>
 		p	1			pos
 		p	2			face
-		p	3			stack
+		p	3			itemInHand
 		p	4			dx
 		p	5			dy
 		p	6			dz
@@ -1007,7 +1007,7 @@ c	net/minecraft/unmapped/C_1851525
 		p	2		x	
 		p	3		y	
 		p	4		z	
-		p	5		stack	
+		p	5		item	
 	m	(II)Lnet/minecraft/unmapped/C_5307437;	m_5024410	m_5024410	
 		p	1		p_1	
 		p	2		p_2	
@@ -2878,12 +2878,12 @@ c	net/minecraft/unmapped/C_3635204
 		p	3		y	
 		p	4		z	
 		p	5		face	
-	m	(Lnet/minecraft/unmapped/C_3906126;IIILnet/minecraft/unmapped/C_2750078;)V	m_1243396	dropItems	
+	m	(Lnet/minecraft/unmapped/C_3906126;IIILnet/minecraft/unmapped/C_2750078;)V	m_1243396	dropItem	
 		p	1		world	
 		p	2		x	
 		p	3		y	
 		p	4		z	
-		p	5		stack	
+		p	5		item	
 	m	(Lnet/minecraft/unmapped/C_2627205;III)I	m_4625738	getLightColor	
 		p	1		world	
 		p	2		x	
@@ -3043,7 +3043,7 @@ c	net/minecraft/unmapped/C_3635204
 		p	3		y	
 		p	4		z	
 		p	5		face	
-		p	6		stack	
+		p	6		item	
 	m	(Lnet/minecraft/unmapped/C_3906126;IIILnet/minecraft/unmapped/C_1013763;Lnet/minecraft/unmapped/C_2750078;)V	m_0797987	onPlaced	
 		c	Called when this block is placed by an entity.	
 		p	1		world	
@@ -3051,7 +3051,7 @@ c	net/minecraft/unmapped/C_3635204
 		p	3		y	
 		p	4		z	
 		p	5		entity	
-		p	6		stack	
+		p	6		item	
 	m	(Lnet/minecraft/unmapped/C_3906126;IIIII)Z	m_5333460	doEvent	
 		c	Performs a block event. Block events are queued on the server, and executed once per\ntick. Successful block events are synced with clients that are within range. Block events\nare most notably used by pistons to handle extension and retraction, but note blocks\nalso use them to play sounds.\n\n@return whether the block event was successful.	
 		p	1		world	
@@ -3164,10 +3164,10 @@ c	net/minecraft/unmapped/C_3635204
 		p	3			metadata
 		p	4			luck
 		p	5			fortuneLevel
-	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_2750078;)V	m_1243396		dropItems
+	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_2750078;)V	m_1243396		dropItem
 		p	1			world
 		p	2			pos
-		p	3			stack
+		p	3			item
 	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6707278;I)V	m_7956911		dropXp
 		p	1			world
 		p	2			pos
@@ -3185,7 +3185,7 @@ c	net/minecraft/unmapped/C_3635204
 		p	1			world
 		p	2			pos
 		p	3			face
-		p	4			stack
+		p	4			item
 	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_3544601;)Z	m_8016910		canBePlaced
 		p	1			world
 		p	2			pos
@@ -3256,7 +3256,7 @@ c	net/minecraft/unmapped/C_3635204
 		p	1			world
 		p	2			pos
 		p	3			entity
-		p	4			stack
+		p	4			item
 	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6707278;I)V	m_6102386		onPlaced
 		c		Called when this block is placed by an entity.
 		p	1			world
@@ -3827,7 +3827,7 @@ c	net/minecraft/unmapped/C_3906126
 		p	5		skipCollisionChecks	
 		p	6		face	
 		p	7		entity	
-		p	8		stack	
+		p	8		item	
 	m	(IIILnet/minecraft/unmapped/C_3635204;II)V	m_3224255	addBlockEvent	
 		p	1		x	
 		p	2		y	
@@ -4036,7 +4036,7 @@ c	net/minecraft/unmapped/C_3906126
 		p	3			skipCollisionChecks
 		p	4			face
 		p	5			entity
-		p	6			stack
+		p	6			item
 	m	(Lnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_6707278;FZZZZ)Lnet/minecraft/unmapped/C_7641996;	m_2534066		findPath
 		p	1			entity
 		p	2			target
@@ -4319,12 +4319,12 @@ c	net/minecraft/unmapped/C_4237166
 	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_2750078;IIIILnet/minecraft/unmapped/C_0336319;)Z	m_0257155	useBlock	
 		p	1		player	
 		p	2		world	
-		p	3		stack	
+		p	3		item	
 		p	4		x	
 		p	5		y	
 		p	6		z	
 		p	7		face	
-		p	8		hitPos	
+		p	8		offset	
 	m	(III)Z	m_7630705	isMiningBlock	
 		p	1		x	
 		p	2		y	
@@ -4348,7 +4348,7 @@ c	net/minecraft/unmapped/C_4237166
 	m	(Lnet/minecraft/unmapped/C_1388208;Lnet/minecraft/unmapped/C_8817873;Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_3544601;Lnet/minecraft/unmapped/C_0336319;)Z	m_0257155		useBlock
 		p	1			player
 		p	2			world
-		p	3			stack
+		p	3			item
 		p	4			pos
 		p	5			face
 		p	6			offset
@@ -4679,7 +4679,7 @@ c	net/minecraft/unmapped/C_5009044
 		p	2		y	
 		p	3		z	
 		p	4		face	
-		p	5		stack	
+		p	5		item	
 	m	(III)V	m_2543406	openAnvilMenu	
 		p	1		x	
 		p	2		y	
@@ -4714,7 +4714,7 @@ c	net/minecraft/unmapped/C_5009044
 	m	(Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_3544601;Lnet/minecraft/unmapped/C_2750078;)Z	m_0733834		canUseItem
 		p	1			pos
 		p	2			face
-		p	3			stack
+		p	3			item
 	m	(Lnet/minecraft/unmapped/C_7747375;)Z	m_7798782		canUnlockInventory
 		p	1			lock
 c	net/minecraft/unmapped/C_5100072
@@ -4805,13 +4805,13 @@ c	net/minecraft/unmapped/C_5283200
 	f	Z	f_4574406	hasSkyLight	
 c	net/minecraft/unmapped/C_5294331
 	f	Lnet/minecraft/unmapped/C_1196485;	f_9535907	furnace	
-	f	Lnet/minecraft/unmapped/C_4390289;	f_9535907		furnace
+	f	Lnet/minecraft/unmapped/C_4390289;	f_9535907		inventory
 	m	(Lnet/minecraft/unmapped/C_4286596;Lnet/minecraft/unmapped/C_1196485;)V	<init>	<init>	
 		p	1		playerInventory	
 		p	2		furnace	
 	m	(Lnet/minecraft/unmapped/C_4286596;Lnet/minecraft/unmapped/C_4390289;)V	<init>		<init>
 		p	1			playerInventory
-		p	2			furnace
+		p	2			inventory
 c	net/minecraft/unmapped/C_5315820
 	f	I	f_0000859	x	
 	f	I	f_0344812	y	
@@ -6849,7 +6849,7 @@ c	net/minecraft/unmapped/C_7897127
 	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_2750078;IIIIFFF)Z	m_7617621	useBlock	
 		p	1		player	
 		p	2		world	
-		p	3		stack	
+		p	3		itemInHand	
 		p	4		x	
 		p	5		y	
 		p	6		z	
@@ -6874,7 +6874,7 @@ c	net/minecraft/unmapped/C_7897127
 	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_3544601;FFF)Z	m_7617621		useBlock
 		p	1			player
 		p	2			world
-		p	3			stack
+		p	3			itemInHand
 		p	4			pos
 		p	5			face
 		p	6			dx
@@ -8380,13 +8380,13 @@ c	net/minecraft/unmapped/C_6433447
 		p	2			pos
 c	net/minecraft/unmapped/C_7205496
 	f	Lnet/minecraft/unmapped/C_0356559;	f_4668383	dispenser	
-	f	Lnet/minecraft/unmapped/C_4390289;	f_4668383		dispenser
+	f	Lnet/minecraft/unmapped/C_4390289;	f_4668383		inventory
 	m	(Lnet/minecraft/unmapped/C_4390289;Lnet/minecraft/unmapped/C_0356559;)V	<init>	<init>	
 		p	1		playerInventory	
 		p	2		dispenser	
 	m	(Lnet/minecraft/unmapped/C_4390289;Lnet/minecraft/unmapped/C_4390289;)V	<init>		<init>
 		p	1			playerInventory
-		p	2			dispenser
+		p	2			inventory
 c	net/minecraft/unmapped/C_7348073
 	m	(Lnet/minecraft/unmapped/C_3906126;Ljava/util/Random;III)Z	m_2665009	m_2665009	
 		p	1		p_1	
@@ -10194,9 +10194,9 @@ c	net/minecraft/unmapped/C_1143792$C_3277717
 	f	Ljava/util/ArrayList;	f_9031759	children	
 	f	Ljava/util/List;	f_9031759		children
 c	net/minecraft/unmapped/C_1168245
-	f	Ljava/util/Map;	f_4434315	BUY_OFFER_MAP	
+	f	Ljava/util/Map;	f_4434315	BUY_OFFERS	
 		c	Items that the villager will buy from the player	
-	f	Ljava/util/Map;	f_9618164	SELL_OFFER_MAP	
+	f	Ljava/util/Map;	f_9618164	SELL_OFFERS	
 		c	Items that the villager will sell to the player	
 	f	F	f_3943076	tradeOfferSize	
 		c	sqrt of (tradeOfferSize divided by 5) used to lower the chance to unlock more trades	
@@ -10209,23 +10209,23 @@ c	net/minecraft/unmapped/C_1168245
 			c	Unused param, it is always 1	
 	m	(F)F	m_1844846	getChanceToCreateTrade	
 		p	1		baseChance	
-	m	(Lnet/minecraft/unmapped/C_6499672;Lnet/minecraft/unmapped/C_4030632;Ljava/util/Random;F)V	m_7243822	makeBuyTradeOffer	
+	m	(Lnet/minecraft/unmapped/C_6499672;Lnet/minecraft/unmapped/C_4030632;Ljava/util/Random;F)V	m_7243822	addBuyTradeOffer	
 		p	0		traderOfferList	
 		p	1		item	
 		p	2		random	
 		p	3		chance	
-	m	(Lnet/minecraft/unmapped/C_4030632;Ljava/util/Random;)Lnet/minecraft/unmapped/C_2750078;	m_7758199	getItemStack	
+	m	(Lnet/minecraft/unmapped/C_4030632;Ljava/util/Random;)Lnet/minecraft/unmapped/C_2750078;	m_7758199	makeTradeItem	
 		p	0		item	
 		p	1		random	
-	m	(Lnet/minecraft/unmapped/C_4030632;Ljava/util/Random;)I	m_9514471	getBuyItemAmount	
+	m	(Lnet/minecraft/unmapped/C_4030632;Ljava/util/Random;)I	m_9514471	pickBuyTradeItemAmount	
 		p	0		item	
 		p	1		random	
-	m	(Lnet/minecraft/unmapped/C_6499672;Lnet/minecraft/unmapped/C_4030632;Ljava/util/Random;F)V	m_2849120	makeSellTradeOffer	
+	m	(Lnet/minecraft/unmapped/C_6499672;Lnet/minecraft/unmapped/C_4030632;Ljava/util/Random;F)V	m_2849120	addSellTradeOffer	
 		p	0		traderOfferList	
 		p	1		item	
 		p	2		random	
 		p	3		chance	
-	m	(Lnet/minecraft/unmapped/C_4030632;Ljava/util/Random;)I	m_9348893	getSellItemAmount	
+	m	(Lnet/minecraft/unmapped/C_4030632;Ljava/util/Random;)I	m_9348893	pickSellTradeItemAmount	
 		p	0		item	
 		p	1		random	
 	m	()Z	m_8000987		m_8000987
@@ -10801,13 +10801,13 @@ c	net/minecraft/unmapped/C_4821901
 		p	3			p_3
 c	net/minecraft/unmapped/C_7362472
 	f	Lnet/minecraft/unmapped/C_3910017;	f_7623479	brewingStand	
-	f	Lnet/minecraft/unmapped/C_4390289;	f_7623479		brewingStand
+	f	Lnet/minecraft/unmapped/C_4390289;	f_7623479		inventory
 	m	(Lnet/minecraft/unmapped/C_4286596;Lnet/minecraft/unmapped/C_3910017;)V	<init>	<init>	
 		p	1		playerInventory	
 		p	2		brewingStand	
 	m	(Lnet/minecraft/unmapped/C_4286596;Lnet/minecraft/unmapped/C_4390289;)V	<init>		<init>
 		p	1			playerInventory
-		p	2			brewingStand
+		p	2			inventory
 c	net/minecraft/unmapped/C_7684706
 	f	I	f_5977086	x	
 	f	I	f_4954849	y	
@@ -10830,7 +10830,7 @@ c	net/minecraft/unmapped/C_7684706
 		p	2			world
 		p	3			pos
 	m	(Lnet/minecraft/unmapped/C_2750078;II)Ljava/util/List;	m_9213532		getEnchantments
-		p	1			stack
+		p	1			item
 		p	2			id
 		p	3			level
 	m	()I	m_3389074		getLapisCount
@@ -11982,7 +11982,7 @@ c	net/minecraft/unmapped/C_8208660
 		p	3		world	
 		p	4		name	
 	m	(Lnet/minecraft/unmapped/C_4286596;Lnet/minecraft/unmapped/C_7834269;Lnet/minecraft/unmapped/C_3906126;)V	<init>		<init>
-		p	1			inventory
+		p	1			playerInventory
 		p	2			trader
 		p	3			world
 c	net/minecraft/unmapped/C_0995035
@@ -12465,14 +12465,14 @@ c	net/minecraft/unmapped/C_6773713
 	f	I	f_8546645	levels	
 	f	I	f_0433747	primaryEfect	
 	f	I	f_2793164	secondaryEffect	
-	f	Lnet/minecraft/unmapped/C_4390289;	f_3602270		beacon
+	f	Lnet/minecraft/unmapped/C_4390289;	f_3602270		inventory
 	m	(Lnet/minecraft/unmapped/C_4286596;Lnet/minecraft/unmapped/C_6989019;)V	<init>	<init>	
 		p	1		player	
 		p	2		beacon	
 	m	()Lnet/minecraft/unmapped/C_6989019;	m_0990021	getBeacon	
 	m	(Lnet/minecraft/unmapped/C_4390289;Lnet/minecraft/unmapped/C_4390289;)V	<init>		<init>
 		p	1			player
-		p	2			beacon
+		p	2			inventory
 	m	()Lnet/minecraft/unmapped/C_4390289;	m_0990021		getBeacon
 c	net/minecraft/unmapped/C_6989019
 	m	()I	m_4488006	getPrimaryEffect	
@@ -13328,8 +13328,8 @@ c	net/minecraft/unmapped/C_2938580
 c	net/minecraft/unmapped/C_0024265
 	m	()Ljava/lang/String;	m_0700518	m_0700518	
 	m	()Z	m_1232759	m_1232759	
-	m	(Lnet/minecraft/unmapped/C_4390289;Lnet/minecraft/unmapped/C_2750078;I)Lnet/minecraft/unmapped/C_2750078;	m_6130482	pushItems	
-		p	1		stack	
+	m	(Lnet/minecraft/unmapped/C_4390289;Lnet/minecraft/unmapped/C_2750078;I)Lnet/minecraft/unmapped/C_2750078;	m_6130482	pushItem	
+		p	1		item	
 		p	2		side	
 		p	0		inventory	
 	m	(Lnet/minecraft/unmapped/C_3472905;Lnet/minecraft/unmapped/C_4390289;II)Z	m_1038671	pullItems	
@@ -13337,19 +13337,19 @@ c	net/minecraft/unmapped/C_0024265
 		p	1		inventory	
 		p	2		slot	
 		p	3		side	
-	m	(Lnet/minecraft/unmapped/C_4390289;Lnet/minecraft/unmapped/C_2750078;II)Z	m_4693510	canPushItems	
+	m	(Lnet/minecraft/unmapped/C_4390289;Lnet/minecraft/unmapped/C_2750078;II)Z	m_4693510	canPushItem	
 		p	0		inventory	
-		p	1		stack	
+		p	1		item	
 		p	2		slot	
 		p	3		side	
-	m	(Lnet/minecraft/unmapped/C_4390289;Lnet/minecraft/unmapped/C_2750078;II)Z	m_4000012	canPullItems	
+	m	(Lnet/minecraft/unmapped/C_4390289;Lnet/minecraft/unmapped/C_2750078;II)Z	m_4000012	canPullItem	
 		p	0		inventory	
-		p	1		stack	
+		p	1		item	
 		p	2		slot	
 		p	3		face	
-	m	(Lnet/minecraft/unmapped/C_4390289;Lnet/minecraft/unmapped/C_2750078;II)Lnet/minecraft/unmapped/C_2750078;	m_7833999	pushItems	
+	m	(Lnet/minecraft/unmapped/C_4390289;Lnet/minecraft/unmapped/C_2750078;II)Lnet/minecraft/unmapped/C_2750078;	m_7833999	pushItem	
 		p	0		inventory	
-		p	1		stack	
+		p	1		item	
 		p	2		slot	
 		p	3		side	
 	m	(Lnet/minecraft/unmapped/C_4390289;I)Z	m_1141639	isFullInventory	
@@ -13371,23 +13371,23 @@ c	net/minecraft/unmapped/C_0024265
 		p	1			inventory
 		p	2			slot
 		p	3			side
-	m	(Lnet/minecraft/unmapped/C_4390289;Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_3544601;)Lnet/minecraft/unmapped/C_2750078;	m_6130482		pushItems
+	m	(Lnet/minecraft/unmapped/C_4390289;Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_3544601;)Lnet/minecraft/unmapped/C_2750078;	m_6130482		pushItem
 		p	0			inventory
-		p	1			stack
+		p	1			item
 		p	2			side
-	m	(Lnet/minecraft/unmapped/C_4390289;Lnet/minecraft/unmapped/C_2750078;ILnet/minecraft/unmapped/C_3544601;)Z	m_4693510		canPushItems
+	m	(Lnet/minecraft/unmapped/C_4390289;Lnet/minecraft/unmapped/C_2750078;ILnet/minecraft/unmapped/C_3544601;)Z	m_4693510		canPushItem
 		p	0			inventory
-		p	1			stack
+		p	1			item
 		p	2			slot
 		p	3			side
-	m	(Lnet/minecraft/unmapped/C_4390289;Lnet/minecraft/unmapped/C_2750078;ILnet/minecraft/unmapped/C_3544601;)Z	m_4000012		canPullItems
+	m	(Lnet/minecraft/unmapped/C_4390289;Lnet/minecraft/unmapped/C_2750078;ILnet/minecraft/unmapped/C_3544601;)Z	m_4000012		canPullItem
 		p	0			inventory
-		p	1			stack
+		p	1			item
 		p	2			slot
 		p	3			side
-	m	(Lnet/minecraft/unmapped/C_4390289;Lnet/minecraft/unmapped/C_2750078;ILnet/minecraft/unmapped/C_3544601;)Lnet/minecraft/unmapped/C_2750078;	m_7833999		pushItems
+	m	(Lnet/minecraft/unmapped/C_4390289;Lnet/minecraft/unmapped/C_2750078;ILnet/minecraft/unmapped/C_3544601;)Lnet/minecraft/unmapped/C_2750078;	m_7833999		pushItem
 		p	0			inventory
-		p	1			stack
+		p	1			item
 		p	2			slot
 		p	3			side
 	m	()Ljava/lang/String;	m_2113929		m_2113929
@@ -14192,23 +14192,23 @@ c	net/minecraft/unmapped/C_3499107$3731148		3731148
 c	net/minecraft/unmapped/C_5433736
 	m	(I)[I	m_2518429	getSlots	
 		p	1		side	
-	m	(ILnet/minecraft/unmapped/C_2750078;I)Z	m_2568414	canHopperAddStack	
+	m	(ILnet/minecraft/unmapped/C_2750078;I)Z	m_2568414	canPushItem	
 		p	1		slot	
-		p	2		stack	
+		p	2		item	
 		p	3		side	
-	m	(ILnet/minecraft/unmapped/C_2750078;I)Z	m_9768291	canHopperRemoveStack	
+	m	(ILnet/minecraft/unmapped/C_2750078;I)Z	m_9768291	canPullItem	
 		p	1		slot	
-		p	2		stack	
+		p	2		item	
 		p	3		side	
 	m	(Lnet/minecraft/unmapped/C_3544601;)[I	m_2518429		getSlots
 		p	1			side
-	m	(ILnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_3544601;)Z	m_2568414		canHopperAddStack
+	m	(ILnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_3544601;)Z	m_2568414		canPushItem
 		p	1			slot
-		p	2			stack
+		p	2			item
 		p	3			side
-	m	(ILnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_3544601;)Z	m_9768291		canHopperRemoveStack
+	m	(ILnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_3544601;)Z	m_9768291		canPullItem
 		p	1			slot
-		p	2			stack
+		p	2			item
 		p	3			side
 c	net/minecraft/unmapped/C_7465586
 	m	()I	m_6454698	m_6454698	
@@ -14421,7 +14421,7 @@ c	net/minecraft/unmapped/C_2340941
 		p	2			p_2
 c	net/minecraft/unmapped/C_2587956
 	m	(Lnet/minecraft/unmapped/C_2750078;)Z	m_2547176		canHoldItem
-		p	1			stack
+		p	1			item
 c	net/minecraft/unmapped/C_7750936
 	m	(II)Lnet/minecraft/unmapped/C_5307437;	m_5024410	m_5024410	
 		p	1		p_1	

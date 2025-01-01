@@ -3,7 +3,7 @@ c	net/minecraft/client/Minecraft
 	f	Z	f_2765940		f_2765940
 	f	Lnet/minecraft/unmapped/C_9610577;	f_4668536		entityRenderDispatcher
 	f	Lnet/minecraft/unmapped/C_4917405;	f_9419745		itemRenderer
-	f	Lnet/minecraft/unmapped/C_2751481;	f_7304114		heldItemRenderer
+	f	Lnet/minecraft/unmapped/C_2751481;	f_7304114		itemInHandRenderer
 	m	(Ljava/lang/String;I)V	m_8972330	setStartupServer	
 		p	1		address	
 		p	2		port	
@@ -34,7 +34,7 @@ c	net/minecraft/client/Minecraft
 	m	()V	m_3068908		updateDisplay
 	m	()Lnet/minecraft/unmapped/C_9610577;	m_5440205		getEntityRenderDispatcher
 	m	()Lnet/minecraft/unmapped/C_4917405;	m_9172989		getItemRenderer
-	m	()Lnet/minecraft/unmapped/C_2751481;	m_0435332		getHeldItemRenderer
+	m	()Lnet/minecraft/unmapped/C_2751481;	m_0435332		getItemInHandRenderer
 c	net/minecraft/client/Minecraft$6271077	6271077	
 	f	Lnet/minecraft/client/Minecraft;	f_8520641	f_8520641	
 	m	(Lnet/minecraft/client/Minecraft;)V	<init>	<init>	
@@ -470,8 +470,8 @@ c	net/minecraft/unmapped/C_0974371
 		p	1			p_1
 c	net/minecraft/unmapped/C_1013763
 	m	()V	m_2363546	mobAiTick	
-	m	(Lnet/minecraft/unmapped/C_2750078;I)Lnet/minecraft/unmapped/C_5307437;	m_3422399	getIconSprite	
-		p	1		stack	
+	m	(Lnet/minecraft/unmapped/C_2750078;I)Lnet/minecraft/unmapped/C_5307437;	m_3422399	getItemSprite	
+		p	1		item	
 		p	2		layer	
 	m	()Z	m_9110226		m_9110226
 	m	(F)Lnet/minecraft/unmapped/C_0336319;	m_0430803		m_0430803
@@ -662,7 +662,7 @@ c	net/minecraft/unmapped/C_1851525
 		p	1			world
 		p	2			pos
 		p	3			state
-		p	4			stack
+		p	4			item
 	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_2441996;)Lnet/minecraft/unmapped/C_2441996;	m_2061530		removeRecord
 		p	1			world
 		p	2			pos
@@ -1040,7 +1040,7 @@ c	net/minecraft/unmapped/C_2751481
 		p	1		tickDelta	
 	m	(Lnet/minecraft/unmapped/C_1013763;Lnet/minecraft/unmapped/C_2750078;I)V	m_7986777	render	
 		p	1		mob	
-		p	2		stack	
+		p	2		itemInHand	
 		p	3		layer	
 	m	(Lnet/minecraft/unmapped/C_2334550;FFFFIIF)V	m_7446315	draw	
 		p	0		bufferBuilder	
@@ -1056,7 +1056,7 @@ c	net/minecraft/unmapped/C_2751481
 		p	2		sprite	
 	m	(Lnet/minecraft/unmapped/C_1013763;Lnet/minecraft/unmapped/C_2750078;)V	m_7986777		render
 		p	1			entity
-		p	2			stack
+		p	2			item
 	m	(Lnet/minecraft/unmapped/C_3635204;)Z	m_0440863		isTranslucent
 		p	1			block
 	m	(FF)V	m_5575460		rotate
@@ -1712,7 +1712,7 @@ c	net/minecraft/unmapped/C_3635204
 		p	1		world	
 		p	2		pos	
 		p	3		entity	
-		p	4		stack	
+		p	4		item	
 	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6707278;I)V	m_6102386	onPlaced	
 		c	Called when this block is placed by an entity.	
 		p	1		world	
@@ -1867,7 +1867,7 @@ c	net/minecraft/unmapped/C_3635204
 		p	2			pos
 		p	3			state
 		p	4			entity
-		p	5			stack
+		p	5			item
 	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_2441996;II)Z	m_5333460		doEvent
 		c		Performs a block event. Block events are queued on the server, and executed once per\ntick. Successful block events are synced with clients that are within range. Block events\nare most notably used by pistons to handle extension and retraction, but note blocks\nalso use them to play sounds.\n\n@return whether the block event was successful.
 		p	1			world
@@ -2313,7 +2313,7 @@ c	net/minecraft/unmapped/C_4917405
 		c	Render an item info overlay conaining info such as the number of items in a stack or\nthe damage for armour or tools.	
 		p	1		textRenderer	
 		p	2		textureManager	
-		p	3		stack	
+		p	3		item	
 		p	4		x	
 		p	5		y	
 	m	(Lnet/minecraft/unmapped/C_6385858;DDDFF)V	m_5501825	m_5501825	
@@ -2326,7 +2326,7 @@ c	net/minecraft/unmapped/C_4917405
 	m	(Lnet/minecraft/unmapped/C_4766485;Lnet/minecraft/unmapped/C_3385278;Lnet/minecraft/unmapped/C_2750078;II)V	m_3023684	renderGuiItemWithEnchantmentGlint	
 		p	1		textRenderer	
 		p	2		textureManager	
-		p	3		stack	
+		p	3		item	
 		p	4		x	
 		p	5		y	
 	m	(IIIII)V	m_3967818	renderEnchantmentGlint	
@@ -2338,14 +2338,14 @@ c	net/minecraft/unmapped/C_4917405
 	m	(Lnet/minecraft/unmapped/C_4766485;Lnet/minecraft/unmapped/C_3385278;Lnet/minecraft/unmapped/C_2750078;II)V	m_7605997	renderGuiItem	
 		p	1		textRenderer	
 		p	2		textureManager	
-		p	3		stack	
+		p	3		item	
 		p	4		x	
 		p	5		y	
 	m	(Lnet/minecraft/unmapped/C_4766485;Lnet/minecraft/unmapped/C_3385278;Lnet/minecraft/unmapped/C_2750078;IILjava/lang/String;)V	m_6417843	renderGuiItemDecoration	
 		c	Render an item info overlay conaining info such as the number of items in a stack or\nthe damage for armour or tools.	
 		p	1		textRenderer	
 		p	2		textureManager	
-		p	3		stack	
+		p	3		item	
 		p	4		x	
 		p	5		y	
 		p	6		overlayText	
@@ -2395,36 +2395,36 @@ c	net/minecraft/unmapped/C_4917405
 		p	2			key
 	m	(Lnet/minecraft/unmapped/C_7184938;Lnet/minecraft/unmapped/C_2750078;FFF)V	m_0582157		render
 		p	1			model
-		p	2			stack
+		p	2			item
 		p	3			r
 		p	4			g
 		p	5			b
 	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_7184938;)V	m_3659303		renderItem
-		p	1			stack
+		p	1			item
 		p	2			model
 	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_7184938;)V	m_3967818		renderEnchantmentGlint
-		p	1			stack
+		p	1			item
 		p	2			model
 	m	(Ljava/util/List;Lnet/minecraft/unmapped/C_2750078;FFF)V	m_6328515		renderQuads
 		p	1			quads
-		p	2			stack
+		p	2			item
 		p	3			r
 		p	4			g
 		p	5			b
 	m	(Lnet/minecraft/unmapped/C_2750078;)Z	m_1612314		isGui3d
-		p	1			stack
-	m	(Lnet/minecraft/unmapped/C_2750078;)V	m_7219732		prepareHeldItemRender
-		p	1			stack
-	m	(Lnet/minecraft/unmapped/C_2750078;)V	m_0368257		renderHeldItem
-		p	1			stack
-	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_1013763;)V	m_6851649		renderHeldItem
-		p	1			stack
+		p	1			item
+	m	(Lnet/minecraft/unmapped/C_2750078;)V	m_7219732		prepareInHand
+		p	1			item
+	m	(Lnet/minecraft/unmapped/C_2750078;)V	m_0368257		renderItemInHand
+		p	1			item
+	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_1013763;)V	m_6851649		renderItemInHand
+		p	1			item
 		p	2			entity
-	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_7184938;)V	m_8635040		renderHeldItem
-		p	1			stack
+	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_7184938;)V	m_8635040		renderItemInHand
+		p	1			item
 		p	2			model
 	m	(Lnet/minecraft/unmapped/C_2750078;II)V	m_7605997		renderGuiItemModel
-		p	1			stack
+		p	1			item
 		p	2			x
 		p	3			y
 	m	(IIZ)V	m_6712968		prepareGuiItemRender
@@ -2432,19 +2432,19 @@ c	net/minecraft/unmapped/C_4917405
 		p	2			y
 		p	3			gui3d
 	m	(Lnet/minecraft/unmapped/C_2750078;II)V	m_3023684		renderGuiItem
-		p	1			stack
+		p	1			item
 		p	2			x
 		p	3			y
 	m	(Lnet/minecraft/unmapped/C_4766485;Lnet/minecraft/unmapped/C_2750078;II)V	m_1813870		renderGuiItemDecoration
 		c		Render an item info overlay conaining info such as the number of items in a stack or\nthe damage for armour or tools.
 		p	1			textRenderer
-		p	2			stack
+		p	2			item
 		p	3			x
 		p	4			y
 	m	(Lnet/minecraft/unmapped/C_4766485;Lnet/minecraft/unmapped/C_2750078;IILjava/lang/String;)V	m_6417843		renderGuiItemDecorations
 		c		Render an item info overlay conaining info such as the number of items in a stack or\nthe damage for armour or tools.
 		p	1			textRenderer
-		p	2			stack
+		p	2			item
 		p	3			x
 		p	4			y
 		p	5			stackSizeText
@@ -6740,11 +6740,11 @@ c	net/minecraft/unmapped/C_1793890
 		p	8			p_8
 	m	()Lnet/minecraft/unmapped/C_7612169;	m_1599426		getVariantProperty
 	m	(Lnet/minecraft/unmapped/C_2750078;)Ljava/lang/Object;	m_5383675		getVariant
-		p	1			stack
+		p	1			item
 c	net/minecraft/unmapped/C_2995953
 	m	()Z	m_6706480	m_6706480	
 	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_5009044;)V	m_8385215		resolvePages
-		p	1			stack
+		p	1			item
 		p	2			player
 c	net/minecraft/unmapped/C_5091011
 	m	(Ljava/lang/String;)Ljava/lang/String;	m_5935915	prepareMessage	
@@ -10921,7 +10921,7 @@ c	net/minecraft/unmapped/C_4328322		net/minecraft/client/render/model/block/Bloc
 		p	4			rescale
 c	net/minecraft/unmapped/C_4423959		net/minecraft/client/resource/model/ItemModelProvider
 	m	(Lnet/minecraft/unmapped/C_2750078;)Lnet/minecraft/unmapped/C_6390485;	m_1991184		provide
-		p	1			stack
+		p	1			item
 c	net/minecraft/unmapped/C_5328628		net/minecraft/client/sound/instance/GuardianAttackSoundInstance
 	f	Lnet/minecraft/unmapped/C_8365102;	f_6795449		guardian
 	m	(Lnet/minecraft/unmapped/C_8365102;)V	<init>		<init>
@@ -11078,8 +11078,8 @@ c	net/minecraft/unmapped/C_6955767		net/minecraft/client/render/entity/ItemEntit
 		p	6			dz
 		p	8			tickDelta
 		p	9			model
-	m	(Lnet/minecraft/unmapped/C_2750078;)I	m_3475704		scaledStackCount
-		p	1			stack
+	m	(Lnet/minecraft/unmapped/C_2750078;)I	m_3475704		scaledStackSize
+		p	1			item
 	m	(Lnet/minecraft/unmapped/C_3050136;DDDFF)V	m_8676152		m_8676152
 		p	1			p_1
 		p	2			p_2
@@ -11109,9 +11109,9 @@ c	net/minecraft/unmapped/C_6975013		net/minecraft/client/render/item/ItemModelSh
 		p	1			item
 		p	2			metadata
 	m	(Lnet/minecraft/unmapped/C_2750078;)Lnet/minecraft/unmapped/C_7184938;	m_1835481		getModel
-		p	1			stack
+		p	1			item
 	m	(Lnet/minecraft/unmapped/C_2750078;)I	m_2360845		getModelMetadata
-		p	1			stack
+		p	1			item
 	m	(Lnet/minecraft/unmapped/C_4030632;I)Lnet/minecraft/unmapped/C_7184938;	m_2658653		getModel
 		p	1			item
 		p	2			metadata

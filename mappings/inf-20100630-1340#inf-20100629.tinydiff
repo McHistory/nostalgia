@@ -100,7 +100,7 @@ c	net/minecraft/unmapped/C_1013763
 	f	F	f_3976864	f_3976864	
 	f	F	f_3399317	f_3399317	
 	f	F	f_7904404	lastWalkProgress	
-	f	F	f_2675121	f_2675121	
+	f	F	f_2675121	lastTotalWalkDistance	
 	f	Z	f_8232145	f_8232145	
 	f	Z	f_5810048	f_5810048	
 	f	F	f_9063309	rotationOffset	
@@ -126,7 +126,7 @@ c	net/minecraft/unmapped/C_1196485
 		p	1		input	
 		p	0			input
 	m	(Lnet/minecraft/unmapped/C_2750078;)I	m_4423171
-		p	1		stack	
+		p	1		item	
 		p	0			fuel
 	m	(I)I	m_2842854	getCookProgress	
 		p	1		range	
@@ -186,7 +186,7 @@ c	net/minecraft/unmapped/C_2750078
 	m	(Lnet/minecraft/unmapped/C_2800860;)V	m_4555243	readNbt	
 		p	1		nbt	
 	m	()I	m_0308377	getMaxSize	
-	m	(Lnet/minecraft/unmapped/C_1013763;)V	m_3149288	attackEntity	
+	m	(Lnet/minecraft/unmapped/C_1013763;)V	m_3149288	attack	
 		p	1		entity	
 	m	(IIII)V	m_3316715	mineBlock	
 		p	1		x	
@@ -447,7 +447,7 @@ c	net/minecraft/unmapped/C_4078372
 c	net/minecraft/unmapped/C_4286596
 	m	(I)I	m_7123133	getSlotWithSpace	
 		p	1		item	
-	m	(II)I	m_4972139	addItem	
+	m	(II)I	m_4972139	addItemStack	
 		p	1		item	
 		p	2		amount	
 	m	()V	m_9549002	tick	
@@ -470,7 +470,7 @@ c	net/minecraft/unmapped/C_4286596
 		p	1		block	
 		p	2		creative	
 	m	(I)V	m_5576257	scrollInHotbar	
-		p	1		scroll	
+		p	1		amount	
 	m	(I)Lnet/minecraft/unmapped/C_2750078;	m_8648382	getArmor	
 		p	1		slot	
 c	net/minecraft/unmapped/C_4558465
@@ -859,7 +859,7 @@ c	net/minecraft/unmapped/C_1044273
 		p	1		camera	
 		p	2		hit	
 		p	3		p_3	
-		p	4		mainHandStack	
+		p	4		itemInHand	
 		p	5		tickDelta	
 	m	(Lnet/minecraft/unmapped/C_1414550;)V	m_3614850	renderOutline	
 		p	1		shape	
@@ -973,7 +973,7 @@ c	net/minecraft/unmapped/C_2621421
 		p	2		mouseY	
 c	net/minecraft/unmapped/C_2751481	net/minecraft/client/render/ItemInHandRenderer	
 	f	Lnet/minecraft/client/Minecraft;	f_1515651	minecraft	
-	f	Lnet/minecraft/unmapped/C_2750078;	f_0997266	item	
+	f	Lnet/minecraft/unmapped/C_2750078;	f_0997266	itemInHand	
 	f	F	f_4282606	handHeight	
 	f	F	f_2262411	lastHandHeight	
 	f	Lnet/minecraft/unmapped/C_3466301;	f_9447755	blockRenderer	
@@ -1264,13 +1264,13 @@ c	net/minecraft/unmapped/C_4917405
 	m	(Lnet/minecraft/unmapped/C_4766485;Lnet/minecraft/unmapped/C_3385278;Lnet/minecraft/unmapped/C_2750078;II)V	m_7605997	renderGuiItem	
 		p	1		textRenderer	
 		p	2		textureManager	
-		p	3		stack	
+		p	3		item	
 		p	4		x	
 		p	5		y	
 	m	(Lnet/minecraft/unmapped/C_4766485;Lnet/minecraft/unmapped/C_3385278;Lnet/minecraft/unmapped/C_2750078;II)V	m_1813870	renderGuiItemDecoration	
 		p	1		textRenderer	
 		p	2		textureManager	
-		p	3		stack	
+		p	3		item	
 		p	4		x	
 		p	5		y	
 	m	(Lnet/minecraft/unmapped/C_2334550;IIIII)V	m_6589435
@@ -1285,12 +1285,12 @@ c	net/minecraft/unmapped/C_4917405
 		p	6		height	
 	m	(Lnet/minecraft/unmapped/C_3385278;Lnet/minecraft/unmapped/C_2750078;II)V	m_7605997		renderGuiItem
 		p	1			textureManager
-		p	2			stack
+		p	2			item
 		p	3			x
 		p	4			y
 	m	(Lnet/minecraft/unmapped/C_4766485;Lnet/minecraft/unmapped/C_2750078;II)V	m_1813870		renderGuiItemDecoration
 		p	1			textureManager
-		p	2			stack
+		p	2			item
 		p	3			x
 		p	4			y
 c	net/minecraft/unmapped/C_5027796
@@ -1420,7 +1420,7 @@ c	net/minecraft/unmapped/C_7153081
 	f	F	f_7715842	cameraYaw	
 	f	F	f_1772428	cameraPitch	
 c	net/minecraft/unmapped/C_7192378
-	m	()Lnet/minecraft/unmapped/C_2750078;	m_0472919	getStack	
+	m	()Lnet/minecraft/unmapped/C_2750078;	m_0472919	getItem	
 c	net/minecraft/unmapped/C_7213435
 	f	I	f_3431472	resultItem	
 	m	([I)Z	m_7723385	matches	
@@ -1438,7 +1438,7 @@ c	net/minecraft/unmapped/C_7542541
 		p	2		p_2	
 		p	3		p_3	
 	m	(Lnet/minecraft/unmapped/C_7192378;)V	m_6888955	renderSlot	
-		p	1		invSlot	
+		p	1		slot	
 	m	(Lnet/minecraft/unmapped/C_4390289;)V	m_6838119	onInventoryModified	
 		p	1		inventory	
 	m	()V	m_3483387		renderBackground

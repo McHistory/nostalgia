@@ -29,7 +29,7 @@ c	net/minecraft/unmapped/C_1111347
 c	net/minecraft/unmapped/C_1249120
 	m	(ILjava/util/List;)V	<init>		<init>
 		p	1			menuId
-		p	2			stacks
+		p	2			items
 c	net/minecraft/unmapped/C_2012603
 	m	(II[SILnet/minecraft/unmapped/C_3906126;)V	<init>		<init>
 		p	1			chunkX
@@ -50,9 +50,9 @@ c	net/minecraft/unmapped/C_2422346
 		p	1			id
 		p	2			event
 c	net/minecraft/unmapped/C_2786920
-	m	(Lnet/minecraft/unmapped/C_7699185;Ljava/util/List;)V	m_0076107		updateMenu
+	m	(Lnet/minecraft/unmapped/C_7699185;Ljava/util/List;)V	m_0076107		onMenuChanged
 		p	1			menu
-		p	2			stacks
+		p	2			items
 c	net/minecraft/unmapped/C_3050136
 	m	()Ljava/lang/String;	m_5573014		m_5573014
 c	net/minecraft/unmapped/C_3157620
@@ -141,7 +141,7 @@ c	net/minecraft/unmapped/C_6020368
 		p	2			hunger
 		p	3			saturation
 c	net/minecraft/unmapped/C_6385858
-	m	()[Lnet/minecraft/unmapped/C_2750078;	m_9919834		getEquipmentStacks
+	m	()[Lnet/minecraft/unmapped/C_2750078;	m_9919834		getEquipment
 	m	(Z)V	m_8609807		setSneaking
 		p	1			sneaking
 	m	()Ljava/lang/String;	m_5573014		getName
@@ -177,7 +177,7 @@ c	net/minecraft/unmapped/C_7564962
 c	net/minecraft/unmapped/C_7699185
 	m	(Lnet/minecraft/unmapped/C_2786920;)V	m_4023501		addListener
 		p	1			listener
-	m	()Ljava/util/List;	m_6211562		getStacks
+	m	()Ljava/util/List;	m_6211562		getItems
 	m	(Lnet/minecraft/unmapped/C_4390289;I)Lnet/minecraft/unmapped/C_7192378;	m_1887764		getSlot
 		p	1			inventory
 		p	2			slot
@@ -196,8 +196,8 @@ c	net/minecraft/unmapped/C_8321936
 c	net/minecraft/unmapped/C_9381557
 	m	(IILnet/minecraft/unmapped/C_2750078;)V	<init>		<init>
 		p	1			menuId
-		p	2			slotId
-		p	3			stack
+		p	2			slot
+		p	3			item
 c	net/minecraft/unmapped/C_9614477
 	m	(Ljava/lang/String;IJIBBB)V	<init>		<init>
 		p	1			p_1
@@ -210,8 +210,8 @@ c	net/minecraft/unmapped/C_9614477
 c	net/minecraft/unmapped/C_9701483
 	m	(IILnet/minecraft/unmapped/C_2750078;)V	<init>		<init>
 		p	1			id
-		p	2			equipmentSlot
-		p	3			stack
+		p	2			slot
+		p	3			item
 c	net/minecraft/unmapped/C_9814383
 	m	(IIIIBB)V	<init>		<init>
 		p	1			id
@@ -298,14 +298,14 @@ c	net/minecraft/unmapped/C_6134274
 		p	3			data
 c	net/minecraft/unmapped/C_6285226
 	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_5009044;)[B	m_5765838		getUpdateData
-		p	1			stack
+		p	1			item
 		p	2			world
 		p	3			player
 c	net/minecraft/unmapped/C_6285226$C_2230951
 	f	[B	f_5086351		decorations
 	m	(Lnet/minecraft/unmapped/C_2750078;)[B	m_2378782		getUpdateData
 		c		Packs data for a map update packet in a byte array. The first byte encodes the type\nof update:\n<br>0: colors\n<br>1: decorations\n<br>2: scale
-		p	1			stack
+		p	1			item
 c	net/minecraft/unmapped/C_6786653
 	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_5009044;)Lnet/minecraft/unmapped/C_4844124;	m_4104674		m_4104674
 		p	1			p_1
@@ -839,7 +839,7 @@ c	net/minecraft/unmapped/C_0324512		net/minecraft/server/entity/mob/player/Serve
 	f	Ljava/util/Set;	f_5806656		allLoadedChunks
 	f	I	f_5431237		lastHealth
 	f	I	f_1478225		spawnProtectionTicks
-	f	[Lnet/minecraft/unmapped/C_2750078;	f_5960888		equipmentStacks
+	f	[Lnet/minecraft/unmapped/C_2750078;	f_5960888		equipment
 	f	I	f_3098613		menuId
 	f	Z	f_2104338		useItemCooldown
 	f	I	f_0301828		lastHungerLevel
@@ -858,8 +858,8 @@ c	net/minecraft/unmapped/C_0324512		net/minecraft/server/entity/mob/player/Serve
 	m	()V	m_9844463		m_9844463
 	m	()F	m_9119163		m_9119163
 	m	()V	m_0718337		m_0718337
-	m	(I)Lnet/minecraft/unmapped/C_2750078;	m_4716717		getItem
-		p	1			p_1
+	m	(I)Lnet/minecraft/unmapped/C_2750078;	m_4716717		getEquipment
+		p	1			slot
 	m	()Z	m_0058720		m_0058720
 	m	(I)V	m_6031420		m_6031420
 		p	1			p_1
@@ -904,7 +904,7 @@ c	net/minecraft/unmapped/C_0324512		net/minecraft/server/entity/mob/player/Serve
 		p	2			p_2
 		p	3			p_3
 	m	(Lnet/minecraft/unmapped/C_7699185;)V	m_0753902		setMenu
-		p	1			handler
+		p	1			menu
 	m	(Lnet/minecraft/unmapped/C_7699185;Ljava/util/List;)V	m_0076107		m_0076107
 		p	1			p_1
 		p	2			p_2
@@ -1439,11 +1439,11 @@ c	net/minecraft/unmapped/C_7897127		net/minecraft/server/ServerPlayerInteraction
 	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_2750078;)Z	m_1509177		useItem
 		p	1			player
 		p	2			world
-		p	3			stack
+		p	3			itemInHand
 	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_2750078;IIII)Z	m_7617621		useBlock
 		p	1			player
 		p	2			world
-		p	3			stack
+		p	3			itemInHand
 		p	4			x
 		p	5			y
 		p	6			z

@@ -141,7 +141,7 @@ c	net/minecraft/unmapped/C_1111347
 c	net/minecraft/unmapped/C_1249120
 	m	(ILjava/util/List;)V	<init>		<init>
 		p	1			menuId
-		p	2			stacks
+		p	2			items
 c	net/minecraft/unmapped/C_1659910
 	m	(ILjava/util/Random;)I	m_6894859	m_6894859	
 		p	1		p_1	
@@ -239,9 +239,9 @@ c	net/minecraft/unmapped/C_2783777
 	m	(Ljava/lang/Object;)Z	equals		equals
 		p	1			p_1
 c	net/minecraft/unmapped/C_2786920
-	m	(Lnet/minecraft/unmapped/C_7699185;Ljava/util/List;)V	m_0076107		updateMenu
+	m	(Lnet/minecraft/unmapped/C_7699185;Ljava/util/List;)V	m_0076107		onMenuChanged
 		p	1			menu
-		p	2			stacks
+		p	2			items
 c	net/minecraft/unmapped/C_2800860
 	m	(Ljava/lang/Object;)Z	equals		equals
 		p	1			p_1
@@ -631,7 +631,7 @@ c	net/minecraft/unmapped/C_6295037
 		p	2			p_2
 		p	3			p_3
 c	net/minecraft/unmapped/C_6385858
-	m	()[Lnet/minecraft/unmapped/C_2750078;	m_9919834		getEquipmentStacks
+	m	()[Lnet/minecraft/unmapped/C_2750078;	m_9919834		getEquipment
 	m	(Z)V	m_8609807		setSneaking
 		p	1			sneaking
 	m	()Ljava/lang/String;	m_5573014		getName
@@ -761,7 +761,7 @@ c	net/minecraft/unmapped/C_7557064
 c	net/minecraft/unmapped/C_7699185
 	m	(Lnet/minecraft/unmapped/C_2786920;)V	m_4023501		addListener
 		p	1			listener
-	m	()Ljava/util/List;	m_6211562		getStacks
+	m	()Ljava/util/List;	m_6211562		getItems
 	m	(Lnet/minecraft/unmapped/C_4390289;I)Lnet/minecraft/unmapped/C_7192378;	m_1887764		getSlot
 		p	1			inventory
 		p	2			slot
@@ -855,8 +855,8 @@ c	net/minecraft/unmapped/C_9331929
 c	net/minecraft/unmapped/C_9381557
 	m	(IILnet/minecraft/unmapped/C_2750078;)V	<init>		<init>
 		p	1			menuId
-		p	2			slotId
-		p	3			stack
+		p	2			slot
+		p	3			item
 c	net/minecraft/unmapped/C_9386942
 	m	()I	m_4849408		getCenterX
 	m	()I	m_6554651		getCenterZ
@@ -885,8 +885,8 @@ c	net/minecraft/unmapped/C_9614477
 c	net/minecraft/unmapped/C_9701483
 	m	(IILnet/minecraft/unmapped/C_2750078;)V	<init>		<init>
 		p	1			id
-		p	2			equipmentSlot
-		p	3			stack
+		p	2			slot
+		p	3			item
 c	net/minecraft/unmapped/C_9814383
 	m	(IIIIBB)V	<init>		<init>
 		p	1			id
@@ -1041,14 +1041,14 @@ c	net/minecraft/unmapped/C_6134274
 		p	3			data
 c	net/minecraft/unmapped/C_6285226
 	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_5009044;)[B	m_5765838		getUpdateData
-		p	1			stack
+		p	1			item
 		p	2			world
 		p	3			player
 c	net/minecraft/unmapped/C_6285226$C_2230951
 	f	[B	f_5086351		decorations
 	m	(Lnet/minecraft/unmapped/C_2750078;)[B	m_2378782		getUpdateData
 		c		Packs data for a map update packet in a byte array. The first byte encodes the type\nof update:\n<br>0: colors\n<br>1: decorations\n<br>2: scale
-		p	1			stack
+		p	1			item
 c	net/minecraft/unmapped/C_6588851
 	m	(ILjava/util/Random;)I	m_6894859	m_6894859	
 		p	1		p_1	
@@ -1520,16 +1520,16 @@ c	net/minecraft/unmapped/C_7166340
 	f	Lnet/minecraft/unmapped/C_7166340$C_7529450;	f_8917235		DAMAGE_MODIFIER
 	m	(ILnet/minecraft/unmapped/C_2750078;)I	m_0804207		getLevel
 		p	0			id
-		p	1			stack
+		p	1			item
 	m	(I[Lnet/minecraft/unmapped/C_2750078;)I	m_0087789		getHighestEnchantmentLevel
 		p	0			id
-		p	1			stacks
+		p	1			items
 	m	(Lnet/minecraft/unmapped/C_7166340$C_1234844;Lnet/minecraft/unmapped/C_2750078;)V	m_7842939		applyAttackModifier
 		p	0			modifier
-		p	1			stack
+		p	1			item
 	m	(Lnet/minecraft/unmapped/C_7166340$C_1234844;[Lnet/minecraft/unmapped/C_2750078;)V	m_3560626		applyAttackModifier
 		p	0			modifier
-		p	1			stacks
+		p	1			items
 	m	(Lnet/minecraft/unmapped/C_4286596;Lnet/minecraft/unmapped/C_1013763;)I	m_5724931		modifyDamage
 		c		Returns the increase in damage to the target due to the attacker's enchantments.
 		p	0			inventory
@@ -1558,14 +1558,14 @@ c	net/minecraft/unmapped/C_7166340
 		p	0			random
 		p	1			entry
 		p	2			max
-		p	3			stack
+		p	3			item
 	m	(Ljava/util/Random;Lnet/minecraft/unmapped/C_2750078;I)Ljava/util/List;	m_3224816		getEnchantmentEntries
 		p	0			random
-		p	1			stack
+		p	1			item
 		p	2			xpLevel
 	m	(ILnet/minecraft/unmapped/C_2750078;)Ljava/util/Map;	m_4857256		getAvailableEnchantmentEntries
 		p	0			xp
-		p	1			stack
+		p	1			item
 	m	(Lnet/minecraft/unmapped/C_4286596;Lnet/minecraft/unmapped/C_6907923;)I	m_6819284
 		c		Returns the increase in protection from the damage source due to the armor stacks' enchantments.
 c	net/minecraft/unmapped/C_7166340$2936592		2936592
@@ -1880,7 +1880,7 @@ c	net/minecraft/unmapped/C_0324512		net/minecraft/server/entity/mob/player/Serve
 	f	Z	f_2371118		wasHungry
 	f	I	f_1096552		lastSentXp
 	f	I	f_1478225		spawnProtectionTicks
-	f	[Lnet/minecraft/unmapped/C_2750078;	f_5960888		equipmentStacks
+	f	[Lnet/minecraft/unmapped/C_2750078;	f_5960888		equipment
 	f	I	f_3098613		menuId
 	f	Z	f_2104338		useItemCooldown
 	f	I	f_0235043		ping
@@ -1900,8 +1900,8 @@ c	net/minecraft/unmapped/C_0324512		net/minecraft/server/entity/mob/player/Serve
 	m	()V	m_9844463		m_9844463
 	m	()F	m_9119163		m_9119163
 	m	()V	m_0718337		m_0718337
-	m	(I)Lnet/minecraft/unmapped/C_2750078;	m_4716717		getItem
-		p	1			p_1
+	m	(I)Lnet/minecraft/unmapped/C_2750078;	m_4716717		getEquipment
+		p	1			slot
 	m	(Lnet/minecraft/unmapped/C_6907923;)V	m_4650833		m_4650833
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_6907923;I)Z	m_3238154		m_3238154
@@ -1957,7 +1957,7 @@ c	net/minecraft/unmapped/C_0324512		net/minecraft/server/entity/mob/player/Serve
 		p	2			p_2
 		p	3			p_3
 	m	(Lnet/minecraft/unmapped/C_7699185;)V	m_0753902		setMenu
-		p	1			handler
+		p	1			menu
 	m	(Lnet/minecraft/unmapped/C_7699185;Ljava/util/List;)V	m_0076107		m_0076107
 		p	1			p_1
 		p	2			p_2
@@ -2521,11 +2521,11 @@ c	net/minecraft/unmapped/C_7897127		net/minecraft/server/ServerPlayerInteraction
 	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_2750078;)Z	m_1509177		useItem
 		p	1			player
 		p	2			world
-		p	3			stack
+		p	3			itemInHand
 	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_2750078;IIII)Z	m_7617621		useBlock
 		p	1			player
 		p	2			world
-		p	3			stack
+		p	3			itemInHand
 		p	4			x
 		p	5			y
 		p	6			z

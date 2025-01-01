@@ -397,7 +397,7 @@ c	net/minecraft/unmapped/C_1013763	net/minecraft/entity/mob/MobEntity	net/minecr
 		p	1		source	
 		p	2		amount	
 	m	(Lnet/minecraft/unmapped/C_2750078;)V	m_3981766	renderBrokenItem	
-		p	1		itemStack	
+		p	1		item	
 	m	()Lnet/minecraft/unmapped/C_9418483;	m_8298405	getLookControl	
 	m	()Lnet/minecraft/unmapped/C_5640967;	m_5451904	getMovementControl	
 	m	()Ljava/util/Random;	m_7879772	getRandom	
@@ -433,15 +433,15 @@ c	net/minecraft/unmapped/C_1013763	net/minecraft/entity/mob/MobEntity	net/minecr
 		p	1		entity	
 	m	(I)Lnet/minecraft/unmapped/C_2750078;	m_5792818	getArmor	
 		p	1		slot	
-	m	()V	m_5360949	setEquipment	
-	m	(II)Lnet/minecraft/unmapped/C_4030632;	m_9577593	getArmorType	
-		p	1		armorMaterial	
-		p	0		armorPiece	
+	m	()V	m_5360949	addRandomEquipment	
+	m	(II)Lnet/minecraft/unmapped/C_4030632;	m_9577593	getArmorItem	
+		p	1		tier	
+		p	0		slot	
 	m	()V	m_3681089	enchantWeaponsAndArmor	
 	m	()V	m_6896447	setEntityVariety	
 		c	This method is used to set which variety of entity is spawned. For zombies this can be a zombie or zombie pigman. It can be a spider spawning with a jockey, the color of the sheep etc.	
 	m	()V	<clinit>	<clinit>	
-	m	(Lnet/minecraft/unmapped/C_2750078;)I	m_2966690	getArmorType	
+	m	(Lnet/minecraft/unmapped/C_2750078;)I	m_2966690	getEquipmentSlot	
 		p	0		armor	
 	m	(ZI)V	m_3954997	dropEquipment	
 		p	1		hitByPlayer	
@@ -485,7 +485,7 @@ c	net/minecraft/unmapped/C_1013763	net/minecraft/entity/mob/MobEntity	net/minecr
 		p	1			p_1
 		p	2			p_2
 	m	(Lnet/minecraft/unmapped/C_2750078;)V	m_9670438		renderBrokenItem
-		p	1			itemStack
+		p	1			item
 	m	(ZI)V	m_1749276		dropEquipment
 		p	1			hasBeenHit
 		p	2			lootingLevel
@@ -1014,11 +1014,11 @@ c	net/minecraft/unmapped/C_4844124
 	m	(Ljava/io/DataInputStream;I)Ljava/lang/String;	m_0727242	readString	
 		p	0		input	
 		p	1		maxLength	
-	m	(Ljava/io/DataInputStream;)Lnet/minecraft/unmapped/C_2750078;	m_4582369	readItemStack	
+	m	(Ljava/io/DataInputStream;)Lnet/minecraft/unmapped/C_2750078;	m_4582369	readItem	
 		p	0		input	
-	m	(Lnet/minecraft/unmapped/C_2750078;Ljava/io/DataOutputStream;)V	m_0927322	writeItemStack	
+	m	(Lnet/minecraft/unmapped/C_2750078;Ljava/io/DataOutputStream;)V	m_0927322	writeItem	
 		p	1		output	
-		p	0		stack	
+		p	0		item	
 	m	(Ljava/io/DataInputStream;)Lnet/minecraft/unmapped/C_2800860;	m_7405563	readCompound	
 		p	0		input	
 	m	(Lnet/minecraft/unmapped/C_2800860;Ljava/io/DataOutputStream;)V	m_1834624	writeCompound	
@@ -1057,10 +1057,10 @@ c	net/minecraft/unmapped/C_4844124
 		p	1			input
 	m	(Ljava/io/DataOutput;)V	m_4625396		write
 		p	1			output
-	m	(Ljava/io/DataInput;)Lnet/minecraft/unmapped/C_2750078;	m_4582369		readItemStack
+	m	(Ljava/io/DataInput;)Lnet/minecraft/unmapped/C_2750078;	m_4582369		readItem
 		p	0			input
-	m	(Lnet/minecraft/unmapped/C_2750078;Ljava/io/DataOutput;)V	m_0927322		writeItemStack
-		p	0			stack
+	m	(Lnet/minecraft/unmapped/C_2750078;Ljava/io/DataOutput;)V	m_0927322		writeItem
+		p	0			item
 		p	1			output
 	m	(Ljava/io/DataInput;)Lnet/minecraft/unmapped/C_2800860;	m_7405563		readCompound
 		p	0			input
@@ -3147,7 +3147,7 @@ c	net/minecraft/unmapped/C_3089081
 c	net/minecraft/unmapped/C_6081145
 	m	(Lnet/minecraft/unmapped/C_0786431;Ljava/lang/String;I)V	<init>	<init>	
 		p	1		parent	
-		p	2		p_2	
+		p	2		description	
 		p	3		id	
 	m	(Lnet/minecraft/unmapped/C_0786431;Ljava/lang/String;IZ)V	<init>		<init>
 		p	1			parent
@@ -4607,7 +4607,7 @@ c	net/minecraft/unmapped/C_2587956		net/minecraft/entity/living/mob/MobEntity
 	f	Lnet/minecraft/unmapped/C_6285024;	f_1460195		targetSelector
 	f	Lnet/minecraft/unmapped/C_1013763;	f_1645706		attackTarget
 	f	Lnet/minecraft/unmapped/C_0425827;	f_2182528		mobVisibilityCache
-	f	[Lnet/minecraft/unmapped/C_2750078;	f_1279871		inventorySlots
+	f	[Lnet/minecraft/unmapped/C_2750078;	f_1279871		equipment
 	f	[F	f_8910412		inventoryDropChances
 		c		This array holds the value for both armor drop chances and hand-held item drop chances.
 	f	[Lnet/minecraft/unmapped/C_2750078;	f_4675046		f_4675046
@@ -4681,8 +4681,8 @@ c	net/minecraft/unmapped/C_2587956		net/minecraft/entity/living/mob/MobEntity
 	m	()Lnet/minecraft/unmapped/C_2750078;	m_7121925		m_7121925
 	m	(I)Lnet/minecraft/unmapped/C_2750078;	m_5260880		m_5260880
 		p	1			p_1
-	m	(I)Lnet/minecraft/unmapped/C_2750078;	m_5901136		getArmorStack
-		p	1			armorSlot
+	m	(I)Lnet/minecraft/unmapped/C_2750078;	m_5901136		getArmor
+		p	1			slot
 	m	(ILnet/minecraft/unmapped/C_2750078;)V	m_0129682		m_0129682
 		p	1			p_1
 		p	2			p_2
@@ -4690,13 +4690,13 @@ c	net/minecraft/unmapped/C_2587956		net/minecraft/entity/living/mob/MobEntity
 	m	(ZI)V	m_1749276		m_1749276
 		p	1			p_1
 		p	2			p_2
-	m	()V	m_6941201		initSpawningEquipment
-	m	(Lnet/minecraft/unmapped/C_2750078;)I	m_4208187		getSlotForEquipment
+	m	()V	m_6941201		addRandomEquipment
+	m	(Lnet/minecraft/unmapped/C_2750078;)I	m_4208187		getEquipmentSlot
 		p	0			equipment
 	m	(II)Lnet/minecraft/unmapped/C_4030632;	m_2530795		getEquipmentForSlot
 		p	0			slot
 		p	1			equipmentLevel
-	m	()V	m_6092916		enchantEquipmentItemStack
+	m	()V	m_6092916		enchantEquipment
 	m	()V	m_0405912		initialize
 	m	()Z	m_0969110		canBeControlledByRider
 	m	()Ljava/lang/String;	m_5573014		m_5573014

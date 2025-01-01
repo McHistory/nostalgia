@@ -61,7 +61,7 @@ c	net/minecraft/unmapped/C_0324512
 	m	(Lnet/minecraft/unmapped/C_3906126;)V	m_6683300		m_6683300
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_7699185;)V	m_0753902		setMenu
-		p	1			handler
+		p	1			menu
 c	net/minecraft/unmapped/C_0400468
 	m	()Z	m_1538589		m_1538589
 c	net/minecraft/unmapped/C_0456473
@@ -276,7 +276,7 @@ c	net/minecraft/unmapped/C_4177687
 		p	1			dimensionId
 c	net/minecraft/unmapped/C_4286596
 	m	(Lnet/minecraft/unmapped/C_2750078;)Z	m_0649091		contains
-		p	1			stack
+		p	1			item
 c	net/minecraft/unmapped/C_4443804
 	m	(Lnet/minecraft/unmapped/C_6134274;)V	m_4179569		handleMapData
 		p	1			packet
@@ -381,12 +381,12 @@ c	net/minecraft/unmapped/C_7454374
 	m	(Lnet/minecraft/unmapped/C_1160655;)V	<init>		<init>
 		p	1			p_1
 c	net/minecraft/unmapped/C_7699185
-	m	()Ljava/util/List;	m_6211562		getStacks
-	m	(Lnet/minecraft/unmapped/C_2750078;IIZ)V	m_6892140		moveStack
-		p	1			stack
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
+	m	()Ljava/util/List;	m_6211562		getItems
+	m	(Lnet/minecraft/unmapped/C_2750078;IIZ)V	m_6892140		moveItem
+		p	1			item
+		p	2			from
+		p	3			to
+		p	4			reverse
 c	net/minecraft/unmapped/C_8125832
 	f	Ljava/util/Random;	f_3014464		random
 	m	(Lnet/minecraft/unmapped/C_3906126;III)V	m_6138806		m_6138806
@@ -639,9 +639,9 @@ c	net/minecraft/unmapped/C_6285226		net/minecraft/world/map/SavedMapData
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_2750078;)V	m_6027399		tickHolder
 		p	1			player
-		p	2			itemStack
+		p	2			item
 	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_5009044;)[B	m_5765838		getUpdateData
-		p	1			stack
+		p	1			item
 		p	2			world
 		p	3			player
 	m	(III)V	m_1841181		markDirty
@@ -662,7 +662,7 @@ c	net/minecraft/unmapped/C_6285226$C_2230951		Holder
 		p	2			player
 	m	(Lnet/minecraft/unmapped/C_2750078;)[B	m_2378782		getUpdateData
 		c		Packs data for a map update packet in a byte array. The first byte encodes the type\nof update:\n<br>0: colors\n<br>1: decorations\n<br>2: scale
-		p	1			stack
+		p	1			item
 c	net/minecraft/unmapped/C_6285226$C_8881530		Decoration
 	f	B	f_4504006		type
 	f	B	f_1734695		x
@@ -704,7 +704,7 @@ c	net/minecraft/unmapped/C_6786653		net/minecraft/item/FilledMapItem
 	m	(I)V	<init>		<init>
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_3906126;)Lnet/minecraft/unmapped/C_6285226;	m_7833556		getSavedMapData
-		p	1			stack
+		p	1			item
 		p	2			world
 	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_6285226;)V	m_4526361		update
 		p	1			world

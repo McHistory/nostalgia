@@ -174,11 +174,11 @@ c	net/minecraft/unmapped/C_0974371
 		p	1			p_1
 c	net/minecraft/unmapped/C_1013763
 	f	Lnet/minecraft/unmapped/C_6954368;	f_6249670		damageTracker
-	m	(Lnet/minecraft/unmapped/C_2750078;I)I	m_3422399	getIconSprite	
-		p	1		stack	
+	m	(Lnet/minecraft/unmapped/C_2750078;I)I	m_3422399	getItemSprite	
+		p	1		item	
 		p	2		layer	
-	m	(Lnet/minecraft/unmapped/C_2750078;I)Lnet/minecraft/unmapped/C_5307437;	m_3422399		getIconSprite
-		p	1			stack
+	m	(Lnet/minecraft/unmapped/C_2750078;I)Lnet/minecraft/unmapped/C_5307437;	m_3422399		getItemSprite
+		p	1			item
 		p	2			layer
 	m	()Lnet/minecraft/unmapped/C_1013763;	m_1048888		getLastAttacker
 	m	()Ljava/lang/String;	m_5573014		m_5573014
@@ -688,7 +688,7 @@ c	net/minecraft/unmapped/C_3635204
 		p	3			y
 		p	4			z
 		p	5			face
-		p	6			stack
+		p	6			item
 	m	(Lnet/minecraft/unmapped/C_3906126;IIILnet/minecraft/unmapped/C_1013763;Lnet/minecraft/unmapped/C_2750078;)V	m_0797987		onPlaced
 		c		Called when this block is placed by an entity.
 		p	1			world
@@ -696,7 +696,7 @@ c	net/minecraft/unmapped/C_3635204
 		p	3			y
 		p	4			z
 		p	5			entity
-		p	6			stack
+		p	6			item
 	m	()Ljava/lang/String;	m_4868665		getKey
 	m	(Lnet/minecraft/unmapped/C_9549188;)V	m_9955335		loadSprites
 		p	1			loader
@@ -795,7 +795,7 @@ c	net/minecraft/unmapped/C_3906126
 		p	5			skipCollisionChecks
 		p	6			face
 		p	7			entity
-		p	8			stack
+		p	8			item
 c	net/minecraft/unmapped/C_4030632
 	f	Lnet/minecraft/unmapped/C_4030632;	f_1430064	BOW	
 	f	Lnet/minecraft/unmapped/C_4030632;	f_7020203	LEATHER_HELMET	
@@ -2295,9 +2295,9 @@ c	net/minecraft/unmapped/C_4238360
 c	net/minecraft/unmapped/C_8208660
 	f	Ljava/lang/String;	f_8489813		name
 	m	(Lnet/minecraft/unmapped/C_4286596;Lnet/minecraft/unmapped/C_7834269;Lnet/minecraft/unmapped/C_3906126;)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
+		p	1		playerInventory	
+		p	2		trader	
+		p	3		world	
 	m	(Lnet/minecraft/unmapped/C_4286596;Lnet/minecraft/unmapped/C_7834269;Lnet/minecraft/unmapped/C_3906126;Ljava/lang/String;)V	<init>		<init>
 		p	1			playerInventory
 		p	2			trader
@@ -2456,17 +2456,17 @@ c	net/minecraft/unmapped/C_0024265
 	f	Ljava/lang/String;	f_7749162		customName
 	m	(Lnet/minecraft/unmapped/C_4390289;)I	m_6595383	getFirstAvailableSlot	
 		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_4390289;Lnet/minecraft/unmapped/C_2750078;)Lnet/minecraft/unmapped/C_2750078;	m_6130482	pushItems	
+	m	(Lnet/minecraft/unmapped/C_4390289;Lnet/minecraft/unmapped/C_2750078;)Lnet/minecraft/unmapped/C_2750078;	m_6130482	pushItem	
 		p	1		p_1	
 		p	2		p_2	
 	m	()Z	m_1232759		m_1232759
-	m	()Z	m_9820358		pushItems
-	m	()Z	m_4119911		pullItems
+	m	()Z	m_9820358		pushItem
+	m	()Z	m_4119911		pullItem
 	m	(Lnet/minecraft/unmapped/C_4390289;I)I	m_6595383		getFirstAvailableSlot
 		p	1			side
 		p	2			p_2
-	m	(Lnet/minecraft/unmapped/C_4390289;Lnet/minecraft/unmapped/C_2750078;I)Lnet/minecraft/unmapped/C_2750078;	m_6130482		pushItems
-		p	1			stack
+	m	(Lnet/minecraft/unmapped/C_4390289;Lnet/minecraft/unmapped/C_2750078;I)Lnet/minecraft/unmapped/C_2750078;	m_6130482		pushItem
+		p	1			item
 		p	2			side
 		p	3			p_3
 c	net/minecraft/unmapped/C_0547482
@@ -2624,7 +2624,7 @@ c	net/minecraft/unmapped/C_0728223		net/minecraft/client/render/texture/TextureC
 	m	()I	m_8603524		getWidth
 	m	()I	m_4240646		getHeight
 c	net/minecraft/unmapped/C_0778972		net/minecraft/entity/vehicle/InventoryMinecartEntity
-	f	[Lnet/minecraft/unmapped/C_2750078;	f_3160181		stacks
+	f	[Lnet/minecraft/unmapped/C_2750078;	f_3160181		items
 	f	Z	f_2920397		canBeRemoved
 	m	(Lnet/minecraft/unmapped/C_3906126;)V	<init>		<init>
 		p	1			p_1

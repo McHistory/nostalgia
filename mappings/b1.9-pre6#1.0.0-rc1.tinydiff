@@ -261,7 +261,7 @@ c	net/minecraft/unmapped/C_0324512	net/minecraft/server/entity/mob/player/Server
 	f	I	f_1478225	spawnProtectionTicks	
 	f	I	f_3098613	menuId	
 	f	Z	f_2104338	useItemCooldown	
-	f	[Lnet/minecraft/unmapped/C_2750078;	f_5960888	equipmentStacks	
+	f	[Lnet/minecraft/unmapped/C_2750078;	f_5960888	equipment	
 	f	I	f_0301828	lastHungerLevel	
 	f	Z	f_2371118	wasHungry	
 	f	I	f_1096552	lastSentXp	
@@ -317,8 +317,8 @@ c	net/minecraft/unmapped/C_0324512	net/minecraft/server/entity/mob/player/Server
 	m	()V	m_0769147	use	
 	m	()V	m_1952736	doCloseMenu	
 	m	()[Lnet/minecraft/unmapped/C_2750078;	m_9919834	m_9919834	
-	m	(I)Lnet/minecraft/unmapped/C_2750078;	m_4716717	getItem	
-		p	1		p_1	
+	m	(I)Lnet/minecraft/unmapped/C_2750078;	m_4716717	getEquipment	
+		p	1		slot	
 	m	(Lnet/minecraft/unmapped/C_0356559;)V	m_2791355	m_2791355	
 		p	1		p_1	
 	m	()V	m_9844463	m_9844463	
@@ -347,7 +347,7 @@ c	net/minecraft/unmapped/C_0324512	net/minecraft/server/entity/mob/player/Server
 	m	(Lnet/minecraft/unmapped/C_3906126;)V	m_6683300	m_6683300	
 		p	1		p_1	
 	m	(Lnet/minecraft/unmapped/C_7699185;)V	m_0753902	setMenu	
-		p	1		handler	
+		p	1		menu	
 	m	()V	m_4740817	onDisconnect	
 	m	()V	m_2339273	markHealthDirty	
 	m	(Ljava/lang/String;)V	m_0278228	m_0278228	
@@ -517,7 +517,7 @@ c	net/minecraft/unmapped/C_0990852
 		p	3		value	
 c	net/minecraft/unmapped/C_1013763
 	m	(Lnet/minecraft/unmapped/C_2750078;)V	m_3981766		renderBrokenItem
-		p	1			itemStack
+		p	1			item
 c	net/minecraft/unmapped/C_1019530
 	m	(Lnet/minecraft/unmapped/C_6385858;I)V	<init>	<init>	
 		p	1		entity	
@@ -538,7 +538,7 @@ c	net/minecraft/unmapped/C_1111347
 c	net/minecraft/unmapped/C_1249120
 	m	(ILjava/util/List;)V	<init>	<init>	
 		p	1		menuId	
-		p	2		stacks	
+		p	2		items	
 c	net/minecraft/unmapped/C_1591456	net/minecraft/server/network/ConnectionListener	
 	f	Ljava/util/logging/Logger;	f_4712395	LOGGER	
 	f	Ljava/net/ServerSocket;	f_2249420	socket	
@@ -689,9 +689,9 @@ c	net/minecraft/unmapped/C_2750078
 		p	1			amount
 		p	2			entity
 c	net/minecraft/unmapped/C_2786920
-	m	(Lnet/minecraft/unmapped/C_7699185;Ljava/util/List;)V	m_0076107	updateMenu	
+	m	(Lnet/minecraft/unmapped/C_7699185;Ljava/util/List;)V	m_0076107	onMenuChanged	
 		p	1		menu	
-		p	2		stacks	
+		p	2		items	
 c	net/minecraft/unmapped/C_3050136
 	m	()Ljava/lang/String;	m_5573014	m_5573014	
 c	net/minecraft/unmapped/C_3146305	net/minecraft/entity/SpawnableEntity	
@@ -872,7 +872,7 @@ c	net/minecraft/unmapped/C_6265960$2093089	2093089
 	m	(Ljava/util/logging/LogRecord;)Ljava/lang/String;	format	format	
 		p	1		p_1	
 c	net/minecraft/unmapped/C_6385858
-	m	()[Lnet/minecraft/unmapped/C_2750078;	m_9919834	getEquipmentStacks	
+	m	()[Lnet/minecraft/unmapped/C_2750078;	m_9919834	getEquipment	
 	m	(Z)V	m_8609807	setSneaking	
 		p	1		sneaking	
 	m	()Ljava/lang/String;	m_5573014	getName	
@@ -1037,7 +1037,7 @@ c	net/minecraft/unmapped/C_7699185
 	m	(Lnet/minecraft/unmapped/C_5009044;Z)V	m_0697184	setSynced	
 		p	1		player	
 		p	2		synced	
-	m	()Ljava/util/List;	m_6211562	getStacks	
+	m	()Ljava/util/List;	m_6211562	getItems	
 c	net/minecraft/unmapped/C_7897127	net/minecraft/server/ServerPlayerInteractionManager	
 	f	Lnet/minecraft/unmapped/C_5009044;	f_5832068	player	
 	f	I	f_2112129	targetX	
@@ -1064,11 +1064,11 @@ c	net/minecraft/unmapped/C_7897127	net/minecraft/server/ServerPlayerInteractionM
 	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_2750078;)Z	m_1509177	useItem	
 		p	1		player	
 		p	2		world	
-		p	3		stack	
+		p	3		itemInHand	
 	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_2750078;IIII)Z	m_7617621	useBlock	
 		p	1		player	
 		p	2		world	
-		p	3		stack	
+		p	3		itemInHand	
 		p	4		x	
 		p	5		y	
 		p	6		z	
@@ -1279,8 +1279,8 @@ c	net/minecraft/unmapped/C_9048725$C_5237390	ConsoleFormatter
 c	net/minecraft/unmapped/C_9381557
 	m	(IILnet/minecraft/unmapped/C_2750078;)V	<init>	<init>	
 		p	1		menuId	
-		p	2		slotId	
-		p	3		stack	
+		p	2		slot	
+		p	3		item	
 c	net/minecraft/unmapped/C_9614477
 	m	(Ljava/lang/String;IJIBBBB)V	<init>	<init>	
 		p	1		p_1	
@@ -1294,8 +1294,8 @@ c	net/minecraft/unmapped/C_9614477
 c	net/minecraft/unmapped/C_9701483
 	m	(IILnet/minecraft/unmapped/C_2750078;)V	<init>	<init>	
 		p	1		id	
-		p	2		equipmentSlot	
-		p	3		stack	
+		p	2		slot	
+		p	3		item	
 c	net/minecraft/unmapped/C_9814383
 	m	(IIIIBB)V	<init>	<init>	
 		p	1		id	
@@ -1408,14 +1408,14 @@ c	net/minecraft/unmapped/C_6134274
 		p	3		data	
 c	net/minecraft/unmapped/C_6285226
 	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_5009044;)[B	m_5765838	getUpdateData	
-		p	1		stack	
+		p	1		item	
 		p	2		world	
 		p	3		player	
 c	net/minecraft/unmapped/C_6285226$C_2230951
 	f	[B	f_5086351	decorations	
 	m	(Lnet/minecraft/unmapped/C_2750078;)[B	m_2378782	getUpdateData	
 		c	Packs data for a map update packet in a byte array. The first byte encodes the type\nof update:\n<br>0: colors\n<br>1: decorations\n<br>2: scale	
-		p	1		stack	
+		p	1		item	
 c	net/minecraft/unmapped/C_6377547	net/minecraft/server/world/ReadOnlyServerWorld	
 	m	(Lnet/minecraft/server/MinecraftServer;Lnet/minecraft/unmapped/C_9147018;Ljava/lang/String;ILnet/minecraft/unmapped/C_4413269;Lnet/minecraft/unmapped/C_7366354;)V	<init>	<init>	
 		p	1		server	

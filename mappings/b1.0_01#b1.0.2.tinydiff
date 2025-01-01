@@ -162,7 +162,7 @@ c	net/minecraft/unmapped/C_0324512	net/minecraft/server/entity/mob/player/Server
 	f	Z	f_1534277	sneaking	
 	f	I	f_5431237	lastHealth	
 	f	I	f_1478225	spawnProtectionTicks	
-	f	[I	f_5960888	equipmentStacks	
+	f	[I	f_5960888	equipment	
 	f	I	f_3098613	menuId	
 	f	Z	f_2104338	useItemCooldown	
 	m	(Lnet/minecraft/server/MinecraftServer;Lnet/minecraft/unmapped/C_3906126;Ljava/lang/String;Lnet/minecraft/unmapped/C_7897127;)V	<init>	<init>	
@@ -173,10 +173,10 @@ c	net/minecraft/unmapped/C_0324512	net/minecraft/server/entity/mob/player/Server
 	m	()V	m_8923386	initMenu	
 	m	()[I	m_9919834	m_9919834	
 	m	()V	m_0718337	m_0718337	
-	m	(I)I	m_4716717	getItem	
+	m	(I)I	m_4716717	getEquipment	
 		p	1		slot	
-	m	(Lnet/minecraft/unmapped/C_2750078;)I	m_1764085	getItem	
-		p	1		stack	
+	m	(Lnet/minecraft/unmapped/C_2750078;)I	m_1764085	getItemId	
+		p	1		item	
 	m	(Lnet/minecraft/unmapped/C_6385858;)V	m_4650833	m_4650833	
 		p	1		p_1	
 	m	(Lnet/minecraft/unmapped/C_6385858;I)Z	m_3238154	m_3238154	
@@ -363,7 +363,7 @@ c	net/minecraft/unmapped/C_1203617
 c	net/minecraft/unmapped/C_1249120
 	m	(ILjava/util/List;)V	<init>	<init>	
 		p	1		menuId	
-		p	2		stacks	
+		p	2		items	
 c	net/minecraft/unmapped/C_1264342	net/minecraft/util/Long2ObjectHashMap	
 	f	[Lnet/minecraft/unmapped/C_1264342$C_3038154;	f_4001216	nodes	
 	f	I	f_1773023	size	
@@ -565,9 +565,9 @@ c	net/minecraft/unmapped/C_2750078
 	m	(Lnet/minecraft/unmapped/C_2750078;)Lnet/minecraft/unmapped/C_2750078;	m_6559409	copyOf	
 		p	0		stack	
 c	net/minecraft/unmapped/C_2786920
-	m	(Lnet/minecraft/unmapped/C_7699185;Ljava/util/List;)V	m_0076107	updateMenu	
+	m	(Lnet/minecraft/unmapped/C_7699185;Ljava/util/List;)V	m_0076107	onMenuChanged	
 		p	1		menu	
-		p	2		stacks	
+		p	2		items	
 c	net/minecraft/unmapped/C_3146305	net/minecraft/entity/SpawnableEntity	
 	c	An entity that spawns naturally.	
 c	net/minecraft/unmapped/C_3157620
@@ -715,7 +715,7 @@ c	net/minecraft/unmapped/C_6265960$2093089	2093089
 	m	(Ljava/util/logging/LogRecord;)Ljava/lang/String;	format	format	
 		p	1		p_1	
 c	net/minecraft/unmapped/C_6385858
-	m	()[I	m_9919834	getEquipmentStacks	
+	m	()[I	m_9919834	getEquipment	
 c	net/minecraft/unmapped/C_6755599
 	m	([BIIIIIII)I	m_5989424	packChunkData	
 		p	1		data	
@@ -887,11 +887,11 @@ c	net/minecraft/unmapped/C_7897127	net/minecraft/server/ServerPlayerInteractionM
 	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_2750078;)Z	m_1509177	useItem	
 		p	1		player	
 		p	2		world	
-		p	3		stack	
+		p	3		itemInHand	
 	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_2750078;IIII)Z	m_7617621	useBlock	
 		p	1		player	
 		p	2		world	
-		p	3		stack	
+		p	3		itemInHand	
 		p	4		x	
 		p	5		y	
 		p	6		z	
@@ -1054,8 +1054,8 @@ c	net/minecraft/unmapped/C_9048725$C_5237390	ConsoleFormatter
 c	net/minecraft/unmapped/C_9381557
 	m	(IILnet/minecraft/unmapped/C_2750078;)V	<init>	<init>	
 		p	1		menuId	
-		p	2		slotId	
-		p	3		stack	
+		p	2		slot	
+		p	3		item	
 c	net/minecraft/unmapped/C_9386942
 	m	(Lnet/minecraft/unmapped/C_6385858;)D	m_4819229	squaredDistanceToCenter	
 		p	1		entity	
@@ -1068,9 +1068,9 @@ c	net/minecraft/unmapped/C_9614477
 		p	6		dimensionId	
 c	net/minecraft/unmapped/C_9701483
 	m	(III)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
+		p	1		id	
+		p	2		slot	
+		p	3		item	
 c	net/minecraft/unmapped/C_9814383
 	m	(IIIIBB)V	<init>	<init>	
 		p	1		id	

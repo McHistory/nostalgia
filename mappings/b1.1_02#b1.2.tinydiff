@@ -15,17 +15,17 @@ c	net/minecraft/unmapped/C_0258789
 	m	()V	m_5891931		m_5891931
 c	net/minecraft/unmapped/C_0324512
 	f	Z	f_1534277	sneaking	
-	f	[I	f_5960888	equipmentStacks	
-	f	[Lnet/minecraft/unmapped/C_2750078;	f_5960888		equipmentStacks
+	f	[I	f_5960888	equipment	
+	f	[Lnet/minecraft/unmapped/C_2750078;	f_5960888		equipment
 	m	()[I	m_9919834	m_9919834	
-	m	(I)I	m_4716717	getItem	
+	m	(I)I	m_4716717	getEquipment	
 		p	1		slot	
-	m	(Lnet/minecraft/unmapped/C_2750078;)I	m_1764085	getItem	
-		p	1		stack	
+	m	(Lnet/minecraft/unmapped/C_2750078;)I	m_1764085	getItemId	
+		p	1		item	
 	m	()Z	m_8698004	m_8698004	
 	m	()[Lnet/minecraft/unmapped/C_2750078;	m_9919834		m_9919834
-	m	(I)Lnet/minecraft/unmapped/C_2750078;	m_4716717		getItem
-		p	1			p_1
+	m	(I)Lnet/minecraft/unmapped/C_2750078;	m_4716717		getEquipment
+		p	1			slot
 	m	(Lnet/minecraft/unmapped/C_0356559;)V	m_2791355		m_2791355
 		p	1			p_1
 c	net/minecraft/unmapped/C_0559439
@@ -131,7 +131,7 @@ c	net/minecraft/unmapped/C_2154975$7900111
 		p	1			p_1
 		p	2			p_2
 c	net/minecraft/unmapped/C_2178068
-	m	(II)Lnet/minecraft/unmapped/C_2750078;	m_1103542		getStack
+	m	(II)Lnet/minecraft/unmapped/C_2750078;	m_1103542		getItem
 		p	1			column
 		p	2			row
 c	net/minecraft/unmapped/C_2339776
@@ -166,9 +166,9 @@ c	net/minecraft/unmapped/C_2695821
 	m	()I	m_2153815		getBirchColor
 c	net/minecraft/unmapped/C_2750078
 	m	(I)V	<init>	<init>	
-		p	1		item	
+		p	1		id	
 	m	(II)V	<init>	<init>	
-		p	1		item	
+		p	1		id	
 		p	2		size	
 	m	(Lnet/minecraft/unmapped/C_3635204;II)V	<init>		<init>
 		p	1			block
@@ -366,14 +366,13 @@ c	net/minecraft/unmapped/C_4188659
 c	net/minecraft/unmapped/C_4286596
 	m	(I)I	m_7123133	getSlotWithSpace	
 		p	1		item	
-	m	(II)I	m_4972139	addItem	
+	m	(II)I	m_4972139	addItemStack	
 		p	1		item	
 		p	2		amount	
 	m	(Lnet/minecraft/unmapped/C_2750078;)I	m_7123133		getSlotWithSpace
-		p	1			stack
-	m	(Lnet/minecraft/unmapped/C_2750078;)I	m_4972139		addItem
-		c		Puts Items where the will fit in the inventory\n\n@return Whatever is left of the stack, 0 If the whole stack fit.
-		p	1			stack
+		p	1			item
+	m	(Lnet/minecraft/unmapped/C_2750078;)I	m_4972139		addItemStack
+		p	1			item
 c	net/minecraft/unmapped/C_4443804
 	m	(Lnet/minecraft/unmapped/C_8670302;)V	m_5326655		handlePlayerMovementAction
 		p	1			packet
@@ -451,18 +450,18 @@ c	net/minecraft/unmapped/C_6151866
 	m	(I)I	m_3974337		m_3974337
 		p	1			p_1
 c	net/minecraft/unmapped/C_6385858
-	f	Z	f_6177953	f_6177953	
-	f	Z	f_6738905	f_6738905	
-	f	Z	f_0260780	f_0260780	
+	f	Z	f_6177953	hasVehicle	
+	f	Z	f_6738905	onFire	
+	f	Z	f_0260780	sneaking	
 	f	Lnet/minecraft/unmapped/C_5067501;	f_1131823		syncedData
 	m	(IIF)Lnet/minecraft/unmapped/C_3050136;	m_4351561	dropItem	
 		p	1		item	
 		p	2		amount	
 		p	3		dy	
-	m	(II)V	m_0129682	setEquipmentStack	
-		p	1		p_1	
-		p	2		p_2	
-	m	()[I	m_9919834	getEquipmentStacks	
+	m	(II)V	m_0129682	setEquipment	
+		p	1		slot	
+		p	2		item	
+	m	()[I	m_9919834	getEquipment	
 	m	()V	m_5855336		registerSyncedData
 	m	()Lnet/minecraft/unmapped/C_5067501;	m_4655395		getSyncedData
 	m	(IIF)Lnet/minecraft/unmapped/C_3050136;	m_4336212		dropItem
@@ -470,15 +469,15 @@ c	net/minecraft/unmapped/C_6385858
 		p	2			amount
 		p	3			offsetY
 	m	(Lnet/minecraft/unmapped/C_2750078;F)Lnet/minecraft/unmapped/C_3050136;	m_4351561		dropItem
-		p	1			stack
+		p	1			item
 		p	2			offsetY
-	m	(III)V	m_0129682		setEquipmentStack
+	m	(III)V	m_0129682		setEquipment
 		p	1			armorSlot
 		p	2			itemId
 		p	3			metaData
 	m	()Z	m_2708319		isOnFire
 	m	()Z	m_4500577		hasVehicle
-	m	()[Lnet/minecraft/unmapped/C_2750078;	m_9919834		getEquipmentStacks
+	m	()[Lnet/minecraft/unmapped/C_2750078;	m_9919834		getEquipment
 	m	(Z)V	m_8609807		setSneaking
 		p	1			sneaking
 	m	(I)Z	m_1438249		getFlag
@@ -658,13 +657,13 @@ c	net/minecraft/unmapped/C_9484672
 c	net/minecraft/unmapped/C_9701483
 	f	I	f_9270018		metadata
 	m	(III)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
+		p	1		id	
+		p	2		slot	
+		p	3		item	
 	m	(IILnet/minecraft/unmapped/C_2750078;)V	<init>		<init>
 		p	1			id
-		p	2			equipmentSlot
-		p	3			stack
+		p	2			slot
+		p	3			item
 c	net/minecraft/unmapped/C_9746149
 	m	()V	m_5855336		m_5855336
 c	net/minecraft/unmapped/C_9958683

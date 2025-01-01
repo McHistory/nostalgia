@@ -57,13 +57,13 @@ c	net/minecraft/unmapped/C_0732654
 		p	2		y	
 		p	3		z	
 		p	4		face	
-		p	5		stack	
+		p	5		itemInHand	
 	m	(IIIILnet/minecraft/unmapped/C_2750078;FFF)V	<init>		<init>
 		p	1			x
 		p	2			y
 		p	3			z
 		p	4			face
-		p	5			stack
+		p	5			itemInHand
 		p	6			dx
 		p	7			dy
 		p	8			dz
@@ -71,7 +71,7 @@ c	net/minecraft/unmapped/C_0732654
 	m	()I	m_3624065		getY
 	m	()I	m_3732533		getZ
 	m	()I	m_5171976		getFace
-	m	()Lnet/minecraft/unmapped/C_2750078;	m_9058347		getStack
+	m	()Lnet/minecraft/unmapped/C_2750078;	m_9058347		getItemInHand
 	m	()F	m_0291184		getDx
 	m	()F	m_9139182		getDy
 	m	()F	m_9321637		getDz
@@ -318,7 +318,7 @@ c	net/minecraft/unmapped/C_3635204
 		p	2			x
 		p	3			y
 		p	4			z
-		p	5			blockId
+		p	5			block
 		p	6			metadata
 	m	(Lnet/minecraft/unmapped/C_3906126;IIII)V	m_7956911		dropXp
 		p	1			world
@@ -439,7 +439,7 @@ c	net/minecraft/unmapped/C_4237166
 	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_2750078;IIII)Z	m_0257155	useBlock	
 		p	1		player	
 		p	2		world	
-		p	3		stack	
+		p	3		itemInHand	
 		p	4		x	
 		p	5		y	
 		p	6		z	
@@ -460,12 +460,12 @@ c	net/minecraft/unmapped/C_4237166
 	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_2750078;IIIILnet/minecraft/unmapped/C_0336319;)Z	m_0257155		useBlock
 		p	1			player
 		p	2			world
-		p	3			stack
+		p	3			item
 		p	4			x
 		p	5			y
 		p	6			z
 		p	7			face
-		p	8			hitPos
+		p	8			offset
 	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_6385858;)Z	m_8854017		interactEntity
 		p	1			player
 		p	2			target
@@ -631,12 +631,12 @@ c	net/minecraft/unmapped/C_6768539
 		p	10			p_10
 c	net/minecraft/unmapped/C_6923352
 	m	(Lnet/minecraft/client/Minecraft;IIIFF)V	m_8274924		renderEntity
-		p	0			p_0
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
+		p	0			minecraft
+		p	1			x
+		p	2			y
+		p	3			scale
+		p	4			yaw
+		p	5			pitch
 c	net/minecraft/unmapped/C_7137679
 	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_3906126;IIII)Z	m_9844872	m_9844872	
 		p	1		p_1	
@@ -812,7 +812,7 @@ c	net/minecraft/unmapped/C_7897127
 	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_2750078;IIII)Z	m_7617621	useBlock	
 		p	1		player	
 		p	2		world	
-		p	3		stack	
+		p	3		itemInHand	
 		p	4		x	
 		p	5		y	
 		p	6		z	
@@ -830,7 +830,7 @@ c	net/minecraft/unmapped/C_7897127
 	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_2750078;IIIIFFF)Z	m_7617621		useBlock
 		p	1			player
 		p	2			world
-		p	3			stack
+		p	3			itemInHand
 		p	4			x
 		p	5			y
 		p	6			z
@@ -1363,12 +1363,12 @@ c	net/minecraft/unmapped/C_6028060
 	f	Ljava/util/List;	f_6020150		slots
 	f	Lnet/minecraft/unmapped/C_7192378;	f_6199480		slot
 c	net/minecraft/unmapped/C_6028060$C_9946201		CreativeInventorySlot
-	f	Lnet/minecraft/unmapped/C_7192378;	f_6824022		invSlot
+	f	Lnet/minecraft/unmapped/C_7192378;	f_6824022		slot
 	f	Lnet/minecraft/unmapped/C_6028060;	f_2476488		inventoryScreen
 	m	(Lnet/minecraft/unmapped/C_6028060;Lnet/minecraft/unmapped/C_7192378;I)V	<init>		<init>
 		p	1			p_1
-		p	2			invSlot
-		p	3			slot
+		p	2			slot
+		p	3			id
 	m	(Lnet/minecraft/unmapped/C_2750078;)V	m_7573710		m_7573710
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_2750078;)Z	m_6628482		m_6628482
@@ -1544,11 +1544,11 @@ c	net/minecraft/unmapped/C_4806482
 c	net/minecraft/unmapped/C_7166340
 	m	(Ljava/util/Random;Lnet/minecraft/unmapped/C_2750078;I)V	m_1223566	addRandomEnchantment	
 		p	0		random	
-		p	1		stack	
+		p	1		item	
 		p	2		xpLevel	
 	m	(Ljava/util/Random;Lnet/minecraft/unmapped/C_2750078;I)Lnet/minecraft/unmapped/C_2750078;	m_1223566		addRandomEnchantment
 		p	0			random
-		p	1			stack
+		p	1			item
 		p	2			xpLevel
 c	net/minecraft/unmapped/C_3690542
 	m	()Z	m_8396270		m_8396270

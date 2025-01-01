@@ -809,10 +809,10 @@ c	net/minecraft/unmapped/C_2741119
 		p	1		p_1	
 	m	()V	<init>		<init>
 c	net/minecraft/unmapped/C_2750078
-	f	I	f_0780610	item	
+	f	I	f_0780610	id	
 	f	Lnet/minecraft/unmapped/C_4030632;	f_0780610		item
 	m	(III)V	<init>	<init>	
-		p	1		item	
+		p	1		id	
 		p	2		size	
 		p	3		metadata	
 	m	(Lnet/minecraft/unmapped/C_3906126;IIIILnet/minecraft/unmapped/C_5009044;)V	m_3316715	mineBlock	
@@ -1314,7 +1314,7 @@ c	net/minecraft/unmapped/C_3635204
 		p	2		x	
 		p	3		y	
 		p	4		z	
-		p	5		blockId	
+		p	5		block	
 		p	6		metadata	
 	m	(I)Z	m_9214095	is	
 		p	1		blockId	
@@ -1532,7 +1532,7 @@ c	net/minecraft/unmapped/C_3906126
 		p	5		skipCollisionChecks	
 		p	6		face	
 		p	7		entity	
-		p	8		stack	
+		p	8		item	
 	m	(IIIII)V	m_0427689	updateNeighborsExcept	
 		p	1		x	
 		p	2		y	
@@ -1651,7 +1651,7 @@ c	net/minecraft/unmapped/C_3906126
 		p	5			skipCollisionChecks
 		p	6			face
 		p	7			entity
-		p	8			stack
+		p	8			item
 	m	(IIILnet/minecraft/unmapped/C_3635204;II)V	m_3224255		addBlockEvent
 		p	1			x
 		p	2			y
@@ -1864,8 +1864,8 @@ c	net/minecraft/unmapped/C_4030632
 	m	(I)V	<init>	<init>	
 		p	1		id	
 	m	()Ljava/lang/String;	m_7907019	getDisplayName	
-	m	()Ljava/lang/String;	m_2050122	getPotionIngredient	
-	m	()Z	m_6814134	hasPotionIngredient	
+	m	()Ljava/lang/String;	m_2050122	asPotionIngredient	
+	m	()Z	m_6814134	isPotionIngredient	
 	m	(Lnet/minecraft/unmapped/C_2750078;)Ljava/lang/String;	m_3229391	getDisplayName	
 		p	1		stack	
 	m	(ILnet/minecraft/unmapped/C_6619871;Ljava/util/List;)V	m_2766706	addToCreativeMenu	
@@ -1896,9 +1896,9 @@ c	net/minecraft/unmapped/C_4030632
 		p	5			y
 		p	6			z
 		p	7			entity
-	m	(Lnet/minecraft/unmapped/C_2750078;)Ljava/lang/String;	m_2050122		getPotionIngredient
+	m	(Lnet/minecraft/unmapped/C_2750078;)Ljava/lang/String;	m_2050122		asPotionIngredient
 		p	1			stack
-	m	(Lnet/minecraft/unmapped/C_2750078;)Z	m_6814134		hasPotionIngredient
+	m	(Lnet/minecraft/unmapped/C_2750078;)Z	m_6814134		isPotionIngredient
 		p	1			stack
 	m	(Lnet/minecraft/unmapped/C_4030632;Lnet/minecraft/unmapped/C_6619871;Ljava/util/List;)V	m_2766706		addToCreativeMenu
 		p	1			item
@@ -2276,8 +2276,8 @@ c	net/minecraft/unmapped/C_4826976
 	m	()F	m_8536863		m_8536863
 c	net/minecraft/unmapped/C_4917405
 c	net/minecraft/unmapped/C_4917405$1367407		1367407
-	f	Lnet/minecraft/unmapped/C_2750078;	f_6804004		stack
-	f	Lnet/minecraft/unmapped/C_4917405;	f_5091273		itemRenderer
+	f	Lnet/minecraft/unmapped/C_2750078;	f_6804004		f_6804004
+	f	Lnet/minecraft/unmapped/C_4917405;	f_5091273		f_5091273
 	m	(Lnet/minecraft/unmapped/C_4917405;Lnet/minecraft/unmapped/C_2750078;)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
@@ -3984,7 +3984,7 @@ c	net/minecraft/unmapped/C_8447387
 		p	1			input
 	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_2750078;)Z	m_2117098		matchesInput
 		c		Checks if the given item stack matches the given recipe input.
-		p	1			stack
+		p	1			item
 		p	2			input
 	m	(Lnet/minecraft/unmapped/C_2750078;)F	m_9429007		getXp
 		p	1			input
@@ -5205,7 +5205,7 @@ c	net/minecraft/unmapped/C_7324071
 		p	1		item	
 	m	(Lnet/minecraft/unmapped/C_0526782;Lnet/minecraft/unmapped/C_2750078;)V	m_9660568		add
 		p	1			food
-		p	2			stack
+		p	2			item
 c	net/minecraft/unmapped/C_7653691
 	m	()V	m_3432737		refresh
 c	net/minecraft/unmapped/C_7653691$C_9130685
@@ -5590,42 +5590,42 @@ c	net/minecraft/unmapped/C_0043375
 	m	()I	m_2225185	m_2225185	
 	m	()Lnet/minecraft/unmapped/C_4030632;	m_2225185		m_2225185
 c	net/minecraft/unmapped/C_1168245
-	m	(Lnet/minecraft/unmapped/C_6499672;ILjava/util/Random;F)V	m_7243822	makeBuyTradeOffer	
-		p	0		tradeOffers	
-		p	1		size	
+	m	(Lnet/minecraft/unmapped/C_6499672;ILjava/util/Random;F)V	m_7243822	addBuyTradeOffer	
+		p	0		offers	
+		p	1		item	
 		p	2		random	
-		p	3		baseChance	
-	m	(ILjava/util/Random;)Lnet/minecraft/unmapped/C_2750078;	m_7758199	getItemStack	
-		p	0		size	
+		p	3		chance	
+	m	(ILjava/util/Random;)Lnet/minecraft/unmapped/C_2750078;	m_7758199	makeTradeItem	
+		p	0		item	
 		p	1		random	
-	m	(ILjava/util/Random;)I	m_9514471	getBuyItemAmount	
-		p	0		size	
+	m	(ILjava/util/Random;)I	m_9514471	pickBuyTradeItemAmount	
+		p	0		item	
 		p	1		random	
-	m	(Lnet/minecraft/unmapped/C_6499672;ILjava/util/Random;F)V	m_2849120	makeSellTradeOffer	
-		p	0		tradeOffers	
-		p	1		size	
+	m	(Lnet/minecraft/unmapped/C_6499672;ILjava/util/Random;F)V	m_2849120	addSellTradeOffer	
+		p	0		offers	
+		p	1		item	
 		p	2		random	
-		p	3		baseChance	
-	m	(ILjava/util/Random;)I	m_9348893	getSellItemAmount	
-		p	0		size	
+		p	3		chance	
+	m	(ILjava/util/Random;)I	m_9348893	pickSellTradeItemAmount	
+		p	0		item	
 		p	1		random	
-	m	(Lnet/minecraft/unmapped/C_6499672;Lnet/minecraft/unmapped/C_4030632;Ljava/util/Random;F)V	m_7243822		makeBuyTradeOffer
+	m	(Lnet/minecraft/unmapped/C_6499672;Lnet/minecraft/unmapped/C_4030632;Ljava/util/Random;F)V	m_7243822		addBuyTradeOffer
 		p	0			traderOfferList
 		p	1			item
 		p	2			random
 		p	3			chance
-	m	(Lnet/minecraft/unmapped/C_4030632;Ljava/util/Random;)Lnet/minecraft/unmapped/C_2750078;	m_7758199		getItemStack
+	m	(Lnet/minecraft/unmapped/C_4030632;Ljava/util/Random;)Lnet/minecraft/unmapped/C_2750078;	m_7758199		makeTradeItem
 		p	0			item
 		p	1			random
-	m	(Lnet/minecraft/unmapped/C_4030632;Ljava/util/Random;)I	m_9514471		getBuyItemAmount
+	m	(Lnet/minecraft/unmapped/C_4030632;Ljava/util/Random;)I	m_9514471		pickBuyTradeItemAmount
 		p	0			item
 		p	1			random
-	m	(Lnet/minecraft/unmapped/C_6499672;Lnet/minecraft/unmapped/C_4030632;Ljava/util/Random;F)V	m_2849120		makeSellTradeOffer
+	m	(Lnet/minecraft/unmapped/C_6499672;Lnet/minecraft/unmapped/C_4030632;Ljava/util/Random;F)V	m_2849120		addSellTradeOffer
 		p	0			traderOfferList
 		p	1			item
 		p	2			random
 		p	3			chance
-	m	(Lnet/minecraft/unmapped/C_4030632;Ljava/util/Random;)I	m_9348893		getSellItemAmount
+	m	(Lnet/minecraft/unmapped/C_4030632;Ljava/util/Random;)I	m_9348893		pickSellTradeItemAmount
 		p	0			item
 		p	1			random
 c	net/minecraft/unmapped/C_1756552
@@ -6661,7 +6661,7 @@ c	net/minecraft/unmapped/C_9685768
 		p	0		metadata	
 	m	(Lnet/minecraft/unmapped/C_2750078;)I	m_7733195	getMetadata	
 		c	Returns the metadata for a flower pot with the given contents.	
-		p	0		stack	
+		p	0		item	
 	m	()V	<init>		<init>
 	m	(Lnet/minecraft/unmapped/C_3635204;I)Z	m_7170135		isPottablePlant
 		p	1			block
@@ -6771,16 +6771,16 @@ c	net/minecraft/unmapped/C_9899502
 		p	3			p_3
 c	net/minecraft/unmapped/C_6495889
 	m	(Ljava/lang/String;ILnet/minecraft/unmapped/C_4636105;[Lnet/minecraft/unmapped/C_6574817;)V	m_7812882	addRedstonePreset	
-		p	0		p_0	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
+		p	0		name	
+		p	1		icon	
+		p	2		biome	
+		p	3		layers	
 	m	(Ljava/lang/String;ILnet/minecraft/unmapped/C_4636105;Ljava/util/List;[Lnet/minecraft/unmapped/C_6574817;)V	m_9880982	addPreset	
-		p	0		p_0	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
+		p	0		name	
+		p	1		icon	
+		p	2		biome	
+		p	3		features	
+		p	4		layers	
 	m	(Ljava/lang/String;Lnet/minecraft/unmapped/C_4030632;Lnet/minecraft/unmapped/C_4636105;[Lnet/minecraft/unmapped/C_6574817;)V	m_7812882		addRedstonePreset
 		p	0			name
 		p	1			icon
@@ -6801,21 +6801,21 @@ c	net/minecraft/unmapped/C_6495889
 	m	(Lnet/minecraft/unmapped/C_6495889;)F	m_9404260		getZOffset4
 		p	0			presetScreen
 c	net/minecraft/unmapped/C_6495889$C_2302828
-	f	I	f_0139041	f_0139041	
+	f	I	f_0139041	icon	
 	f	Lnet/minecraft/unmapped/C_4030632;	f_0139041		presetItem
 	m	(ILjava/lang/String;Ljava/lang/String;)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
+		p	1		icon	
+		p	2		presetName	
+		p	3		presetLayers	
 	m	(Lnet/minecraft/unmapped/C_4030632;Ljava/lang/String;Ljava/lang/String;)V	<init>		<init>
 		p	1			icon
 		p	2			name
 		p	3			preset
 c	net/minecraft/unmapped/C_6495889$C_8583107
 	m	(III)V	m_5748882	renderIcon	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
+		p	1		x	
+		p	2		y	
+		p	3		icon	
 	m	(IZ)V	m_7921537	m_7921537	
 		p	1		p_1	
 		p	2		p_2	
@@ -8393,13 +8393,13 @@ c	net/minecraft/unmapped/C_5375025		net/minecraft/item/BushItem
 		p	1			p_1
 		p	2			p_2
 c	net/minecraft/unmapped/C_5575524		net/minecraft/entity/FishingLootEntry
-	f	Lnet/minecraft/unmapped/C_2750078;	f_8346024		stack
+	f	Lnet/minecraft/unmapped/C_2750078;	f_8346024		item
 	f	F	f_4945587		damage
 	f	Z	f_6895390		enchantable
 	m	(Lnet/minecraft/unmapped/C_2750078;I)V	<init>		<init>
-		p	1			stack
+		p	1			item
 		p	2			weight
-	m	(Ljava/util/Random;)Lnet/minecraft/unmapped/C_2750078;	m_5542165		getItemStack
+	m	(Ljava/util/Random;)Lnet/minecraft/unmapped/C_2750078;	m_5542165		getItem
 		p	1			random
 	m	(F)Lnet/minecraft/unmapped/C_5575524;	m_5046782		setDamage
 		p	1			damage

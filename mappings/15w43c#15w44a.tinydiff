@@ -25,16 +25,16 @@ c	net/minecraft/unmapped/C_4883920
 		p	2		slotId	
 		p	3		clickData	
 		p	4		action	
-		p	5		stack	
+		p	5		item	
 		p	6		interactionId	
 	m	()I	m_7067120	getAction	
 	m	(IIILnet/minecraft/unmapped/C_1421936;Lnet/minecraft/unmapped/C_2750078;S)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
-		p	6			p_6
+		p	1			menuId
+		p	2			slot
+		p	3			clickData
+		p	4			action
+		p	5			item
+		p	6			interactionId
 	m	()Lnet/minecraft/unmapped/C_1421936;	m_7067120		getAction
 c	net/minecraft/unmapped/C_5009044
 	m	(Lnet/minecraft/unmapped/C_6385858;)V	m_1624777		m_1624777
@@ -51,8 +51,8 @@ c	net/minecraft/unmapped/C_5965485
 		p	2		pos	
 c	net/minecraft/unmapped/C_7542541
 	m	(Lnet/minecraft/unmapped/C_7192378;III)V	m_0260318	clickSlot	
-		p	1		invSlot	
-		p	2		slotId	
+		p	1		actualSlot	
+		p	2		slot	
 		p	3		clickData	
 		p	4		actionType	
 	m	(Lnet/minecraft/unmapped/C_7192378;IILnet/minecraft/unmapped/C_1421936;)V	m_0260318		clickSlot
@@ -91,8 +91,8 @@ c	net/minecraft/unmapped/C_6950351
 	m	()Z	m_7624795		getAmbient
 c	net/minecraft/unmapped/C_7362472
 c	net/minecraft/unmapped/C_7362472$C_8614818
-	m	(Lnet/minecraft/unmapped/C_2750078;)Z	m_3113046		isValidFuel
-		p	0			stack
+	m	(Lnet/minecraft/unmapped/C_2750078;)Z	m_3113046		isFuel
+		p	0			item
 c	net/minecraft/unmapped/C_1339969
 	f	Lnet/minecraft/unmapped/C_6101761;	f_9630445		SHOW_BOTTOM
 	m	(Z)V	m_1581799		setShowBottom
@@ -136,7 +136,7 @@ c	net/minecraft/unmapped/C_3605284
 		p	2			p_2
 		p	3			p_3
 	m	(Ljava/util/List;ILjava/util/Random;)V	m_3952025		shuffleItems
-		p	1			stacks
+		p	1			items
 		p	2			slotCount
 		p	3			random
 	m	(Lnet/minecraft/unmapped/C_4390289;Ljava/util/Random;)Ljava/util/List;	m_0150241		getSlotCount

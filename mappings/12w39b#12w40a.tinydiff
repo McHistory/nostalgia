@@ -251,14 +251,14 @@ c	net/minecraft/unmapped/C_4883920
 		p	2		slotId	
 		p	3		clickData	
 		p	4		quickMove	
-		p	5		stack	
-		p	6		actionId	
+		p	5		item	
+		p	6		interactionId	
 	m	(IIIILnet/minecraft/unmapped/C_2750078;S)V	<init>		<init>
 		p	1			menuId
 		p	2			slotId
 		p	3			clickData
 		p	4			action
-		p	5			stack
+		p	5			item
 		p	6			interactionId
 c	net/minecraft/unmapped/C_5009044
 	f	I	f_6972031		lastXpSoundTime
@@ -364,13 +364,13 @@ c	net/minecraft/unmapped/C_7366354
 c	net/minecraft/unmapped/C_7542541
 	f	Lnet/minecraft/unmapped/C_7192378;	f_0624093		hoveredSlot
 	m	(Lnet/minecraft/unmapped/C_7192378;IIZ)V	m_0260318	clickSlot	
-		p	1		invSlot	
+		p	1		actualSlot	
 		p	2		slot	
 		p	3		button	
 		p	4		quickMove	
 	m	(Lnet/minecraft/unmapped/C_7192378;III)V	m_0260318		clickSlot
-		p	1			invSlot
-		p	2			slotId
+		p	1			actualSlot
+		p	2			slot
 		p	3			clickData
 		p	4			actionType
 	m	(I)Z	m_4198250		moveHoveredSlotToHotbar
@@ -427,7 +427,7 @@ c	net/minecraft/unmapped/C_2289462
 		p	5		random	
 	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_2750078;Ljava/util/Random;IIIDDD)V	m_8603701	dispenseItem	
 		p	0		world	
-		p	1		stack	
+		p	1		item	
 		p	2		random	
 		p	3		velocity	
 		p	4		dx	
@@ -438,7 +438,7 @@ c	net/minecraft/unmapped/C_2289462
 	m	(Lnet/minecraft/unmapped/C_0356559;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_2750078;Ljava/util/Random;IIIIIDDD)I	m_9355968	dispense	
 		p	0		dispenser	
 		p	1		world	
-		p	2		stack	
+		p	2		item	
 		p	3		random	
 		p	4		x	
 		p	5		y	
@@ -565,16 +565,16 @@ c	net/minecraft/unmapped/C_6495889
 		p	2		p_2	
 		p	3		p_3	
 	m	(Ljava/lang/String;ILnet/minecraft/unmapped/C_4636105;[Lnet/minecraft/unmapped/C_6574817;)V	m_7812882		addRedstonePreset
-		p	0			p_0
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+		p	0			name
+		p	1			icon
+		p	2			biome
+		p	3			layers
 	m	(Ljava/lang/String;ILnet/minecraft/unmapped/C_4636105;Ljava/util/List;[Lnet/minecraft/unmapped/C_6574817;)V	m_9880982		addPreset
-		p	0			p_0
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
+		p	0			name
+		p	1			icon
+		p	2			biome
+		p	3			features
+		p	4			layers
 c	net/minecraft/unmapped/C_7574603
 	f	Ljava/util/Map;	f_7703118		features
 	m	()Ljava/util/Map;	m_5772266		getFeatures
@@ -626,10 +626,10 @@ c	net/minecraft/unmapped/C_2673437		net/minecraft/block/dispenser/DispenseItemBe
 		p	2			p_2
 	m	(Lnet/minecraft/unmapped/C_3335560;Lnet/minecraft/unmapped/C_2750078;)Lnet/minecraft/unmapped/C_2750078;	m_3792046		dispenseItem
 		p	1			source
-		p	2			stack
+		p	2			item
 	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_2750078;ILnet/minecraft/unmapped/C_3544601;Lnet/minecraft/unmapped/C_9373743;)V	m_8081435		spawnItem
 		p	0			world
-		p	1			stack
+		p	1			item
 		p	2			offset
 		p	3			facing
 		p	4			pos
@@ -645,7 +645,7 @@ c	net/minecraft/unmapped/C_3089641		net/minecraft/block/dispenser/DispenseBehavi
 	m	(Lnet/minecraft/unmapped/C_3335560;Lnet/minecraft/unmapped/C_2750078;)Lnet/minecraft/unmapped/C_2750078;	m_1026074		dispense
 		c		Dispense the given item at the given location.\n\n@return the remainder after the item has been dispensed.
 		p	1			source
-		p	2			stack
+		p	2			item
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_3089641$9418305		9418305
 	m	()V	<init>		<init>

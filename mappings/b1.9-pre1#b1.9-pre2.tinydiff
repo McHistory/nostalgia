@@ -11,8 +11,8 @@ c	net/minecraft/unmapped/C_1011144
 c	net/minecraft/unmapped/C_1013763
 	f	Z	f_7709980	jumpingCooldown	
 	f	I	f_7073905		jumpingCooldown
-	m	(Lnet/minecraft/unmapped/C_2750078;)I	m_3422399	getIconSprite	
-		p	1		stack	
+	m	(Lnet/minecraft/unmapped/C_2750078;)I	m_3422399	getItemSprite	
+		p	1		item	
 	m	()I	m_8512153		getMaxHealth
 	m	()I	m_4971784		getHealth
 	m	(I)V	m_8195933		setHealth
@@ -20,8 +20,8 @@ c	net/minecraft/unmapped/C_1013763
 	m	(Lnet/minecraft/unmapped/C_6907923;I)I	m_8106508		damageAfterEffectsAndEnchantments
 		p	1			source
 		p	2			amount
-	m	(Lnet/minecraft/unmapped/C_2750078;I)I	m_3422399		getIconSprite
-		p	1			stack
+	m	(Lnet/minecraft/unmapped/C_2750078;I)I	m_3422399		getItemSprite
+		p	1			item
 		p	2			layer
 	m	()V	m_2499577		clearStatusEffects
 c	net/minecraft/unmapped/C_1415320
@@ -42,7 +42,7 @@ c	net/minecraft/unmapped/C_1415320
 		p	2			p_2
 	m	()Lnet/minecraft/unmapped/C_6385858;	m_3715716		m_3715716
 	m	(Lnet/minecraft/unmapped/C_2750078;)Z	m_6336471		isBreedingItem
-		p	1			stack
+		p	1			item
 	m	(Lnet/minecraft/unmapped/C_5009044;)Z	m_7287105		m_7287105
 		p	1			p_1
 c	net/minecraft/unmapped/C_1734428
@@ -72,10 +72,10 @@ c	net/minecraft/unmapped/C_2750078
 c	net/minecraft/unmapped/C_2751481
 	m	(Lnet/minecraft/unmapped/C_1013763;Lnet/minecraft/unmapped/C_2750078;)V	m_7986777	render	
 		p	1		mob	
-		p	2		stack	
+		p	2		itemInHand	
 	m	(Lnet/minecraft/unmapped/C_1013763;Lnet/minecraft/unmapped/C_2750078;I)V	m_7986777		render
 		p	1			mob
-		p	2			stack
+		p	2			itemInHand
 		p	3			layer
 c	net/minecraft/unmapped/C_2783777
 	m	()Lnet/minecraft/unmapped/C_3984704;	m_9394961		m_9394961
@@ -120,8 +120,8 @@ c	net/minecraft/unmapped/C_4030632
 		p	1			stack
 	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_4030632;	m_8424543		setPotionIngredient
 		p	1			ingredient
-	m	()Ljava/lang/String;	m_2050122		getPotionIngredient
-	m	()Z	m_6814134		hasPotionIngredient
+	m	()Ljava/lang/String;	m_2050122		asPotionIngredient
+	m	()Z	m_6814134		isPotionIngredient
 	m	(Lnet/minecraft/unmapped/C_2750078;Ljava/util/List;)V	m_8399075		addHoverText
 		p	1			stack
 		p	2			tooltip
@@ -138,10 +138,10 @@ c	net/minecraft/unmapped/C_4824661
 c	net/minecraft/unmapped/C_4826976
 	m	()Lnet/minecraft/unmapped/C_3984704;	m_9394961		m_9394961
 c	net/minecraft/unmapped/C_4844124
-	m	(Ljava/io/DataInputStream;)Lnet/minecraft/unmapped/C_2750078;	m_4582369		readItemStack
+	m	(Ljava/io/DataInputStream;)Lnet/minecraft/unmapped/C_2750078;	m_4582369		readItem
 		p	1			input
-	m	(Lnet/minecraft/unmapped/C_2750078;Ljava/io/DataOutputStream;)V	m_0927322		writeItemStack
-		p	1			stack
+	m	(Lnet/minecraft/unmapped/C_2750078;Ljava/io/DataOutputStream;)V	m_0927322		writeItem
+		p	1			item
 		p	2			output
 	m	(Ljava/io/DataInputStream;)Lnet/minecraft/unmapped/C_2800860;	m_7405563		readCompound
 		p	1			input

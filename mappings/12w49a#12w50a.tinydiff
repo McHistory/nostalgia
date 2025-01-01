@@ -39,12 +39,12 @@ c	net/minecraft/unmapped/C_3050136
 		p	2			x
 		p	4			y
 		p	6			z
-	m	()Lnet/minecraft/unmapped/C_2750078;	m_3120041		getItemStack
-	m	(Lnet/minecraft/unmapped/C_2750078;)V	m_9526095		setItemStack
-		p	1			stack
+	m	()Lnet/minecraft/unmapped/C_2750078;	m_3120041		getItem
+	m	(Lnet/minecraft/unmapped/C_2750078;)V	m_9526095		setItem
+		p	1			item
 c	net/minecraft/unmapped/C_3699792
 	f	I	f_0154280		mainHandMessageTimer
-	f	Lnet/minecraft/unmapped/C_2750078;	f_5880267		mainHandStack
+	f	Lnet/minecraft/unmapped/C_2750078;	f_5880267		itemInMainHand
 c	net/minecraft/unmapped/C_3906126
 	f	I	f_6800668	thunderCooldown	
 c	net/minecraft/unmapped/C_4443804
@@ -58,7 +58,7 @@ c	net/minecraft/unmapped/C_4561926	net/minecraft/network/packet/AddItemPacket
 	f	B	f_2441967	velocityX	
 	f	B	f_4783345	velocityY	
 	f	B	f_8541085	velocityZ	
-	f	Lnet/minecraft/unmapped/C_2750078;	f_5232998	stack	
+	f	Lnet/minecraft/unmapped/C_2750078;	f_5232998	item	
 	m	()V	<init>	<init>	
 	m	(Lnet/minecraft/unmapped/C_3050136;)V	<init>	<init>	
 		p	1		item	
@@ -84,7 +84,7 @@ c	net/minecraft/unmapped/C_4939758
 c	net/minecraft/unmapped/C_5009044
 	m	()Lnet/minecraft/unmapped/C_3050136;	m_7604701	dropItem	
 	m	(Z)Lnet/minecraft/unmapped/C_3050136;	m_7604701		dropItem
-		p	1			wholeStack
+		p	1			whole
 c	net/minecraft/unmapped/C_5324911
 c	net/minecraft/unmapped/C_5324911$7913529	7913529	
 	f	Lnet/minecraft/unmapped/C_7623767;	f_2997306	f_2997306	
@@ -100,13 +100,13 @@ c	net/minecraft/unmapped/C_7221329
 	m	(Lnet/minecraft/unmapped/C_4519256;)V	m_8367053		m_8367053
 		p	1			p_1
 c	net/minecraft/unmapped/C_7688744
-	f	Z	f_4736653		heldItemTooltips
+	f	Z	f_4736653		itemInHandTooltips
 c	net/minecraft/unmapped/C_5720232
 	f	I	f_6239170	item	
 	f	I	f_7787887	itemMetadata	
-	f	Lnet/minecraft/unmapped/C_2750078;	f_2080171		stack
+	f	Lnet/minecraft/unmapped/C_2750078;	f_2080171		item
 	m	(Lnet/minecraft/unmapped/C_2750078;III)V	<init>		<init>
-		p	1			stack
+		p	1			item
 		p	2			minItemChance
 		p	3			maxItemChance
 		p	4			weight
@@ -122,11 +122,11 @@ c	net/minecraft/unmapped/C_5613525
 	f	[Lnet/minecraft/unmapped/C_5613525;	f_3643548		ALL
 	f	Lnet/minecraft/unmapped/C_5613525;	f_2523023		THORNS
 	m	(Lnet/minecraft/unmapped/C_2750078;)Z	m_8600323		canEnchant
-		p	1			stack
+		p	1			item
 c	net/minecraft/unmapped/C_7166340
 	m	(Lnet/minecraft/unmapped/C_1013763;)I	m_9214570		getLureLevel
 		p	0			entity
-	m	(Lnet/minecraft/unmapped/C_5613525;Lnet/minecraft/unmapped/C_1013763;)Lnet/minecraft/unmapped/C_2750078;	m_9541198		getFirstArmorStackWithEnchantment
+	m	(Lnet/minecraft/unmapped/C_5613525;Lnet/minecraft/unmapped/C_1013763;)Lnet/minecraft/unmapped/C_2750078;	m_9541198		getEquipmentWithEnchantment
 		p	0			enchantment
 		p	1			entity
 c	net/minecraft/unmapped/C_4080528
@@ -141,7 +141,7 @@ c	net/minecraft/unmapped/C_9823296
 c	net/minecraft/unmapped/C_6081145
 	f	Ljava/lang/String;	f_4770197		link
 	f	Z	f_1896377		drawWarning
-	m	()V	m_5636031	m_5636031	
+	m	()V	m_5636031	copyChatLink	
 	m	()V	m_7716491		copyToClipboard
 	m	()V	m_7566210		noWarning
 c	net/minecraft/unmapped/C_1793890

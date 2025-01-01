@@ -589,7 +589,7 @@ c	net/minecraft/unmapped/C_0732654
 		p	2		y	
 		p	3		z	
 		p	4		face	
-		p	5		stack	
+		p	5		itemInHand	
 c	net/minecraft/unmapped/C_0756314	net/minecraft/client/render/texture/WaterSprite	
 	f	[F	f_8838591	current	
 	f	[F	f_2397408	next	
@@ -753,14 +753,14 @@ c	net/minecraft/unmapped/C_1013763
 	m	(DF)Lnet/minecraft/unmapped/C_5853518;	m_4926853	rayTrace	
 		p	1		distance	
 		p	3		tickDelta	
-	m	()Lnet/minecraft/unmapped/C_2750078;	m_2674028	getStackInHand	
+	m	()Lnet/minecraft/unmapped/C_2750078;	m_2674028	getDisplayItemInHand	
 	m	(B)V	m_9129586	m_9129586	
 		p	1		p_1	
 	m	()F	m_4074219	getShadowSizeModifier	
 	m	(I)V	m_5464488	removeEffect	
 		p	1		id	
-	m	(Lnet/minecraft/unmapped/C_2750078;I)I	m_3422399	getIconSprite	
-		p	1		stack	
+	m	(Lnet/minecraft/unmapped/C_2750078;I)I	m_3422399	getItemSprite	
+		p	1		item	
 		p	2		layer	
 c	net/minecraft/unmapped/C_1017062	net/minecraft/client/gui/screen/GameMenuScreen	
 	f	I	f_5290614	saveStep	
@@ -880,13 +880,13 @@ c	net/minecraft/unmapped/C_1044273	net/minecraft/client/render/world/WorldRender
 		p	1		camera	
 		p	2		hit	
 		p	3		p_3	
-		p	4		mainHandStack	
-		p	5		stack	
+		p	4		itemInHand	
+		p	5		tickDelta	
 	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_5853518;ILnet/minecraft/unmapped/C_2750078;F)V	m_4049049	renderBlockOutline	
 		p	1		camera	
 		p	2		hit	
 		p	3		p_3	
-		p	4		mainHandStack	
+		p	4		itemInHand	
 		p	5		tickDelta	
 	m	(Lnet/minecraft/unmapped/C_1414550;)V	m_3614850	renderOutline	
 		p	1		shape	
@@ -1599,7 +1599,7 @@ c	net/minecraft/unmapped/C_2750078
 	m	()Lnet/minecraft/unmapped/C_4515870;	m_8015224	getRarity	
 c	net/minecraft/unmapped/C_2751481	net/minecraft/client/render/ItemInHandRenderer	
 	f	Lnet/minecraft/client/Minecraft;	f_1515651	minecraft	
-	f	Lnet/minecraft/unmapped/C_2750078;	f_0997266	item	
+	f	Lnet/minecraft/unmapped/C_2750078;	f_0997266	itemInHand	
 	f	F	f_4282606	handHeight	
 	f	F	f_2262411	lastHandHeight	
 	f	Lnet/minecraft/unmapped/C_3466301;	f_9447755	blockRenderer	
@@ -1623,7 +1623,7 @@ c	net/minecraft/unmapped/C_2751481	net/minecraft/client/render/ItemInHandRendere
 	m	()V	m_8665200	onItemUsed	
 	m	(Lnet/minecraft/unmapped/C_1013763;Lnet/minecraft/unmapped/C_2750078;I)V	m_7986777	render	
 		p	1		mob	
-		p	2		stack	
+		p	2		itemInHand	
 		p	3		layer	
 	m	(Lnet/minecraft/unmapped/C_2334550;FFFF)V	m_7446315	draw	
 		p	1		builder	
@@ -3039,7 +3039,7 @@ c	net/minecraft/unmapped/C_4237166	net/minecraft/client/ClientPlayerInteractionM
 	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_2750078;)Z	m_9228380	useItem	
 		p	1		player	
 		p	2		world	
-		p	3		stack	
+		p	3		itemInHand	
 	m	(Lnet/minecraft/unmapped/C_5009044;)V	m_7531392	initPlayer	
 		p	1		player	
 	m	()V	m_8517616	tick	
@@ -3049,7 +3049,7 @@ c	net/minecraft/unmapped/C_4237166	net/minecraft/client/ClientPlayerInteractionM
 	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_2750078;IIII)Z	m_0257155	useBlock	
 		p	1		player	
 		p	2		world	
-		p	3		stack	
+		p	3		itemInHand	
 		p	4		x	
 		p	5		y	
 		p	6		z	
@@ -3078,11 +3078,11 @@ c	net/minecraft/unmapped/C_4237166	net/minecraft/client/ClientPlayerInteractionM
 	m	()Z	m_0984858	hasAttackCooldown	
 	m	()Z	m_9164916	hasCreativeInventory	
 	m	()Z	m_8715252	hasExtendedReach	
-	m	(Lnet/minecraft/unmapped/C_2750078;I)V	m_0004519	addStackToCreativeMenu	
-		p	1		stack	
-		p	2		slotId	
-	m	(Lnet/minecraft/unmapped/C_2750078;)V	m_5091708	dropStackFromCreativeMenu	
-		p	1		stack	
+	m	(Lnet/minecraft/unmapped/C_2750078;I)V	m_0004519	addItemToCreativeMenu	
+		p	1		item	
+		p	2		slot	
+	m	(Lnet/minecraft/unmapped/C_2750078;)V	m_5091708	dropItemFromCreativeMenu	
+		p	1		item	
 	m	(II)V	m_9499553	clickMenuButton	
 		p	1		menuId	
 		p	2		buttonId	
@@ -3090,7 +3090,7 @@ c	net/minecraft/unmapped/C_4256955	net/minecraft/client/render/model/entity/Shee
 	m	()V	<init>	<init>	
 c	net/minecraft/unmapped/C_4286596
 	m	(I)V	m_5576257	scrollInHotbar	
-		p	1		scroll	
+		p	1		amount	
 	m	(I)Lnet/minecraft/unmapped/C_2750078;	m_8648382	getArmor	
 		p	1		slot	
 	m	(IZ)V	m_9854519	selectSlot	
@@ -3569,8 +3569,8 @@ c	net/minecraft/unmapped/C_4883920
 		p	2		slotId	
 		p	3		clickData	
 		p	4		quickMove	
-		p	5		stack	
-		p	6		actionId	
+		p	5		item	
+		p	6		interactionId	
 c	net/minecraft/unmapped/C_4917405	net/minecraft/client/render/entity/ItemRenderer	
 	f	Lnet/minecraft/unmapped/C_3466301;	f_6039414	blockRenderer	
 	f	Ljava/util/Random;	f_1551752	random	
@@ -3587,7 +3587,7 @@ c	net/minecraft/unmapped/C_4917405	net/minecraft/client/render/entity/ItemRender
 	m	(Lnet/minecraft/unmapped/C_4766485;Lnet/minecraft/unmapped/C_3385278;Lnet/minecraft/unmapped/C_2750078;II)V	m_1813870	renderGuiItemDecoration	
 		p	1		textRenderer	
 		p	2		textureManager	
-		p	3		stack	
+		p	3		item	
 		p	4		x	
 		p	5		y	
 	m	(Lnet/minecraft/unmapped/C_2334550;IIIII)V	m_6589435	fillRect	
@@ -3622,7 +3622,7 @@ c	net/minecraft/unmapped/C_4917405	net/minecraft/client/render/entity/ItemRender
 	m	(Lnet/minecraft/unmapped/C_4766485;Lnet/minecraft/unmapped/C_3385278;Lnet/minecraft/unmapped/C_2750078;II)V	m_3023684	renderGuiItemWithEnchantmentGlint	
 		p	1		textRenderer	
 		p	2		textureManager	
-		p	3		stack	
+		p	3		item	
 		p	4		x	
 		p	5		y	
 	m	(II)V	m_9643800	render	
@@ -3780,7 +3780,7 @@ c	net/minecraft/unmapped/C_5009044
 	m	()I	m_8319947	getSleepTimer	
 	m	(B)V	m_9129586	m_9129586	
 		p	1		p_1	
-	m	()Lnet/minecraft/unmapped/C_2750078;	m_5966708	getItemInHand	
+	m	()Lnet/minecraft/unmapped/C_2750078;	m_5966708	getItemInUse	
 	m	()I	m_5886782	getItemUseTimer	
 	m	()I	m_8932431	getRemainingItemUseDuration	
 	m	(Lnet/minecraft/unmapped/C_2750078;I)I	m_3422399	m_3422399	
@@ -4249,9 +4249,9 @@ c	net/minecraft/unmapped/C_6368853
 c	net/minecraft/unmapped/C_6385858
 	f	Ljava/lang/String;	f_1581698	skin	
 	f	Ljava/lang/String;	f_9050550	cape	
-	f	I	f_5217252	packetX	
-	f	I	f_8162682	packetY	
-	f	I	f_5639636	packetZ	
+	f	I	f_5217252	lastKnownX	
+	f	I	f_8162682	lastKnownY	
+	f	I	f_5639636	lastKnownZ	
 	m	()V	m_4306841	resetPos	
 	m	(FF)V	m_9598325	updateLocalPlayerCamera	
 		c	Called by @see GameRenderer#render(float, long) every frame when not spectating an entity.\nThis is only ever called on the local player entity.\nThis causes the local player entity's prevPitch/Yaw to always be the same as its pitch/yaw.	
@@ -4279,7 +4279,7 @@ c	net/minecraft/unmapped/C_6385858
 		p	1		event	
 	m	()V	m_9996923	animateDamage	
 	m	()V	m_4467970	prepareCape	
-	m	(III)V	m_0129682	setEquipmentStack	
+	m	(III)V	m_0129682	setEquipment	
 		p	1		armorSlot	
 		p	2		itemId	
 		p	3		metaData	
@@ -4766,12 +4766,12 @@ c	net/minecraft/unmapped/C_7542541	net/minecraft/client/gui/screen/inventory/men
 		p	3		p_3	
 	m	()V	m_5630231	renderLabels	
 	m	(Lnet/minecraft/unmapped/C_7192378;)V	m_6888955	renderSlot	
-		p	1		invSlot	
+		p	1		slot	
 	m	(II)Lnet/minecraft/unmapped/C_7192378;	m_0808049	getSlot	
 		p	1		x	
 		p	2		y	
 	m	(Lnet/minecraft/unmapped/C_7192378;II)Z	m_1180372	isMouseOverSlot	
-		p	1		invSlot	
+		p	1		slot	
 		p	2		mouseX	
 		p	3		mouseY	
 	m	(III)V	m_9746540	m_9746540	
@@ -4790,7 +4790,7 @@ c	net/minecraft/unmapped/C_7542541	net/minecraft/client/gui/screen/inventory/men
 	m	()V	<clinit>	<clinit>	
 	m	()V	m_7135145	m_7135145	
 	m	(Lnet/minecraft/unmapped/C_7192378;IIZ)V	m_0260318	clickSlot	
-		p	1		invSlot	
+		p	1		actualSlot	
 		p	2		slot	
 		p	3		button	
 		p	4		quickMove	
@@ -4992,12 +4992,12 @@ c	net/minecraft/unmapped/C_7688744$C_0457152	Option
 	m	()Ljava/lang/String;	m_5598854	getName	
 	m	()V	<clinit>	<clinit>	
 c	net/minecraft/unmapped/C_7699185
-	m	([Lnet/minecraft/unmapped/C_2750078;)V	m_3443025	setStacks	
-		p	1		stacks	
+	m	([Lnet/minecraft/unmapped/C_2750078;)V	m_3443025	setItems	
+		p	1		items	
 	m	(II)V	m_3378984	setData	
 		p	1		id	
 		p	2		value	
-	m	(Lnet/minecraft/unmapped/C_4286596;)S	m_6542001	getNextInteractionId	
+	m	(Lnet/minecraft/unmapped/C_4286596;)S	m_6542001	nextInteractionId	
 		p	1		inventory	
 	m	(S)V	m_5947941	deleteBackup	
 		p	1		id	
@@ -8827,7 +8827,7 @@ c	net/minecraft/unmapped/C_9749595	net/minecraft/client/gui/screen/inventory/men
 	f	F	f_5925832	pageRotationSpeed	
 	f	F	f_0828311	nextTurningSpeed	
 	f	F	f_7050832	turningSpeed	
-	f	Lnet/minecraft/unmapped/C_2750078;	f_5813394	itemStackToEnchant	
+	f	Lnet/minecraft/unmapped/C_2750078;	f_5813394	itemToEnchant	
 	m	(Lnet/minecraft/unmapped/C_4286596;Lnet/minecraft/unmapped/C_3906126;III)V	<init>	<init>	
 		p	1		inventory	
 		p	2		world	

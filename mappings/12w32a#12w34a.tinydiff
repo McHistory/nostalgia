@@ -18,7 +18,7 @@ c	net/minecraft/unmapped/C_0258789
 		p	1			p_1
 c	net/minecraft/unmapped/C_0324512
 	m	()[Lnet/minecraft/unmapped/C_2750078;	m_9919834	m_9919834	
-	m	(I)Lnet/minecraft/unmapped/C_2750078;	m_4716717	getItem	
+	m	(I)Lnet/minecraft/unmapped/C_2750078;	m_4716717	m_4716717	
 		p	1		p_1	
 	m	()Lnet/minecraft/unmapped/C_2750078;	m_2674028	m_2674028	
 	m	(ILnet/minecraft/unmapped/C_2750078;)V	m_0129682	m_0129682	
@@ -28,25 +28,25 @@ c	net/minecraft/unmapped/C_1013763
 	f	[F	f_5847296		INVENTORY_DROP_CHANCE
 		c		An array containing the probability of a mob dropping their inventory. These are sorted by increasing probability with item[0] being difficulty easy and item[3] being difficulty hard.
 	f	Z	f_9177400		capPickUpLoot
-	m	()Lnet/minecraft/unmapped/C_2750078;	m_2674028	getStackInHand	
-	m	(I)Lnet/minecraft/unmapped/C_2750078;	m_4716717	getItem	
+	m	()Lnet/minecraft/unmapped/C_2750078;	m_2674028	getDisplayItemInHand	
+	m	(I)Lnet/minecraft/unmapped/C_2750078;	m_4716717	getEquipment	
 		p	1		slot	
 	m	()[Lnet/minecraft/unmapped/C_2750078;	m_9919834	m_9919834	
 	m	(II)Lnet/minecraft/unmapped/C_4030632;	m_9577593
 		p	2		p_2	
-		p	0			armorPiece
+		p	0			slot
 	m	(I)I	m_6044028		m_6044028
 		p	1			p_1
 	m	(I)Z	m_2125280		hasStatusEffect
 		p	1			id
-	m	()Lnet/minecraft/unmapped/C_2750078;	m_7121925		getStackInHand
-	m	(I)Lnet/minecraft/unmapped/C_2750078;	m_5260880		getStackInInventory
-		p	1			id
+	m	()Lnet/minecraft/unmapped/C_2750078;	m_7121925		getDisplayItemInHand
+	m	(I)Lnet/minecraft/unmapped/C_2750078;	m_5260880		getEquipment
+		p	1			slot
 	m	()[Lnet/minecraft/unmapped/C_2750078;	m_5543474		m_5543474
 	m	(Lnet/minecraft/unmapped/C_6385858;I)V	m_8950914		sendPickup
 		p	1			entity
 		p	2			count
-	m	(Lnet/minecraft/unmapped/C_2750078;)I	m_2966690		getArmorType
+	m	(Lnet/minecraft/unmapped/C_2750078;)I	m_2966690		getEquipmentSlot
 		p	0			armor
 c	net/minecraft/unmapped/C_1693934
 	f	I	f_2855347	tickSinceValidation	
@@ -232,12 +232,12 @@ c	net/minecraft/unmapped/C_4917405
 	m	(Lnet/minecraft/unmapped/C_4766485;Lnet/minecraft/unmapped/C_3385278;Lnet/minecraft/unmapped/C_2750078;II)V	m_7605997		renderGuiItem
 		p	1			textRenderer
 		p	2			textureManager
-		p	3			stack
+		p	3			item
 		p	4			x
 		p	5			y
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_4948697
-	f	Lnet/minecraft/unmapped/C_2750078;	f_6918503	f_6918503	
+	f	Lnet/minecraft/unmapped/C_2750078;	f_6918503	GOLDEN_SWORD	
 	m	()Lnet/minecraft/unmapped/C_2750078;	m_2674028	m_2674028	
 	m	()V	<clinit>	<clinit>	
 	m	()Ljava/lang/String;	m_4351874		m_4351874
@@ -302,12 +302,12 @@ c	net/minecraft/unmapped/C_6385858
 	f	I	f_3184704		portalTime
 	f	I	f_1255062		dimension
 	m	()V	m_2698485	onPortalCollision	
-	m	()[Lnet/minecraft/unmapped/C_2750078;	m_9919834	getEquipmentStacks	
+	m	()[Lnet/minecraft/unmapped/C_2750078;	m_9919834	getEquipment	
 	m	()I	m_6798299		getMaxNetherPortalTime
 	m	()V	m_9794132		onPortalCollision
 		c		Called when this entity collides with a nether portal block.
 	m	()I	m_0706622		getPortalCooldown
-	m	()[Lnet/minecraft/unmapped/C_2750078;	m_5543474		getInventory
+	m	()[Lnet/minecraft/unmapped/C_2750078;	m_5543474		getEquipment
 	m	()Z	m_6767884		isInvisible
 	m	(Z)V	m_5821397		setInvisible
 		p	1			invisible
@@ -449,7 +449,7 @@ c	net/minecraft/unmapped/C_5067501
 	m	(II)V	m_1237539		add
 		p	1			type
 		p	2			id
-	m	(I)Lnet/minecraft/unmapped/C_2750078;	m_5207896		getStack
+	m	(I)Lnet/minecraft/unmapped/C_2750078;	m_5207896		getItem
 		p	1			id
 	m	(I)V	m_9126241		markDirty
 		p	1			id
@@ -1083,7 +1083,7 @@ c	net/minecraft/unmapped/C_9368128		net/minecraft/entity/decoration/ItemFrameEnt
 	m	()V	m_1389123		m_1389123
 	m	()Lnet/minecraft/unmapped/C_2750078;	m_0406767		getDisplayItem
 	m	(Lnet/minecraft/unmapped/C_2750078;)V	m_9046944		setDisplayItem
-		p	1			stack
+		p	1			item
 	m	()I	m_4093140		rotation
 	m	(I)V	m_9751656		setItemRotation
 		p	1			rotation
@@ -1171,6 +1171,6 @@ c	net/minecraft/unmapped/C_9685768		net/minecraft/block/FlowerPotBlock
 		p	0			metadata
 	m	(Lnet/minecraft/unmapped/C_2750078;)I	m_7733195		getMetadata
 		c		Returns the metadata for a flower pot with the given contents.
-		p	0			stack
+		p	0			item
 c	net/minecraft/unmapped/C_9315553	net/minecraft/client/render/entity/FireballRenderer	net/minecraft/client/render/entity/ProjectileRenderer
 c	net/minecraft/unmapped/C_9746149	net/minecraft/entity/projectile/FireballEntity	net/minecraft/entity/projectile/ProjectileEntity

@@ -20,7 +20,7 @@ c	net/minecraft/unmapped/C_1111347
 c	net/minecraft/unmapped/C_1249120
 	m	(ILjava/util/List;)V	<init>		<init>
 		p	1			menuId
-		p	2			stacks
+		p	2			items
 c	net/minecraft/unmapped/C_1414550
 	m	(DDD)Lnet/minecraft/unmapped/C_1414550;	m_7441731		contract
 		c		Create a new {@code Box} that is contracted by the given amounts. The minimum and maximum\nvalues are increased and decreased respectively by the amounts given. This means the\nnew {@code Box} will be smaller by twice the amounts given on each axis.
@@ -55,9 +55,9 @@ c	net/minecraft/unmapped/C_2750078
 	m	(Lnet/minecraft/unmapped/C_2750078;)Lnet/minecraft/unmapped/C_2750078;	m_6559409		copyOf
 		p	0			stack
 c	net/minecraft/unmapped/C_2786920
-	m	(Lnet/minecraft/unmapped/C_7699185;Ljava/util/List;)V	m_0076107		updateMenu
+	m	(Lnet/minecraft/unmapped/C_7699185;Ljava/util/List;)V	m_0076107		onMenuChanged
 		p	1			menu
-		p	2			stacks
+		p	2			items
 c	net/minecraft/unmapped/C_3157620
 	m	(J)V	<init>		<init>
 		p	1			p_1
@@ -153,7 +153,7 @@ c	net/minecraft/unmapped/C_6020368
 	m	(I)V	<init>		<init>
 		p	1			health
 c	net/minecraft/unmapped/C_6385858
-	m	()[Lnet/minecraft/unmapped/C_2750078;	m_9919834		getEquipmentStacks
+	m	()[Lnet/minecraft/unmapped/C_2750078;	m_9919834		getEquipment
 	m	(Z)V	m_8609807		setSneaking
 		p	1			sneaking
 c	net/minecraft/unmapped/C_6755599
@@ -204,8 +204,8 @@ c	net/minecraft/unmapped/C_8321936
 c	net/minecraft/unmapped/C_9381557
 	m	(IILnet/minecraft/unmapped/C_2750078;)V	<init>		<init>
 		p	1			menuId
-		p	2			slotId
-		p	3			stack
+		p	2			slot
+		p	3			item
 c	net/minecraft/unmapped/C_9614477
 	m	(Ljava/lang/String;Ljava/lang/String;IJB)V	<init>		<init>
 		p	1			username
@@ -216,8 +216,8 @@ c	net/minecraft/unmapped/C_9614477
 c	net/minecraft/unmapped/C_9701483
 	m	(IILnet/minecraft/unmapped/C_2750078;)V	<init>		<init>
 		p	1			id
-		p	2			equipmentSlot
-		p	3			stack
+		p	2			slot
+		p	3			item
 c	net/minecraft/unmapped/C_9814383
 	m	(IIIIBB)V	<init>		<init>
 		p	1			id
@@ -501,7 +501,7 @@ c	net/minecraft/unmapped/C_0324512		net/minecraft/server/entity/mob/player/Serve
 	f	Ljava/util/Set;	f_5806656		allLoadedChunks
 	f	I	f_5431237		lastHealth
 	f	I	f_1478225		spawnProtectionTicks
-	f	[Lnet/minecraft/unmapped/C_2750078;	f_5960888		equipmentStacks
+	f	[Lnet/minecraft/unmapped/C_2750078;	f_5960888		equipment
 	f	I	f_3098613		menuId
 	f	Z	f_2104338		useItemCooldown
 	m	(Lnet/minecraft/server/MinecraftServer;Lnet/minecraft/unmapped/C_3906126;Ljava/lang/String;Lnet/minecraft/unmapped/C_7897127;)V	<init>		<init>
@@ -514,8 +514,8 @@ c	net/minecraft/unmapped/C_0324512		net/minecraft/server/entity/mob/player/Serve
 	m	()V	m_9844463		m_9844463
 	m	()F	m_9119163		m_9119163
 	m	()V	m_0718337		m_0718337
-	m	(I)Lnet/minecraft/unmapped/C_2750078;	m_4716717		getItem
-		p	1			p_1
+	m	(I)Lnet/minecraft/unmapped/C_2750078;	m_4716717		getEquipment
+		p	1			slot
 	m	(Lnet/minecraft/unmapped/C_6385858;)V	m_4650833		m_4650833
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_6385858;I)Z	m_3238154		m_3238154
@@ -1098,11 +1098,11 @@ c	net/minecraft/unmapped/C_7897127		net/minecraft/server/ServerPlayerInteraction
 	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_2750078;)Z	m_1509177		useItem
 		p	1			player
 		p	2			world
-		p	3			stack
+		p	3			itemInHand
 	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_2750078;IIII)Z	m_7617621		useBlock
 		p	1			player
 		p	2			world
-		p	3			stack
+		p	3			itemInHand
 		p	4			x
 		p	5			y
 		p	6			z
