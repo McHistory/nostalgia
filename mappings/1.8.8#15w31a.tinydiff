@@ -158,17 +158,17 @@ c	net/minecraft/unmapped/C_0732654	net/minecraft/network/packet/c2s/play/PlayerU
 		p	1		pos	
 		p	2		face	
 		p	3		itemInHand	
-		p	4		dx	
-		p	5		dy	
-		p	6		dz	
+		p	4		faceX	
+		p	5		faceY	
+		p	6		faceZ	
 	m	()V	<clinit>	<clinit>	
 	m	(Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_3544601;Lnet/minecraft/unmapped/C_4360192;FFF)V	<init>		<init>
 		p	1			pos
 		p	2			face
 		p	3			hand
-		p	4			dx
-		p	5			dy
-		p	6			dz
+		p	4			faceX
+		p	5			faceY
+		p	6			faceZ
 	m	()Lnet/minecraft/unmapped/C_3544601;	m_5171976		getFace
 	m	()Lnet/minecraft/unmapped/C_4360192;	m_4089857		getHand
 c	net/minecraft/unmapped/C_0878570
@@ -402,9 +402,9 @@ c	net/minecraft/unmapped/C_2750078
 		p	2		world	
 		p	3		pos	
 		p	4		face	
-		p	5		z	
-		p	6		dy	
-		p	7		dz	
+		p	5		faceX	
+		p	6		faceY	
+		p	7		faceZ	
 	m	(Lnet/minecraft/unmapped/C_2750078;)Z	m_2872904	isEqualForHoldAnimation	
 		p	1		stack	
 	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_4360192;Lnet/minecraft/unmapped/C_3544601;FFF)Lnet/minecraft/unmapped/C_6544668;	m_5278638		use
@@ -413,9 +413,9 @@ c	net/minecraft/unmapped/C_2750078
 		p	3			pos
 		p	4			hand
 		p	5			face
-		p	6			dx
-		p	7			dy
-		p	8			dz
+		p	6			faceX
+		p	7			faceY
+		p	8			faceZ
 	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_4360192;)Lnet/minecraft/unmapped/C_9303322;	m_9264093		startUsing
 		p	1			world
 		p	2			player
@@ -655,9 +655,9 @@ c	net/minecraft/unmapped/C_3635204
 		p	3		state	
 		p	4		player	
 		p	5		face	
-		p	6		dx	
-		p	7		dy	
-		p	8		dz	
+		p	6		faceX	
+		p	7		faceY	
+		p	8		faceZ	
 	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_2074023;)V	m_7011942	afterMinedByPlayer	
 		p	1		world	
 		p	2		player	
@@ -679,9 +679,9 @@ c	net/minecraft/unmapped/C_3635204
 		p	5			hand
 		p	6			itemInHand
 		p	7			face
-		p	8			dx
-		p	9			dy
-		p	10			dz
+		p	8			faceX
+		p	9			faceY
+		p	10			faceZ
 	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_2074023;Lnet/minecraft/unmapped/C_2750078;)V	m_7011942		afterMinedByPlayer
 		p	1			world
 		p	2			player
@@ -939,9 +939,9 @@ c	net/minecraft/unmapped/C_4030632
 		p	3		world	
 		p	4		pos	
 		p	5		face	
-		p	6		dx	
-		p	7		dy	
-		p	8		dz	
+		p	6		faceX	
+		p	7		faceY	
+		p	8		faceZ	
 	m	(Lnet/minecraft/unmapped/C_0561170;Lnet/minecraft/unmapped/C_2219604;)V	m_8635940		addProperty
 		p	1			key
 		p	2			property
@@ -955,9 +955,9 @@ c	net/minecraft/unmapped/C_4030632
 		p	4			pos
 		p	5			hand
 		p	6			face
-		p	7			dx
-		p	8			dy
-		p	9			dz
+		p	7			faceX
+		p	8			faceY
+		p	9			faceZ
 	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_4360192;)Lnet/minecraft/unmapped/C_9303322;	m_6337043		startUsing
 		p	1			stack
 		p	2			world
@@ -1028,10 +1028,10 @@ c	net/minecraft/unmapped/C_4237166
 	m	(Lnet/minecraft/unmapped/C_5367636;Lnet/minecraft/unmapped/C_8817873;Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_3544601;Lnet/minecraft/unmapped/C_0336319;)Z	m_0257155	useBlock	
 		p	1		player	
 		p	2		world	
-		p	3		item	
+		p	3		itemInHand	
 		p	4		pos	
 		p	5		face	
-		p	6		offset	
+		p	6		facePos	
 	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_5853518;)Z	m_5522768	interactEntityAt	
 		p	1		player	
 		p	2		target	
@@ -1042,7 +1042,7 @@ c	net/minecraft/unmapped/C_4237166
 		p	3			itemInHand
 		p	4			pos
 		p	5			face
-		p	6			hitPos
+		p	6			facePos
 		p	7			hand
 	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_4360192;)Lnet/minecraft/unmapped/C_6544668;	m_9228380		useItem
 		p	1			player
@@ -1052,13 +1052,13 @@ c	net/minecraft/unmapped/C_4237166
 	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_4360192;)Lnet/minecraft/unmapped/C_6544668;	m_8854017		interactEntity
 		p	1			player
 		p	2			target
-		p	3			item
+		p	3			itemInHand
 		p	4			hand
 	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_5853518;Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_4360192;)Lnet/minecraft/unmapped/C_6544668;	m_5522768		interactEntityAt
 		p	1			player
 		p	2			target
 		p	3			hit
-		p	4			item
+		p	4			itemInHand
 		p	5			hand
 c	net/minecraft/unmapped/C_4286596
 	f	[Lnet/minecraft/unmapped/C_2750078;	f_7838934		offhand
@@ -1478,7 +1478,7 @@ c	net/minecraft/unmapped/C_6385858
 		p	1			uuid
 	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_0336319;Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_4360192;)Lnet/minecraft/unmapped/C_6544668;	m_9473672		interact
 		p	1			player
-		p	2			offset
+		p	2			facePos
 		p	3			itemInHand
 		p	4			hand
 	m	(Lnet/minecraft/unmapped/C_0324512;)V	m_1706316		onStartedTrackingBy
@@ -1760,9 +1760,9 @@ c	net/minecraft/unmapped/C_7897127
 		p	3		itemInHand	
 		p	4		pos	
 		p	5		face	
-		p	6		dx	
-		p	7		dy	
-		p	8		dz	
+		p	6		faceX	
+		p	7		faceY	
+		p	8		faceZ	
 	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_4360192;)Lnet/minecraft/unmapped/C_6544668;	m_1509177		useItem
 		p	1			player
 		p	2			world
@@ -1775,9 +1775,9 @@ c	net/minecraft/unmapped/C_7897127
 		p	4			hand
 		p	5			pos
 		p	6			face
-		p	7			dx
-		p	8			dy
-		p	9			dz
+		p	7			faceX
+		p	8			faceY
+		p	9			faceZ
 c	net/minecraft/unmapped/C_8125832
 	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_3544601;FFF)Z	m_2543653	m_2543653	
 		p	1		p_1	

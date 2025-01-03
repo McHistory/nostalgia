@@ -47,29 +47,29 @@ c	net/minecraft/unmapped/C_0400468
 		p	5			p_5
 		p	6			p_6
 c	net/minecraft/unmapped/C_0732654
-	f	F	f_9337184	dx	
-	f	F	f_0415237	dy	
-	f	F	f_9398676	dz	
+	f	F	f_9337184	faceX	
+	f	F	f_0415237	faceY	
+	f	F	f_9398676	faceZ	
 	f	Lnet/minecraft/unmapped/C_6707278;	f_9454440	pos	
 	f	Lnet/minecraft/unmapped/C_3544601;	f_9669182	face	
 		c	The face of the block on which the interaction takes place. Can be set to 255 if the\nplayer is using an item while not looking at a block.	
 	f	Lnet/minecraft/unmapped/C_9836145;	f_5272764		f_5272764
-	m	()F	m_0291184	getDx	
-	m	()F	m_9139182	getDy	
-	m	()F	m_9321637	getDz	
+	m	()F	m_0291184	getFaceX	
+	m	()F	m_9139182	getFaceY	
+	m	()F	m_9321637	getFaceZ	
 	m	()Lnet/minecraft/unmapped/C_6707278;	m_3624065	getPos	
 	m	(Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_3544601;Lnet/minecraft/unmapped/C_4360192;FFF)V	<init>	<init>	
 		p	1		pos	
 		p	2		face	
 		p	3		hand	
-		p	4		dx	
-		p	5		dy	
-		p	6		dz	
+		p	4		faceX	
+		p	5		faceY	
+		p	6		faceZ	
 	m	()Lnet/minecraft/unmapped/C_3544601;	m_5171976	getFace	
 	m	(Lnet/minecraft/unmapped/C_4360192;Lnet/minecraft/unmapped/C_9836145;)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
-	m	()Lnet/minecraft/unmapped/C_9836145;	m_9139182		getDy
+	m	()Lnet/minecraft/unmapped/C_9836145;	m_9139182		getFaceY
 c	net/minecraft/unmapped/C_0873063
 	m	()Lnet/minecraft/unmapped/C_1533903;	m_1934261	m_1934261	
 	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6707278;)Ljava/lang/Boolean;	m_1309317	m_1309317	
@@ -426,9 +426,9 @@ c	net/minecraft/unmapped/C_3635204
 		p	4		player	
 		p	5		hand	
 		p	6		face	
-		p	7		dx	
-		p	8		dy	
-		p	9		dz	
+		p	7		faceX	
+		p	8		faceY	
+		p	9		faceZ	
 	m	(Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_5250955;Lnet/minecraft/unmapped/C_6707278;)Lnet/minecraft/unmapped/C_7345216;	m_5728949	getShape	
 		p	1		state	
 		p	2		world	
@@ -533,7 +533,7 @@ c	net/minecraft/unmapped/C_4237166
 		p	2		world	
 		p	3		pos	
 		p	4		face	
-		p	5		offset	
+		p	5		facePos	
 		p	6		hand	
 	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_5853518;Lnet/minecraft/unmapped/C_4360192;)Lnet/minecraft/unmapped/C_6544668;	m_5522768	interactEntityAt	
 		p	1		player	
@@ -663,7 +663,7 @@ c	net/minecraft/unmapped/C_5853518
 		p	1		entity	
 	m	(Lnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_0336319;)V	<init>	<init>	
 		p	1		entity	
-		p	2		offset	
+		p	2		facePos	
 	m	()Ljava/lang/String;	toString	toString	
 	m	(Lnet/minecraft/unmapped/C_0336319;Lnet/minecraft/unmapped/C_3544601;Lnet/minecraft/unmapped/C_6707278;)V	<init>	<init>	
 		p	1		offset	
@@ -671,7 +671,7 @@ c	net/minecraft/unmapped/C_5853518
 		p	3		pos	
 	m	(Lnet/minecraft/unmapped/C_5853518$C_4115743;Lnet/minecraft/unmapped/C_0336319;Lnet/minecraft/unmapped/C_3544601;Lnet/minecraft/unmapped/C_6707278;)V	<init>	<init>	
 		p	1		type	
-		p	2		offset	
+		p	2		facePos	
 		p	3		face	
 		p	4		pos	
 	m	()Lnet/minecraft/unmapped/C_6707278;	m_1760520	getPos	
@@ -862,9 +862,9 @@ c	net/minecraft/unmapped/C_7897127
 		p	4		hand	
 		p	5		pos	
 		p	6		face	
-		p	7		dx	
-		p	8		dy	
-		p	9		dz	
+		p	7		faceX	
+		p	8		faceY	
+		p	9		faceZ	
 	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_4360192;Lnet/minecraft/unmapped/C_9836145;)Lnet/minecraft/unmapped/C_6544668;	m_7617621		useBlock
 		p	1			p_1
 		p	2			p_2
@@ -2554,9 +2554,9 @@ c	net/minecraft/unmapped/C_7952719
 		p	1			p_1
 	m	()Lnet/minecraft/unmapped/C_1951451;	m_5933558		m_5933558
 c	net/minecraft/unmapped/C_8458958
-	f	F	f_2610666	dx	
-	f	F	f_6562293	dy	
-	f	F	f_2414248	dz	
+	f	F	f_2610666	faceX	
+	f	F	f_6562293	faceY	
+	f	F	f_2414248	faceZ	
 	f	Lnet/minecraft/unmapped/C_3544601;	f_0682426	face	
 	f	Lnet/minecraft/unmapped/C_6707278;	f_4349300	pos	
 	f	Lnet/minecraft/unmapped/C_9836145;	f_7153934		f_7153934
@@ -2565,21 +2565,21 @@ c	net/minecraft/unmapped/C_8458958
 		p	2		item	
 		p	3		pos	
 		p	4		face	
-		p	5		dx	
-		p	6		dy	
-		p	7		dz	
+		p	5		faceX	
+		p	6		faceY	
+		p	7		faceZ	
 	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_3544601;FFF)V	<init>	<init>	
 		p	1		world	
 		p	2		player	
 		p	3		item	
 		p	4		pos	
 		p	5		face	
-		p	6		dx	
-		p	7		dy	
-		p	8		dz	
-	m	()F	m_8058578	getClickX	
-	m	()F	m_1561938	getClickY	
-	m	()F	m_5938183	getClickZ	
+		p	6		faceX	
+		p	7		faceY	
+		p	8		faceZ	
+	m	()F	m_8058578	getFaceX	
+	m	()F	m_1561938	getFaceY	
+	m	()F	m_5938183	getFaceZ	
 	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_9836145;)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
