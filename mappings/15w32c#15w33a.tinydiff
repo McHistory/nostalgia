@@ -20,7 +20,7 @@ c	net/minecraft/server/MinecraftServer
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
-	m	()Lnet/minecraft/unmapped/C_9571530;	m_1011511		m_1011511
+	m	()Lnet/minecraft/unmapped/C_9571530;	m_1011511		getDataFixerUpper
 c	net/minecraft/unmapped/C_0019534
 	m	(Lnet/minecraft/unmapped/C_0324512;I)V	m_7438796	changeDimension	
 		p	1		player	
@@ -360,13 +360,13 @@ c	net/minecraft/unmapped/C_3438842
 	f	I	f_1370848	f_1370848	
 	f	I	f_9622582	f_9622582	
 	f	I	f_4111651	f_4111651	
-	f	Lcom/google/common/base/Predicate;	f_0297430		f_0297430
-	m	(Lnet/minecraft/unmapped/C_7278838;)Z	m_9916838		m_9916838
-		p	1			p_1
-	m	(BIZ)B	m_9790707		m_9790707
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+	f	Lcom/google/common/base/Predicate;	f_0297430		RIDEABLE_MINECART_FILTER
+	m	(Lnet/minecraft/unmapped/C_7278838;)Z	m_9916838		isDisabled
+		p	1			slot
+	m	(BIZ)B	m_9790707		setFlag
+		p	1			flags
+		p	2			flag
+		p	3			enabled
 c	net/minecraft/unmapped/C_3438842$0354976		0354976
 	m	()V	<init>		<init>
 	m	(Lnet/minecraft/unmapped/C_6385858;)Z	m_8861017		m_8861017
@@ -378,8 +378,8 @@ c	net/minecraft/unmapped/C_1846829
 	f	Ljava/nio/FloatBuffer;	f_7575629		PROJECTION
 c	net/minecraft/unmapped/C_8331024
 	f	Z	f_6389390		exactTeleport
-	m	(Lnet/minecraft/unmapped/C_3544601;)Z	m_5623564		m_5623564
-		p	1			p_1
+	m	(Lnet/minecraft/unmapped/C_3544601;)Z	m_5623564		shouldRenderFace
+		p	1			face
 	m	()I	m_3768435		getParticleCount
 c	net/minecraft/unmapped/C_1891352
 	f	Lnet/minecraft/unmapped/C_2011750;	f_6752360		flame

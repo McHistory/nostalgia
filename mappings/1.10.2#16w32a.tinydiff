@@ -126,10 +126,10 @@ c	net/minecraft/unmapped/C_0974371
 		p	2			p_2
 		p	3			p_3
 c	net/minecraft/unmapped/C_1013763
-	f	[Lnet/minecraft/unmapped/C_2750078;	f_9948017	equippedItems	
-	f	[Lnet/minecraft/unmapped/C_2750078;	f_5469608	f_5469608	
-	f	Lnet/minecraft/unmapped/C_0160011;	f_9948017		equippedItems
-	f	Lnet/minecraft/unmapped/C_0160011;	f_5469608		f_5469608
+	f	[Lnet/minecraft/unmapped/C_2750078;	f_9948017	itemsInHands	
+	f	[Lnet/minecraft/unmapped/C_2750078;	f_5469608	armor	
+	f	Lnet/minecraft/unmapped/C_0160011;	f_9948017		itemsInHands
+	f	Lnet/minecraft/unmapped/C_0160011;	f_5469608		armor
 	m	(Lnet/minecraft/unmapped/C_7278838;)Z	m_6470583		m_6470583
 		p	1			p_1
 c	net/minecraft/unmapped/C_1196485
@@ -383,7 +383,7 @@ c	net/minecraft/unmapped/C_3635204
 		p	3		state	
 		p	4		player	
 		p	5		hand	
-		p	6		item	
+		p	6		itemInHand	
 		p	7		face	
 		p	8		dx	
 		p	9		dy	
@@ -619,7 +619,7 @@ c	net/minecraft/unmapped/C_4237166
 	m	(Lnet/minecraft/unmapped/C_5367636;Lnet/minecraft/unmapped/C_8817873;Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_3544601;Lnet/minecraft/unmapped/C_0336319;Lnet/minecraft/unmapped/C_4360192;)Lnet/minecraft/unmapped/C_6544668;	m_0257155	useBlock	
 		p	1		player	
 		p	2		world	
-		p	3		item	
+		p	3		itemInHand	
 		p	4		pos	
 		p	5		face	
 		p	6		hitPos	
@@ -627,7 +627,7 @@ c	net/minecraft/unmapped/C_4237166
 	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_4360192;)Lnet/minecraft/unmapped/C_6544668;	m_9228380	useItem	
 		p	1		player	
 		p	2		world	
-		p	3		item	
+		p	3		itemInHand	
 		p	4		hand	
 	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_4360192;)Lnet/minecraft/unmapped/C_6544668;	m_8854017	interactEntity	
 		p	1		player	
@@ -645,7 +645,7 @@ c	net/minecraft/unmapped/C_4237166
 		p	2			world
 		p	3			pos
 		p	4			face
-		p	5			hitPos
+		p	5			offset
 		p	6			hand
 	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_4360192;)Lnet/minecraft/unmapped/C_6544668;	m_9228380		useItem
 		p	1			player
@@ -653,12 +653,12 @@ c	net/minecraft/unmapped/C_4237166
 		p	3			hand
 	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_4360192;)Lnet/minecraft/unmapped/C_6544668;	m_8854017		interactEntity
 		p	1			player
-		p	2			target
+		p	2			entity
 		p	3			hand
 	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_5853518;Lnet/minecraft/unmapped/C_4360192;)Lnet/minecraft/unmapped/C_6544668;	m_5522768		interactEntityAt
 		p	1			player
 		p	2			entity
-		p	3			result
+		p	3			hit
 		p	4			hand
 c	net/minecraft/unmapped/C_4286596
 	f	[Lnet/minecraft/unmapped/C_2750078;	f_3513265	items	
@@ -912,17 +912,17 @@ c	net/minecraft/unmapped/C_6385858
 		p	2		itemInHand	
 		p	3		hand	
 	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_0336319;Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_4360192;)Lnet/minecraft/unmapped/C_6544668;	m_9473672	interact	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
+		p	1		player	
+		p	2		offset	
+		p	3		itemInHand	
+		p	4		hand	
 	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_4360192;)Z	m_7097998		interact
 		p	1			player
 		p	2			hand
 	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_0336319;Lnet/minecraft/unmapped/C_4360192;)Lnet/minecraft/unmapped/C_6544668;	m_9473672		interact
 		p	1			player
 		p	2			pos
-		p	3			hand
+		p	3			itemInHand
 c	net/minecraft/unmapped/C_6768539
 	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_4360192;Lnet/minecraft/unmapped/C_3544601;FFF)Lnet/minecraft/unmapped/C_6544668;	m_9844872	m_9844872	
 		p	1		p_1	
@@ -1084,9 +1084,9 @@ c	net/minecraft/unmapped/C_7699185
 	f	Lnet/minecraft/unmapped/C_0160011;	f_6134689		items
 	m	([Lnet/minecraft/unmapped/C_2750078;)V	m_3443025	setItems	
 		p	1		items	
-	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_2750078;)Z	m_9615055	m_9615055	
-		p	0		p_0	
-		p	1		p_1	
+	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_2750078;)Z	m_9615055	areItemsTheSame	
+		p	0		item1	
+		p	1		item2	
 	m	(Ljava/util/List;)V	m_3443025		setItems
 		p	1			items
 c	net/minecraft/unmapped/C_7881648
@@ -1163,7 +1163,7 @@ c	net/minecraft/unmapped/C_8345828
 	m	()I	m_2402432	getProfession	
 	m	()Lnet/minecraft/unmapped/C_8562284;	m_6845253	getType	
 	m	(Lnet/minecraft/unmapped/C_8562284;)V	m_7673258	setType	
-		p	1		p_1	
+		p	1		type	
 	m	()Ljava/lang/String;	m_5573014	m_5573014	
 	m	()Z	m_4444799		shouldBurnInDaylight
 	m	()Lnet/minecraft/unmapped/C_7721249;	m_9470026		getWalkingSound
@@ -2655,21 +2655,21 @@ c	net/minecraft/unmapped/C_2340941
 	f	Z	f_4829693	hasArmoredTexture	
 	f	Lnet/minecraft/unmapped/C_6101761;	f_1509984	TYPE	
 	f	Lnet/minecraft/unmapped/C_6101761;	f_8781926	VARIANT	
-	f	Lnet/minecraft/unmapped/C_6101761;	f_6971434	ARMOR	
-	f	Ljava/util/UUID;	f_2802863	f_2802863	
-	f	Lnet/minecraft/unmapped/C_4080312;	f_8504049	f_8504049	
-	f	Z	f_2662127	f_2662127	
-	f	I	f_3867187	f_3867187	
+	f	Lnet/minecraft/unmapped/C_6101761;	f_6971434	ARMOR_TIER	
+	f	Ljava/util/UUID;	f_2802863	HORSE_ARMOR_BONUS_MODIFIER_ID	
+	f	Lnet/minecraft/unmapped/C_4080312;	f_8504049	skeletonTrapGoal	
+	f	Z	f_2662127	skeletonTrap	
+	f	I	f_3867187	getSkeletonTrapTicks	
 	f	Z	f_6974663		canRun
 	m	(I)V	m_0599338	setVariant	
 		p	1		variant	
 	m	()I	m_8364194	getVariant	
 	m	()Ljava/lang/String;	m_5573014	m_5573014	
-	m	()Z	m_6821241	isNotBaby	
-	m	()Z	m_0446367	isAdult	
+	m	()Z	m_6821241	isOldEnoughForBreeding	
+	m	()Z	m_0446367	acceptsFoodFromPassenger	
 	m	()Z	m_3331561	hasChest	
 	m	()Z	m_8608063	hasBred	
-	m	(Z)V	m_1926690	setHasChestFlag	
+	m	(Z)V	m_1926690	setHasChest	
 		p	1		hasChest	
 	m	(Z)V	m_1764725	setHasBred	
 		p	1		hasBred	
@@ -2682,14 +2682,14 @@ c	net/minecraft/unmapped/C_2340941
 	m	()V	m_0270876	updateTexturePaths	
 	m	()[Ljava/lang/String;	m_8128047	getArmoredTexturePaths	
 	m	()Ljava/lang/String;	m_4351874	getBaseTexturePath	
-	m	()Z	m_8562360	drawHoverEffect	
+	m	()Z	m_8562360	isSkeletonTrap	
 	m	()V	m_1870293	dropInventoryAndChest	
 	m	(Lnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_1485454;)V	m_0642683	dropInventory	
 		p	1		entity	
 		p	2		inventory	
 	m	(Lnet/minecraft/unmapped/C_2488469;)V	m_8601362	m_8601362	
 		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_2750078;)V	m_3681579	setArmourIndex	
+	m	(Lnet/minecraft/unmapped/C_2750078;)V	m_3681579	setArmor	
 		p	1		item	
 	m	()Z	m_9452280	hasArmoredTexture	
 	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_4360192;Lnet/minecraft/unmapped/C_2750078;)Z	m_8048017	m_8048017	
@@ -2697,12 +2697,12 @@ c	net/minecraft/unmapped/C_2340941
 		p	2		p_2	
 		p	3		p_3	
 	m	(Lnet/minecraft/unmapped/C_4327800;)V	m_4847152	setType	
-		p	1		p_1	
+		p	1		type	
 	m	()Lnet/minecraft/unmapped/C_4327800;	m_6549647	getType	
-	m	()Lnet/minecraft/unmapped/C_4622345;	m_0861345	getArmor	
+	m	()Lnet/minecraft/unmapped/C_4622345;	m_0861345	getArmorTier	
 	m	()D	m_7560901	m_7560901	
-	m	(Z)V	m_6571123	isNotAngry	
-		p	1		p_1	
+	m	(Z)V	m_6571123	setSkeletonTrap	
+		p	1		skeletonTrap	
 	m	()Lnet/minecraft/unmapped/C_4834860;	m_2765189	m_2765189	
 	m	()Lnet/minecraft/unmapped/C_7721249;	m_6892820	getAngreType	
 	m	()Lnet/minecraft/unmapped/C_0561170;	m_3514816	m_3514816	
@@ -2939,7 +2939,7 @@ c	net/minecraft/unmapped/C_8365102
 	m	()Z	m_5888477	isElder	
 	m	(Z)V	m_3534893	setElder	
 		p	1		isElder	
-	m	()V	m_8724241	m_8724241	
+	m	()V	m_8724241	setGhost	
 	m	()V	m_2363546	m_2363546	
 	m	(Lnet/minecraft/unmapped/C_8365102;)Lnet/minecraft/unmapped/C_7275075;	m_6418922	m_6418922	
 		p	0		p_0	
@@ -3022,10 +3022,10 @@ c	net/minecraft/unmapped/C_3289201
 		p	7			p_7
 		p	8			p_8
 c	net/minecraft/unmapped/C_3438842
-	f	[Lnet/minecraft/unmapped/C_2750078;	f_3142287	f_3142287	
-	f	[Lnet/minecraft/unmapped/C_2750078;	f_7640831	f_7640831	
-	f	Lnet/minecraft/unmapped/C_0160011;	f_3142287		f_3142287
-	f	Lnet/minecraft/unmapped/C_0160011;	f_7640831		f_7640831
+	f	[Lnet/minecraft/unmapped/C_2750078;	f_3142287	itemsInHands	
+	f	[Lnet/minecraft/unmapped/C_2750078;	f_7640831	armor	
+	f	Lnet/minecraft/unmapped/C_0160011;	f_3142287		itemsInHands
+	f	Lnet/minecraft/unmapped/C_0160011;	f_7640831		armor
 	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_0336319;Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_4360192;)Lnet/minecraft/unmapped/C_6544668;	m_9473672	m_9473672	
 		p	1		p_1	
 		p	2		p_2	
@@ -3194,10 +3194,10 @@ c	net/minecraft/unmapped/C_4080312
 	f	Lnet/minecraft/unmapped/C_2340941;	f_9715385	horse	
 	f	Lnet/minecraft/unmapped/C_7475139;	f_9715385		horse
 	m	(Lnet/minecraft/unmapped/C_2340941;)V	<init>	<init>	
-		p	1		p_1	
+		p	1		horse	
 	m	(Lnet/minecraft/unmapped/C_2716056;Lnet/minecraft/unmapped/C_2340941;)Lnet/minecraft/unmapped/C_0258789;	m_4446571	createSkeleton	
-		p	1		p_1	
-		p	2		p_2	
+		p	1		difficulty	
+		p	2		horse	
 	m	(Lnet/minecraft/unmapped/C_7475139;)V	<init>		<init>
 		p	1			horse
 	m	(Lnet/minecraft/unmapped/C_2716056;Lnet/minecraft/unmapped/C_2340941;)Lnet/minecraft/unmapped/C_7149293;	m_4446571		createSkeleton
@@ -3221,11 +3221,11 @@ c	net/minecraft/unmapped/C_4327800	net/minecraft/entity/living/mob/passive/anima
 		p	0		p_0	
 	m	()Lnet/minecraft/unmapped/C_9900956;	m_9157445	getName	
 	m	()Lnet/minecraft/unmapped/C_0561170;	m_4874683	getTexture	
-	m	()Z	m_2068685	m_2068685	
-	m	()Z	m_0308019	m_0308019	
+	m	()Z	m_2068685	hasChest	
+	m	()Z	m_0308019	isVehicle	
 	m	()Z	m_5939114	isUndead	
-	m	()Z	m_2421105	m_2421105	
-	m	()Z	m_8224545	m_8224545	
+	m	()Z	m_2421105	canBreed	
+	m	()Z	m_8224545	setHasChest	
 	m	()I	m_5446511	getId	
 	m	(I)Lnet/minecraft/unmapped/C_4327800;	m_1689337	byId	
 		p	0		id	
@@ -3280,12 +3280,12 @@ c	net/minecraft/unmapped/C_4508436
 		p	8			p_8
 c	net/minecraft/unmapped/C_4840589
 	m	([Lnet/minecraft/unmapped/C_2750078;II)Lnet/minecraft/unmapped/C_2750078;	m_3189792	split	
-		p	0		p_0	
-		p	1		p_1	
-		p	2		p_2	
+		p	0		items	
+		p	1		slot	
+		p	2		amount	
 	m	([Lnet/minecraft/unmapped/C_2750078;I)Lnet/minecraft/unmapped/C_2750078;	m_7453796	remove	
-		p	0		p_0	
-		p	1		p_1	
+		p	0		items	
+		p	1		slot	
 	m	(Ljava/util/List;II)Lnet/minecraft/unmapped/C_2750078;	m_3189792		split
 		p	0			inventory
 		p	1			slot
@@ -3373,7 +3373,7 @@ c	net/minecraft/unmapped/C_8562284	net/minecraft/entity/living/mob/hostile/Zombi
 	m	(I)Lnet/minecraft/unmapped/C_8562284;	m_5861143	byProfession	
 		p	0		profession	
 	m	()Lnet/minecraft/unmapped/C_9900956;	m_0786436	getName	
-	m	()Z	m_9859165	m_9859165	
+	m	()Z	m_9859165	isSunSensitive	
 	m	()V	<clinit>	<clinit>	
 	m	()Lnet/minecraft/unmapped/C_7721249;	m_1600207	getAmbientSound	
 	m	()Lnet/minecraft/unmapped/C_7721249;	m_7033006	getHurtSound	

@@ -21,16 +21,16 @@ c	net/minecraft/unmapped/C_0400468
 		p	2			p_2
 		p	3			p_3
 c	net/minecraft/unmapped/C_1013763
-	f	I	f_0759875	LIVING_FLAGS	
-	f	I	f_0528808	f_0528808	
-	f	I	f_8230611	f_8230611	
-	f	I	f_6562973	f_6562973	
-	f	I	f_7450833	f_7450833	
-	f	Lnet/minecraft/unmapped/C_6101761;	f_0759875		LIVING_FLAGS
-	f	Lnet/minecraft/unmapped/C_6101761;	f_0528808		f_0528808
-	f	Lnet/minecraft/unmapped/C_6101761;	f_8230611		f_8230611
-	f	Lnet/minecraft/unmapped/C_6101761;	f_6562973		f_6562973
-	f	Lnet/minecraft/unmapped/C_6101761;	f_7450833		f_7450833
+	f	I	f_0759875	SHARED_FLAGS	
+	f	I	f_0528808	HEALTH	
+	f	I	f_8230611	EFFECT_PARTICLES_COLOR	
+	f	I	f_6562973	EFFECT_PARTICLES_AMBIENT	
+	f	I	f_7450833	STUCK_ARROWS	
+	f	Lnet/minecraft/unmapped/C_6101761;	f_0759875		SHARED_FLAGS
+	f	Lnet/minecraft/unmapped/C_6101761;	f_0528808		HEALTH
+	f	Lnet/minecraft/unmapped/C_6101761;	f_8230611		EFFECT_PARTICLES_COLOR
+	f	Lnet/minecraft/unmapped/C_6101761;	f_6562973		EFFECT_PARTICLES_AMBIENT
+	f	Lnet/minecraft/unmapped/C_6101761;	f_7450833		STUCK_ARROWS
 	m	(I)V	m_8901560	m_8901560	
 		p	1		p_1	
 	m	(Lnet/minecraft/unmapped/C_6907923;)Z	m_3127333		bypassesShield
@@ -79,8 +79,8 @@ c	net/minecraft/unmapped/C_2923961
 	f	I	f_3850745	SPIDER_FLAGS	
 	f	Lnet/minecraft/unmapped/C_6101761;	f_3850745		SPIDER_FLAGS
 c	net/minecraft/unmapped/C_2984832
-	f	I	f_8350716	f_8350716	
-	f	Lnet/minecraft/unmapped/C_6101761;	f_8350716		f_8350716
+	f	I	f_8350716	CHARGING	
+	f	Lnet/minecraft/unmapped/C_6101761;	f_8350716		CHARGING
 c	net/minecraft/unmapped/C_3050136
 	f	I	f_0321166	ITEM	
 	f	Lnet/minecraft/unmapped/C_6101761;	f_0321166		ITEM
@@ -596,8 +596,8 @@ c	net/minecraft/unmapped/C_6790978
 	m	(Lnet/minecraft/unmapped/C_6101761;)V	m_8901560		m_8901560
 		p	1			p_1
 c	net/minecraft/unmapped/C_4389375
-	f	I	f_7554841	f_7554841	
-	f	Lnet/minecraft/unmapped/C_6101761;	f_7554841		f_7554841
+	f	I	f_7554841	PLAYER_CREATED	
+	f	Lnet/minecraft/unmapped/C_6101761;	f_7554841		PLAYER_CREATED
 c	net/minecraft/unmapped/C_1793890
 	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6707278;)I	m_0514510	m_0514510	
 		p	1		p_1	
@@ -671,8 +671,8 @@ c	net/minecraft/unmapped/C_7112719
 		p	2			p_2
 		p	3			p_3
 c	net/minecraft/unmapped/C_6182204
-	f	I	f_6345385	BAT_FLAGS	
-	f	Lnet/minecraft/unmapped/C_6101761;	f_6345385		BAT_FLAGS
+	f	I	f_6345385	SHARED_FLAGS	
+	f	Lnet/minecraft/unmapped/C_6101761;	f_6345385		SHARED_FLAGS
 c	net/minecraft/unmapped/C_8935931
 	f	I	f_5490191	DRINKING	
 	f	Lnet/minecraft/unmapped/C_6101761;	f_5490191		DRINKING
@@ -703,12 +703,12 @@ c	net/minecraft/unmapped/C_2340941
 	f	I	f_1509984	TYPE	
 	f	I	f_8781926	VARIANT	
 	f	I	f_7247040	OWNER	
-	f	I	f_6971434	ARMOR	
+	f	I	f_6971434	ARMOR_TIER	
 	f	Lnet/minecraft/unmapped/C_6101761;	f_2513439		HORSE_FLAGS
 	f	Lnet/minecraft/unmapped/C_6101761;	f_1509984		TYPE
 	f	Lnet/minecraft/unmapped/C_6101761;	f_8781926		VARIANT
 	f	Lnet/minecraft/unmapped/C_6101761;	f_7247040		OWNER
-	f	Lnet/minecraft/unmapped/C_6101761;	f_6971434		ARMOR
+	f	Lnet/minecraft/unmapped/C_6101761;	f_6971434		ARMOR_TIER
 	m	(Ljava/lang/String;)V	m_2820108	setOwnerName	
 		p	1		name	
 	m	()Ljava/lang/String;	m_3209552	getOwnerUuid	
@@ -716,8 +716,8 @@ c	net/minecraft/unmapped/C_2340941
 	m	(Ljava/util/UUID;)V	m_2820108		setOwnerName
 		p	1			ownerUuid
 c	net/minecraft/unmapped/C_2587956
-	f	I	f_7726146	DATA_FLAGS	
-	f	Lnet/minecraft/unmapped/C_6101761;	f_7726146		DATA_FLAGS
+	f	I	f_7726146	SHARED_FLAGS	
+	f	Lnet/minecraft/unmapped/C_6101761;	f_7726146		SHARED_FLAGS
 c	net/minecraft/unmapped/C_1271665
 	m	()Ljava/lang/String;	m_4420979	getOwnerName	
 	m	()Ljava/util/UUID;	m_4420979		getOwnerUuid
@@ -794,20 +794,20 @@ c	net/minecraft/unmapped/C_8249338
 		p	2			p_2
 		p	3			p_3
 c	net/minecraft/unmapped/C_3438842
-	f	I	f_1297938	f_1297938	
-	f	I	f_5681122	f_5681122	
-	f	I	f_6574716	f_6574716	
-	f	I	f_8749231	f_8749231	
-	f	I	f_1116573	f_1116573	
-	f	I	f_8511472	f_8511472	
-	f	I	f_1693129	f_1693129	
-	f	Lnet/minecraft/unmapped/C_6101761;	f_1297938		f_1297938
-	f	Lnet/minecraft/unmapped/C_6101761;	f_5681122		f_5681122
-	f	Lnet/minecraft/unmapped/C_6101761;	f_6574716		f_6574716
-	f	Lnet/minecraft/unmapped/C_6101761;	f_8749231		f_8749231
-	f	Lnet/minecraft/unmapped/C_6101761;	f_1116573		f_1116573
-	f	Lnet/minecraft/unmapped/C_6101761;	f_8511472		f_8511472
-	f	Lnet/minecraft/unmapped/C_6101761;	f_1693129		f_1693129
+	f	I	f_1297938	SHARED_FLAGS	
+	f	I	f_5681122	HEAD_ROTATION	
+	f	I	f_6574716	BODY_ROTATION	
+	f	I	f_8749231	LEFT_ARM_ROTATION	
+	f	I	f_1116573	RIGHT_ARM_ROTATION	
+	f	I	f_8511472	LEFT_LEG_ROTATION	
+	f	I	f_1693129	RIGHT_LEG_ROTATION	
+	f	Lnet/minecraft/unmapped/C_6101761;	f_1297938		SHARED_FLAGS
+	f	Lnet/minecraft/unmapped/C_6101761;	f_5681122		HEAD_ROTATION
+	f	Lnet/minecraft/unmapped/C_6101761;	f_6574716		BODY_ROTATION
+	f	Lnet/minecraft/unmapped/C_6101761;	f_8749231		LEFT_ARM_ROTATION
+	f	Lnet/minecraft/unmapped/C_6101761;	f_1116573		RIGHT_ARM_ROTATION
+	f	Lnet/minecraft/unmapped/C_6101761;	f_8511472		LEFT_LEG_ROTATION
+	f	Lnet/minecraft/unmapped/C_6101761;	f_1693129		RIGHT_LEG_ROTATION
 c	net/minecraft/unmapped/C_4288942
 	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6707278;)Lnet/minecraft/unmapped/C_4030632;	m_0328423	m_0328423	
 		p	1		p_1	

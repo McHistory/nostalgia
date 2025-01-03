@@ -727,7 +727,7 @@ c	net/minecraft/unmapped/C_0063175$C_2015676		Igloo
 		p	3			p_3
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_8412059
-	m	()V	m_4155684		m_4155684
+	m	()V	m_4155684		reloadResources
 c	net/minecraft/unmapped/C_8412059$8091464		8091464
 	f	Lnet/minecraft/unmapped/C_8412059;	f_4972079		f_4972079
 	m	(Lnet/minecraft/unmapped/C_8412059;)V	<init>		<init>
@@ -1028,11 +1028,11 @@ c	net/minecraft/unmapped/C_4327800
 	m	(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V	<init>	<init>	
 		p	1		p_1	
 		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-		p	6		p_6	
-		p	7		p_7	
+		p	3		name	
+		p	4		texture	
+		p	5		ambient	
+		p	6		hurt	
+		p	7		death	
 	m	()Ljava/lang/String;	m_6693037	getAmbientSound	
 	m	()Ljava/lang/String;	m_3370652	getHurtSound	
 	m	()Ljava/lang/String;	m_1180945	getDeathSound	
@@ -1410,8 +1410,8 @@ c	net/minecraft/unmapped/C_1973575$C_0746687		Serializer
 c	net/minecraft/unmapped/C_2620694		net/minecraft/world/gen/loot/functions/LootingEnchantFunction
 	f	Lnet/minecraft/unmapped/C_8197819;	f_0869690		count
 	m	([Lnet/minecraft/unmapped/C_3735648;Lnet/minecraft/unmapped/C_8197819;)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
+		p	1			conditions
+		p	2			count
 	m	(Lnet/minecraft/unmapped/C_2750078;Ljava/util/Random;Lnet/minecraft/unmapped/C_7630919;)Lnet/minecraft/unmapped/C_2750078;	m_2257383		m_2257383
 		p	1			p_1
 		p	2			p_2
@@ -1937,7 +1937,7 @@ c	net/minecraft/unmapped/C_8694447$C_4455879		Serializer
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
-c	net/minecraft/unmapped/C_8870345		net/minecraft/world/saved/SavedDataDirtyMarker
+c	net/minecraft/unmapped/C_8870345		net/minecraft/world/saveddata/SavedDataDirtyMarker
 	f	Lnet/minecraft/unmapped/C_2678057;	f_0564237		savedData
 	m	(Lnet/minecraft/unmapped/C_2678057;)V	<init>		<init>
 		p	1			savedData

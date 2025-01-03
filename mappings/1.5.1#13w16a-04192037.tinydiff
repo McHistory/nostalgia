@@ -4420,9 +4420,9 @@ c	net/minecraft/unmapped/C_2340941		net/minecraft/entity/living/mob/passive/anim
 	m	(IZ)V	m_4820146		setHorseFlag
 		p	1			flag
 		p	2			value
-	m	()Z	m_6821241		isNotBaby
+	m	()Z	m_6821241		isOldEnoughForBreeding
 	m	()Z	m_3303648		isTame
-	m	()Z	m_0446367		isAdult
+	m	()Z	m_0446367		acceptsFoodFromPassenger
 	m	(Ljava/lang/String;)V	m_2820108		setOwnerName
 		p	1			name
 	m	()F	m_9336499		getSize
@@ -4436,16 +4436,16 @@ c	net/minecraft/unmapped/C_2340941		net/minecraft/entity/living/mob/passive/anim
 	m	()Z	m_5659178		m_5659178
 	m	()Z	m_2297385		m_2297385
 	m	()Z	m_3331561		hasChest
-	m	()I	m_0861345		getArmor
+	m	()I	m_0861345		getArmorTier
 	m	()Z	m_1777988		isEating
 	m	()Z	m_3694779		isAngry
 	m	()Z	m_4281063		isReadyToBreed
 	m	()Z	m_8608063		hasBred
-	m	(I)V	m_3681579		setArmourIndex
-		p	1			p_1
+	m	(I)V	m_3681579		setArmorTier
+		p	1			tier
 	m	(Z)V	m_7164356		setBredFlag
 		p	1			bred
-	m	(Z)V	m_1926690		setHasChestFlag
+	m	(Z)V	m_1926690		setHasChest
 		p	1			hasChest
 	m	(Z)V	m_1764725		setHasBred
 		p	1			hasBred
@@ -4455,7 +4455,7 @@ c	net/minecraft/unmapped/C_2340941		net/minecraft/entity/living/mob/passive/anim
 	m	(I)V	m_5743441		setTemper
 		p	1			temper
 	m	(I)I	m_1613517		addTemper
-		p	1			difference
+		p	1			amount
 	m	(Lnet/minecraft/unmapped/C_6907923;F)Z	m_3238154		m_3238154
 		p	1			p_1
 		p	2			p_2
@@ -4495,8 +4495,8 @@ c	net/minecraft/unmapped/C_2340941		net/minecraft/entity/living/mob/passive/anim
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_5009044;)V	m_7197612		putPlayerOnBack
 		p	1			player
-	m	()Z	m_8562360		drawHoverEffect
-	m	()Z	m_6571123		isNotAngry
+	m	()Z	m_8562360		canHaveArmor
+	m	()Z	m_6571123		canHaveChest
 	m	()Z	m_9040877		m_9040877
 	m	()Z	m_0527905		isAngryHorse
 	m	()Z	m_8696181		noLove
