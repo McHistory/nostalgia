@@ -521,7 +521,7 @@ c	net/minecraft/unmapped/C_0226190	net/minecraft/client/render/texture/CompassSp
 	m	(Lnet/minecraft/client/Minecraft;)V	<init>	<init>
 		p	1		minecraft
 	m	()V	m_4399705	m_4399705
-c	net/minecraft/unmapped/C_0258789	net/minecraft/entity/mob/hostile/SkeletonEntity
+c	net/minecraft/unmapped/C_0258789	net/minecraft/entity/mob/monster/SkeletonEntity
 	f	Lnet/minecraft/unmapped/C_2750078;	f_0795879	BOW
 	m	(Lnet/minecraft/unmapped/C_3906126;)V	<init>	<init>
 		p	1		p_1
@@ -2609,11 +2609,11 @@ c	net/minecraft/unmapped/C_1805909	net/minecraft/client/gui/widget/OptionButtonW
 		p	4		option
 		p	5		message
 	m	()Lnet/minecraft/unmapped/C_7688744$C_0457152;	m_9639786	getOption
-c	net/minecraft/unmapped/C_1826831	net/minecraft/entity/mob/hostile/CreeperEntity
+c	net/minecraft/unmapped/C_1826831	net/minecraft/entity/mob/monster/CreeperEntity
 	f	I	f_1207512	fuse
 	f	I	f_9963903	lastFuse
-	f	I	f_3214430	f_3214430
-	f	I	f_8771002	f_8771002
+	f	I	f_3214430	fuseDuration
+	f	I	f_8771002	fuseCooldown
 	f	I	f_4767261	f_4767261
 	m	(Lnet/minecraft/unmapped/C_3906126;)V	<init>	<init>
 		p	1		p_1
@@ -3867,7 +3867,7 @@ c	net/minecraft/unmapped/C_2899769	net/minecraft/item/WallHangableItem
 		p	5		p_5
 		p	6		p_6
 		p	7		p_7
-c	net/minecraft/unmapped/C_2923961	net/minecraft/entity/mob/hostile/SpiderEntity
+c	net/minecraft/unmapped/C_2923961	net/minecraft/entity/mob/monster/SpiderEntity
 	m	(Lnet/minecraft/unmapped/C_3906126;)V	<init>	<init>
 		p	1		world
 	m	()D	m_7560901	m_7560901
@@ -3903,7 +3903,7 @@ c	net/minecraft/unmapped/C_2941751	net/minecraft/isom/IsomRenderChunk
 		p	1		world
 		p	2		chunkX
 		p	3		chunkZ
-c	net/minecraft/unmapped/C_2984832	net/minecraft/entity/mob/hostile/GhastEntity
+c	net/minecraft/unmapped/C_2984832	net/minecraft/entity/mob/monster/GhastEntity
 	f	I	f_6172306	collisionCheckCooldown
 	f	D	f_3368863	floatTargetX
 	f	D	f_1530599	floatTargetY
@@ -4208,7 +4208,7 @@ c	net/minecraft/unmapped/C_3271339	net/minecraft/client/SurvivalInteractionManag
 	m	(Lnet/minecraft/unmapped/C_3906126;)V	m_1565789	m_1565789
 		p	1		p_1
 	m	()V	m_8517616	m_8517616
-c	net/minecraft/unmapped/C_3324249	net/minecraft/entity/mob/hostile/GiantEntity
+c	net/minecraft/unmapped/C_3324249	net/minecraft/entity/mob/monster/GiantEntity
 	m	(Lnet/minecraft/unmapped/C_3906126;)V	<init>	<init>
 		p	1		p_1
 	m	(III)F	m_4465324	m_4465324
@@ -4270,7 +4270,7 @@ c	net/minecraft/unmapped/C_3414480	net/minecraft/block/MineralBlock
 		p	2		sprite
 	m	(I)I	m_9597800	m_9597800
 		p	1		p_1
-c	net/minecraft/unmapped/C_3419581	net/minecraft/entity/mob/PathAwareMobEntity
+c	net/minecraft/unmapped/C_3419581	net/minecraft/entity/mob/PathFinderMobEntity
 	f	Lnet/minecraft/unmapped/C_7641996;	f_1141703	path
 	f	Lnet/minecraft/unmapped/C_6385858;	f_8101227	walkTarget
 	f	Z	f_3611045	stoppedMoving
@@ -7211,7 +7211,7 @@ c	net/minecraft/unmapped/C_4712589	net/minecraft/client/render/FrustumData
 		p	7		maxX
 		p	9		maxY
 		p	11		maxZ
-c	net/minecraft/unmapped/C_4718187	net/minecraft/entity/mob/hostile/HostileMobEntity
+c	net/minecraft/unmapped/C_4718187	net/minecraft/entity/mob/monster/MonsterEntity
 	f	I	f_2338118	attackDamage
 	m	(Lnet/minecraft/unmapped/C_3906126;)V	<init>	<init>
 		p	1		p_1
@@ -7653,7 +7653,7 @@ c	net/minecraft/unmapped/C_4946369	net/minecraft/network/packet/PlayerInteractEn
 	m	(Lnet/minecraft/unmapped/C_4443804;)V	m_0240895	m_0240895
 		p	1		p_1
 	m	()I	m_0079091	m_0079091
-c	net/minecraft/unmapped/C_4948697	net/minecraft/entity/mob/hostile/ZombiePigmanEntity
+c	net/minecraft/unmapped/C_4948697	net/minecraft/entity/mob/monster/ZombiePigmanEntity
 	f	I	f_0802335	angerValue
 	f	I	f_5697420	angerSoundDelay
 	f	Lnet/minecraft/unmapped/C_2750078;	f_6918503	GOLDEN_SWORD
@@ -8089,7 +8089,7 @@ c	net/minecraft/unmapped/C_5367636	net/minecraft/client/entity/mob/player/InputC
 	m	(I)V	m_4561784	damageTo
 		p	1		health
 	m	()V	m_7664484	m_7664484
-c	net/minecraft/unmapped/C_5371184	net/minecraft/entity/mob/hostile/SlimeEntity
+c	net/minecraft/unmapped/C_5371184	net/minecraft/entity/mob/monster/SlimeEntity
 	f	F	f_0694011	stretch
 	f	F	f_8888018	lastStretch
 	f	I	f_1856136	jumpTimer
@@ -11210,7 +11210,7 @@ c	net/minecraft/unmapped/C_8321936	net/minecraft/network/packet/RideEntityPacket
 		p	1		p_1
 	m	(Lnet/minecraft/unmapped/C_4443804;)V	m_0240895	m_0240895
 		p	1		p_1
-c	net/minecraft/unmapped/C_8345828	net/minecraft/entity/mob/hostile/ZombieEntity
+c	net/minecraft/unmapped/C_8345828	net/minecraft/entity/mob/monster/ZombieEntity
 	m	(Lnet/minecraft/unmapped/C_3906126;)V	<init>	<init>
 		p	1		world
 	m	()V	m_5818797	m_5818797
@@ -12124,7 +12124,7 @@ c	net/minecraft/unmapped/C_9219192	net/minecraft/world/dimension/Dimension
 	m	()Z	m_5489382	hasWorldSpawn
 	m	(I)Lnet/minecraft/unmapped/C_9219192;	m_7802527	fromId
 		p	0		id
-c	net/minecraft/unmapped/C_9244736	net/minecraft/entity/mob/hostile/Monster
+c	net/minecraft/unmapped/C_9244736	net/minecraft/entity/mob/monster/Monster
 c	net/minecraft/unmapped/C_9302567	net/minecraft/client/render/entity/EntityRenderer
 	f	Lnet/minecraft/unmapped/C_9610577;	f_1797121	dispatcher
 	f	Lnet/minecraft/unmapped/C_3239917;	f_1722736	model

@@ -143,7 +143,7 @@ c	net/minecraft/unmapped/C_0139979	net/minecraft/client/resource/ResourceDownloa
 		p	2		dst	
 		p	3		size	
 	m	()V	m_4359826	shutdown	
-c	net/minecraft/unmapped/C_0258789	net/minecraft/entity/mob/hostile/SkeletonEntity	net/minecraft/entity/living/mob/hostile/SkeletonEntity
+c	net/minecraft/unmapped/C_0258789	net/minecraft/entity/mob/monster/SkeletonEntity	net/minecraft/entity/living/mob/monster/SkeletonEntity
 	m	()Ljava/lang/String;	m_9980999	m_9980999	
 	m	()I	m_4601038	m_4601038	
 	m	()I	m_8512153	m_8512153	
@@ -366,7 +366,7 @@ c	net/minecraft/unmapped/C_1013763	net/minecraft/entity/mob/MobEntity	net/minecr
 	m	()I	m_4908793	maxSpawnedPerChunk	
 		c	How many of this type of mob can be spawned at most per chunk.	
 	m	()V	m_6827055	makeSound	
-	m	()Z	m_2924409	isHostile	
+	m	()Z	m_2924409	canDespawn	
 	m	()I	m_8524049	verticleLookSpeed	
 	m	(Lnet/minecraft/unmapped/C_6385858;FF)V	m_0544398	lookAt	
 		p	1		target	
@@ -659,7 +659,7 @@ c	net/minecraft/unmapped/C_1613050
 		p	1			p_1
 	m	(Ljava/io/DataOutput;)V	m_4625396		m_4625396
 		p	1			p_1
-c	net/minecraft/unmapped/C_1826831	net/minecraft/entity/mob/hostile/CreeperEntity	net/minecraft/entity/living/mob/hostile/CreeperEntity
+c	net/minecraft/unmapped/C_1826831	net/minecraft/entity/mob/monster/CreeperEntity	net/minecraft/entity/living/mob/monster/CreeperEntity
 	m	()I	m_4601038	m_4601038	
 	m	()I	m_8512153	m_8512153	
 	m	()I	m_2225185		m_2225185
@@ -740,7 +740,7 @@ c	net/minecraft/unmapped/C_2750078
 	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_1013763;)Z	m_8234787		interact
 		p	1			player
 		p	2			entity
-c	net/minecraft/unmapped/C_2923961	net/minecraft/entity/mob/hostile/SpiderEntity	net/minecraft/entity/living/mob/hostile/SpiderEntity
+c	net/minecraft/unmapped/C_2923961	net/minecraft/entity/mob/monster/SpiderEntity	net/minecraft/entity/living/mob/monster/SpiderEntity
 	m	()D	m_7560901	m_7560901	
 	m	()Ljava/lang/String;	m_9980999	m_9980999	
 	m	()I	m_4601038	m_4601038	
@@ -750,7 +750,7 @@ c	net/minecraft/unmapped/C_2923961	net/minecraft/entity/mob/hostile/SpiderEntity
 	m	()Ljava/lang/String;	m_7781112		m_7781112
 	m	()I	m_2225185		m_2225185
 	m	()V	m_0405912		m_0405912
-c	net/minecraft/unmapped/C_2984832	net/minecraft/entity/mob/hostile/GhastEntity	net/minecraft/entity/living/mob/hostile/GhastEntity
+c	net/minecraft/unmapped/C_2984832	net/minecraft/entity/mob/monster/GhastEntity	net/minecraft/entity/living/mob/monster/GhastEntity
 	m	()Ljava/lang/String;	m_9980999	m_9980999	
 	m	()I	m_4601038	m_4601038	
 	m	()Z	m_6814594	m_6814594	
@@ -786,7 +786,7 @@ c	net/minecraft/unmapped/C_3157620
 c	net/minecraft/unmapped/C_3172064
 	m	()Ljava/lang/String;	m_6898824		getUsername
 	m	()Ljava/lang/String;	m_0274623		getId
-c	net/minecraft/unmapped/C_3324249	net/minecraft/entity/mob/hostile/GiantEntity	net/minecraft/entity/living/mob/hostile/GiantEntity
+c	net/minecraft/unmapped/C_3324249	net/minecraft/entity/mob/monster/GiantEntity	net/minecraft/entity/living/mob/monster/GiantEntity
 	m	()I	m_8512153	m_8512153	
 	m	()V	m_1987632		m_1987632
 c	net/minecraft/unmapped/C_3385278
@@ -794,7 +794,7 @@ c	net/minecraft/unmapped/C_3385278
 	m	(Ljava/lang/String;[Ljava/lang/String;)V	m_8974142		m_8974142
 		p	1			p_1
 		p	2			p_2
-c	net/minecraft/unmapped/C_3419581	net/minecraft/entity/mob/PathAwareMobEntity	net/minecraft/entity/living/mob/PathAwareMobEntity
+c	net/minecraft/unmapped/C_3419581	net/minecraft/entity/mob/PathFinderMobEntity	net/minecraft/entity/living/mob/PathFinderMobEntity
 	f	Lnet/minecraft/unmapped/C_6707278;	f_3537258		pos
 	f	F	f_3606617		villageRadius
 	f	Lnet/minecraft/unmapped/C_6273786;	f_0260797		goToWalkTargetGoal
@@ -938,7 +938,7 @@ c	net/minecraft/unmapped/C_4522670
 		p	1			p_1
 	m	(Ljava/io/DataOutput;)V	m_4625396		m_4625396
 		p	1			p_1
-c	net/minecraft/unmapped/C_4718187	net/minecraft/entity/mob/hostile/HostileMobEntity	net/minecraft/entity/living/mob/hostile/HostileMobEntity
+c	net/minecraft/unmapped/C_4718187	net/minecraft/entity/mob/monster/MonsterEntity	net/minecraft/entity/living/mob/monster/MonsterEntity
 	m	()Z	m_6814594	m_6814594	
 	m	(Lnet/minecraft/unmapped/C_6907923;I)Z	m_3238154	m_3238154	
 		p	1		p_1	
@@ -1093,7 +1093,7 @@ c	net/minecraft/unmapped/C_4946369
 		p	1			p_1
 	m	(Ljava/io/DataOutput;)V	m_4625396		m_4625396
 		p	1			p_1
-c	net/minecraft/unmapped/C_4948697	net/minecraft/entity/mob/hostile/ZombiePigmanEntity	net/minecraft/entity/living/mob/hostile/ZombiePigmanEntity
+c	net/minecraft/unmapped/C_4948697	net/minecraft/entity/mob/monster/ZombiePigmanEntity	net/minecraft/entity/living/mob/monster/ZombiePigmanEntity
 	m	()Z	m_6814594	m_6814594	
 	m	()Ljava/lang/String;	m_9980999	m_9980999	
 	m	()I	m_4601038	m_4601038	
@@ -1188,7 +1188,7 @@ c	net/minecraft/unmapped/C_5367636	net/minecraft/client/entity/mob/player/InputC
 	m	()Z	m_6234479		isRidingRideableMob
 	m	()F	m_0064923		getRidingJumpProgress
 	m	()V	m_9030471		jumpWithHorse
-c	net/minecraft/unmapped/C_5371184	net/minecraft/entity/mob/hostile/SlimeEntity	net/minecraft/entity/living/mob/hostile/SlimeEntity
+c	net/minecraft/unmapped/C_5371184	net/minecraft/entity/mob/monster/SlimeEntity	net/minecraft/entity/living/mob/monster/SlimeEntity
 	f	[F	f_0464084	MOON_PHASE_SPAWN_CHANCES	
 	m	()I	m_4601038	m_4601038	
 	m	()Z	m_6814594	m_6814594	
@@ -1377,7 +1377,7 @@ c	net/minecraft/unmapped/C_8321936	net/minecraft/network/packet/RideEntityPacket
 		p	1			p_1
 	m	(Ljava/io/DataOutput;)V	m_4625396		m_4625396
 		p	1			p_1
-c	net/minecraft/unmapped/C_8345828	net/minecraft/entity/mob/hostile/ZombieEntity	net/minecraft/entity/living/mob/hostile/ZombieEntity
+c	net/minecraft/unmapped/C_8345828	net/minecraft/entity/mob/monster/ZombieEntity	net/minecraft/entity/living/mob/monster/ZombieEntity
 	m	()Ljava/lang/String;	m_9980999	m_9980999	
 	m	()I	m_4601038	m_4601038	
 	m	()I	m_8512153	m_8512153	
@@ -2338,7 +2338,7 @@ c	net/minecraft/unmapped/C_9055414
 		p	1			p_1
 	m	(Ljava/io/DataOutput;)V	m_4625396		m_4625396
 		p	1			p_1
-c	net/minecraft/unmapped/C_0509876	net/minecraft/entity/mob/hostile/SilverfishEntity	net/minecraft/entity/living/mob/hostile/SilverfishEntity
+c	net/minecraft/unmapped/C_0509876	net/minecraft/entity/mob/monster/SilverfishEntity	net/minecraft/entity/living/mob/monster/SilverfishEntity
 	m	()Ljava/lang/String;	m_9980999	m_9980999	
 	m	(Lnet/minecraft/unmapped/C_6907923;I)Z	m_3238154	m_3238154	
 		p	1		p_1	
@@ -2353,7 +2353,7 @@ c	net/minecraft/unmapped/C_0509876	net/minecraft/entity/mob/hostile/SilverfishEn
 		p	2			p_2
 	m	()I	m_2225185		m_2225185
 	m	()Z	m_1733837		m_1733837
-c	net/minecraft/unmapped/C_0826304	net/minecraft/entity/mob/hostile/CaveSpiderEntity	net/minecraft/entity/living/mob/hostile/CaveSpiderEntity
+c	net/minecraft/unmapped/C_0826304	net/minecraft/entity/mob/monster/CaveSpiderEntity	net/minecraft/entity/living/mob/monster/CaveSpiderEntity
 	m	()I	m_8512153	m_8512153	
 	m	()V	m_6896447	m_6896447	
 	m	()V	m_1987632		m_1987632
@@ -2369,7 +2369,7 @@ c	net/minecraft/unmapped/C_1404514
 		p	1			p_1
 	m	(Ljava/io/DataOutput;)V	m_4625396		m_4625396
 		p	1			p_1
-c	net/minecraft/unmapped/C_1481722	net/minecraft/entity/mob/hostile/EndermanEntity	net/minecraft/entity/living/mob/hostile/EndermanEntity
+c	net/minecraft/unmapped/C_1481722	net/minecraft/entity/mob/monster/EndermanEntity	net/minecraft/entity/living/mob/monster/EndermanEntity
 	f	Z	f_3419465		angry
 	m	()Ljava/lang/String;	m_9980999	m_9980999	
 	m	()I	m_4601038	m_4601038	
@@ -2478,7 +2478,7 @@ c	net/minecraft/unmapped/C_1168245	net/minecraft/entity/mob/passive/VillagerEnti
 	m	()Ljava/lang/String;	m_7781112		m_7781112
 	m	()V	m_0405912		m_0405912
 	m	()Z	m_2297385		m_2297385
-c	net/minecraft/unmapped/C_1756552	net/minecraft/entity/mob/hostile/MagmaCubeEntity	net/minecraft/entity/living/mob/hostile/MagmaCubeEntity
+c	net/minecraft/unmapped/C_1756552	net/minecraft/entity/mob/monster/MagmaCubeEntity	net/minecraft/entity/living/mob/monster/MagmaCubeEntity
 	m	()Z	m_6814594	m_6814594	
 	m	()I	m_4601038	m_4601038	
 	m	()Z	m_1733837		m_1733837
@@ -2503,7 +2503,7 @@ c	net/minecraft/unmapped/C_2459497	net/minecraft/entity/mob/passive/animal/Moosh
 		p	1		p_1	
 	m	(Lnet/minecraft/unmapped/C_5009044;)Z	m_8048017		m_8048017
 		p	1			p_1
-c	net/minecraft/unmapped/C_3695747	net/minecraft/entity/mob/hostile/BlazeEntity	net/minecraft/entity/living/mob/hostile/BlazeEntity
+c	net/minecraft/unmapped/C_3695747	net/minecraft/entity/mob/monster/BlazeEntity	net/minecraft/entity/living/mob/monster/BlazeEntity
 	m	()Ljava/lang/String;	m_9980999	m_9980999	
 	m	()I	m_4601038	m_4601038	
 	m	()I	m_8512153	m_8512153	
@@ -2583,14 +2583,14 @@ c	net/minecraft/unmapped/C_4080528
 	m	(ILnet/minecraft/unmapped/C_1013763;)F	m_3056014		m_3056014
 		p	1			p_1
 		p	2			p_2
-c	net/minecraft/unmapped/C_5439084	net/minecraft/entity/mob/hostile/boss/EnderDragonPart	net/minecraft/entity/living/mob/hostile/boss/EnderDragonPart
+c	net/minecraft/unmapped/C_5439084	net/minecraft/entity/mob/monster/boss/EnderDragonPart	net/minecraft/entity/living/mob/monster/boss/EnderDragonPart
 	m	(Lnet/minecraft/unmapped/C_6907923;I)Z	m_3238154	m_3238154	
 		p	1		p_1	
 		p	2		p_2	
 	m	(Lnet/minecraft/unmapped/C_6907923;F)Z	m_3238154		m_3238154
 		p	1			p_1
 		p	2			p_2
-c	net/minecraft/unmapped/C_9832438	net/minecraft/entity/mob/hostile/boss/EnderDragonEntity	net/minecraft/entity/living/mob/hostile/boss/EnderDragonEntity
+c	net/minecraft/unmapped/C_9832438	net/minecraft/entity/mob/monster/boss/EnderDragonEntity	net/minecraft/entity/living/mob/monster/boss/EnderDragonEntity
 	m	(Lnet/minecraft/unmapped/C_5439084;Lnet/minecraft/unmapped/C_6907923;I)Z	m_4167577	m_4167577	
 		p	1		p_1	
 		p	2		p_2	
@@ -3733,12 +3733,12 @@ c	net/minecraft/unmapped/C_8370969
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
-c	net/minecraft/unmapped/C_0118999	net/minecraft/entity/mob/hostile/boss/Boss	net/minecraft/entity/living/mob/hostile/boss/Boss
+c	net/minecraft/unmapped/C_0118999	net/minecraft/entity/mob/monster/boss/Boss	net/minecraft/entity/living/mob/monster/boss/Boss
 	m	()I	m_8512153	getMaxHealth	
 	m	()I	m_9161906	getDisplayHealth	
 	m	()F	m_8512153		getMaxHealth
 	m	()F	m_4971784		getHealth
-c	net/minecraft/unmapped/C_1444189	net/minecraft/entity/mob/hostile/boss/WitherEntity	net/minecraft/entity/living/mob/hostile/boss/WitherEntity
+c	net/minecraft/unmapped/C_1444189	net/minecraft/entity/mob/monster/boss/WitherEntity	net/minecraft/entity/living/mob/monster/boss/WitherEntity
 	m	(Lnet/minecraft/unmapped/C_6907923;I)Z	m_3238154	m_3238154	
 		p	1		p_1	
 		p	2		p_2	
@@ -3774,7 +3774,7 @@ c	net/minecraft/unmapped/C_5775997
 	m	(Lnet/minecraft/unmapped/C_6907923;F)Z	m_3238154		m_3238154
 		p	1			p_1
 		p	2			p_2
-c	net/minecraft/unmapped/C_6264072	net/minecraft/entity/mob/hostile/boss/EnderDragon	net/minecraft/entity/living/mob/hostile/boss/EnderDragon
+c	net/minecraft/unmapped/C_6264072	net/minecraft/entity/mob/monster/boss/EnderDragon	net/minecraft/entity/living/mob/monster/boss/EnderDragon
 	m	(Lnet/minecraft/unmapped/C_5439084;Lnet/minecraft/unmapped/C_6907923;I)Z	m_4167577	takeDamage	
 		p	1		part	
 		p	2		source	
@@ -3839,7 +3839,7 @@ c	net/minecraft/unmapped/C_6182204	net/minecraft/entity/mob/ambient/BatEntity	ne
 		p	1			p_1
 		p	2			p_2
 	m	()Z	m_1733837		m_1733837
-c	net/minecraft/unmapped/C_8935931	net/minecraft/entity/mob/hostile/WitchEntity	net/minecraft/entity/living/mob/hostile/WitchEntity
+c	net/minecraft/unmapped/C_8935931	net/minecraft/entity/mob/monster/WitchEntity	net/minecraft/entity/living/mob/monster/WitchEntity
 	m	()I	m_8512153	m_8512153	
 	m	(Lnet/minecraft/unmapped/C_6907923;I)I	m_8106508	m_8106508	
 		p	1		p_1	
@@ -5109,7 +5109,7 @@ c	net/minecraft/unmapped/C_9549387		net/minecraft/entity/living/attribute/Abstra
 	m	()Ljava/util/Collection;	m_1606856		getAll
 c	net/minecraft/unmapped/C_0639491	net/minecraft/client/entity/mob/player/KeyboardInput	net/minecraft/client/entity/living/player/KeyboardInput
 c	net/minecraft/unmapped/C_4045198	net/minecraft/client/entity/mob/player/Input	net/minecraft/client/entity/living/player/Input
-c	net/minecraft/unmapped/C_9244736	net/minecraft/entity/mob/hostile/Monster	net/minecraft/entity/living/mob/hostile/Monster
+c	net/minecraft/unmapped/C_9244736	net/minecraft/entity/mob/monster/Monster	net/minecraft/entity/living/mob/monster/Monster
 c	net/minecraft/unmapped/C_9466447	net/minecraft/entity/mob/MobCategory	net/minecraft/entity/living/mob/MobCategory
 c	net/minecraft/unmapped/C_9579094	net/minecraft/entity/mob/FlyingMobEntity	net/minecraft/entity/living/mob/FlyingMobEntity
 c	net/minecraft/unmapped/C_0591668	net/minecraft/entity/mob/effect/StatusEffect	net/minecraft/entity/living/effect/StatusEffect
@@ -5119,5 +5119,4 @@ c	net/minecraft/unmapped/C_7324071	net/minecraft/entity/mob/player/HungerManager
 c	net/minecraft/unmapped/C_8088383	net/minecraft/entity/mob/passive/Npc	net/minecraft/entity/living/mob/passive/Npc
 c	net/minecraft/unmapped/C_6223866	net/minecraft/entity/mob/effect/PotionHelper	net/minecraft/entity/living/effect/PotionHelper
 c	net/minecraft/unmapped/C_0219847	net/minecraft/entity/mob/passive/animal/tamable/TameableEntity	net/minecraft/entity/living/mob/passive/animal/tamable/TameableEntity
-c	net/minecraft/unmapped/C_4886193	net/minecraft/entity/mob/hostile/RangedAttackMob	net/minecraft/entity/living/mob/hostile/RangedAttackMob
-c	net/minecraft/unmapped/C_7248549	net/minecraft/entity/mob/hostile/boss/BossBar	net/minecraft/entity/living/mob/hostile/boss/BossBar
+c	net/minecraft/unmapped/C_4886193	net/minecraft/entity/mob/monster/RangedAttackMob	net/minecraft/entity/living/mob/monster/RangedAttackMob
