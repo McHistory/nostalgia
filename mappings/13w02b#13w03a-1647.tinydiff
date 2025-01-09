@@ -376,27 +376,31 @@ c	net/minecraft/unmapped/C_8935931
 		p	1			p_1
 		p	2			p_2
 c	net/minecraft/unmapped/C_0024265
-	f	Lnet/minecraft/unmapped/C_8878495;	f_5905539	f_5905539	
+	f	Lnet/minecraft/unmapped/C_8878495;	f_5905539	TARGET_INVENTORY_FILTER	
 	m	()Lnet/minecraft/unmapped/C_4390289;	m_8194850	getInventoryAbove	
 	m	(III)Lnet/minecraft/unmapped/C_4390289;	m_9375579	getInventoryAt	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
+		p	1		x	
+		p	2		y	
+		p	3		z	
 	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_2750078;)Z	m_8010811
-		p	2		p_2	
+		p	2		item2	
 		p	0			item1
+		p	1		item1	item2
 	m	()V	<clinit>	<clinit>	
 	m	(III)Lnet/minecraft/unmapped/C_3050136;	m_0256747	getItem	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
+		p	1		x	
+		p	2		y	
+		p	3		z	
 	m	()Z	m_4119911	pullItem	
 	m	(Lnet/minecraft/unmapped/C_4390289;I)I	m_6595383
-		p	2		p_2	
+		p	2		side	
 		p	0			inventory
+		p	1		inventory	side
 	m	(Lnet/minecraft/unmapped/C_4390289;Lnet/minecraft/unmapped/C_2750078;I)Lnet/minecraft/unmapped/C_2750078;	m_6130482
-		p	3		p_3	
+		p	3		side	
 		p	0			inventory
+		p	1		inventory	item
+		p	2		item	side
 	m	(Ljava/lang/String;)V	m_8297509		setCustomName
 		p	1			name
 	m	(Lnet/minecraft/unmapped/C_3472905;)Z	m_4119911		pullItem

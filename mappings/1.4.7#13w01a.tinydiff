@@ -797,7 +797,7 @@ c	net/minecraft/unmapped/C_6557060
 		p	4			p_4
 		p	5			p_5
 c	net/minecraft/unmapped/C_0024265		net/minecraft/block/entity/HopperBlockEntity
-	f	Lnet/minecraft/unmapped/C_8878495;	f_5905539		f_5905539
+	f	Lnet/minecraft/unmapped/C_8878495;	f_5905539		TARGET_INVENTORY_FILTER
 	f	[Lnet/minecraft/unmapped/C_2750078;	f_4470447		inventory
 	f	I	f_8695407		transferCooldown
 	m	()V	<init>		<init>
@@ -824,20 +824,20 @@ c	net/minecraft/unmapped/C_0024265		net/minecraft/block/entity/HopperBlockEntity
 	m	()V	m_1388832		m_1388832
 	m	()V	m_1420044		m_1420044
 	m	(Lnet/minecraft/unmapped/C_4390289;)I	m_6595383		getFirstAvailableSlot
-		p	1			p_1
+		p	1			inventory
 	m	(Lnet/minecraft/unmapped/C_4390289;Lnet/minecraft/unmapped/C_2750078;)Lnet/minecraft/unmapped/C_2750078;	m_6130482		pushItem
-		p	1			p_1
-		p	2			p_2
+		p	1			inventory
+		p	2			item
 	m	()Lnet/minecraft/unmapped/C_4390289;	m_1101229		getTargetInventory
 		c		Return the inventory of the block this hopper is pointing into.
 	m	()Lnet/minecraft/unmapped/C_4390289;	m_8194850		getInventoryAbove
 	m	(III)Lnet/minecraft/unmapped/C_4390289;	m_9375579		getInventoryAt
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+		p	1			x
+		p	2			y
+		p	3			z
 	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_2750078;)Z	m_8010811		canMergeItems
-		p	1			item2
-		p	2			p_2
+		p	1			item1
+		p	2			item2
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_0024265$9131040		9131040
 	m	()V	<init>		<init>
