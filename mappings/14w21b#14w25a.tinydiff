@@ -2539,7 +2539,7 @@ c	net/minecraft/unmapped/C_5283200
 	f	Lnet/minecraft/unmapped/C_2627205;	f_7900303		region
 	f	Lnet/minecraft/unmapped/C_6707278;	f_4415347		origin
 	f	Lnet/minecraft/unmapped/C_6707278;	f_2898167		edge
-	f	Z	f_5939982		f_5939982
+	f	Z	f_5939982		nextLayer
 	m	()V	<clinit>	<clinit>	
 	m	(Lnet/minecraft/unmapped/C_6385858;)V	m_0330444	compile	
 		p	1		camera	
@@ -2549,16 +2549,16 @@ c	net/minecraft/unmapped/C_5283200
 	m	(Lnet/minecraft/unmapped/C_6385858;)V	m_4304248	rebuildTranslucent	
 		p	1		camera	
 	m	()Z	m_4889726		hasBlocks
-	m	()Z	m_4350809		m_4350809
+	m	()Z	m_4350809		hasNextLayer
 	m	(Lnet/minecraft/unmapped/C_3333682;Lnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_2334550;)Z	m_0330444		compile
 		p	1			layer
 		p	2			camera
 		p	3			tesselator
-	m	()V	m_5158658		m_5158658
-	m	()Z	m_2360925		m_2360925
-	m	(Lnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_2334550;)V	m_4304248		startBufferBuilder
-		p	1			p_1
-		p	2			p_2
+	m	()V	m_5158658		begin
+	m	()Z	m_2360925		hasTranslucent
+	m	(Lnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_2334550;)V	m_4304248		rebuildTranslucent
+		p	1			camera
+		p	2			tesselator
 	m	(Lnet/minecraft/unmapped/C_6385858;)F	m_2953364		squaredDistanceToCenterDoubleHeight
 		p	1			camera
 c	net/minecraft/unmapped/C_5324911
