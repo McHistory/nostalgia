@@ -860,9 +860,9 @@ c	net/minecraft/unmapped/C_5196988
 	f	I	f_8098097	material	
 	f	Lnet/minecraft/unmapped/C_5196988$C_7022258;	f_1170916	tier	
 	f	[Ljava/lang/String;	f_3040251	EMPTY_SLOTS	
-	f	Lnet/minecraft/unmapped/C_6893850;	f_2154976		material
+	f	Lnet/minecraft/unmapped/C_6893850;	f_2154976		tier
 	m	()[I	m_8805745	getBaseDurability	
-	m	()Lnet/minecraft/unmapped/C_5196988$C_7022258;	m_4800510	getMaterial	
+	m	()Lnet/minecraft/unmapped/C_5196988$C_7022258;	m_4800510	getTier	
 	m	(Lnet/minecraft/unmapped/C_2750078;)Z	m_4431778	hasColor	
 		p	1		stack	
 	m	(Lnet/minecraft/unmapped/C_2750078;)I	m_2129493	getColor	
@@ -877,10 +877,10 @@ c	net/minecraft/unmapped/C_5196988
 		p	2		materialId	
 		p	3		slot	
 	m	(Lnet/minecraft/unmapped/C_6893850;Lnet/minecraft/unmapped/C_7278838;Lnet/minecraft/unmapped/C_4030632$C_7918174;)V	<init>		<init>
-		p	1			material
+		p	1			tier
 		p	2			slot
 		p	3			properties
-	m	()Lnet/minecraft/unmapped/C_6893850;	m_4800510		getMaterial
+	m	()Lnet/minecraft/unmapped/C_6893850;	m_4800510		getTier
 	m	()I	m_3161802		getProtection
 c	net/minecraft/unmapped/C_5196988$C_7022258	Tier	
 	f	Lnet/minecraft/unmapped/C_5196988$C_7022258;	f_5564659	CLOTH	
@@ -3979,14 +3979,14 @@ c	net/minecraft/unmapped/C_6680357$C_4414943		Anchor
 		p	1			entity
 	m	()Ljava/util/Map;	m_8403822		m_8403822
 	m	()V	<clinit>		<clinit>
-c	net/minecraft/unmapped/C_6893850		net/minecraft/item/armor/ArmorMaterial
+c	net/minecraft/unmapped/C_6893850		net/minecraft/item/armor/ArmorTier
 	m	(Lnet/minecraft/unmapped/C_7278838;)I	m_9159704		getArmorDurability
 		p	1			armorSlot
 	m	(Lnet/minecraft/unmapped/C_7278838;)I	m_8437521		getArmorPoints
 		p	1			armorPiece
 	m	()I	m_8916811		getEnchantability
 	m	()Lnet/minecraft/unmapped/C_7721249;	m_8032982		getEquipSound
-	m	()Lnet/minecraft/unmapped/C_0241772;	m_1885058		getArmorMaterial
+	m	()Lnet/minecraft/unmapped/C_0241772;	m_1885058		getRepairIngredient
 	m	()Ljava/lang/String;	m_6469872		getName
 	m	()F	m_7620332		getToughness
 c	net/minecraft/unmapped/C_7022258		net/minecraft/item/armor/BuiltInArmorTier
@@ -4002,7 +4002,7 @@ c	net/minecraft/unmapped/C_7022258		net/minecraft/item/armor/BuiltInArmorTier
 	f	I	f_8501573		enchantability
 	f	Lnet/minecraft/unmapped/C_7721249;	f_3230561		equipSound
 	f	F	f_9717014		toughness
-	f	Lnet/minecraft/unmapped/C_2861100;	f_0222864		armorMaterial
+	f	Lnet/minecraft/unmapped/C_2861100;	f_0222864		repairIngredient
 	f	[Lnet/minecraft/unmapped/C_7022258;	f_4793210		f_4793210
 	m	()[Lnet/minecraft/unmapped/C_7022258;	values		values
 	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_7022258;	valueOf		valueOf
@@ -4016,7 +4016,7 @@ c	net/minecraft/unmapped/C_7022258		net/minecraft/item/armor/BuiltInArmorTier
 		p	6			enchantability
 		p	7			equipSound
 		p	8			toughness
-		p	9			armorMaterial
+		p	9			repairIngredient
 	m	(Lnet/minecraft/unmapped/C_7278838;)I	m_9159704		m_9159704
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_7278838;)I	m_8437521		m_8437521
