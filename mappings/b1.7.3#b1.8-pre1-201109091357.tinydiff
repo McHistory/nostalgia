@@ -1818,10 +1818,10 @@ c	net/minecraft/unmapped/C_9143244
 		p	2			z
 		p	3			range
 		p	4			biomes
-	m	(IIILjava/util/List;Ljava/util/Random;)Lnet/minecraft/unmapped/C_8032589;	m_2521711		getBiomePos
+	m	(IIILjava/util/List;Ljava/util/Random;)Lnet/minecraft/unmapped/C_8032589;	m_2521711		findBiome
 		p	1			x
-		p	2			y
-		p	3			z
+		p	2			z
+		p	3			range
 		p	4			biomes
 		p	5			random
 	m	()V	m_8716168		tick
@@ -2827,7 +2827,7 @@ c	net/minecraft/unmapped/C_4615590		net/minecraft/world/gen/structure/Stronghold
 	f	Lnet/minecraft/unmapped/C_4615590$C_9463620;	f_6747245		STONE_BRICK_PICKER
 	m	()V	<init>		<init>
 	m	()V	m_2633211		resetWeights
-	m	()Z	m_1658035		findTotalWeight
+	m	()Z	m_1658035		updateTotalWeight
 		c		Returns whether any more pieces can be generated.
 	m	(Lnet/minecraft/unmapped/C_4615590$C_4178681;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/unmapped/C_4615590$C_6985076;	m_1509625		createPiece
 		p	0			weight
@@ -3193,7 +3193,7 @@ c	net/minecraft/unmapped/C_4615590$C_9463620		StoneBrickPicker
 		p	1			p_1
 c	net/minecraft/unmapped/C_4873144		net/minecraft/world/gen/structure/StrongholdStructure
 	f	[Lnet/minecraft/unmapped/C_4636105;	f_7565811		validBiomes
-	f	Z	f_2500708		isValid
+	f	Z	f_2500708		positionsFound
 	f	I	f_8434619		f_8434619
 	f	I	f_4819872		f_4819872
 	m	()V	<init>		<init>
@@ -3905,10 +3905,10 @@ c	net/minecraft/unmapped/C_8213540		net/minecraft/world/biome/layer/AddIslandLay
 		p	4			p_4
 c	net/minecraft/unmapped/C_8259395		net/minecraft/world/gen/structure/VillagePieces
 	m	()V	<init>		<init>
-	m	(Ljava/util/Random;I)Ljava/util/ArrayList;	m_9262447		getPieceChance
+	m	(Ljava/util/Random;I)Ljava/util/ArrayList;	m_9262447		getPieceWeights
 		p	0			random
-		p	1			weight
-	m	(Ljava/util/ArrayList;)I	m_0782017		getTotalWeight
+		p	1			size
+	m	(Ljava/util/ArrayList;)I	m_0782017		updateTotalWeight
 		c		Will return the total weight of the given piece weights if more pieces can still be generated, or -1.
 		p	0			weights
 	m	(Lnet/minecraft/unmapped/C_8259395$C_3276230;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/unmapped/C_8259395$C_0865390;	m_1791627		createPiece

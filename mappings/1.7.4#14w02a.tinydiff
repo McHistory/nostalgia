@@ -7543,18 +7543,18 @@ c	net/minecraft/unmapped/C_9143244
 	m	(II)Lnet/minecraft/unmapped/C_4636105;	m_4232370	getBiome	
 		p	1		x	
 		p	2		z	
-	m	(IIILjava/util/List;Ljava/util/Random;)Lnet/minecraft/unmapped/C_8032589;	m_2521711	getBiomePos	
+	m	(IIILjava/util/List;Ljava/util/Random;)Lnet/minecraft/unmapped/C_8032589;	m_2521711	findBiome	
 		p	1		x	
-		p	2		y	
-		p	3		z	
+		p	2		z	
+		p	3		range	
 		p	4		biomes	
 		p	5		random	
 	m	(Lnet/minecraft/unmapped/C_6707278;)Lnet/minecraft/unmapped/C_4636105;	m_4232370		getBiome
 		p	1			pos
-	m	(IIILjava/util/List;Ljava/util/Random;)Lnet/minecraft/unmapped/C_6707278;	m_2521711		getBiomePos
+	m	(IIILjava/util/List;Ljava/util/Random;)Lnet/minecraft/unmapped/C_6707278;	m_2521711		findBiome
 		p	1			x
-		p	2			y
-		p	3			z
+		p	2			z
+		p	3			range
 		p	4			biomes
 		p	5			random
 c	net/minecraft/unmapped/C_9219192
@@ -10114,31 +10114,31 @@ c	net/minecraft/unmapped/C_8998010
 		p	2			p_2
 		p	3			p_3
 c	net/minecraft/unmapped/C_9006197
-	m	(III)Z	m_8201435	isInsideStructure	
+	m	(III)Z	m_8201435	isInside	
 		p	1		x	
 		p	2		y	
 		p	3		z	
-	m	(Lnet/minecraft/unmapped/C_3906126;III)Lnet/minecraft/unmapped/C_8032589;	m_4958963	findNearestStructurePosition	
+	m	(Lnet/minecraft/unmapped/C_3906126;III)Lnet/minecraft/unmapped/C_8032589;	m_4958963	findNearestPosition	
 		c	Find the nearest position where this structure has generated.	
 		p	1		world	
 		p	2		x	
 		p	3		y	
 		p	4		z	
-	m	(III)Z	m_2927880	isInsideStructureBounds	
+	m	(III)Z	m_2927880	isInsideBounds	
 		p	1		x	
 		p	2		y	
 		p	3		z	
-	m	(III)Lnet/minecraft/unmapped/C_5453071;	m_8474516	getStructure	
+	m	(III)Lnet/minecraft/unmapped/C_5453071;	m_8474516	findStructure	
 		p	1		x	
 		p	2		y	
 		p	3		z	
-	m	(Lnet/minecraft/unmapped/C_6707278;)Z	m_8201435		isInsideStructure
+	m	(Lnet/minecraft/unmapped/C_6707278;)Z	m_8201435		isInside
 		p	1			pos
-	m	(Lnet/minecraft/unmapped/C_6707278;)Lnet/minecraft/unmapped/C_5453071;	m_8474516		getStructure
+	m	(Lnet/minecraft/unmapped/C_6707278;)Lnet/minecraft/unmapped/C_5453071;	m_8474516		findStructure
 		p	1			pos
-	m	(Lnet/minecraft/unmapped/C_6707278;)Z	m_2927880		isInsideStructureBounds
+	m	(Lnet/minecraft/unmapped/C_6707278;)Z	m_2927880		isInsideBounds
 		p	1			pos
-	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6707278;)Lnet/minecraft/unmapped/C_6707278;	m_4958963		findNearestStructurePosition
+	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6707278;)Lnet/minecraft/unmapped/C_6707278;	m_4958963		findNearestPosition
 		c		Find the nearest position where this structure has generated.
 		p	1			world
 		p	2			pos
