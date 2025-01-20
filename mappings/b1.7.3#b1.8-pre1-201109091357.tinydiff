@@ -2596,7 +2596,7 @@ c	net/minecraft/unmapped/C_2331584		net/minecraft/world/gen/carver/RavineWorldCa
 		p	4			p_4
 		p	5			p_5
 		p	6			p_6
-c	net/minecraft/unmapped/C_2373189		net/minecraft/world/biome/layer/ZoomLayer
+c	net/minecraft/unmapped/C_2373189		net/minecraft/world/biome/layer/FuzzyZoomLayer
 	m	(JLnet/minecraft/unmapped/C_6297854;)V	<init>		<init>
 		p	1			seed
 		p	3			parent
@@ -2606,14 +2606,14 @@ c	net/minecraft/unmapped/C_2373189		net/minecraft/world/biome/layer/ZoomLayer
 		p	3			p_3
 		p	4			p_4
 	m	(II)I	m_7598494		pick
-		p	1			a
-		p	2			b
+		p	1			i1
+		p	2			i2
 	m	(IIII)I	m_0429634		pick
-		p	1			a
-		p	2			b
-		p	3			c
-		p	4			d
-c	net/minecraft/unmapped/C_2399225		net/minecraft/unmapped/C_2399225
+		p	1			i1
+		p	2			i2
+		p	3			i3
+		p	4			i4
+c	net/minecraft/unmapped/C_2399225		net/minecraft/world/biome/layer/NormalZoomLayer
 	m	(JLnet/minecraft/unmapped/C_6297854;)V	<init>		<init>
 		p	1			seed
 		p	3			parent
@@ -2623,13 +2623,13 @@ c	net/minecraft/unmapped/C_2399225		net/minecraft/unmapped/C_2399225
 		p	3			p_3
 		p	4			p_4
 	m	(II)I	m_2189519		pick
-		p	1			a
-		p	2			b
-	m	(IIII)I	m_5694582		pick
-		p	1			a
-		p	2			b
-		p	3			c
-		p	4			d
+		p	1			i1
+		p	2			i2
+	m	(IIII)I	m_5694582		getModeOrRandom
+		p	1			i1
+		p	2			i2
+		p	3			i3
+		p	4			i4
 	m	(JLnet/minecraft/unmapped/C_6297854;I)Lnet/minecraft/unmapped/C_6297854;	m_7124401		zoom
 		p	0			seed
 		p	2			layer
@@ -2771,7 +2771,7 @@ c	net/minecraft/unmapped/C_4232266		net/minecraft/client/render/model/entity/Sil
 		p	5			p_5
 		p	6			p_6
 	m	()V	<clinit>		<clinit>
-c	net/minecraft/unmapped/C_4353413		net/minecraft/world/biome/layer/RiverMixLayer
+c	net/minecraft/unmapped/C_4353413		net/minecraft/world/biome/layer/OceanRiverMixerLayer
 	f	Lnet/minecraft/unmapped/C_6297854;	f_3559197		biomeLayer
 	f	Lnet/minecraft/unmapped/C_6297854;	f_9730279		riverLayer
 	m	(JLnet/minecraft/unmapped/C_6297854;Lnet/minecraft/unmapped/C_6297854;)V	<init>		<init>
@@ -3510,7 +3510,7 @@ c	net/minecraft/unmapped/C_6297854		net/minecraft/world/biome/layer/Layer
 		p	3			chunkZ
 	m	(I)I	m_8192001		nextInt
 		p	1			bound
-	m	(IIII)[I	m_3947820		nextValues
+	m	(IIII)[I	m_3947820		getArea
 		p	1			x
 		p	2			z
 		p	3			sizeX
