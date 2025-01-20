@@ -1510,7 +1510,7 @@ c	net/minecraft/unmapped/C_4636105
 	f	Ljava/util/List;	f_0345530	monsterEntries	
 	f	Ljava/util/List;	f_3862425	passiveEntries	
 	f	Ljava/util/List;	f_4244926	waterEntries	
-	f	Z	f_3264428	hasRain	
+	f	Z	f_3264428	rainy	
 	f	Lnet/minecraft/unmapped/C_9151514;	f_5110123	decorator	
 	f	Lnet/minecraft/unmapped/C_6160704;	f_7706376	TREE	
 	f	Lnet/minecraft/unmapped/C_0546437;	f_9114374	LARGE_TREE	
@@ -1586,13 +1586,13 @@ c	net/minecraft/unmapped/C_4636105
 	f	Lnet/minecraft/unmapped/C_4636105$C_8671782;	f_3747061		biomeCategory
 	f	Lnet/minecraft/unmapped/C_4636105$C_1726796;	f_9589789		precipitation
 	f	Ljava/util/Map;	f_1659914		spawnEntries
-	m	()Z	m_8287143	canRain	
+	m	()Z	m_8287143	isRainy	
 	m	()Lnet/minecraft/unmapped/C_9151514;	m_8876734	createDecorator	
-	m	(Ljava/util/Random;)Lnet/minecraft/unmapped/C_6618366;	m_2444872	getRandomGrass	
+	m	(Ljava/util/Random;)Lnet/minecraft/unmapped/C_6618366;	m_2444872	pickPlant	
 		p	1		random	
-	m	(Ljava/util/Random;)Lnet/minecraft/unmapped/C_6049345;	m_0608438	getRandomTree	
+	m	(Ljava/util/Random;)Lnet/minecraft/unmapped/C_6049345;	m_0608438	pickTree	
 		p	1		random	
-	m	()Z	m_5296798	canSnow	
+	m	()Z	m_5296798	isSnowy	
 	m	()Ljava/lang/Class;	m_7479046	getType	
 	m	(Lnet/minecraft/unmapped/C_3906126;Ljava/util/Random;Lnet/minecraft/unmapped/C_6707278;)V	m_4370619	decorate	
 		p	1		world	
@@ -2716,8 +2716,8 @@ c	net/minecraft/unmapped/C_9072802
 		p	2			p_2
 		p	3			p_3
 c	net/minecraft/unmapped/C_9143244
-	f	Lnet/minecraft/unmapped/C_6297854;	f_4199003	biomes	
-	f	Lnet/minecraft/unmapped/C_6297854;	f_6495071	downfalls	
+	f	Lnet/minecraft/unmapped/C_6297854;	f_4199003	noiseBiomes	
+	f	Lnet/minecraft/unmapped/C_6297854;	f_6495071	biomes	
 	f	Lnet/minecraft/unmapped/C_8588387;	f_4544929	cache	
 	f	Lnet/minecraft/unmapped/C_6324082;	f_0907360	options	
 	f	Ljava/util/List;	f_9134837	biomesForSpawnPoint	BIOMES_FOR_SPAWNPOINT
@@ -2727,8 +2727,8 @@ c	net/minecraft/unmapped/C_9143244
 		p	3		z	
 		p	4		sizeX	
 		p	5		sizeZ	
-	m	([Lnet/minecraft/unmapped/C_4636105;IIII)[Lnet/minecraft/unmapped/C_4636105;	m_5939537	getBiomesForGeneration	
-		p	1		biomes	
+	m	([Lnet/minecraft/unmapped/C_4636105;IIII)[Lnet/minecraft/unmapped/C_4636105;	m_5939537	getNoiseBiomes	
+		p	1		noiseBiomes	
 		p	2		x	
 		p	3		z	
 		p	4		sizeX	
@@ -2739,14 +2739,14 @@ c	net/minecraft/unmapped/C_9143244
 		p	3		z	
 		p	4		sizeX	
 		p	5		sizeZ	
-		p	6		isCached	
-	m	(IIILjava/util/List;)Z	m_1944487	areBiomesValid	
+		p	6		useCache	
+	m	(IIILjava/util/List;)Z	m_1944487	isBiomeWithin	
 		p	1		x	
 		p	2		z	
 		p	3		range	
 		p	4		biomes	
 	m	()V	m_8716168	tick	
-	m	(FI)F	m_2840045	getTemperatureForHeight	
+	m	(FI)F	m_2840045	adjustTemperatureForHeight	
 		p	1		temperature	
 		p	2		height	
 	m	(Lnet/minecraft/unmapped/C_6707278;)Lnet/minecraft/unmapped/C_4636105;	m_4232370	getBiome	
@@ -2760,23 +2760,23 @@ c	net/minecraft/unmapped/C_9143244
 	m	()Z	m_4276759	isFixed	
 	m	()Lnet/minecraft/unmapped/C_4636105;	m_7427213	getFixedBiome	
 	m	()V	m_5506965		m_5506965
-	m	(IIII)[Lnet/minecraft/unmapped/C_4636105;	m_6329777		getBiomes
+	m	(IIII)[Lnet/minecraft/unmapped/C_4636105;	m_6329777		getNoiseBiomes
 		p	1			x
 		p	2			z
 		p	3			sizeX
 		p	4			sizeZ
-	m	(IIII)[Lnet/minecraft/unmapped/C_4636105;	m_2190202		getOrderedBiomes
+	m	(IIII)[Lnet/minecraft/unmapped/C_4636105;	m_2190202		getBiomes
 		p	1			x
 		p	2			z
 		p	3			sizeX
 		p	4			sizeZ
-	m	(IIIIZ)[Lnet/minecraft/unmapped/C_4636105;	m_5939537		getOrderedBiomes
+	m	(IIIIZ)[Lnet/minecraft/unmapped/C_4636105;	m_5939537		getBiomes
 		p	1			x
 		p	2			z
 		p	3			sizeX
 		p	4			sizeZ
-		p	5			cache
-	m	(III)Ljava/util/Set;	m_9868734		getBiomes
+		p	5			useCache
+	m	(III)Ljava/util/Set;	m_9868734		getBiomesWithin
 		p	1			x
 		p	2			z
 		p	3			range
@@ -4279,8 +4279,8 @@ c	net/minecraft/unmapped/C_6297854
 	m	(IIII)[I	m_3947820	nextValues	
 		p	1		x	
 		p	2		z	
-		p	3		width	
-		p	4		length	
+		p	3		sizeX	
+		p	4		sizeZ	
 	m	([I)I	m_5081477	getRandomInt	
 		p	1		ints	
 	m	(IIII)I	m_2474007	getModeOrRandom	
@@ -12699,8 +12699,8 @@ c	net/minecraft/unmapped/C_5170781		net/minecraft/world/biome/DarkForestBiome
 c	net/minecraft/unmapped/C_5204887		net/minecraft/world/biome/source/OverworldBiomeSource
 	f	Lnet/minecraft/unmapped/C_3369986;	f_9038362		settings
 	f	Lnet/minecraft/unmapped/C_8588387;	f_2679468		cache
-	f	Lnet/minecraft/unmapped/C_9457129;	f_9259335		f_9259335
-	f	Lnet/minecraft/unmapped/C_9457129;	f_1446938		f_1446938
+	f	Lnet/minecraft/unmapped/C_9457129;	f_9259335		noiseBiomes
+	f	Lnet/minecraft/unmapped/C_9457129;	f_1446938		biomes
 	m	(Lnet/minecraft/unmapped/C_3473914;Lnet/minecraft/unmapped/C_3369986;)V	<init>		<init>
 		p	1			worldData
 		p	2			settings

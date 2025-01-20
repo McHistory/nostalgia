@@ -2101,7 +2101,7 @@ c	net/minecraft/unmapped/C_4636105
 	f	Lnet/minecraft/unmapped/C_3635204;	f_1916586		surfaceBlock
 	f	I	f_2336441		surfaceBlockMetadata
 	f	Lnet/minecraft/unmapped/C_3635204;	f_6006915		subsurfaceBlock
-	m	(Ljava/util/Random;)Lnet/minecraft/unmapped/C_6618366;	m_0608438	getRandomTree	
+	m	(Ljava/util/Random;)Lnet/minecraft/unmapped/C_6618366;	m_0608438	pickTree	
 		p	1		random	
 	m	(FF)Lnet/minecraft/unmapped/C_4636105;	m_7841216	setHeight	
 		p	1		baseHeight	
@@ -2112,7 +2112,7 @@ c	net/minecraft/unmapped/C_4636105
 	m	()I	m_0960641	getFoliageColor	
 	m	(Lnet/minecraft/unmapped/C_4636105$C_6154571;)Lnet/minecraft/unmapped/C_4636105;	m_7841216		setHeight
 		p	1			height
-	m	(Ljava/util/Random;)Lnet/minecraft/unmapped/C_6049345;	m_0608438		getRandomTree
+	m	(Ljava/util/Random;)Lnet/minecraft/unmapped/C_6049345;	m_0608438		pickTree
 		p	1			random
 	m	(Ljava/util/Random;III)Ljava/lang/String;	m_4738004		getRandomFlower
 		p	1			random
@@ -2124,7 +2124,7 @@ c	net/minecraft/unmapped/C_4636105
 	m	(IZ)Lnet/minecraft/unmapped/C_4636105;	m_5781216		setColor
 		p	1			color
 		p	2			modifyBaseColor
-	m	()Z	m_5296798		canSnow
+	m	()Z	m_5296798		isSnowy
 	m	(III)F	m_0376165		getTemperature
 		p	1			x
 		p	2			y
@@ -2160,6 +2160,7 @@ c	net/minecraft/unmapped/C_4636105
 	m	(Lnet/minecraft/unmapped/C_4636105;)Z	m_7144526		is
 		p	1			biome
 	m	()Lnet/minecraft/unmapped/C_4636105$C_5784858;	m_2779508		getTemperatureCategory
+	m	()Z	m_4952577	isSnowy	isCold
 c	net/minecraft/unmapped/C_4636105$C_5784858		TemperatureCategory
 	f	Lnet/minecraft/unmapped/C_4636105$C_5784858;	f_4742320		OCEAN
 	f	Lnet/minecraft/unmapped/C_4636105$C_5784858;	f_1950174		COLD
@@ -4669,11 +4670,11 @@ c	net/minecraft/unmapped/C_6786653
 	m	(Lnet/minecraft/unmapped/C_3635204;)I	m_8438518		m_8438518
 		p	1			p_1
 c	net/minecraft/unmapped/C_6791672
-	f	I	f_4678774	plantId	
+	f	I	f_4678774	plant	
 	f	Lnet/minecraft/unmapped/C_3635204;	f_4678774		plant
 	m	(II)V	<init>	<init>	
-		p	1		plantId	
-		p	2		plantVariant	
+		p	1		plant	
+		p	2		variant	
 	m	(Lnet/minecraft/unmapped/C_3635204;I)V	<init>		<init>
 		p	1			plant
 		p	2			plantVariant
@@ -5335,7 +5336,7 @@ c	net/minecraft/unmapped/C_8259395$C_4750010
 		p	1			random
 c	net/minecraft/unmapped/C_8588387
 c	net/minecraft/unmapped/C_8588387$C_4149823
-	f	[F	f_3420276	temperature	
+	f	[F	f_3420276	temperatures	
 c	net/minecraft/unmapped/C_8998010
 	f	Lnet/minecraft/unmapped/C_7348073;	f_9518295		spruceTree
 	f	I	f_6271488		normalVariant

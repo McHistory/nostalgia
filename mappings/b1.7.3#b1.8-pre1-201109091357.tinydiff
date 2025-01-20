@@ -1766,8 +1766,8 @@ c	net/minecraft/unmapped/C_9143244
 	f	[D	f_1290595	temperatures	
 	f	[D	f_1988858	downfalls	
 	f	[D	f_4870957	noises	
-	f	Lnet/minecraft/unmapped/C_6297854;	f_4199003		biomes
-	f	Lnet/minecraft/unmapped/C_6297854;	f_5073996		biomes2
+	f	Lnet/minecraft/unmapped/C_6297854;	f_4199003		noiseBiomes
+	f	Lnet/minecraft/unmapped/C_6297854;	f_5073996		biomes
 	f	Lnet/minecraft/unmapped/C_6297854;	f_5401900		temperatures
 	f	Lnet/minecraft/unmapped/C_6297854;	f_6495071		downfalls
 	f	Lnet/minecraft/unmapped/C_8588387;	f_4544929		cache
@@ -1800,8 +1800,8 @@ c	net/minecraft/unmapped/C_9143244
 		p	3			z
 		p	4			sizeX
 		p	5			sizeZ
-	m	([Lnet/minecraft/unmapped/C_4636105;IIII)[Lnet/minecraft/unmapped/C_4636105;	m_5939537		getBiomesForGeneration
-		p	1			biomes
+	m	([Lnet/minecraft/unmapped/C_4636105;IIII)[Lnet/minecraft/unmapped/C_4636105;	m_5939537		getNoiseBiomes
+		p	1			noiseBiomes
 		p	2			x
 		p	3			z
 		p	4			sizeX
@@ -1812,8 +1812,8 @@ c	net/minecraft/unmapped/C_9143244
 		p	3			z
 		p	4			sizeX
 		p	5			sizeZ
-		p	6			isCached
-	m	(IIILjava/util/List;)Z	m_1944487		areBiomesValid
+		p	6			useCache
+	m	(IIILjava/util/List;)Z	m_1944487		isBiomeWithin
 		p	1			x
 		p	2			z
 		p	3			range
@@ -3500,7 +3500,7 @@ c	net/minecraft/unmapped/C_6297854		net/minecraft/world/biome/layer/Layer
 	f	J	f_2476741		chunkSeed
 	f	J	f_0471469		seed
 	m	(J)[Lnet/minecraft/unmapped/C_6297854;	m_8228202		init
-		p	0			p_0
+		p	0			seed
 	m	(J)V	<init>		<init>
 		p	1			seed
 	m	(J)V	m_7415483		setLocalWorldSeed
@@ -3513,8 +3513,8 @@ c	net/minecraft/unmapped/C_6297854		net/minecraft/world/biome/layer/Layer
 	m	(IIII)[I	m_3947820		nextValues
 		p	1			x
 		p	2			z
-		p	3			width
-		p	4			length
+		p	3			sizeX
+		p	4			sizeZ
 c	net/minecraft/unmapped/C_6531047		net/minecraft/client/render/model/block/entity/ChestModel
 	f	Lnet/minecraft/unmapped/C_0289174;	f_8650503		lid
 	f	Lnet/minecraft/unmapped/C_0289174;	f_3234837		base
@@ -3574,7 +3574,7 @@ c	net/minecraft/unmapped/C_6793325		net/minecraft/client/entity/particle/Suspend
 		p	12			p_12
 	m	()V	m_0718337		m_0718337
 c	net/minecraft/unmapped/C_6803248		net/minecraft/world/biome/IntCache
-	f	I	f_7716840		num
+	f	I	f_7716840		maxSize
 	f	Ljava/util/List;	f_0051399		tcache
 	f	Ljava/util/List;	f_9080781		tallocated
 	f	Ljava/util/List;	f_2627141		cache
@@ -3911,7 +3911,7 @@ c	net/minecraft/unmapped/C_8259395		net/minecraft/world/gen/structure/VillagePie
 	m	(Ljava/util/ArrayList;)I	m_0782017		updateTotalWeight
 		c		Will return the total weight of the given piece weights if more pieces can still be generated, or -1.
 		p	0			weights
-	m	(Lnet/minecraft/unmapped/C_8259395$C_3276230;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/unmapped/C_8259395$C_0865390;	m_1791627		createPiece
+	m	(Lnet/minecraft/unmapped/C_8259395$C_3276230;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/unmapped/C_8259395$C_0865390;	m_1791627		createBuildingPiece
 		p	0			weight
 		p	1			pieces
 		p	2			random
@@ -3920,7 +3920,7 @@ c	net/minecraft/unmapped/C_8259395		net/minecraft/world/gen/structure/VillagePie
 		p	5			z
 		p	6			facing
 		p	7			generationDepth
-	m	(Lnet/minecraft/unmapped/C_8259395$C_9855653;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/unmapped/C_8259395$C_0865390;	m_5065044		generateNextPiece
+	m	(Lnet/minecraft/unmapped/C_8259395$C_9855653;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/unmapped/C_8259395$C_0865390;	m_5065044		generateNextBuildingPiece
 		p	0			startPiece
 		p	1			pieces
 		p	2			random
@@ -3929,7 +3929,7 @@ c	net/minecraft/unmapped/C_8259395		net/minecraft/world/gen/structure/VillagePie
 		p	5			z
 		p	6			facing
 		p	7			generationDepth
-	m	(Lnet/minecraft/unmapped/C_8259395$C_9855653;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/unmapped/C_9282614;	m_1625177		tryGenerateNextPiece
+	m	(Lnet/minecraft/unmapped/C_8259395$C_9855653;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/unmapped/C_9282614;	m_1625177		generateBuildingPiece
 		p	0			startPiece
 		p	1			pieces
 		p	2			random
@@ -4336,14 +4336,14 @@ c	net/minecraft/unmapped/C_8588387		net/minecraft/world/biome/BiomeCache
 		p	1			x
 		p	2			z
 	m	()V	m_0369646		tick
-	m	(II)[Lnet/minecraft/unmapped/C_4636105;	m_5789523		getBiomesInChunk
+	m	(II)[Lnet/minecraft/unmapped/C_4636105;	m_5789523		getBiomes
 		p	1			x
 		p	2			z
 	m	(Lnet/minecraft/unmapped/C_8588387;)Lnet/minecraft/unmapped/C_9143244;	m_6915019		getBiomeSource
 		p	0			cache
 c	net/minecraft/unmapped/C_8588387$C_4149823		Entry
-	f	[F	f_3420276		temperature
-	f	[F	f_2880312		downfall
+	f	[F	f_3420276		temperatures
+	f	[F	f_2880312		downfalls
 	f	[Lnet/minecraft/unmapped/C_4636105;	f_0256981		biomes
 	f	I	f_4143594		chunkX
 	f	I	f_5837271		chunkZ
