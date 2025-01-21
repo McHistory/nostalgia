@@ -2913,7 +2913,7 @@ c	net/minecraft/unmapped/C_3825014
 	m	(Lnet/minecraft/unmapped/C_9264598;)Lcom/google/common/base/Predicate;	m_0838405	getPredicate	
 		p	1		definition	
 	m	(Lnet/minecraft/unmapped/C_9264598;)Ljava/util/function/Predicate;	m_0838405		getPredicate
-		p	1			p_1
+		p	1			stateDefinition
 c	net/minecraft/unmapped/C_3825014$C_0048054
 	f	Lcom/google/common/base/Function;	f_9642391	OR_CONDITION_SERIALIZER	
 	f	Lcom/google/common/base/Function;	f_4286288	AND_CONDITION_SERIALIZER	
@@ -2923,7 +2923,7 @@ c	net/minecraft/unmapped/C_3825014$C_0048054
 		p	0		p_0	
 	m	()V	<clinit>	<clinit>	
 	m	(Ljava/util/Map$Entry;)Lnet/minecraft/unmapped/C_8889465;	m_9241221		createCondition
-		p	0			p_0
+		p	0			property
 	m	(Lcom/google/gson/JsonElement;)Lnet/minecraft/unmapped/C_8889465;	m_8667253		m_8667253
 		p	0			p_0
 	m	(Lcom/google/gson/JsonElement;)Lnet/minecraft/unmapped/C_8889465;	m_0024719		m_0024719
@@ -2980,10 +2980,10 @@ c	net/minecraft/unmapped/C_4647073$C_4767402
 	m	(Ljava/util/function/Predicate;Lnet/minecraft/unmapped/C_8675191;)V	m_3481734		add
 		p	1			p_1
 		p	2			p_2
-c	net/minecraft/unmapped/C_4830307	net/minecraft/block/state/predicate/ChainedAndBlockStatePredicateFactory	
-	f	Ljava/lang/Iterable;	f_9865415	factories	
+c	net/minecraft/unmapped/C_4830307	net/minecraft/client/render/model/block/AndChainedCondition	
+	f	Ljava/lang/Iterable;	f_9865415	conditions	
 	m	(Ljava/lang/Iterable;)V	<init>	<init>	
-		p	1		factories	
+		p	1		conditions	
 	m	(Lnet/minecraft/unmapped/C_9264598;)Lcom/google/common/base/Predicate;	m_8334573	m_8334573	
 		p	1		p_1	
 c	net/minecraft/unmapped/C_4830307$6471106	6471106	
@@ -3038,10 +3038,10 @@ c	net/minecraft/unmapped/C_7506896
 	m	()V	<init>	<init>	
 	m	(Lnet/minecraft/unmapped/C_3635204$C_6799794;)V	<init>		<init>
 		p	1			p_1
-c	net/minecraft/unmapped/C_8139109	net/minecraft/block/state/predicate/ChainedOrBlockStatePredicateFactory	
-	f	Ljava/lang/Iterable;	f_5361880	factories	
+c	net/minecraft/unmapped/C_8139109	net/minecraft/client/render/model/block/OrChainedCondition	
+	f	Ljava/lang/Iterable;	f_5361880	conditions	
 	m	(Ljava/lang/Iterable;)V	<init>	<init>	
-		p	1		factories	
+		p	1		conditions	
 	m	(Lnet/minecraft/unmapped/C_9264598;)Lcom/google/common/base/Predicate;	m_8334573	m_8334573	
 		p	1		p_1	
 c	net/minecraft/unmapped/C_8139109$8776911	8776911	
@@ -3104,13 +3104,13 @@ c	net/minecraft/unmapped/C_8695691$8885050	8885050
 		p	2		p_2	
 		p	3		p_3	
 c	net/minecraft/unmapped/C_8889465
-	m	(Lnet/minecraft/unmapped/C_9264598;)Lcom/google/common/base/Predicate;	m_8334573	create	
+	m	(Lnet/minecraft/unmapped/C_9264598;)Lcom/google/common/base/Predicate;	m_8334573	getPredicate	
 		p	1		stateDefinition	
 	m	(Lnet/minecraft/unmapped/C_9264598;)Lcom/google/common/base/Predicate;	m_6380389	m_6380389	
 		p	0		stateDefinition	
 	m	(Lnet/minecraft/unmapped/C_9264598;)Lcom/google/common/base/Predicate;	m_1135070	m_1135070	
 		p	0		stateDefinition	
-	m	(Lnet/minecraft/unmapped/C_9264598;)Ljava/util/function/Predicate;	m_8334573		create
+	m	(Lnet/minecraft/unmapped/C_9264598;)Ljava/util/function/Predicate;	m_8334573		getPredicate
 		p	1			stateDefinition
 	m	(Lnet/minecraft/unmapped/C_9264598;)Ljava/util/function/Predicate;	m_6380389		m_6380389
 		p	0			stateDefinition
@@ -3920,10 +3920,10 @@ c	net/minecraft/unmapped/C_5478196		net/minecraft/item/tool/BuiltInTier
 	m	()Lnet/minecraft/unmapped/C_0241772;	m_8203929		m_8203929
 	m	()Lnet/minecraft/unmapped/C_0241772;	m_3578818		m_3578818
 	m	()V	<clinit>		<clinit>
-c	net/minecraft/unmapped/C_5963279		net/minecraft/unmapped/C_5963279
-	f	Ljava/lang/Iterable;	f_0576825		f_0576825
+c	net/minecraft/unmapped/C_5963279		net/minecraft/client/render/model/block/AndChainedCondition
+	f	Ljava/lang/Iterable;	f_0576825		conditions
 	m	(Ljava/lang/Iterable;)V	<init>		<init>
-		p	1			p_1
+		p	1			conditions
 	m	(Lnet/minecraft/unmapped/C_9264598;)Ljava/util/function/Predicate;	m_8334573		m_8334573
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_9264598;Lnet/minecraft/unmapped/C_2441996;)Z	m_7513108		m_7513108
@@ -4108,10 +4108,10 @@ c	net/minecraft/unmapped/C_8313839$C_9506855		Builder
 	m	(Ljava/util/function/Supplier;)Lnet/minecraft/unmapped/C_8313839$C_9506855;	m_5228284		of
 		p	0			factory
 	m	()Lnet/minecraft/unmapped/C_8313839;	m_6193124		build
-c	net/minecraft/unmapped/C_9968495		net/minecraft/unmapped/C_9968495
-	f	Ljava/lang/Iterable;	f_3900088		f_3900088
+c	net/minecraft/unmapped/C_9968495		net/minecraft/client/render/model/block/OrChainedCondition
+	f	Ljava/lang/Iterable;	f_3900088		conditions
 	m	(Ljava/lang/Iterable;)V	<init>		<init>
-		p	1			p_1
+		p	1			conditions
 	m	(Lnet/minecraft/unmapped/C_9264598;)Ljava/util/function/Predicate;	m_8334573		m_8334573
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_9264598;Lnet/minecraft/unmapped/C_2441996;)Z	m_4091456		m_4091456

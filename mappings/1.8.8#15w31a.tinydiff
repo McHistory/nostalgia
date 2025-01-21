@@ -7558,10 +7558,10 @@ c	net/minecraft/unmapped/C_4740250		net/minecraft/client/gui/overlay/BossEventOv
 	m	()Z	m_4551383		hasMusic
 	m	()Z	m_8187677		hasScreenEffects
 	m	()V	<clinit>		<clinit>
-c	net/minecraft/unmapped/C_4830307		net/minecraft/block/state/predicate/ChainedAndBlockStatePredicateFactory
-	f	Ljava/lang/Iterable;	f_9865415		factories
+c	net/minecraft/unmapped/C_4830307		net/minecraft/client/render/model/block/AndChainedCondition
+	f	Ljava/lang/Iterable;	f_9865415		conditions
 	m	(Ljava/lang/Iterable;)V	<init>		<init>
-		p	1			factories
+		p	1			conditions
 	m	(Lnet/minecraft/unmapped/C_9264598;)Lcom/google/common/base/Predicate;	m_8334573		m_8334573
 		p	1			p_1
 c	net/minecraft/unmapped/C_4830307$6864280		6864280
@@ -8353,10 +8353,10 @@ c	net/minecraft/unmapped/C_8104987		net/minecraft/client/entity/particle/Animate
 		p	1			p_1
 	m	(F)F	m_3581619		m_3581619
 		p	1			p_1
-c	net/minecraft/unmapped/C_8139109		net/minecraft/block/state/predicate/ChainedOrBlockStatePredicateFactory
-	f	Ljava/lang/Iterable;	f_5361880		factories
+c	net/minecraft/unmapped/C_8139109		net/minecraft/client/render/model/block/OrChainedCondition
+	f	Ljava/lang/Iterable;	f_5361880		conditions
 	m	(Ljava/lang/Iterable;)V	<init>		<init>
-		p	1			factories
+		p	1			conditions
 	m	(Lnet/minecraft/unmapped/C_9264598;)Lcom/google/common/base/Predicate;	m_8334573		m_8334573
 		p	1			p_1
 c	net/minecraft/unmapped/C_8139109$8776911		8776911
@@ -8434,7 +8434,7 @@ c	net/minecraft/unmapped/C_8499333		net/minecraft/client/render/model/entity/Shu
 		p	5			p_5
 		p	6			p_6
 		p	7			p_7
-c	net/minecraft/unmapped/C_8695691		net/minecraft/block/state/predicate/SinglePropertyBlockStatePredicateFactory
+c	net/minecraft/unmapped/C_8695691		net/minecraft/client/render/model/block/SinglePropertyCondition
 	f	Lcom/google/common/base/Splitter;	f_9541760		SPLITTER
 	f	Ljava/lang/String;	f_8379872		key
 	f	Ljava/lang/String;	f_9130585		value
@@ -8621,10 +8621,10 @@ c	net/minecraft/unmapped/C_8830502$C_9192098		SectionGenerator
 		p	3			pos
 		p	4			pieces
 		p	5			random
-c	net/minecraft/unmapped/C_8889465		net/minecraft/block/state/predicate/BlockStatePredicateFactory
-	f	Lnet/minecraft/unmapped/C_8889465;	f_7460280		ALWAYS
-	f	Lnet/minecraft/unmapped/C_8889465;	f_7819369		NEVER
-	m	(Lnet/minecraft/unmapped/C_9264598;)Lcom/google/common/base/Predicate;	m_8334573		create
+c	net/minecraft/unmapped/C_8889465		net/minecraft/client/render/model/block/Condition
+	f	Lnet/minecraft/unmapped/C_8889465;	f_7460280		TRUE
+	f	Lnet/minecraft/unmapped/C_8889465;	f_7819369		FALSE
+	m	(Lnet/minecraft/unmapped/C_9264598;)Lcom/google/common/base/Predicate;	m_8334573		getPredicate
 		p	1			stateDefinition
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_8889465$1589099		1589099
