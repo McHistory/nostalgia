@@ -399,7 +399,7 @@ c	net/minecraft/unmapped/C_0324512		net/minecraft/server/entity/mob/player/Serve
 	f	Ljava/util/List;	f_1683304		newLoadedChunks
 		c		Coordinates of chunks that have come within view of the player, but have not yet\nbeen sent to the client.
 	f	Ljava/util/Set;	f_5806656		allLoadedChunks
-	f	D	f_7252894		f_7252894
+	f	D	f_7252894		lastReceivedY
 	f	Z	f_1534277		sneaking
 	f	I	f_5431237		lastHealth
 	f	I	f_1478225		spawnProtectionTicks
@@ -536,9 +536,9 @@ c	net/minecraft/unmapped/C_0894181		net/minecraft/server/ServerProperties
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_0901730		net/minecraft/server/entity/EntityTrackerEntry
 	f	Lnet/minecraft/unmapped/C_6385858;	f_7181571		currentTrackedEntity
-	f	Z	f_3322088		f_3322088
-	f	Z	f_6048660		f_6048660
-	f	Z	f_5975743		f_5975743
+	f	Z	f_3322088		riding
+	f	Z	f_6048660		burning
+	f	Z	f_5975743		sneaking
 	f	I	f_2248933		trackedDistance
 	f	I	f_7565514		trackingFrequency
 	f	I	f_2016635		lastX
@@ -674,7 +674,7 @@ c	net/minecraft/unmapped/C_1896634		net/minecraft/server/ChunkMap
 		c		Chunks that need to sync block data with clients.
 	f	Lnet/minecraft/server/MinecraftServer;	f_1832964		server
 	m	(Lnet/minecraft/server/MinecraftServer;)V	<init>		<init>
-		p	1			p_1
+		p	1			server
 	m	()V	m_8018690		tick
 	m	(IIZ)Lnet/minecraft/unmapped/C_1896634$C_9146344;	m_1907600		getChunk
 		p	1			chunkX

@@ -148,7 +148,7 @@ c	net/minecraft/unmapped/C_0324512	net/minecraft/server/entity/mob/player/Server
 	f	Ljava/util/List;	f_1683304	newLoadedChunks	
 		c	Coordinates of chunks that have come within view of the player, but have not yet\nbeen sent to the client.	
 	f	Ljava/util/Set;	f_5806656	allLoadedChunks	
-	f	D	f_7252894	f_7252894	
+	f	D	f_7252894	lastReceivedY	
 	m	(Lnet/minecraft/server/MinecraftServer;Lnet/minecraft/unmapped/C_3906126;Ljava/lang/String;Lnet/minecraft/unmapped/C_7897127;)V	<init>	<init>	
 		p	1		server	
 		p	2		world	
@@ -386,7 +386,7 @@ c	net/minecraft/unmapped/C_1896634	net/minecraft/server/ChunkMap
 		c	Chunks that need to sync block data with clients.	
 	f	Lnet/minecraft/server/MinecraftServer;	f_1832964	server	
 	m	(Lnet/minecraft/server/MinecraftServer;)V	<init>	<init>	
-		p	1		p_1	
+		p	1		server	
 	m	()V	m_8018690	tick	
 	m	(IIZ)Lnet/minecraft/unmapped/C_1896634$C_9146344;	m_1907600	getChunk	
 		p	1		chunkX	
@@ -414,11 +414,11 @@ c	net/minecraft/unmapped/C_1896634	net/minecraft/server/ChunkMap
 		p	0		p_0	
 	m	(Lnet/minecraft/unmapped/C_1896634;)Ljava/util/List;	m_8260981	m_8260981	
 		p	0		p_0	
-	m	(Lnet/minecraft/unmapped/C_4844124;III)V	m_4982139	m_4982139	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
+	m	(Lnet/minecraft/unmapped/C_4844124;III)V	m_4982139	sendPacket	
+		p	1		packet	
+		p	2		x	
+		p	3		y	
+		p	4		z	
 c	net/minecraft/unmapped/C_1896634$C_9146344	ChunkHolder	
 	f	Ljava/util/List;	f_2317281	players	
 		c	Players within view distance of this chunk.	
@@ -875,7 +875,7 @@ c	net/minecraft/unmapped/C_8752044	net/minecraft/server/network/handler/ServerPl
 		p	1		p_1	
 	m	(Lnet/minecraft/unmapped/C_6489668;)V	m_6175764	m_6175764	
 		p	1		p_1	
-	m	()V	m_9958829	m_9958829	
+	m	()V	m_9958829	sendInventory	
 	m	(Lnet/minecraft/unmapped/C_8748575;)V	m_9632316	m_9632316	
 		p	1		p_1	
 c	net/minecraft/unmapped/C_9048725	net/minecraft/server/ServerLog	

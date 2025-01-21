@@ -78,23 +78,23 @@ c	net/minecraft/unmapped/C_0559439
 		p	4		z	
 		p	5		range	
 		p	6		dir	
-	m	(Lnet/minecraft/unmapped/C_3906126;IIII)V	m_9278800		m_9278800
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
-	m	(Lnet/minecraft/unmapped/C_3906126;III)V	m_7899784		m_7899784
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-	m	(Lnet/minecraft/unmapped/C_3906126;IIII)I	m_3018614		m_3018614
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
+	m	(Lnet/minecraft/unmapped/C_3906126;IIII)V	m_9278800		updateNeighborLogProximity
+		p	1			world
+		p	2			neighborX
+		p	3			neighborY
+		p	4			neighborZ
+		p	5			proximity
+	m	(Lnet/minecraft/unmapped/C_3906126;III)V	m_7899784		updateLogProximity
+		p	1			world
+		p	2			x
+		p	3			y
+		p	4			z
+	m	(Lnet/minecraft/unmapped/C_3906126;IIII)I	m_3018614		getLogProximity
+		p	1			world
+		p	2			neighborX
+		p	3			neighborY
+		p	4			neighborZ
+		p	5			proximity
 c	net/minecraft/unmapped/C_0661894	net/minecraft/network/packet/CloseInventoryMenuPacket	
 	f	I	f_1384830	id	
 	m	()V	<init>	<init>	
@@ -228,11 +228,11 @@ c	net/minecraft/unmapped/C_1805909
 		p	5		message	
 	m	()Lnet/minecraft/unmapped/C_7688744$C_0457152;	m_9639786	getOption	
 c	net/minecraft/unmapped/C_1896634
-	m	(Lnet/minecraft/unmapped/C_4844124;III)V	m_4982139		m_4982139
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
+	m	(Lnet/minecraft/unmapped/C_4844124;III)V	m_4982139		sendPacket
+		p	1			packet
+		p	2			x
+		p	3			y
+		p	4			z
 c	net/minecraft/unmapped/C_1896634$C_9146344
 	m	(Lnet/minecraft/unmapped/C_2074023;)V	m_2764465	sendBlockEntityUpdate	
 		p	1		blockEntity	
@@ -375,17 +375,17 @@ c	net/minecraft/unmapped/C_4237166
 		p	1		menuId	
 		p	2		player	
 c	net/minecraft/unmapped/C_4286596
-	f	[Lnet/minecraft/unmapped/C_2750078;	f_4113055		craftingSlots
+	f	[Lnet/minecraft/unmapped/C_2750078;	f_4113055		crafting
 	m	(Lnet/minecraft/unmapped/C_2750078;)V	m_4295994	setCursorItem	
 		p	1		item	
 	m	()Lnet/minecraft/unmapped/C_2750078;	m_7770813	getCursorItem	
 	m	(Lnet/minecraft/unmapped/C_5009044;)Z	m_0359574	m_0359574	
 		p	1		p_1	
 	m	(Lnet/minecraft/unmapped/C_4286596;)Z	m_6219073		contentEquals
-		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_2750078;)Z	m_0791110		m_0791110
-		p	1			p_1
-		p	2			p_2
+		p	1			other
+	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_2750078;)Z	m_0791110		itemsEqual
+		p	1			item1
+		p	2			item2
 	m	()Lnet/minecraft/unmapped/C_4286596;	m_4775289		copy
 c	net/minecraft/unmapped/C_4331994
 	m	()V	m_5056964	m_5056964	
@@ -854,11 +854,11 @@ c	net/minecraft/unmapped/C_8752044
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_6489668;)V	m_6175764		m_6175764
 		p	1			p_1
-	m	()V	m_9958829		m_9958829
+	m	()V	m_9958829		sendInventory
 	m	(Lnet/minecraft/unmapped/C_8748575;)V	m_9632316		m_9632316
 		p	1			p_1
 c	net/minecraft/unmapped/C_8817873
-	f	Z	f_6859679		f_6859679
+	f	Z	f_6859679		noSendingBlockEntityUpdates
 	m	(IIILnet/minecraft/unmapped/C_2074023;)V	m_0023710		m_0023710
 		p	1			p_1
 		p	2			p_2

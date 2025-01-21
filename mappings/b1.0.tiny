@@ -633,7 +633,7 @@ c	net/minecraft/unmapped/C_0324512	net/minecraft/server/entity/mob/player/Server
 	f	Ljava/util/List;	f_1683304	newLoadedChunks
 		c	Coordinates of chunks that have come within view of the player, but have not yet\nbeen sent to the client.
 	f	Ljava/util/Set;	f_5806656	allLoadedChunks
-	f	D	f_7252894	f_7252894
+	f	D	f_7252894	lastReceivedY
 	f	Z	f_1534277	sneaking
 	f	I	f_5431237	lastHealth
 	f	I	f_1478225	spawnProtectionTicks
@@ -1090,8 +1090,8 @@ c	net/minecraft/unmapped/C_0559439	net/minecraft/block/LeavesBlock
 		p	1		p_1
 		p	2		p_2
 	m	()Z	m_1944525	m_1944525
-	m	(Z)V	m_9454184	setFancyGraphics
-		p	1		fancyGraphics
+	m	(Z)V	m_9454184	setCulling
+		p	1		culling
 	m	(Lnet/minecraft/unmapped/C_3906126;IIILnet/minecraft/unmapped/C_6385858;)V	m_9342401	m_9342401
 		p	1		p_1
 		p	2		p_2
@@ -1435,9 +1435,9 @@ c	net/minecraft/unmapped/C_0894181	net/minecraft/server/ServerProperties
 	m	()V	<clinit>	<clinit>
 c	net/minecraft/unmapped/C_0901730	net/minecraft/server/entity/EntityTrackerEntry
 	f	Lnet/minecraft/unmapped/C_6385858;	f_7181571	currentTrackedEntity
-	f	Z	f_3322088	f_3322088
-	f	Z	f_6048660	f_6048660
-	f	Z	f_5975743	f_5975743
+	f	Z	f_3322088	riding
+	f	Z	f_6048660	burning
+	f	Z	f_5975743	sneaking
 	f	I	f_2248933	trackedDistance
 	f	I	f_7565514	trackingFrequency
 	f	I	f_2016635	lastX
@@ -2614,7 +2614,7 @@ c	net/minecraft/unmapped/C_1826831	net/minecraft/entity/mob/monster/CreeperEntit
 	f	I	f_9963903	lastFuse
 	f	I	f_3214430	fuseDuration
 	f	I	f_8771002	fuseCooldown
-	f	I	f_4767261	f_4767261
+	f	I	f_4767261	lastFuseCooldown
 	m	(Lnet/minecraft/unmapped/C_3906126;)V	<init>	<init>
 		p	1		p_1
 	m	(Lnet/minecraft/unmapped/C_2800860;)V	m_4059289	m_4059289
@@ -2688,7 +2688,7 @@ c	net/minecraft/unmapped/C_1896634	net/minecraft/server/ChunkMap
 		c	Chunks that need to sync block data with clients.
 	f	Lnet/minecraft/server/MinecraftServer;	f_1832964	server
 	m	(Lnet/minecraft/server/MinecraftServer;)V	<init>	<init>
-		p	1		p_1
+		p	1		server
 	m	()V	m_8018690	tick
 	m	(IIZ)Lnet/minecraft/unmapped/C_1896634$C_9146344;	m_1907600	getChunk
 		p	1		chunkX
@@ -11849,7 +11849,7 @@ c	net/minecraft/unmapped/C_8947510	net/minecraft/client/render/model/entity/Spid
 		p	5		p_5
 		p	6		p_6
 c	net/minecraft/unmapped/C_8958653	net/minecraft/entity/mob/animal/PigEntity
-	f	Z	f_2467488	f_2467488
+	f	Z	f_2467488	saddled
 	m	(Lnet/minecraft/unmapped/C_3906126;)V	<init>	<init>
 		p	1		world
 	m	(Lnet/minecraft/unmapped/C_2800860;)V	m_4059289	m_4059289
