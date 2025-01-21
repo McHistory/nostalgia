@@ -107,7 +107,7 @@ c	net/minecraft/unmapped/C_0141705
 		p	10			g
 		p	11			b
 c	net/minecraft/unmapped/C_0289174
-	m	(F)V	m_1171633		renderRotation
+	m	(F)V	m_1171633		renderForceTransform
 		p	1			scale
 c	net/minecraft/unmapped/C_0309511
 	f	[Ljava/lang/String;	f_1870356	logo	
@@ -626,12 +626,12 @@ c	net/minecraft/unmapped/C_4636105$C_1133452		SpawnEntry
 		p	1			type
 		p	2			weight
 c	net/minecraft/unmapped/C_4766485
-	m	(Ljava/lang/String;IIII)V	m_9605624		m_9605624
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
+	m	(Ljava/lang/String;IIII)V	m_9605624		splitAndDraw
+		p	1			text
+		p	2			x
+		p	3			y
+		p	4			maxWidth
+		p	5			color
 c	net/minecraft/unmapped/C_4784123
 	f	I	f_6937333	lastY	
 	f	I	f_6660084	minY	
@@ -789,7 +789,7 @@ c	net/minecraft/unmapped/C_5009044
 		p	5			z
 	m	(F)V	m_8092679		m_8092679
 		p	1			p_1
-	m	()V	m_7557539		m_7557539
+	m	()V	m_7557539		openAprilFoolsChestMenu
 c	net/minecraft/unmapped/C_5009044$C_3264767		SleepAllowedStatus
 	f	Lnet/minecraft/unmapped/C_5009044$C_3264767;	f_8142353		OK
 	f	Lnet/minecraft/unmapped/C_5009044$C_3264767;	f_7666401		NOT_POSSIBLE_HERE
@@ -1008,7 +1008,7 @@ c	net/minecraft/unmapped/C_7423695
 		p	3			y
 		p	4			z
 c	net/minecraft/unmapped/C_7641996
-	m	()Lnet/minecraft/unmapped/C_7694617;	m_4521763		m_4521763
+	m	()Lnet/minecraft/unmapped/C_7694617;	m_4521763		getLastNode
 c	net/minecraft/unmapped/C_7688744
 	f	[Ljava/lang/String;	f_8906128		GUI_SCALE_SETTINGS
 	f	Z	f_7711145		ambientOcclusion
@@ -1276,9 +1276,9 @@ c	net/minecraft/unmapped/C_0112527		net/minecraft/client/render/model/entity/Wol
 	f	Lnet/minecraft/unmapped/C_0289174;	f_5302089		backLeftLeg
 	f	Lnet/minecraft/unmapped/C_0289174;	f_5291947		frontRightLeg
 	f	Lnet/minecraft/unmapped/C_0289174;	f_3358249		frontLeftLeg
-	f	Lnet/minecraft/unmapped/C_0289174;	f_5538683		f_5538683
-	f	Lnet/minecraft/unmapped/C_0289174;	f_6752717		f_6752717
-	f	Lnet/minecraft/unmapped/C_0289174;	f_4090042		f_4090042
+	f	Lnet/minecraft/unmapped/C_0289174;	f_5538683		rightEar
+	f	Lnet/minecraft/unmapped/C_0289174;	f_6752717		leftEar
+	f	Lnet/minecraft/unmapped/C_0289174;	f_4090042		mouth
 	f	Lnet/minecraft/unmapped/C_0289174;	f_3051316		tail
 	f	Lnet/minecraft/unmapped/C_0289174;	f_8646106		neck
 	m	()V	<init>		<init>
@@ -1413,12 +1413,12 @@ c	net/minecraft/unmapped/C_0974816		net/minecraft/stat/achievement/Achievements
 	m	()V	<init>		<init>
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_0994230		net/minecraft/stat/ItemStat
-	f	I	f_8508754		itemId
+	f	I	f_8508754		item
 	m	(ILjava/lang/String;I)V	<init>		<init>
 		p	1			id
 		p	2			name
-		p	3			itemId
-	m	()I	m_5926282		getItemId
+		p	3			item
+	m	()I	m_5926282		getItem
 c	net/minecraft/unmapped/C_1059954		net/minecraft/network/packet/PlayerSleepPacket
 	f	I	f_3180710		id
 	f	I	f_9343671		x
@@ -1493,13 +1493,13 @@ c	net/minecraft/unmapped/C_1599390		net/minecraft/client/gui/GuiParticle
 	m	()V	m_0166400		tickColor
 	m	()V	m_2142065		remove
 	m	()V	<clinit>		<clinit>
-c	net/minecraft/unmapped/C_1790740		net/minecraft/unmapped/C_1790740
-	f	Ljava/text/DecimalFormat;	f_4235591		f_4235591
+c	net/minecraft/unmapped/C_1790740		net/minecraft/stat/TimeStat
+	f	Ljava/text/DecimalFormat;	f_4235591		TIME_FORMAT
 	m	(ILjava/lang/String;)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
 	m	()V	<clinit>		<clinit>
-c	net/minecraft/unmapped/C_2077021		net/minecraft/block/AprilFoolsLockedChestBlock
+c	net/minecraft/unmapped/C_2077021		net/minecraft/block/AprilFoolsChestBlock
 	m	(I)V	<init>		<init>
 		p	1			id
 	m	(Lnet/minecraft/unmapped/C_2627205;IIII)I	m_6954536		m_6954536
@@ -1515,11 +1515,11 @@ c	net/minecraft/unmapped/C_2077021		net/minecraft/block/AprilFoolsLockedChestBlo
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
-	m	(Lnet/minecraft/unmapped/C_3906126;III)Z	m_7707565		m_7707565
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
+	m	(Lnet/minecraft/unmapped/C_3906126;III)Z	m_7707565		isDoubleChest
+		p	1			world
+		p	2			x
+		p	3			y
+		p	4			z
 	m	(Lnet/minecraft/unmapped/C_3906126;IIILnet/minecraft/unmapped/C_5009044;)Z	m_2543653		m_2543653
 		p	1			p_1
 		p	2			p_2
@@ -1535,8 +1535,8 @@ c	net/minecraft/unmapped/C_2371258		net/minecraft/item/SlabItem
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_2750078;)Ljava/lang/String;	m_9222746		m_9222746
 		p	1			p_1
-c	net/minecraft/unmapped/C_2835550		net/minecraft/stat/GeneralStat
-	f	Ljava/text/DecimalFormat;	f_4372968		f_4372968
+c	net/minecraft/unmapped/C_2835550		net/minecraft/stat/DistanceStat
+	f	Ljava/text/DecimalFormat;	f_4372968		DISTANCE_FORMAT
 	m	(ILjava/lang/String;)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
@@ -1625,9 +1625,9 @@ c	net/minecraft/unmapped/C_3059180		net/minecraft/client/render/entity/WolfRende
 		p	6			p_6
 		p	8			p_8
 		p	9			p_9
-c	net/minecraft/unmapped/C_3296923		net/minecraft/unmapped/C_3296923
-	f	I	f_0341295		f_0341295
-	f	I	f_9260481		f_9260481
+c	net/minecraft/unmapped/C_3296923		net/minecraft/client/gui/screen/inventory/menu/AprilFoolsChestScreen
+	f	I	f_0341295		menuWidth
+	f	I	f_9260481		menuHeight
 	m	()V	<init>		<init>
 	m	()V	m_2060594		m_2060594
 	m	(IIF)V	m_3426670		m_3426670
@@ -1637,9 +1637,9 @@ c	net/minecraft/unmapped/C_3296923		net/minecraft/unmapped/C_3296923
 	m	(Lnet/minecraft/unmapped/C_2621421;)V	m_9403981		m_9403981
 		p	1			p_1
 	m	()V	m_7135145		m_7135145
-	m	()V	m_7677050		m_7677050
-	m	(F)V	m_8288828		m_8288828
-		p	1			p_1
+	m	()V	m_7677050		renderForeground
+	m	(F)V	m_8288828		renderMenuBackground
+		p	1			tickDelta
 	m	()Z	m_6957805		m_6957805
 c	net/minecraft/unmapped/C_3473914		net/minecraft/world/WorldData
 	f	J	f_3590695		seed
