@@ -417,11 +417,11 @@ c	net/minecraft/unmapped/C_0289174	net/minecraft/client/render/model/ModelPart
 		p	3		z	
 	m	(F)V	m_7104545	render	
 		p	1		scale	
-	m	(F)V	m_0246274	translate	
+	m	(F)V	m_0246274	transform	
 		p	1		scale	
 	m	(F)V	m_8334576	compile	
 		p	1		scale	
-	m	(F)V	m_1171633	renderRotation	
+	m	(F)V	m_1171633	renderForceTransform	
 		p	1		scale	
 	m	(Lnet/minecraft/unmapped/C_3239917;II)V	<init>	<init>	
 		p	1		model	
@@ -557,8 +557,8 @@ c	net/minecraft/unmapped/C_0559439
 		p	2		p_2	
 		p	3		p_3	
 		p	4		p_4	
-	m	(Z)V	m_9454184	setFancyGraphics	
-		p	1		fancyGraphics	
+	m	(Z)V	m_9454184	setCulling	
+		p	1		culling	
 	m	(I)I	m_8501302	m_8501302	
 		p	1		p_1	
 	m	()I	m_8742290	m_8742290	
@@ -835,7 +835,7 @@ c	net/minecraft/unmapped/C_1044273	net/minecraft/client/render/world/WorldRender
 	f	D	f_4269846	prevCameraZ	
 	f	F	f_6975940	miningProgress	
 	f	I	f_5393198	cullStep	
-	f	I	f_0674195	f_0674195	
+	f	I	f_0674195	chunkCheckIndex	
 	f	I	f_5850547	f_5850547	
 	m	(Lnet/minecraft/client/Minecraft;Lnet/minecraft/unmapped/C_3385278;)V	<init>	<init>	
 		p	1		minecraft	
@@ -1049,7 +1049,7 @@ c	net/minecraft/unmapped/C_1309851	net/minecraft/client/entity/mob/player/Remote
 	f	D	f_2736595	lerpYaw	
 	f	D	f_8375310	lerpPitch	
 	f	F	f_7369438	f_7369438	
-	f	Z	f_3515355	holdingItems	
+	f	Z	f_3515355	usingItem	
 	m	(Lnet/minecraft/unmapped/C_3906126;Ljava/lang/String;)V	<init>	<init>	
 		p	1		world	
 		p	2		name	
@@ -4184,7 +4184,7 @@ c	net/minecraft/unmapped/C_6385858
 	m	()Z	m_4500577	hasVehicle	
 	m	(F)I	m_8582980	getLightLevel	
 		p	1		tickDelta	
-	m	()Z	m_8657369	isSwimming	
+	m	()Z	m_8657369	isUsingItem	
 c	net/minecraft/unmapped/C_6441735	net/minecraft/client/render/entity/BoatRenderer	
 	f	Lnet/minecraft/unmapped/C_3239917;	f_1480790	model	
 	m	()V	<init>	<init>	
@@ -5977,7 +5977,7 @@ c	net/minecraft/unmapped/C_0112527	net/minecraft/client/render/model/entity/Wolf
 		p	6		p_6	
 		p	7		p_7	
 c	net/minecraft/unmapped/C_0994230
-	m	()I	m_5926282	getItemId	
+	m	()I	m_5926282	getItem	
 c	net/minecraft/unmapped/C_1115384	net/minecraft/client/util/SmoothUtil	
 	f	F	f_6743575	actualSum	
 	f	F	f_6426145	smoothedSum	
@@ -6148,7 +6148,7 @@ c	net/minecraft/unmapped/C_3473914
 		p	1		y	
 	m	(I)V	m_7025829	setSpawnZ	
 		p	1		z	
-	m	(Lnet/minecraft/unmapped/C_2800860;)V	m_1599781	setInitialized	
+	m	(Lnet/minecraft/unmapped/C_2800860;)V	m_1599781	setPlayerData	
 		p	1		playerData	
 	m	()Ljava/lang/String;	m_5848716	getName	
 	m	()J	m_9930809	getLastPlayed	

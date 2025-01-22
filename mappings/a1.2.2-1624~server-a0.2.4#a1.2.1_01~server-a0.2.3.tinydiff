@@ -11,23 +11,23 @@ c	net/minecraft/unmapped/C_0559439
 		p	3		p_3	
 		p	4		p_4	
 		p	5		p_5	
-	m	(Lnet/minecraft/unmapped/C_3906126;IIII)V	m_9278800	m_9278800	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-	m	(Lnet/minecraft/unmapped/C_3906126;III)V	m_7899784	m_7899784	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-	m	(Lnet/minecraft/unmapped/C_3906126;IIII)I	m_3018614	m_3018614	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
+	m	(Lnet/minecraft/unmapped/C_3906126;IIII)V	m_9278800	updateNeighborLogProximity	
+		p	1		world	
+		p	2		neighborX	
+		p	3		neighborY	
+		p	4		neighborZ	
+		p	5		proximity	
+	m	(Lnet/minecraft/unmapped/C_3906126;III)V	m_7899784	updateLogProximity	
+		p	1		world	
+		p	2		x	
+		p	3		y	
+		p	4		z	
+	m	(Lnet/minecraft/unmapped/C_3906126;IIII)I	m_3018614	getLogProximity	
+		p	1		world	
+		p	2		neighborX	
+		p	3		neighborY	
+		p	4		neighborZ	
+		p	5		proximity	
 c	net/minecraft/unmapped/C_0820158
 	f	I	f_9060912	lerpSteps	
 	f	D	f_1135637	lerpX	
@@ -55,7 +55,7 @@ c	net/minecraft/unmapped/C_0820158
 		p	3		p_3	
 		p	5		p_5	
 c	net/minecraft/unmapped/C_0901730
-	f	Z	f_3322088	f_3322088	
+	f	Z	f_3322088	riding	
 	f	D	f_6813137	velocityX	
 	f	D	f_4709038	velocityY	
 	f	D	f_9298322	velocityZ	
@@ -290,12 +290,12 @@ c	net/minecraft/unmapped/C_4608907	net/minecraft/client/resource/pack/BuiltInTex
 		p	1		p_1	
 c	net/minecraft/unmapped/C_4784123	net/minecraft/client/gui/screen/TexturePacksScreen	
 	f	Lnet/minecraft/unmapped/C_0786431;	f_3227650	parent	
-	f	I	f_6937333	f_6937333	
-	f	I	f_6660084	maxY	
-	f	I	f_4427564	minY	
+	f	I	f_6937333	lastY	
+	f	I	f_6660084	minY	
+	f	I	f_4427564	maxY	
 	f	I	f_1385039	minX	
 	f	I	f_4064823	maxX	
-	f	I	f_2912781	f_2912781	
+	f	I	f_2912781	draggingY	
 	f	I	f_2670663	cooldown	
 	f	Ljava/lang/String;	f_5553006	texturePacksDir	
 	m	(Lnet/minecraft/unmapped/C_0786431;)V	<init>	<init>	

@@ -9,9 +9,9 @@ c	net/minecraft/server/MinecraftServer
 	m	()Lnet/minecraft/unmapped/C_3133904;	m_6873801		getSnooper
 	m	()Lnet/minecraft/unmapped/C_6707278;	m_0490395		m_0490395
 c	net/minecraft/unmapped/C_0019534
-	m	(Lnet/minecraft/unmapped/C_6707278;)Lnet/minecraft/unmapped/C_0324512;	m_9354812		m_9354812
-		p	1			p_1
-	m	()Lnet/minecraft/unmapped/C_0324512;	m_6649474		m_6649474
+	m	(Lnet/minecraft/unmapped/C_6707278;)Lnet/minecraft/unmapped/C_0324512;	m_9354812		getClosest
+		p	1			pos
+	m	()Lnet/minecraft/unmapped/C_0324512;	m_6649474		pick
 c	net/minecraft/unmapped/C_0258789
 	f	Lnet/minecraft/unmapped/C_2750078;	f_0795879	BOW	
 	m	()Lnet/minecraft/unmapped/C_2750078;	m_2674028	m_2674028	
@@ -215,7 +215,7 @@ c	net/minecraft/unmapped/C_5009044
 		p	1		sign	
 	m	()V	m_2752266	swingArm	
 	m	()I	m_7499523	m_7499523	
-	m	(III)Z	m_0733834	canMineBlock	
+	m	(III)Z	m_0733834	canUseItem	
 		p	1		x	
 		p	2		y	
 		p	3		z	
@@ -356,11 +356,11 @@ c	net/minecraft/unmapped/C_4865345
 		p	2			p_2
 c	net/minecraft/unmapped/C_3473914
 	f	J	f_0298005		timeOfDay
-	f	Lnet/minecraft/unmapped/C_6404817;	f_4271636		gamerules
+	f	Lnet/minecraft/unmapped/C_6404817;	f_4271636		gameRules
 	m	()J	m_3931669		getTimeOfDay
 	m	(J)V	m_9295365		setTimeOfDay
 		p	1			time
-	m	()Lnet/minecraft/unmapped/C_6404817;	m_7242457		getGamerules
+	m	()Lnet/minecraft/unmapped/C_6404817;	m_7242457		getGameRules
 c	net/minecraft/unmapped/C_6707278
 	m	(III)D	m_6335425		m_6335425
 		p	1			p_1
@@ -389,8 +389,8 @@ c	net/minecraft/unmapped/C_8667269
 	f	Lnet/minecraft/unmapped/C_5009044;	f_2336376		igniter
 	f	I	f_7637986		lastTargetUpdateTick
 c	net/minecraft/unmapped/C_1168245
-	f	Lnet/minecraft/unmapped/C_4960738;	f_2554626	tradingPlayer	
-	f	Ljava/lang/String;	f_6890693		tradingPlayer
+	f	Lnet/minecraft/unmapped/C_4960738;	f_2554626	lastSuccessfulTradeOffer	
+	f	Ljava/lang/String;	f_6890693		lastSuccessfulTradeCustomer
 	f	F	f_3943076		tradeOfferSize
 		c		sqrt of (tradeOfferSize divided by 5) used to lower the chance to unlock more trades
 	m	(Lnet/minecraft/unmapped/C_6907923;)V	m_4650833		m_4650833
@@ -598,7 +598,7 @@ c	net/minecraft/unmapped/C_4362408
 	m	()Lnet/minecraft/unmapped/C_6404817;	m_7242457		m_7242457
 c	net/minecraft/unmapped/C_4960738
 	f	I	f_4741114		maxUses
-	m	()I	m_6997030	m_6997030	
+	m	()I	m_6997030	getUses	
 	m	(I)V	m_8069277		increaseMaxUses
 		p	1			uses
 	m	()Z	m_0947370		isDisabled
@@ -771,7 +771,7 @@ c	net/minecraft/unmapped/C_5788730		net/minecraft/block/BeaconBlock
 		p	9			p_9
 	m	()Z	m_1944525		m_1944525
 	m	()Z	m_1538589		m_1538589
-c	net/minecraft/unmapped/C_6404817		net/minecraft/world/Gamerules
+c	net/minecraft/unmapped/C_6404817		net/minecraft/world/GameRules
 	f	Ljava/util/TreeMap;	f_2685955		values
 	m	()V	<init>		<init>
 	m	(Ljava/lang/String;Ljava/lang/String;)V	m_4559885		add

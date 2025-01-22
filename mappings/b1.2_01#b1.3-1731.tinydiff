@@ -407,7 +407,7 @@ c	net/minecraft/unmapped/C_0289174	net/minecraft/client/render/model/ModelPart
 		p	3		z	
 	m	(F)V	m_7104545	render	
 		p	1		scale	
-	m	(F)V	m_0246274	translate	
+	m	(F)V	m_0246274	transform	
 		p	1		scale	
 	m	(F)V	m_8334576	compile	
 		p	1		scale	
@@ -444,7 +444,7 @@ c	net/minecraft/unmapped/C_0309511$C_4312231	LetterBlock
 		p	3		x	
 	m	()V	m_8935444	tick	
 c	net/minecraft/unmapped/C_0324512
-	f	D	f_7252894	f_7252894	
+	f	D	f_7252894	lastReceivedY	
 	m	()V	m_3062804	tickPlayer	
 	m	()V	m_1485527		m_1485527
 	m	(Z)V	m_3062804		tickPlayer
@@ -530,8 +530,8 @@ c	net/minecraft/unmapped/C_0559439
 		p	2		p_2	
 		p	3		p_3	
 		p	4		p_4	
-	m	(Z)V	m_9454184	setFancyGraphics	
-		p	1		fancyGraphics	
+	m	(Z)V	m_9454184	setCulling	
+		p	1		culling	
 	m	(II)I	m_5024410	m_5024410	
 		p	1		p_1	
 		p	2		p_2	
@@ -814,7 +814,7 @@ c	net/minecraft/unmapped/C_1044273	net/minecraft/client/render/world/WorldRender
 	f	D	f_4269846	prevCameraZ	
 	f	F	f_6975940	miningProgress	
 	f	I	f_5393198	cullStep	
-	f	I	f_0674195	f_0674195	
+	f	I	f_0674195	chunkCheckIndex	
 	m	(Lnet/minecraft/client/Minecraft;Lnet/minecraft/unmapped/C_3385278;)V	<init>	<init>	
 		p	1		minecraft	
 		p	2		textureManager	
@@ -2879,12 +2879,12 @@ c	net/minecraft/unmapped/C_4766485	net/minecraft/client/render/TextRenderer
 		p	1		text	
 c	net/minecraft/unmapped/C_4784123	net/minecraft/client/gui/screen/TexturePacksScreen	
 	f	Lnet/minecraft/unmapped/C_0786431;	f_3227650	parent	
-	f	I	f_6937333	f_6937333	
-	f	I	f_6660084	maxY	
-	f	I	f_4427564	minY	
+	f	I	f_6937333	lastY	
+	f	I	f_6660084	minY	
+	f	I	f_4427564	maxY	
 	f	I	f_1385039	minX	
 	f	I	f_4064823	maxX	
-	f	I	f_2912781	f_2912781	
+	f	I	f_2912781	draggingY	
 	f	I	f_2670663	cooldown	
 	f	Ljava/lang/String;	f_5553006	texturePacksDir	
 	m	(Lnet/minecraft/unmapped/C_0786431;)V	<init>	<init>	
@@ -2954,7 +2954,7 @@ c	net/minecraft/unmapped/C_4824661	net/minecraft/client/render/GameRenderer
 	m	(F)V	m_5635244	setupClearColor	
 		p	1		tickDelta	
 	m	(I)V	m_1114865	setupFog	
-		p	1		p_1	
+		p	1		type	
 	m	(FFFF)Ljava/nio/FloatBuffer;	m_3807657	getBuffer	
 		p	1		f1	
 		p	2		f2	

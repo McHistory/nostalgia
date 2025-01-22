@@ -26,8 +26,8 @@ c	net/minecraft/unmapped/C_0526782
 		p	2		p_2	
 		p	3		p_3	
 c	net/minecraft/unmapped/C_0559439
-	m	(Z)V	m_9454184	setFancyGraphics	
-		p	1		fancyGraphics	
+	m	(Z)V	m_9454184	setCulling	
+		p	1		culling	
 c	net/minecraft/unmapped/C_0732654
 	m	(IIIII)V	<init>	<init>	
 		p	1		x	
@@ -339,10 +339,10 @@ c	net/minecraft/unmapped/C_4286596
 		p	1		slot	
 	m	()V	m_0762864	m_0762864	
 	m	(Lnet/minecraft/unmapped/C_4286596;)Z	m_6219073	contentEquals	
-		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_2750078;)Z	m_0791110	m_0791110	
-		p	1		p_1	
-		p	2		p_2	
+		p	1		other	
+	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_2750078;)Z	m_0791110	itemsEqual	
+		p	1		item1	
+		p	2		item2	
 	m	()Lnet/minecraft/unmapped/C_4286596;	m_4775289	copy	
 c	net/minecraft/unmapped/C_4390289
 	m	(II)Lnet/minecraft/unmapped/C_2750078;	m_7197418	removeItem	
@@ -1004,7 +1004,7 @@ c	net/minecraft/unmapped/C_0289174	net/minecraft/client/render/model/ModelPart
 		p	3		z	
 	m	(F)V	m_7104545	render	
 		p	1		scale	
-	m	(F)V	m_0246274	translate	
+	m	(F)V	m_0246274	transform	
 		p	1		scale	
 	m	(F)V	m_8334576	compile	
 		p	1		scale	
@@ -1868,7 +1868,7 @@ c	net/minecraft/unmapped/C_3172064	net/minecraft/client/Session
 		p	1		username	
 		p	2		id	
 	m	()V	<clinit>	<clinit>	
-c	net/minecraft/unmapped/C_3202835	net/minecraft/gui/screen/inventory/menu/InventoryMenu	
+c	net/minecraft/unmapped/C_3202835	net/minecraft/client/gui/screen/inventory/menu/InventoryMenu	
 	f	Ljava/util/List;	f_1550981	f_1550981	
 	m	()V	<init>	<init>	
 	m	(Lnet/minecraft/unmapped/C_5009044;)V	m_3964499	close	
@@ -1919,8 +1919,8 @@ c	net/minecraft/unmapped/C_3271339	net/minecraft/client/SurvivalInteractionManag
 	f	F	f_7952219	lastMiningProgress	
 	f	F	f_8501336	miningTicks	
 	f	I	f_2257000	miningCooldown	
-	f	Lnet/minecraft/unmapped/C_9377562;	f_9074778	hostileMobSpawner	
-	f	Lnet/minecraft/unmapped/C_9377562;	f_8680899	passiveMobSpawner	
+	f	Lnet/minecraft/unmapped/C_9377562;	f_9074778	monsterSpawner	
+	f	Lnet/minecraft/unmapped/C_9377562;	f_8680899	animalSpawner	
 	m	(Lnet/minecraft/client/Minecraft;)V	<init>	<init>	
 		p	1		p_1	
 	m	(Lnet/minecraft/unmapped/C_5009044;)V	m_7531392	m_7531392	
@@ -2863,14 +2863,14 @@ c	net/minecraft/unmapped/C_4824661	net/minecraft/client/render/GameRenderer
 	m	(F)V	m_5635244	setupClearColor	
 		p	1		tickDelta	
 	m	(I)V	m_1114865	setupFog	
-		p	1		p_1	
+		p	1		type	
 	m	(FFFF)Ljava/nio/FloatBuffer;	m_3807657	getBuffer	
 		p	1		f1	
 		p	2		f2	
 		p	3		f3	
 		p	4		f4	
-	m	(F)V	m_3466212	m_3466212	
-		p	1		p_1	
+	m	(F)V	m_3466212	renderRain	
+		p	1		tickDelta	
 c	net/minecraft/unmapped/C_4826153	paulscode/sound/codecs/CodecMus	
 	m	()V	<init>	<init>	
 	m	()Ljava/io/InputStream;	openInputStream	openInputStream	
@@ -4099,7 +4099,7 @@ c	net/minecraft/unmapped/C_8817873	net/minecraft/client/world/MultiplayerWorld
 	f	Ljava/util/LinkedList;	f_2418469	blockResets	
 	f	Lnet/minecraft/unmapped/C_4939758;	f_9307762	networkHandler	
 	f	Lnet/minecraft/unmapped/C_2616453;	f_4295585	chunkCache	
-	f	Z	f_6859679	f_6859679	
+	f	Z	f_6859679	noSendingBlockEntityUpdates	
 	f	Lnet/minecraft/unmapped/C_3837238;	f_6622981	entitiesByNetworkId	
 	f	Ljava/util/Set;	f_2709083	forcedEntities	
 	f	Ljava/util/Set;	f_6482589	pendingEntities	

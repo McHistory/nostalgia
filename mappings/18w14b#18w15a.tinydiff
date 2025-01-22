@@ -13,14 +13,14 @@ c	net/minecraft/unmapped/C_0914500
 	m	(Lnet/minecraft/unmapped/C_9006197;)Z	m_4975384		m_4975384
 		p	1			p_1
 c	net/minecraft/unmapped/C_1013763
-	f	F	f_2436351		f_2436351
-	f	F	f_1544770		f_1544770
-	m	(F)F	m_6438824		m_6438824
-		p	1			p_1
-	m	(FFF)F	m_0320754		m_0320754
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+	f	F	f_2436351		swimAmount
+	f	F	f_1544770		lastSwimAmount
+	m	(F)F	m_6438824		getSwimAmount
+		p	1			tickDelta
+	m	(FFF)F	m_0320754		lerp
+		p	1			min
+		p	2			max
+		p	3			delta
 	m	()V	m_1096958		m_1096958
 c	net/minecraft/unmapped/C_1044273
 	m	(DDDF)Z	m_4034602	hasThiccFog	
@@ -523,7 +523,7 @@ c	net/minecraft/unmapped/C_2105000
 	m	(Lnet/minecraft/unmapped/C_2105000;)Ljava/util/Map;	m_8889024		m_8889024
 		p	0			p_0
 c	net/minecraft/unmapped/C_6142023
-	f	Lnet/minecraft/unmapped/C_5322217;	f_6156422		f_6156422
+	f	Lnet/minecraft/unmapped/C_5322217;	f_6156422		conduit
 c	net/minecraft/unmapped/C_6531047
 	m	()Lnet/minecraft/unmapped/C_0289174;	m_5817253		m_5817253
 c	net/minecraft/unmapped/C_6907923
@@ -669,9 +669,9 @@ c	net/minecraft/unmapped/C_9921707$C_5997299
 	m	(Lnet/minecraft/unmapped/C_9921707$C_5997299;)[Z	m_9472787		m_9472787
 		p	0			p_0
 c	net/minecraft/unmapped/C_8049104
-	m	(Lnet/minecraft/unmapped/C_9071248;Lnet/minecraft/unmapped/C_6707278;)I	m_7702127	m_7702127	
-		p	0		p_0	
-		p	1		p_1	
+	m	(Lnet/minecraft/unmapped/C_9071248;Lnet/minecraft/unmapped/C_6707278;)I	m_7702127	getWaterFogColor	
+		p	0		world	
+		p	1		pos	
 c	net/minecraft/unmapped/C_4480679
 	m	()Lnet/minecraft/unmapped/C_0289174;	m_6770291		m_6770291
 	m	()Lnet/minecraft/unmapped/C_0289174;	m_4497835		m_4497835
@@ -1305,11 +1305,11 @@ c	net/minecraft/unmapped/C_3381509		net/minecraft/entity/ai/goal/SwimAroundGoal
 		p	2			p_2
 		p	4			p_4
 	m	()Lnet/minecraft/unmapped/C_0336319;	m_2448672		m_2448672
-c	net/minecraft/unmapped/C_3447311		net/minecraft/unmapped/C_3447311
+c	net/minecraft/unmapped/C_3447311		net/minecraft/entity/living/mob/water/DolphinEntity
 	f	Ljava/util/function/Predicate;	f_7242742		f_7242742
 	f	I	f_8229339		f_8229339
 	m	(Lnet/minecraft/unmapped/C_3906126;)V	<init>		<init>
-		p	1			p_1
+		p	1			world
 	m	(Lnet/minecraft/unmapped/C_2716056;Lnet/minecraft/unmapped/C_2928020;Lnet/minecraft/unmapped/C_2750078;)Lnet/minecraft/unmapped/C_2928020;	m_0405912		m_0405912
 		p	1			p_1
 		p	2			p_2
@@ -1427,7 +1427,7 @@ c	net/minecraft/unmapped/C_5322217		net/minecraft/block/entity/ConduitBlockEntit
 	m	(Lnet/minecraft/unmapped/C_1013763;)Z	m_8858940		m_8858940
 		p	0			entity
 	m	()V	<clinit>		<clinit>
-c	net/minecraft/unmapped/C_5675607		net/minecraft/unmapped/C_5675607
+c	net/minecraft/unmapped/C_5675607		net/minecraft/client/render/model/entity/DolphinModel
 	f	Lnet/minecraft/unmapped/C_0289174;	f_0229798		f_0229798
 	f	Lnet/minecraft/unmapped/C_0289174;	f_2613123		f_2613123
 	f	Lnet/minecraft/unmapped/C_0289174;	f_9948790		f_9948790
@@ -1583,8 +1583,8 @@ c	net/minecraft/unmapped/C_6621274		net/minecraft/unmapped/C_6621274
 		p	1			p_1
 		p	2			p_2
 	m	()Z	m_4955147		m_4955147
-c	net/minecraft/unmapped/C_6976250		net/minecraft/unmapped/C_6976250
-	f	Lnet/minecraft/unmapped/C_0561170;	f_7180040		f_7180040
+c	net/minecraft/unmapped/C_6976250		net/minecraft/client/render/entity/DolphinRenderer
+	f	Lnet/minecraft/unmapped/C_0561170;	f_7180040		TEXTURE_LOCATION
 	m	(Lnet/minecraft/unmapped/C_9610577;)V	<init>		<init>
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_3447311;)Lnet/minecraft/unmapped/C_0561170;	m_9709701		m_9709701

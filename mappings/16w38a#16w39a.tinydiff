@@ -944,20 +944,20 @@ c	net/minecraft/unmapped/C_8336555
 		p	2			p_2
 		p	3			p_3
 c	net/minecraft/unmapped/C_9006197
-	m	()Ljava/util/List;	m_7859946	getPotentialStructurePositions	
+	m	()Ljava/util/List;	m_7859946	getPotentialPositions	
 		c	Returns all positions where this structure may generate.	
-	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6707278;)Lnet/minecraft/unmapped/C_6707278;	m_4958963	findNearestStructurePosition	
+	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6707278;)Lnet/minecraft/unmapped/C_6707278;	m_4958963	findNearestPosition	
 		c	Find the nearest position where this structure has generated.	
 		p	1		world	
 		p	2		pos	
-	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6707278;Z)Lnet/minecraft/unmapped/C_6707278;	m_4958963		findNearestStructurePosition
+	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6707278;Z)Lnet/minecraft/unmapped/C_6707278;	m_4958963		findNearestPosition
 		c		Find the nearest position where this structure has generated.
 		p	1			world
 		p	2			pos
 		p	3			reference
-	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_9006197;Lnet/minecraft/unmapped/C_6707278;IIIZIZ)Lnet/minecraft/unmapped/C_6707278;	m_1227682		findNearestStructurePosition
+	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_9006197;Lnet/minecraft/unmapped/C_6707278;IIIZIZ)Lnet/minecraft/unmapped/C_6707278;	m_1227682		findNearestPosition
 		p	0			world
-		p	1			feature
+		p	1			structure
 		p	2			pos
 		p	3			distance
 		p	4			p_4
@@ -2750,7 +2750,7 @@ c	net/minecraft/unmapped/C_4012495		net/minecraft/item/AirItem
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
-c	net/minecraft/unmapped/C_4424332		net/minecraft/entity/living/mob/hostile/illager/VexEntity
+c	net/minecraft/unmapped/C_4424332		net/minecraft/entity/living/mob/monster/illager/VexEntity
 	f	Lnet/minecraft/unmapped/C_6101761;	f_9656997		VEX_FLAGS
 	f	Lnet/minecraft/unmapped/C_2587956;	f_3003662		summoner
 	f	Lnet/minecraft/unmapped/C_6707278;	f_2767855		bounds
@@ -2941,7 +2941,7 @@ c	net/minecraft/unmapped/C_5519938$C_1784271		Start
 		p	2			p_2
 		p	3			p_3
 	m	()Z	m_3292892		m_3292892
-c	net/minecraft/unmapped/C_5542674		net/minecraft/entity/living/mob/hostile/illager/VindicatorEntity
+c	net/minecraft/unmapped/C_5542674		net/minecraft/entity/living/mob/monster/illager/VindicatorEntity
 	f	Lnet/minecraft/unmapped/C_6101761;	f_2518607		f_2518607
 	m	(Lnet/minecraft/unmapped/C_3906126;)V	<init>		<init>
 		p	1			world
@@ -3345,7 +3345,7 @@ c	net/minecraft/unmapped/C_9136649		net/minecraft/block/ObserverBlock
 	m	(Lnet/minecraft/unmapped/C_2441996;)I	m_5249160		m_5249160
 		p	1			p_1
 	m	()V	<clinit>		<clinit>
-c	net/minecraft/unmapped/C_9243345		net/minecraft/entity/living/mob/hostile/illager/EvokerFangsEntity
+c	net/minecraft/unmapped/C_9243345		net/minecraft/entity/living/mob/monster/illager/EvokerFangsEntity
 	f	I	f_6054283		warmupTicks
 	f	Z	f_9298983		startedAttack
 	f	I	f_9908301		despawnTicks
@@ -3373,7 +3373,7 @@ c	net/minecraft/unmapped/C_9243345		net/minecraft/entity/living/mob/hostile/illa
 		p	1			p_1
 	m	(F)F	m_3463408		getAnimationProgress
 		p	1			tickDelta
-c	net/minecraft/unmapped/C_9291783		net/minecraft/entity/living/mob/hostile/illager/EvokerEntity
+c	net/minecraft/unmapped/C_9291783		net/minecraft/entity/living/mob/monster/illager/EvokerEntity
 	f	Lnet/minecraft/unmapped/C_6101761;	f_4467013		f_4467013
 	f	I	f_6329484		spellTicks
 	f	I	f_2664320		currentSpell

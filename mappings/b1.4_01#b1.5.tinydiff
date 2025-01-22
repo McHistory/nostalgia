@@ -230,10 +230,10 @@ c	net/minecraft/unmapped/C_4443804
 		p	1			packet
 c	net/minecraft/unmapped/C_4636105
 	f	Z	f_3227518		snowy
-	f	Z	f_3264428		hasRain
+	f	Z	f_3264428		rainy
 	m	()Lnet/minecraft/unmapped/C_4636105;	m_6267136		disableRain
 	m	()Z	m_4952577		isSnowy
-	m	()Z	m_8287143		canRain
+	m	()Z	m_8287143		isRainy
 c	net/minecraft/unmapped/C_4766485
 	m	(Ljava/lang/String;IIII)V	m_1015860		drawSplit
 		p	1			text
@@ -248,7 +248,7 @@ c	net/minecraft/unmapped/C_4824661
 	f	Z	f_4619496		thiccFog
 	f	I	f_6644116		weatherSoundAttempts
 	m	(I)V	m_1114865	setupFog	
-		p	1		p_1	
+		p	1		type	
 	m	(DDD)V	m_3044613	zoomIn	
 		p	1		zoom	
 		p	3		zoomX	
@@ -494,8 +494,8 @@ c	net/minecraft/unmapped/C_0974816
 	f	Lnet/minecraft/unmapped/C_7281219;	f_3639824		RIDE_PIG_OFF_CLIFF
 		c		Achieved when the pig the player is riding falls from 5 blocks or more
 	m	()V	m_2004008		init
-c	net/minecraft/unmapped/C_1790740	net/minecraft/unmapped/C_1790740	
-	f	Ljava/text/DecimalFormat;	f_4235591	f_4235591	
+c	net/minecraft/unmapped/C_1790740	net/minecraft/stat/TimeStat	
+	f	Ljava/text/DecimalFormat;	f_4235591	TIME_FORMAT	
 	m	(ILjava/lang/String;)V	<init>	<init>	
 		p	1		p_1	
 		p	2		p_2	
@@ -506,7 +506,7 @@ c	net/minecraft/unmapped/C_2371258
 	m	(I)I	m_1532371		m_1532371
 		p	1			p_1
 c	net/minecraft/unmapped/C_2835550
-	f	Ljava/text/DecimalFormat;	f_4372968	f_4372968	
+	f	Ljava/text/DecimalFormat;	f_4372968	DISTANCE_FORMAT	
 	m	()V	<clinit>	<clinit>	
 	m	(ILjava/lang/String;Lnet/minecraft/unmapped/C_7646636;)V	<init>		<init>
 		p	1			p_1

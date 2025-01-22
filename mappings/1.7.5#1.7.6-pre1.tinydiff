@@ -109,7 +109,7 @@ c	net/minecraft/unmapped/C_5769145
 	f	Z	f_7552007	mustAcceptTextures	
 	f	Z	f_8409726	acceptsTextures	
 	f	Z	f_5976456	hideAddress	
-	f	Lnet/minecraft/unmapped/C_6629891;	f_0456238		f_0456238
+	f	Lnet/minecraft/unmapped/C_6629891;	f_0456238		resourcePackStatus
 	m	(Z)V	m_6936056	setAcceptsTextures	
 		p	1		acceptsTextures	
 	m	()Z	m_3817173	hideAddress	
@@ -117,9 +117,9 @@ c	net/minecraft/unmapped/C_5769145
 		p	1		hideAdress	
 	m	()Z	m_3617492	acceptTextures	
 	m	()Z	m_8001703	mustAcceptTextures	
-	m	()Lnet/minecraft/unmapped/C_6629891;	m_4953386		acceptTextures
-	m	(Lnet/minecraft/unmapped/C_6629891;)V	m_5517309		setAcceptTextures
-		p	1			p_1
+	m	()Lnet/minecraft/unmapped/C_6629891;	m_4953386		getResourcePackStatus
+	m	(Lnet/minecraft/unmapped/C_6629891;)V	m_5517309		setResourcePackStatus
+		p	1			status
 	m	(Lnet/minecraft/unmapped/C_5769145;)V	m_1004421		m_1004421
 		p	1			p_1
 c	net/minecraft/unmapped/C_0219847
@@ -803,11 +803,11 @@ c	net/minecraft/unmapped/C_6508913$C_0741680		Serializer
 	m	(Lnet/minecraft/unmapped/C_6508913;Lnet/minecraft/unmapped/C_6508913$8911079;)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
-c	net/minecraft/unmapped/C_6629891		net/minecraft/unmapped/C_6629891
-	f	Lnet/minecraft/unmapped/C_6629891;	f_1497176		f_1497176
-	f	Lnet/minecraft/unmapped/C_6629891;	f_1641329		f_1641329
-	f	Lnet/minecraft/unmapped/C_6629891;	f_4302135		f_4302135
-	f	Lnet/minecraft/unmapped/C_9550253;	f_2125232		f_2125232
+c	net/minecraft/unmapped/C_6629891		net/minecraft/client/options/ResourcePackStatus
+	f	Lnet/minecraft/unmapped/C_6629891;	f_1497176		ENABLED
+	f	Lnet/minecraft/unmapped/C_6629891;	f_1641329		DISABLED
+	f	Lnet/minecraft/unmapped/C_6629891;	f_4302135		PROMPT
+	f	Lnet/minecraft/unmapped/C_9550253;	f_2125232		message
 	f	[Lnet/minecraft/unmapped/C_6629891;	f_8218689		f_8218689
 	m	()[Lnet/minecraft/unmapped/C_6629891;	values		values
 	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_6629891;	valueOf		valueOf
@@ -815,8 +815,8 @@ c	net/minecraft/unmapped/C_6629891		net/minecraft/unmapped/C_6629891
 	m	(Ljava/lang/String;ILjava/lang/String;)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
-		p	3			p_3
-	m	()Lnet/minecraft/unmapped/C_9550253;	m_4426777		m_4426777
+		p	3			key
+	m	()Lnet/minecraft/unmapped/C_9550253;	m_4426777		getMessage
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_8361170		net/minecraft/unmapped/C_8361170
 	m	(Lnet/minecraft/unmapped/C_2800860;)Lcom/mojang/authlib/GameProfile;	m_0463414		m_0463414

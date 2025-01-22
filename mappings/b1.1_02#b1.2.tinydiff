@@ -35,9 +35,9 @@ c	net/minecraft/unmapped/C_0559439
 c	net/minecraft/unmapped/C_0820158
 	m	()V	m_5855336		m_5855336
 c	net/minecraft/unmapped/C_0901730
-	f	Z	f_3322088	f_3322088	
-	f	Z	f_6048660	f_6048660	
-	f	Z	f_5975743	f_5975743	
+	f	Z	f_3322088	riding	
+	f	Z	f_6048660	burning	
+	f	Z	f_5975743	sneaking	
 c	net/minecraft/unmapped/C_0974371
 	m	(I)I	m_9597800	m_9597800	
 		p	1		p_1	
@@ -89,9 +89,9 @@ c	net/minecraft/unmapped/C_1693934
 		p	6			motive
 	m	()V	m_5855336		m_5855336
 c	net/minecraft/unmapped/C_1826831
-	f	I	f_3214430	f_3214430	
-	f	I	f_8771002	f_8771002	
-	f	I	f_4767261	f_4767261	
+	f	I	f_3214430	fuseDuration	
+	f	I	f_8771002	fuseCooldown	
+	f	I	f_4767261	lastFuseCooldown	
 	m	(B)V	m_9129586	m_9129586	
 		p	1		p_1	
 	m	()V	m_6773208	m_6773208	
@@ -386,7 +386,7 @@ c	net/minecraft/unmapped/C_4561926
 	f	I	f_0474217		metadata
 c	net/minecraft/unmapped/C_4636105
 	f	[Ljava/lang/Class;	f_4244926		waterEntries
-	m	(Ljava/util/Random;)Lnet/minecraft/unmapped/C_6618366;	m_0608438		getRandomTree
+	m	(Ljava/util/Random;)Lnet/minecraft/unmapped/C_6618366;	m_0608438		pickTree
 		p	1			random
 c	net/minecraft/unmapped/C_4939758
 	m	(Lnet/minecraft/unmapped/C_5054734;)V	m_5551286		m_5551286
@@ -601,7 +601,7 @@ c	net/minecraft/unmapped/C_8906619
 		p	3			tier
 		p	4			effectiveBlocks
 c	net/minecraft/unmapped/C_8958653
-	f	Z	f_2467488	f_2467488	
+	f	Z	f_2467488	saddled	
 	m	()V	m_5855336		m_5855336
 	m	()Z	m_5075627		isSaddled
 	m	(Z)V	m_8202851		setSaddled

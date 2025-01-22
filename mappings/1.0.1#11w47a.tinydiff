@@ -31,8 +31,8 @@ c	net/minecraft/unmapped/C_0559439
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
-	m	(Z)V	m_9454184		setFancyGraphics
-		p	1			fancyGraphics
+	m	(Z)V	m_9454184		setCulling
+		p	1			culling
 c	net/minecraft/unmapped/C_0732654
 	m	(IIIILnet/minecraft/unmapped/C_2750078;)V	<init>		<init>
 		p	1			x
@@ -624,7 +624,7 @@ c	net/minecraft/unmapped/C_6385858
 		p	2			itemId
 		p	3			metaData
 	m	()Z	m_4500577		hasVehicle
-	m	()Z	m_8657369		isSwimming
+	m	()Z	m_8657369		isUsingItem
 c	net/minecraft/unmapped/C_6692735
 	m	()I	m_5117733		m_5117733
 	m	(Lnet/minecraft/unmapped/C_2627205;IIII)Z	m_8199947		m_8199947
@@ -915,7 +915,7 @@ c	net/minecraft/unmapped/C_9462692
 		p	7			p_7
 		p	8			p_8
 c	net/minecraft/unmapped/C_0994230
-	m	()I	m_5926282		getItemId
+	m	()I	m_5926282		getItem
 c	net/minecraft/unmapped/C_2077021
 	m	(Lnet/minecraft/unmapped/C_2627205;IIII)I	m_6954536		m_6954536
 		p	1			p_1
@@ -948,7 +948,7 @@ c	net/minecraft/unmapped/C_3473914
 		p	1			y
 	m	(I)V	m_7025829		setSpawnZ
 		p	1			z
-	m	(Lnet/minecraft/unmapped/C_2800860;)V	m_1599781		setInitialized
+	m	(Lnet/minecraft/unmapped/C_2800860;)V	m_1599781		setPlayerData
 		p	1			playerData
 	m	()Ljava/lang/String;	m_5848716		getName
 	m	()J	m_9930809		getLastPlayed
@@ -1821,9 +1821,9 @@ c	net/minecraft/unmapped/C_0289174		net/minecraft/client/render/model/ModelPart
 		p	3			z
 	m	(F)V	m_7104545		render
 		p	1			scale
-	m	(F)V	m_1171633		renderRotation
+	m	(F)V	m_1171633		renderForceTransform
 		p	1			scale
-	m	(F)V	m_0246274		translate
+	m	(F)V	m_0246274		transform
 		p	1			scale
 	m	(F)V	m_8334576		compile
 		p	1			scale
@@ -2287,7 +2287,7 @@ c	net/minecraft/unmapped/C_1044273		net/minecraft/client/render/world/WorldRende
 	f	I	f_0985532		compiledChunkCount
 	f	I	f_6504228		emptyChunkCount
 	f	I	f_5850547		f_5850547
-	f	I	f_0674195		f_0674195
+	f	I	f_0674195		chunkCheckIndex
 	f	Ljava/util/List;	f_0391517		chunksInCurrentLayer
 	f	[Lnet/minecraft/unmapped/C_2433962;	f_1596986		chunkRenderers
 	f	D	f_3320356		prevCameraX
@@ -2599,7 +2599,7 @@ c	net/minecraft/unmapped/C_1207477		net/minecraft/client/render/model/entity/Qua
 		p	5			p_5
 		p	6			p_6
 c	net/minecraft/unmapped/C_1309851		net/minecraft/client/entity/mob/player/RemoteClientPlayerEntity
-	f	Z	f_3515355		holdingItems
+	f	Z	f_3515355		usingItem
 	f	I	f_8246933		lerpSteps
 	f	D	f_2683551		lerpX
 	f	D	f_0720124		lerpY

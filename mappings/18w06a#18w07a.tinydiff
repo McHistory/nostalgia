@@ -79,7 +79,7 @@ c	net/minecraft/unmapped/C_4590573
 	m	(F)F	m_3605299		m_3605299
 		p	1			p_1
 c	net/minecraft/unmapped/C_4590573$C_7881752
-	f	Lnet/minecraft/unmapped/C_4590573$C_7881752;	f_7340108		f_7340108
+	f	Lnet/minecraft/unmapped/C_4590573$C_7881752;	f_7340108		THROW_SPEAR
 c	net/minecraft/unmapped/C_4636105
 	f	Lnet/minecraft/unmapped/C_9151514;	f_1093565		TOP_SOLID_HEIGHT_MAP_DECORATOR
 c	net/minecraft/unmapped/C_4718187
@@ -248,7 +248,7 @@ c	net/minecraft/unmapped/C_8839702
 c	net/minecraft/unmapped/C_6141910
 	f	Lnet/minecraft/unmapped/C_6141910;	f_2480619		f_2480619
 c	net/minecraft/unmapped/C_6142023
-	f	Lnet/minecraft/unmapped/C_8878853;	f_4253194		f_4253194
+	f	Lnet/minecraft/unmapped/C_8878853;	f_4253194		thrownTridentModel
 c	net/minecraft/unmapped/C_6907923
 	m	(Lnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_6385858;)Lnet/minecraft/unmapped/C_6907923;	m_6570238		trident
 		p	0			entity
@@ -498,10 +498,10 @@ c	net/minecraft/unmapped/C_8679709
 		p	0			p_0
 	m	(Lnet/minecraft/unmapped/C_9006197;)Lit/unimi/dsi/fastutil/longs/Long2ObjectMap;	m_1181251		m_1181251
 		p	0			p_0
-c	net/minecraft/unmapped/C_0164923		net/minecraft/unmapped/C_0164923
-	f	Lnet/minecraft/unmapped/C_0289174;	f_7456524		f_7456524
+c	net/minecraft/unmapped/C_0164923		net/minecraft/client/render/model/entity/TurtleModel
+	f	Lnet/minecraft/unmapped/C_0289174;	f_7456524		egg
 	m	(F)V	<init>		<init>
-		p	1			p_1
+		p	1			reduction
 	m	(Lnet/minecraft/unmapped/C_6385858;FFFFFF)V	m_2324866		m_2324866
 		p	1			p_1
 		p	2			p_2
@@ -606,7 +606,7 @@ c	net/minecraft/unmapped/C_1031881$C_8057014		Factory
 		p	9			p_9
 		p	11			p_11
 		p	13			p_13
-c	net/minecraft/unmapped/C_1066300		net/minecraft/entity/living/mob/hostile/PhantomEntity
+c	net/minecraft/unmapped/C_1066300		net/minecraft/entity/living/mob/monster/PhantomEntity
 	f	Lnet/minecraft/unmapped/C_6101761;	f_3511628		SIZE
 	f	Lnet/minecraft/unmapped/C_0336319;	f_7643802		targetPosition
 	f	Lnet/minecraft/unmapped/C_6707278;	f_7588246		circlingCenter
@@ -810,8 +810,8 @@ c	net/minecraft/unmapped/C_1758986		net/minecraft/entity/projectile/TridentEntit
 		p	3			p_3
 		p	5			p_5
 	m	()V	<clinit>		<clinit>
-c	net/minecraft/unmapped/C_2096935		net/minecraft/unmapped/C_2096935
-	f	Lnet/minecraft/unmapped/C_0561170;	f_8078291		f_8078291
+c	net/minecraft/unmapped/C_2096935		net/minecraft/client/render/entity/TurtleRenderer
+	f	Lnet/minecraft/unmapped/C_0561170;	f_8078291		TEXTURE_LOCATION
 	f	I	f_5719254		f_5719254
 	m	(Lnet/minecraft/unmapped/C_9610577;)V	<init>		<init>
 		p	1			p_1
@@ -921,8 +921,8 @@ c	net/minecraft/unmapped/C_3091627		net/minecraft/block/SeaGrassBlock
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
-c	net/minecraft/unmapped/C_3341489		net/minecraft/unmapped/C_3341489
-	f	Lnet/minecraft/unmapped/C_0561170;	f_8015093		f_8015093
+c	net/minecraft/unmapped/C_3341489		net/minecraft/client/render/entity/PhantomRenderer
+	f	Lnet/minecraft/unmapped/C_0561170;	f_8015093		TEXTURE_LOCATION
 	f	I	f_7990037		f_7990037
 	m	(Lnet/minecraft/unmapped/C_9610577;)V	<init>		<init>
 		p	1			p_1
@@ -1378,11 +1378,11 @@ c	net/minecraft/unmapped/C_8424296		net/minecraft/world/gen/feature/SeaGrassFeat
 		p	3			p_3
 		p	4			p_4
 		p	5			p_5
-c	net/minecraft/unmapped/C_8878853		net/minecraft/unmapped/C_8878853
-	f	Lnet/minecraft/unmapped/C_0561170;	f_1835879		f_1835879
-	f	Lnet/minecraft/unmapped/C_0289174;	f_1902683		f_1902683
+c	net/minecraft/unmapped/C_8878853		net/minecraft/client/render/model/entity/ThrownTridentModel
+	f	Lnet/minecraft/unmapped/C_0561170;	f_1835879		TEXTURE_LOCATION
+	f	Lnet/minecraft/unmapped/C_0289174;	f_1902683		pole
 	m	()V	<init>		<init>
-	m	()V	m_4042847		m_4042847
+	m	()V	m_4042847		renderPole
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_8939886		net/minecraft/client/entity/particle/WaterCurrentDownParticle
 	f	F	f_3224764		angle
@@ -1430,10 +1430,10 @@ c	net/minecraft/unmapped/C_9378896		net/minecraft/entity/living/mob/passive/anim
 	m	(Lnet/minecraft/unmapped/C_3906126;)V	<init>		<init>
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_6707278;)V	m_1976860		setHomePos
-		p	1			p_1
+		p	1			pos
 	m	()Lnet/minecraft/unmapped/C_6707278;	m_6249481		getHomePos
 	m	(Lnet/minecraft/unmapped/C_6707278;)V	m_2728928		setTravelPos
-		p	1			p_1
+		p	1			pos
 	m	()Lnet/minecraft/unmapped/C_6707278;	m_7168185		getTravelPos
 	m	()Z	m_0449114		hasEgg
 	m	(Z)V	m_8332611		setHasEgg
@@ -1674,9 +1674,9 @@ c	net/minecraft/unmapped/C_9707472		net/minecraft/block/KelpBlock
 		p	6			p_6
 	m	()Lnet/minecraft/unmapped/C_9264598;	m_3079613		m_3079613
 	m	()V	<clinit>		<clinit>
-c	net/minecraft/unmapped/C_9765239		net/minecraft/unmapped/C_9765239
-	f	Lnet/minecraft/unmapped/C_0561170;	f_9853221		f_9853221
-	f	Lnet/minecraft/unmapped/C_8878853;	f_4796540		f_4796540
+c	net/minecraft/unmapped/C_9765239		net/minecraft/client/render/entity/TridentRenderer
+	f	Lnet/minecraft/unmapped/C_0561170;	f_9853221		TEXTURE_LOCATION
+	f	Lnet/minecraft/unmapped/C_8878853;	f_4796540		model
 	m	(Lnet/minecraft/unmapped/C_9610577;)V	<init>		<init>
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_1758986;DDDFF)V	m_2560130		m_2560130

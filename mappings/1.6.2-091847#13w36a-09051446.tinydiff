@@ -2101,7 +2101,7 @@ c	net/minecraft/unmapped/C_4636105
 	f	Lnet/minecraft/unmapped/C_3635204;	f_1916586		surfaceBlock
 	f	I	f_2336441		surfaceBlockMetadata
 	f	Lnet/minecraft/unmapped/C_3635204;	f_6006915		subsurfaceBlock
-	m	(Ljava/util/Random;)Lnet/minecraft/unmapped/C_6618366;	m_0608438	getRandomTree	
+	m	(Ljava/util/Random;)Lnet/minecraft/unmapped/C_6618366;	m_0608438	pickTree	
 		p	1		random	
 	m	(FF)Lnet/minecraft/unmapped/C_4636105;	m_7841216	setHeight	
 		p	1		baseHeight	
@@ -2112,7 +2112,7 @@ c	net/minecraft/unmapped/C_4636105
 	m	()I	m_0960641	getFoliageColor	
 	m	(Lnet/minecraft/unmapped/C_4636105$C_6154571;)Lnet/minecraft/unmapped/C_4636105;	m_7841216		setHeight
 		p	1			height
-	m	(Ljava/util/Random;)Lnet/minecraft/unmapped/C_6049345;	m_0608438		getRandomTree
+	m	(Ljava/util/Random;)Lnet/minecraft/unmapped/C_6049345;	m_0608438		pickTree
 		p	1			random
 	m	(Ljava/util/Random;III)Ljava/lang/String;	m_4738004		getRandomFlower
 		p	1			random
@@ -2124,7 +2124,7 @@ c	net/minecraft/unmapped/C_4636105
 	m	(IZ)Lnet/minecraft/unmapped/C_4636105;	m_5781216		setColor
 		p	1			color
 		p	2			modifyBaseColor
-	m	()Z	m_5296798		canSnow
+	m	()Z	m_5296798		isSnowy
 	m	(III)F	m_0376165		getTemperature
 		p	1			x
 		p	2			y
@@ -2160,6 +2160,7 @@ c	net/minecraft/unmapped/C_4636105
 	m	(Lnet/minecraft/unmapped/C_4636105;)Z	m_7144526		is
 		p	1			biome
 	m	()Lnet/minecraft/unmapped/C_4636105$C_5784858;	m_2779508		getTemperatureCategory
+	m	()Z	m_4952577	isSnowy	isCold
 c	net/minecraft/unmapped/C_4636105$C_5784858		TemperatureCategory
 	f	Lnet/minecraft/unmapped/C_4636105$C_5784858;	f_4742320		OCEAN
 	f	Lnet/minecraft/unmapped/C_4636105$C_5784858;	f_1950174		COLD
@@ -4020,13 +4021,13 @@ c	net/minecraft/unmapped/C_0974816
 	f	Lnet/minecraft/unmapped/C_7281219;	f_9096842		ENTER_ALL_BIOMES
 		c		Achieved when all overworld biomes are visited. The game only checks for the player entering a new biome every 100 ticks
 c	net/minecraft/unmapped/C_0994230
-	f	I	f_8508754	itemId	
+	f	I	f_8508754	item	
 	f	Lnet/minecraft/unmapped/C_4030632;	f_8508754		item
 	m	(ILjava/lang/String;I)V	<init>	<init>	
 		p	1		id	
 		p	2		name	
-		p	3		itemId	
-	m	()I	m_5926282	getItemId	
+		p	3		item	
+	m	()I	m_5926282	getItem	
 	m	(Ljava/lang/String;Lnet/minecraft/unmapped/C_9550253;Lnet/minecraft/unmapped/C_4030632;)V	<init>		<init>
 		p	1			id
 		p	2			name
@@ -4669,11 +4670,11 @@ c	net/minecraft/unmapped/C_6786653
 	m	(Lnet/minecraft/unmapped/C_3635204;)I	m_8438518		m_8438518
 		p	1			p_1
 c	net/minecraft/unmapped/C_6791672
-	f	I	f_4678774	plantId	
+	f	I	f_4678774	plant	
 	f	Lnet/minecraft/unmapped/C_3635204;	f_4678774		plant
 	m	(II)V	<init>	<init>	
-		p	1		plantId	
-		p	2		plantVariant	
+		p	1		plant	
+		p	2		variant	
 	m	(Lnet/minecraft/unmapped/C_3635204;I)V	<init>		<init>
 		p	1			plant
 		p	2			plantVariant
@@ -4954,20 +4955,20 @@ c	net/minecraft/unmapped/C_1975274
 	m	(Lnet/minecraft/unmapped/C_3635204;Z)V	<init>		<init>
 		p	1			block
 		p	2			unbreakable
-c	net/minecraft/unmapped/C_2373189
+c	net/minecraft/unmapped/C_2373189	net/minecraft/world/biome/layer/FuzzyZoomLayer	net/minecraft/world/biome/layer/NormalZoomLayer
 	m	(II)I	m_7598494	pick	
-		p	1		a	
-		p	2		b	
+		p	1		i1	
+		p	2		i2	
 	m	(IIII)I	m_0429634	pick	
-		p	1		a	
-		p	2		b	
-		p	3		c	
-		p	4		d	
+		p	1		i1	
+		p	2		i2	
+		p	3		i3	
+		p	4		i4	
 	m	(JLnet/minecraft/unmapped/C_6297854;I)Lnet/minecraft/unmapped/C_6297854;	m_3315006		zoom
 		p	0			seed
 		p	2			layer
 		p	3			magnification
-c	net/minecraft/unmapped/C_2399225	net/minecraft/unmapped/C_2399225	
+c	net/minecraft/unmapped/C_2399225	net/minecraft/world/biome/layer/NormalZoomLayer	
 	m	(JLnet/minecraft/unmapped/C_6297854;)V	<init>	<init>	
 		p	1		seed	
 		p	3		parent	
@@ -4977,13 +4978,13 @@ c	net/minecraft/unmapped/C_2399225	net/minecraft/unmapped/C_2399225
 		p	3		p_3	
 		p	4		p_4	
 	m	(II)I	m_2189519	pick	
-		p	1		a	
-		p	2		b	
-	m	(IIII)I	m_5694582	pick	
-		p	1		a	
-		p	2		b	
-		p	3		c	
-		p	4		d	
+		p	1		i1	
+		p	2		i2	
+	m	(IIII)I	m_5694582	getModeOrRandom	
+		p	1		i1	
+		p	2		i2	
+		p	3		i3	
+		p	4		i4	
 	m	(JLnet/minecraft/unmapped/C_6297854;I)Lnet/minecraft/unmapped/C_6297854;	m_7124401	zoom	
 		p	0		seed	
 		p	2		layer	
@@ -5124,19 +5125,19 @@ c	net/minecraft/unmapped/C_5908980
 		p	2			p_2
 		p	3			p_3
 c	net/minecraft/unmapped/C_6297854
-	m	(II)Z	m_8619827		areBiomesEqual
-		p	0			biomeId1
-		p	1			biomeId2
+	m	(II)Z	m_8619827		isSame
+		p	0			biome1
+		p	1			biome2
 	m	(I)Z	m_3559869		isOcean
-		p	0			biomeId
-	m	([I)I	m_5081477		getRandomInt
+		p	0			biome
+	m	([I)I	m_5081477		pickInt
 		p	1			ints
 	m	(IIII)I	m_2474007		getModeOrRandom
 		c		Returns the mode of these numbers (the most frequently occuring value) or a random\nnumber from this set.
-		p	1			x
-		p	2			z
-		p	3			width
-		p	4			length
+		p	1			i1
+		p	2			i2
+		p	3			i3
+		p	4			i4
 c	net/minecraft/unmapped/C_6907923
 	f	Z	f_9315491		unblockable
 	m	()Z	m_2207815		isUnblockable
@@ -5335,7 +5336,7 @@ c	net/minecraft/unmapped/C_8259395$C_4750010
 		p	1			random
 c	net/minecraft/unmapped/C_8588387
 c	net/minecraft/unmapped/C_8588387$C_4149823
-	f	[F	f_3420276	temperature	
+	f	[F	f_3420276	temperatures	
 c	net/minecraft/unmapped/C_8998010
 	f	Lnet/minecraft/unmapped/C_7348073;	f_9518295		spruceTree
 	f	I	f_6271488		normalVariant
@@ -9127,7 +9128,7 @@ c	net/minecraft/unmapped/C_8900491$C_6297916		Type
 	m	(Lnet/minecraft/unmapped/C_2750078;)Lnet/minecraft/unmapped/C_8900491$C_6297916;	m_8156813		byItem
 		p	0			stack
 	m	()V	<clinit>		<clinit>
-c	net/minecraft/unmapped/C_8997200		net/minecraft/world/biome/layer/BiomeTransitionLayer
+c	net/minecraft/unmapped/C_8997200		net/minecraft/world/biome/layer/BiomeEdgeLayer
 	m	(JLnet/minecraft/unmapped/C_6297854;)V	<init>		<init>
 		p	1			seed
 		p	3			parent
@@ -9136,27 +9137,27 @@ c	net/minecraft/unmapped/C_8997200		net/minecraft/world/biome/layer/BiomeTransit
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
-	m	([I[IIIIIII)Z	m_7428425		compareHillyBiomes
-		p	1			biome1
-		p	2			biome2
+	m	([I[IIIIIII)Z	m_7428425		checkEdge
+		p	1			area
+		p	2			values
 		p	3			x
 		p	4			y
 		p	5			length
 		p	6			width
-		p	7			id1
-		p	8			id2
-	m	([I[IIIIIII)Z	m_7829575		compareDryBiomes
-		p	1			biome1
-		p	2			biome2
+		p	7			biome
+		p	8			edge
+	m	([I[IIIIIII)Z	m_7829575		checkEdgeStrict
+		p	1			area
+		p	2			values
 		p	3			x
 		p	4			y
 		p	5			length
 		p	6			width
-		p	7			id1
-		p	8			id2
-	m	(II)Z	m_7329133		shouldTransition
-		p	1			id1
-		p	2			id2
+		p	7			biome
+		p	8			edge
+	m	(II)Z	m_7329133		isValidTemperatureEdge
+		p	1			biome
+		p	2			edge
 c	net/minecraft/unmapped/C_9060047		net/minecraft/world/biome/layer/AddSnowLayer
 	m	(JLnet/minecraft/unmapped/C_6297854;)V	<init>		<init>
 		p	1			seed

@@ -31,10 +31,10 @@ c	net/minecraft/unmapped/C_4078372
 c	net/minecraft/unmapped/C_4286596
 	f	Z	f_6398230	dirty	
 	m	(Lnet/minecraft/unmapped/C_4286596;)Z	m_6219073	contentEquals	
-		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_2750078;)Z	m_0791110	m_0791110	
-		p	1		p_1	
-		p	2		p_2	
+		p	1		other	
+	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_2750078;)Z	m_0791110	itemsEqual	
+		p	1		item1	
+		p	2		item2	
 	m	()Lnet/minecraft/unmapped/C_4286596;	m_4775289	copy	
 c	net/minecraft/unmapped/C_4443804
 	m	(Lnet/minecraft/unmapped/C_5315820;)V	m_0126626	handleSpawnPoint	
@@ -135,7 +135,7 @@ c	net/minecraft/unmapped/C_4939758
 	m	(Lnet/minecraft/unmapped/C_5315820;)V	m_0126626	m_0126626	
 		p	1		p_1	
 c	net/minecraft/unmapped/C_8817873
-	f	Z	f_6859679	f_6859679	
+	f	Z	f_6859679	noSendingBlockEntityUpdates	
 	m	(IIILnet/minecraft/unmapped/C_2074023;)V	m_0023710	m_0023710	
 		p	1		p_1	
 		p	2		p_2	
@@ -152,11 +152,11 @@ c	net/minecraft/unmapped/C_0019534
 		p	4		blockEntity	
 	m	()V	m_0632391	saveAll	
 c	net/minecraft/unmapped/C_1896634
-	m	(Lnet/minecraft/unmapped/C_4844124;III)V	m_4982139	m_4982139	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
+	m	(Lnet/minecraft/unmapped/C_4844124;III)V	m_4982139	sendPacket	
+		p	1		packet	
+		p	2		x	
+		p	3		y	
+		p	4		z	
 c	net/minecraft/unmapped/C_2260875	net/minecraft/world/storage/PlayerDataStorage	
 	f	Ljava/util/logging/Logger;	f_2561336	LOGGER	
 	f	Ljava/io/File;	f_9370701	dir	
@@ -203,7 +203,7 @@ c	net/minecraft/unmapped/C_8479751
 c	net/minecraft/unmapped/C_8752044
 	m	(Lnet/minecraft/unmapped/C_6489668;)V	m_6175764	m_6175764	
 		p	1		p_1	
-	m	()V	m_9958829	m_9958829	
+	m	()V	m_9958829	sendInventory	
 	m	(Lnet/minecraft/unmapped/C_8748575;)V	m_9632316	m_9632316	
 		p	1		p_1	
 c	net/minecraft/unmapped/C_3664520		net/minecraft/unmapped/C_3664520

@@ -451,14 +451,14 @@ c	net/minecraft/unmapped/C_8479751
 		p	3		p_3	
 		p	4		p_4	
 c	net/minecraft/unmapped/C_8546801
-	f	Lnet/minecraft/server/MinecraftServer;	f_4208397	world	
+	f	Lnet/minecraft/server/MinecraftServer;	f_4208397	server	
 	f	Lnet/minecraft/unmapped/C_7366354;	f_7158125		world
 	m	(Lnet/minecraft/server/MinecraftServer;I)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
+		p	1		server	
+		p	2		dimension	
 	m	(Lnet/minecraft/unmapped/C_7366354;I)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
+		p	1			world
+		p	2			dimension
 c	net/minecraft/unmapped/C_8817873
 	m	(Lnet/minecraft/unmapped/C_5269767;)Lnet/minecraft/unmapped/C_5269767;	m_1512890		m_1512890
 		p	1			p_1
@@ -700,10 +700,10 @@ c	net/minecraft/unmapped/C_7653691
 		p	2		p_2	
 		p	3		p_3	
 c	net/minecraft/unmapped/C_8259395
-	m	(Ljava/util/ArrayList;)I	m_0782017	getTotalWeight	
+	m	(Ljava/util/ArrayList;)I	m_0782017	updateTotalWeight	
 		c	Will return the total weight of the given piece weights if more pieces can still be generated, or -1.	
 		p	0		weights	
-	m	(Ljava/util/List;)I	m_0782017		getTotalWeight
+	m	(Ljava/util/List;)I	m_0782017		updateTotalWeight
 		c		Will return the total weight of the given piece weights if more pieces can still be generated, or -1.
 		p	0			weights
 c	net/minecraft/unmapped/C_8259395$C_0661471

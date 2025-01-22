@@ -2539,7 +2539,7 @@ c	net/minecraft/unmapped/C_5283200
 	f	Lnet/minecraft/unmapped/C_2627205;	f_7900303		region
 	f	Lnet/minecraft/unmapped/C_6707278;	f_4415347		origin
 	f	Lnet/minecraft/unmapped/C_6707278;	f_2898167		edge
-	f	Z	f_5939982		f_5939982
+	f	Z	f_5939982		nextLayer
 	m	()V	<clinit>	<clinit>	
 	m	(Lnet/minecraft/unmapped/C_6385858;)V	m_0330444	compile	
 		p	1		camera	
@@ -2549,16 +2549,16 @@ c	net/minecraft/unmapped/C_5283200
 	m	(Lnet/minecraft/unmapped/C_6385858;)V	m_4304248	rebuildTranslucent	
 		p	1		camera	
 	m	()Z	m_4889726		hasBlocks
-	m	()Z	m_4350809		m_4350809
+	m	()Z	m_4350809		hasNextLayer
 	m	(Lnet/minecraft/unmapped/C_3333682;Lnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_2334550;)Z	m_0330444		compile
 		p	1			layer
 		p	2			camera
 		p	3			tesselator
-	m	()V	m_5158658		m_5158658
-	m	()Z	m_2360925		m_2360925
-	m	(Lnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_2334550;)V	m_4304248		startBufferBuilder
-		p	1			p_1
-		p	2			p_2
+	m	()V	m_5158658		begin
+	m	()Z	m_2360925		hasTranslucent
+	m	(Lnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_2334550;)V	m_4304248		rebuildTranslucent
+		p	1			camera
+		p	2			tesselator
 	m	(Lnet/minecraft/unmapped/C_6385858;)F	m_2953364		squaredDistanceToCenterDoubleHeight
 		p	1			camera
 c	net/minecraft/unmapped/C_5324911
@@ -5213,7 +5213,7 @@ c	net/minecraft/unmapped/C_6588851
 c	net/minecraft/unmapped/C_6588851$C_4151455
 	m	()Ljava/lang/String;	m_0897211	getName	
 c	net/minecraft/unmapped/C_6791672
-	f	I	f_1114560	plantVariant	
+	f	I	f_1114560	variant	
 	f	Lnet/minecraft/unmapped/C_2441996;	f_9875203		state
 	m	(I)V	<init>	<init>	
 		p	1		plantVariant	
@@ -9360,10 +9360,10 @@ c	net/minecraft/unmapped/C_0952982$C_7096038
 	f	I	f_5207836	metadata	
 	f	Lnet/minecraft/unmapped/C_2441996;	f_1312464		state
 	m	(Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_3635204;ILnet/minecraft/unmapped/C_2800860;)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
+		p	1		dstPos	
+		p	2		block	
+		p	3		metadata	
+		p	4		nbt	
 	m	(Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_2800860;)V	<init>		<init>
 		p	1			pos
 		p	2			state
@@ -9484,26 +9484,26 @@ c	net/minecraft/unmapped/C_0076140
 		p	4			p_4
 		p	5			p_5
 c	net/minecraft/unmapped/C_0362364
-	f	I	f_2802095	f_2802095	
-	f	I	f_8185511	type	
+	f	I	f_2802095	type	
+	f	I	f_8185511	usage	
 	f	Lnet/minecraft/unmapped/C_0362364$C_7607002;	f_2802095		type
 	f	Lnet/minecraft/unmapped/C_0362364$C_4010028;	f_8185511		usage
-	m	(I)I	m_5944375	m_5944375	
-		p	0		p_0	
+	m	(I)I	m_5944375	getTypeSize	
+		p	0		type	
 	m	(IIII)V	<init>	<init>	
 		p	1		index	
-		p	2		p_2	
-		p	3		p_3	
+		p	2		type	
+		p	3		usage	
 		p	4		count	
 	m	(II)Z	m_2032914	supportsUsage	
-		p	1		p_1	
-		p	2		p_2	
-	m	()I	m_7548750	getType	
-	m	()I	m_2460154	m_2460154	
-	m	(I)Ljava/lang/String;	m_3117379	m_3117379	
-		p	0		p_0	
-	m	(I)Ljava/lang/String;	m_0043366	m_0043366	
-		p	0		p_0	
+		p	1		index	
+		p	2		usage	
+	m	()I	m_7548750	getUsage	
+	m	()I	m_2460154	getGlCode	
+	m	(I)Ljava/lang/String;	m_3117379	getTypeName	
+		p	0		type	
+	m	(I)Ljava/lang/String;	m_0043366	getUsageName	
+		p	0		usage	
 	m	(ILnet/minecraft/unmapped/C_0362364$C_7607002;Lnet/minecraft/unmapped/C_0362364$C_4010028;I)V	<init>		<init>
 		p	1			index
 		p	2			type
@@ -11325,7 +11325,7 @@ c	net/minecraft/unmapped/C_8009477		net/minecraft/entity/ai/pathing/WalkNodeEval
 	m	()Z	m_3317051		canOpenDoors
 	m	()Z	m_1545253		canSwim
 	m	()Z	m_2144666		canFloat
-c	net/minecraft/unmapped/C_8365102		net/minecraft/entity/living/mob/hostile/GuardianEntity
+c	net/minecraft/unmapped/C_8365102		net/minecraft/entity/living/mob/monster/GuardianEntity
 	f	F	f_2291101		tailAngle
 	f	F	f_0194355		prevTailAngle
 	f	F	f_7690400		spikesExtensionRate
@@ -11464,7 +11464,7 @@ c	net/minecraft/unmapped/C_8373595		net/minecraft/client/render/vertex/BufferBui
 	m	(Lnet/minecraft/unmapped/C_8373595$C_3679149;)V	m_8517272		setState
 		p	1			state
 	m	()V	m_2412616		clear
-	m	(I)V	m_0421390		start
+	m	(I)V	m_0421390		begin
 		p	1			drawMode
 	m	(DD)V	m_7287647		texture
 		p	1			u

@@ -727,9 +727,9 @@ c	net/minecraft/unmapped/C_8726576	net/minecraft/world/gen/feature/SavedFeatureD
 	m	()Lnet/minecraft/unmapped/C_2800860;	m_3819230	getFeatures	
 	m	(Lnet/minecraft/unmapped/C_2800860;)Lnet/minecraft/unmapped/C_2800860;	m_1489858	m_1489858	
 		p	1		p_1	
-	m	(II)Lnet/minecraft/unmapped/C_2800860;	m_6653494	put	
-		p	1		p_1	
-		p	2		p_2	
+	m	(II)Lnet/minecraft/unmapped/C_2800860;	m_6653494	get	
+		p	1		chunkX	
+		p	2		chunkZ	
 c	net/minecraft/unmapped/C_4649460
 	m	(Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_3635204;)V	m_4546144	m_4546144	
 		p	1		p_1	
@@ -1130,9 +1130,9 @@ c	net/minecraft/unmapped/C_9344854
 		p	2			p_2
 		p	3			p_3
 c	net/minecraft/unmapped/C_3447311
-	f	Lnet/minecraft/unmapped/C_6101761;	f_0440149		f_0440149
-	f	Lnet/minecraft/unmapped/C_6101761;	f_0408374		f_0408374
-	f	Lnet/minecraft/unmapped/C_6101761;	f_2912549		f_2912549
+	f	Lnet/minecraft/unmapped/C_6101761;	f_0440149		TREASURE_POS
+	f	Lnet/minecraft/unmapped/C_6101761;	f_0408374		GOT_FISH
+	f	Lnet/minecraft/unmapped/C_6101761;	f_2912549		MOISTNESS
 	m	(Lnet/minecraft/unmapped/C_2716056;Lnet/minecraft/unmapped/C_2928020;Lnet/minecraft/unmapped/C_2750078;)Lnet/minecraft/unmapped/C_2928020;	m_0405912	m_0405912	
 		p	1		p_1	
 		p	2		p_2	
@@ -1142,14 +1142,14 @@ c	net/minecraft/unmapped/C_3447311
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
-	m	(Lnet/minecraft/unmapped/C_6707278;)V	m_1928172		m_1928172
-		p	1			p_1
-	m	()Lnet/minecraft/unmapped/C_6707278;	m_8136031		m_8136031
-	m	()Z	m_4297776		m_4297776
-	m	(Z)V	m_2761524		m_2761524
-		p	1			p_1
-	m	()Z	m_5142437		m_5142437
-	m	(Z)V	m_2734855		m_2734855
+	m	(Lnet/minecraft/unmapped/C_6707278;)V	m_1928172		setTreasurePos
+		p	1			os
+	m	()Lnet/minecraft/unmapped/C_6707278;	m_8136031		getTreasurePos
+	m	()Z	m_4297776		hasGotFish
+	m	(Z)V	m_2761524		setGotFish
+		p	1			gotFish
+	m	()Z	m_5142437		getMoistness
+	m	(Z)V	m_2734855		setMoistness
 		p	1			p_1
 	m	()V	m_5855336		m_5855336
 	m	(Lnet/minecraft/unmapped/C_2800860;)V	m_4059289		m_4059289

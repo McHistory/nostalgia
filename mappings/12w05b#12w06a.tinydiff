@@ -195,14 +195,14 @@ c	net/minecraft/unmapped/C_3317638
 	m	()Z	m_1332509	m_1332509	
 c	net/minecraft/unmapped/C_5753070	net/minecraft/entity/ai/goal/ActiveTargetGoal	
 	f	Lnet/minecraft/unmapped/C_1013763;	f_2429018	target	
-	f	F	f_9517750	f_9517750	
+	f	F	f_9517750	range	
 	f	I	f_5599006	f_5599006	
 	f	I	f_2159450	chanceToStartGoal	
 	m	()V	m_3938570	m_3938570	
 	m	(Lnet/minecraft/unmapped/C_1013763;FI)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
+		p	1		target	
+		p	2		range	
+		p	3		chanceToStartGoal	
 	m	(Lnet/minecraft/unmapped/C_1013763;)V	m_5036686	m_5036686	
 		p	1		p_1	
 	m	()Lnet/minecraft/unmapped/C_1013763;	m_2684580	m_2684580	
@@ -221,7 +221,7 @@ c	net/minecraft/unmapped/C_7501646
 c	net/minecraft/unmapped/C_7566952
 	f	Lnet/minecraft/unmapped/C_1013763;	f_3910664	mob	
 	f	Lnet/minecraft/unmapped/C_1013763;	f_5195572		entity
-	f	F	f_2083421		f_2083421
+	f	F	f_2083421		range
 	f	Z	f_6176127		checkVisibility
 	m	()V	<init>	<init>	
 	m	()V	m_3938570	tick	
@@ -229,9 +229,9 @@ c	net/minecraft/unmapped/C_7566952
 	m	(Lnet/minecraft/unmapped/C_1013763;)V	m_5036686	setMob	
 		p	1		mob	
 	m	(Lnet/minecraft/unmapped/C_1013763;FZ)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+		p	1			entity
+		p	2			range
+		p	3			checkVisibility
 	m	()Z	m_1332509		m_1332509
 	m	()V	m_2223255		m_2223255
 	m	(Lnet/minecraft/unmapped/C_1013763;Z)Z	m_2713077		canTarget
@@ -379,11 +379,11 @@ c	net/minecraft/unmapped/C_1812555		net/minecraft/entity/ai/goal/ActiveTargetGoa
 	f	Ljava/lang/Class;	f_3609205		targetType
 	f	I	f_8459942		chanceToStartGoal
 	m	(Lnet/minecraft/unmapped/C_1013763;Ljava/lang/Class;FIZ)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
+		p	1			entity
+		p	2			targetType
+		p	3			range
+		p	4			chanceToStartGoal
+		p	5			checkVisibility
 	m	()Z	m_5896190		m_5896190
 	m	()V	m_5289183		m_5289183
 c	net/minecraft/unmapped/C_3235984		net/minecraft/entity/ai/goal/RevengeGoal
@@ -428,11 +428,3 @@ c	net/minecraft/unmapped/C_8656811		net/minecraft/entity/ai/goal/LongDoorInterac
 	m	()V	m_5289183		m_5289183
 	m	()V	m_2223255		m_2223255
 	m	()V	m_4528414		m_4528414
-c	net/minecraft/unmapped/C_6273786
-	m	(I)V	m_3593036	m_3593036	setControls
-	m	()Z	m_1332509	m_1332509	shouldContinue
-	m	()Z	m_3298012	m_3298012	canStop
-	m	()V	m_5289183	m_5289183	start
-	m	()V	m_2223255	m_2223255	stop
-	m	()V	m_4528414	m_4528414	tick
-	m	()I	m_8104401	m_8104401	getControls

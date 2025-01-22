@@ -790,13 +790,13 @@ c	net/minecraft/unmapped/C_6028060
 c	net/minecraft/unmapped/C_6028060$C_7731590
 	m	()Lnet/minecraft/unmapped/C_1533903;	m_1934261		m_1934261
 c	net/minecraft/unmapped/C_8259395	net/minecraft/world/gen/structure/VillagePieces	
-	m	(Ljava/util/List;)I	m_0782017	getTotalWeight	
+	m	(Ljava/util/List;)I	m_0782017	updateTotalWeight	
 		c	Will return the total weight of the given piece weights if more pieces can still be generated, or -1.	
 		p	0		weights	
-	m	(Ljava/util/Random;I)Ljava/util/List;	m_9262447	getPieceChance	
-		p	0		rand	
-		p	1		weight	
-	m	(Lnet/minecraft/unmapped/C_8259395$C_9855653;Lnet/minecraft/unmapped/C_8259395$C_3276230;Ljava/util/List;Ljava/util/Random;IIILnet/minecraft/unmapped/C_3544601;I)Lnet/minecraft/unmapped/C_8259395$C_0865390;	m_1791627	createPiece	
+	m	(Ljava/util/Random;I)Ljava/util/List;	m_9262447	getPieceWeights	
+		p	0		random	
+		p	1		size	
+	m	(Lnet/minecraft/unmapped/C_8259395$C_9855653;Lnet/minecraft/unmapped/C_8259395$C_3276230;Ljava/util/List;Ljava/util/Random;IIILnet/minecraft/unmapped/C_3544601;I)Lnet/minecraft/unmapped/C_8259395$C_0865390;	m_1791627	createBuildingPiece	
 		p	0		startPiece	
 		p	1		weight	
 		p	2		pieces	
@@ -806,7 +806,7 @@ c	net/minecraft/unmapped/C_8259395	net/minecraft/world/gen/structure/VillagePiec
 		p	6		z	
 		p	7		facing	
 		p	8		generationDepth	
-	m	(Lnet/minecraft/unmapped/C_8259395$C_9855653;Ljava/util/List;Ljava/util/Random;IIILnet/minecraft/unmapped/C_3544601;I)Lnet/minecraft/unmapped/C_8259395$C_0865390;	m_5065044	generateNextPiece	
+	m	(Lnet/minecraft/unmapped/C_8259395$C_9855653;Ljava/util/List;Ljava/util/Random;IIILnet/minecraft/unmapped/C_3544601;I)Lnet/minecraft/unmapped/C_8259395$C_0865390;	m_5065044	generateNextBuildingPiece	
 		p	0		startPiece	
 		p	1		pieces	
 		p	2		random	
@@ -815,7 +815,7 @@ c	net/minecraft/unmapped/C_8259395	net/minecraft/world/gen/structure/VillagePiec
 		p	5		z	
 		p	6		facing	
 		p	7		generationDepth	
-	m	(Lnet/minecraft/unmapped/C_8259395$C_9855653;Ljava/util/List;Ljava/util/Random;IIILnet/minecraft/unmapped/C_3544601;I)Lnet/minecraft/unmapped/C_9282614;	m_1625177	tryGenerateNextPiece	
+	m	(Lnet/minecraft/unmapped/C_8259395$C_9855653;Ljava/util/List;Ljava/util/Random;IIILnet/minecraft/unmapped/C_3544601;I)Lnet/minecraft/unmapped/C_9282614;	m_1625177	generateBuildingPiece	
 		p	0		startPiece	
 		p	1		pieces	
 		p	2		random	
@@ -2045,9 +2045,9 @@ c	net/minecraft/unmapped/C_6633170
 		p	2			p_2
 c	net/minecraft/unmapped/C_9913447
 	m	(Ljava/lang/String;Lnet/minecraft/unmapped/C_2942281;Ljava/util/function/Function;)V	m_9462367	validate	
-		p	0		p_0	
-		p	1		p_1	
-		p	2		p_2	
+		p	0		name	
+		p	1		registry	
+		p	2		keyGetter	
 	m	(Ljava/util/function/Function;Lnet/minecraft/unmapped/C_1203617;Ljava/lang/String;Lnet/minecraft/unmapped/C_2942281;Ljava/lang/Object;)V	m_7933537	m_7933537	
 		p	0		p_0	
 		p	1		p_1	
@@ -2103,8 +2103,8 @@ c	net/minecraft/unmapped/C_7684054
 		p	4			p_4
 	m	()Lnet/minecraft/unmapped/C_1533903;	m_1934261		m_1934261
 c	net/minecraft/unmapped/C_0567601
-c	net/minecraft/unmapped/C_0567601$C_6001022	C_6001022	
-	f	Lnet/minecraft/unmapped/C_0567601$C_6001022;	f_0311177	f_0311177	
+c	net/minecraft/unmapped/C_0567601$C_6001022	CoolWarm	
+	f	Lnet/minecraft/unmapped/C_0567601$C_6001022;	f_0311177	INSTANCE	
 	f	[Lnet/minecraft/unmapped/C_0567601$C_6001022;	f_0313329	f_0313329	
 	m	()[Lnet/minecraft/unmapped/C_0567601$C_6001022;	values	values	
 	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_0567601$C_6001022;	valueOf	valueOf	
@@ -2120,8 +2120,8 @@ c	net/minecraft/unmapped/C_0567601$C_6001022	C_6001022
 		p	5		p_5	
 		p	6		p_6	
 	m	()V	<clinit>	<clinit>	
-c	net/minecraft/unmapped/C_0567601$C_8604868	C_8604868	
-	f	Lnet/minecraft/unmapped/C_0567601$C_8604868;	f_2028819	f_2028819	
+c	net/minecraft/unmapped/C_0567601$C_8604868	HeatIce	
+	f	Lnet/minecraft/unmapped/C_0567601$C_8604868;	f_2028819	INSTANCE	
 	f	[Lnet/minecraft/unmapped/C_0567601$C_8604868;	f_0755928	f_0755928	
 	m	()[Lnet/minecraft/unmapped/C_0567601$C_8604868;	values	values	
 	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_0567601$C_8604868;	valueOf	valueOf	
@@ -2360,9 +2360,9 @@ c	net/minecraft/unmapped/C_0382758
 	m	(I)I	m_2073248	m_2073248	
 		p	1		p_1	
 c	net/minecraft/unmapped/C_4693257
-	m	(Lnet/minecraft/unmapped/C_7699185;)Ljava/util/List;	m_1525377	m_1525377	
-		p	0		p_0	
-	m	(Lnet/minecraft/unmapped/C_0460202;)Ljava/util/List;	m_1525377		m_1525377
+	m	(Lnet/minecraft/unmapped/C_7699185;)Ljava/util/List;	m_1525377	getTabs	
+		p	0		menu	
+	m	(Lnet/minecraft/unmapped/C_0460202;)Ljava/util/List;	m_1525377		getTabs
 		p	0			p_0
 c	net/minecraft/unmapped/C_0572196
 	f	Lnet/minecraft/unmapped/C_7862286;	f_4350464		f_4350464

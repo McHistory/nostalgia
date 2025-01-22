@@ -407,11 +407,11 @@ c	net/minecraft/unmapped/C_0289174	net/minecraft/client/render/model/ModelPart
 		p	3		z	
 	m	(F)V	m_7104545	render	
 		p	1		scale	
-	m	(F)V	m_0246274	translate	
+	m	(F)V	m_0246274	transform	
 		p	1		scale	
 	m	(F)V	m_8334576	compile	
 		p	1		scale	
-	m	(F)V	m_1171633	renderRotation	
+	m	(F)V	m_1171633	renderForceTransform	
 		p	1		scale	
 c	net/minecraft/unmapped/C_0309511	net/minecraft/client/gui/screen/TitleScreen	
 	f	Ljava/util/Random;	f_4988594	RANDOM	
@@ -497,8 +497,8 @@ c	net/minecraft/unmapped/C_0559439
 		p	2		p_2	
 		p	3		p_3	
 		p	4		p_4	
-	m	(Z)V	m_9454184	setFancyGraphics	
-		p	1		fancyGraphics	
+	m	(Z)V	m_9454184	setCulling	
+		p	1		culling	
 c	net/minecraft/unmapped/C_0619399	net/minecraft/client/gui/screen/inventory/menu/FurnaceScreen	
 	f	Lnet/minecraft/unmapped/C_1196485;	f_0624650	furnace	
 	m	(Lnet/minecraft/unmapped/C_4286596;Lnet/minecraft/unmapped/C_1196485;)V	<init>	<init>	
@@ -754,7 +754,7 @@ c	net/minecraft/unmapped/C_1044273	net/minecraft/client/render/world/WorldRender
 	f	D	f_4269846	prevCameraZ	
 	f	F	f_6975940	miningProgress	
 	f	I	f_5393198	cullStep	
-	f	I	f_0674195	f_0674195	
+	f	I	f_0674195	chunkCheckIndex	
 	m	(Lnet/minecraft/client/Minecraft;Lnet/minecraft/unmapped/C_3385278;)V	<init>	<init>	
 		p	1		minecraft	
 		p	2		textureManager	
@@ -5299,9 +5299,9 @@ c	net/minecraft/unmapped/C_0112527	net/minecraft/client/render/model/entity/Wolf
 	f	Lnet/minecraft/unmapped/C_0289174;	f_5302089	backLeftLeg	
 	f	Lnet/minecraft/unmapped/C_0289174;	f_5291947	frontRightLeg	
 	f	Lnet/minecraft/unmapped/C_0289174;	f_3358249	frontLeftLeg	
-	f	Lnet/minecraft/unmapped/C_0289174;	f_5538683	f_5538683	
-	f	Lnet/minecraft/unmapped/C_0289174;	f_6752717	f_6752717	
-	f	Lnet/minecraft/unmapped/C_0289174;	f_4090042	f_4090042	
+	f	Lnet/minecraft/unmapped/C_0289174;	f_5538683	rightEar	
+	f	Lnet/minecraft/unmapped/C_0289174;	f_6752717	leftEar	
+	f	Lnet/minecraft/unmapped/C_0289174;	f_4090042	mouth	
 	f	Lnet/minecraft/unmapped/C_0289174;	f_3051316	tail	
 	f	Lnet/minecraft/unmapped/C_0289174;	f_8646106	neck	
 	m	()V	<init>	<init>	
@@ -5325,7 +5325,7 @@ c	net/minecraft/unmapped/C_0112527	net/minecraft/client/render/model/entity/Wolf
 		p	5		p_5	
 		p	6		p_6	
 c	net/minecraft/unmapped/C_0994230
-	m	()I	m_5926282	getItemId	
+	m	()I	m_5926282	getItem	
 c	net/minecraft/unmapped/C_1115384	net/minecraft/client/util/SmoothUtil	
 	f	F	f_6743575	actualSum	
 	f	F	f_6426145	smoothedSum	
@@ -5480,7 +5480,7 @@ c	net/minecraft/unmapped/C_3473914
 		p	1		y	
 	m	(I)V	m_7025829	setSpawnZ	
 		p	1		z	
-	m	(Lnet/minecraft/unmapped/C_2800860;)V	m_1599781	setInitialized	
+	m	(Lnet/minecraft/unmapped/C_2800860;)V	m_1599781	setPlayerData	
 		p	1		playerData	
 	m	()Ljava/lang/String;	m_5848716	getName	
 	m	()J	m_9930809	getLastPlayed	

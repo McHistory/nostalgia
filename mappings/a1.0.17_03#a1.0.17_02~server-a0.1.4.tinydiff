@@ -203,7 +203,7 @@ c	net/minecraft/unmapped/C_0019534		net/minecraft/server/PlayerManager
 	f	Ljava/io/File;	f_8764252		opsFile
 	m	(Lnet/minecraft/server/MinecraftServer;)V	<init>		<init>
 		p	1			server
-	m	()I	m_2379740		getChunkViewDistance
+	m	()I	m_2379740		getViewDistance
 	m	(Lnet/minecraft/unmapped/C_0324512;)V	m_5986822		add
 		p	1			player
 	m	(Lnet/minecraft/unmapped/C_0324512;)V	m_8392216		move
@@ -262,7 +262,7 @@ c	net/minecraft/unmapped/C_0324512		net/minecraft/server/entity/mob/player/Serve
 	f	Ljava/util/List;	f_1683304		newLoadedChunks
 		c		Coordinates of chunks that have come within view of the player, but have not yet\nbeen sent to the client.
 	f	Ljava/util/Set;	f_5806656		allLoadedChunks
-	f	D	f_7252894		f_7252894
+	f	D	f_7252894		lastReceivedY
 	m	(Lnet/minecraft/server/MinecraftServer;Lnet/minecraft/unmapped/C_3906126;Ljava/lang/String;Lnet/minecraft/unmapped/C_7897127;)V	<init>		<init>
 		p	1			server
 		p	2			world
@@ -474,7 +474,7 @@ c	net/minecraft/unmapped/C_1896634		net/minecraft/server/ChunkMap
 		c		Chunks that need to sync block data with clients.
 	f	Lnet/minecraft/server/MinecraftServer;	f_1832964		server
 	m	(Lnet/minecraft/server/MinecraftServer;)V	<init>		<init>
-		p	1			p_1
+		p	1			server
 	m	()V	m_8018690		tick
 	m	(IIZ)Lnet/minecraft/unmapped/C_1896634$C_9146344;	m_1907600		getChunk
 		p	1			chunkX
@@ -495,7 +495,7 @@ c	net/minecraft/unmapped/C_1896634		net/minecraft/server/ChunkMap
 		p	4			playerChunkZ
 	m	(Lnet/minecraft/unmapped/C_0324512;)V	m_6792077		movePlayer
 		p	1			player
-	m	()I	m_5193381		getChunkViewDistance
+	m	()I	m_5193381		getViewDistance
 	m	(Lnet/minecraft/unmapped/C_1896634;)Lnet/minecraft/server/MinecraftServer;	m_5490981		m_5490981
 		p	0			p_0
 	m	(Lnet/minecraft/unmapped/C_1896634;)Lnet/minecraft/unmapped/C_1264342;	m_0591334		m_0591334
@@ -597,8 +597,8 @@ c	net/minecraft/unmapped/C_4978736		net/minecraft/server/dedicated/gui/PlayerLis
 		p	1			server
 	m	()V	m_5506965		m_5506965
 c	net/minecraft/unmapped/C_6265960		net/minecraft/server/dedicated/gui/LogHandler
-	f	[I	f_0212792		f_0212792
-	f	I	f_3434154		f_3434154
+	f	[I	f_0212792		logDeltas
+	f	I	f_3434154		logDeltaIndex
 	f	Ljava/util/logging/Formatter;	f_8731839		formatter
 	f	Ljavax/swing/JTextArea;	f_3446787		textArea
 	m	(Ljavax/swing/JTextArea;)V	<init>		<init>
@@ -669,8 +669,8 @@ c	net/minecraft/unmapped/C_7366354		net/minecraft/server/world/ServerWorld
 	f	Lnet/minecraft/unmapped/C_3571139;	f_4355570		chunkCache
 	f	Z	f_8250949		bypassSpawnProtection
 	f	Z	f_8586684		savingDisabled
-	f	Lnet/minecraft/unmapped/C_9377562;	f_4313004		hostileMobSpawner
-	f	Lnet/minecraft/unmapped/C_9377562;	f_5543225		passiveMobSpawner
+	f	Lnet/minecraft/unmapped/C_9377562;	f_4313004		monsterSpawner
+	f	Lnet/minecraft/unmapped/C_9377562;	f_5543225		animalSpawner
 	m	()V	m_0624358		m_0624358
 	m	(Ljava/io/File;)Lnet/minecraft/unmapped/C_9484672;	m_7447312		m_7447312
 		p	1			p_1
@@ -780,7 +780,7 @@ c	net/minecraft/unmapped/C_8479751		net/minecraft/server/world/ServerWorldEventL
 c	net/minecraft/unmapped/C_8546801		net/minecraft/server/entity/EntityTracker
 	f	Ljava/util/Set;	f_6289612		entries
 	f	Lnet/minecraft/unmapped/C_3837238;	f_4296190		entriesById
-	f	Lnet/minecraft/server/MinecraftServer;	f_4208397		world
+	f	Lnet/minecraft/server/MinecraftServer;	f_4208397		server
 	f	I	f_5753668		viewDistance
 	m	(Lnet/minecraft/server/MinecraftServer;)V	<init>		<init>
 		p	1			server

@@ -302,7 +302,7 @@ c	net/minecraft/unmapped/C_0019534	net/minecraft/server/PlayerManager
 		p	1		server
 	m	(Lnet/minecraft/unmapped/C_7366354;)V	m_8887204	setWorld
 		p	1		world
-	m	()I	m_2379740	getChunkViewDistance
+	m	()I	m_2379740	getViewDistance
 	m	(Lnet/minecraft/unmapped/C_0324512;)V	m_5986822	add
 		p	1		player
 	m	(Lnet/minecraft/unmapped/C_0324512;)V	m_8392216	move
@@ -521,7 +521,7 @@ c	net/minecraft/unmapped/C_0226190	net/minecraft/client/render/texture/CompassSp
 	m	(Lnet/minecraft/client/Minecraft;)V	<init>	<init>
 		p	1		minecraft
 	m	()V	m_4399705	m_4399705
-c	net/minecraft/unmapped/C_0258789	net/minecraft/entity/mob/hostile/SkeletonEntity
+c	net/minecraft/unmapped/C_0258789	net/minecraft/entity/mob/monster/SkeletonEntity
 	f	Lnet/minecraft/unmapped/C_2750078;	f_0795879	BOW
 	m	(Lnet/minecraft/unmapped/C_3906126;)V	<init>	<init>
 		p	1		p_1
@@ -588,7 +588,7 @@ c	net/minecraft/unmapped/C_0289174	net/minecraft/client/render/model/ModelPart
 		p	3		z
 	m	(F)V	m_7104545	render
 		p	1		scale
-	m	(F)V	m_0246274	translate
+	m	(F)V	m_0246274	transform
 		p	1		scale
 	m	(F)V	m_8334576	compile
 		p	1		scale
@@ -633,7 +633,7 @@ c	net/minecraft/unmapped/C_0324512	net/minecraft/server/entity/mob/player/Server
 	f	Ljava/util/List;	f_1683304	newLoadedChunks
 		c	Coordinates of chunks that have come within view of the player, but have not yet\nbeen sent to the client.
 	f	Ljava/util/Set;	f_5806656	allLoadedChunks
-	f	D	f_7252894	f_7252894
+	f	D	f_7252894	lastReceivedY
 	f	Z	f_1534277	sneaking
 	f	I	f_5431237	lastHealth
 	f	I	f_1478225	spawnProtectionTicks
@@ -1090,8 +1090,8 @@ c	net/minecraft/unmapped/C_0559439	net/minecraft/block/LeavesBlock
 		p	1		p_1
 		p	2		p_2
 	m	()Z	m_1944525	m_1944525
-	m	(Z)V	m_9454184	setFancyGraphics
-		p	1		fancyGraphics
+	m	(Z)V	m_9454184	setCulling
+		p	1		culling
 	m	(Lnet/minecraft/unmapped/C_3906126;IIILnet/minecraft/unmapped/C_6385858;)V	m_9342401	m_9342401
 		p	1		p_1
 		p	2		p_2
@@ -1435,9 +1435,9 @@ c	net/minecraft/unmapped/C_0894181	net/minecraft/server/ServerProperties
 	m	()V	<clinit>	<clinit>
 c	net/minecraft/unmapped/C_0901730	net/minecraft/server/entity/EntityTrackerEntry
 	f	Lnet/minecraft/unmapped/C_6385858;	f_7181571	currentTrackedEntity
-	f	Z	f_3322088	f_3322088
-	f	Z	f_6048660	f_6048660
-	f	Z	f_5975743	f_5975743
+	f	Z	f_3322088	riding
+	f	Z	f_6048660	burning
+	f	Z	f_5975743	sneaking
 	f	I	f_2248933	trackedDistance
 	f	I	f_7565514	trackingFrequency
 	f	I	f_2016635	lastX
@@ -2609,12 +2609,12 @@ c	net/minecraft/unmapped/C_1805909	net/minecraft/client/gui/widget/OptionButtonW
 		p	4		option
 		p	5		message
 	m	()Lnet/minecraft/unmapped/C_7688744$C_0457152;	m_9639786	getOption
-c	net/minecraft/unmapped/C_1826831	net/minecraft/entity/mob/hostile/CreeperEntity
+c	net/minecraft/unmapped/C_1826831	net/minecraft/entity/mob/monster/CreeperEntity
 	f	I	f_1207512	fuse
 	f	I	f_9963903	lastFuse
-	f	I	f_3214430	f_3214430
-	f	I	f_8771002	f_8771002
-	f	I	f_4767261	f_4767261
+	f	I	f_3214430	fuseDuration
+	f	I	f_8771002	fuseCooldown
+	f	I	f_4767261	lastFuseCooldown
 	m	(Lnet/minecraft/unmapped/C_3906126;)V	<init>	<init>
 		p	1		p_1
 	m	(Lnet/minecraft/unmapped/C_2800860;)V	m_4059289	m_4059289
@@ -2688,7 +2688,7 @@ c	net/minecraft/unmapped/C_1896634	net/minecraft/server/ChunkMap
 		c	Chunks that need to sync block data with clients.
 	f	Lnet/minecraft/server/MinecraftServer;	f_1832964	server
 	m	(Lnet/minecraft/server/MinecraftServer;)V	<init>	<init>
-		p	1		p_1
+		p	1		server
 	m	()V	m_8018690	tick
 	m	(IIZ)Lnet/minecraft/unmapped/C_1896634$C_9146344;	m_1907600	getChunk
 		p	1		chunkX
@@ -2709,7 +2709,7 @@ c	net/minecraft/unmapped/C_1896634	net/minecraft/server/ChunkMap
 		p	4		playerChunkZ
 	m	(Lnet/minecraft/unmapped/C_0324512;)V	m_6792077	movePlayer
 		p	1		player
-	m	()I	m_5193381	getChunkViewDistance
+	m	()I	m_5193381	getViewDistance
 	m	(Lnet/minecraft/unmapped/C_1896634;)Lnet/minecraft/server/MinecraftServer;	m_5490981	m_5490981
 		p	0		p_0
 	m	(Lnet/minecraft/unmapped/C_1896634;)Lnet/minecraft/unmapped/C_1264342;	m_0591334	m_0591334
@@ -3867,7 +3867,7 @@ c	net/minecraft/unmapped/C_2899769	net/minecraft/item/WallHangableItem
 		p	5		p_5
 		p	6		p_6
 		p	7		p_7
-c	net/minecraft/unmapped/C_2923961	net/minecraft/entity/mob/hostile/SpiderEntity
+c	net/minecraft/unmapped/C_2923961	net/minecraft/entity/mob/monster/SpiderEntity
 	m	(Lnet/minecraft/unmapped/C_3906126;)V	<init>	<init>
 		p	1		world
 	m	()D	m_7560901	m_7560901
@@ -3903,7 +3903,7 @@ c	net/minecraft/unmapped/C_2941751	net/minecraft/isom/IsomRenderChunk
 		p	1		world
 		p	2		chunkX
 		p	3		chunkZ
-c	net/minecraft/unmapped/C_2984832	net/minecraft/entity/mob/hostile/GhastEntity
+c	net/minecraft/unmapped/C_2984832	net/minecraft/entity/mob/monster/GhastEntity
 	f	I	f_6172306	collisionCheckCooldown
 	f	D	f_3368863	floatTargetX
 	f	D	f_1530599	floatTargetY
@@ -4208,7 +4208,7 @@ c	net/minecraft/unmapped/C_3271339	net/minecraft/client/SurvivalInteractionManag
 	m	(Lnet/minecraft/unmapped/C_3906126;)V	m_1565789	m_1565789
 		p	1		p_1
 	m	()V	m_8517616	m_8517616
-c	net/minecraft/unmapped/C_3324249	net/minecraft/entity/mob/hostile/GiantEntity
+c	net/minecraft/unmapped/C_3324249	net/minecraft/entity/mob/monster/GiantEntity
 	m	(Lnet/minecraft/unmapped/C_3906126;)V	<init>	<init>
 		p	1		p_1
 	m	(III)F	m_4465324	m_4465324
@@ -4270,7 +4270,7 @@ c	net/minecraft/unmapped/C_3414480	net/minecraft/block/MineralBlock
 		p	2		sprite
 	m	(I)I	m_9597800	m_9597800
 		p	1		p_1
-c	net/minecraft/unmapped/C_3419581	net/minecraft/entity/mob/PathAwareMobEntity
+c	net/minecraft/unmapped/C_3419581	net/minecraft/entity/mob/PathFinderMobEntity
 	f	Lnet/minecraft/unmapped/C_7641996;	f_1141703	path
 	f	Lnet/minecraft/unmapped/C_6385858;	f_8101227	walkTarget
 	f	Z	f_3611045	stoppedMoving
@@ -5575,7 +5575,7 @@ c	net/minecraft/unmapped/C_3906126	net/minecraft/world/World
 	f	Lnet/minecraft/unmapped/C_2800860;	f_0762360	playerData
 	f	J	f_8535327	sizeOnDisk
 	f	Ljava/lang/String;	f_9320105	saveName
-	f	Z	f_5996800	isSearchingSpawnPoint
+	f	Z	f_5996800	searchingSpawnPoint
 	f	Ljava/util/ArrayList;	f_1719259	collisions
 	f	I	f_7370886	doLightUpdatesDepth
 	f	I	f_0889426	updateLightDepth
@@ -7211,7 +7211,7 @@ c	net/minecraft/unmapped/C_4712589	net/minecraft/client/render/FrustumData
 		p	7		maxX
 		p	9		maxY
 		p	11		maxZ
-c	net/minecraft/unmapped/C_4718187	net/minecraft/entity/mob/hostile/HostileMobEntity
+c	net/minecraft/unmapped/C_4718187	net/minecraft/entity/mob/monster/MonsterEntity
 	f	I	f_2338118	attackDamage
 	m	(Lnet/minecraft/unmapped/C_3906126;)V	<init>	<init>
 		p	1		p_1
@@ -7267,12 +7267,12 @@ c	net/minecraft/unmapped/C_4766485	net/minecraft/client/render/TextRenderer
 		p	1		text
 c	net/minecraft/unmapped/C_4784123	net/minecraft/client/gui/screen/TexturePacksScreen
 	f	Lnet/minecraft/unmapped/C_0786431;	f_3227650	parent
-	f	I	f_6937333	f_6937333
-	f	I	f_6660084	maxY
-	f	I	f_4427564	minY
+	f	I	f_6937333	lastY
+	f	I	f_6660084	minY
+	f	I	f_4427564	maxY
 	f	I	f_1385039	minX
 	f	I	f_4064823	maxX
-	f	I	f_2912781	f_2912781
+	f	I	f_2912781	draggingY
 	f	I	f_2670663	cooldown
 	f	Ljava/lang/String;	f_5553006	texturePacksDir
 	m	(Lnet/minecraft/unmapped/C_0786431;)V	<init>	<init>
@@ -7397,7 +7397,7 @@ c	net/minecraft/unmapped/C_4824661	net/minecraft/client/render/GameRenderer
 	m	(F)V	m_5635244	setupClearColor
 		p	1		tickDelta
 	m	(I)V	m_1114865	setupFog
-		p	1		p_1
+		p	1		type
 	m	(FFFF)Ljava/nio/FloatBuffer;	m_3807657	getBuffer
 		p	1		f1
 		p	2		f2
@@ -7653,7 +7653,7 @@ c	net/minecraft/unmapped/C_4946369	net/minecraft/network/packet/PlayerInteractEn
 	m	(Lnet/minecraft/unmapped/C_4443804;)V	m_0240895	m_0240895
 		p	1		p_1
 	m	()I	m_0079091	m_0079091
-c	net/minecraft/unmapped/C_4948697	net/minecraft/entity/mob/hostile/ZombiePigmanEntity
+c	net/minecraft/unmapped/C_4948697	net/minecraft/entity/mob/monster/ZombiePigmanEntity
 	f	I	f_0802335	angerValue
 	f	I	f_5697420	angerSoundDelay
 	f	Lnet/minecraft/unmapped/C_2750078;	f_6918503	GOLDEN_SWORD
@@ -8089,7 +8089,7 @@ c	net/minecraft/unmapped/C_5367636	net/minecraft/client/entity/mob/player/InputC
 	m	(I)V	m_4561784	damageTo
 		p	1		health
 	m	()V	m_7664484	m_7664484
-c	net/minecraft/unmapped/C_5371184	net/minecraft/entity/mob/hostile/SlimeEntity
+c	net/minecraft/unmapped/C_5371184	net/minecraft/entity/mob/monster/SlimeEntity
 	f	F	f_0694011	stretch
 	f	F	f_8888018	lastStretch
 	f	I	f_1856136	jumpTimer
@@ -8743,8 +8743,8 @@ c	net/minecraft/unmapped/C_6259709	net/minecraft/item/DoorItem
 		p	6		p_6
 		p	7		p_7
 c	net/minecraft/unmapped/C_6265960	net/minecraft/server/dedicated/gui/LogHandler
-	f	[I	f_0212792	f_0212792
-	f	I	f_3434154	f_3434154
+	f	[I	f_0212792	logDeltas
+	f	I	f_3434154	logDeltaIndex
 	f	Ljava/util/logging/Formatter;	f_8731839	formatter
 	f	Ljavax/swing/JTextArea;	f_3446787	textArea
 	m	(Ljavax/swing/JTextArea;)V	<init>	<init>
@@ -11210,7 +11210,7 @@ c	net/minecraft/unmapped/C_8321936	net/minecraft/network/packet/RideEntityPacket
 		p	1		p_1
 	m	(Lnet/minecraft/unmapped/C_4443804;)V	m_0240895	m_0240895
 		p	1		p_1
-c	net/minecraft/unmapped/C_8345828	net/minecraft/entity/mob/hostile/ZombieEntity
+c	net/minecraft/unmapped/C_8345828	net/minecraft/entity/mob/monster/ZombieEntity
 	m	(Lnet/minecraft/unmapped/C_3906126;)V	<init>	<init>
 		p	1		world
 	m	()V	m_5818797	m_5818797
@@ -11320,7 +11320,7 @@ c	net/minecraft/unmapped/C_8479751	net/minecraft/server/world/ServerWorldEventLi
 c	net/minecraft/unmapped/C_8546801	net/minecraft/server/entity/EntityTracker
 	f	Ljava/util/Set;	f_6289612	entries
 	f	Lnet/minecraft/unmapped/C_3837238;	f_4296190	entriesById
-	f	Lnet/minecraft/server/MinecraftServer;	f_4208397	world
+	f	Lnet/minecraft/server/MinecraftServer;	f_4208397	server
 	f	I	f_5753668	viewDistance
 	m	(Lnet/minecraft/server/MinecraftServer;)V	<init>	<init>
 		p	1		server
@@ -11849,7 +11849,7 @@ c	net/minecraft/unmapped/C_8947510	net/minecraft/client/render/model/entity/Spid
 		p	5		p_5
 		p	6		p_6
 c	net/minecraft/unmapped/C_8958653	net/minecraft/entity/mob/animal/PigEntity
-	f	Z	f_2467488	f_2467488
+	f	Z	f_2467488	saddled
 	m	(Lnet/minecraft/unmapped/C_3906126;)V	<init>	<init>
 		p	1		world
 	m	(Lnet/minecraft/unmapped/C_2800860;)V	m_4059289	m_4059289
@@ -12124,7 +12124,7 @@ c	net/minecraft/unmapped/C_9219192	net/minecraft/world/dimension/Dimension
 	m	()Z	m_5489382	hasWorldSpawn
 	m	(I)Lnet/minecraft/unmapped/C_9219192;	m_7802527	fromId
 		p	0		id
-c	net/minecraft/unmapped/C_9244736	net/minecraft/entity/mob/hostile/Monster
+c	net/minecraft/unmapped/C_9244736	net/minecraft/entity/mob/monster/Monster
 c	net/minecraft/unmapped/C_9302567	net/minecraft/client/render/entity/EntityRenderer
 	f	Lnet/minecraft/unmapped/C_9610577;	f_1797121	dispatcher
 	f	Lnet/minecraft/unmapped/C_3239917;	f_1722736	model
