@@ -277,7 +277,7 @@ c	net/minecraft/unmapped/C_1236108$4011742		4011742
 	f	[I	f_4924548		f_4924548
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_1309851
-	f	Z	f_3515355	holdingItems	
+	f	Z	f_3515355	usingItem	
 	m	(ILnet/minecraft/unmapped/C_2750078;)V	m_0129682	m_0129682	
 		p	1		p_1	
 		p	2		p_2	
@@ -1258,7 +1258,7 @@ c	net/minecraft/unmapped/C_5009044
 		p	2		maxUseTime	
 	m	()Lnet/minecraft/unmapped/C_2750078;	m_5966708	getItemInUse	
 	m	()I	m_5886782	getItemUseTimer	
-	m	()Z	m_8892536	isUsingItem	
+	m	()Z	m_8892536	hasItemInUse	
 	m	()I	m_8932431	getRemainingItemUseDuration	
 	m	(Lnet/minecraft/unmapped/C_6385858;)Z	m_4777054	interact	
 		p	1		target	
@@ -1448,9 +1448,9 @@ c	net/minecraft/unmapped/C_6385858
 	f	I	f_9764342		SILENT
 	f	Ljava/util/List;	f_7703824		EMPTY_LIST
 	f	Z	f_5273971		isGlowing
-	m	()Z	m_8657369	isSwimming	
-	m	(Z)V	m_2716190	setSwimming	
-		p	1		swimming	
+	m	()Z	m_8657369	isUsingItem	
+	m	(Z)V	m_2716190	setUsingItem	
+		p	1		usingItem	
 	m	(ILnet/minecraft/unmapped/C_2750078;)V	m_0129682	setEquipment	
 		p	1		slot	
 		p	2		item	
