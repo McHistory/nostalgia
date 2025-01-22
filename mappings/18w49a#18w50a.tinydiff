@@ -92,18 +92,18 @@ c	net/minecraft/unmapped/C_0619399
 	m	(Lnet/minecraft/unmapped/C_4286596;Lnet/minecraft/unmapped/C_4390289;)V	<init>	<init>	
 		p	1		playerInventory	
 		p	2		inventory	
-	m	(I)I	m_6573067	m_6573067	
-		p	1		p_1	
-	m	(I)I	m_7051754	m_7051754	
-		p	1		p_1	
+	m	(I)I	m_6573067	getArrowWidth	
+		p	1		scale	
+	m	(I)I	m_7051754	getFireHeight	
+		p	1		scale	
 	m	(Lnet/minecraft/unmapped/C_5294331;Lnet/minecraft/unmapped/C_7095320;Lnet/minecraft/unmapped/C_4286596;Lnet/minecraft/unmapped/C_4390289;)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
 	m	()Lnet/minecraft/unmapped/C_0561170;	m_6016723		m_6016723
-	m	()I	m_6573067		m_6573067
-	m	()I	m_7051754		m_7051754
+	m	()I	m_6573067		getArrowWidth
+	m	()I	m_7051754		getFireHeight
 c	net/minecraft/unmapped/C_1090332
 	m	(FFFFFFLnet/minecraft/unmapped/C_6385858;)V	m_5805395	m_5805395	
 		p	1		p_1	
@@ -1702,8 +1702,8 @@ c	net/minecraft/unmapped/C_6342641
 	f	Lnet/minecraft/unmapped/C_6342641$C_3783363;	f_8806479	nextPageButton	
 	f	Lnet/minecraft/unmapped/C_6342641$C_3783363;	f_3389571	previousPageButton	
 	f	Lnet/minecraft/unmapped/C_0561170;	f_9014194	BACKGROUND_LOCATION	
-	f	Ljava/util/List;	f_7407351	f_7407351	
-	f	I	f_1191170	f_1191170	
+	f	Ljava/util/List;	f_7407351	lines	
+	f	I	f_1191170	loadedPage	
 	f	Ljava/util/List;	f_4376533		f_4376533
 	f	Lnet/minecraft/unmapped/C_3783363;	f_8806479		nextPageButton
 	f	Lnet/minecraft/unmapped/C_3783363;	f_3389571		previousPageButton
@@ -1711,7 +1711,7 @@ c	net/minecraft/unmapped/C_6342641
 	m	()V	<clinit>	<clinit>	
 	m	(Lnet/minecraft/unmapped/C_9550253;)Z	m_9528629	m_9528629	
 		p	1		p_1	
-	m	(DD)Lnet/minecraft/unmapped/C_9550253;	m_7260923	m_7260923	
+	m	(DD)Lnet/minecraft/unmapped/C_9550253;	m_7260923	getClickedText	
 		p	1		p_1	
 		p	3		p_3	
 	m	(Lnet/minecraft/unmapped/C_6342641;)Lnet/minecraft/client/Minecraft;	m_6115477	m_6115477	
@@ -3126,7 +3126,7 @@ c	net/minecraft/unmapped/C_0080511
 c	net/minecraft/unmapped/C_5215591
 	m	()Lnet/minecraft/unmapped/C_8499333;	m_0681908	m_0681908	
 	m	()Lnet/minecraft/unmapped/C_3239917;	m_5044430	m_5044430	
-c	net/minecraft/unmapped/C_5215591$C_0649834	C_0649834	
+c	net/minecraft/unmapped/C_5215591$C_0649834	HeadLayer	
 	f	Lnet/minecraft/unmapped/C_5215591;	f_9362010	f_9362010	
 	m	(Lnet/minecraft/unmapped/C_5215591;)V	<init>	<init>	
 		p	1		p_1	
@@ -5580,7 +5580,7 @@ c	net/minecraft/unmapped/C_0267184$C_4100843		C_4100843
 	m	()Lnet/minecraft/unmapped/C_0561170;	m_9683583		m_9683583
 	m	()Lcom/google/gson/JsonObject;	m_3561945		m_3561945
 	m	()Lnet/minecraft/unmapped/C_0561170;	m_6423619		m_6423619
-c	net/minecraft/unmapped/C_0649834		net/minecraft/unmapped/C_0649834
+c	net/minecraft/unmapped/C_0649834		net/minecraft/unmapped/HeadLayer
 	m	(Lnet/minecraft/unmapped/C_3292875;)V	<init>		<init>
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_0131593;FFFFFFF)V	m_8463479		m_8463479

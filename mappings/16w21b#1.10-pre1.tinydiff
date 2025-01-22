@@ -61,17 +61,17 @@ c	net/minecraft/unmapped/C_4718187
 	m	(Lnet/minecraft/unmapped/C_9571530;)V	m_5638696		m_5638696
 		p	0			p_0
 c	net/minecraft/unmapped/C_4939758
-	m	(Ljava/lang/String;Ljava/lang/String;)Z	m_8608150	m_8608150	
+	m	(Ljava/lang/String;Ljava/lang/String;)Z	m_8608150	checkServerResourcePackUri	
 		p	1		p_1	
 		p	2		p_2	
-	m	(Ljava/lang/String;)Lcom/google/common/util/concurrent/FutureCallback;	m_7069882	m_7069882	
+	m	(Ljava/lang/String;)Lcom/google/common/util/concurrent/FutureCallback;	m_7069882	createServerResourcePackDownloadCallback	
 		p	1		p_1	
 	m	(Lnet/minecraft/unmapped/C_4939758;Ljava/lang/String;)Lcom/google/common/util/concurrent/FutureCallback;	m_9635601	m_9635601	
 		p	0		p_0	
 		p	1		p_1	
-	m	(Ljava/lang/String;)Z	m_8608150		m_8608150
-		p	1			p_1
-	m	()Lcom/google/common/util/concurrent/FutureCallback;	m_7069882		m_7069882
+	m	(Ljava/lang/String;)Z	m_8608150		checkServerResourcePackUri
+		p	1			uri
+	m	()Lcom/google/common/util/concurrent/FutureCallback;	m_7069882		createServerResourcePackDownloadCallback
 	m	(Lnet/minecraft/unmapped/C_4939758;)Lcom/google/common/util/concurrent/FutureCallback;	m_9635601		m_9635601
 		p	0			p_0
 c	net/minecraft/unmapped/C_4939758$2992278
@@ -114,7 +114,7 @@ c	net/minecraft/unmapped/C_7641996
 		p	1		pos	
 c	net/minecraft/unmapped/C_7688744
 	f	Lcom/google/common/base/Splitter;	f_1184515		COLON_SPLITTER
-	m	(Lnet/minecraft/unmapped/C_2800860;)Lnet/minecraft/unmapped/C_2800860;	m_8810210		m_8810210
+	m	(Lnet/minecraft/unmapped/C_2800860;)Lnet/minecraft/unmapped/C_2800860;	m_8810210		runDataFix
 		p	1			nbt
 c	net/minecraft/unmapped/C_8345828
 	m	(Lnet/minecraft/unmapped/C_9571530;)V	m_5907234		registerSchema
@@ -123,9 +123,9 @@ c	net/minecraft/unmapped/C_8958653
 	m	(Lnet/minecraft/unmapped/C_9571530;)V	m_7912815		registerSchema
 		p	0			dfu
 c	net/minecraft/unmapped/C_9746149
-	m	(Lnet/minecraft/unmapped/C_9571530;Ljava/lang/String;)V	m_6128041		m_6128041
-		p	0			p_0
-		p	1			p_1
+	m	(Lnet/minecraft/unmapped/C_9571530;Ljava/lang/String;)V	m_6128041		registerSchema
+		p	0			dfu
+		p	1			subtype
 c	net/minecraft/unmapped/C_6214100
 	f	[C	f_2011850		INVALID_STRUCTURE_FILE_CHARS
 c	net/minecraft/unmapped/C_0356559

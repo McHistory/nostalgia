@@ -678,7 +678,7 @@ c	net/minecraft/unmapped/C_4824661$2845183	2845183
 	m	(Lnet/minecraft/unmapped/C_6385858;)Z	m_6470449	m_6470449	
 		p	1		p_1	
 	m	(Ljava/lang/Object;)Z	apply	apply	
-		p	1		p_1	
+		p	1		entity	
 c	net/minecraft/unmapped/C_4937211
 	m	()V	<init>	<init>	
 	m	(Lnet/minecraft/unmapped/C_4030632$C_7918174;)V	<init>		<init>
@@ -686,7 +686,7 @@ c	net/minecraft/unmapped/C_4937211
 c	net/minecraft/unmapped/C_5009044
 c	net/minecraft/unmapped/C_5009044$C_6202284
 	m	(Ljava/lang/Object;)Z	apply	apply	
-		p	1		p_1	
+		p	1		mob	
 	m	(Ljava/lang/Object;)Z	test		test
 		p	1			p_1
 c	net/minecraft/unmapped/C_5027796
@@ -1016,11 +1016,11 @@ c	net/minecraft/unmapped/C_6385858
 	f	Ljava/lang/String;	f_1063743		f_1063743
 	m	(Lnet/minecraft/unmapped/C_3906126;)V	<init>	<init>	
 		p	1		world	
-	m	(Ljava/lang/Class;)Ljava/util/Collection;	m_6446107	m_6446107	
-		p	1		p_1	
-	m	(Ljava/lang/Class;Ljava/util/Set;)V	m_5849592	m_5849592	
-		p	1		p_1	
-		p	2		p_2	
+	m	(Ljava/lang/Class;)Ljava/util/Collection;	m_6446107	getAllUniquePassengersOfType	
+		p	1		entityClass	
+	m	(Ljava/lang/Class;Ljava/util/Set;)V	m_5849592	getAllUniquePassengersOfType	
+		p	1		entityClass	
+		p	2		passengers	
 	m	(Lnet/minecraft/unmapped/C_0336319;)V	m_0301283	lookAt	
 		p	1		p_1	
 	m	(Lnet/minecraft/unmapped/C_5102005;Lnet/minecraft/unmapped/C_3906126;)V	<init>		<init>
@@ -1029,7 +1029,7 @@ c	net/minecraft/unmapped/C_6385858
 	m	()Lnet/minecraft/unmapped/C_5102005;	m_0341989		getType
 	m	()Ljava/lang/String;	m_2504105		m_2504105
 	m	()Z	m_0788049		hasPlayerRider
-	m	(ZLjava/util/Set;)V	m_5849592		m_5849592
+	m	(ZLjava/util/Set;)V	m_5849592		getAllUniquePassengersOfType
 		p	1			p_1
 		p	2			p_2
 	m	(Lnet/minecraft/unmapped/C_6680357$C_4414943;Lnet/minecraft/unmapped/C_0336319;)V	m_0301283		lookAt
@@ -1977,8 +1977,8 @@ c	net/minecraft/unmapped/C_8878495
 		p	6		range	
 	m	(Lnet/minecraft/unmapped/C_6385858;)Lcom/google/common/base/Predicate;	m_7080423	canBePushedBy	
 		p	0		entity	
-	m	(Lnet/minecraft/unmapped/C_6385858;)Lcom/google/common/base/Predicate;	m_0205943	m_0205943	
-		p	0		p_0	
+	m	(Lnet/minecraft/unmapped/C_6385858;)Lcom/google/common/base/Predicate;	m_0205943	isNotMounting	
+		p	0		target	
 	m	(DDDD)Ljava/util/function/Predicate;	m_3732445		withinRange
 		p	0			p_0
 		p	2			p_2
@@ -1986,7 +1986,7 @@ c	net/minecraft/unmapped/C_8878495
 		p	6			p_6
 	m	(Lnet/minecraft/unmapped/C_6385858;)Ljava/util/function/Predicate;	m_7080423		canBePushedBy
 		p	0			p_0
-	m	(Lnet/minecraft/unmapped/C_6385858;)Ljava/util/function/Predicate;	m_0205943		m_0205943
+	m	(Lnet/minecraft/unmapped/C_6385858;)Ljava/util/function/Predicate;	m_0205943		isNotMounting
 		p	0			p_0
 	m	(DDDDLnet/minecraft/unmapped/C_6385858;)Z	m_2178894		m_2178894
 		p	0			p_0
@@ -2007,16 +2007,16 @@ c	net/minecraft/unmapped/C_8878495$6477643	6477643
 	m	(Lnet/minecraft/unmapped/C_6385858;)Z	m_4217993	m_4217993	
 		p	1		p_1	
 	m	(Ljava/lang/Object;)Z	apply	apply	
-		p	1		p_1	
+		p	1		entity	
 c	net/minecraft/unmapped/C_8878495$5788449	5788449	
 	m	()V	<init>	<init>	
 	m	(Lnet/minecraft/unmapped/C_6385858;)Z	m_2186428	m_2186428	
 		p	1		p_1	
 	m	(Ljava/lang/Object;)Z	apply	apply	
-		p	1		p_1	
+		p	1		entity	
 c	net/minecraft/unmapped/C_8878495$C_3773824
 	m	(Ljava/lang/Object;)Z	apply	apply	
-		p	1		p_1	
+		p	1		entity	
 	m	(Ljava/lang/Object;)Z	test		test
 		p	1			p_1
 c	net/minecraft/unmapped/C_8878495$2221540	2221540	
@@ -2024,13 +2024,13 @@ c	net/minecraft/unmapped/C_8878495$2221540	2221540
 	m	(Lnet/minecraft/unmapped/C_6385858;)Z	m_0664982	m_0664982	
 		p	1		p_1	
 	m	(Ljava/lang/Object;)Z	apply	apply	
-		p	1		p_1	
+		p	1		entity	
 c	net/minecraft/unmapped/C_8878495$6603775	6603775	
 	m	()V	<init>	<init>	
 	m	(Lnet/minecraft/unmapped/C_6385858;)Z	m_2268552	m_2268552	
 		p	1		p_1	
 	m	(Ljava/lang/Object;)Z	apply	apply	
-		p	1		p_1	
+		p	1		entity	
 c	net/minecraft/unmapped/C_8878495$7180011	7180011	
 	f	D	f_1478649	f_1478649	
 	f	D	f_9122035	f_9122035	
@@ -2044,10 +2044,10 @@ c	net/minecraft/unmapped/C_8878495$7180011	7180011
 	m	(Lnet/minecraft/unmapped/C_6385858;)Z	m_1971666	m_1971666	
 		p	1		p_1	
 	m	(Ljava/lang/Object;)Z	apply	apply	
-		p	1		p_1	
+		p	1		entity	
 c	net/minecraft/unmapped/C_8878495$4685640
 	m	(Ljava/lang/Object;)Z	apply	apply	
-		p	1		p_1	
+		p	1		entity	
 	m	(Ljava/lang/Object;)Z	test		test
 		p	1			p_1
 c	net/minecraft/unmapped/C_8878495$5778442	5778442	
@@ -2055,10 +2055,10 @@ c	net/minecraft/unmapped/C_8878495$5778442	5778442
 	m	(Lnet/minecraft/unmapped/C_6385858;)Z	m_2715079	m_2715079	
 		p	1		p_1	
 	m	(Ljava/lang/Object;)Z	apply	apply	
-		p	1		p_1	
+		p	1		entity	
 c	net/minecraft/unmapped/C_8878495$9018156
 	m	(Ljava/lang/Object;)Z	apply	apply	
-		p	1		p_1	
+		p	1		entity	
 	m	(Ljava/lang/Object;)Z	test		test
 		p	1			p_1
 c	net/minecraft/unmapped/C_9539741
@@ -2672,7 +2672,7 @@ c	net/minecraft/unmapped/C_6781194$6755062	6755062
 	m	(Lnet/minecraft/unmapped/C_6390485;)Z	m_9605796	m_9605796	
 		p	1		p_1	
 	m	(Ljava/lang/Object;)Z	apply	apply	
-		p	1		p_1	
+		p	1		id	
 c	net/minecraft/unmapped/C_7772848
 	m	(Lcom/google/common/base/Predicate;)Lcom/google/common/base/Predicate;	m_1872816	hasState	
 		p	0		predicate	
@@ -2836,7 +2836,7 @@ c	net/minecraft/unmapped/C_3438842$0354976	0354976
 	m	(Lnet/minecraft/unmapped/C_6385858;)Z	m_8861017	m_8861017	
 		p	1		p_1	
 	m	(Ljava/lang/Object;)Z	apply	apply	
-		p	1		p_1	
+		p	1		entity	
 c	net/minecraft/unmapped/C_0083539
 	m	(Ljava/lang/Class;)Lnet/minecraft/unmapped/C_2587956$C_0150343;	m_5360691	getEnvironment	
 		p	0		type	
@@ -3118,20 +3118,20 @@ c	net/minecraft/unmapped/C_8889465
 		p	0			stateDefinition
 c	net/minecraft/unmapped/C_2007379
 	m	(Ljava/lang/Class;[Ljava/lang/String;)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
+		p	1		objClass	
+		p	2		inventoryIds	
 	m	(Ljava/lang/String;[Ljava/lang/String;)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
 c	net/minecraft/unmapped/C_4254222
 	m	(Ljava/lang/Class;)V	<init>	<init>	
-		p	1		p_1	
+		p	1		objClass	
 	m	(Ljava/lang/String;)V	<init>		<init>
 		p	1			p_1
 c	net/minecraft/unmapped/C_5032371
 	m	(Ljava/lang/Class;[Ljava/lang/String;)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
+		p	1		objClass	
+		p	2		slotInventoryId	
 	m	(Ljava/lang/String;[Ljava/lang/String;)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2

@@ -1,8 +1,8 @@
 tiny	2	0
 c	net/minecraft/unmapped/C_0309511
-	f	Z	f_8677579		f_8677579
-	f	Lnet/minecraft/unmapped/C_0786431;	f_0932189		f_0932189
-	m	()Z	m_2393741		m_2393741
+	f	Z	f_8677579		realmsNotificationScreenCreated
+	f	Lnet/minecraft/unmapped/C_0786431;	f_0932189		realmsNotifScreen
+	m	()Z	m_2393741		areRealmsNotificationsEnabled
 	m	()V	m_5056964		m_5056964
 c	net/minecraft/unmapped/C_0336319
 	f	Lnet/minecraft/unmapped/C_0336319;	f_9693057		ZERO
@@ -33,7 +33,7 @@ c	net/minecraft/unmapped/C_9958683
 		p	1			p_1
 c	net/minecraft/unmapped/C_2105000
 	f	[Lnet/minecraft/unmapped/C_0561170;	f_9334565	f_9334565	
-	f	Ljava/util/Map;	f_1306867		f_1306867
+	f	Ljava/util/Map;	f_1306867		TEXTURE_TYPES
 	m	(Lnet/minecraft/unmapped/C_2105000;)[Lnet/minecraft/unmapped/C_0561170;	m_6018713	m_6018713	
 		p	0		p_0	
 c	net/minecraft/unmapped/C_0052982
@@ -85,15 +85,15 @@ c	net/minecraft/unmapped/C_2587956
 c	net/minecraft/unmapped/C_6006943
 	m	()V	m_2164418		m_2164418
 c	net/minecraft/unmapped/C_1572627
-	m	(Lnet/minecraft/unmapped/C_2831109;Lnet/minecraft/unmapped/C_3544601;Lnet/minecraft/unmapped/C_2334768;Lnet/minecraft/unmapped/C_3374628;)Lnet/minecraft/unmapped/C_2831109;	m_9500761	m_9500761	
+	m	(Lnet/minecraft/unmapped/C_2831109;Lnet/minecraft/unmapped/C_3544601;Lnet/minecraft/unmapped/C_2334768;Lnet/minecraft/unmapped/C_3374628;)Lnet/minecraft/unmapped/C_2831109;	m_9500761	applyFixup	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
 		p	4		p_4	
-	m	(Lnet/minecraft/unmapped/C_2831109;Lnet/minecraft/unmapped/C_3544601;Lnet/minecraft/unmapped/C_2334768;)Lnet/minecraft/unmapped/C_2831109;	m_9500761		m_9500761
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+	m	(Lnet/minecraft/unmapped/C_2831109;Lnet/minecraft/unmapped/C_3544601;Lnet/minecraft/unmapped/C_2334768;)Lnet/minecraft/unmapped/C_2831109;	m_9500761		applyFixup
+		p	1			texCoords
+		p	2			face
+		p	3			rotation
 c	net/minecraft/unmapped/C_8009477
 	m	(IIII)Lnet/minecraft/unmapped/C_7694617;	m_4161093	getValidNode	
 		p	1		p_1	
@@ -107,11 +107,11 @@ c	net/minecraft/unmapped/C_8009477
 		p	4			offset
 		p	5			step
 c	net/minecraft/realms/Realms
-	m	()Z	m_3120156		m_3120156
-	m	()Z	m_7548139		m_7548139
+	m	()Z	m_3120156		areRealmsNotificationsEnabled
+	m	()Z	m_7548139		isOnTitleScreen
 c	net/minecraft/realms/RealmsBridge
-	m	(Lnet/minecraft/unmapped/C_0786431;)Lnet/minecraft/unmapped/C_6894203;	m_7961429		m_7961429
-		p	1			p_1
+	m	(Lnet/minecraft/unmapped/C_0786431;)Lnet/minecraft/unmapped/C_6894203;	m_7961429		createNotificationScreen
+		p	1			parent
 c	net/minecraft/unmapped/C_0131593
 	m	()Z	m_5622844		m_5622844
 	m	()Lnet/minecraft/unmapped/C_7721249;	m_7781112		m_7781112
