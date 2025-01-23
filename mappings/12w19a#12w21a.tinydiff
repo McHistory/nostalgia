@@ -204,7 +204,7 @@ c	net/minecraft/unmapped/C_0526782
 		p	3			player
 c	net/minecraft/unmapped/C_0786431
 	m	()Z	m_6957805	isPauseScreen	
-c	net/minecraft/unmapped/C_0894181
+c	net/minecraft/unmapped/C_0894181	net/minecraft/server/ServerProperties	net/minecraft/server/dedicated/ServerProperties
 	m	(Ljava/lang/String;Z)V	m_5338880	setBoolean	
 		p	1		key	
 		p	2		value	
@@ -327,13 +327,13 @@ c	net/minecraft/unmapped/C_6664676
 	m	()Lnet/minecraft/unmapped/C_2074023;	m_0502820	createBlockEntity	
 	m	(Lnet/minecraft/unmapped/C_3906126;)Lnet/minecraft/unmapped/C_2074023;	m_0502820		createBlockEntity
 		p	1			world
-c	net/minecraft/unmapped/C_7102748
+c	net/minecraft/unmapped/C_7102748	net/minecraft/server/gui/MinecraftServerGui	net/minecraft/server/dedicated/gui/DedicatedServerGui
 	f	Lnet/minecraft/server/MinecraftServer;	f_5726894	server	
 	f	Lnet/minecraft/unmapped/C_7293551;	f_5726894		server
 	m	(Lnet/minecraft/server/MinecraftServer;)V	m_3637472	create	
-		p	0		p_0	
+		p	0		server	
 	m	(Lnet/minecraft/server/MinecraftServer;)V	<init>	<init>	
-		p	1		p_1	
+		p	1		server	
 	m	(Lnet/minecraft/unmapped/C_7102748;)Lnet/minecraft/server/MinecraftServer;	m_0433948	getServerFrom	
 		p	0		p_0	
 	m	(Lnet/minecraft/unmapped/C_7293551;)V	m_3637472		create
@@ -1067,13 +1067,13 @@ c	net/minecraft/unmapped/C_8135886
 		p	7			p_7
 c	net/minecraft/unmapped/C_3690542
 	m	()Z	m_6957805	m_6957805	
-c	net/minecraft/unmapped/C_1350281
+c	net/minecraft/unmapped/C_1350281	net/minecraft/server/command/BanCommand	net/minecraft/server/dedicated/command/BanCommand
 	m	(Lnet/minecraft/unmapped/C_2182707;)Z	m_2772006		m_2772006
 		p	1			p_1
-c	net/minecraft/unmapped/C_2650841
+c	net/minecraft/unmapped/C_2650841	net/minecraft/server/command/BanListCommand	net/minecraft/server/dedicated/command/BanListCommand
 	m	(Lnet/minecraft/unmapped/C_2182707;)Z	m_2772006		m_2772006
 		p	1			p_1
-c	net/minecraft/unmapped/C_3100329
+c	net/minecraft/unmapped/C_3100329	net/minecraft/server/command/PardonCommand	net/minecraft/server/dedicated/command/PardonCommand
 	m	(Lnet/minecraft/unmapped/C_2182707;)Z	m_2772006		m_2772006
 		p	1			p_1
 c	net/minecraft/unmapped/C_3507951
@@ -1085,10 +1085,10 @@ c	net/minecraft/unmapped/C_3507951
 		p	1			p_1
 	m	(Ljava/lang/Object;)I	compareTo		compareTo
 		p	1			p_1
-c	net/minecraft/unmapped/C_5480695
+c	net/minecraft/unmapped/C_5480695	net/minecraft/server/command/BanIpCommand	net/minecraft/server/dedicated/command/BanIpCommand
 	m	(Lnet/minecraft/unmapped/C_2182707;Ljava/lang/String;)V	m_0220471	banIp	
-		p	1		p_1	
-		p	2		p_2	
+		p	1		source	
+		p	2		ip	
 	m	(Lnet/minecraft/unmapped/C_2182707;)Z	m_2772006		m_2772006
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_2182707;Ljava/lang/String;Ljava/lang/String;)V	m_0220471		banIp
@@ -1097,7 +1097,7 @@ c	net/minecraft/unmapped/C_5480695
 		p	3			reason
 c	net/minecraft/unmapped/C_7023269
 	m	()Ljava/util/Map;	m_6487036		m_6487036
-c	net/minecraft/unmapped/C_8568401
+c	net/minecraft/unmapped/C_8568401	net/minecraft/server/command/PardonIpCommand	net/minecraft/server/dedicated/command/PardonIpCommand
 	m	(Lnet/minecraft/unmapped/C_2182707;)Z	m_2772006		m_2772006
 		p	1			p_1
 c	net/minecraft/unmapped/C_0731984
@@ -1974,3 +1974,17 @@ c	net/minecraft/unmapped/C_2354122	net/minecraft/network/Connection	net/minecraf
 	m	()V	m_6022756	close	m_6022756
 	m	()I	m_4311815	getDelayedSendQueueSize	m_4311815
 	m	()V	m_2881878	interrupt	m_2881878
+c	net/minecraft/unmapped/C_0535659	net/minecraft/server/PendingCommand	net/minecraft/server/dedicated/PendingCommand
+c	net/minecraft/unmapped/C_4978736	net/minecraft/server/gui/PlayerListGui	net/minecraft/server/dedicated/gui/PlayerListGui
+c	net/minecraft/unmapped/C_6265960	net/minecraft/server/gui/LogHandler	net/minecraft/server/dedicated/gui/LogHandler
+c	net/minecraft/unmapped/C_7006834	net/minecraft/server/gui/PlayerStatsGui	net/minecraft/server/dedicated/gui/PlayerStatsGui
+c	net/minecraft/unmapped/C_3440247	net/minecraft/server/MinecraftServerAccess	net/minecraft/server/dedicated/DedicatedServerAccess
+c	net/minecraft/unmapped/C_0675137	net/minecraft/server/command/KickCommand	net/minecraft/server/dedicated/command/KickCommand
+c	net/minecraft/unmapped/C_2334486	net/minecraft/server/command/WhitelistCommand	net/minecraft/server/dedicated/command/WhitelistCommand
+c	net/minecraft/unmapped/C_4886599	net/minecraft/server/command/ListCommand	net/minecraft/server/dedicated/command/ListCommand
+c	net/minecraft/unmapped/C_5517422	net/minecraft/server/command/DeOpCommand	net/minecraft/server/dedicated/command/DeOpCommand
+c	net/minecraft/unmapped/C_5911040	net/minecraft/server/command/SaveOnCommand	net/minecraft/server/dedicated/command/SaveOnCommand
+c	net/minecraft/unmapped/C_5914016	net/minecraft/server/command/SaveAllCommand	net/minecraft/server/dedicated/command/SaveAllCommand
+c	net/minecraft/unmapped/C_6120932	net/minecraft/server/command/OpCommand	net/minecraft/server/dedicated/command/OpCommand
+c	net/minecraft/unmapped/C_7251457	net/minecraft/server/command/SaveOffCommand	net/minecraft/server/dedicated/command/SaveOffCommand
+c	net/minecraft/unmapped/C_7749772	net/minecraft/server/command/StopCommand	net/minecraft/server/dedicated/command/StopCommand

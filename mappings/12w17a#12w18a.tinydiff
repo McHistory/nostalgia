@@ -601,8 +601,8 @@ c	net/minecraft/unmapped/C_7029902
 	m	(I)Z	m_2639068		shouldConnectTo
 		p	0			blockId
 c	net/minecraft/unmapped/C_7102748
-	f	Z	f_9750609		created
-	m	()Z	m_5515794		m_5515794
+	f	Z	f_9750609		enabled
+	m	()Z	m_5515794		isEnabled
 c	net/minecraft/unmapped/C_7137679
 	f	Lnet/minecraft/unmapped/C_4030632$C_5478196;	f_5798561		tier
 	m	()Ljava/lang/String;	m_3450929		getAsString
@@ -1189,7 +1189,7 @@ c	net/minecraft/unmapped/C_7968919
 c	net/minecraft/unmapped/C_0441870	net/minecraft/client/command/ClientToggleDownfallCommand	
 	m	()V	<init>	<init>	
 	m	()V	m_3789929	m_3789929	
-c	net/minecraft/unmapped/C_1048916	net/minecraft/client/command/ExperienceCommand	
+c	net/minecraft/unmapped/C_1048916	net/minecraft/client/command/ClientExperienceCommand	
 	m	()V	<init>	<init>	
 	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_5009044;	m_9029332	m_9029332	
 		p	1		p_1	
@@ -1222,7 +1222,7 @@ c	net/minecraft/unmapped/C_5054159	net/minecraft/client/command/ClientTimeComman
 	m	(Lnet/minecraft/unmapped/C_2182707;I)V	m_0774113	m_0774113	
 		p	1		p_1	
 		p	2		p_2	
-c	net/minecraft/unmapped/C_5639264	net/minecraft/server/command/ExperienceCommand	
+c	net/minecraft/unmapped/C_5639264	net/minecraft/server/command/ServerExperienceCommand	
 	m	()V	<init>	<init>	
 	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_5009044;	m_9029332	m_9029332	
 		p	1		p_1	
@@ -1543,19 +1543,17 @@ c	net/minecraft/unmapped/C_8825356		net/minecraft/client/options/ServerList
 c	net/minecraft/unmapped/C_9008510		net/minecraft/client/resource/pack/TexturePackDownloadCallback
 	m	(Ljava/io/File;)V	m_8158730		onTexturePackDownloaded
 		p	1			f
-c	net/minecraft/unmapped/C_9827503		net/minecraft/unmapped/C_9827503
-	f	Lnet/minecraft/unmapped/C_3635204;	f_5109827		f_5109827
+c	net/minecraft/unmapped/C_9827503		net/minecraft/item/StoneBrickBlockItem
+	f	Lnet/minecraft/unmapped/C_3635204;	f_5109827		block
 	m	(ILnet/minecraft/unmapped/C_3635204;)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
+		p	1			id
+		p	2			block
 	m	(I)I	m_1532371		m_1532371
 		p	1			p_1
 	m	(I)I	m_4638052		m_4638052
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_2750078;)Ljava/lang/String;	m_9222746		m_9222746
 		p	1			p_1
-c	net/minecraft/unmapped/C_0535659	net/minecraft/server/PendingCommand	net/minecraft/server/dedicated/PendingCommand
-c	net/minecraft/unmapped/C_0894181	net/minecraft/server/ServerProperties	net/minecraft/server/dedicated/ServerProperties
 c	net/minecraft/unmapped/C_1388208
 	m	(Ljava/lang/String;)V	m_4544869	m_4544869	sendChat
 		p	1		p_1	message
@@ -1564,40 +1562,25 @@ c	net/minecraft/unmapped/C_5009044
 	m	()Ljava/lang/String;	m_7291241	getSourceName	m_7291241
 c	net/minecraft/unmapped/C_6605607	net/minecraft/world/ScheduledTick	net/minecraft/server/world/ScheduledTick
 c	net/minecraft/unmapped/C_8361473	net/minecraft/world/PortalForcer	net/minecraft/server/world/PortalForcer
-c	net/minecraft/unmapped/C_6015078	net/minecraft/command/handler/CommandHandler	net/minecraft/server/command/handler/CommandHandler
-c	net/minecraft/unmapped/C_3440247	net/minecraft/server/MinecraftServerAccess	net/minecraft/server/dedicated/DedicatedServerAccess
-c	net/minecraft/unmapped/C_0423750	net/minecraft/command/exception/CommandException	net/minecraft/server/command/exception/CommandException
-c	net/minecraft/unmapped/C_0675137	net/minecraft/server/command/KickCommand	net/minecraft/server/dedicated/command/KickCommand
-c	net/minecraft/unmapped/C_0823212	net/minecraft/command/exception/CommandNotFoundException	net/minecraft/server/command/exception/CommandNotFoundException
 c	net/minecraft/unmapped/C_1237929	net/minecraft/command/Command	net/minecraft/server/command/Command
-c	net/minecraft/unmapped/C_1350281	net/minecraft/server/command/BanCommand	net/minecraft/server/dedicated/command/BanCommand
 c	net/minecraft/unmapped/C_1700891	net/minecraft/command/ToggleDownfallCommand	net/minecraft/server/command/ToggleDownfallCommand
-c	net/minecraft/unmapped/C_1858949	net/minecraft/command/exception/InvalidNumberException	net/minecraft/server/command/exception/InvalidNumberException
 c	net/minecraft/unmapped/C_2327948	net/minecraft/command/MeCommand	net/minecraft/server/command/MeCommand
-c	net/minecraft/unmapped/C_2334486	net/minecraft/server/command/WhitelistCommand	net/minecraft/server/dedicated/command/WhitelistCommand
-c	net/minecraft/unmapped/C_2650841	net/minecraft/server/command/BanListCommand	net/minecraft/server/dedicated/command/BanListCommand
-c	net/minecraft/unmapped/C_3100329	net/minecraft/server/command/PardonCommand	net/minecraft/server/dedicated/command/PardonCommand
-c	net/minecraft/unmapped/C_3503433	net/minecraft/command/exception/CommandSyntaxException	net/minecraft/server/command/exception/CommandSyntaxException
 c	net/minecraft/unmapped/C_3507951	net/minecraft/command/AbstractCommand	net/minecraft/server/command/AbstractCommand
 c	net/minecraft/unmapped/C_4066358	net/minecraft/command/SayCommand	net/minecraft/server/command/SayCommand
-c	net/minecraft/unmapped/C_4886599	net/minecraft/server/command/ListCommand	net/minecraft/server/dedicated/command/ListCommand
-c	net/minecraft/unmapped/C_5270961	net/minecraft/command/handler/CommandListener	net/minecraft/server/command/handler/CommandListener
-c	net/minecraft/unmapped/C_5365098	net/minecraft/command/AbstractExperienceCommand	net/minecraft/server/command/ExperienceCommand
-c	net/minecraft/unmapped/C_5480695	net/minecraft/server/command/BanIpCommand	net/minecraft/server/dedicated/command/BanIpCommand
-c	net/minecraft/unmapped/C_5517422	net/minecraft/server/command/DeOpCommand	net/minecraft/server/dedicated/command/DeOpCommand
-c	net/minecraft/unmapped/C_5521225	net/minecraft/command/handler/CommandManager	net/minecraft/server/command/handler/CommandManager
-c	net/minecraft/unmapped/C_5911040	net/minecraft/server/command/SaveOnCommand	net/minecraft/server/dedicated/command/SaveOnCommand
-c	net/minecraft/unmapped/C_5914016	net/minecraft/server/command/SaveAllCommand	net/minecraft/server/dedicated/command/SaveAllCommand
-c	net/minecraft/unmapped/C_6120932	net/minecraft/server/command/OpCommand	net/minecraft/server/dedicated/command/OpCommand
-c	net/minecraft/unmapped/C_7023269	net/minecraft/command/handler/CommandRegistry	net/minecraft/server/command/handler/CommandRegistry
-c	net/minecraft/unmapped/C_7251457	net/minecraft/server/command/SaveOffCommand	net/minecraft/server/dedicated/command/SaveOffCommand
-c	net/minecraft/unmapped/C_7749772	net/minecraft/server/command/StopCommand	net/minecraft/server/dedicated/command/StopCommand
+c	net/minecraft/unmapped/C_5365098	net/minecraft/command/ExperienceCommand	net/minecraft/server/command/ExperienceCommand
 c	net/minecraft/unmapped/C_8055952	net/minecraft/command/TimeCommand	net/minecraft/server/command/TimeCommand
 c	net/minecraft/unmapped/C_8509539	net/minecraft/command/TpCommand	net/minecraft/server/command/TpCommand
-c	net/minecraft/unmapped/C_8568401	net/minecraft/server/command/PardonIpCommand	net/minecraft/server/dedicated/command/PardonIpCommand
 c	net/minecraft/unmapped/C_9007058	net/minecraft/command/GiveCommand	net/minecraft/server/command/GiveCommand
 c	net/minecraft/unmapped/C_9580631	net/minecraft/command/GameModeCommand	net/minecraft/server/command/GameModeCommand
-c	net/minecraft/unmapped/C_9664956	net/minecraft/command/exception/PlayerNotFoundException	net/minecraft/server/command/exception/PlayerNotFoundException
 c	net/minecraft/unmapped/C_9694875	net/minecraft/command/KillCommand	net/minecraft/server/command/KillCommand
-c	net/minecraft/unmapped/C_3771898	net/minecraft/command/exception/IncorrectUsageException	net/minecraft/server/command/exception/IncorrectUsageException
 c	net/minecraft/unmapped/C_7192742	net/minecraft/command/HelpCommand	net/minecraft/server/command/HelpCommand
+c	net/minecraft/unmapped/C_6015078	net/minecraft/command/handler/CommandHandler	net/minecraft/server/command/handler/CommandHandler
+c	net/minecraft/unmapped/C_0423750	net/minecraft/command/exception/CommandException	net/minecraft/server/command/exception/CommandException
+c	net/minecraft/unmapped/C_0823212	net/minecraft/command/exception/CommandNotFoundException	net/minecraft/server/command/exception/CommandNotFoundException
+c	net/minecraft/unmapped/C_1858949	net/minecraft/command/exception/InvalidNumberException	net/minecraft/server/command/exception/InvalidNumberException
+c	net/minecraft/unmapped/C_3503433	net/minecraft/command/exception/CommandSyntaxException	net/minecraft/server/command/exception/CommandSyntaxException
+c	net/minecraft/unmapped/C_5270961	net/minecraft/command/handler/CommandListener	net/minecraft/server/command/handler/CommandListener
+c	net/minecraft/unmapped/C_5521225	net/minecraft/command/handler/CommandManager	net/minecraft/server/command/handler/CommandManager
+c	net/minecraft/unmapped/C_7023269	net/minecraft/command/handler/CommandRegistry	net/minecraft/server/command/handler/CommandRegistry
+c	net/minecraft/unmapped/C_9664956	net/minecraft/command/exception/PlayerNotFoundException	net/minecraft/server/command/exception/PlayerNotFoundException
+c	net/minecraft/unmapped/C_3771898	net/minecraft/command/exception/IncorrectUsageException	net/minecraft/server/command/exception/IncorrectUsageException
