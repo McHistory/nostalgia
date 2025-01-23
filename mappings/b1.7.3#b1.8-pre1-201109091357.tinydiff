@@ -233,7 +233,7 @@ c	net/minecraft/unmapped/C_1013763
 		c		The amount of experience points (XP) this mob drops on death.
 	f	Lnet/minecraft/unmapped/C_5009044;	f_2326521		attackingPlayer
 	f	I	f_0734403		playerHitTimer
-	f	I	f_5992476		f_5992476
+	f	I	f_5992476		stuckArrows
 	f	I	f_9400864		arrowDespawnTimer
 	f	Ljava/util/HashMap;	f_9284913		statusEffects
 	m	(Lnet/minecraft/unmapped/C_6385858;I)Z	m_3238154	m_3238154	
@@ -812,7 +812,7 @@ c	net/minecraft/unmapped/C_3655018
 c	net/minecraft/unmapped/C_3682532
 	m	()I	m_6060683		getBlock
 c	net/minecraft/unmapped/C_3688914
-	f	Z	f_1598950		f_1598950
+	f	Z	f_1598950		extraDamage
 	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_1013763;)V	<init>	<init>	
 		p	1		world	
 		p	2		shooter	
@@ -1259,7 +1259,7 @@ c	net/minecraft/unmapped/C_5009044
 	m	()V	m_7299718		finishUsingItem
 	m	(B)V	m_9129586		m_9129586
 		p	1			p_1
-	m	()I	m_7499523		m_7499523
+	m	()I	m_7499523		getSwingArmSpeed
 	m	(Lnet/minecraft/unmapped/C_6907923;)V	m_4650833		m_4650833
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_6907923;I)Z	m_3238154		m_3238154
@@ -1273,7 +1273,7 @@ c	net/minecraft/unmapped/C_5009044
 	m	(I)V	m_9036043		increaseXp
 		p	1			levels
 	m	()I	m_6737151		getNextLevelExperience
-	m	()V	m_5984676		m_5984676
+	m	()V	m_5984676		incrementXpLevel
 	m	(F)V	m_8899453		addFatigue
 		p	1			amount
 	m	()Lnet/minecraft/unmapped/C_7324071;	m_3979111		getHungerManager
@@ -2297,7 +2297,7 @@ c	net/minecraft/unmapped/C_0895386$C_0488791		Corridor
 	m	(ILjava/util/Random;Lnet/minecraft/unmapped/C_0624720;I)V	<init>		<init>
 		p	1			generationDepth
 		p	2			random
-		p	3			box
+		p	3			bounds
 		p	4			facing
 	m	(Ljava/util/List;Ljava/util/Random;IIII)Lnet/minecraft/unmapped/C_0624720;	m_4322740		findSize
 		p	0			pieces
@@ -2333,7 +2333,7 @@ c	net/minecraft/unmapped/C_0895386$C_2830321		Stairs
 	m	(ILjava/util/Random;Lnet/minecraft/unmapped/C_0624720;I)V	<init>		<init>
 		p	1			generationDepth
 		p	2			random
-		p	3			box
+		p	3			bounds
 		p	4			facing
 	m	(Ljava/util/List;Ljava/util/Random;IIII)Lnet/minecraft/unmapped/C_0624720;	m_8361059		findSize
 		p	0			pieces
@@ -2356,7 +2356,7 @@ c	net/minecraft/unmapped/C_0895386$C_6062572		Crossing
 	m	(ILjava/util/Random;Lnet/minecraft/unmapped/C_0624720;I)V	<init>		<init>
 		p	1			generationDepth
 		p	2			random
-		p	3			box
+		p	3			bounds
 		p	4			direction
 	m	(Ljava/util/List;Ljava/util/Random;IIII)Lnet/minecraft/unmapped/C_0624720;	m_0516925		findSize
 		p	0			pieces
@@ -2502,8 +2502,8 @@ c	net/minecraft/unmapped/C_1778550		net/minecraft/network/packet/PlayerInfoPacke
 c	net/minecraft/unmapped/C_1862778		net/minecraft/world/biome/layer/BiomeInitLayer
 	f	[Lnet/minecraft/unmapped/C_4636105;	f_5331693		biomes
 	m	(JLnet/minecraft/unmapped/C_6297854;)V	<init>		<init>
-		p	1			p_1
-		p	3			p_3
+		p	1			seed
+		p	3			parent
 	m	(IIII)[I	m_3947820		m_3947820
 		p	1			p_1
 		p	2			p_2
@@ -2517,11 +2517,11 @@ c	net/minecraft/unmapped/C_1880366		net/minecraft/unmapped/C_1880366
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
-c	net/minecraft/unmapped/C_1975274		net/minecraft/item/GrassBlockItem
+c	net/minecraft/unmapped/C_1975274		net/minecraft/item/PlantBlockItem
 	f	Lnet/minecraft/unmapped/C_3635204;	f_2537123		block
 	m	(IZ)V	<init>		<init>
 		p	1			id
-		p	2			p_2
+		p	2			stackable
 	m	(I)I	m_6327257		m_6327257
 		p	1			p_1
 	m	(I)I	m_1532371		m_1532371
@@ -2883,7 +2883,7 @@ c	net/minecraft/unmapped/C_4615590$C_2993950		FiveWayCrossing
 	m	(ILjava/util/Random;Lnet/minecraft/unmapped/C_0624720;I)V	<init>		<init>
 		p	1			generationDepth
 		p	2			random
-		p	3			box
+		p	3			bounds
 		p	4			facing
 	m	(Lnet/minecraft/unmapped/C_9282614;Ljava/util/List;Ljava/util/Random;)V	m_8574751		m_8574751
 		p	1			p_1
@@ -2906,7 +2906,7 @@ c	net/minecraft/unmapped/C_4615590$C_3020447		PlainCorridor
 	m	(ILjava/util/Random;Lnet/minecraft/unmapped/C_0624720;I)V	<init>		<init>
 		p	1			generationDepth
 		p	2			random
-		p	3			box
+		p	3			bounds
 		p	4			facing
 	m	(Lnet/minecraft/unmapped/C_9282614;Ljava/util/List;Ljava/util/Random;)V	m_8574751		m_8574751
 		p	1			p_1
@@ -2942,7 +2942,7 @@ c	net/minecraft/unmapped/C_4615590$C_4547240		Library
 	m	(ILjava/util/Random;Lnet/minecraft/unmapped/C_0624720;I)V	<init>		<init>
 		p	1			generationDepth
 		p	2			random
-		p	3			box
+		p	3			bounds
 		p	4			facing
 	m	(Lnet/minecraft/unmapped/C_9282614;Ljava/util/List;Ljava/util/Random;)V	m_8574751		m_8574751
 		p	1			p_1
@@ -2966,7 +2966,7 @@ c	net/minecraft/unmapped/C_4615590$C_4566664		LeftTurn
 	m	(ILjava/util/Random;Lnet/minecraft/unmapped/C_0624720;I)V	<init>		<init>
 		p	1			generationDepth
 		p	2			random
-		p	3			box
+		p	3			bounds
 		p	4			facing
 	m	(Lnet/minecraft/unmapped/C_9282614;Ljava/util/List;Ljava/util/Random;)V	m_8574751		m_8574751
 		p	1			p_1
@@ -3017,7 +3017,7 @@ c	net/minecraft/unmapped/C_4615590$C_6333132		SpiralStaircase
 	m	(ILjava/util/Random;Lnet/minecraft/unmapped/C_0624720;I)V	<init>		<init>
 		p	1			generationDepth
 		p	2			random
-		p	3			box
+		p	3			bounds
 		p	4			facing
 	m	(Lnet/minecraft/unmapped/C_9282614;Ljava/util/List;Ljava/util/Random;)V	m_8574751		m_8574751
 		p	1			p_1
@@ -3091,7 +3091,7 @@ c	net/minecraft/unmapped/C_4615590$C_8346348		RoomCrossing
 	m	(ILjava/util/Random;Lnet/minecraft/unmapped/C_0624720;I)V	<init>		<init>
 		p	1			generationDepth
 		p	2			random
-		p	3			box
+		p	3			bounds
 		p	4			facing
 	m	(Lnet/minecraft/unmapped/C_9282614;Ljava/util/List;Ljava/util/Random;)V	m_8574751		m_8574751
 		p	1			p_1
@@ -3117,7 +3117,7 @@ c	net/minecraft/unmapped/C_4615590$C_8576143		StraightCorridor
 	m	(ILjava/util/Random;Lnet/minecraft/unmapped/C_0624720;I)V	<init>		<init>
 		p	1			generationDepth
 		p	2			random
-		p	3			box
+		p	3			bounds
 		p	4			facing
 	m	(Lnet/minecraft/unmapped/C_9282614;Ljava/util/List;Ljava/util/Random;)V	m_8574751		m_8574751
 		p	1			p_1
@@ -3140,7 +3140,7 @@ c	net/minecraft/unmapped/C_4615590$C_8663010		Prison
 	m	(ILjava/util/Random;Lnet/minecraft/unmapped/C_0624720;I)V	<init>		<init>
 		p	1			generationDepth
 		p	2			random
-		p	3			box
+		p	3			bounds
 		p	4			facing
 	m	(Lnet/minecraft/unmapped/C_9282614;Ljava/util/List;Ljava/util/Random;)V	m_8574751		m_8574751
 		p	1			p_1
@@ -3163,7 +3163,7 @@ c	net/minecraft/unmapped/C_4615590$C_9104609		StraightStairs
 	m	(ILjava/util/Random;Lnet/minecraft/unmapped/C_0624720;I)V	<init>		<init>
 		p	1			generationDepth
 		p	2			random
-		p	3			box
+		p	3			bounds
 		p	4			facing
 	m	(Lnet/minecraft/unmapped/C_9282614;Ljava/util/List;Ljava/util/Random;)V	m_8574751		m_8574751
 		p	1			p_1
@@ -3410,7 +3410,7 @@ c	net/minecraft/unmapped/C_5908980		net/minecraft/block/VineBlock
 		p	5			p_5
 		p	6			p_6
 c	net/minecraft/unmapped/C_5926405		net/minecraft/client/entity/particle/CriticalHitParticle
-	f	Z	f_3470836		f_3470836
+	f	Z	f_3470836		visible
 	f	F	f_4765143		baseScale
 	m	(Lnet/minecraft/unmapped/C_3906126;DDDDDD)V	<init>		<init>
 		p	1			p_1

@@ -7678,7 +7678,7 @@ c	net/minecraft/unmapped/C_4948697	net/minecraft/entity/mob/monster/ZombiePigman
 	m	()I	m_4601038	m_4601038
 	m	()Lnet/minecraft/unmapped/C_2750078;	m_2674028	m_2674028
 	m	()V	<clinit>	<clinit>
-c	net/minecraft/unmapped/C_4978736	net/minecraft/server/dedicated/gui/PlayerListGui
+c	net/minecraft/unmapped/C_4978736	net/minecraft/server/gui/PlayerListGui
 	f	Lnet/minecraft/server/MinecraftServer;	f_3618267	server
 	f	I	f_5586020	tick
 	m	(Lnet/minecraft/server/MinecraftServer;)V	<init>	<init>
@@ -8742,7 +8742,7 @@ c	net/minecraft/unmapped/C_6259709	net/minecraft/item/DoorItem
 		p	5		p_5
 		p	6		p_6
 		p	7		p_7
-c	net/minecraft/unmapped/C_6265960	net/minecraft/server/dedicated/gui/LogHandler
+c	net/minecraft/unmapped/C_6265960	net/minecraft/server/gui/LogHandler
 	f	[I	f_0212792	logDeltas
 	f	I	f_3434154	logDeltaIndex
 	f	Ljava/util/logging/Formatter;	f_8731839	formatter
@@ -8753,7 +8753,7 @@ c	net/minecraft/unmapped/C_6265960	net/minecraft/server/dedicated/gui/LogHandler
 	m	()V	flush	flush
 	m	(Ljava/util/logging/LogRecord;)V	publish	publish
 		p	1		p_1
-c	net/minecraft/unmapped/C_6265960$2093089	net/minecraft/server/dedicated/gui/LogHandler$2093089
+c	net/minecraft/unmapped/C_6265960$2093089	net/minecraft/server/gui/LogHandler$2093089
 	f	Lnet/minecraft/unmapped/C_6265960;	f_4863861	f_4863861
 	m	(Lnet/minecraft/unmapped/C_6265960;)V	<init>	<init>
 		p	1		p_1
@@ -9645,7 +9645,7 @@ c	net/minecraft/unmapped/C_6923352	net/minecraft/client/gui/screen/inventory/men
 		p	3		p_3
 	m	(F)V	m_3483387	m_3483387
 		p	1		p_1
-c	net/minecraft/unmapped/C_7006834	net/minecraft/server/dedicated/gui/PlayerStatsGui
+c	net/minecraft/unmapped/C_7006834	net/minecraft/server/gui/PlayerStatsGui
 	f	[I	f_6547067	memoryUsePercentage
 	f	I	f_9477583	memoryUsage
 	f	[Ljava/lang/String;	f_2116086	lines
@@ -9655,7 +9655,7 @@ c	net/minecraft/unmapped/C_7006834	net/minecraft/server/dedicated/gui/PlayerStat
 		p	1		graphics
 	m	(Lnet/minecraft/unmapped/C_7006834;)V	m_2060476	update
 		p	0		statGui
-c	net/minecraft/unmapped/C_7006834$4816709	net/minecraft/server/dedicated/gui/PlayerStatsGui$4816709
+c	net/minecraft/unmapped/C_7006834$4816709	net/minecraft/server/gui/PlayerStatsGui$4816709
 	f	Lnet/minecraft/unmapped/C_7006834;	f_9705535	playerStatsGui
 	m	(Lnet/minecraft/unmapped/C_7006834;)V	<init>	<init>
 		p	1		p_1
@@ -9707,13 +9707,13 @@ c	net/minecraft/unmapped/C_7100787	net/minecraft/block/material/LiquidMaterial
 	m	()Z	m_8331644	m_8331644
 	m	()Z	m_1307908	m_1307908
 	m	()Z	m_8305594	m_8305594
-c	net/minecraft/unmapped/C_7102748	net/minecraft/server/dedicated/gui/DedicatedServerGui
+c	net/minecraft/unmapped/C_7102748	net/minecraft/server/gui/MinecraftServerGui
 	f	Ljava/util/logging/Logger;	f_9711239	LOGGER
 	f	Lnet/minecraft/server/MinecraftServer;	f_5726894	server
 	m	(Lnet/minecraft/server/MinecraftServer;)V	m_3637472	create
-		p	0		p_0
+		p	0		server
 	m	(Lnet/minecraft/server/MinecraftServer;)V	<init>	<init>
-		p	1		p_1
+		p	1		server
 	m	()Ljavax/swing/JComponent;	m_4372504	createStatsPanel
 	m	()Ljavax/swing/JComponent;	m_3856582	createPlaysPanel
 	m	()Ljavax/swing/JComponent;	m_0114788	createLogPanel
@@ -9723,7 +9723,7 @@ c	net/minecraft/unmapped/C_7102748	net/minecraft/server/dedicated/gui/DedicatedS
 	m	(Lnet/minecraft/unmapped/C_7102748;)Lnet/minecraft/server/MinecraftServer;	m_0433948	getServerFrom
 		p	0		p_0
 	m	()V	<clinit>	<clinit>
-c	net/minecraft/unmapped/C_7102748$3093966	net/minecraft/server/dedicated/gui/DedicatedServerGui$3093966
+c	net/minecraft/unmapped/C_7102748$3093966	net/minecraft/server/gui/MinecraftServerGui$3093966
 	f	Ljavax/swing/JTextField;	f_8149827	f_8149827
 	f	Lnet/minecraft/unmapped/C_7102748;	f_4939829	f_4939829
 	m	(Lnet/minecraft/unmapped/C_7102748;Ljavax/swing/JTextField;)V	<init>	<init>
@@ -9731,13 +9731,13 @@ c	net/minecraft/unmapped/C_7102748$3093966	net/minecraft/server/dedicated/gui/De
 		p	2		p_2
 	m	(Ljava/awt/event/ActionEvent;)V	actionPerformed	actionPerformed
 		p	1		p_1
-c	net/minecraft/unmapped/C_7102748$3568167	net/minecraft/server/dedicated/gui/DedicatedServerGui$3568167
+c	net/minecraft/unmapped/C_7102748$3568167	net/minecraft/server/gui/MinecraftServerGui$3568167
 	f	Lnet/minecraft/server/MinecraftServer;	f_3148831	f_3148831
 	m	(Lnet/minecraft/server/MinecraftServer;)V	<init>	<init>
 		p	1		p_1
 	m	(Ljava/awt/event/WindowEvent;)V	windowClosing	windowClosing
 		p	1		p_1
-c	net/minecraft/unmapped/C_7102748$6190168	net/minecraft/server/dedicated/gui/DedicatedServerGui$6190168
+c	net/minecraft/unmapped/C_7102748$6190168	net/minecraft/server/gui/MinecraftServerGui$6190168
 	f	Lnet/minecraft/unmapped/C_7102748;	f_4809850	f_4809850
 	m	(Lnet/minecraft/unmapped/C_7102748;)V	<init>	<init>
 		p	1		p_1
@@ -10467,7 +10467,7 @@ c	net/minecraft/unmapped/C_7542541	net/minecraft/client/gui/screen/inventory/men
 		p	2		p_2
 		p	3		p_3
 	m	()V	m_5630231	renderLabels
-	m	(F)V	m_3483387	renderBackground
+	m	(F)V	m_3483387	renderMenuBackground
 		p	1		tickDelta
 	m	(Lnet/minecraft/unmapped/C_7192378;)V	m_6888955	renderSlot
 		p	1		slot

@@ -632,7 +632,7 @@ c	net/minecraft/unmapped/C_1013763
 		c		The amount of experience points (XP) this mob drops on death.
 	f	Lnet/minecraft/unmapped/C_5009044;	f_2326521		attackingPlayer
 	f	I	f_0734403		playerHitTimer
-	f	I	f_5992476		f_5992476
+	f	I	f_5992476		stuckArrows
 	f	I	f_9400864		arrowDespawnTimer
 	f	Ljava/util/HashMap;	f_9284913		statusEffects
 	m	(Lnet/minecraft/unmapped/C_6385858;I)Z	m_3238154	m_3238154	
@@ -1408,7 +1408,7 @@ c	net/minecraft/unmapped/C_3655018
 c	net/minecraft/unmapped/C_3682532
 	m	()I	m_6060683		getBlock
 c	net/minecraft/unmapped/C_3688914
-	f	Z	f_1598950		f_1598950
+	f	Z	f_1598950		extraDamage
 	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_1013763;)V	<init>	<init>	
 		p	1		world	
 		p	2		shooter	
@@ -1884,7 +1884,7 @@ c	net/minecraft/unmapped/C_4948697
 	m	(Lnet/minecraft/unmapped/C_6907923;I)Z	m_3238154		m_3238154
 		p	1			p_1
 		p	2			p_2
-c	net/minecraft/unmapped/C_4978736	net/minecraft/server/dedicated/gui/PlayerListGui	
+c	net/minecraft/unmapped/C_4978736	net/minecraft/server/gui/PlayerListGui	
 	f	Lnet/minecraft/server/MinecraftServer;	f_3618267	server	
 	f	I	f_5586020	tick	
 	m	(Lnet/minecraft/server/MinecraftServer;)V	<init>	<init>	
@@ -1919,7 +1919,7 @@ c	net/minecraft/unmapped/C_5009044
 	m	()V	m_7299718		finishUsingItem
 	m	(B)V	m_9129586		m_9129586
 		p	1			p_1
-	m	()I	m_7499523		m_7499523
+	m	()I	m_7499523		getSwingArmSpeed
 	m	(Lnet/minecraft/unmapped/C_6907923;)V	m_4650833		m_4650833
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_6907923;I)Z	m_3238154		m_3238154
@@ -1933,7 +1933,7 @@ c	net/minecraft/unmapped/C_5009044
 	m	(I)V	m_9036043		increaseXp
 		p	1			levels
 	m	()I	m_6737151		getNextLevelExperience
-	m	()V	m_5984676		m_5984676
+	m	()V	m_5984676		incrementXpLevel
 	m	(F)V	m_8899453		addFatigue
 		p	1			amount
 	m	()Lnet/minecraft/unmapped/C_7324071;	m_3979111		getHungerManager
@@ -2083,7 +2083,7 @@ c	net/minecraft/unmapped/C_6259709
 		p	3			z
 		p	4			metadata
 		p	5			block
-c	net/minecraft/unmapped/C_6265960	net/minecraft/server/dedicated/gui/LogHandler	
+c	net/minecraft/unmapped/C_6265960	net/minecraft/server/gui/LogHandler	
 	f	[I	f_0212792	logDeltas	
 	f	I	f_3434154	logDeltaIndex	
 	f	Ljava/util/logging/Formatter;	f_8731839	formatter	
@@ -2221,7 +2221,7 @@ c	net/minecraft/unmapped/C_6794191
 	m	()Z	m_8715252		m_8715252
 c	net/minecraft/unmapped/C_6923352
 	m	()V	m_7135145		m_7135145
-c	net/minecraft/unmapped/C_7006834	net/minecraft/server/dedicated/gui/PlayerStatsGui	
+c	net/minecraft/unmapped/C_7006834	net/minecraft/server/gui/PlayerStatsGui	
 	f	[I	f_6547067	memoryUsePercentage	
 	f	I	f_9477583	memoryUsage	
 	f	[Ljava/lang/String;	f_2116086	lines	
@@ -2243,13 +2243,13 @@ c	net/minecraft/unmapped/C_7029902
 		p	2			x
 		p	3			y
 		p	4			z
-c	net/minecraft/unmapped/C_7102748	net/minecraft/server/dedicated/gui/DedicatedServerGui	
+c	net/minecraft/unmapped/C_7102748	net/minecraft/server/gui/MinecraftServerGui	
 	f	Ljava/util/logging/Logger;	f_9711239	LOGGER	
 	f	Lnet/minecraft/server/MinecraftServer;	f_5726894	server	
 	m	(Lnet/minecraft/server/MinecraftServer;)V	m_3637472	create	
-		p	0		p_0	
+		p	0		server	
 	m	(Lnet/minecraft/server/MinecraftServer;)V	<init>	<init>	
-		p	1		p_1	
+		p	1		server	
 	m	()Ljavax/swing/JComponent;	m_4372504	createStatsPanel	
 	m	()Ljavax/swing/JComponent;	m_3856582	createPlaysPanel	
 	m	()Ljavax/swing/JComponent;	m_0114788	createLogPanel	
@@ -3420,7 +3420,7 @@ c	net/minecraft/unmapped/C_0895386$C_0488791		Corridor
 	m	(ILjava/util/Random;Lnet/minecraft/unmapped/C_0624720;I)V	<init>		<init>
 		p	1			generationDepth
 		p	2			random
-		p	3			box
+		p	3			bounds
 		p	4			facing
 	m	(Ljava/util/List;Ljava/util/Random;IIII)Lnet/minecraft/unmapped/C_0624720;	m_4322740		findSize
 		p	0			pieces
@@ -3456,7 +3456,7 @@ c	net/minecraft/unmapped/C_0895386$C_2830321		Stairs
 	m	(ILjava/util/Random;Lnet/minecraft/unmapped/C_0624720;I)V	<init>		<init>
 		p	1			generationDepth
 		p	2			random
-		p	3			box
+		p	3			bounds
 		p	4			facing
 	m	(Ljava/util/List;Ljava/util/Random;IIII)Lnet/minecraft/unmapped/C_0624720;	m_8361059		findSize
 		p	0			pieces
@@ -3479,7 +3479,7 @@ c	net/minecraft/unmapped/C_0895386$C_6062572		Crossing
 	m	(ILjava/util/Random;Lnet/minecraft/unmapped/C_0624720;I)V	<init>		<init>
 		p	1			generationDepth
 		p	2			random
-		p	3			box
+		p	3			bounds
 		p	4			direction
 	m	(Ljava/util/List;Ljava/util/Random;IIII)Lnet/minecraft/unmapped/C_0624720;	m_0516925		findSize
 		p	0			pieces
@@ -3617,8 +3617,8 @@ c	net/minecraft/unmapped/C_1778550		net/minecraft/network/packet/PlayerInfoPacke
 c	net/minecraft/unmapped/C_1862778		net/minecraft/world/biome/layer/BiomeInitLayer
 	f	[Lnet/minecraft/unmapped/C_4636105;	f_5331693		biomes
 	m	(JLnet/minecraft/unmapped/C_6297854;)V	<init>		<init>
-		p	1			p_1
-		p	3			p_3
+		p	1			seed
+		p	3			parent
 	m	(IIII)[I	m_3947820		m_3947820
 		p	1			p_1
 		p	2			p_2
@@ -3632,11 +3632,11 @@ c	net/minecraft/unmapped/C_1880366		net/minecraft/unmapped/C_1880366
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
-c	net/minecraft/unmapped/C_1975274		net/minecraft/item/GrassBlockItem
+c	net/minecraft/unmapped/C_1975274		net/minecraft/item/PlantBlockItem
 	f	Lnet/minecraft/unmapped/C_3635204;	f_2537123		block
 	m	(IZ)V	<init>		<init>
 		p	1			id
-		p	2			p_2
+		p	2			stackable
 	m	(I)I	m_6327257		m_6327257
 		p	1			p_1
 	m	(I)I	m_1532371		m_1532371
@@ -3995,7 +3995,7 @@ c	net/minecraft/unmapped/C_4615590$C_3020447		PlainCorridor
 	m	(ILjava/util/Random;Lnet/minecraft/unmapped/C_0624720;I)V	<init>		<init>
 		p	1			generationDepth
 		p	2			random
-		p	3			box
+		p	3			bounds
 		p	4			facing
 	m	(Lnet/minecraft/unmapped/C_9282614;Ljava/util/List;Ljava/util/Random;)V	m_8574751		m_8574751
 		p	1			p_1
@@ -4399,7 +4399,7 @@ c	net/minecraft/unmapped/C_5908980		net/minecraft/block/VineBlock
 		p	5			p_5
 		p	6			p_6
 c	net/minecraft/unmapped/C_5926405		net/minecraft/client/entity/particle/CriticalHitParticle
-	f	Z	f_3470836		f_3470836
+	f	Z	f_3470836		visible
 	f	F	f_4765143		baseScale
 	m	(Lnet/minecraft/unmapped/C_3906126;DDDDDD)V	<init>		<init>
 		p	1			p_1
