@@ -489,13 +489,15 @@ c	net/minecraft/unmapped/C_9219192
 	m	(II)Z	m_8691549	isValidSpawnPoint	
 		p	1		x	
 		p	2		z	
-	m	(Lnet/minecraft/unmapped/C_9386942;Z)Lnet/minecraft/unmapped/C_6707278;	m_4420701		getSpawnPoint
-		p	1			chunk
-		p	2			hasValidSpawnBlock
-	m	(IIZ)Lnet/minecraft/unmapped/C_6707278;	m_3646945		getValidSpawnPoint
+	m	(Lnet/minecraft/unmapped/C_9386942;Z)Lnet/minecraft/unmapped/C_6707278;	m_4420701		findValidSpawnPoint
+		c		Find a valid dimension spawn point in the chunk at the given position.
+		p	1			chunkPos
+		p	2			checkSurfaceBlock
+	m	(IIZ)Lnet/minecraft/unmapped/C_6707278;	m_3646945		findValidSpawnPos
+		c		Find a valid player spawn position around the given position.
 		p	1			x
 		p	2			z
-		p	3			hasValidSpawnBlock
+		p	3			checkSurfaceBlock
 c	net/minecraft/unmapped/C_9377562
 	m	(Lnet/minecraft/unmapped/C_2441996;)Z	m_2904831	canSpawnInside	
 		p	0		state	
