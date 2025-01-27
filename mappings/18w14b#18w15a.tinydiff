@@ -527,7 +527,7 @@ c	net/minecraft/unmapped/C_6142023
 c	net/minecraft/unmapped/C_6531047
 	m	()Lnet/minecraft/unmapped/C_0289174;	m_5817253		m_5817253
 c	net/minecraft/unmapped/C_6907923
-	f	Lnet/minecraft/unmapped/C_6907923;	f_9406160		f_9406160
+	f	Lnet/minecraft/unmapped/C_6907923;	f_9406160		DRYOUT
 c	net/minecraft/unmapped/C_1756552
 	m	()Z	m_1733837	m_1733837	
 	m	()Z	m_0974034	m_0974034	
@@ -1062,26 +1062,26 @@ c	net/minecraft/unmapped/C_1077271		net/minecraft/block/BlueIceBlock
 	m	(Lnet/minecraft/unmapped/C_2441996;Ljava/util/Random;)I	m_6534436		m_6534436
 		p	1			p_1
 		p	2			p_2
-c	net/minecraft/unmapped/C_1177238		net/minecraft/unmapped/C_1177238
-	f	I	f_1318048		f_1318048
-	f	Lnet/minecraft/unmapped/C_3419581;	f_9598908		f_9598908
-	f	Lnet/minecraft/unmapped/C_1013763;	f_9131141		f_9131141
-	f	Lnet/minecraft/unmapped/C_3054861;	f_8983798		f_8983798
+c	net/minecraft/unmapped/C_1177238		net/minecraft/entity/ai/goal/FollowBoatGoal
+	f	I	f_1318048		updatePathCooldown
+	f	Lnet/minecraft/unmapped/C_3419581;	f_9598908		mob
+	f	Lnet/minecraft/unmapped/C_1013763;	f_9131141		following
+	f	Lnet/minecraft/unmapped/C_3054861;	f_8983798		goal
 	m	(Lnet/minecraft/unmapped/C_3419581;)V	<init>		<init>
-		p	1			p_1
+		p	1			mob
 	m	()Z	m_5896190		m_5896190
 	m	()Z	m_3298012		m_3298012
 	m	()Z	m_1332509		m_1332509
 	m	()V	m_5289183		m_5289183
 	m	()V	m_2223255		m_2223255
 	m	()V	m_4528414		m_4528414
-c	net/minecraft/unmapped/C_1353256		net/minecraft/unmapped/C_1353256
-	f	Lnet/minecraft/unmapped/C_3447311;	f_6892181		f_6892181
-	f	I	f_5117808		f_5117808
-	f	Z	f_5683021		f_5683021
+c	net/minecraft/unmapped/C_1353256		net/minecraft/entity/ai/goal/DolphinJumpGoal
+	f	Lnet/minecraft/unmapped/C_3447311;	f_6892181		dolphin
+	f	I	f_5117808		interval
+	f	Z	f_5683021		breached
 	m	(Lnet/minecraft/unmapped/C_3447311;I)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
+		p	1			dolphin
+		p	2			inverval
 	m	()Z	m_5896190		m_5896190
 	m	()Z	m_8519588		m_8519588
 	m	()Z	m_1332509		m_1332509
@@ -1089,10 +1089,10 @@ c	net/minecraft/unmapped/C_1353256		net/minecraft/unmapped/C_1353256
 	m	()V	m_5289183		m_5289183
 	m	()V	m_2223255		m_2223255
 	m	()V	m_4528414		m_4528414
-	m	(FFF)F	m_3381082		m_3381082
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+	m	(FFF)F	m_3381082		lerpAngle
+		p	1			angle
+		p	2			min
+		p	3			max
 c	net/minecraft/unmapped/C_1957882		net/minecraft/world/gen/feature/decorator/IcebergDecorator
 	m	()V	<init>		<init>
 	m	(Lnet/minecraft/unmapped/C_9844932;Lnet/minecraft/unmapped/C_0705111;Ljava/util/Random;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_4611162;Lnet/minecraft/unmapped/C_6618366;Lnet/minecraft/unmapped/C_1858262;)Z	m_5209578		m_5209578
@@ -1163,9 +1163,9 @@ c	net/minecraft/unmapped/C_2837173$C_5429132		C_5429132
 		p	5			p_5
 		p	6			p_6
 	m	()V	<clinit>		<clinit>
-c	net/minecraft/unmapped/C_3054861		net/minecraft/unmapped/C_3054861
-	f	Lnet/minecraft/unmapped/C_3054861;	f_3998625		f_3998625
-	f	Lnet/minecraft/unmapped/C_3054861;	f_6707709		f_6707709
+c	net/minecraft/unmapped/C_3054861		net/minecraft/entity/ai/goal/BoatGoal
+	f	Lnet/minecraft/unmapped/C_3054861;	f_3998625		GO_TO_BOAT
+	f	Lnet/minecraft/unmapped/C_3054861;	f_6707709		GO_IN_BOAT_DIRECTION
 	f	[Lnet/minecraft/unmapped/C_3054861;	f_5086667		f_5086667
 	m	()[Lnet/minecraft/unmapped/C_3054861;	values		values
 	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_3054861;	valueOf		valueOf
@@ -1306,7 +1306,7 @@ c	net/minecraft/unmapped/C_3381509		net/minecraft/entity/ai/goal/SwimAroundGoal
 		p	4			p_4
 	m	()Lnet/minecraft/unmapped/C_0336319;	m_2448672		m_2448672
 c	net/minecraft/unmapped/C_3447311		net/minecraft/entity/living/mob/water/DolphinEntity
-	f	Ljava/util/function/Predicate;	f_7242742		f_7242742
+	f	Ljava/util/function/Predicate;	f_7242742		ITEMS_CAN_PLAY_WITH
 	f	I	f_8229339		f_8229339
 	m	(Lnet/minecraft/unmapped/C_3906126;)V	<init>		<init>
 		p	1			world
@@ -1332,8 +1332,8 @@ c	net/minecraft/unmapped/C_3447311		net/minecraft/entity/living/mob/water/Dolphi
 	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_4360192;)Z	m_8048017		m_8048017
 		p	1			p_1
 		p	2			p_2
-	m	(Lnet/minecraft/unmapped/C_2750078;)Lnet/minecraft/unmapped/C_3050136;	m_2380325		m_2380325
-		p	1			p_1
+	m	(Lnet/minecraft/unmapped/C_2750078;)Lnet/minecraft/unmapped/C_3050136;	m_2380325		throwItem
+		p	1			item
 	m	()Z	m_7087374		m_7087374
 	m	(Lnet/minecraft/unmapped/C_9844932;)Z	m_3712793		m_3712793
 		p	1			p_1
@@ -1352,13 +1352,13 @@ c	net/minecraft/unmapped/C_3447311		net/minecraft/entity/living/mob/water/Dolphi
 		p	0			p_0
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_3447311$5974520		5974520
-c	net/minecraft/unmapped/C_3447311$C_2500321		C_2500321
-	f	Lnet/minecraft/unmapped/C_3447311;	f_3481351		f_3481351
+c	net/minecraft/unmapped/C_3447311$C_2500321		MovementControl
+	f	Lnet/minecraft/unmapped/C_3447311;	f_3481351		dolphin
 	m	(Lnet/minecraft/unmapped/C_3447311;)V	<init>		<init>
-		p	1			p_1
+		p	1			dolphin
 	m	()V	m_9420910		m_9420910
-c	net/minecraft/unmapped/C_3447311$C_5460334		C_5460334
-	f	I	f_3851839		f_3851839
+c	net/minecraft/unmapped/C_3447311$C_5460334		PlayWithItemsGoal
+	f	I	f_3851839		cooldown
 	f	Lnet/minecraft/unmapped/C_3447311;	f_5253814		f_5253814
 	m	(Lnet/minecraft/unmapped/C_3447311;)V	<init>		<init>
 		p	1			p_1
@@ -1369,7 +1369,7 @@ c	net/minecraft/unmapped/C_3447311$C_5460334		C_5460334
 	m	(Lnet/minecraft/unmapped/C_3447311;Lnet/minecraft/unmapped/C_3447311$5974520;)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
-c	net/minecraft/unmapped/C_3950106		net/minecraft/unmapped/C_3950106
+c	net/minecraft/unmapped/C_3950106		net/minecraft/entity/living/effect/StatusEffectUtils
 	m	(Lnet/minecraft/unmapped/C_1283912;F)Ljava/lang/String;	m_5962389		getDurationText
 		p	0			effect
 		p	1			multiplier
@@ -1449,20 +1449,20 @@ c	net/minecraft/unmapped/C_5675607		net/minecraft/client/render/model/entity/Dol
 		p	5			p_5
 		p	6			p_6
 		p	7			p_7
-c	net/minecraft/unmapped/C_5793971		net/minecraft/unmapped/C_5793971
-	f	Lnet/minecraft/unmapped/C_3419581;	f_8076984		f_8076984
+c	net/minecraft/unmapped/C_5793971		net/minecraft/entity/ai/goal/BreatheAirGoal
+	f	Lnet/minecraft/unmapped/C_3419581;	f_8076984		mob
 	m	(Lnet/minecraft/unmapped/C_3419581;)V	<init>		<init>
-		p	1			p_1
+		p	1			mob
 	m	()Z	m_5896190		m_5896190
 	m	()Z	m_1332509		m_1332509
 	m	()Z	m_3298012		m_3298012
 	m	()V	m_5289183		m_5289183
-	m	()V	m_8146875		m_8146875
+	m	()V	m_8146875		findAir
 	m	()V	m_4528414		m_4528414
-	m	(Lnet/minecraft/unmapped/C_9844932;Lnet/minecraft/unmapped/C_6707278;)Z	m_5842902		m_5842902
-		p	1			p_1
-		p	2			p_2
-c	net/minecraft/unmapped/C_5982479		net/minecraft/unmapped/C_5982479
+	m	(Lnet/minecraft/unmapped/C_9844932;Lnet/minecraft/unmapped/C_6707278;)Z	m_5842902		givesAir
+		p	1			world
+		p	2			pos
+c	net/minecraft/unmapped/C_5982479		net/minecraft/unmapped/LookControl
 	f	I	f_4261233		f_4261233
 	m	(Lnet/minecraft/unmapped/C_2587956;I)V	<init>		<init>
 		p	1			p_1
@@ -1608,10 +1608,10 @@ c	net/minecraft/unmapped/C_6976250		net/minecraft/client/render/entity/DolphinRe
 	m	(Lnet/minecraft/unmapped/C_6385858;)Lnet/minecraft/unmapped/C_0561170;	m_7036687		m_7036687
 		p	1			p_1
 	m	()V	<clinit>		<clinit>
-c	net/minecraft/unmapped/C_7106267		net/minecraft/unmapped/C_7106267
-	f	Lnet/minecraft/unmapped/C_3419581;	f_3721043		f_3721043
+c	net/minecraft/unmapped/C_7106267		net/minecraft/entity/ai/goal/TryFindWaterGoal
+	f	Lnet/minecraft/unmapped/C_3419581;	f_3721043		mob
 	m	(Lnet/minecraft/unmapped/C_3419581;)V	<init>		<init>
-		p	1			p_1
+		p	1			mob
 	m	()Z	m_5896190		m_5896190
 	m	()V	m_5289183		m_5289183
 c	net/minecraft/unmapped/C_8056170		net/minecraft/world/gen/feature/decorator/RandomCountRangeDecorator
