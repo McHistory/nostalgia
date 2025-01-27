@@ -15078,7 +15078,7 @@ c	net/minecraft/unmapped/C_1361861$9058893		9058893
 		p	4			p_4
 	m	()Z	m_3100293		m_3100293
 c	net/minecraft/unmapped/C_1361861$C_6898933		EdgeConsumer
-	m	(IIIIII)V	m_3000797		m_3000797
+	m	(IIIIII)V	m_3000797		accept
 		p	1			minX
 		p	2			minY
 		p	3			minZ
@@ -15121,22 +15121,22 @@ c	net/minecraft/unmapped/C_1656490		net/minecraft/block/shape/OffsetDoubleList
 		p	1			p_1
 	m	()I	size		size
 c	net/minecraft/unmapped/C_1737519		net/minecraft/block/shape/BooleanOp
-	f	Lnet/minecraft/unmapped/C_1737519;	f_7850949		f_7850949
-	f	Lnet/minecraft/unmapped/C_1737519;	f_8480111		f_8480111
-	f	Lnet/minecraft/unmapped/C_1737519;	f_8890686		f_8890686
-	f	Lnet/minecraft/unmapped/C_1737519;	f_5764323		f_5764323
-	f	Lnet/minecraft/unmapped/C_1737519;	f_7608120		f_7608120
-	f	Lnet/minecraft/unmapped/C_1737519;	f_0437997		f_0437997
+	f	Lnet/minecraft/unmapped/C_1737519;	f_7850949		FALSE
+	f	Lnet/minecraft/unmapped/C_1737519;	f_8480111		NOT_OR
+	f	Lnet/minecraft/unmapped/C_1737519;	f_8890686		ONLY_SECOND
+	f	Lnet/minecraft/unmapped/C_1737519;	f_5764323		NOT_FIRST
+	f	Lnet/minecraft/unmapped/C_1737519;	f_7608120		ONLY_FIRST
+	f	Lnet/minecraft/unmapped/C_1737519;	f_0437997		NOT_SECOND
 	f	Lnet/minecraft/unmapped/C_1737519;	f_9560902		NOT_EQUALS
-	f	Lnet/minecraft/unmapped/C_1737519;	f_1136303		f_1136303
+	f	Lnet/minecraft/unmapped/C_1737519;	f_1136303		NOT_AND
 	f	Lnet/minecraft/unmapped/C_1737519;	f_1459735		AND
 	f	Lnet/minecraft/unmapped/C_1737519;	f_6202239		EQUALS
-	f	Lnet/minecraft/unmapped/C_1737519;	f_5246240		f_5246240
-	f	Lnet/minecraft/unmapped/C_1737519;	f_6551314		f_6551314
-	f	Lnet/minecraft/unmapped/C_1737519;	f_7767000		f_7767000
-	f	Lnet/minecraft/unmapped/C_1737519;	f_3574447		f_3574447
+	f	Lnet/minecraft/unmapped/C_1737519;	f_5246240		SECOND
+	f	Lnet/minecraft/unmapped/C_1737519;	f_6551314		CAUSES
+	f	Lnet/minecraft/unmapped/C_1737519;	f_7767000		FIRST
+	f	Lnet/minecraft/unmapped/C_1737519;	f_3574447		CAUSED_BY
 	f	Lnet/minecraft/unmapped/C_1737519;	f_8823728		OR
-	f	Lnet/minecraft/unmapped/C_1737519;	f_8083850		f_8083850
+	f	Lnet/minecraft/unmapped/C_1737519;	f_8083850		TRUE
 	m	(ZZ)Z	m_6451116		apply
 		p	1			a
 		p	2			b
@@ -16449,7 +16449,7 @@ c	net/minecraft/unmapped/C_7931345$6957015		6957015
 		p	2			p_2
 		p	4			p_4
 c	net/minecraft/unmapped/C_7931345$C_0324914		EdgeConsumer
-	m	(DDDDDD)V	m_5947731		m_5947731
+	m	(DDDDDD)V	m_5947731		accept
 		p	1			minX
 		p	3			minY
 		p	5			minZ
@@ -16606,9 +16606,9 @@ c	net/minecraft/unmapped/C_8885562		net/minecraft/block/shape/CubeVoxelShape
 		p	1			p_1
 c	net/minecraft/unmapped/C_8926833		net/minecraft/block/shape/IndexMerger
 	m	(Lnet/minecraft/unmapped/C_8926833$C_8178531;)Z	m_7825514		forMergedIndexes
-		p	1			action
+		p	1			merger
 c	net/minecraft/unmapped/C_8926833$C_8178531		IndexConsumer
-	m	(III)Z	m_9868234		m_9868234
+	m	(III)Z	m_9868234		merge
 		p	1			x
 		p	2			y
 		p	3			index
