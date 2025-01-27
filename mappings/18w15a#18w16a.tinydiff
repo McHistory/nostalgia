@@ -5138,7 +5138,7 @@ c	net/minecraft/unmapped/C_1534020
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
-	m	(Lnet/minecraft/unmapped/C_9071248;Lnet/minecraft/unmapped/C_6707278;)Z	m_6449210	m_6449210	
+	m	(Lnet/minecraft/unmapped/C_9071248;Lnet/minecraft/unmapped/C_6707278;)Z	m_6449210	shouldRenderBackwardUpFace	
 		p	1		p_1	
 		p	2		p_2	
 	m	(Lnet/minecraft/unmapped/C_9844932;Lnet/minecraft/unmapped/C_6707278;)V	m_3182835	m_3182835	
@@ -5180,9 +5180,9 @@ c	net/minecraft/unmapped/C_1534020
 		p	4		p_4	
 		p	5		p_5	
 		p	6		p_6	
-	m	(Lnet/minecraft/unmapped/C_5250955;Lnet/minecraft/unmapped/C_6707278;)Z	m_6449210		m_6449210
-		p	1			p_1
-		p	2			p_2
+	m	(Lnet/minecraft/unmapped/C_5250955;Lnet/minecraft/unmapped/C_6707278;)Z	m_6449210		shouldRenderBackwardUpFace
+		p	1			world
+		p	2			above
 	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6707278;)V	m_5661300		tick
 		p	1			world
 		p	2			pos
@@ -5284,9 +5284,9 @@ c	net/minecraft/unmapped/C_7222334
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
-	m	(Lnet/minecraft/unmapped/C_9844932;Lnet/minecraft/unmapped/C_6707278;)V	m_6299182		m_6299182
-		p	1			p_1
-		p	2			p_2
+	m	(Lnet/minecraft/unmapped/C_9844932;Lnet/minecraft/unmapped/C_6707278;)V	m_6299182		fizz
+		p	1			world
+		p	2			pos
 	m	()Z	m_3171976		m_3171976
 	m	(Lnet/minecraft/unmapped/C_9844932;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_3544601;)V	m_2602645		m_2602645
 		p	1			p_1
@@ -5942,23 +5942,23 @@ c	net/minecraft/unmapped/C_9379659		net/minecraft/fluid/FlowingFluid
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
-	m	(Lnet/minecraft/unmapped/C_9844932;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_2441996;)V	m_4758058		m_4758058
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-	m	(Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_6707278;ILnet/minecraft/unmapped/C_3544601;Lnet/minecraft/unmapped/C_2441996;)I	m_7230979		m_7230979
+	m	(Lnet/minecraft/unmapped/C_9844932;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_2441996;)V	m_4758058		beforeBreakBlock
+		p	1			world
+		p	2			pos
+		p	3			state
+	m	(Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_6707278;ILnet/minecraft/unmapped/C_3544601;Lnet/minecraft/unmapped/C_2441996;)I	m_7230979		findDistanceToSlope
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
 		p	5			p_5
-	m	(Lnet/minecraft/unmapped/C_2627205;)I	m_1917200		m_1917200
-		p	1			p_1
+	m	(Lnet/minecraft/unmapped/C_2627205;)I	m_1917200		getSlopeFindDistance
+		p	1			world
 	m	(Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_2441996;)Ljava/util/Set;	m_4265535		getSpread
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
-	m	(Lnet/minecraft/unmapped/C_5250955;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_3544601;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_2441996;)Z	m_9369451		m_9369451
+	m	(Lnet/minecraft/unmapped/C_5250955;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_3544601;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_2441996;)Z	m_9369451		canHoldFluid
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -5974,10 +5974,10 @@ c	net/minecraft/unmapped/C_9379659		net/minecraft/fluid/FlowingFluid
 		p	6			p_6
 	m	(Lnet/minecraft/unmapped/C_2627205;)I	m_1230881		getLevelDrop
 		p	1			world
-	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_1534020;Lnet/minecraft/unmapped/C_1534020;)I	m_4273845		m_4273845
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_1534020;Lnet/minecraft/unmapped/C_1534020;)I	m_4273845		getSpreadDelay
+		p	1			world
+		p	2			state
+		p	3			spreadState
 	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_1534020;)V	m_3339620		m_3339620
 		p	1			p_1
 		p	2			p_2
