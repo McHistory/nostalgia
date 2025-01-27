@@ -163,7 +163,7 @@ c	net/minecraft/unmapped/C_0786431
 		p	1			p_1
 		p	3			p_3
 c	net/minecraft/unmapped/C_1013763
-	f	Lorg/apache/logging/log4j/Logger;	f_8005075	f_8005075	
+	f	Lorg/apache/logging/log4j/Logger;	f_8005075	LOGGER	
 	f	Lnet/minecraft/unmapped/C_9009409;	f_0165905		f_0165905
 	m	()Lnet/minecraft/unmapped/C_2750078;	m_8796546	m_8796546	
 	m	()Lnet/minecraft/unmapped/C_9009409;	m_2916169		m_2916169
@@ -854,8 +854,8 @@ c	net/minecraft/unmapped/C_5009044$C_3264767
 		p	2			p_2
 		p	3			p_3
 	m	()Lnet/minecraft/unmapped/C_9550253;	m_6624867		m_6624867
-c	net/minecraft/unmapped/C_5009044$C_6202284	C_6202284	
-	f	Lnet/minecraft/unmapped/C_5009044;	f_7714734	f_7714734	
+c	net/minecraft/unmapped/C_5009044$C_6202284	IsAngryAtPlayerPredicate	
+	f	Lnet/minecraft/unmapped/C_5009044;	f_7714734	target	
 	m	(Lnet/minecraft/unmapped/C_5009044;)V	<init>	<init>	
 		p	1		p_1	
 	m	(Lnet/minecraft/unmapped/C_4718187;)Z	m_1239981	m_1239981	
@@ -3384,12 +3384,12 @@ c	net/minecraft/unmapped/C_8008980
 	m	(I)Lnet/minecraft/unmapped/C_0459721;	m_5006874		m_5006874
 		p	1			p_1
 c	net/minecraft/realms/RealmsButton
-	m	()Lnet/minecraft/unmapped/C_2621421;	m_6872828	m_6872828	
-	m	(IIF)V	m_7541868	m_7541868	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-	m	(DD)V	m_9507460	m_9507460	
+	m	()Lnet/minecraft/unmapped/C_2621421;	m_6872828	getProxy	
+	m	(IIF)V	m_7541868	render	
+		p	1		mouseX	
+		p	2		mouseY	
+		p	3		tickDelta	
+	m	(DD)V	m_9507460	mouseClicked	
 		p	1		p_1	
 		p	3		p_3	
 	m	()Z	m_2231311	m_2231311	
@@ -3402,8 +3402,8 @@ c	net/minecraft/realms/RealmsButton
 		p	4		p_4	
 		p	5		p_5	
 		p	6		p_6	
-	m	()Lnet/minecraft/unmapped/C_9954218;	m_6872828		m_6872828
-	m	()V	m_9507460		m_9507460
+	m	()Lnet/minecraft/unmapped/C_9954218;	m_6872828		getProxy
+	m	()V	m_9507460		mouseClicked
 	m	()Lnet/minecraft/unmapped/C_2621421;	m_0489028		m_0489028
 c	net/minecraft/realms/RealmsButton$6827997	6827997	
 	f	Lnet/minecraft/realms/RealmsButton;	f_0484340	f_0484340	
@@ -3437,10 +3437,10 @@ c	net/minecraft/realms/RealmsEditBox
 		p	3			p_3
 		p	5			p_5
 c	net/minecraft/realms/RealmsScreen
-	m	(Lnet/minecraft/realms/RealmsButton;)V	m_1237794	m_1237794	
-		p	1		p_1	
+	m	(Lnet/minecraft/realms/RealmsButton;)V	m_1237794	addButton	
+		p	1		button	
 	m	()V	m_3121641	m_3121641	
-	m	(Lnet/minecraft/unmapped/C_5708222;)V	m_1237794		m_1237794
+	m	(Lnet/minecraft/unmapped/C_5708222;)V	m_1237794		addButton
 		p	1			p_1
 c	net/minecraft/realms/RealmsSliderButton
 	f	D	f_0649679	f_0649679	

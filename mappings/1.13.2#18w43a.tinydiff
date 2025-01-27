@@ -1661,7 +1661,7 @@ c	net/minecraft/unmapped/C_4658369
 c	net/minecraft/unmapped/C_4939758
 	m	(Lnet/minecraft/unmapped/C_4939758;)Lnet/minecraft/unmapped/C_4354908;	m_0762452	m_0762452	
 		p	0		p_0	
-	m	()Lcom/google/common/util/concurrent/FutureCallback;	m_7069882	m_7069882	
+	m	()Lcom/google/common/util/concurrent/FutureCallback;	m_7069882	createServerResourcePackDownloadCallback	
 	m	(Lnet/minecraft/unmapped/C_5955367;)V	m_2520234		m_2520234
 		p	1			p_1
 	m	(Ljava/util/concurrent/CompletableFuture;)V	m_0106410		m_0106410
@@ -1683,9 +1683,9 @@ c	net/minecraft/unmapped/C_4939758
 c	net/minecraft/unmapped/C_4939758$2992278	2992278	
 	f	Lnet/minecraft/unmapped/C_4939758;	f_0095458	f_0095458	
 	m	(Ljava/lang/Object;)V	onSuccess	onSuccess	
-		p	1		p_1	
+		p	1		result	
 	m	(Ljava/lang/Throwable;)V	onFailure	onFailure	
-		p	1		p_1	
+		p	1		t	
 	m	(Lnet/minecraft/unmapped/C_4939758;)V	<init>	<init>	
 		p	1		p_1	
 c	net/minecraft/unmapped/C_5100072
@@ -3668,9 +3668,9 @@ c	net/minecraft/unmapped/C_2983776$9073908	9073908
 	f	Lnet/minecraft/unmapped/C_2983776;	f_7751110	f_7751110	
 	f	Ljava/lang/String;	f_2864265	f_2864265	
 	m	(Ljava/lang/Object;)V	onSuccess	onSuccess	
-		p	1		p_1	
+		p	1		result	
 	m	(Ljava/lang/Throwable;)V	onFailure	onFailure	
-		p	1		p_1	
+		p	1		t	
 	m	(Lnet/minecraft/unmapped/C_2983776;Ljava/lang/String;Ljava/io/File;Lcom/google/common/util/concurrent/SettableFuture;)V	<init>	<init>	
 		p	1		p_1	
 		p	2		p_2	
@@ -5061,8 +5061,8 @@ c	net/minecraft/unmapped/C_9370929
 		p	1		type	
 	m	()V	<clinit>	<clinit>	
 	m	(Ljava/lang/Object;Ljava/lang/Class;)V	m_9604660	add	
-		p	1		type	
-		p	2		instance	
+		p	1		e	
+		p	2		type	
 	m	(Ljava/lang/Class;)Ljava/util/Iterator;	m_5131070	m_5131070	
 		p	1		p_1	
 	m	(Ljava/lang/Class;)Ljava/util/Collection;	m_4751146		findOrThrow

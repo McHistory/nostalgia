@@ -130,8 +130,8 @@ c	net/minecraft/unmapped/C_1013763
 	f	[Lnet/minecraft/unmapped/C_2750078;	f_5469608	armor	
 	f	Lnet/minecraft/unmapped/C_0160011;	f_9948017		itemsInHands
 	f	Lnet/minecraft/unmapped/C_0160011;	f_5469608		armor
-	m	(Lnet/minecraft/unmapped/C_7278838;)Z	m_6470583		m_6470583
-		p	1			p_1
+	m	(Lnet/minecraft/unmapped/C_7278838;)Z	m_6470583		isEquipmentSlotFilled
+		p	1			slot
 c	net/minecraft/unmapped/C_1196485
 	f	[Lnet/minecraft/unmapped/C_2750078;	f_6183045	inventory	
 	f	Lnet/minecraft/unmapped/C_0160011;	f_6183045		inventory
@@ -911,17 +911,17 @@ c	net/minecraft/unmapped/C_6385858
 		p	1		player	
 		p	2		itemInHand	
 		p	3		hand	
-	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_0336319;Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_4360192;)Lnet/minecraft/unmapped/C_6544668;	m_9473672	interact	
+	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_0336319;Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_4360192;)Lnet/minecraft/unmapped/C_6544668;	m_9473672	interactAt	
 		p	1		player	
-		p	2		facePos	
+		p	2		interactionPoint	
 		p	3		itemInHand	
 		p	4		hand	
 	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_4360192;)Z	m_7097998		interact
 		p	1			player
 		p	2			hand
-	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_0336319;Lnet/minecraft/unmapped/C_4360192;)Lnet/minecraft/unmapped/C_6544668;	m_9473672		interact
+	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_0336319;Lnet/minecraft/unmapped/C_4360192;)Lnet/minecraft/unmapped/C_6544668;	m_9473672		interactAt
 		p	1			player
-		p	2			facePos
+		p	2			interactionPoint
 		p	3			hand
 c	net/minecraft/unmapped/C_6768539
 	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_4360192;Lnet/minecraft/unmapped/C_3544601;FFF)Lnet/minecraft/unmapped/C_6544668;	m_9844872	m_9844872	
@@ -3035,8 +3035,8 @@ c	net/minecraft/unmapped/C_3438842
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
-	m	(Lnet/minecraft/unmapped/C_0336319;)Lnet/minecraft/unmapped/C_7278838;	m_1987998		m_1987998
-		p	1			p_1
+	m	(Lnet/minecraft/unmapped/C_0336319;)Lnet/minecraft/unmapped/C_7278838;	m_1987998		getSlotForPoint
+		p	1			hitPoint
 	m	(F)V	m_8512621		m_8512621
 		p	1			p_1
 	m	(F)V	m_3300694		m_3300694
@@ -3100,31 +3100,31 @@ c	net/minecraft/unmapped/C_2007379
 		p	1		p_1	
 		p	2		p_2	
 	m	(Ljava/lang/Class;[Ljava/lang/String;)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
+		p	1			type
+		p	2			inventoryIds
 c	net/minecraft/unmapped/C_2169272
-	f	Ljava/util/Map;	f_2387427		f_2387427
-	m	(Ljava/lang/String;)Ljava/lang/String;	m_9148558	m_9148558	
+	f	Ljava/util/Map;	f_2387427		NEW_IDS
+	m	(Ljava/lang/String;)Ljava/lang/String;	m_9148558	convert	
 		p	0		p_0	
-	m	(ILjava/lang/String;)Ljava/lang/String;	m_9148558		m_9148558
+	m	(ILjava/lang/String;)Ljava/lang/String;	m_9148558		convert
 		p	0			version
-		p	1			p_1
+		p	1			id
 c	net/minecraft/unmapped/C_4254222
-	f	Ljava/lang/String;	f_6049078	f_6049078	
+	f	Ljava/lang/String;	f_6049078	entityId	
 	f	Ljava/lang/String;	f_7385438	f_7385438	
-	f	Lnet/minecraft/unmapped/C_0561170;	f_6049078		f_6049078
+	f	Lnet/minecraft/unmapped/C_0561170;	f_6049078		entityId
 	m	(Ljava/lang/String;Ljava/lang/String;)V	<init>	<init>	
 		p	1		p_1	
 		p	2		p_2	
 	m	(Ljava/lang/Class;)V	<init>		<init>
-		p	1			p_1
+		p	1			type
 c	net/minecraft/unmapped/C_5032371
 	m	(Ljava/lang/String;[Ljava/lang/String;)V	<init>	<init>	
 		p	1		p_1	
 		p	2		p_2	
 	m	(Ljava/lang/Class;[Ljava/lang/String;)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
+		p	1			type
+		p	2			slotInventoryId
 c	net/minecraft/unmapped/C_5981250
 	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_4360192;)Lnet/minecraft/unmapped/C_9303322;	m_6337043	m_6337043	
 		p	1		p_1	
@@ -3417,15 +3417,15 @@ c	net/minecraft/unmapped/C_0160011		net/minecraft/util/DefaultedList
 		p	1			delegate
 		p	2			defaultValue
 	m	(I)Ljava/lang/Object;	get		get
-		p	1			p_1
+		p	1			index
 	m	(ILjava/lang/Object;)Ljava/lang/Object;	set		set
-		p	1			p_1
-		p	2			p_2
+		p	1			index
+		p	2			element
 	m	(ILjava/lang/Object;)V	add		add
-		p	1			p_1
-		p	2			p_2
+		p	1			index
+		p	2			element
 	m	(I)Ljava/lang/Object;	remove		remove
-		p	1			p_1
+		p	1			index
 	m	()I	size		size
 	m	()V	clear		clear
 c	net/minecraft/unmapped/C_0644115		net/minecraft/client/render/entity/ElderGuardianRenderer

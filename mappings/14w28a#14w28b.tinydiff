@@ -1902,109 +1902,109 @@ c	net/minecraft/realms/DisconnectedOnlineScreen		net/minecraft/realms/Disconnect
 		p	3			p_3
 c	net/minecraft/realms/Realms		net/minecraft/realms/Realms
 	m	()V	<init>		<init>
-	m	()Z	m_3971523		m_3971523
-	m	()Ljava/net/Proxy;	m_9218386		m_9218386
-	m	()Ljava/lang/String;	m_3994175		m_3994175
-	m	()Ljava/lang/String;	m_3617633		m_3617633
-	m	()J	m_3973837		m_3973837
-	m	()Ljava/lang/String;	m_6470939		m_6470939
-	m	()Ljava/lang/String;	m_2082253		m_2082253
-	m	(Ljava/lang/String;)Ljava/lang/String;	m_6213096		m_6213096
-		p	0			p_0
-	m	(Lnet/minecraft/realms/RealmsScreen;)V	m_3844915		m_3844915
-		p	0			p_0
-	m	()Ljava/lang/String;	m_4709478		m_4709478
-	m	()I	m_1381177		m_1381177
-	m	()I	m_3841932		m_3841932
-	m	()I	m_0839731		m_0839731
+	m	()Z	m_3971523		isTouchScreen
+	m	()Ljava/net/Proxy;	m_9218386		getNetworkProxy
+	m	()Ljava/lang/String;	m_3994175		getSessionIdNullable
+	m	()Ljava/lang/String;	m_3617633		getUsernameNullable
+	m	()J	m_3973837		getTime
+	m	()Ljava/lang/String;	m_6470939		getSessionId
+	m	()Ljava/lang/String;	m_2082253		getUsername
+	m	(Ljava/lang/String;)Ljava/lang/String;	m_6213096		getNameFromUuid
+		p	0			uuid
+	m	(Lnet/minecraft/realms/RealmsScreen;)V	m_3844915		setScreen
+		p	0			screen
+	m	()Ljava/lang/String;	m_4709478		getGameDirAbsolutePath
+	m	()I	m_1381177		getSurvivalId
+	m	()I	m_3841932		getCreativeId
+	m	()I	m_0839731		getAdventureId
 c	net/minecraft/realms/RealmsAnvilLevelStorageSource		net/minecraft/realms/RealmsAnvilLevelStorageSource
 	f	Lnet/minecraft/unmapped/C_2942118;	f_3505392		storageSource
 	m	(Lnet/minecraft/unmapped/C_2942118;)V	<init>		<init>
 		p	1			storageSource
-	m	()Ljava/lang/String;	m_2170802		m_2170802
-	m	(Ljava/lang/String;)Z	m_5704912		m_5704912
-		p	1			p_1
-	m	(Ljava/lang/String;Lnet/minecraft/unmapped/C_7918626;)Z	m_6900139		m_6900139
-		p	1			p_1
-		p	2			p_2
-	m	(Ljava/lang/String;)Z	m_8124654		m_8124654
-		p	1			p_1
-	m	(Ljava/lang/String;)Z	m_7896397		m_7896397
-		p	1			p_1
-	m	(Ljava/lang/String;)Z	m_6052474		m_6052474
-		p	1			p_1
-	m	(Ljava/lang/String;)Z	m_3217287		m_3217287
-		p	1			p_1
-	m	(Ljava/lang/String;Ljava/lang/String;)V	m_1829220		m_1829220
-		p	1			p_1
-		p	2			p_2
-	m	()V	m_5878464		m_5878464
-	m	()Ljava/util/List;	m_2077869		m_2077869
+	m	()Ljava/lang/String;	m_2170802		getName
+	m	(Ljava/lang/String;)Z	m_5704912		exists
+		p	1			saveName
+	m	(Ljava/lang/String;Lnet/minecraft/unmapped/C_7918626;)Z	m_6900139		convert
+		p	1			saveName
+		p	2			listener
+	m	(Ljava/lang/String;)Z	m_8124654		needsConversion
+		p	1			saveName
+	m	(Ljava/lang/String;)Z	m_7896397		canCreate
+		p	1			saveName
+	m	(Ljava/lang/String;)Z	m_6052474		delete
+		p	1			saveName
+	m	(Ljava/lang/String;)Z	m_3217287		isCOnvertible
+		p	1			saveName
+	m	(Ljava/lang/String;Ljava/lang/String;)V	m_1829220		rename
+		p	1			saveName
+		p	2			newName
+	m	()V	m_5878464		flush
+	m	()Ljava/util/List;	m_2077869		getAll
 c	net/minecraft/realms/RealmsBridge		net/minecraft/realms/RealmsBridge
-	f	Lorg/apache/logging/log4j/Logger;	f_0493217		f_0493217
-	f	Lnet/minecraft/unmapped/C_0786431;	f_3901495		f_3901495
+	f	Lorg/apache/logging/log4j/Logger;	f_0493217		LOGGER
+	f	Lnet/minecraft/unmapped/C_0786431;	f_3901495		parent
 	m	()V	<init>		<init>
-	m	(Lnet/minecraft/unmapped/C_0786431;)V	m_1888591		m_1888591
-		p	1			p_1
+	m	(Lnet/minecraft/unmapped/C_0786431;)V	m_1888591		createMainMenuScreen
+		p	1			parent
 	m	()V	m_5480860		m_5480860
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/realms/RealmsButton		net/minecraft/realms/RealmsButton
-	f	Lnet/minecraft/unmapped/C_9954218;	f_0966927		f_0966927
+	f	Lnet/minecraft/unmapped/C_9954218;	f_0966927		proxy
 	m	(IIILjava/lang/String;)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
+		p	1			id
+		p	2			x
+		p	3			y
+		p	4			message
 	m	(IIIIILjava/lang/String;)V	<init>		<init>
+		p	1			id
+		p	2			x
+		p	3			y
+		p	4			width
+		p	5			height
+		p	6			message
+	m	()Lnet/minecraft/unmapped/C_2621421;	m_6872828		getProxy
+	m	()I	m_4640747		getId
+	m	()Z	m_9267471		isActive
+	m	(Z)V	m_6746073		setActive
+		p	1			active
+	m	(Ljava/lang/String;)V	m_9483143		setMessage
+		p	1			message
+	m	()I	m_8339215		getWidth
+	m	()I	m_4722876		getHeight
+	m	()I	m_6781069		getY
+	m	(II)V	m_7541868		render
 		p	1			p_1
 		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
-		p	6			p_6
-	m	()Lnet/minecraft/unmapped/C_2621421;	m_6872828		m_6872828
-	m	()I	m_4640747		m_4640747
-	m	()Z	m_9267471		m_9267471
-	m	(Z)V	m_6746073		m_6746073
-		p	1			p_1
-	m	(Ljava/lang/String;)V	m_9483143		m_9483143
-		p	1			p_1
-	m	()I	m_8339215		m_8339215
-	m	()I	m_4722876		m_4722876
-	m	()I	m_6781069		m_6781069
-	m	(II)V	m_7541868		m_7541868
-		p	1			p_1
-		p	2			p_2
-	m	(II)V	m_9507460		m_9507460
-		p	1			p_1
-		p	2			p_2
-	m	(II)V	m_2593816		m_2593816
-		p	1			p_1
-		p	2			p_2
-	m	(IIIIII)V	m_6760948		m_6760948
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
-		p	6			p_6
-	m	(II)V	m_2012711		m_2012711
-		p	1			p_1
-		p	2			p_2
-	m	(Z)I	m_0389049		m_0389049
-		p	1			p_1
+	m	(II)V	m_9507460		mouseClicked
+		p	1			mouseX
+		p	2			mouseY
+	m	(II)V	m_2593816		mouseReleased
+		p	1			mouseX
+		p	2			mouseY
+	m	(IIIIII)V	m_6760948		drawTexture
+		p	1			x
+		p	2			y
+		p	3			u
+		p	4			v
+		p	5			width
+		p	6			height
+	m	(II)V	m_2012711		renderBackground
+		p	1			mouseX
+		p	2			mouseY
+	m	(Z)I	m_0389049		getSuperYImage
+		p	1			hovered
 c	net/minecraft/realms/RealmsConnect		net/minecraft/realms/RealmsConnect
-	f	Lorg/apache/logging/log4j/Logger;	f_2051036		f_2051036
-	f	Lnet/minecraft/realms/RealmsScreen;	f_6133146		f_6133146
-	f	Z	f_1452309		f_1452309
-	f	Lnet/minecraft/unmapped/C_4354908;	f_9317333		f_9317333
+	f	Lorg/apache/logging/log4j/Logger;	f_2051036		LOGGER
+	f	Lnet/minecraft/realms/RealmsScreen;	f_6133146		parent
+	f	Z	f_1452309		shouldStop
+	f	Lnet/minecraft/unmapped/C_4354908;	f_9317333		connection
 	m	(Lnet/minecraft/realms/RealmsScreen;)V	<init>		<init>
-		p	1			p_1
-	m	(Ljava/lang/String;I)V	m_9774550		m_9774550
-		p	1			p_1
-		p	2			p_2
-	m	()V	m_6237070		m_6237070
-	m	()V	m_8573149		m_8573149
+		p	1			parent
+	m	(Ljava/lang/String;I)V	m_9774550		connect
+		p	1			address
+		p	2			port
+	m	()V	m_6237070		disconnect
+	m	()V	m_8573149		tick
 	m	(Lnet/minecraft/realms/RealmsConnect;)Z	m_0129972		m_0129972
 		p	0			p_0
 	m	(Lnet/minecraft/realms/RealmsConnect;Lnet/minecraft/unmapped/C_4354908;)Lnet/minecraft/unmapped/C_4354908;	m_7443050		m_7443050
@@ -2061,10 +2061,10 @@ c	net/minecraft/realms/RealmsEditBox		net/minecraft/realms/RealmsEditBox
 		p	3			p_3
 		p	4			p_4
 		p	5			p_5
-	m	()V	m_2447132		m_2447132
-	m	(Ljava/lang/String;)V	m_7790195		m_7790195
-		p	1			p_1
-	m	()Ljava/lang/String;	m_8389811		m_8389811
+	m	()V	m_2447132		tick
+	m	(Ljava/lang/String;)V	m_7790195		setText
+		p	1			text
+	m	()Ljava/lang/String;	m_8389811		getText
 	m	()Ljava/lang/String;	m_5416031		m_5416031
 	m	(Ljava/lang/String;)V	m_9687397		m_9687397
 		p	1			p_1
@@ -2087,21 +2087,21 @@ c	net/minecraft/realms/RealmsEditBox		net/minecraft/realms/RealmsEditBox
 		p	1			p_1
 	m	()V	m_7004220		m_7004220
 	m	()V	m_3727397		m_3727397
-	m	(CI)Z	m_0860186		m_0860186
+	m	(CI)Z	m_0860186		keyPressed
 		p	1			p_1
 		p	2			p_2
-	m	(III)V	m_5688666		m_5688666
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-	m	()V	m_6955322		m_6955322
+	m	(III)V	m_5688666		mouseClicked
+		p	1			mouseX
+		p	2			mouseY
+		p	3			button
+	m	()V	m_6955322		render
 	m	(IIII)V	m_1608531		m_1608531
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
-	m	(I)V	m_8342611		m_8342611
-		p	1			p_1
+	m	(I)V	m_8342611		setMaxLength
+		p	1			maximumLength
 	m	()I	m_3185217		m_3185217
 	m	()I	m_5050635		m_5050635
 	m	()Z	m_5350574		m_5350574
@@ -2113,12 +2113,12 @@ c	net/minecraft/realms/RealmsEditBox		net/minecraft/realms/RealmsEditBox
 	m	()I	m_4885370		m_4885370
 	m	(I)V	m_2826436		m_2826436
 		p	1			p_1
-	m	(Z)V	m_0768278		m_0768278
-		p	1			p_1
-	m	()Z	m_6272239		m_6272239
+	m	(Z)V	m_0768278		setFocused
+		p	1			focused
+	m	()Z	m_6272239		isFocused
 	m	()Z	m_8569310		m_8569310
-	m	(Z)V	m_3457974		m_3457974
-		p	1			p_1
+	m	(Z)V	m_3457974		setEditable
+		p	1			editable
 	m	()I	m_3317852		m_3317852
 	m	()I	m_2565928		m_2565928
 	m	(I)V	m_8785970		m_8785970
@@ -2130,114 +2130,114 @@ c	net/minecraft/realms/RealmsEditBox		net/minecraft/realms/RealmsEditBox
 	m	(Z)V	m_7043679		m_7043679
 		p	1			p_1
 c	net/minecraft/realms/RealmsLevelSummary		net/minecraft/realms/RealmsLevelSummary
-	f	Lnet/minecraft/unmapped/C_1140528;	f_5184623		f_5184623
+	f	Lnet/minecraft/unmapped/C_1140528;	f_5184623		info
 	m	(Lnet/minecraft/unmapped/C_1140528;)V	<init>		<init>
 		p	1			p_1
-	m	()I	m_6033069		m_6033069
-	m	()Ljava/lang/String;	m_1580365		m_1580365
-	m	()Z	m_4131106		m_4131106
-	m	()Z	m_8523694		m_8523694
-	m	()Z	m_3096098		m_3096098
-	m	()Ljava/lang/String;	m_0640204		m_0640204
-	m	()J	m_8504788		m_8504788
-	m	(Lnet/minecraft/unmapped/C_1140528;)I	m_9559191		m_9559191
-		p	1			p_1
-	m	()J	m_5208961		m_5208961
+	m	()I	m_6033069		getGamemodeId
+	m	()Ljava/lang/String;	m_1580365		getSaveName
+	m	()Z	m_4131106		areCheatsEnabled
+	m	()Z	m_8523694		isHardcore
+	m	()Z	m_3096098		isSameVersion
+	m	()Ljava/lang/String;	m_0640204		getName
+	m	()J	m_8504788		getLastPlayed
+	m	(Lnet/minecraft/unmapped/C_1140528;)I	m_9559191		compareTo
+		p	1			other
+	m	()J	m_5208961		getSize
 	m	(Lnet/minecraft/realms/RealmsLevelSummary;)I	m_9857126		m_9857126
 		p	1			p_1
 	m	(Ljava/lang/Object;)I	compareTo		compareTo
-		p	1			p_1
+		p	1			other
 c	net/minecraft/realms/RealmsMth		net/minecraft/realms/RealmsMth
 	m	()V	<init>		<init>
-	m	(F)F	m_7105812		m_7105812
-		p	0			p_0
-	m	(Ljava/util/Random;DD)D	m_5982899		m_5982899
-		p	0			p_0
-		p	1			p_1
-		p	3			p_3
-	m	(F)I	m_6601995		m_6601995
-		p	0			p_0
-	m	(D)I	m_9580437		m_9580437
-		p	0			p_0
-	m	(II)I	m_4155787		m_4155787
-		p	0			p_0
-		p	1			p_1
-	m	(F)F	m_2728634		m_2728634
-		p	0			p_0
-	m	(III)I	m_3116643		m_3116643
-		p	0			p_0
-		p	1			p_1
-		p	2			p_2
-	m	(DDD)D	m_6758928		m_6758928
-		p	0			p_0
-		p	2			p_2
-		p	4			p_4
-	m	(D)I	m_6056242		m_6056242
-		p	0			p_0
-	m	(Ljava/lang/String;)Z	m_0264370		m_0264370
-		p	0			p_0
-	m	(D)J	m_4249224		m_4249224
-		p	0			p_0
-	m	(D)F	m_9551713		m_9551713
-		p	0			p_0
-	m	(DDD)D	m_4448456		m_4448456
-		p	0			p_0
-		p	2			p_2
-		p	4			p_4
-	m	(Ljava/lang/String;I)I	m_7717382		m_7717382
-		p	0			p_0
-		p	1			p_1
-	m	(Ljava/lang/String;D)D	m_9054592		m_9054592
-		p	0			p_0
-		p	1			p_1
-	m	(I)I	m_8292178		m_8292178
-		p	0			p_0
-	m	(D)I	m_4272819		m_4272819
-		p	0			p_0
-	m	(I)I	m_0933269		m_0933269
-		p	0			p_0
-	m	(F)F	m_5577655		m_5577655
-		p	0			p_0
-	m	(F)F	m_9706265		m_9706265
-		p	0			p_0
-	m	(Ljava/lang/String;II)I	m_0726916		m_0726916
-		p	0			p_0
-		p	1			p_1
-		p	2			p_2
-	m	(D)I	m_0207402		m_0207402
-		p	0			p_0
-	m	(DD)D	m_8388394		m_8388394
-		p	0			p_0
-		p	2			p_2
-	m	(Ljava/util/Random;FF)F	m_7355749		m_7355749
-		p	0			p_0
-		p	1			p_1
-		p	2			p_2
-	m	(D)D	m_5391790		m_5391790
-		p	0			p_0
-	m	(F)F	m_3934299		m_3934299
-		p	0			p_0
-	m	(FFF)F	m_8905009		m_8905009
-		p	0			p_0
-		p	1			p_1
-		p	2			p_2
-	m	(Ljava/lang/String;DD)D	m_4470406		m_4470406
-		p	0			p_0
-		p	1			p_1
-		p	3			p_3
-	m	(II)I	m_1608150		m_1608150
-		p	0			p_0
-		p	1			p_1
-	m	([J)D	m_2551737		m_2551737
-		p	0			p_0
-	m	(F)I	m_8801982		m_8801982
-		p	0			p_0
-	m	(I)I	m_5935193		m_5935193
-		p	0			p_0
-	m	(Ljava/util/Random;II)I	m_3954405		m_3954405
-		p	0			p_0
-		p	1			p_1
-		p	2			p_2
+	m	(F)F	m_7105812		sin
+		p	0			x
+	m	(Ljava/util/Random;DD)D	m_5982899		nextDouble
+		p	0			random
+		p	1			min
+		p	3			max
+	m	(F)I	m_6601995		ceil
+		p	0			x
+	m	(D)I	m_9580437		flooar
+		p	0			x
+	m	(II)I	m_4155787		floorDiv
+		p	0			a
+		p	1			b
+	m	(F)F	m_2728634		abs
+		p	0			x
+	m	(III)I	m_3116643		clamp
+		p	0			x
+		p	1			min
+		p	2			max
+	m	(DDD)D	m_6758928		clampedLerp
+		p	0			min
+		p	2			max
+		p	4			delta
+	m	(D)I	m_6056242		ceil
+		p	0			x
+	m	(Ljava/lang/String;)Z	m_0264370		isEmpty
+		p	0			s
+	m	(D)J	m_4249224		lfloor
+		p	0			x
+	m	(D)F	m_9551713		sqrt
+		p	0			x
+	m	(DDD)D	m_4448456		clamp
+		p	0			x
+		p	2			min
+		p	4			max
+	m	(Ljava/lang/String;I)I	m_7717382		parseInt
+		p	0			s
+		p	1			defaultInt
+	m	(Ljava/lang/String;D)D	m_9054592		parseDouble
+		p	0			s
+		p	1			defaultValue
+	m	(I)I	m_8292178		log2
+		p	0			x
+	m	(D)I	m_4272819		abs
+		p	0			x
+	m	(I)I	m_0933269		smallestEmcompassingPowerOfTwo
+		p	0			x
+	m	(F)F	m_5577655		sqrt
+		p	0			x
+	m	(F)F	m_9706265		cos
+		p	0			x
+	m	(Ljava/lang/String;II)I	m_0726916		parseInt
+		p	0			x
+		p	1			defaultValue
+		p	2			min
+	m	(D)I	m_0207402		fastFloor
+		p	0			x
+	m	(DD)D	m_8388394		absMax
+		p	0			a
+		p	2			b
+	m	(Ljava/util/Random;FF)F	m_7355749		nextFloat
+		p	0			random
+		p	1			min
+		p	2			max
+	m	(D)D	m_5391790		wrapDegrees
+		p	0			degrees
+	m	(F)F	m_3934299		wrapDegrees
+		p	0			degrees
+	m	(FFF)F	m_8905009		clamp
+		p	0			x
+		p	1			min
+		p	2			max
+	m	(Ljava/lang/String;DD)D	m_4470406		parseDouble
+		p	0			s
+		p	1			defaultValue
+		p	3			min
+	m	(II)I	m_1608150		roundUp
+		p	0			x
+		p	1			interval
+	m	([J)D	m_2551737		average
+		p	0			s
+	m	(F)I	m_8801982		floor
+		p	0			x
+	m	(I)I	m_5935193		abs
+		p	0			x
+	m	(Ljava/util/Random;II)I	m_3954405		nextInt
+		p	0			random
+		p	1			defaultValue
+		p	2			min
 c	net/minecraft/realms/RealmsScreen		net/minecraft/realms/RealmsScreen
 	f	I	f_9932234		f_9932234
 	f	I	f_2979458		f_2979458
@@ -2252,199 +2252,199 @@ c	net/minecraft/realms/RealmsScreen		net/minecraft/realms/RealmsScreen
 	f	Lnet/minecraft/client/Minecraft;	f_4283816		f_4283816
 	f	I	f_1859224		f_1859224
 	f	I	f_2062332		f_2062332
-	f	Lnet/minecraft/unmapped/C_6894203;	f_9170084		f_9170084
+	f	Lnet/minecraft/unmapped/C_6894203;	f_9170084		proxy
 	m	()V	<init>		<init>
-	m	()Lnet/minecraft/unmapped/C_6894203;	m_8072916		m_8072916
-	m	()V	m_5480860		m_5480860
-	m	(Lnet/minecraft/client/Minecraft;II)V	m_5197651		m_5197651
+	m	()Lnet/minecraft/unmapped/C_6894203;	m_8072916		getWrapped
+	m	()V	m_5480860		init
+	m	(Lnet/minecraft/client/Minecraft;II)V	m_5197651		init
 		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-	m	(Ljava/lang/String;III)V	m_1010319		m_1010319
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-	m	(Ljava/lang/String;III)V	m_0159220		m_0159220
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-	m	(IIIIII)V	m_5103226		m_5103226
+		p	2			width
+		p	3			height
+	m	(Ljava/lang/String;III)V	m_1010319		drawCenteredString
+		p	1			s
+		p	2			x
+		p	3			y
+		p	4			color
+	m	(Ljava/lang/String;III)V	m_0159220		drawString
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
-		p	5			p_5
-		p	6			p_6
-	m	(IIFFIIIIFF)V	m_9228571		m_9228571
+	m	(IIIIII)V	m_5103226		drawTexture
+		p	1			x
+		p	2			y
+		p	3			u
+		p	4			v
+		p	5			width
+		p	6			height
+	m	(IIFFIIIIFF)V	m_9228571		drawtexture
+		p	0			x
+		p	1			y
+		p	2			u
+		p	3			v
+		p	4			textureWidth
+		p	5			textureHeight
+		p	6			width
+		p	7			height
+		p	8			scaleU
+		p	9			scaleV
+	m	(IIFFIIFF)V	m_3407956		drawtexture
+		p	0			x
+		p	1			y
+		p	2			u
+		p	3			v
+		p	4			width
+		p	5			height
+		p	6			scaleU
+		p	7			scaleV
+	m	(IIIIII)V	m_3623311		fillGradient
+		p	1			x1
+		p	2			y1
+		p	3			x2
+		p	4			y2
+		p	5			color1
+		p	6			color2
+	m	()V	m_6089101		renderBackground
+	m	()Z	m_7036868		shouldPauseGame
+	m	(I)V	m_3431737		renderBackground
+		p	1			offset
+	m	(IIF)V	m_9230983		render
+		p	1			mouseX
+		p	2			mouseY
+		p	3			tickDelta
+	m	(Lnet/minecraft/unmapped/C_2750078;II)V	m_7221746		renderTooltip
+		p	1			p_1
+		p	2			mouseX
+		p	3			mouseY
+	m	(Ljava/lang/String;II)V	m_0035095		renderTooltip
+		p	1			text
+		p	2			mouseX
+		p	3			mouseY
+	m	(Ljava/util/List;II)V	m_1486563		renderTooltip
+		p	1			text
+		p	2			mouseX
+		p	3			mouseY
+	m	(Ljava/lang/String;)V	m_6440925		bindPlayerSkin
 		p	0			p_0
+	m	(Ljava/lang/String;)V	m_1470630		bindTexture
+		p	0			id
+	m	()V	m_6129640		tick
+	m	()I	m_3748360		getWidth
+	m	()I	m_9505268		getHeight
+	m	()I	m_5647894		getFontHeight
+	m	(Ljava/lang/String;)I	m_7331234		getStringWidth
+		p	1			s
+	m	(Ljava/lang/String;III)V	m_3480529		drawWithShadow
+		p	1			s
+		p	2			x
+		p	3			y
+		p	4			color
+	m	(Ljava/lang/String;I)Ljava/util/List;	m_1154809		wrapLines
+		p	1			s
+		p	2			width
+	m	(Lnet/minecraft/realms/RealmsButton;)V	m_7373911		buttonClicked
+		p	1			button
+	m	(IIILjava/lang/String;)Lnet/minecraft/realms/RealmsButton;	m_8782595		newButton
+		p	0			id
+		p	1			x
+		p	2			y
+		p	3			message
+	m	(IIIIILjava/lang/String;)Lnet/minecraft/realms/RealmsButton;	m_1938787		newButton
+		p	0			id
+		p	1			x
+		p	2			y
+		p	3			width
+		p	4			height
+		p	5			message
+	m	()V	m_3600448		clear
+	m	(Lnet/minecraft/realms/RealmsButton;)V	m_1237794		addButton
+		p	1			button
+	m	()Ljava/util/List;	m_0144328		getButtons
+	m	(Lnet/minecraft/realms/RealmsButton;)V	m_3097865		removeButton
+		p	1			button
+	m	(IIII)Lnet/minecraft/realms/RealmsEditBox;	m_8056591		newEditBox
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
-		p	5			p_5
-		p	6			p_6
-		p	7			p_7
-		p	8			p_8
-		p	9			p_9
-	m	(IIFFIIFF)V	m_3407956		m_3407956
-		p	0			p_0
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
-		p	6			p_6
-		p	7			p_7
-	m	(IIIIII)V	m_3623311		m_3623311
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
-		p	6			p_6
-	m	()V	m_6089101		m_6089101
-	m	()Z	m_7036868		m_7036868
-	m	(I)V	m_3431737		m_3431737
-		p	1			p_1
-	m	(IIF)V	m_9230983		m_9230983
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-	m	(Lnet/minecraft/unmapped/C_2750078;II)V	m_7221746		m_7221746
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-	m	(Ljava/lang/String;II)V	m_0035095		m_0035095
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-	m	(Ljava/util/List;II)V	m_1486563		m_1486563
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-	m	(Ljava/lang/String;)V	m_6440925		m_6440925
-		p	0			p_0
-	m	(Ljava/lang/String;)V	m_1470630		m_1470630
-		p	0			p_0
-	m	()V	m_6129640		m_6129640
-	m	()I	m_3748360		m_3748360
-	m	()I	m_9505268		m_9505268
-	m	()I	m_5647894		m_5647894
-	m	(Ljava/lang/String;)I	m_7331234		m_7331234
-		p	1			p_1
-	m	(Ljava/lang/String;III)V	m_3480529		m_3480529
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-	m	(Ljava/lang/String;I)Ljava/util/List;	m_1154809		m_1154809
-		p	1			p_1
-		p	2			p_2
-	m	(Lnet/minecraft/realms/RealmsButton;)V	m_7373911		m_7373911
-		p	1			p_1
-	m	(IIILjava/lang/String;)Lnet/minecraft/realms/RealmsButton;	m_8782595		m_8782595
-		p	0			p_0
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-	m	(IIIIILjava/lang/String;)Lnet/minecraft/realms/RealmsButton;	m_1938787		m_1938787
-		p	0			p_0
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
-	m	()V	m_3600448		m_3600448
-	m	(Lnet/minecraft/realms/RealmsButton;)V	m_1237794		m_1237794
-		p	1			p_1
-	m	()Ljava/util/List;	m_0144328		m_0144328
-	m	(Lnet/minecraft/realms/RealmsButton;)V	m_3097865		m_3097865
-		p	1			p_1
-	m	(IIII)Lnet/minecraft/realms/RealmsEditBox;	m_8056591		m_8056591
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-	m	(III)V	m_7742925		m_7742925
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-	m	()V	m_2513182		m_2513182
-	m	()V	m_4839590		m_4839590
-	m	(III)V	m_8860287		m_8860287
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-	m	(IIIJ)V	m_6470818		m_6470818
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-	m	(CI)V	m_7937999		m_7937999
-		p	1			p_1
-		p	2			p_2
-	m	(ZI)V	m_6946206		m_6946206
-		p	1			p_1
-		p	2			p_2
-	m	(Ljava/lang/String;)Ljava/lang/String;	m_2410536		m_2410536
-		p	0			p_0
-	m	(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;	m_0693465		m_0693465
-		p	0			p_0
-		p	1			p_1
-	m	()Lnet/minecraft/realms/RealmsAnvilLevelStorageSource;	m_9825240		m_9825240
-	m	()V	m_8133791		m_8133791
+	m	(III)V	m_7742925		mouseClicked
+		p	1			mouseX
+		p	2			mouseY
+		p	3			button
+	m	()V	m_2513182		handleMouse
+	m	()V	m_4839590		handleKeyboard
+	m	(III)V	m_8860287		mouseReleased
+		p	1			mouseX
+		p	2			mouseY
+		p	3			button
+	m	(IIIJ)V	m_6470818		mouseDragged
+		p	1			mouseX
+		p	2			mouseY
+		p	3			button
+		p	4			duration
+	m	(CI)V	m_7937999		keyPressed
+		p	1			chr
+		p	2			code
+	m	(ZI)V	m_6946206		confirmResult
+		p	1			result
+		p	2			id
+	m	(Ljava/lang/String;)Ljava/lang/String;	m_2410536		translate
+		p	0			key
+	m	(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;	m_0693465		translate
+		p	0			key
+		p	1			args
+	m	()Lnet/minecraft/realms/RealmsAnvilLevelStorageSource;	m_9825240		newLevelStorageSource
+	m	()V	m_8133791		removed
 c	net/minecraft/realms/RealmsScrolledSelectionList		net/minecraft/realms/RealmsScrolledSelectionList
-	f	Lnet/minecraft/unmapped/C_1250907;	f_9412293		f_9412293
+	f	Lnet/minecraft/unmapped/C_1250907;	f_9412293		proxy
 	m	(IIIII)V	<init>		<init>
 		p	1			width
 		p	2			height
 		p	3			minY
 		p	4			maxY
 		p	5			entryHeight
-	m	(IIF)V	m_9755541		m_9755541
+	m	(IIF)V	m_9755541		render
 		p	1			mouseX
 		p	2			mouseY
 		p	3			tickDelta
-	m	()I	m_9511162		m_9511162
+	m	()I	m_9511162		getWidth
 	m	()I	m_0915268		getMouseY
 	m	()I	m_8795839		getMouseX
-	m	(IIIILnet/minecraft/realms/Tezzelator;II)V	m_6206779		m_6206779
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
-		p	6			p_6
-		p	7			p_7
-	m	(IIIIII)V	m_8146561		m_8146561
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
-		p	6			p_6
-	m	()I	m_7245972		m_7245972
-	m	(IZII)V	m_9840185		m_9840185
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-	m	(I)Z	m_7959389		m_7959389
-		p	1			p_1
-	m	()V	m_1786000		m_1786000
-	m	()I	m_7559756		m_7559756
-	m	()I	m_8069786		m_8069786
+	m	(IIIILnet/minecraft/realms/Tezzelator;II)V	m_6206779		renderEntry
+		p	1			index
+		p	2			x
+		p	3			y
+		p	4			height
+		p	5			tezzelator
+		p	6			mouseX
+		p	7			mouseY
+	m	(IIIIII)V	m_8146561		renderEntry
+		p	1			index
+		p	2			x
+		p	3			y
+		p	4			height
+		p	5			mouseX
+		p	6			mouseY
+	m	()I	m_7245972		size
+	m	(IZII)V	m_9840185		entryClicked
+		p	1			index
+		p	2			doubleClick
+		p	3			mouseX
+		p	4			mouseY
+	m	(I)Z	m_7959389		isEntrySelected
+		p	1			index
+	m	()V	m_1786000		renderBackground
+	m	()I	m_7559756		getHeight
+	m	()I	m_8069786		getScrollbarPosition
 c	net/minecraft/realms/RealmsServerAddress		net/minecraft/realms/RealmsServerAddress
-	f	Ljava/lang/String;	f_1646284		f_1646284
-	f	I	f_2316733		f_2316733
+	f	Ljava/lang/String;	f_1646284		address
+	f	I	f_2316733		port
 	m	(Ljava/lang/String;I)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
-	m	()Ljava/lang/String;	m_5272810		m_5272810
-	m	()I	m_5125876		m_5125876
-	m	(Ljava/lang/String;)Lnet/minecraft/realms/RealmsServerAddress;	m_2600304		m_2600304
+	m	()Ljava/lang/String;	m_5272810		getAddress
+	m	()I	m_5125876		getPort
+	m	(Ljava/lang/String;)Lnet/minecraft/realms/RealmsServerAddress;	m_2600304		parse
 		p	0			address
 	m	(Ljava/lang/String;)[Ljava/lang/String;	m_4760047		m_4760047
 		p	0			p_0
@@ -2482,40 +2482,40 @@ c	net/minecraft/realms/RealmsServerStatusPinger$3352951		3352951
 c	net/minecraft/realms/RealmsSharedConstants		net/minecraft/realms/RealmsSharedConstants
 	f	I	f_2042962		f_2042962
 	f	I	f_2828207		f_2828207
-	f	Ljava/lang/String;	f_0605432		f_0605432
+	f	Ljava/lang/String;	f_0605432		MC_VERSION
 	m	()V	<init>		<init>
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/realms/RealmsSliderButton		net/minecraft/realms/RealmsSliderButton
-	f	F	f_7356962		f_7356962
-	f	Z	f_5871157		f_5871157
-	f	F	f_7564477		f_7564477
-	f	F	f_5147738		f_5147738
+	f	F	f_7356962		value
+	f	Z	f_5871157		dragging
+	f	F	f_7564477		min
+	f	F	f_5147738		max
 	f	I	f_9271156		f_9271156
 	m	(IIIIII)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
+		p	1			id
+		p	2			x
+		p	3			y
+		p	4			width
+		p	5			max
 		p	6			p_6
 	m	(IIIIIIFF)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
+		p	1			id
+		p	2			x
+		p	3			y
+		p	4			width
 		p	5			p_5
-		p	6			p_6
+		p	6			initialValue
 		p	7			p_7
 		p	8			p_8
-	m	()Ljava/lang/String;	m_0816029		m_0816029
-	m	(F)F	m_3651722		m_3651722
-		p	1			p_1
-	m	(F)F	m_8482981		m_8482981
-		p	1			p_1
+	m	()Ljava/lang/String;	m_0816029		getMessage
+	m	(F)F	m_3651722		normalize
+		p	1			value
+	m	(F)F	m_8482981		denormalize
+		p	1			value
 	m	(F)F	m_6042889		m_6042889
-		p	1			p_1
+		p	1			value
 	m	(F)F	m_7260876		m_7260876
-		p	1			p_1
+		p	1			value
 	m	(Z)I	m_0389049		m_0389049
 		p	1			p_1
 	m	(II)V	m_2012711		m_2012711
@@ -2524,8 +2524,8 @@ c	net/minecraft/realms/RealmsSliderButton		net/minecraft/realms/RealmsSliderButt
 	m	(II)V	m_9507460		m_9507460
 		p	1			p_1
 		p	2			p_2
-	m	(F)V	m_0948020		m_0948020
-		p	1			p_1
+	m	(F)V	m_0948020		onChanged
+		p	1			value
 	m	(II)V	m_2593816		m_2593816
 		p	1			p_1
 		p	2			p_2
@@ -2543,12 +2543,12 @@ c	net/minecraft/realms/Tezzelator		net/minecraft/realms/Tezzelator
 	f	Lnet/minecraft/unmapped/C_2334550;	f_5075020		tesselator
 	f	Lnet/minecraft/realms/Tezzelator;	f_3248504		INSTANCE
 	m	()V	<init>		<init>
-	m	()I	m_0427069		m_0427069
-	m	(DDD)V	m_1647186		m_1647186
+	m	()I	m_0427069		end
+	m	(DDD)V	m_1647186		vertex
 		p	1			p_1
 		p	3			p_3
 		p	5			p_5
-	m	(FFFF)V	m_7884939		m_7884939
+	m	(FFFF)V	m_7884939		color
 		p	1			r
 		p	2			g
 		p	3			b
@@ -2557,9 +2557,9 @@ c	net/minecraft/realms/Tezzelator		net/minecraft/realms/Tezzelator
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
-	m	(I)V	m_1380707		m_1380707
+	m	(I)V	m_1380707		texture2
 		p	1			p_1
-	m	(FFF)V	m_6561103		m_6561103
+	m	(FFF)V	m_6561103		normal
 		p	1			x
 		p	2			y
 		p	3			z
@@ -2576,9 +2576,9 @@ c	net/minecraft/realms/Tezzelator		net/minecraft/realms/Tezzelator
 		p	3			p_3
 	m	(Lnet/minecraft/unmapped/C_8373595$C_3679149;)V	m_8310070		m_8310070
 		p	1			p_1
-	m	(I)V	m_0519654		m_0519654
+	m	(I)V	m_0519654		begin
 		p	1			p_1
-	m	()V	m_8180146		m_8180146
+	m	()V	m_8180146		nextVertex
 	m	(DDDDD)V	m_7014097		m_7014097
 		p	1			p_1
 		p	3			p_3
@@ -2588,16 +2588,16 @@ c	net/minecraft/realms/Tezzelator		net/minecraft/realms/Tezzelator
 	m	(II)V	m_3583007		m_3583007
 		p	1			p_1
 		p	2			p_2
-	m	(DDD)V	m_4869462		m_4869462
+	m	(DDD)V	m_4869462		offset
 		p	1			offsetX
 		p	3			offsetY
 		p	5			offsetZ
-	m	(IIII)V	m_9312595		m_9312595
+	m	(IIII)V	m_9312595		copyWithColor
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
-	m	(DD)V	m_0695792		m_0695792
+	m	(DD)V	m_0695792		texture
 		p	1			p_1
 		p	3			p_3
 	m	(BBB)V	m_9059112		m_9059112
@@ -2646,11 +2646,11 @@ c	net/minecraft/unmapped/C_5280294		net/minecraft/server/Eula
 	m	()Z	m_2023881		isAccepted
 	m	()V	m_5261462		write
 	m	()V	<clinit>		<clinit>
-c	net/minecraft/unmapped/C_6894203		net/minecraft/client/gui/screen/WrappedRealmsScreen
-	f	Lnet/minecraft/realms/RealmsScreen;	f_8171489		screen
+c	net/minecraft/unmapped/C_6894203		net/minecraft/realms/RealmsScreenProxy
+	f	Lnet/minecraft/realms/RealmsScreen;	f_8171489		delegate
 	m	(Lnet/minecraft/realms/RealmsScreen;)V	<init>		<init>
-		p	1			screen
-	m	()Lnet/minecraft/realms/RealmsScreen;	m_9300068		get
+		p	1			delegate
+	m	()Lnet/minecraft/realms/RealmsScreen;	m_9300068		getDelegate
 	m	()V	m_2060594		m_2060594
 	m	(Ljava/lang/String;III)V	m_5704326		drawCenteredString
 		p	1			s
@@ -2697,7 +2697,7 @@ c	net/minecraft/unmapped/C_6894203		net/minecraft/client/gui/screen/WrappedRealm
 		p	2			p_2
 		p	3			p_3
 	m	()V	m_7135145		m_7135145
-	m	()I	m_1296946		fontHeight
+	m	()I	m_1296946		getFontHeight
 	m	(Ljava/lang/String;)I	m_6565578		getStringWidth
 		p	1			s
 	m	(Ljava/lang/String;III)V	m_7013784		drawWithShadow
@@ -2754,8 +2754,8 @@ c	net/minecraft/unmapped/C_8925055		net/minecraft/network/packet/s2c/play/TabLis
 	m	()Lnet/minecraft/unmapped/C_9550253;	m_6105907		getFooter
 	m	(Lnet/minecraft/unmapped/C_4443804;)V	m_0240895		m_0240895
 		p	1			p_1
-c	net/minecraft/unmapped/C_9954218		net/minecraft/client/gui/widget/WrappedRealmsButton
-	f	Lnet/minecraft/realms/RealmsButton;	f_4629038		button
+c	net/minecraft/unmapped/C_9954218		net/minecraft/realms/RealmsButtonProxy
+	f	Lnet/minecraft/realms/RealmsButton;	f_4629038		delegate
 	m	(Lnet/minecraft/realms/RealmsButton;IIILjava/lang/String;)V	<init>		<init>
 		p	1			button
 		p	2			id

@@ -494,20 +494,20 @@ c	net/minecraft/unmapped/C_2751481
 	m	()V	m_4520281		renderArms
 	m	(Lnet/minecraft/unmapped/C_6912424;)V	m_7031625		renderLeftArm
 		p	1			arm
-	m	(FLnet/minecraft/unmapped/C_6912424;FLnet/minecraft/unmapped/C_2750078;)V	m_3211656		m_3211656
-		p	1			p_1
+	m	(FLnet/minecraft/unmapped/C_6912424;FLnet/minecraft/unmapped/C_2750078;)V	m_3211656		renderMapInFirstPerson
+		p	1			mainHandHeight
 		p	2			arm
-		p	3			p_3
+		p	3			attackAnimationProgress
 		p	4			item
-	m	(FFF)V	m_9045819		m_9045819
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-	m	(Lnet/minecraft/unmapped/C_2750078;)V	m_5337675		m_5337675
+	m	(FFF)V	m_9045819		renderMapInFirstPerson
+		p	1			pitch
+		p	2			mainHandHeight
+		p	3			attackAnimationProgress
+	m	(Lnet/minecraft/unmapped/C_2750078;)V	m_5337675		renderFilledMap
 		p	1			item
 	m	(FFLnet/minecraft/unmapped/C_6912424;)V	m_8296674		renderHand
-		p	1			p_1
-		p	2			p_2
+		p	1			mainHandHeight
+		p	2			attackAnimationProgress
 		p	3			arm
 	m	(FLnet/minecraft/unmapped/C_6912424;Lnet/minecraft/unmapped/C_2750078;)V	m_1865719		applyDrinkingTransform
 		p	1			tickDelta
@@ -519,7 +519,7 @@ c	net/minecraft/unmapped/C_2751481
 	m	(Lnet/minecraft/unmapped/C_6912424;F)V	m_9533106		setupArmState
 		p	1			arm
 		p	2			handHeight
-	m	(Lnet/minecraft/unmapped/C_7106153;FFLnet/minecraft/unmapped/C_4360192;FLnet/minecraft/unmapped/C_2750078;F)V	m_5376921		m_5376921
+	m	(Lnet/minecraft/unmapped/C_7106153;FFLnet/minecraft/unmapped/C_4360192;FLnet/minecraft/unmapped/C_2750078;F)V	m_5376921		renderHandInFirstPerson
 		p	1			player
 		p	2			tickDelta
 		p	3			pitch
@@ -1073,7 +1073,7 @@ c	net/minecraft/unmapped/C_4357263
 	m	()V	<init>	<init>	
 	m	(Lnet/minecraft/unmapped/C_9550253;)V	<init>		<init>
 		p	1			text
-	m	(I)Lnet/minecraft/unmapped/C_9550253;	m_7148897		m_7148897
+	m	(I)Lnet/minecraft/unmapped/C_9550253;	m_7148897		getHoverText
 		p	1			mouseX
 c	net/minecraft/unmapped/C_4584288
 	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_3544601;FFF)Z	m_9844872	m_9844872	
@@ -1476,9 +1476,9 @@ c	net/minecraft/unmapped/C_6385858
 	m	()Z	m_5697103		isGlowing
 	m	(Ljava/util/UUID;)V	m_3138143		setUuid
 		p	1			uuid
-	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_0336319;Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_4360192;)Lnet/minecraft/unmapped/C_6544668;	m_9473672		interact
+	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_0336319;Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_4360192;)Lnet/minecraft/unmapped/C_6544668;	m_9473672		interactAt
 		p	1			player
-		p	2			facePos
+		p	2			interactionPoint
 		p	3			itemInHand
 		p	4			hand
 	m	(Lnet/minecraft/unmapped/C_0324512;)V	m_1706316		onStartedTrackingBy
@@ -3859,7 +3859,7 @@ c	net/minecraft/unmapped/C_8878495$7180011		7180011
 	m	(Lnet/minecraft/unmapped/C_6385858;)Z	m_1971666		m_1971666
 		p	1			p_1
 	m	(Ljava/lang/Object;)Z	apply		apply
-		p	1			p_1
+		p	1			entity
 c	net/minecraft/unmapped/C_9255863
 	m	(Lnet/minecraft/unmapped/C_1444189;DDDFF)V	m_6533146	m_6533146	
 		p	1		p_1	
@@ -5729,11 +5729,11 @@ c	net/minecraft/unmapped/C_9507262$0598447		0598447
 	f	[I	f_0926870		f_0926870
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_9751000
-	m	(Lnet/minecraft/unmapped/C_1013763;Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_2232601$C_8537563;Lnet/minecraft/unmapped/C_6912424;)V	m_9673156		m_9673156
-		p	1			p_1
+	m	(Lnet/minecraft/unmapped/C_1013763;Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_2232601$C_8537563;Lnet/minecraft/unmapped/C_6912424;)V	m_9673156		render
+		p	1			entity
 		p	2			p_2
-		p	3			p_3
-		p	4			p_4
+		p	3			transform
+		p	4			arm
 c	net/minecraft/unmapped/C_2019151
 	m	(FFFFLjava/util/List;)V	m_1733328	renderQuads	
 		p	1		brightness	
@@ -6090,7 +6090,7 @@ c	net/minecraft/unmapped/C_6781194
 	f	Lnet/minecraft/unmapped/C_9077418;	f_5217188	CLASS_GENERATION_MARKER	
 	f	Ljava/lang/String;	f_7919523		MISSING_MODEL_MESH
 	f	Ljava/util/Map;	f_5550162		f_5550162
-	f	Ljava/lang/String;	f_8064295		f_8064295
+	f	Ljava/lang/String;	f_8064295		MARKER_MODEL_MESH
 	m	()V	m_1677214	loadBlockModels	
 	m	(Ljava/util/Collection;)V	m_9213616	registerVariants	
 		p	1		locations	
@@ -6104,20 +6104,20 @@ c	net/minecraft/unmapped/C_6781194
 	m	()V	m_4922299		m_4922299
 	m	()V	m_0860733		m_0860733
 	m	(Lnet/minecraft/unmapped/C_6390485;Lnet/minecraft/unmapped/C_0544489;)V	m_1677214		loadBlockModels
-		p	1			p_1
-		p	2			p_2
+		p	1			original
+		p	2			multiVariant
 	m	(Ljava/lang/String;Lnet/minecraft/unmapped/C_0561170;Lnet/minecraft/unmapped/C_0561170;)V	m_9679684		loadItemModel
 		p	1			variant
 		p	2			location
 		p	3			item
 	m	()V	m_8881047		m_8881047
 	m	(Lnet/minecraft/unmapped/C_0544489;Ljava/lang/String;)Lnet/minecraft/unmapped/C_8675191;	m_3741953		m_3741953
-		p	1			p_1
-		p	2			p_2
-	m	(Ljava/util/Deque;Ljava/util/Set;Lnet/minecraft/unmapped/C_9077418;)V	m_4347973		m_4347973
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+		p	1			multiVariant
+		p	2			model
+	m	(Ljava/util/Deque;Ljava/util/Set;Lnet/minecraft/unmapped/C_9077418;)V	m_4347973		addParentLocation
+		p	1			dest
+		p	2			filter
+		p	3			model
 c	net/minecraft/unmapped/C_6781194$6755062		6755062
 	f	Lnet/minecraft/unmapped/C_0561170;	f_5240918		f_5240918
 	f	Lnet/minecraft/unmapped/C_6781194;	f_0224416		f_0224416
@@ -6127,7 +6127,7 @@ c	net/minecraft/unmapped/C_6781194$6755062		6755062
 	m	(Lnet/minecraft/unmapped/C_6390485;)Z	m_9605796		m_9605796
 		p	1			p_1
 	m	(Ljava/lang/Object;)Z	apply		apply
-		p	1			p_1
+		p	1			id
 c	net/minecraft/unmapped/C_6852201
 	m	(ILnet/minecraft/unmapped/C_0561170;I)V	<init>	<init>	
 		p	1		id	
@@ -6175,10 +6175,10 @@ c	net/minecraft/unmapped/C_2232601
 	m	(Lnet/minecraft/unmapped/C_8254035;Z)V	m_6540351		apply
 		p	0			transformation
 		p	1			mirror
-	m	(FFF)Lorg/lwjgl/util/vector/Quaternion;	m_7261317		m_7261317
-		p	0			p_0
-		p	1			p_1
-		p	2			p_2
+	m	(FFF)Lorg/lwjgl/util/vector/Quaternion;	m_7261317		makeRotationQuaternion
+		p	0			rotateX
+		p	1			rotateY
+		p	2			rotateZ
 c	net/minecraft/unmapped/C_2232601$C_8537563
 	f	Lnet/minecraft/unmapped/C_2232601$C_8537563;	f_9055374	THIRD_PERSON	
 	f	Lnet/minecraft/unmapped/C_2232601$C_8537563;	f_0574736	FIRST_PERSON	
@@ -7491,15 +7491,15 @@ c	net/minecraft/unmapped/C_4568975		net/minecraft/entity/projectile/SpectralArro
 	m	(Lnet/minecraft/unmapped/C_2800860;)V	m_4059289		m_4059289
 		p	1			p_1
 c	net/minecraft/unmapped/C_4618849		net/minecraft/entity/ai/goal/BowAttackGoal
-	f	Lnet/minecraft/unmapped/C_0258789;	f_9016724		f_9016724
+	f	Lnet/minecraft/unmapped/C_0258789;	f_9016724		mobEntity
 	f	Lnet/minecraft/unmapped/C_1013763;	f_7312224		f_7312224
-	f	I	f_5346857		f_5346857
-	f	D	f_7195571		f_7195571
-	f	I	f_6296172		f_6296172
+	f	I	f_5346857		attackCountdown
+	f	D	f_7195571		speed
+	f	I	f_6296172		targetVisibleTicks
 	f	I	f_2401943		attackInterval
 	f	I	f_9280970		f_9280970
 	f	F	f_1228062		f_1228062
-	f	F	f_9785254		f_9785254
+	f	F	f_9785254		maxDistance
 	m	(Lnet/minecraft/unmapped/C_0258789;DIIF)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
@@ -7507,7 +7507,7 @@ c	net/minecraft/unmapped/C_4618849		net/minecraft/entity/ai/goal/BowAttackGoal
 		p	5			p_5
 		p	6			p_6
 	m	()Z	m_5896190		m_5896190
-	m	()Z	m_5630569		m_5630569
+	m	()Z	m_5630569		canDoRangedAttack
 	m	()Z	m_1332509		m_1332509
 	m	()V	m_5289183		m_5289183
 	m	()V	m_2223255		m_2223255
@@ -7790,7 +7790,7 @@ c	net/minecraft/unmapped/C_5215591		net/minecraft/client/render/entity/ShulkerRe
 c	net/minecraft/unmapped/C_5215591$3418587		3418587
 	f	[I	f_7050695		f_7050695
 	m	()V	<clinit>		<clinit>
-c	net/minecraft/unmapped/C_5215591$C_0649834		C_0649834
+c	net/minecraft/unmapped/C_5215591$C_0649834		HeadLayer
 	f	Lnet/minecraft/unmapped/C_5215591;	f_9362010		f_9362010
 	m	(Lnet/minecraft/unmapped/C_5215591;)V	<init>		<init>
 		p	1			p_1

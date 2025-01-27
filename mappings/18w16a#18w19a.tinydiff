@@ -539,9 +539,9 @@ c	net/minecraft/unmapped/C_9589891
 		p	2			p_2
 		p	3			p_3
 c	net/minecraft/unmapped/C_9746149
-	m	(Lnet/minecraft/unmapped/C_9571530;Ljava/lang/String;)V	m_6128041	m_6128041	
-		p	0		p_0	
-		p	1		p_1	
+	m	(Lnet/minecraft/unmapped/C_9571530;Ljava/lang/String;)V	m_6128041	registerSchema	
+		p	0		dfu	
+		p	1		subtype	
 c	net/minecraft/unmapped/C_9764049
 	m	()Lnet/minecraft/unmapped/C_9264598;	m_3079613	m_3079613	
 	m	(Lnet/minecraft/unmapped/C_9264598$C_1068461;)V	m_3079613		m_3079613
@@ -1139,8 +1139,8 @@ c	net/minecraft/unmapped/C_3828683
 	m	(Lnet/minecraft/unmapped/C_9571530;)V	m_4372780	registerSchema	
 		p	0		dfu	
 c	net/minecraft/realms/RealmsEditBox
-	m	(Z)V	m_0768278	m_0768278	
-		p	1		p_1	
+	m	(Z)V	m_0768278	setFocused	
+		p	1		focused	
 	m	()Lnet/minecraft/unmapped/C_7283471;	m_3873344		m_3873344
 c	net/minecraft/realms/RealmsScreen
 	m	(Lnet/minecraft/realms/RealmsGuiEventListener;)V	m_3763531		m_3763531
@@ -1375,8 +1375,8 @@ c	net/minecraft/unmapped/C_1739414
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_2800860;)Lnet/minecraft/unmapped/C_2800860;	m_1398202		m_1398202
 		p	0			p_0
-c	net/minecraft/unmapped/C_2007379	net/minecraft/unmapped/C_2007379	
-	f	[Ljava/lang/String;	f_4324271	f_4324271	
+c	net/minecraft/unmapped/C_2007379	net/minecraft/util/datafix/fixes/EntityInventoryFix	
+	f	[Ljava/lang/String;	f_4324271	inventoryIds	
 	m	(Lnet/minecraft/unmapped/C_6586859;Lnet/minecraft/unmapped/C_2800860;I)Lnet/minecraft/unmapped/C_2800860;	m_1241881	m_1241881	
 		p	1		p_1	
 		p	2		p_2	
@@ -1385,15 +1385,15 @@ c	net/minecraft/unmapped/C_2007379	net/minecraft/unmapped/C_2007379
 		p	1		p_1	
 		p	2		p_2	
 c	net/minecraft/unmapped/C_2169272
-	f	Ljava/util/Map;	f_2387427	f_2387427	
-	f	Ljava/util/function/Function;	f_2387427		f_2387427
+	f	Ljava/util/Map;	f_2387427	NEW_IDS	
+	f	Ljava/util/function/Function;	f_2387427		NEW_IDS
 	m	(Lnet/minecraft/unmapped/C_6586859;Lnet/minecraft/unmapped/C_2800860;I)Lnet/minecraft/unmapped/C_2800860;	m_9585413	m_9585413	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
-	m	(ILjava/lang/String;)Ljava/lang/String;	m_9148558	m_9148558	
+	m	(ILjava/lang/String;)Ljava/lang/String;	m_9148558	convert	
 		p	0		version	
-		p	1		p_1	
+		p	1		id	
 	m	()V	m_9493160		m_9493160
 	m	(Lnet/minecraft/unmapped/C_2367458;Ljava/util/Map;Ljava/lang/String;)V	m_0325533		m_0325533
 		p	0			p_0
@@ -1438,13 +1438,13 @@ c	net/minecraft/unmapped/C_2755649
 		p	0			p_0
 		p	1			p_1
 		p	2			p_2
-c	net/minecraft/unmapped/C_4254222	net/minecraft/unmapped/C_4254222	
-	f	Lnet/minecraft/unmapped/C_0561170;	f_6049078	f_6049078	
+c	net/minecraft/unmapped/C_4254222	net/minecraft/util/datafix/fixes/EntityNbtKeyFix	
+	f	Lnet/minecraft/unmapped/C_0561170;	f_6049078	entityId	
 	m	(Lnet/minecraft/unmapped/C_6586859;Lnet/minecraft/unmapped/C_2800860;I)Lnet/minecraft/unmapped/C_2800860;	m_9585413	m_9585413	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
-	m	(Lnet/minecraft/unmapped/C_6586859;Lnet/minecraft/unmapped/C_2800860;I)Lnet/minecraft/unmapped/C_2800860;	m_1241881	m_1241881	
+	m	(Lnet/minecraft/unmapped/C_6586859;Lnet/minecraft/unmapped/C_2800860;I)Lnet/minecraft/unmapped/C_2800860;	m_1241881	runFix	
 		p	1		df	
 		p	2		data	
 		p	3		version	
@@ -1482,8 +1482,8 @@ c	net/minecraft/unmapped/C_4603311
 	m	(Lnet/minecraft/unmapped/C_2367458;)Lnet/minecraft/unmapped/C_4932706;	m_5264018		m_5264018
 		p	1			p_1
 	m	()Ljava/lang/String;	m_6296800		m_6296800
-c	net/minecraft/unmapped/C_5032371	net/minecraft/unmapped/C_5032371	
-	f	[Ljava/lang/String;	f_7602319	f_7602319	
+c	net/minecraft/unmapped/C_5032371	net/minecraft/util/datafix/fixes/EntitySlotFix	
+	f	[Ljava/lang/String;	f_7602319	slotInventoryId	
 	m	(Lnet/minecraft/unmapped/C_6586859;Lnet/minecraft/unmapped/C_2800860;I)Lnet/minecraft/unmapped/C_2800860;	m_1241881	m_1241881	
 		p	1		p_1	
 		p	2		p_2	
@@ -1663,7 +1663,7 @@ c	net/minecraft/unmapped/C_9571530
 	m	(Lnet/minecraft/unmapped/C_2182729;)V	m_0142049		m_0142049
 		p	1			p_1
 	m	()Lit/unimi/dsi/fastutil/ints/IntSortedSet;	m_0841677		m_0841677
-c	net/minecraft/unmapped/C_9668676	net/minecraft/unmapped/C_9668676	
+c	net/minecraft/unmapped/C_9668676	net/minecraft/util/datafix/fixes/ItemSpawnFix	
 	f	Lorg/apache/logging/log4j/Logger;	f_6019181	LOGGER	
 	m	()V	<init>	<init>	
 	m	(Lnet/minecraft/unmapped/C_6586859;Lnet/minecraft/unmapped/C_2800860;I)Lnet/minecraft/unmapped/C_2800860;	m_9585413	m_9585413	

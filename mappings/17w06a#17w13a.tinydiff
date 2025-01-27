@@ -1344,7 +1344,7 @@ c	net/minecraft/unmapped/C_0561170
 	m	(Lnet/minecraft/unmapped/C_0561170;)I	m_7511151		m_7511151
 		p	1			p_1
 	m	(Ljava/lang/Object;)I	compareTo		compareTo
-		p	1			p_1
+		p	1			other
 c	net/minecraft/unmapped/C_0561170$C_4969696		Serializer
 	m	()V	<init>		<init>
 	m	(Lcom/google/gson/JsonElement;Ljava/lang/reflect/Type;Lcom/google/gson/JsonDeserializationContext;)Lnet/minecraft/unmapped/C_0561170;	m_3258983		m_3258983
@@ -1356,13 +1356,13 @@ c	net/minecraft/unmapped/C_0561170$C_4969696		Serializer
 		p	2			p_2
 		p	3			p_3
 	m	(Ljava/lang/Object;Ljava/lang/reflect/Type;Lcom/google/gson/JsonSerializationContext;)Lcom/google/gson/JsonElement;	serialize		serialize
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+		p	1			id
+		p	2			type
+		p	3			ctx
 	m	(Lcom/google/gson/JsonElement;Ljava/lang/reflect/Type;Lcom/google/gson/JsonDeserializationContext;)Ljava/lang/Object;	deserialize		deserialize
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+		p	1			element
+		p	2			type
+		p	3			ctx
 c	net/minecraft/unmapped/C_6176478
 	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_0486542;	m_7864260		getLanguage
 		p	1			language
@@ -1805,13 +1805,13 @@ c	net/minecraft/unmapped/C_3754158
 	m	(Lnet/minecraft/unmapped/C_3754158$C_9591274;)V	m_4001711	enableTexGen	
 		p	0		texGen	
 c	net/minecraft/realms/RealmsButton
-	m	(II)V	m_7541868	m_7541868	
+	m	(II)V	m_7541868	render	
 		p	1		p_1	
 		p	2		p_2	
-	m	(IIF)V	m_7541868		m_7541868
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+	m	(IIF)V	m_7541868		render
+		p	1			mouseX
+		p	2			mouseY
+		p	3			tickDelta
 c	net/minecraft/unmapped/C_1250907
 	m	(IIIIII)V	m_4150503	m_4150503	
 		p	1		p_1	
@@ -2238,9 +2238,9 @@ c	net/minecraft/unmapped/C_0625698		net/minecraft/client/render/entity/ParrotRen
 	m	(Lnet/minecraft/unmapped/C_0008241;F)F	m_3623698		m_3623698
 		p	1			p_1
 		p	2			p_2
-	m	(Lnet/minecraft/unmapped/C_0008241;F)F	m_5679140		m_5679140
-		p	1			p_1
-		p	2			p_2
+	m	(Lnet/minecraft/unmapped/C_0008241;F)F	m_5679140		getBobReal
+		p	1			entity
+		p	2			tickDelta
 	m	(Lnet/minecraft/unmapped/C_1013763;F)F	m_2840569		m_2840569
 		p	1			p_1
 		p	2			p_2
@@ -2449,14 +2449,14 @@ c	net/minecraft/unmapped/C_1307760		net/minecraft/entity/ai/pathing/FlyNodeEvalu
 		p	8			p_8
 		p	9			p_9
 		p	10			p_10
-	m	(Lnet/minecraft/unmapped/C_2587956;Lnet/minecraft/unmapped/C_6707278;)Lnet/minecraft/unmapped/C_6124529;	m_9438444		m_9438444
-		p	1			p_1
+	m	(Lnet/minecraft/unmapped/C_2587956;Lnet/minecraft/unmapped/C_6707278;)Lnet/minecraft/unmapped/C_6124529;	m_9438444		getBlockingType
+		p	1			mob
 		p	2			pos
-	m	(Lnet/minecraft/unmapped/C_2587956;III)Lnet/minecraft/unmapped/C_6124529;	m_6682605		m_6682605
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
+	m	(Lnet/minecraft/unmapped/C_2587956;III)Lnet/minecraft/unmapped/C_6124529;	m_6682605		getBlockingType
+		p	1			mob
+		p	2			x
+		p	3			y
+		p	4			z
 	m	(Lnet/minecraft/unmapped/C_2627205;III)Lnet/minecraft/unmapped/C_6124529;	m_9289876		m_9289876
 		p	1			p_1
 		p	2			p_2
@@ -2921,9 +2921,9 @@ c	net/minecraft/unmapped/C_4231952		net/minecraft/client/gui/screen/Advancements
 	f	Lnet/minecraft/unmapped/C_4900540;	f_1610157		advancements
 	f	Ljava/util/Map;	f_3903374		tabs
 	f	Lnet/minecraft/unmapped/C_4703972;	f_2629017		currentTab
-	f	I	f_1427220		f_1427220
-	f	I	f_4867646		f_4867646
-	f	Z	f_0618832		f_0618832
+	f	I	f_1427220		offsetX
+	f	I	f_4867646		offsetY
+	f	Z	f_0618832		dragging
 	m	(Lnet/minecraft/unmapped/C_4900540;)V	<init>		<init>
 		p	1			advancements
 	m	()V	m_2060594		m_2060594
@@ -2939,15 +2939,15 @@ c	net/minecraft/unmapped/C_4231952		net/minecraft/client/gui/screen/Advancements
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
-	m	(IIII)V	m_7418605		m_7418605
-		p	1			p_1
-		p	2			p_2
+	m	(IIII)V	m_7418605		renderTabContents
+		p	1			mouseX
+		p	2			mouseY
 		p	3			x
 		p	4			y
-	m	(II)V	m_9133138		m_9133138
+	m	(II)V	m_9133138		renderTabs
 		p	1			x
 		p	2			y
-	m	(IIII)V	m_3467257		m_3467257
+	m	(IIII)V	m_3467257		renderTooltips
 		p	1			mouseX
 		p	2			mouseY
 		p	3			x
@@ -2964,9 +2964,9 @@ c	net/minecraft/unmapped/C_4231952		net/minecraft/client/gui/screen/Advancements
 		p	1			p_1
 		p	2			p_2
 	m	()V	m_0180901		m_0180901
-	m	(Lnet/minecraft/unmapped/C_1322485;)Lnet/minecraft/unmapped/C_8249166;	m_0657863		m_0657863
+	m	(Lnet/minecraft/unmapped/C_1322485;)Lnet/minecraft/unmapped/C_8249166;	m_0657863		findAdvancementWidget
 		p	1			advancement
-	m	(Lnet/minecraft/unmapped/C_1322485;)Lnet/minecraft/unmapped/C_4703972;	m_0506181		m_0506181
+	m	(Lnet/minecraft/unmapped/C_1322485;)Lnet/minecraft/unmapped/C_4703972;	m_0506181		findAdvancementTab
 		p	1			advancement
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_4246226		net/minecraft/advancement/criterion/ItemPredicate
@@ -3540,7 +3540,7 @@ c	net/minecraft/unmapped/C_5543892		net/minecraft/advancement/criterion/Impossib
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_5543892$C_5735691		Instance
 	m	()V	<init>		<init>
-c	net/minecraft/unmapped/C_5585822		net/minecraft/living/mob/passive/animal/FlyingAnimal
+c	net/minecraft/unmapped/C_5585822		net/minecraft/entity/living/mob/passive/animal/FlyingAnimal
 c	net/minecraft/unmapped/C_5613573		net/minecraft/unmapped/C_5613573
 	m	()V	<init>		<init>
 	m	(Lnet/minecraft/unmapped/C_0512768;Lnet/minecraft/unmapped/C_0512768;)I	m_8139858		m_8139858
@@ -3813,11 +3813,11 @@ c	net/minecraft/unmapped/C_6333845		net/minecraft/client/gui/overlay/RecipeOverl
 	m	(II)V	m_9661580		render
 		p	1			p_1
 		p	2			p_2
-	m	(IIIIII)V	m_6996208		m_6996208
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
+	m	(IIIIII)V	m_6996208		drawOverlay
+		p	1			x
+		p	2			y
+		p	3			width
+		p	4			height
 		p	5			u
 		p	6			v
 	m	(III)V	m_4554797		m_4554797
@@ -4174,10 +4174,10 @@ c	net/minecraft/unmapped/C_8249166		net/minecraft/client/gui/screen/AdvancementW
 		p	2			p_2
 		p	3			p_3
 	m	(IIII)Z	m_8069693		isHovered
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
+		p	1			scrollX
+		p	2			scrollY
+		p	3			x
+		p	4			y
 	m	()V	m_5810131		attach
 	m	()I	m_6809817		getY
 	m	()I	m_0709416		getX

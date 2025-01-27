@@ -98,18 +98,18 @@ c	net/minecraft/unmapped/C_9163613
 	m	(Lnet/minecraft/unmapped/C_6447889;)V	m_3803478	handleCompressionThreshold	
 		p	1		packet	
 c	net/minecraft/unmapped/C_1572627
-	f	[Lnet/minecraft/unmapped/C_1572627$C_2478639;	f_2026707		f_2026707
-	f	Lnet/minecraft/unmapped/C_1572627$C_2478639;	f_3969948		f_3969948
+	f	[Lnet/minecraft/unmapped/C_1572627$C_2478639;	f_2026707		FIXUPS
+	f	Lnet/minecraft/unmapped/C_1572627$C_2478639;	f_3969948		UNCHANGED
 	f	Lnet/minecraft/unmapped/C_1572627$C_2478639;	f_7688263		f_7688263
 	f	Lnet/minecraft/unmapped/C_1572627$C_2478639;	f_7588226		f_7588226
 	f	Lnet/minecraft/unmapped/C_1572627$C_2478639;	f_1186374		f_1186374
-	m	(Lnet/minecraft/unmapped/C_2334768;Lnet/minecraft/unmapped/C_3544601;Lnet/minecraft/unmapped/C_1572627$C_2478639;)V	m_2312187		m_2312187
-		p	0			p_0
-		p	1			p_1
-		p	2			p_2
-	m	(Lnet/minecraft/unmapped/C_2334768;Lnet/minecraft/unmapped/C_3544601;)I	m_0687027		m_0687027
-		p	0			p_0
-		p	1			p_1
+	m	(Lnet/minecraft/unmapped/C_2334768;Lnet/minecraft/unmapped/C_3544601;Lnet/minecraft/unmapped/C_1572627$C_2478639;)V	m_2312187		setupFixup
+		p	0			rotation
+		p	1			face
+		p	2			fixup
+	m	(Lnet/minecraft/unmapped/C_2334768;Lnet/minecraft/unmapped/C_3544601;)I	m_0687027		calcFixupIndex
+		p	0			rotation
+		p	1			face
 c	net/minecraft/unmapped/C_1572627$9162616
 	f	[I	f_3925016	f_3925016	
 c	net/minecraft/unmapped/C_1572627$0508752		0508752
@@ -140,15 +140,15 @@ c	net/minecraft/unmapped/C_1572627$9420604		9420604
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
-c	net/minecraft/unmapped/C_1572627$C_2478639		C_2478639
+c	net/minecraft/unmapped/C_1572627$C_2478639		CoordinateFixup
 	m	()V	<init>		<init>
-	m	(Lnet/minecraft/unmapped/C_2831109;)Lnet/minecraft/unmapped/C_2831109;	m_6571376		m_6571376
-		p	1			p_1
-	m	(FFFF)Lnet/minecraft/unmapped/C_2831109;	m_2460981		m_2460981
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
+	m	(Lnet/minecraft/unmapped/C_2831109;)Lnet/minecraft/unmapped/C_2831109;	m_6571376		apply
+		p	1			texCoords
+	m	(FFFF)Lnet/minecraft/unmapped/C_2831109;	m_2460981		apply
+		p	1			u0
+		p	2			v0
+		p	3			u1
+		p	4			v1
 	m	(Lnet/minecraft/unmapped/C_1572627$9420604;)V	<init>		<init>
 		p	1			p_1
 c	net/minecraft/unmapped/C_2441996

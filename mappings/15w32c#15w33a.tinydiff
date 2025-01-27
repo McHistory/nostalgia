@@ -372,7 +372,7 @@ c	net/minecraft/unmapped/C_3438842$0354976		0354976
 	m	(Lnet/minecraft/unmapped/C_6385858;)Z	m_8861017		m_8861017
 		p	1			p_1
 	m	(Ljava/lang/Object;)Z	apply		apply
-		p	1			p_1
+		p	1			entity
 c	net/minecraft/unmapped/C_1846829
 	f	Ljava/nio/FloatBuffer;	f_8580263		MODELVIEW
 	f	Ljava/nio/FloatBuffer;	f_7575629		PROJECTION
@@ -478,8 +478,8 @@ c	net/minecraft/unmapped/C_1739414		net/minecraft/util/datafix/fixes/StringUuidF
 	m	()I	m_5344326		m_5344326
 	m	(Lnet/minecraft/unmapped/C_2800860;)Lnet/minecraft/unmapped/C_2800860;	m_3031479		m_3031479
 		p	1			p_1
-c	net/minecraft/unmapped/C_2007379		net/minecraft/unmapped/C_2007379
-	f	[Ljava/lang/String;	f_4324271		f_4324271
+c	net/minecraft/unmapped/C_2007379		net/minecraft/util/datafix/fixes/EntityInventoryFix
+	f	[Ljava/lang/String;	f_4324271		inventoryIds
 	m	(Ljava/lang/String;[Ljava/lang/String;)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
@@ -546,11 +546,11 @@ c	net/minecraft/unmapped/C_2011750		net/minecraft/entity/AreaEffectCloudEntity
 	m	(I)V	m_8901560		m_8901560
 		p	1			p_1
 	m	()V	<clinit>		<clinit>
-c	net/minecraft/unmapped/C_2169272		net/minecraft/unmapped/C_2169272
+c	net/minecraft/unmapped/C_2169272		net/minecraft/util/datafix/fixes/ItemBlockEntityTagFix
 	f	Lorg/apache/logging/log4j/Logger;	f_9671987		LOGGER
-	f	Ljava/util/Map;	f_9039676		f_9039676
+	f	Ljava/util/Map;	f_9039676		OLD_IDS
 	m	()V	<init>		<init>
-	m	(Ljava/lang/String;)Ljava/lang/String;	m_9148558		m_9148558
+	m	(Ljava/lang/String;)Ljava/lang/String;	m_9148558		convert
 		p	0			p_0
 	m	(Lnet/minecraft/unmapped/C_6586859;Lnet/minecraft/unmapped/C_2800860;I)Lnet/minecraft/unmapped/C_2800860;	m_9585413		m_9585413
 		p	1			p_1
@@ -593,8 +593,8 @@ c	net/minecraft/unmapped/C_4240907		net/minecraft/entity/living/mob/monster/boss
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
-c	net/minecraft/unmapped/C_4254222		net/minecraft/unmapped/C_4254222
-	f	Ljava/lang/String;	f_6049078		f_6049078
+c	net/minecraft/unmapped/C_4254222		net/minecraft/util/datafix/fixes/EntityNbtKeyFix
+	f	Ljava/lang/String;	f_6049078		entityId
 	f	Ljava/lang/String;	f_7385438		f_7385438
 	m	(Ljava/lang/String;Ljava/lang/String;)V	<init>		<init>
 		p	1			p_1
@@ -603,7 +603,7 @@ c	net/minecraft/unmapped/C_4254222		net/minecraft/unmapped/C_4254222
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
-	m	(Lnet/minecraft/unmapped/C_6586859;Lnet/minecraft/unmapped/C_2800860;I)Lnet/minecraft/unmapped/C_2800860;	m_1241881		m_1241881
+	m	(Lnet/minecraft/unmapped/C_6586859;Lnet/minecraft/unmapped/C_2800860;I)Lnet/minecraft/unmapped/C_2800860;	m_1241881		runFix
 		p	1			df
 		p	2			data
 		p	3			version
@@ -627,8 +627,8 @@ c	net/minecraft/unmapped/C_4603311		net/minecraft/util/datafix/References
 		p	1			p_1
 		p	2			p_2
 	m	()V	<clinit>		<clinit>
-c	net/minecraft/unmapped/C_5032371		net/minecraft/unmapped/C_5032371
-	f	[Ljava/lang/String;	f_7602319		f_7602319
+c	net/minecraft/unmapped/C_5032371		net/minecraft/util/datafix/fixes/EntitySlotFix
+	f	[Ljava/lang/String;	f_7602319		slotInventoryId
 	m	(Ljava/lang/String;[Ljava/lang/String;)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
@@ -796,7 +796,7 @@ c	net/minecraft/unmapped/C_9571530		net/minecraft/util/datafix/DataFixerUpper
 		p	1			map
 		p	2			type
 	m	()V	<clinit>		<clinit>
-c	net/minecraft/unmapped/C_9668676		net/minecraft/unmapped/C_9668676
+c	net/minecraft/unmapped/C_9668676		net/minecraft/util/datafix/fixes/ItemSpawnFix
 	f	Lorg/apache/logging/log4j/Logger;	f_6019181		LOGGER
 	f	[Ljava/lang/String;	f_9140153		f_9140153
 	m	()V	<init>		<init>
