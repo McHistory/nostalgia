@@ -36,17 +36,17 @@ c	net/minecraft/unmapped/C_4636105
 	f	I	f_2030272		waterColor
 	m	()I	m_6868205		getWaterColor
 c	net/minecraft/unmapped/C_4917405
-	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_1013763;)Lnet/minecraft/unmapped/C_8675191;	m_6574139		m_6574139
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-	m	(Lnet/minecraft/unmapped/C_2750078;)Lnet/minecraft/unmapped/C_8675191;	m_2636654		m_2636654
-		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_8675191;Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_1013763;)Lnet/minecraft/unmapped/C_8675191;	m_2154879		m_2154879
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
+	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_1013763;)Lnet/minecraft/unmapped/C_8675191;	m_6574139		getInHandModel
+		p	1			item
+		p	2			world
+		p	3			entity
+	m	(Lnet/minecraft/unmapped/C_2750078;)Lnet/minecraft/unmapped/C_8675191;	m_2636654		getModel
+		p	1			item
+	m	(Lnet/minecraft/unmapped/C_8675191;Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_1013763;)Lnet/minecraft/unmapped/C_8675191;	m_2154879		resolveOverrides
+		p	1			model
+		p	2			item
+		p	3			world
+		p	4			entity
 c	net/minecraft/unmapped/C_5009044
 	f	Z	f_0208307		isSubmergedInWater
 	m	()Z	m_6630731		updateWaterSubmersion
@@ -54,7 +54,7 @@ c	net/minecraft/unmapped/C_5009044
 c	net/minecraft/unmapped/C_5102005
 	f	Lnet/minecraft/unmapped/C_5102005;	f_5400229		TROPICAL_FISH
 c	net/minecraft/unmapped/C_5367636
-	f	Ljava/util/List;	f_8770224		tickables
+	f	Ljava/util/List;	f_8770224		ambientSoundHandlers
 	m	()Z	m_6971272		m_6971272
 	m	()Z	m_6630731		m_6630731
 c	net/minecraft/unmapped/C_6385858
@@ -304,7 +304,7 @@ c	net/minecraft/unmapped/C_0845702
 		p	1		p_1	
 	m	(Ljava/util/function/Consumer;)V	m_1453635	m_1453635	
 		p	1		p_1	
-c	net/minecraft/unmapped/C_0245417		net/minecraft/client/entity/living/player/ClientPlayerTickable
+c	net/minecraft/unmapped/C_0245417		net/minecraft/client/sound/AmbientSoundHandler
 	m	()V	m_0798194		tick
 c	net/minecraft/unmapped/C_0263952		net/minecraft/entity/living/mob/water/TropicalFishEntity
 	f	Lnet/minecraft/unmapped/C_6101761;	f_3528172		VARIANT
@@ -514,14 +514,14 @@ c	net/minecraft/unmapped/C_3160872$4065455		4065455
 	f	[I	f_7834047		f_7834047
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_3336547		net/minecraft/client/render/model/entity/TropicalFishModelA
-	f	Lnet/minecraft/unmapped/C_0289174;	f_0525338		f_0525338
-	f	Lnet/minecraft/unmapped/C_0289174;	f_0152436		f_0152436
-	f	Lnet/minecraft/unmapped/C_0289174;	f_2959092		f_2959092
-	f	Lnet/minecraft/unmapped/C_0289174;	f_8521091		f_8521091
-	f	Lnet/minecraft/unmapped/C_0289174;	f_7194288		f_7194288
+	f	Lnet/minecraft/unmapped/C_0289174;	f_0525338		body
+	f	Lnet/minecraft/unmapped/C_0289174;	f_0152436		tail
+	f	Lnet/minecraft/unmapped/C_0289174;	f_2959092		leftFin
+	f	Lnet/minecraft/unmapped/C_0289174;	f_8521091		rightFin
+	f	Lnet/minecraft/unmapped/C_0289174;	f_7194288		topFin
 	m	()V	<init>		<init>
 	m	(F)V	<init>		<init>
-		p	1			p_1
+		p	1			increase
 	m	(Lnet/minecraft/unmapped/C_6385858;FFFFFF)V	m_2324866		m_2324866
 		p	1			p_1
 		p	2			p_2
@@ -594,15 +594,15 @@ c	net/minecraft/unmapped/C_4454841$C_4383716		C_4383716
 		p	2			p_2
 		p	3			p_3
 c	net/minecraft/unmapped/C_4882473		net/minecraft/client/render/model/entity/TropicalFishModelB
-	f	Lnet/minecraft/unmapped/C_0289174;	f_2962863		f_2962863
-	f	Lnet/minecraft/unmapped/C_0289174;	f_6746002		f_6746002
-	f	Lnet/minecraft/unmapped/C_0289174;	f_7722425		f_7722425
-	f	Lnet/minecraft/unmapped/C_0289174;	f_8905585		f_8905585
-	f	Lnet/minecraft/unmapped/C_0289174;	f_3684648		f_3684648
-	f	Lnet/minecraft/unmapped/C_0289174;	f_3982128		f_3982128
+	f	Lnet/minecraft/unmapped/C_0289174;	f_2962863		body
+	f	Lnet/minecraft/unmapped/C_0289174;	f_6746002		tail
+	f	Lnet/minecraft/unmapped/C_0289174;	f_7722425		leftFin
+	f	Lnet/minecraft/unmapped/C_0289174;	f_8905585		rightFin
+	f	Lnet/minecraft/unmapped/C_0289174;	f_3684648		topFin
+	f	Lnet/minecraft/unmapped/C_0289174;	f_3982128		bottomFin
 	m	()V	<init>		<init>
 	m	(F)V	<init>		<init>
-		p	1			p_1
+		p	1			increase
 	m	(Lnet/minecraft/unmapped/C_6385858;FFFFFF)V	m_2324866		m_2324866
 		p	1			p_1
 		p	2			p_2
@@ -692,7 +692,7 @@ c	net/minecraft/unmapped/C_6439270		net/minecraft/world/gen/structure/BuriedTrea
 	f	F	f_8249776		probability
 	m	(F)V	<init>		<init>
 		p	1			probability
-c	net/minecraft/unmapped/C_7774558		net/minecraft/client/sound/AmbientSoundPlayer
+c	net/minecraft/unmapped/C_7774558		net/minecraft/client/sound/AmbientUnderwaterSoundHandler
 	f	Lnet/minecraft/unmapped/C_5367636;	f_6683982		player
 	f	Lnet/minecraft/unmapped/C_5819357;	f_0154614		soundManager
 	f	I	f_2735399		ticksUntilPlay

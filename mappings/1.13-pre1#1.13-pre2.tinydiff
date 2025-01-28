@@ -256,7 +256,7 @@ c	net/minecraft/unmapped/C_1492128
 	m	(Ljava/nio/file/Path;)Z	m_2280274		m_2280274
 		p	0			p_0
 c	net/minecraft/unmapped/C_1947074
-	f	[Lnet/minecraft/unmapped/C_0289174;	f_2513540		f_2513540
+	f	[Lnet/minecraft/unmapped/C_0289174;	f_2513540		riding
 c	net/minecraft/unmapped/C_2587956
 	m	(Lnet/minecraft/unmapped/C_2441996;)Z	m_8845888	m_8845888	
 		p	1		p_1	
@@ -280,7 +280,7 @@ c	net/minecraft/unmapped/C_5251467
 	f	Lnet/minecraft/unmapped/C_3635204;	f_2791920		STRIPPED_ACACIA_WOOD
 	f	Lnet/minecraft/unmapped/C_3635204;	f_1463196		STRIPPED_DARK_OAK_WOOD
 c	net/minecraft/unmapped/C_4393403
-	m	()V	m_2679713		m_2679713
+	m	()V	m_2679713		stopPlaying
 c	net/minecraft/unmapped/C_9689852
 	m	(Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_5250955;Lnet/minecraft/unmapped/C_6707278;)I	m_5858756		m_5858756
 		p	1			p_1
@@ -540,24 +540,24 @@ c	net/minecraft/unmapped/C_0241772$7661462
 		p	1		p_1	
 c	net/minecraft/unmapped/C_7131921
 	f	Ljava/util/Set;	f_9490663		OPEN_OPTIONS
-	m	(Ljava/lang/String;)V	m_7384155	m_7384155	
+	m	(Ljava/lang/String;)V	m_7384155	write	
 		p	1		p_1	
-	m	(Ljava/io/File;)V	m_4128431		m_4128431
-		p	1			p_1
-	m	(Ljava/nio/file/Path;)V	m_7384155		m_7384155
-		p	1			p_1
+	m	(Ljava/io/File;)V	m_4128431		write
+		p	1			file
+	m	(Ljava/nio/file/Path;)V	m_7384155		write
+		p	1			path
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_7131921$3102029		3102029
-c	net/minecraft/unmapped/C_7131921$C_4772938		C_4772938
-	f	Ljava/nio/channels/WritableByteChannel;	f_7091548		f_7091548
-	f	Ljava/io/IOException;	f_7257544		f_7257544
+c	net/minecraft/unmapped/C_7131921$C_4772938		WriteCallback
+	f	Ljava/nio/channels/WritableByteChannel;	f_7091548		output
+	f	Ljava/io/IOException;	f_7257544		exception
 	m	(Ljava/nio/channels/WritableByteChannel;)V	<init>		<init>
-		p	1			p_1
+		p	1			output
 	m	(JJI)V	invoke		invoke
 		p	1			p_1
 		p	3			p_3
 		p	5			p_5
-	m	()V	m_0545727		m_0545727
+	m	()V	m_0545727		throwIfException
 	m	(Ljava/nio/channels/WritableByteChannel;Lnet/minecraft/unmapped/C_7131921$3102029;)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2

@@ -1531,7 +1531,7 @@ c	net/minecraft/unmapped/C_1481722$C_3504752$4884316	4884316
 		p	1		p_1	
 c	net/minecraft/unmapped/C_2105000
 	f	Ljava/lang/String;	f_3398401	modelType	
-	f	Ljava/lang/String;	f_3716162		f_3716162
+	f	Ljava/lang/String;	f_3716162		modelType
 	m	(Lnet/minecraft/unmapped/C_2105000;Ljava/lang/String;)Ljava/lang/String;	m_4938032	m_4938032	
 		p	0		p_0	
 		p	1		p_1	
@@ -2579,12 +2579,12 @@ c	net/minecraft/unmapped/C_6150205$8974155$0060781	0060781
 		p	2		p_2	
 	m	()V	run	run	
 c	net/minecraft/unmapped/C_2019151
-	f	Ljava/lang/ThreadLocal;	f_4628928		f_4628928
-	m	()V	m_0541697		m_0541697
-	m	(Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_9071248;Lnet/minecraft/unmapped/C_6707278;)I	m_5348780		m_5348780
-		p	0			p_0
-		p	1			p_1
-		p	2			p_2
+	f	Ljava/lang/ThreadLocal;	f_4628928		LIGHT_COLOR_CACHE
+	m	()V	m_0541697		clearLightColorCache
+	m	(Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_9071248;Lnet/minecraft/unmapped/C_6707278;)I	m_5348780		getLightColor
+		p	0			state
+		p	1			world
+		p	2			pos
 	m	()Lit/unimi/dsi/fastutil/objects/Object2IntLinkedOpenHashMap;	m_6377091		m_6377091
 	m	(Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_9071248;Lnet/minecraft/unmapped/C_6707278;)I	m_6406978		m_6406978
 		p	0			p_0
@@ -3067,7 +3067,7 @@ c	net/minecraft/unmapped/C_4357086
 		p	3			p_3
 		p	4			p_4
 c	net/minecraft/unmapped/C_4647073
-	f	Ljava/util/Map;	f_7983119		f_7983119
+	f	Ljava/util/Map;	f_7983119		selectorCache
 c	net/minecraft/unmapped/C_4647073$C_4847718		C_4847718
 	f	Lnet/minecraft/unmapped/C_4647073$C_4847718;	f_3799678		f_3799678
 	f	[Lnet/minecraft/unmapped/C_4647073$C_4847718;	f_2416955		f_2416955

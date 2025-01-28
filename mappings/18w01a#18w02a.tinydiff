@@ -2331,7 +2331,7 @@ c	net/minecraft/unmapped/C_9427820
 	f	Lorg/apache/logging/log4j/Logger;	f_7803229		LOGGER
 c	net/minecraft/unmapped/C_8639317
 	f	Lcom/google/common/base/Splitter;	f_0097888	SPLITTER	
-	f	Lcom/google/gson/Gson;	f_4703113		f_4703113
+	f	Lcom/google/gson/Gson;	f_4703113		GSON
 c	net/minecraft/unmapped/C_2469068
 	m	()V	<init>	<init>	
 	m	(Lnet/minecraft/unmapped/C_3635204$C_6799794;)V	<init>		<init>
@@ -2979,8 +2979,8 @@ c	net/minecraft/unmapped/C_4647073$C_4767402
 		p	1		state	
 		p	2		model	
 	m	(Ljava/util/function/Predicate;Lnet/minecraft/unmapped/C_8675191;)V	m_3481734		add
-		p	1			p_1
-		p	2			p_2
+		p	1			predicate
+		p	2			model
 c	net/minecraft/unmapped/C_4830307	net/minecraft/client/render/model/block/AndChainedCondition	
 	f	Ljava/lang/Iterable;	f_9865415	conditions	
 	m	(Ljava/lang/Iterable;)V	<init>	<init>	
@@ -3378,32 +3378,32 @@ c	net/minecraft/unmapped/C_1175303
 		p	3		data	
 		p	4		renderer	
 		p	5		model	
-		p	6		textureLocation	
+		p	6		texture	
 		p	7		type	
-		p	8		handSwingAmount	
-		p	9		handSwing	
+		p	8		walkAnimationProgress	
+		p	9		walkAnimationSpeed	
 		p	10		tickDelta	
-		p	11		age	
+		p	11		bob	
 		p	12		headYaw	
 		p	13		headPitch	
 		p	14		scale	
 		p	15		left	
 	m	(Lnet/minecraft/unmapped/C_5009044;Ljava/util/UUID;Lnet/minecraft/unmapped/C_2800860;Lnet/minecraft/unmapped/C_8191584;Lnet/minecraft/unmapped/C_3239917;Lnet/minecraft/unmapped/C_0561170;Lnet/minecraft/unmapped/C_5102005;FFFFFFFZ)Lnet/minecraft/unmapped/C_1175303$C_3488523;	m_3545583		render
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
-		p	6			p_6
-		p	7			p_7
-		p	8			p_8
-		p	9			p_9
-		p	10			p_10
-		p	11			p_11
-		p	12			p_12
-		p	13			p_13
-		p	14			p_14
-		p	15			p_15
+		p	1			player
+		p	2			uuid
+		p	3			data
+		p	4			renderer
+		p	5			model
+		p	6			texture
+		p	7			type
+		p	8			walkAnimationProgress
+		p	9			walkAnimationSpeed
+		p	10			tickDelta
+		p	11			bob
+		p	12			yaw
+		p	13			pitch
+		p	14			scale
+		p	15			left
 c	net/minecraft/unmapped/C_1175303$C_3488523
 	f	Ljava/lang/Class;	f_5193844	type	
 	f	Lnet/minecraft/unmapped/C_5102005;	f_5193844		type
@@ -3412,15 +3412,15 @@ c	net/minecraft/unmapped/C_1175303$C_3488523
 		p	2		uuid	
 		p	3		renderer	
 		p	4		model	
-		p	5		textureLocation	
+		p	5		texture	
 		p	6		type	
 	m	(Lnet/minecraft/unmapped/C_1175303;Ljava/util/UUID;Lnet/minecraft/unmapped/C_8191584;Lnet/minecraft/unmapped/C_3239917;Lnet/minecraft/unmapped/C_0561170;Lnet/minecraft/unmapped/C_5102005;)V	<init>		<init>
 		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
-		p	6			p_6
+		p	2			uuid
+		p	3			renderer
+		p	4			model
+		p	5			texture
+		p	6			type
 c	net/minecraft/unmapped/C_5197303
 	m	()V	<init>	<init>	
 	m	(Lnet/minecraft/unmapped/C_4030632$C_7918174;)V	<init>		<init>

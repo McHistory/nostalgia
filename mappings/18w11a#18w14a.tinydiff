@@ -12,7 +12,7 @@ c	net/minecraft/unmapped/C_1013763
 		p	1			p_1
 	m	(I)V	m_4914350		m_4914350
 		p	1			p_1
-	m	()Z	m_2060153		m_2060153
+	m	()Z	m_2060153		isDoingSpinAttack
 	m	(IZ)V	m_1711726		m_1711726
 		p	1			p_1
 		p	2			p_2
@@ -35,9 +35,9 @@ c	net/minecraft/unmapped/C_1992549
 c	net/minecraft/unmapped/C_8089590
 	f	Lnet/minecraft/unmapped/C_4030632;	f_0198100		PHANTOM_MEMBRANE
 c	net/minecraft/unmapped/C_1036880
-	m	(Lnet/minecraft/unmapped/C_9071248;Lnet/minecraft/unmapped/C_6707278;)I	m_5292332		m_5292332
-		p	1			p_1
-		p	2			p_2
+	m	(Lnet/minecraft/unmapped/C_9071248;Lnet/minecraft/unmapped/C_6707278;)I	m_5292332		getLightColor
+		p	1			world
+		p	2			pos
 c	net/minecraft/unmapped/C_2424347
 	f	Lnet/minecraft/unmapped/C_8703287;	f_1136247		SLOW_FALLING
 	f	Lnet/minecraft/unmapped/C_8703287;	f_6380732		LONG_FLOW_FALLING
@@ -235,12 +235,12 @@ c	net/minecraft/unmapped/C_6845567$C_7728842		PlayerListener
 		p	1			listener
 	m	(Lnet/minecraft/unmapped/C_2750078;)V	m_0244514		run
 		p	1			item
-c	net/minecraft/unmapped/C_7828198		net/minecraft/unmapped/C_7828198
-	f	Lnet/minecraft/unmapped/C_0561170;	f_2801078		f_2801078
-	f	Lnet/minecraft/unmapped/C_3604011;	f_7042347		f_7042347
-	f	Lnet/minecraft/unmapped/C_7828198$C_2370859;	f_6010407		f_6010407
+c	net/minecraft/unmapped/C_7828198		net/minecraft/client/render/entity/layer/SpinAttackLayer
+	f	Lnet/minecraft/unmapped/C_0561170;	f_2801078		RIPTIDE_TEXTURE
+	f	Lnet/minecraft/unmapped/C_3604011;	f_7042347		renderer
+	f	Lnet/minecraft/unmapped/C_7828198$C_2370859;	f_6010407		model
 	m	(Lnet/minecraft/unmapped/C_3604011;)V	<init>		<init>
-		p	1			p_1
+		p	1			renderer
 	m	(Lnet/minecraft/unmapped/C_7106153;FFFFFFF)V	m_9363204		m_9363204
 		p	1			p_1
 		p	2			p_2
@@ -261,8 +261,8 @@ c	net/minecraft/unmapped/C_7828198		net/minecraft/unmapped/C_7828198
 		p	7			p_7
 		p	8			p_8
 	m	()V	<clinit>		<clinit>
-c	net/minecraft/unmapped/C_7828198$C_2370859		C_2370859
-	f	Lnet/minecraft/unmapped/C_0289174;	f_0396081		f_0396081
+c	net/minecraft/unmapped/C_7828198$C_2370859		Model
+	f	Lnet/minecraft/unmapped/C_0289174;	f_0396081		part
 	m	()V	<init>		<init>
 	m	(Lnet/minecraft/unmapped/C_6385858;FFFFFF)V	m_2324866		m_2324866
 		p	1			p_1

@@ -1058,11 +1058,11 @@ c	net/minecraft/unmapped/C_3571139$C_5673942		C_5673942
 		p	1			p_1
 		p	2			p_2
 c	net/minecraft/unmapped/C_3604011
-	f	F	f_0003599	f_0003599	
-	m	(Lnet/minecraft/unmapped/C_7106153;Lnet/minecraft/unmapped/C_2750078;)Lnet/minecraft/unmapped/C_4590573$C_7881752;	m_8684649	m_8684649	
-		p	1		p_1	
-		p	2		p_2	
-	m	(Lnet/minecraft/unmapped/C_7106153;Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_4360192;)Lnet/minecraft/unmapped/C_4590573$C_7881752;	m_8684649		m_8684649
+	f	F	f_0003599	bodyRotation	
+	m	(Lnet/minecraft/unmapped/C_7106153;Lnet/minecraft/unmapped/C_2750078;)Lnet/minecraft/unmapped/C_4590573$C_7881752;	m_8684649	getArmPose	
+		p	1		player	
+		p	2		itemInHand	
+	m	(Lnet/minecraft/unmapped/C_7106153;Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_4360192;)Lnet/minecraft/unmapped/C_4590573$C_7881752;	m_8684649		getArmPose
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -4481,24 +4481,24 @@ c	net/minecraft/unmapped/C_7491477
 c	net/minecraft/unmapped/C_9225316
 	m	()Lnet/minecraft/unmapped/C_9550253;	m_7744478	getCustomName	
 c	net/minecraft/unmapped/C_1036880
-	m	(Lnet/minecraft/unmapped/C_9071248;Lnet/minecraft/unmapped/C_6707278;)I	m_5292332	m_5292332	
-		p	1		p_1	
-		p	2		p_2	
+	m	(Lnet/minecraft/unmapped/C_9071248;Lnet/minecraft/unmapped/C_6707278;)I	m_5292332	getLightColor	
+		p	1		world	
+		p	2		pos	
 	m	(Lnet/minecraft/unmapped/C_9071248;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_8373595;Lnet/minecraft/unmapped/C_1534020;)Z	m_4873374	render	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
+		p	1		world	
+		p	2		pos	
+		p	3		bufferBuilder	
+		p	4		state	
 	m	(Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_8052515;)F	m_3804482	getLiquidHeight	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
+		p	1		world	
+		p	2		pos	
+		p	3		fluid	
 	m	(Lnet/minecraft/unmapped/C_4744955;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_8373595;Lnet/minecraft/unmapped/C_1534020;)Z	m_4873374		render
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
-	m	(Lnet/minecraft/unmapped/C_4744955;Lnet/minecraft/unmapped/C_6707278;)I	m_5292332		m_5292332
+	m	(Lnet/minecraft/unmapped/C_4744955;Lnet/minecraft/unmapped/C_6707278;)I	m_5292332		getLightColor
 		p	1			p_1
 		p	2			p_2
 	m	(Lnet/minecraft/unmapped/C_5250955;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_8052515;)F	m_3804482		getLiquidHeight
@@ -4515,16 +4515,16 @@ c	net/minecraft/unmapped/C_9697997
 		p	3		miningSprite	
 		p	4		world	
 	m	(Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_9071248;Lnet/minecraft/unmapped/C_8373595;Ljava/util/Random;)Z	m_1848984	tesselate	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-	m	(Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_9071248;Lnet/minecraft/unmapped/C_8373595;Lnet/minecraft/unmapped/C_1534020;)Z	m_8038755	m_8038755	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
+		p	1		state	
+		p	2		pos	
+		p	3		world	
+		p	4		bufferBuilder	
+		p	5		random	
+	m	(Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_9071248;Lnet/minecraft/unmapped/C_8373595;Lnet/minecraft/unmapped/C_1534020;)Z	m_8038755	tesselateLiquid	
+		p	1		pos	
+		p	2		world	
+		p	3		bufferBuilder	
+		p	4		state	
 	m	(Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_3374628;Lnet/minecraft/unmapped/C_4744955;)V	m_2685809		tesselateMining
 		p	1			p_1
 		p	2			p_2
@@ -4536,7 +4536,7 @@ c	net/minecraft/unmapped/C_9697997
 		p	3			p_3
 		p	4			p_4
 		p	5			p_5
-	m	(Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_4744955;Lnet/minecraft/unmapped/C_8373595;Lnet/minecraft/unmapped/C_1534020;)Z	m_8038755		m_8038755
+	m	(Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_4744955;Lnet/minecraft/unmapped/C_8373595;Lnet/minecraft/unmapped/C_1534020;)Z	m_8038755		tesselateLiquid
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -4558,32 +4558,32 @@ c	net/minecraft/unmapped/C_2907104
 		p	1			p_1
 c	net/minecraft/unmapped/C_2019151
 	m	(Lnet/minecraft/unmapped/C_9071248;Lnet/minecraft/unmapped/C_8675191;Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_8373595;ZLjava/util/Random;J)Z	m_0041392	render	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-		p	6		p_6	
-		p	7		p_7	
-		p	8		p_8	
+		p	1		world	
+		p	2		model	
+		p	3		state	
+		p	4		pos	
+		p	5		bufferBuilder	
+		p	6		cull	
+		p	7		random	
+		p	8		seed	
 	m	(Lnet/minecraft/unmapped/C_9071248;Lnet/minecraft/unmapped/C_8675191;Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_8373595;ZLjava/util/Random;J)Z	m_5833331	tesselateWithAmbientOcclusion	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-		p	6		p_6	
-		p	7		p_7	
-		p	8		p_8	
+		p	1		world	
+		p	2		model	
+		p	3		state	
+		p	4		pos	
+		p	5		bufferBuilder	
+		p	6		cull	
+		p	7		random	
+		p	8		seed	
 	m	(Lnet/minecraft/unmapped/C_9071248;Lnet/minecraft/unmapped/C_8675191;Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_8373595;ZLjava/util/Random;J)Z	m_2067191	tesselateWithoutAmbientOcclusion	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-		p	6		p_6	
-		p	7		p_7	
-		p	8		p_8	
+		p	1		world	
+		p	2		model	
+		p	3		state	
+		p	4		pos	
+		p	5		bufferBuilder	
+		p	6		cull	
+		p	7		random	
+		p	8		seed	
 	m	(Lnet/minecraft/unmapped/C_9071248;Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_8373595;Ljava/util/List;[FLjava/util/BitSet;Lnet/minecraft/unmapped/C_2019151$C_8003124;)V	m_3088040	tesselateFaceWithAmbientOcclusion	
 		p	1		world	
 		p	2		state	
@@ -4602,10 +4602,10 @@ c	net/minecraft/unmapped/C_2019151
 		p	6		bufferBuilder	
 		p	7		quads	
 		p	8		shapeState	
-	m	(Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_9071248;Lnet/minecraft/unmapped/C_6707278;)I	m_5348780	m_5348780	
-		p	0		p_0	
-		p	1		p_1	
-		p	2		p_2	
+	m	(Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_9071248;Lnet/minecraft/unmapped/C_6707278;)I	m_5348780	getLightColor	
+		p	0		state	
+		p	1		world	
+		p	2		pos	
 	m	(Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_9071248;Lnet/minecraft/unmapped/C_6707278;)I	m_6406978	m_6406978	
 		p	0		p_0	
 		p	1		p_1	
@@ -4655,7 +4655,7 @@ c	net/minecraft/unmapped/C_2019151
 		p	6			p_6
 		p	7			p_7
 		p	8			p_8
-	m	(Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_4744955;Lnet/minecraft/unmapped/C_6707278;)I	m_5348780		m_5348780
+	m	(Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_4744955;Lnet/minecraft/unmapped/C_6707278;)I	m_5348780		getLightColor
 		p	0			p_0
 		p	1			p_1
 		p	2			p_2
@@ -8001,11 +8001,11 @@ c	net/minecraft/unmapped/C_5026536$C_9884105		C_9884105
 		p	1			p_1
 	m	()Lnet/minecraft/unmapped/C_5026536;	m_6474929		m_6474929
 c	net/minecraft/unmapped/C_0899618
-	f	Lnet/minecraft/unmapped/C_2940457;	f_4227712	pathTree	
-	f	Ljava/util/function/Function;	f_6922410	valueToKeys	
+	f	Lnet/minecraft/unmapped/C_2940457;	f_4227712	namespaceTree	
+	f	Ljava/util/function/Function;	f_6922410	valueToIds	
 	m	(Ljava/util/function/Function;Ljava/util/function/Function;)V	<init>	<init>	
 		p	1		valueToTooltips	
-		p	2		valueToKeys	
+		p	2		valueToIds	
 	m	(Ljava/lang/Object;Ljava/lang/String;)V	m_1941222	m_1941222	
 		p	1		p_1	
 		p	2		tooltip	
@@ -8018,7 +8018,7 @@ c	net/minecraft/unmapped/C_0899618
 	m	(Ljava/lang/Object;)V	m_3061948	add	m_3061948
 		p	1		value	p_1
 	m	()V	m_6967584	clear	m_6967584
-c	net/minecraft/unmapped/C_0899618$C_1407395	IntersectionIterator	
+c	net/minecraft/unmapped/C_0899618$C_1407395	PositionIterator	
 	f	Lit/unimi/dsi/fastutil/objects/Object2IntMap;	f_8045246	ordered	
 	f	Lcom/google/common/collect/PeekingIterator;	f_0357554	first	
 	f	Lcom/google/common/collect/PeekingIterator;	f_7925394	second	
@@ -8028,12 +8028,12 @@ c	net/minecraft/unmapped/C_0899618$C_1407395	IntersectionIterator
 		p	3		ordered	
 	m	()Ljava/lang/Object;	computeNext	computeNext	
 c	net/minecraft/unmapped/C_0899618$C_5185537
-	f	Lit/unimi/dsi/fastutil/objects/Object2IntMap;	f_7580641	f_7580641	
+	f	Lit/unimi/dsi/fastutil/objects/Object2IntMap;	f_7580641	ordered	
 	f	Ljava/util/Comparator;	f_4558775		f_4558775
 	m	(Ljava/util/Iterator;Ljava/util/Iterator;Lit/unimi/dsi/fastutil/objects/Object2IntMap;)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
+		p	1		first	
+		p	2		second	
+		p	3		ordered	
 	m	(Ljava/util/Iterator;Ljava/util/Iterator;Ljava/util/Comparator;)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
@@ -10919,7 +10919,7 @@ c	net/minecraft/unmapped/C_9746991
 	m	(Lcom/mojang/datafixers/Dynamic;)Lnet/minecraft/unmapped/C_9746991;	m_3192576		m_3192576
 		p	0			p_0
 c	net/minecraft/unmapped/C_2337436
-	f	F	f_9867075	f_9867075	
+	f	F	f_9867075	bodyAngle	
 c	net/minecraft/unmapped/C_7605258
 	m	()V	<init>	<init>	
 	m	(Ljava/util/function/Function;)V	<init>		<init>

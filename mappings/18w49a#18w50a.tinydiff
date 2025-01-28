@@ -2305,13 +2305,13 @@ c	net/minecraft/unmapped/C_2747331
 		p	0		renderer	
 		p	1		entity	
 		p	2		model	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-		p	6		p_6	
-		p	7		p_7	
-		p	8		p_8	
-		p	9		p_9	
+		p	3		walkAnimationProgress	
+		p	4		walkAnimationSpeed	
+		p	5		tickDelta	
+		p	6		bob	
+		p	7		yaw	
+		p	8		pitch	
+		p	9		scale	
 	m	(Lnet/minecraft/unmapped/C_3292875;Lnet/minecraft/unmapped/C_3239917;Lnet/minecraft/unmapped/C_3239917;)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
@@ -2326,16 +2326,16 @@ c	net/minecraft/unmapped/C_2747331
 		p	7			p_7
 		p	8			p_8
 	m	(Ljava/util/function/Consumer;Lnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_3239917;FFFFFFF)V	m_7708451		renderEnchantmentGlint
-		p	0			p_0
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
-		p	6			p_6
-		p	7			p_7
-		p	8			p_8
-		p	9			p_9
+		p	0			textureBinder
+		p	1			entity
+		p	2			model
+		p	3			walkAnimationProgress
+		p	4			walkAnimationSpeed
+		p	5			tickDelta
+		p	6			bob
+		p	7			yaw
+		p	8			pitch
+		p	9			scale
 	m	(Lnet/minecraft/unmapped/C_6385858;FFFFFFF)V	m_7346986		m_7346986
 		p	1			p_1
 		p	2			p_2
@@ -3754,9 +3754,9 @@ c	net/minecraft/unmapped/C_6261230$5381260
 c	net/minecraft/unmapped/C_7410869
 	m	()Z	m_6447487		m_6447487
 c	net/minecraft/unmapped/C_9691923
-	f	Lnet/minecraft/unmapped/C_7899302;	f_7798051	f_7798051	
+	f	Lnet/minecraft/unmapped/C_7899302;	f_7798051	renderer	
 	m	(Lnet/minecraft/unmapped/C_7899302;)V	<init>	<init>	
-		p	1		p_1	
+		p	1		renderer	
 	m	(Lnet/minecraft/unmapped/C_1013763;FFFFFFF)V	m_7346986	m_7346986	
 		p	1		p_1	
 		p	2		p_2	
@@ -3863,7 +3863,7 @@ c	net/minecraft/unmapped/C_1175303
 	f	Ljava/util/UUID;	f_5909608	rightUuid	
 	f	Lnet/minecraft/unmapped/C_5102005;	f_0809441	leftType	
 	f	Lnet/minecraft/unmapped/C_5102005;	f_2453885	rightType	
-	f	Lnet/minecraft/unmapped/C_6307767;	f_4602910		f_4602910
+	f	Lnet/minecraft/unmapped/C_6307767;	f_4602910		model
 	m	(Lnet/minecraft/unmapped/C_9610577;)V	<init>	<init>	
 		p	1		dispatcher	
 	m	(Lnet/minecraft/unmapped/C_1013763;FFFFFFF)V	m_7346986	m_7346986	
@@ -3876,32 +3876,32 @@ c	net/minecraft/unmapped/C_1175303
 		p	7		p_7	
 		p	8		p_8	
 	m	(Lnet/minecraft/unmapped/C_5009044;Ljava/util/UUID;Lnet/minecraft/unmapped/C_2800860;Lnet/minecraft/unmapped/C_8191584;Lnet/minecraft/unmapped/C_3239917;Lnet/minecraft/unmapped/C_0561170;Lnet/minecraft/unmapped/C_5102005;FFFFFFFZ)Lnet/minecraft/unmapped/C_1175303$C_3488523;	m_3545583	render	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-		p	6		p_6	
-		p	7		p_7	
-		p	8		p_8	
-		p	9		p_9	
-		p	10		p_10	
-		p	11		p_11	
-		p	12		p_12	
-		p	13		p_13	
-		p	14		p_14	
-		p	15		p_15	
+		p	1		player	
+		p	2		uuid	
+		p	3		data	
+		p	4		renderer	
+		p	5		model	
+		p	6		texture	
+		p	7		type	
+		p	8		walkAnimationProgress	
+		p	9		walkAnimationSpeed	
+		p	10		tickDelta	
+		p	11		bob	
+		p	12		yaw	
+		p	13		pitch	
+		p	14		scale	
+		p	15		left	
 	m	(Lnet/minecraft/unmapped/C_3292875;)V	<init>		<init>
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_5009044;FFFFFFZ)V	m_3545583		render
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
-		p	6			p_6
-		p	7			p_7
-		p	8			p_8
+		p	1			parrot
+		p	2			walkAnimationProgress
+		p	3			walkAnimationSpeed
+		p	4			bob
+		p	5			yaw
+		p	6			pitch
+		p	7			scale
+		p	8			left
 	m	(Lnet/minecraft/unmapped/C_6385858;FFFFFFF)V	m_7346986		m_7346986
 		p	1			p_1
 		p	2			p_2
@@ -3915,16 +3915,16 @@ c	net/minecraft/unmapped/C_1175303$C_3488523	ShoulderEntity
 	f	Ljava/util/UUID;	f_2282210	uuid	
 	f	Lnet/minecraft/unmapped/C_8191584;	f_6350527	renderer	
 	f	Lnet/minecraft/unmapped/C_3239917;	f_6261710	model	
-	f	Lnet/minecraft/unmapped/C_0561170;	f_2172854	textureLocation	
+	f	Lnet/minecraft/unmapped/C_0561170;	f_2172854	texture	
 	f	Lnet/minecraft/unmapped/C_1175303;	f_3308579	f_3308579	
 	f	Lnet/minecraft/unmapped/C_5102005;	f_5193844	type	
 	m	(Lnet/minecraft/unmapped/C_1175303;Ljava/util/UUID;Lnet/minecraft/unmapped/C_8191584;Lnet/minecraft/unmapped/C_3239917;Lnet/minecraft/unmapped/C_0561170;Lnet/minecraft/unmapped/C_5102005;)V	<init>	<init>	
 		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-		p	6		p_6	
+		p	2		uuid	
+		p	3		renderer	
+		p	4		model	
+		p	5		texture	
+		p	6		type	
 c	net/minecraft/unmapped/C_6188183
 	f	Z	f_9016252		f_9016252
 	f	Z	f_7001528		f_7001528
@@ -4882,9 +4882,9 @@ c	net/minecraft/unmapped/C_6618220
 		p	6			p_6
 		p	7			p_7
 c	net/minecraft/unmapped/C_7828198
-	f	Lnet/minecraft/unmapped/C_3604011;	f_7042347	f_7042347	
+	f	Lnet/minecraft/unmapped/C_3604011;	f_7042347	renderer	
 	m	(Lnet/minecraft/unmapped/C_3604011;)V	<init>	<init>	
-		p	1		p_1	
+		p	1		renderer	
 	m	(Lnet/minecraft/unmapped/C_7106153;FFFFFFF)V	m_9363204	m_9363204	
 		p	1		p_1	
 		p	2		p_2	
@@ -4957,10 +4957,10 @@ c	net/minecraft/unmapped/C_5675607
 		p	6			p_6
 		p	7			p_7
 c	net/minecraft/unmapped/C_5998839
-	f	Lnet/minecraft/unmapped/C_3239917;	f_9476307	f_9476307	
-	f	Lnet/minecraft/unmapped/C_3239917;	f_0185811	f_0185811	
-	f	Lnet/minecraft/unmapped/C_5998839$C_4534154;	f_9476307		f_9476307
-	f	Lnet/minecraft/unmapped/C_5998839$C_7914603;	f_0185811		f_0185811
+	f	Lnet/minecraft/unmapped/C_3239917;	f_9476307	baseModel	
+	f	Lnet/minecraft/unmapped/C_3239917;	f_0185811	cageModel	
+	f	Lnet/minecraft/unmapped/C_5998839$C_4534154;	f_9476307		baseModel
+	f	Lnet/minecraft/unmapped/C_5998839$C_7914603;	f_0185811		cageModel
 c	net/minecraft/unmapped/C_5998839$C_0937875
 	m	(Lnet/minecraft/unmapped/C_6385858;FFFFFF)V	m_2324866	m_2324866	
 		p	1		p_1	

@@ -2126,7 +2126,7 @@ c	net/minecraft/unmapped/C_4556822
 		p	3			p_3
 		p	4			p_4
 c	net/minecraft/unmapped/C_4558465
-	f	Lnet/minecraft/unmapped/C_7345216;	f_1522012		f_1522012
+	f	Lnet/minecraft/unmapped/C_7345216;	f_1522012		FULL_LIQUID_SHAPE
 	m	(I)F	m_8965794	getHeightLoss	
 		c	@return the height loss of a liquid with the given state compared to a full block.	
 		p	0		state	
@@ -6999,7 +6999,7 @@ c	net/minecraft/unmapped/C_6142023
 	m	(Lnet/minecraft/unmapped/C_2750078;)V	m_7015504		render
 		p	1			item
 c	net/minecraft/unmapped/C_6600815
-	f	Lnet/minecraft/unmapped/C_0561170;	f_5704114		f_5704114
+	f	Lnet/minecraft/unmapped/C_0561170;	f_5704114		ENDER_CHEST_LOCATION
 	m	(Lnet/minecraft/unmapped/C_1233611;DDDFIF)V	m_5405326	m_5405326	
 		p	1		p_1	
 		p	2		p_2	
@@ -7023,14 +7023,14 @@ c	net/minecraft/unmapped/C_6600815
 		p	6			p_6
 		p	8			p_8
 		p	9			p_9
-	m	(Lnet/minecraft/unmapped/C_2074023;IZ)Lnet/minecraft/unmapped/C_6531047;	m_4974331		m_4974331
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-	m	(Lnet/minecraft/unmapped/C_2074023;FLnet/minecraft/unmapped/C_6531047;)V	m_9956394		m_9956394
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+	m	(Lnet/minecraft/unmapped/C_2074023;IZ)Lnet/minecraft/unmapped/C_6531047;	m_4974331		getModelAndBindTexture
+		p	1			chest
+		p	2			blockMiningProgress
+		p	3			doubleChest
+	m	(Lnet/minecraft/unmapped/C_2074023;FLnet/minecraft/unmapped/C_6531047;)V	m_9956394		rotateLid
+		p	1			chest
+		p	2			tickDelta
+		p	3			model
 c	net/minecraft/unmapped/C_7015659
 	f	Lnet/minecraft/unmapped/C_3635204;	f_1464401	plant	
 	f	Lnet/minecraft/unmapped/C_3858757;	f_9412195	FACING	
@@ -9026,17 +9026,17 @@ c	net/minecraft/unmapped/C_6004512
 	f	Lnet/minecraft/unmapped/C_0561170;	f_8450810	CREEPER_LOCATION	
 	f	Lnet/minecraft/unmapped/C_0561170;	f_7293621	DRAGON_LOCATION	
 	f	Lnet/minecraft/unmapped/C_7949912;	f_5399666	dragonModel	
-	f	Ljava/util/Map;	f_4384354		f_4384354
-	f	Ljava/util/Map;	f_3403433		f_3403433
+	f	Ljava/util/Map;	f_4384354		TEXTURES
+	f	Ljava/util/Map;	f_3403433		MODELS
 	m	(FFFLnet/minecraft/unmapped/C_3544601;FILcom/mojang/authlib/GameProfile;IF)V	m_1144723	render	
-		p	1		x	
-		p	2		y	
-		p	3		z	
+		p	1		dx	
+		p	2		dy	
+		p	3		dz	
 		p	4		facing	
 		p	5		rotation	
 		p	6		type	
 		p	7		profile	
-		p	8		overlay	
+		p	8		blockMiningProgress	
 		p	9		animationProgress	
 	m	(Lnet/minecraft/unmapped/C_6479467;DDDFIF)V	m_9897194	m_9897194	
 		p	1		p_1	
@@ -9062,18 +9062,18 @@ c	net/minecraft/unmapped/C_6004512
 		p	8			p_8
 		p	9			p_9
 	m	(FFFLnet/minecraft/unmapped/C_3544601;FLnet/minecraft/unmapped/C_4930185$C_7601753;Lcom/mojang/authlib/GameProfile;IF)V	m_1144723		render
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
-		p	6			p_6
-		p	7			p_7
-		p	8			p_8
-		p	9			p_9
-	m	(Lnet/minecraft/unmapped/C_4930185$C_7601753;Lcom/mojang/authlib/GameProfile;)Lnet/minecraft/unmapped/C_0561170;	m_8756451		m_8756451
-		p	1			p_1
-		p	2			p_2
+		p	1			dx
+		p	2			dy
+		p	3			dz
+		p	4			facing
+		p	5			rotation
+		p	6			type
+		p	7			profile
+		p	8			blockMiningProgress
+		p	9			animationProgress
+	m	(Lnet/minecraft/unmapped/C_4930185$C_7601753;Lcom/mojang/authlib/GameProfile;)Lnet/minecraft/unmapped/C_0561170;	m_8756451		getTexture
+		p	1			type
+		p	2			profile
 	m	(Lnet/minecraft/unmapped/C_2074023;DDDFI)V	m_7825810		m_7825810
 		p	1			p_1
 		p	2			p_2
@@ -11876,7 +11876,7 @@ c	net/minecraft/unmapped/C_3433673
 		p	6			ignoreDistance
 		p	7			targets
 c	net/minecraft/unmapped/C_9697997
-	f	Ljava/util/Random;	f_5596932		f_5596932
+	f	Ljava/util/Random;	f_5596932		random
 	m	(Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_8373595;)Z	m_1848984	tesselate	
 		p	1		state	
 		p	2		pos	
@@ -14166,11 +14166,11 @@ c	net/minecraft/unmapped/C_2229776
 		p	8			p_8
 		p	9			p_9
 	m	(ZDDDLnet/minecraft/unmapped/C_3544601;)V	m_7016031		renderPart
-		p	1			p_1
-		p	2			p_2
-		p	4			p_4
-		p	6			p_6
-		p	8			p_8
+		p	1			visible
+		p	2			dx
+		p	4			dy
+		p	6			dz
+		p	8			facing
 	m	(Lnet/minecraft/unmapped/C_2074023;DDDFI)V	m_7825810		m_7825810
 		p	1			p_1
 		p	2			p_2
@@ -14199,8 +14199,8 @@ c	net/minecraft/unmapped/C_7563699
 	m	(Lnet/minecraft/unmapped/C_5367636;)Z	m_4940559	wasPreviouslyCompleted	
 		p	0		player	
 	m	(Lnet/minecraft/unmapped/C_5367636;Lnet/minecraft/unmapped/C_3635204;)Z	m_4940559		wasPreviouslyCompleted
-		p	0			p_0
-		p	1			p_1
+		p	0			player
+		p	1			block
 c	net/minecraft/unmapped/C_3002182	net/minecraft/block/StainedHardenedClayBlock	
 	f	[Lnet/minecraft/unmapped/C_1160655;	f_3340309	COLORS	
 	m	()V	<init>	<init>	
@@ -14243,22 +14243,23 @@ c	net/minecraft/unmapped/C_5942367
 	m	(Lnet/minecraft/unmapped/C_2750078;)V	m_2486569		addInput
 		p	1			item
 c	net/minecraft/unmapped/C_0899618
-	f	Lnet/minecraft/unmapped/C_2940457;	f_5727193		f_5727193
-c	net/minecraft/unmapped/C_0899618$C_1407395
+	f	Lnet/minecraft/unmapped/C_2940457;	f_5727193		pathTree
+	f	Lnet/minecraft/unmapped/C_2940457;	f_4227712	idTree	namespaceTree
+c	net/minecraft/unmapped/C_0899618$C_1407395	Iterator	PositionIterator
 	f	Ljava/util/Iterator;	f_0357554	first	
 	f	Ljava/util/Iterator;	f_7925394	second	
 	f	Ljava/lang/Object;	f_1224630	firstNext	
 	f	Ljava/lang/Object;	f_1283968	secondNext	
 	f	Lcom/google/common/collect/PeekingIterator;	f_0357554		first
 	f	Lcom/google/common/collect/PeekingIterator;	f_7925394		second
-c	net/minecraft/unmapped/C_0899618$C_5185537		C_5185537
-	f	Lcom/google/common/collect/PeekingIterator;	f_4585193		f_4585193
-	f	Lcom/google/common/collect/PeekingIterator;	f_2661684		f_2661684
-	f	Lit/unimi/dsi/fastutil/objects/Object2IntMap;	f_7580641		f_7580641
+c	net/minecraft/unmapped/C_0899618$C_5185537		IntersectionIterator
+	f	Lcom/google/common/collect/PeekingIterator;	f_4585193		first
+	f	Lcom/google/common/collect/PeekingIterator;	f_2661684		second
+	f	Lit/unimi/dsi/fastutil/objects/Object2IntMap;	f_7580641		ordered
 	m	(Ljava/util/Iterator;Ljava/util/Iterator;Lit/unimi/dsi/fastutil/objects/Object2IntMap;)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+		p	1			first
+		p	2			second
+		p	3			ordered
 	m	()Ljava/lang/Object;	computeNext		computeNext
 c	net/minecraft/unmapped/C_3881557
 	f	Ljava/util/Set;	f_3731224	NAMESPACES	namespaces

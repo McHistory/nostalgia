@@ -218,35 +218,35 @@ c	net/minecraft/unmapped/C_3514359
 		p	15		innerRadius	
 		p	17		outerRadius	
 	m	(DDDDDLjava/util/List;J)V	m_9001578		render
-		p	1			p_1
-		p	3			p_3
-		p	5			p_5
-		p	7			p_7
-		p	9			p_9
-		p	11			p_11
-		p	12			p_12
+		p	1			dx
+		p	3			dy
+		p	5			dz
+		p	7			tickDelta
+		p	9			beamAngle
+		p	11			sections
+		p	12			time
 	m	(DDDDDJII[F)V	m_2859084		renderSection
-		p	0			p_0
-		p	2			p_2
-		p	4			p_4
-		p	6			p_6
-		p	8			p_8
-		p	10			p_10
-		p	12			p_12
-		p	13			p_13
-		p	14			p_14
+		p	0			dx
+		p	2			dy
+		p	4			dz
+		p	6			tickDelta
+		p	8			beamAngle
+		p	10			time
+		p	12			y
+		p	13			height
+		p	14			color
 	m	(DDDDDJII[FDD)V	m_3696145		renderSection
-		p	0			p_0
-		p	2			p_2
-		p	4			p_4
-		p	6			p_6
-		p	8			p_8
-		p	10			p_10
-		p	12			p_12
-		p	13			p_13
-		p	14			p_14
-		p	15			p_15
-		p	17			p_17
+		p	0			dx
+		p	2			dy
+		p	4			dz
+		p	6			tickDelta
+		p	8			beamAngle
+		p	10			time
+		p	12			y
+		p	13			height
+		p	14			color
+		p	15			innerRadius
+		p	17			outerRadius
 c	net/minecraft/unmapped/C_7574603
 	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_3635204;	m_8811167		m_8811167
 		p	0			p_0
@@ -417,8 +417,8 @@ c	net/minecraft/unmapped/C_4701530
 c	net/minecraft/unmapped/C_6781194
 	f	Lnet/minecraft/unmapped/C_4598210;	f_4229284	bakedRegistry	
 	f	Ljava/util/Map;	f_4229284		bakedRegistry
-	m	()Lnet/minecraft/unmapped/C_8295645;	m_2669755	m_2669755	
-	m	()Ljava/util/Map;	m_2669755		m_2669755
+	m	()Lnet/minecraft/unmapped/C_8295645;	m_2669755	getBakedModels	
+	m	()Ljava/util/Map;	m_2669755		getBakedModels
 c	net/minecraft/unmapped/C_3754158
 	m	(DDDD)V	m_6669471		rotated
 		p	0			angle
@@ -426,10 +426,10 @@ c	net/minecraft/unmapped/C_3754158
 		p	4			y
 		p	6			z
 c	net/minecraft/unmapped/C_2528546
-	m	(III)I	m_5541379		m_5541379
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+	m	(III)I	m_5541379		index
+		p	1			x
+		p	2			y
+		p	3			z
 c	net/minecraft/unmapped/C_4500708	net/minecraft/client/render/world/VboRenderChunkFactory	
 	m	()V	<init>	<init>	
 	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_1044273;I)Lnet/minecraft/unmapped/C_5283200;	m_5404053	m_5404053	
@@ -441,9 +441,9 @@ c	net/minecraft/unmapped/C_7296650
 		p	1		world	
 		p	2		worldRenderer	
 		p	3		index	
-	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_1044273;)Lnet/minecraft/unmapped/C_5283200;	m_5404053		m_5404053
-		p	1			p_1
-		p	2			p_2
+	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_1044273;)Lnet/minecraft/unmapped/C_5283200;	m_5404053		createChunk
+		p	1			world
+		p	2			worldRenderer
 c	net/minecraft/unmapped/C_7860579
 	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_1044273;I)V	<init>	<init>	
 		p	1		p_1	
