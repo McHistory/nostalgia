@@ -14346,8 +14346,8 @@ c	net/minecraft/unmapped/C_1443974
 		p	1		p_1	
 		p	2		p_2	
 	m	(Lcom/mojang/brigadier/context/CommandContext;Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;)Ljava/util/concurrent/CompletableFuture;	listSuggestions		listSuggestions
-		p	1			p_1
-		p	2			p_2
+		p	1			ctx
+		p	2			builder
 c	net/minecraft/unmapped/C_1513201
 	f	Lcom/mojang/brigadier/exceptions/ParameterizedCommandExceptionType;	f_0984678	EMPTY_EXCEPTION	
 	f	Ljava/util/function/Supplier;	f_5657717	f_5657717	
@@ -14380,9 +14380,9 @@ c	net/minecraft/unmapped/C_1513201
 		p	0			source
 		p	1			fallback
 c	net/minecraft/unmapped/C_1513201$C_0516161
-	m	(Lnet/minecraft/unmapped/C_1630803;)Ljava/util/Collection;	m_8732401	m_8732401	
+	m	(Lnet/minecraft/unmapped/C_1630803;)Ljava/util/Collection;	m_8732401	create	
 		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_1630803;Ljava/util/function/Supplier;)Ljava/util/Collection;	m_8732401		m_8732401
+	m	(Lnet/minecraft/unmapped/C_1630803;Ljava/util/function/Supplier;)Ljava/util/Collection;	m_8732401		create
 		p	1			source
 		p	2			fallback
 c	net/minecraft/unmapped/C_1513201$C_1041339
@@ -14447,8 +14447,8 @@ c	net/minecraft/unmapped/C_2986321
 		p	1			builder
 c	net/minecraft/unmapped/C_3678153
 	m	(Lcom/mojang/brigadier/context/CommandContext;Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;)Ljava/util/concurrent/CompletableFuture;	listSuggestions		listSuggestions
-		p	1			p_1
-		p	2			p_2
+		p	1			ctx
+		p	2			builder
 c	net/minecraft/unmapped/C_3935684
 	m	(Lcom/mojang/brigadier/context/CommandContext;Ljava/lang/String;)Ljava/util/concurrent/CompletableFuture;	m_4655838	m_4655838	
 		p	1		p_1	
@@ -14467,43 +14467,43 @@ c	net/minecraft/unmapped/C_4289571
 		p	1		p_1	
 		p	2		p_2	
 	m	(Lcom/mojang/brigadier/context/CommandContext;Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;)Ljava/util/concurrent/CompletableFuture;	listSuggestions		listSuggestions
-		p	1			p_1
-		p	2			p_2
+		p	1			ctx
+		p	2			builder
 c	net/minecraft/unmapped/C_4702116
 	m	(Lcom/mojang/brigadier/context/CommandContext;Ljava/lang/String;)Ljava/util/concurrent/CompletableFuture;	listSuggestions	listSuggestions	
 		p	1		p_1	
 		p	2		p_2	
 	m	(Lcom/mojang/brigadier/context/CommandContext;Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;)Ljava/util/concurrent/CompletableFuture;	listSuggestions		listSuggestions
-		p	1			p_1
-		p	2			p_2
+		p	1			ctx
+		p	2			builder
 c	net/minecraft/unmapped/C_5371419
 	m	(Lcom/mojang/brigadier/context/CommandContext;Ljava/lang/String;)Ljava/util/concurrent/CompletableFuture;	listSuggestions	listSuggestions	
 		p	1		p_1	
 		p	2		p_2	
 	m	(Lcom/mojang/brigadier/context/CommandContext;Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;)Ljava/util/concurrent/CompletableFuture;	listSuggestions		listSuggestions
-		p	1			p_1
-		p	2			p_2
+		p	1			ctx
+		p	2			builder
 c	net/minecraft/unmapped/C_5436093
 	m	(Lcom/mojang/brigadier/context/CommandContext;Ljava/lang/String;)Ljava/util/concurrent/CompletableFuture;	listSuggestions	listSuggestions	
 		p	1		p_1	
 		p	2		p_2	
 	m	(Lcom/mojang/brigadier/context/CommandContext;Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;)Ljava/util/concurrent/CompletableFuture;	listSuggestions		listSuggestions
-		p	1			p_1
-		p	2			p_2
+		p	1			ctx
+		p	2			builder
 c	net/minecraft/unmapped/C_5717106
 	m	(Lcom/mojang/brigadier/context/CommandContext;Ljava/lang/String;)Ljava/util/concurrent/CompletableFuture;	listSuggestions	listSuggestions	
 		p	1		p_1	
 		p	2		p_2	
 	m	(Lcom/mojang/brigadier/context/CommandContext;Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;)Ljava/util/concurrent/CompletableFuture;	listSuggestions		listSuggestions
-		p	1			p_1
-		p	2			p_2
+		p	1			ctx
+		p	2			builder
 c	net/minecraft/unmapped/C_6140756
 	m	(Lcom/mojang/brigadier/context/CommandContext;Ljava/lang/String;)Ljava/util/concurrent/CompletableFuture;	listSuggestions	listSuggestions	
 		p	1		p_1	
 		p	2		p_2	
 	m	(Lcom/mojang/brigadier/context/CommandContext;Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;)Ljava/util/concurrent/CompletableFuture;	listSuggestions		listSuggestions
-		p	1			p_1
-		p	2			p_2
+		p	1			ctx
+		p	2			builder
 c	net/minecraft/unmapped/C_6457523
 	m	(Lcom/mojang/brigadier/context/CommandContext;Ljava/lang/String;)Ljava/util/concurrent/CompletableFuture;	m_6764897	m_6764897	
 		p	0		p_0	
@@ -14521,12 +14521,12 @@ c	net/minecraft/unmapped/C_6618444
 		p	1		p_1	
 		p	2		p_2	
 	m	(Lcom/mojang/brigadier/context/CommandContext;Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;)Ljava/util/concurrent/CompletableFuture;	listSuggestions		listSuggestions
-		p	1			p_1
-		p	2			p_2
+		p	1			ctx
+		p	2			builder
 c	net/minecraft/unmapped/C_6980857
 	m	(Lcom/mojang/brigadier/context/CommandContext;Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;)Ljava/util/concurrent/CompletableFuture;	listSuggestions		listSuggestions
-		p	1			p_1
-		p	2			p_2
+		p	1			ctx
+		p	2			builder
 c	net/minecraft/unmapped/C_7316932
 	m	()V	<init>	<init>	
 	m	()I	m_5344326	m_5344326	
@@ -14537,22 +14537,22 @@ c	net/minecraft/unmapped/C_7566373
 		p	1		p_1	
 		p	2		p_2	
 	m	(Lcom/mojang/brigadier/context/CommandContext;Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;)Ljava/util/concurrent/CompletableFuture;	listSuggestions		listSuggestions
-		p	1			p_1
-		p	2			p_2
+		p	1			ctx
+		p	2			builder
 c	net/minecraft/unmapped/C_7809460
 	m	(Lcom/mojang/brigadier/context/CommandContext;Ljava/lang/String;)Ljava/util/concurrent/CompletableFuture;	listSuggestions	listSuggestions	
 		p	1		p_1	
 		p	2		p_2	
 	m	(Lcom/mojang/brigadier/context/CommandContext;Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;)Ljava/util/concurrent/CompletableFuture;	listSuggestions		listSuggestions
-		p	1			p_1
-		p	2			p_2
+		p	1			ctx
+		p	2			builder
 c	net/minecraft/unmapped/C_9445209
 	m	(Lcom/mojang/brigadier/context/CommandContext;Ljava/lang/String;)Ljava/util/concurrent/CompletableFuture;	listSuggestions	listSuggestions	
 		p	1		p_1	
 		p	2		p_2	
 	m	(Lcom/mojang/brigadier/context/CommandContext;Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;)Ljava/util/concurrent/CompletableFuture;	listSuggestions		listSuggestions
-		p	1			p_1
-		p	2			p_2
+		p	1			ctx
+		p	2			builder
 c	net/minecraft/unmapped/C_2921623
 	f	Lcom/mojang/brigadier/CommandSuggestions$Provider;	f_7884920	SELECTED_DATAPACK_SUGGESTIONS	
 	f	Lcom/mojang/brigadier/CommandSuggestions$Provider;	f_4750254	AVAILABLE_DATAPACK_SUGGESTIONS	
@@ -14645,8 +14645,8 @@ c	net/minecraft/unmapped/C_6391214$C_5745045
 		p	1			name
 		p	2			provider
 	m	(Lcom/mojang/brigadier/context/CommandContext;Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;)Ljava/util/concurrent/CompletableFuture;	getSuggestions		getSuggestions
-		p	1			p_1
-		p	2			p_2
+		p	1			ctx
+		p	2			builder
 c	net/minecraft/unmapped/C_0029341		net/minecraft/unmapped/C_0029341
 	f	Ljava/util/Map;	f_2585231		f_2585231
 	m	(I)V	<init>		<init>
