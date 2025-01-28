@@ -22,14 +22,14 @@ c	net/minecraft/server/MinecraftServer
 	m	(Ljava/lang/String;)V	m_0567988	setLoadingStage	
 		p	1		stage	
 	m	()Ljava/lang/String;	m_3870589	getLoadingStage	
-	m	()Ljava/lang/String;	m_2622653	m_2622653	
+	m	()Ljava/lang/String;	m_2622653	getProgressType	
 	m	(Lnet/minecraft/unmapped/C_9550253;)V	m_0567988		setLoadingStage
-		p	1			p_1
+		p	1			loadingStage
 	m	()Lnet/minecraft/unmapped/C_9550253;	m_3870589		getLoadingStage
 	m	(Lnet/minecraft/unmapped/C_9550253;I)V	m_4174934		logProgress
 		p	1			text
 		p	2			percentage
-	m	()Lnet/minecraft/unmapped/C_9550253;	m_2622653		m_2622653
+	m	()Lnet/minecraft/unmapped/C_9550253;	m_2622653		getProgressType
 	m	()Lnet/minecraft/unmapped/C_5407296;	m_4826283		getScoreboard
 	m	()Lnet/minecraft/unmapped/C_7464728;	m_4907112		getLootTables
 	m	()Lnet/minecraft/unmapped/C_6404817;	m_1838806		getGameRules
@@ -180,7 +180,7 @@ c	net/minecraft/unmapped/C_3906126
 	m	(Lnet/minecraft/unmapped/C_0336319;Lnet/minecraft/unmapped/C_0336319;Lnet/minecraft/unmapped/C_3030937;ZZ)Lnet/minecraft/unmapped/C_5853518;	m_1107910		rayTrace
 		p	1			from
 		p	2			to
-		p	3			contex
+		p	3			context
 		p	4			p_4
 		p	5			p_5
 c	net/minecraft/unmapped/C_4030632
@@ -293,11 +293,11 @@ c	net/minecraft/unmapped/C_7918626
 	m	(Ljava/lang/String;)V	m_6435809	updateTitle	
 		p	1		title	
 	m	(Lnet/minecraft/unmapped/C_9550253;)V	m_5266201		progressStartNoAbort
-		p	1			p_1
+		p	1			message
 	m	(Lnet/minecraft/unmapped/C_9550253;)V	m_6435809		updateTitle
-		p	1			p_1
+		p	1			title
 	m	(Lnet/minecraft/unmapped/C_9550253;)V	m_5570081		progressStage
-		p	1			p_1
+		p	1			message
 c	net/minecraft/unmapped/C_8554894
 	f	Z	f_5672684	canBeBrokenInAdventureMode	
 	f	Z	f_7816215		blocksMovement

@@ -72,7 +72,7 @@ c	net/minecraft/unmapped/C_7366354
 		p	3			p_3
 		p	4			p_4
 c	net/minecraft/unmapped/C_6285226
-	f	Ljava/util/Map;	f_3520274		f_3520274
+	f	Ljava/util/Map;	f_3520274		banners
 	m	(Lnet/minecraft/unmapped/C_8881530$C_5074714;Lnet/minecraft/unmapped/C_3906126;Ljava/lang/String;DDD)V	m_0867420	addDecoration	
 		p	1		type	
 		p	2		world	
@@ -88,10 +88,10 @@ c	net/minecraft/unmapped/C_6285226
 		p	6			p_6
 		p	8			p_8
 		p	10			p_10
-	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6707278;)V	m_7770066		m_7770066
+	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6707278;)V	m_7770066		toggleBanner
 		p	1			p_1
 		p	2			p_2
-	m	(Lnet/minecraft/unmapped/C_3906126;II)V	m_0650037		m_0650037
+	m	(Lnet/minecraft/unmapped/C_3906126;II)V	m_0650037		checkBanners
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -158,36 +158,36 @@ c	net/minecraft/unmapped/C_5291991
 	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_5291991;	m_8633230		byKey
 		p	0			key
 c	net/minecraft/unmapped/C_8881530
-	f	Lnet/minecraft/unmapped/C_9550253;	f_5408311		f_5408311
+	f	Lnet/minecraft/unmapped/C_9550253;	f_5408311		name
 	m	(Lnet/minecraft/unmapped/C_8881530$C_5074714;BBB)V	<init>	<init>	
 		p	1		type	
 		p	2		x	
 		p	3		y	
 		p	4		rotation	
 	m	(Lnet/minecraft/unmapped/C_8881530$C_5074714;BBBLnet/minecraft/unmapped/C_9550253;)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
-	m	()Lnet/minecraft/unmapped/C_9550253;	m_6022533		m_6022533
+		p	1			type
+		p	2			x
+		p	3			y
+		p	4			rotation
+		p	5			name
+	m	()Lnet/minecraft/unmapped/C_9550253;	m_6022533		getName
 c	net/minecraft/unmapped/C_8881530$C_5074714
-	f	Lnet/minecraft/unmapped/C_8881530$C_5074714;	f_9903747		f_9903747
-	f	Lnet/minecraft/unmapped/C_8881530$C_5074714;	f_8627305		f_8627305
-	f	Lnet/minecraft/unmapped/C_8881530$C_5074714;	f_1290439		f_1290439
-	f	Lnet/minecraft/unmapped/C_8881530$C_5074714;	f_1324557		f_1324557
-	f	Lnet/minecraft/unmapped/C_8881530$C_5074714;	f_4416240		f_4416240
-	f	Lnet/minecraft/unmapped/C_8881530$C_5074714;	f_1136587		f_1136587
-	f	Lnet/minecraft/unmapped/C_8881530$C_5074714;	f_0123884		f_0123884
-	f	Lnet/minecraft/unmapped/C_8881530$C_5074714;	f_9413499		f_9413499
-	f	Lnet/minecraft/unmapped/C_8881530$C_5074714;	f_6093433		f_6093433
-	f	Lnet/minecraft/unmapped/C_8881530$C_5074714;	f_5711942		f_5711942
-	f	Lnet/minecraft/unmapped/C_8881530$C_5074714;	f_7702451		f_7702451
-	f	Lnet/minecraft/unmapped/C_8881530$C_5074714;	f_7926967		f_7926967
-	f	Lnet/minecraft/unmapped/C_8881530$C_5074714;	f_1810660		f_1810660
-	f	Lnet/minecraft/unmapped/C_8881530$C_5074714;	f_4174738		f_4174738
-	f	Lnet/minecraft/unmapped/C_8881530$C_5074714;	f_5488779		f_5488779
-	f	Lnet/minecraft/unmapped/C_8881530$C_5074714;	f_0977202		f_0977202
+	f	Lnet/minecraft/unmapped/C_8881530$C_5074714;	f_9903747		BANNER_WHITE
+	f	Lnet/minecraft/unmapped/C_8881530$C_5074714;	f_8627305		BANNER_ORANGE
+	f	Lnet/minecraft/unmapped/C_8881530$C_5074714;	f_1290439		BANNER_MAGENTA
+	f	Lnet/minecraft/unmapped/C_8881530$C_5074714;	f_1324557		BANNER_LIGHT_BLUE
+	f	Lnet/minecraft/unmapped/C_8881530$C_5074714;	f_4416240		BANNER_YELLOW
+	f	Lnet/minecraft/unmapped/C_8881530$C_5074714;	f_1136587		BANNER_LIME
+	f	Lnet/minecraft/unmapped/C_8881530$C_5074714;	f_0123884		BANNER_PINK
+	f	Lnet/minecraft/unmapped/C_8881530$C_5074714;	f_9413499		BANNER_GRAY
+	f	Lnet/minecraft/unmapped/C_8881530$C_5074714;	f_6093433		BANNER_LIGHT_GRAY
+	f	Lnet/minecraft/unmapped/C_8881530$C_5074714;	f_5711942		BANNER_CYAN
+	f	Lnet/minecraft/unmapped/C_8881530$C_5074714;	f_7702451		BANNER_PURPLE
+	f	Lnet/minecraft/unmapped/C_8881530$C_5074714;	f_7926967		BANNER_BLUE
+	f	Lnet/minecraft/unmapped/C_8881530$C_5074714;	f_1810660		BANNER_BROWN
+	f	Lnet/minecraft/unmapped/C_8881530$C_5074714;	f_4174738		BANNER_GREEN
+	f	Lnet/minecraft/unmapped/C_8881530$C_5074714;	f_5488779		BANNER_RED
+	f	Lnet/minecraft/unmapped/C_8881530$C_5074714;	f_0977202		BANNER_BLACK
 	f	Lnet/minecraft/unmapped/C_8881530$C_5074714;	f_4614889		f_4614889
 c	net/minecraft/unmapped/C_8049104
 	f	Lnet/minecraft/unmapped/C_8049104$C_1918051;	f_8532080		WATER
@@ -489,27 +489,27 @@ c	net/minecraft/unmapped/C_2384242		net/minecraft/unmapped/C_2384242
 		p	7			p_7
 		p	8			p_8
 	m	()V	<clinit>		<clinit>
-c	net/minecraft/unmapped/C_3160872		net/minecraft/unmapped/C_3160872
-	f	Lnet/minecraft/unmapped/C_6707278;	f_0337914		f_0337914
-	f	Lnet/minecraft/unmapped/C_5291991;	f_5946889		f_5946889
-	f	Lnet/minecraft/unmapped/C_9550253;	f_3772269		f_3772269
+c	net/minecraft/unmapped/C_3160872		net/minecraft/world/map/MapBanner
+	f	Lnet/minecraft/unmapped/C_6707278;	f_0337914		pos
+	f	Lnet/minecraft/unmapped/C_5291991;	f_5946889		color
+	f	Lnet/minecraft/unmapped/C_9550253;	f_3772269		name
 	m	(Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_5291991;Lnet/minecraft/unmapped/C_9550253;)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-	m	(Lnet/minecraft/unmapped/C_2800860;)Lnet/minecraft/unmapped/C_3160872;	m_9306354		m_9306354
+		p	1			pos
+		p	2			color
+		p	3			name
+	m	(Lnet/minecraft/unmapped/C_2800860;)Lnet/minecraft/unmapped/C_3160872;	m_9306354		fromNbt
+		p	0			nbt
+	m	(Lnet/minecraft/unmapped/C_9844932;Lnet/minecraft/unmapped/C_6707278;)Lnet/minecraft/unmapped/C_3160872;	m_3330341		fromWorld
 		p	0			p_0
-	m	(Lnet/minecraft/unmapped/C_9844932;Lnet/minecraft/unmapped/C_6707278;)Lnet/minecraft/unmapped/C_3160872;	m_3330341		m_3330341
-		p	0			p_0
 		p	1			p_1
-	m	()Lnet/minecraft/unmapped/C_6707278;	m_2457621		m_2457621
-	m	()Lnet/minecraft/unmapped/C_8881530$C_5074714;	m_1005104		m_1005104
-	m	()Lnet/minecraft/unmapped/C_9550253;	m_3760890		m_3760890
+	m	()Lnet/minecraft/unmapped/C_6707278;	m_2457621		getPos
+	m	()Lnet/minecraft/unmapped/C_8881530$C_5074714;	m_1005104		getType
+	m	()Lnet/minecraft/unmapped/C_9550253;	m_3760890		getName
 	m	(Ljava/lang/Object;)Z	equals		equals
 		p	1			p_1
 	m	()I	hashCode		hashCode
-	m	()Lnet/minecraft/unmapped/C_2800860;	m_1322762		m_1322762
-	m	()Ljava/lang/String;	m_5300472		m_5300472
+	m	()Lnet/minecraft/unmapped/C_2800860;	m_1322762		toNbt
+	m	()Ljava/lang/String;	m_5300472		getKey
 c	net/minecraft/unmapped/C_3160872$4065455		4065455
 	f	[I	f_7834047		f_7834047
 	m	()V	<clinit>		<clinit>

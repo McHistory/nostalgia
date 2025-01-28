@@ -451,7 +451,7 @@ c	net/minecraft/unmapped/C_9574073
 c	net/minecraft/unmapped/C_6285226
 	f	B	f_1983594	dimension	
 	f	Lnet/minecraft/unmapped/C_0013174;	f_1983594		dimension
-	f	Ljava/util/Map;	f_8033571		f_8033571
+	f	Ljava/util/Map;	f_8033571		frames
 	m	(IIIZZI)V	m_0617197	update	
 		p	1		centerX	
 		p	2		centerZ	
@@ -466,9 +466,9 @@ c	net/minecraft/unmapped/C_6285226
 		p	4			trackingPosition
 		p	5			unlimitedTracking
 		p	6			dimension
-	m	(Lnet/minecraft/unmapped/C_6707278;I)V	m_1508814		m_1508814
-		p	1			p_1
-		p	2			p_2
+	m	(Lnet/minecraft/unmapped/C_6707278;I)V	m_1508814		removeFrame
+		p	1			pos
+		p	2			id
 c	net/minecraft/unmapped/C_6377547
 	f	Lnet/minecraft/unmapped/C_7366354;	f_7645781	delegate	
 	m	(Lnet/minecraft/server/MinecraftServer;Lnet/minecraft/unmapped/C_9147018;ILnet/minecraft/unmapped/C_7366354;Lnet/minecraft/unmapped/C_1392594;)V	<init>	<init>	
@@ -1135,20 +1135,20 @@ c	net/minecraft/unmapped/C_8054043		net/minecraft/world/storage/DimensionDataSto
 	m	(Ljava/lang/String;I)Lnet/minecraft/unmapped/C_2800860;	m_5860852		fixData
 		p	1			id
 		p	2			dataVersion
-c	net/minecraft/unmapped/C_9922363		net/minecraft/unmapped/C_9922363
-	f	Lnet/minecraft/unmapped/C_6707278;	f_8500024		f_8500024
-	f	I	f_5884890		f_5884890
-	f	I	f_3500537		f_3500537
+c	net/minecraft/unmapped/C_9922363		net/minecraft/world/map/MapFrame
+	f	Lnet/minecraft/unmapped/C_6707278;	f_8500024		pos
+	f	I	f_5884890		rotation
+	f	I	f_3500537		id
 	m	(Lnet/minecraft/unmapped/C_6707278;II)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-	m	(Lnet/minecraft/unmapped/C_2800860;)Lnet/minecraft/unmapped/C_9922363;	m_3358820		m_3358820
-		p	0			p_0
-	m	()Lnet/minecraft/unmapped/C_2800860;	m_8643619		m_8643619
-	m	()Lnet/minecraft/unmapped/C_6707278;	m_6561318		m_6561318
-	m	()I	m_7534354		m_7534354
-	m	()I	m_5671364		m_5671364
-	m	()Ljava/lang/String;	m_6294622		m_6294622
-	m	(Lnet/minecraft/unmapped/C_6707278;)Ljava/lang/String;	m_7949764		m_7949764
-		p	0			p_0
+		p	1			pos
+		p	2			rotation
+		p	3			id
+	m	(Lnet/minecraft/unmapped/C_2800860;)Lnet/minecraft/unmapped/C_9922363;	m_3358820		fromNbt
+		p	0			nbt
+	m	()Lnet/minecraft/unmapped/C_2800860;	m_8643619		toNbt
+	m	()Lnet/minecraft/unmapped/C_6707278;	m_6561318		getPos
+	m	()I	m_7534354		getRotation
+	m	()I	m_5671364		getId
+	m	()Ljava/lang/String;	m_6294622		getKey
+	m	(Lnet/minecraft/unmapped/C_6707278;)Ljava/lang/String;	m_7949764		getKey
+		p	0			pos
