@@ -1343,24 +1343,24 @@ c	net/minecraft/unmapped/C_0802816$7959686		7959686
 		p	1			p_1
 	m	(Ljava/lang/Object;)Z	test		test
 		p	1			p_1
-c	net/minecraft/unmapped/C_1077508		net/minecraft/unmapped/C_1077508
-	f	Lit/unimi/dsi/fastutil/longs/LongSet;	f_5226528		f_5226528
-	f	Lit/unimi/dsi/fastutil/longs/LongSet;	f_8607069		f_8607069
+c	net/minecraft/unmapped/C_1077508		net/minecraft/world/gen/structure/SavedStructureIndexData
+	f	Lit/unimi/dsi/fastutil/longs/LongSet;	f_5226528		all
+	f	Lit/unimi/dsi/fastutil/longs/LongSet;	f_8607069		remaining
 	m	(Ljava/lang/String;)V	<init>		<init>
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_2800860;)V	m_4638650		m_4638650
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_2800860;)Lnet/minecraft/unmapped/C_2800860;	m_1489858		m_1489858
 		p	1			p_1
-	m	(J)V	m_7742116		m_7742116
-		p	1			p_1
-	m	(J)Z	m_8701947		m_8701947
-		p	1			p_1
-	m	(J)Z	m_3143074		m_3143074
-		p	1			p_1
-	m	(J)V	m_1267740		m_1267740
-		p	1			p_1
-	m	()Lit/unimi/dsi/fastutil/longs/LongSet;	m_0567612		m_0567612
+	m	(J)V	m_7742116		add
+		p	1			reference
+	m	(J)Z	m_8701947		contains
+		p	1			reference
+	m	(J)Z	m_3143074		containsUnhandled
+		p	1			reference
+	m	(J)V	m_1267740		remove
+		p	1			reference
+	m	()Lit/unimi/dsi/fastutil/longs/LongSet;	m_0567612		getAll
 c	net/minecraft/unmapped/C_1576074		net/minecraft/world/gen/structure/LegacyStructureDataHandler
 	f	Lorg/apache/logging/log4j/Logger;	f_9722773		LOGGER
 	f	Ljava/util/Map;	f_2671439		CURRENT_TO_LEGACY
@@ -1370,27 +1370,27 @@ c	net/minecraft/unmapped/C_1576074		net/minecraft/world/gen/structure/LegacyStru
 	f	Ljava/util/Map;	f_2214361		indices
 	m	(Lnet/minecraft/unmapped/C_9844932;)V	<init>		<init>
 		p	1			p_1
-	m	(J)V	m_6491501		m_6491501
-		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_9844932;Lnet/minecraft/unmapped/C_2800860;)Lnet/minecraft/unmapped/C_2800860;	m_5331624		m_5331624
+	m	(J)V	m_6491501		removeIndex
+		p	1			reference
+	m	(Lnet/minecraft/unmapped/C_9844932;Lnet/minecraft/unmapped/C_2800860;)Lnet/minecraft/unmapped/C_2800860;	m_5331624		update
 		p	1			p_1
 		p	2			p_2
-	m	()[Ljava/lang/String;	m_8287631		m_8287631
-	m	()[Ljava/lang/String;	m_3232354		m_3232354
-	m	(IILjava/lang/String;)Z	m_0301617		m_0301617
+	m	()[Ljava/lang/String;	m_8287631		getCurrentKeys
+	m	()[Ljava/lang/String;	m_3232354		getLegacyKeys
+	m	(IILjava/lang/String;)Z	m_0301617		hasLegacyStructure
+		p	1			chunkX
+		p	2			chunkZ
+		p	3			type
+	m	(II)Z	m_0917959		hasUnhandledLegacyStructure
+		p	1			chunkX
+		p	2			chunkZ
+	m	(Lnet/minecraft/unmapped/C_9844932;Lnet/minecraft/unmapped/C_2800860;Lnet/minecraft/unmapped/C_9386942;)Lnet/minecraft/unmapped/C_2800860;	m_5826181		updateStructure
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
-	m	(II)Z	m_0917959		m_0917959
+	m	(Lnet/minecraft/unmapped/C_9844932;)V	m_2261809		populateCaches
 		p	1			p_1
-		p	2			p_2
-	m	(Lnet/minecraft/unmapped/C_9844932;Lnet/minecraft/unmapped/C_2800860;Lnet/minecraft/unmapped/C_9386942;)Lnet/minecraft/unmapped/C_2800860;	m_5826181		m_5826181
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-	m	(Lnet/minecraft/unmapped/C_9844932;)V	m_2261809		m_2261809
-		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_9844932;)Lnet/minecraft/unmapped/C_1576074;	m_8186642		m_8186642
+	m	(Lnet/minecraft/unmapped/C_9844932;)Lnet/minecraft/unmapped/C_1576074;	m_8186642		forDimension
 		p	0			p_0
 	m	(Ljava/lang/String;)Lit/unimi/dsi/fastutil/longs/Long2ObjectMap;	m_1876339		m_1876339
 		p	0			p_0
@@ -1402,23 +1402,23 @@ c	net/minecraft/unmapped/C_1576074		net/minecraft/world/gen/structure/LegacyStru
 c	net/minecraft/unmapped/C_1576074$5308665		5308665
 	f	[I	f_1920997		f_1920997
 	m	()V	<clinit>		<clinit>
-c	net/minecraft/unmapped/C_1576074$C_0183170		C_0183170
-	f	[Ljava/lang/String;	f_3881173		f_3881173
+c	net/minecraft/unmapped/C_1576074$C_0183170		Nether
+	f	[Ljava/lang/String;	f_3881173		KEYS
 	m	(Lnet/minecraft/unmapped/C_9844932;)V	<init>		<init>
 		p	1			p_1
 	m	()[Ljava/lang/String;	m_8287631		m_8287631
 	m	()[Ljava/lang/String;	m_3232354		m_3232354
 	m	()V	<clinit>		<clinit>
-c	net/minecraft/unmapped/C_1576074$C_2867412		C_2867412
-	f	[Ljava/lang/String;	f_4578358		f_4578358
-	f	[Ljava/lang/String;	f_9952969		f_9952969
+c	net/minecraft/unmapped/C_1576074$C_2867412		Overworld
+	f	[Ljava/lang/String;	f_4578358		CURRENT_KEYS
+	f	[Ljava/lang/String;	f_9952969		LEGACY_KEYS
 	m	(Lnet/minecraft/unmapped/C_9844932;)V	<init>		<init>
 		p	1			p_1
 	m	()[Ljava/lang/String;	m_8287631		m_8287631
 	m	()[Ljava/lang/String;	m_3232354		m_3232354
 	m	()V	<clinit>		<clinit>
-c	net/minecraft/unmapped/C_1576074$C_8110738		C_8110738
-	f	[Ljava/lang/String;	f_8215896		f_8215896
+c	net/minecraft/unmapped/C_1576074$C_8110738		TheEnd
+	f	[Ljava/lang/String;	f_8215896		KEYS
 	m	(Lnet/minecraft/unmapped/C_9844932;)V	<init>		<init>
 		p	1			p_1
 	m	()[Ljava/lang/String;	m_8287631		m_8287631

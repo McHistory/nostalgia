@@ -21,9 +21,9 @@ c	net/minecraft/unmapped/C_4636105
 c	net/minecraft/unmapped/C_6385858
 	m	()D	m_7604535		m_7604535
 c	net/minecraft/unmapped/C_0629296
-	m	(II)Z	m_1867953		m_1867953
-		p	1			p_1
-		p	2			p_2
+	m	(II)Z	m_1867953		doesChunkExist
+		p	1			chunkX
+		p	2			chunkZ
 c	net/minecraft/unmapped/C_4253713
 	m	(Lnet/minecraft/unmapped/C_9844932;II)Lnet/minecraft/unmapped/C_2800860;	m_5927748	fixChunkNbt	
 		p	1		p_1	
@@ -191,27 +191,27 @@ c	net/minecraft/unmapped/C_9379659
 c	net/minecraft/unmapped/C_1576074
 	m	(Lnet/minecraft/unmapped/C_9844932;)V	<init>	<init>	
 		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_9844932;Lnet/minecraft/unmapped/C_2800860;)Lnet/minecraft/unmapped/C_2800860;	m_5331624	m_5331624	
+	m	(Lnet/minecraft/unmapped/C_9844932;Lnet/minecraft/unmapped/C_2800860;)Lnet/minecraft/unmapped/C_2800860;	m_5331624	update	
 		p	1		p_1	
 		p	2		p_2	
-	m	(Lnet/minecraft/unmapped/C_9844932;Lnet/minecraft/unmapped/C_2800860;Lnet/minecraft/unmapped/C_9386942;)Lnet/minecraft/unmapped/C_2800860;	m_5826181	m_5826181	
+	m	(Lnet/minecraft/unmapped/C_9844932;Lnet/minecraft/unmapped/C_2800860;Lnet/minecraft/unmapped/C_9386942;)Lnet/minecraft/unmapped/C_2800860;	m_5826181	updateStructure	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
-	m	(Lnet/minecraft/unmapped/C_9844932;)V	m_2261809	m_2261809	
+	m	(Lnet/minecraft/unmapped/C_9844932;)V	m_2261809	populateCaches	
 		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_9844932;)Lnet/minecraft/unmapped/C_1576074;	m_8186642	m_8186642	
+	m	(Lnet/minecraft/unmapped/C_9844932;)Lnet/minecraft/unmapped/C_1576074;	m_8186642	forDimension	
 		p	0		p_0	
 	m	(Lnet/minecraft/unmapped/C_8407692;)V	<init>		<init>
 		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_2800860;)Lnet/minecraft/unmapped/C_2800860;	m_5331624		m_5331624
+	m	(Lnet/minecraft/unmapped/C_2800860;)Lnet/minecraft/unmapped/C_2800860;	m_5331624		update
+		p	1			nbt
+	m	(Lnet/minecraft/unmapped/C_2800860;Lnet/minecraft/unmapped/C_9386942;)Lnet/minecraft/unmapped/C_2800860;	m_5826181		updateStructure
+		p	1			nbt
+		p	2			pos
+	m	(Lnet/minecraft/unmapped/C_8407692;)V	m_2261809		populateCaches
 		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_2800860;Lnet/minecraft/unmapped/C_9386942;)Lnet/minecraft/unmapped/C_2800860;	m_5826181		m_5826181
-		p	1			p_1
-		p	2			p_2
-	m	(Lnet/minecraft/unmapped/C_8407692;)V	m_2261809		m_2261809
-		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_0013174;Lnet/minecraft/unmapped/C_8407692;)Lnet/minecraft/unmapped/C_1576074;	m_8186642		m_8186642
+	m	(Lnet/minecraft/unmapped/C_0013174;Lnet/minecraft/unmapped/C_8407692;)Lnet/minecraft/unmapped/C_1576074;	m_8186642		forDimension
 		p	0			p_0
 		p	1			p_1
 c	net/minecraft/unmapped/C_1576074$C_0183170

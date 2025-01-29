@@ -40,7 +40,7 @@ c	net/minecraft/unmapped/C_6618366
 c	net/minecraft/unmapped/C_8839702
 	f	Lnet/minecraft/unmapped/C_4085658;	f_5350898	f_5350898	
 c	net/minecraft/unmapped/C_7574603
-	f	Lnet/minecraft/unmapped/C_2113478;	f_8043496		f_8043496
+	f	Lnet/minecraft/unmapped/C_2113478;	f_8043496		OCEAN_RUIN
 c	net/minecraft/unmapped/C_5251467
 	f	Lnet/minecraft/unmapped/C_3635204;	f_5821773		f_5821773
 	f	Lnet/minecraft/unmapped/C_3635204;	f_0090325		TUBE_CORAL_BLOCK
@@ -675,10 +675,10 @@ c	net/minecraft/unmapped/C_9372320		net/minecraft/world/gen/structure/OceanRuinP
 	f	Lnet/minecraft/unmapped/C_0561170;	f_2705695		f_2705695
 	f	Lnet/minecraft/unmapped/C_0561170;	f_0560216		f_0560216
 	f	Lnet/minecraft/unmapped/C_0561170;	f_5632048		f_5632048
-	f	[Lnet/minecraft/unmapped/C_0561170;	f_8522273		f_8522273
-	f	[Lnet/minecraft/unmapped/C_0561170;	f_6328346		f_6328346
-	f	[Lnet/minecraft/unmapped/C_0561170;	f_8488215		f_8488215
-	f	[Lnet/minecraft/unmapped/C_0561170;	f_2779175		f_2779175
+	f	[Lnet/minecraft/unmapped/C_0561170;	f_8522273		WARM_LOCATIONS
+	f	[Lnet/minecraft/unmapped/C_0561170;	f_6328346		BRICK_LOCATIONS
+	f	[Lnet/minecraft/unmapped/C_0561170;	f_8488215		CRACKED_LOCATIONS
+	f	[Lnet/minecraft/unmapped/C_0561170;	f_2779175		MOSSY_LOCATION
 	f	Lnet/minecraft/unmapped/C_0561170;	f_7312425		f_7312425
 	f	Lnet/minecraft/unmapped/C_0561170;	f_3198358		f_3198358
 	f	Lnet/minecraft/unmapped/C_0561170;	f_0303582		f_0303582
@@ -695,42 +695,42 @@ c	net/minecraft/unmapped/C_9372320		net/minecraft/world/gen/structure/OceanRuinP
 	f	Lnet/minecraft/unmapped/C_0561170;	f_6896340		f_6896340
 	f	Lnet/minecraft/unmapped/C_0561170;	f_5910058		f_5910058
 	f	Lnet/minecraft/unmapped/C_0561170;	f_7434798		f_7434798
-	f	[Lnet/minecraft/unmapped/C_0561170;	f_8591191		f_8591191
-	f	[Lnet/minecraft/unmapped/C_0561170;	f_2621319		f_2621319
-	f	[Lnet/minecraft/unmapped/C_0561170;	f_1431396		f_1431396
-	f	[Lnet/minecraft/unmapped/C_0561170;	f_4556600		f_4556600
+	f	[Lnet/minecraft/unmapped/C_0561170;	f_8591191		BIG_BRICK_LOCATION
+	f	[Lnet/minecraft/unmapped/C_0561170;	f_2621319		BIG_MOSSY_LOCATIONS
+	f	[Lnet/minecraft/unmapped/C_0561170;	f_1431396		BIG_CRACKED_LOCATIONS
+	f	[Lnet/minecraft/unmapped/C_0561170;	f_4556600		BIG_WARM_LOCATIONS
 	m	()V	m_0959134		register
-	m	(Ljava/util/Random;)Lnet/minecraft/unmapped/C_0561170;	m_4205498		m_4205498
-		p	0			p_0
-	m	(Ljava/util/Random;)Lnet/minecraft/unmapped/C_0561170;	m_2201282		m_2201282
-		p	0			p_0
+	m	(Ljava/util/Random;)Lnet/minecraft/unmapped/C_0561170;	m_4205498		pickWarmPiece
+		p	0			random
+	m	(Ljava/util/Random;)Lnet/minecraft/unmapped/C_0561170;	m_2201282		pickBigWarmPiece
+		p	0			random
 	m	(Lnet/minecraft/unmapped/C_0899004;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_0480726;Ljava/util/List;Ljava/util/Random;Lnet/minecraft/unmapped/C_2473373;)V	m_4466598		addPieces
-		p	0			p_0
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
-	m	(Lnet/minecraft/unmapped/C_0899004;Ljava/util/Random;Lnet/minecraft/unmapped/C_0480726;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_2473373;Ljava/util/List;)V	m_6980696		m_6980696
-		p	0			p_0
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
-	m	(Ljava/util/Random;II)Ljava/util/List;	m_4159868		m_4159868
-		p	0			p_0
-		p	1			p_1
-		p	2			p_2
-	m	(Lnet/minecraft/unmapped/C_0899004;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_0480726;Ljava/util/List;Ljava/util/Random;Lnet/minecraft/unmapped/C_2473373;ZF)V	m_7434340		m_7434340
-		p	0			p_0
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
-		p	6			p_6
-		p	7			p_7
+		p	0			structureManager
+		p	1			pos
+		p	2			rotation
+		p	3			pieces
+		p	4			random
+		p	5			config
+	m	(Lnet/minecraft/unmapped/C_0899004;Ljava/util/Random;Lnet/minecraft/unmapped/C_0480726;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_2473373;Ljava/util/List;)V	m_6980696		addClusterPiece
+		p	0			structureManager
+		p	1			random
+		p	2			rotation
+		p	3			pos
+		p	4			config
+		p	5			pieces
+	m	(Ljava/util/Random;II)Ljava/util/List;	m_4159868		allPositions
+		p	0			random
+		p	1			x
+		p	2			z
+	m	(Lnet/minecraft/unmapped/C_0899004;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_0480726;Ljava/util/List;Ljava/util/Random;Lnet/minecraft/unmapped/C_2473373;ZF)V	m_7434340		addPieces
+		p	0			structureManager
+		p	1			pos
+		p	2			rotation
+		p	3			pieces
+		p	4			random
+		p	5			config
+		p	6			big
+		p	7			integrity
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_9372320$C_7637483		OceanRuin
 	f	Lnet/minecraft/unmapped/C_4102738$C_0935844;	f_2023719		type

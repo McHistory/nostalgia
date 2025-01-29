@@ -6727,17 +6727,17 @@ c	net/minecraft/unmapped/C_0884802		net/minecraft/entity/projectile/ShulkerBulle
 c	net/minecraft/unmapped/C_0899004		net/minecraft/world/gen/structure/template/StructureManager
 	f	Ljava/util/Map;	f_2117199		templates
 	m	()V	<init>		<init>
-	m	(Lnet/minecraft/unmapped/C_0561170;)Lnet/minecraft/unmapped/C_4879372;	m_5256841		m_5256841
-		p	1			p_1
+	m	(Lnet/minecraft/unmapped/C_0561170;)Lnet/minecraft/unmapped/C_4879372;	m_5256841		getStructure
+		p	1			location
 	m	(Lnet/minecraft/unmapped/C_0561170;)Z	m_0365041		loadFromNbt
-		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_0561170;)Z	m_1477907		loadFromResource
+		p	1			location
+	m	(Lnet/minecraft/unmapped/C_0561170;)Z	m_1477907		loadGeneratedStructure
 		p	1			location
 	m	(Ljava/lang/String;Ljava/io/InputStream;)V	m_6275360		loadStructure
 		p	1			path
 		p	2			is
 	m	(Lnet/minecraft/unmapped/C_0561170;)Z	m_5296086		save
-		p	1			p_1
+		p	1			location
 c	net/minecraft/unmapped/C_0906767		net/minecraft/block/EndGatewayBlock
 	m	(Lnet/minecraft/unmapped/C_8554894;)V	<init>		<init>
 		p	1			p_1
@@ -7823,7 +7823,7 @@ c	net/minecraft/unmapped/C_5517808		net/minecraft/world/gen/structure/template/S
 	f	Z	f_5318887		f_5318887
 	f	Lnet/minecraft/unmapped/C_9386942;	f_1282409		pos
 	f	Lnet/minecraft/unmapped/C_0624720;	f_3436485		box
-	f	Z	f_8769639		keepLiquids
+	f	Z	f_8769639		removeStructureBlocks
 	m	()V	<init>		<init>
 	m	(Lnet/minecraft/unmapped/C_3635204$C_4039788;Lnet/minecraft/unmapped/C_3635204$C_0480726;ZZLnet/minecraft/unmapped/C_0624720;)V	<init>		<init>
 		p	1			p_1
@@ -7851,7 +7851,7 @@ c	net/minecraft/unmapped/C_5517808		net/minecraft/world/gen/structure/template/S
 	m	()Z	m_9021450		ignoreEntities
 	m	()Z	m_2998757		getIgnoredBlock
 	m	()Lnet/minecraft/unmapped/C_0624720;	m_2237105		getBox
-	m	()Z	m_5033567		keepLiquids
+	m	()Z	m_5033567		removeStructureBlocks
 	m	()V	m_6443015		updateBox
 	m	(Lnet/minecraft/unmapped/C_9386942;)Lnet/minecraft/unmapped/C_0624720;	m_0837974		findBox
 		p	1			pos

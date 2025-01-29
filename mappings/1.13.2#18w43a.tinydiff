@@ -2449,12 +2449,12 @@ c	net/minecraft/unmapped/C_4253713
 	m	(Lnet/minecraft/unmapped/C_9844932;Lnet/minecraft/unmapped/C_2800860;)Lnet/minecraft/unmapped/C_0960638;	m_1771620	createProtoChunkFromNbt	
 		p	1		world	
 		p	2		nbt	
-	m	(Lnet/minecraft/unmapped/C_3906126;[Lnet/minecraft/unmapped/C_3710347;)Lnet/minecraft/unmapped/C_1011144;	m_9264313	m_9264313	
-		p	1		p_1	
-		p	2		p_2	
-	m	(Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_1011144;)[Lnet/minecraft/unmapped/C_3710347;	m_6705302	m_6705302	
-		p	1		p_1	
-		p	2		p_2	
+	m	(Lnet/minecraft/unmapped/C_3906126;[Lnet/minecraft/unmapped/C_3710347;)Lnet/minecraft/unmapped/C_1011144;	m_9264313	writeSectionsToNbt	
+		p	1		world	
+		p	2		sections	
+	m	(Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_1011144;)[Lnet/minecraft/unmapped/C_3710347;	m_6705302	createSectionsFromNbt	
+		p	1		world	
+		p	2		nbt	
 	m	(Lnet/minecraft/unmapped/C_9844932;IILjava/util/function/Consumer;)Lnet/minecraft/unmapped/C_0960638;	m_0018649	m_0018649	
 		p	1		p_1	
 		p	2		p_2	
@@ -2469,12 +2469,12 @@ c	net/minecraft/unmapped/C_4253713
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
-	m	(Lnet/minecraft/unmapped/C_3906126;II[Lnet/minecraft/unmapped/C_3710347;)Lnet/minecraft/unmapped/C_1011144;	m_9264313		m_9264313
+	m	(Lnet/minecraft/unmapped/C_3906126;II[Lnet/minecraft/unmapped/C_3710347;)Lnet/minecraft/unmapped/C_1011144;	m_9264313		writeSectionsToNbt
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
-	m	(Lnet/minecraft/unmapped/C_9844932;IILnet/minecraft/unmapped/C_1011144;Z)[Lnet/minecraft/unmapped/C_3710347;	m_6705302		m_6705302
+	m	(Lnet/minecraft/unmapped/C_9844932;IILnet/minecraft/unmapped/C_1011144;Z)[Lnet/minecraft/unmapped/C_3710347;	m_6705302		createSectionsFromNbt
 		p	0			p_0
 		p	1			p_1
 		p	2			p_2
@@ -3006,7 +3006,7 @@ c	net/minecraft/unmapped/C_8139964	net/minecraft/world/chunk/storage/io/ChunkIo
 	f	Z	f_6542565	waiting	
 	f	J	f_2166563	registered	
 	f	J	f_3453988	completed	
-	f	Lorg/apache/logging/log4j/Logger;	f_2250380	f_2250380	
+	f	Lorg/apache/logging/log4j/Logger;	f_2250380	LOGGER	
 	m	()V	<init>	<init>	
 	m	()V	run	run	
 	m	()V	m_1047139	runTasks	
@@ -3076,17 +3076,17 @@ c	net/minecraft/unmapped/C_7276582
 		p	1		p_1	
 	m	(Lnet/minecraft/unmapped/C_3820473;)V	m_3412382	m_3412382	
 		p	1		p_1	
-	m	(IILnet/minecraft/unmapped/C_0636026;)V	m_6318238	m_6318238	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
+	m	(IILnet/minecraft/unmapped/C_0636026;)V	m_6318238	placeLayers	
+		p	1		chunkX	
+		p	2		chunkZ	
+		p	3		chunk	
 	m	(Lnet/minecraft/unmapped/C_3906126;ZZ)I	m_2645757	m_2645757	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
 	m	(Lnet/minecraft/unmapped/C_0636026;)V	m_6667540		m_6667540
 		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_0636026;)V	m_6318238		m_6318238
+	m	(Lnet/minecraft/unmapped/C_0636026;)V	m_6318238		placeLayers
 		p	1			p_1
 	m	(IILnet/minecraft/unmapped/C_0636026;)V	m_0874705		m_0874705
 		p	1			p_1
@@ -3436,36 +3436,36 @@ c	net/minecraft/unmapped/C_6479467
 		p	0		world	
 		p	1		pos	
 c	net/minecraft/unmapped/C_7574603
-	f	Lnet/minecraft/unmapped/C_2113478;	f_6194034	f_6194034	
-	f	Lnet/minecraft/unmapped/C_2113478;	f_2863784	f_2863784	
-	f	Lnet/minecraft/unmapped/C_2113478;	f_0710679	f_0710679	
-	f	Lnet/minecraft/unmapped/C_2113478;	f_1282757	f_1282757	
-	f	Lnet/minecraft/unmapped/C_2113478;	f_3312191	f_3312191	
-	f	Lnet/minecraft/unmapped/C_2113478;	f_6800420	f_6800420	
-	f	Lnet/minecraft/unmapped/C_2113478;	f_5921298	f_5921298	
-	f	Lnet/minecraft/unmapped/C_2113478;	f_4928042	f_4928042	
-	f	Lnet/minecraft/unmapped/C_2113478;	f_7116775	f_7116775	
-	f	Lnet/minecraft/unmapped/C_2113478;	f_7985105	f_7985105	
-	f	Lnet/minecraft/unmapped/C_2113478;	f_5075278	f_5075278	
-	f	Lnet/minecraft/unmapped/C_2113478;	f_9552332	f_9552332	
-	f	Lnet/minecraft/unmapped/C_2113478;	f_2869717	f_2869717	
-	f	Lnet/minecraft/unmapped/C_2113478;	f_8043496	f_8043496	
-	f	Lnet/minecraft/unmapped/C_2113478;	f_1528271	f_1528271	
-	f	Lnet/minecraft/unmapped/C_3152949;	f_6194034		f_6194034
-	f	Lnet/minecraft/unmapped/C_3152949;	f_2863784		f_2863784
-	f	Lnet/minecraft/unmapped/C_3152949;	f_0710679		f_0710679
-	f	Lnet/minecraft/unmapped/C_3152949;	f_1282757		f_1282757
-	f	Lnet/minecraft/unmapped/C_3152949;	f_3312191		f_3312191
-	f	Lnet/minecraft/unmapped/C_3152949;	f_6800420		f_6800420
-	f	Lnet/minecraft/unmapped/C_3152949;	f_5921298		f_5921298
-	f	Lnet/minecraft/unmapped/C_3152949;	f_1528271		f_1528271
-	f	Lnet/minecraft/unmapped/C_3152949;	f_4928042		f_4928042
-	f	Lnet/minecraft/unmapped/C_3152949;	f_7116775		f_7116775
-	f	Lnet/minecraft/unmapped/C_3152949;	f_7985105		f_7985105
-	f	Lnet/minecraft/unmapped/C_3152949;	f_5075278		f_5075278
-	f	Lnet/minecraft/unmapped/C_3152949;	f_9552332		f_9552332
-	f	Lnet/minecraft/unmapped/C_3152949;	f_2869717		f_2869717
-	f	Lnet/minecraft/unmapped/C_3152949;	f_8043496		f_8043496
+	f	Lnet/minecraft/unmapped/C_2113478;	f_6194034	MINESHAFT	
+	f	Lnet/minecraft/unmapped/C_2113478;	f_2863784	VILLAGE	
+	f	Lnet/minecraft/unmapped/C_2113478;	f_0710679	STRONGHOLD	
+	f	Lnet/minecraft/unmapped/C_2113478;	f_1282757	WITH_HUT	
+	f	Lnet/minecraft/unmapped/C_2113478;	f_3312191	DESERT_TEMPLE	
+	f	Lnet/minecraft/unmapped/C_2113478;	f_6800420	JUNGLE_TEMPLE	
+	f	Lnet/minecraft/unmapped/C_2113478;	f_5921298	IGLOO	
+	f	Lnet/minecraft/unmapped/C_2113478;	f_4928042	OCEAN_MONUMENT	
+	f	Lnet/minecraft/unmapped/C_2113478;	f_7116775	WATER_LAKE	
+	f	Lnet/minecraft/unmapped/C_2113478;	f_7985105	LAVA_LAKE	
+	f	Lnet/minecraft/unmapped/C_2113478;	f_5075278	END_CITY	
+	f	Lnet/minecraft/unmapped/C_2113478;	f_9552332	MANSION	
+	f	Lnet/minecraft/unmapped/C_2113478;	f_2869717	FORTRESS	
+	f	Lnet/minecraft/unmapped/C_2113478;	f_8043496	OCEAN_RUIN	
+	f	Lnet/minecraft/unmapped/C_2113478;	f_1528271	SHIPWRECK	
+	f	Lnet/minecraft/unmapped/C_3152949;	f_6194034		MINESHAFT
+	f	Lnet/minecraft/unmapped/C_3152949;	f_2863784		VILLAGE
+	f	Lnet/minecraft/unmapped/C_3152949;	f_0710679		STRONGHOLD
+	f	Lnet/minecraft/unmapped/C_3152949;	f_1282757		WITH_HUT
+	f	Lnet/minecraft/unmapped/C_3152949;	f_3312191		DESERT_TEMPLE
+	f	Lnet/minecraft/unmapped/C_3152949;	f_6800420		JUNGLE_TEMPLE
+	f	Lnet/minecraft/unmapped/C_3152949;	f_5921298		IGLOO
+	f	Lnet/minecraft/unmapped/C_3152949;	f_1528271		SHIPWRECK
+	f	Lnet/minecraft/unmapped/C_3152949;	f_4928042		OCEAN_MONUMENT
+	f	Lnet/minecraft/unmapped/C_3152949;	f_7116775		WATER_LAKE
+	f	Lnet/minecraft/unmapped/C_3152949;	f_7985105		LAVA_LAKE
+	f	Lnet/minecraft/unmapped/C_3152949;	f_5075278		END_CITY
+	f	Lnet/minecraft/unmapped/C_3152949;	f_9552332		MANSION
+	f	Lnet/minecraft/unmapped/C_3152949;	f_2869717		FORTRESS
+	f	Lnet/minecraft/unmapped/C_3152949;	f_8043496		OCEAN_RUIN
 c	net/minecraft/unmapped/C_1339315
 	m	()V	<init>	<init>	
 	m	(Ljava/util/function/Function;)V	<init>		<init>
@@ -6086,7 +6086,7 @@ c	net/minecraft/unmapped/C_7630919
 	f	Lnet/minecraft/unmapped/C_6385858;	f_1059536	thisEntity	
 	f	Lnet/minecraft/unmapped/C_5009044;	f_6335468	killerPlayer	
 	f	Lnet/minecraft/unmapped/C_6907923;	f_7177604	damageSource	
-	f	Lnet/minecraft/unmapped/C_6707278;	f_4460854	f_4460854	
+	f	Lnet/minecraft/unmapped/C_6707278;	f_4460854	pos	
 	f	Ljava/util/Random;	f_1037800		random
 	f	Ljava/util/Map;	f_6531142		f_6531142
 	f	Ljava/util/Map;	f_2720692		f_2720692
@@ -6096,14 +6096,14 @@ c	net/minecraft/unmapped/C_7630919
 	m	(Lnet/minecraft/unmapped/C_7630919$C_1590282;)Lnet/minecraft/unmapped/C_6385858;	m_3076953	getTarget	
 		p	1		target	
 	m	(FLnet/minecraft/unmapped/C_7366354;Lnet/minecraft/unmapped/C_7464728;Lnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_6907923;Lnet/minecraft/unmapped/C_6707278;)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-		p	6		p_6	
-		p	7		p_7	
-	m	()Lnet/minecraft/unmapped/C_6707278;	m_4291245	m_4291245	
+		p	1		luck	
+		p	2		world	
+		p	3		lootTables	
+		p	4		thisEntity	
+		p	5		killerPlayer	
+		p	6		damageSource	
+		p	7		pos	
+	m	()Lnet/minecraft/unmapped/C_6707278;	m_4291245	getPosition	
 	m	(Ljava/util/Random;FLnet/minecraft/unmapped/C_7366354;Lnet/minecraft/unmapped/C_7464728;Ljava/util/Map;Ljava/util/Map;)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
@@ -6127,7 +6127,6 @@ c	net/minecraft/unmapped/C_7630919
 		p	5			p_5
 		p	6			p_6
 		p	7			p_7
-	m	()Lnet/minecraft/unmapped/C_7366354;	m_3016668	m_3016668	getWorld
 c	net/minecraft/unmapped/C_7630919$1529915	1529915	
 	f	[I	f_5676086	f_5676086	
 	m	()V	<clinit>	<clinit>	
@@ -6148,7 +6147,7 @@ c	net/minecraft/unmapped/C_7630919$C_2187393
 	f	Lnet/minecraft/unmapped/C_6385858;	f_5155033	thisEntity	
 	f	Lnet/minecraft/unmapped/C_5009044;	f_8786121	killerPlayer	
 	f	Lnet/minecraft/unmapped/C_6907923;	f_8717357	damageSource	
-	f	Lnet/minecraft/unmapped/C_6707278;	f_8078715	f_8078715	
+	f	Lnet/minecraft/unmapped/C_6707278;	f_8078715	pos	
 	f	Ljava/util/Map;	f_8929691		parameters
 	f	Ljava/util/Map;	f_3076337		dynamicDrops
 	f	Ljava/util/Random;	f_3825474		random
@@ -6160,7 +6159,7 @@ c	net/minecraft/unmapped/C_7630919$C_2187393
 		p	1		damageSource	
 	m	()Lnet/minecraft/unmapped/C_7630919;	m_2695252	build	
 	m	(Lnet/minecraft/unmapped/C_6707278;)Lnet/minecraft/unmapped/C_7630919$C_2187393;	m_2779761	setPos	
-		p	1		p_1	
+		p	1		pos	
 	m	(Ljava/util/Random;)Lnet/minecraft/unmapped/C_7630919$C_2187393;	m_0220871		setRandom
 		p	1			random
 	m	(J)Lnet/minecraft/unmapped/C_7630919$C_2187393;	m_2482930		setOptionalRandomSeed

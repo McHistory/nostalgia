@@ -65,45 +65,45 @@ c	net/minecraft/unmapped/C_0546437
 	m	(Lnet/minecraft/unmapped/C_9844932;Lnet/minecraft/unmapped/C_6707278;F)V	m_9576206		placeCluster
 		p	1			world
 		p	2			pos
-		p	3			p_3
+		p	3			radius
 	m	(II)F	m_9406770		getTreeShape
-		p	1			p_1
-		p	2			p_2
+		p	1			treeHeight
+		p	2			trunkHeight
 	m	(Ljava/util/Set;Lnet/minecraft/unmapped/C_9844932;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_6707278;Z)I	m_9972056		tryBranch
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
+		p	1			logPositions
+		p	2			world
+		p	3			from
+		p	4			to
 		p	5			p_5
 	m	(Lnet/minecraft/unmapped/C_9844932;ILnet/minecraft/unmapped/C_6707278;Ljava/util/List;)V	m_6812697		placeFoliage
-		p	1			p_1
+		p	1			world
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
 	m	(II)Z	m_6969025		shouldPlaceBranch
-		p	1			p_1
-		p	2			p_2
-	m	(Ljava/util/Set;Lnet/minecraft/unmapped/C_9844932;Lnet/minecraft/unmapped/C_6707278;I)V	m_2344906		m_2344906
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
+		p	1			treeHeight
+		p	2			trunkHeight
+	m	(Ljava/util/Set;Lnet/minecraft/unmapped/C_9844932;Lnet/minecraft/unmapped/C_6707278;I)V	m_2344906		placeTrunk
+		p	1			logPositions
+		p	2			world
+		p	3			pos
+		p	4			height
 	m	(Ljava/util/Set;Lnet/minecraft/unmapped/C_9844932;ILnet/minecraft/unmapped/C_6707278;Ljava/util/List;)V	m_0709333		placeBranches
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
+		p	1			logPositions
+		p	2			world
+		p	3			baseY
+		p	4			base
+		p	5			positions
 	m	(Ljava/util/Set;Lnet/minecraft/unmapped/C_9844932;Ljava/util/Random;Lnet/minecraft/unmapped/C_6707278;)Z	m_0953950		m_0953950
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
-	m	(Ljava/util/Set;Lnet/minecraft/unmapped/C_9844932;Lnet/minecraft/unmapped/C_6707278;I)I	m_6781756		m_6781756
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
+	m	(Ljava/util/Set;Lnet/minecraft/unmapped/C_9844932;Lnet/minecraft/unmapped/C_6707278;I)I	m_6781756		canPlace
+		p	1			logPositions
+		p	2			world
+		p	3			pos
+		p	4			height
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_0559439
 	f	[I	f_0814141	decayRegion	
@@ -370,9 +370,9 @@ c	net/minecraft/unmapped/C_1189256
 		p	3			p_3
 		p	4			p_4
 	m	(Ljava/util/Set;Lnet/minecraft/unmapped/C_9844932;Lnet/minecraft/unmapped/C_6707278;)V	m_4291574		placeLog
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+		p	1			logPositions
+		p	2			world
+		p	3			pos
 c	net/minecraft/unmapped/C_1845800
 	m	(Lnet/minecraft/unmapped/C_9844932;Lnet/minecraft/unmapped/C_0705111;Ljava/util/Random;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_1607741;)Z	m_7819465	m_7819465	
 		p	1		p_1	
@@ -456,9 +456,9 @@ c	net/minecraft/unmapped/C_6917250
 		p	3			p_3
 		p	4			p_4
 	m	(Ljava/util/Set;Lnet/minecraft/unmapped/C_9844932;Lnet/minecraft/unmapped/C_6707278;)V	m_2290100		placeLog
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+		p	1			logPositions
+		p	2			world
+		p	3			pos
 c	net/minecraft/unmapped/C_9939341
 	m	(Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_2441996;)V	m_6138806	m_6138806	
 		p	1		p_1	

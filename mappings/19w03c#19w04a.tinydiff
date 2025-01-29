@@ -482,9 +482,9 @@ c	net/minecraft/unmapped/C_9386942
 	m	()I	m_0836487		m_0836487
 c	net/minecraft/unmapped/C_9462692
 	m	(Lnet/minecraft/unmapped/C_3906126;II)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
+		p	1		world	
+		p	2		chunkX	
+		p	3		chunkZ	
 	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_9386942;)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
@@ -542,12 +542,12 @@ c	net/minecraft/unmapped/C_0629296
 			c	the time in seconds since midnight, January 1, 1970 UTC	
 	m	()V	m_0093462	close	
 		c	Flushes and closes the region file	
-	m	(II)Z	m_1867953	m_1867953	
-		p	1		p_1	
-		p	2		p_2	
+	m	(II)Z	m_1867953	doesChunkExist	
+		p	1		chunkX	
+		p	2		chunkZ	
 	m	(Lnet/minecraft/unmapped/C_9386942;)Ljava/io/DataInputStream;	m_3985611		getChunkInputStream
 		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_9386942;)Z	m_1867953		m_1867953
+	m	(Lnet/minecraft/unmapped/C_9386942;)Z	m_1867953		doesChunkExist
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_9386942;)Ljava/io/DataOutputStream;	m_5494327		getChunkOutputStream
 		p	1			p_1
@@ -655,21 +655,21 @@ c	net/minecraft/unmapped/C_4253713
 	m	(Lnet/minecraft/unmapped/C_2800860;)Lnet/minecraft/unmapped/C_3331146$C_3040737;	m_8949968
 		p	1		nbt	
 		p	0			p_0
-	m	(IILjava/util/Map;Ljava/util/Map;)Lnet/minecraft/unmapped/C_2800860;	m_8345098	m_8345098	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
+	m	(IILjava/util/Map;Ljava/util/Map;)Lnet/minecraft/unmapped/C_2800860;	m_8345098	writeStructuresToNbt	
+		p	1		chunkX	
+		p	2		chunkZ	
+		p	3		starts	
+		p	4		references	
 	m	(Lnet/minecraft/unmapped/C_2800860;)Ljava/util/Map;	m_1726333
-		p	1		p_1	
+		p	1		nbt	
 		p	0			p_0
 	m	(Lnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_9844932;)V	m_0133711	addEntityWithPassengers	
-		p	0		p_0	
-		p	1		p_1	
+		p	0		entity	
+		p	1		world	
 	m	(Lnet/minecraft/unmapped/C_2800860;Lnet/minecraft/unmapped/C_3906126;Ljava/util/function/Function;)Lnet/minecraft/unmapped/C_6385858;	m_6768087	loadEntity	
-		p	0		p_0	
-		p	1		p_1	
-		p	2		p_2	
+		p	0		nbt	
+		p	1		world	
+		p	2		loader	
 	m	(Lnet/minecraft/unmapped/C_2800860;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6755599;)Lnet/minecraft/unmapped/C_6385858;	m_6756217	loadEntity	
 		p	0		nbt	
 		p	1		world	
@@ -711,12 +711,12 @@ c	net/minecraft/unmapped/C_4253713
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
-	m	(Lnet/minecraft/unmapped/C_3906126;II[Lnet/minecraft/unmapped/C_3710347;)Lnet/minecraft/unmapped/C_1011144;	m_9264313	m_9264313	
+	m	(Lnet/minecraft/unmapped/C_3906126;II[Lnet/minecraft/unmapped/C_3710347;)Lnet/minecraft/unmapped/C_1011144;	m_9264313	writeSectionsToNbt	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
 		p	4		p_4	
-	m	(Lnet/minecraft/unmapped/C_9844932;IILnet/minecraft/unmapped/C_1011144;Z)[Lnet/minecraft/unmapped/C_3710347;	m_6705302	m_6705302	
+	m	(Lnet/minecraft/unmapped/C_9844932;IILnet/minecraft/unmapped/C_1011144;Z)[Lnet/minecraft/unmapped/C_3710347;	m_6705302	createSectionsFromNbt	
 		p	0		p_0	
 		p	1		p_1	
 		p	2		p_2	
@@ -726,7 +726,7 @@ c	net/minecraft/unmapped/C_4253713
 	m	(Lnet/minecraft/unmapped/C_8679709;Lnet/minecraft/unmapped/C_0899004;Lnet/minecraft/unmapped/C_9143244;Lnet/minecraft/unmapped/C_2800860;)Ljava/util/Map;	m_5730578
 		p	4		p_4	
 		p	0			p_0
-	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_0899004;Lnet/minecraft/unmapped/C_9386942;Lnet/minecraft/unmapped/C_2800860;)Lnet/minecraft/unmapped/C_0960638;	m_9264313		m_9264313
+	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_0899004;Lnet/minecraft/unmapped/C_9386942;Lnet/minecraft/unmapped/C_2800860;)Lnet/minecraft/unmapped/C_0960638;	m_9264313		writeSectionsToNbt
 		p	0			p_0
 		p	1			p_1
 		p	2			p_2
@@ -734,7 +734,7 @@ c	net/minecraft/unmapped/C_4253713
 	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_0636026;)Lnet/minecraft/unmapped/C_2800860;	m_8894179		m_8894179
 		p	0			p_0
 		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_9386942;Ljava/util/Map;Ljava/util/Map;)Lnet/minecraft/unmapped/C_2800860;	m_8345098		m_8345098
+	m	(Lnet/minecraft/unmapped/C_9386942;Ljava/util/Map;Ljava/util/Map;)Lnet/minecraft/unmapped/C_2800860;	m_8345098		writeStructuresToNbt
 		p	0			p_0
 		p	1			p_1
 		p	2			p_2
@@ -1605,43 +1605,43 @@ c	net/minecraft/unmapped/C_1576074
 	f	Lorg/apache/logging/log4j/Logger;	f_9722773	LOGGER	
 	f	Ljava/util/List;	f_7273048		f_7273048
 	f	Ljava/util/List;	f_2835029		f_2835029
-	m	()[Ljava/lang/String;	m_8287631	m_8287631	
-	m	()[Ljava/lang/String;	m_3232354	m_3232354	
+	m	()[Ljava/lang/String;	m_8287631	getCurrentKeys	
+	m	()[Ljava/lang/String;	m_3232354	getLegacyKeys	
 	m	(Lnet/minecraft/unmapped/C_8054043;)V	<init>	<init>	
-		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_8054043;)V	m_2261809	m_2261809	
-		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_0013174;Lnet/minecraft/unmapped/C_8054043;)Lnet/minecraft/unmapped/C_1576074;	m_8186642	m_8186642	
-		p	0		p_0	
-		p	1		p_1	
+		p	1		dataStorage	
+	m	(Lnet/minecraft/unmapped/C_8054043;)V	m_2261809	populateCaches	
+		p	1		dataStorage	
+	m	(Lnet/minecraft/unmapped/C_0013174;Lnet/minecraft/unmapped/C_8054043;)Lnet/minecraft/unmapped/C_1576074;	m_8186642	forDimension	
+		p	0		dimension	
+		p	1		dataStorage	
 	m	(Lnet/minecraft/unmapped/C_8407692;Ljava/util/List;Ljava/util/List;)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
-	m	(Lnet/minecraft/unmapped/C_8407692;)V	m_2261809		m_2261809
+	m	(Lnet/minecraft/unmapped/C_8407692;)V	m_2261809		populateCaches
 		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_0013174;Lnet/minecraft/unmapped/C_8407692;)Lnet/minecraft/unmapped/C_1576074;	m_8186642		m_8186642
+	m	(Lnet/minecraft/unmapped/C_0013174;Lnet/minecraft/unmapped/C_8407692;)Lnet/minecraft/unmapped/C_1576074;	m_8186642		forDimension
 		p	0			p_0
 		p	1			p_1
 	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_1077508;	m_9807471		m_9807471
 		p	0			p_0
-c	net/minecraft/unmapped/C_1576074$C_0183170	C_0183170	
-	f	[Ljava/lang/String;	f_3881173	f_3881173	
+c	net/minecraft/unmapped/C_1576074$C_0183170	Nether	
+	f	[Ljava/lang/String;	f_3881173	KEYS	
 	m	()[Ljava/lang/String;	m_8287631	m_8287631	
 	m	()[Ljava/lang/String;	m_3232354	m_3232354	
 	m	()V	<clinit>	<clinit>	
 	m	(Lnet/minecraft/unmapped/C_8054043;)V	<init>	<init>	
 		p	1		p_1	
-c	net/minecraft/unmapped/C_1576074$C_2867412	C_2867412	
-	f	[Ljava/lang/String;	f_4578358	f_4578358	
-	f	[Ljava/lang/String;	f_9952969	f_9952969	
+c	net/minecraft/unmapped/C_1576074$C_2867412	Overworld	
+	f	[Ljava/lang/String;	f_4578358	CURRENT_KEYS	
+	f	[Ljava/lang/String;	f_9952969	LEGACY_KEYS	
 	m	()[Ljava/lang/String;	m_8287631	m_8287631	
 	m	()[Ljava/lang/String;	m_3232354	m_3232354	
 	m	()V	<clinit>	<clinit>	
 	m	(Lnet/minecraft/unmapped/C_8054043;)V	<init>	<init>	
 		p	1		p_1	
-c	net/minecraft/unmapped/C_1576074$C_8110738	C_8110738	
-	f	[Ljava/lang/String;	f_8215896	f_8215896	
+c	net/minecraft/unmapped/C_1576074$C_8110738	TheEnd	
+	f	[Ljava/lang/String;	f_8215896	KEYS	
 	m	()[Ljava/lang/String;	m_8287631	m_8287631	
 	m	()[Ljava/lang/String;	m_3232354	m_3232354	
 	m	()V	<clinit>	<clinit>	

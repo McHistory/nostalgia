@@ -6245,9 +6245,9 @@ c	net/minecraft/unmapped/C_9904591	net/minecraft/client/render/FrustumMatrix
 	m	()V	<init>	<init>	
 c	net/minecraft/unmapped/C_0899004
 	f	Ljava/lang/String;	f_9101511	dir	
-	f	Lorg/apache/logging/log4j/Logger;	f_4873086		f_4873086
-	f	Lnet/minecraft/server/MinecraftServer;	f_0483286		f_0483286
-	f	Ljava/io/File;	f_0897867		f_0897867
+	f	Lorg/apache/logging/log4j/Logger;	f_4873086		LOGGER
+	f	Lnet/minecraft/server/MinecraftServer;	f_0483286		server
+	f	Ljava/io/File;	f_0897867		generatedDir
 	m	(Ljava/lang/String;Ljava/io/InputStream;)V	m_6275360	loadStructure	
 		p	1		path	
 		p	2		is	
@@ -6258,16 +6258,16 @@ c	net/minecraft/unmapped/C_0899004
 		p	1		dir	
 		p	2		dfu	
 	m	(Lnet/minecraft/server/MinecraftServer;Ljava/io/File;Lnet/minecraft/unmapped/C_9571530;)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+		p	1			server
+		p	2			dir
+		p	3			dfu
 	m	(Lnet/minecraft/unmapped/C_6577431;)V	m_6705429		m_6705429
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_0561170;Ljava/io/InputStream;)V	m_6275360		loadStructure
-		p	1			p_1
-		p	2			p_2
+		p	1			location
+		p	2			in
 	m	(Lnet/minecraft/unmapped/C_0561170;)Z	m_5296086		save
-		p	1			p_1
+		p	1			location
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_2211410
 	m	(IIIIII)Z	m_3563586	m_3563586	
@@ -6426,9 +6426,9 @@ c	net/minecraft/unmapped/C_7171701	net/minecraft/client/render/platform/PngInfo
 c	net/minecraft/unmapped/C_7464728
 	f	Lcom/google/common/cache/LoadingCache;	f_0719191	lootTables	
 	f	Ljava/io/File;	f_3685786	dir	
-	f	Ljava/util/Map;	f_8639770		f_8639770
-	f	I	f_4260586		f_4260586
-	f	I	f_3786841		f_3786841
+	f	Ljava/util/Map;	f_8639770		tables
+	f	I	f_4260586		RESOURCE_PATH
+	f	I	f_3786841		EXTENSION
 	m	(Ljava/io/File;)V	<init>	<init>	
 		p	1		dir	
 	m	()V	m_9809829	reload	

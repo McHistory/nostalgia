@@ -149,7 +149,7 @@ c	net/minecraft/unmapped/C_0611937
 		p	1			p_1
 		p	3			p_3
 		p	5			p_5
-	m	(DD)D	m_5716058		m_5716058
+	m	(DD)D	m_5716058		noise
 		p	1			p_1
 		p	3			p_3
 	m	(DDD)D	m_7506458		m_7506458
@@ -171,7 +171,7 @@ c	net/minecraft/unmapped/C_0914500
 	m	(Lnet/minecraft/unmapped/C_4636105;)V	<init>	<init>	
 		p	1		biome	
 	m	(Lnet/minecraft/unmapped/C_3830572;)V	<init>		<init>
-		p	1			p_1
+		p	1			settings
 c	net/minecraft/unmapped/C_1044273
 	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_2441996;I)V	m_7307167	m_7307167	
 		p	1		p_1	
@@ -1606,21 +1606,21 @@ c	net/minecraft/unmapped/C_4253713
 	m	(Lnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_3906126;)V	m_0133711	addEntityWithPassengers	
 		p	0		entity	
 		p	1		world	
-	m	(Lnet/minecraft/unmapped/C_9844932;Lnet/minecraft/unmapped/C_1011144;)[Lnet/minecraft/unmapped/C_3710347;	m_6705302	m_6705302	
+	m	(Lnet/minecraft/unmapped/C_9844932;Lnet/minecraft/unmapped/C_1011144;)[Lnet/minecraft/unmapped/C_3710347;	m_6705302	createSectionsFromNbt	
 		p	1		p_1	
 		p	2		p_2	
 	m	([Lit/unimi/dsi/fastutil/shorts/ShortList;)Lnet/minecraft/unmapped/C_1011144;	m_2464697
 		p	1		p_1	
-		p	0			p_0
+		p	0			shorts
 	m	(Lnet/minecraft/unmapped/C_5250955;Lnet/minecraft/unmapped/C_6755599;)V	m_6549910		m_6549910
 		p	1			p_1
 		p	2			p_2
-	m	(Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_1011144;)[Lnet/minecraft/unmapped/C_3710347;	m_6705302		m_6705302
-		p	1			p_1
-		p	2			p_2
+	m	(Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_1011144;)[Lnet/minecraft/unmapped/C_3710347;	m_6705302		createSectionsFromNbt
+		p	1			world
+		p	2			nbt
 	m	(Lnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_9844932;)V	m_0133711		addEntityWithPassengers
-		p	0			p_0
-		p	1			p_1
+		p	0			entity
+		p	1			world
 	m	(Lnet/minecraft/unmapped/C_8052515;)Z	m_9590043		m_9590043
 		p	0			p_0
 	m	(Lnet/minecraft/unmapped/C_3635204;)Z	m_3085695		m_3085695
@@ -1946,12 +1946,12 @@ c	net/minecraft/unmapped/C_0895386$C_9875017
 		p	5		p_5	
 		p	6		p_6	
 	m	(Lnet/minecraft/unmapped/C_5250955;Lnet/minecraft/unmapped/C_0624720;IIII)Z	m_7576365		canPlaceSupport
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
-		p	6			p_6
+		p	1			world
+		p	2			bounds
+		p	3			minX
+		p	4			maxX
+		p	5			y
+		p	6			z
 c	net/minecraft/unmapped/C_1283912
 	f	Z	f_2574378		icon
 	m	(Lnet/minecraft/unmapped/C_0591668;IIZZZ)V	<init>		<init>
@@ -2896,9 +2896,9 @@ c	net/minecraft/unmapped/C_1189256
 		p	2		p_2	
 		p	3		p_3	
 	m	(Lnet/minecraft/unmapped/C_5250955;Lnet/minecraft/unmapped/C_6707278;I)Z	m_2916865		isValidHeight
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+		p	1			world
+		p	2			pos
+		p	3			height
 c	net/minecraft/unmapped/C_6068349
 	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_2441996;Z)Z	m_5044643	canGrow	
 		p	1		world	
@@ -3620,7 +3620,7 @@ c	net/minecraft/unmapped/C_7504230
 	m	(ILnet/minecraft/unmapped/C_2441996;)I	m_7509740	resize	
 		p	1		size	
 		p	2		state	
-	m	(ILjava/lang/Object;)I	m_7509740		m_7509740
+	m	(ILjava/lang/Object;)I	m_7509740		resize
 		p	1			id
 		p	2			value
 c	net/minecraft/unmapped/C_0705111
@@ -3847,9 +3847,9 @@ c	net/minecraft/unmapped/C_5660241
 		p	2		p_2	
 		p	3		p_3	
 	m	(Lnet/minecraft/unmapped/C_5250955;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_4879372$C_2814287;)Lnet/minecraft/unmapped/C_4879372$C_2814287;	m_8618940		process
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+		p	1			world
+		p	2			pos
+		p	3			structure
 c	net/minecraft/unmapped/C_6430388
 	m	(Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_3544601;)Lnet/minecraft/unmapped/C_0784495;	m_4005170	m_4005170	
 		p	1		p_1	
@@ -4365,7 +4365,7 @@ c	net/minecraft/unmapped/C_2537241
 	m	(Lnet/minecraft/unmapped/C_9844932;)V	<init>	<init>	
 		p	1		world	
 	m	(Lnet/minecraft/unmapped/C_1357559;)V	<init>		<init>
-		p	1			p_1
+		p	1			settings
 c	net/minecraft/unmapped/C_2879908
 	m	(Ljava/util/Random;Lnet/minecraft/unmapped/C_0636026;Lnet/minecraft/unmapped/C_4636105;IIIDIJLnet/minecraft/unmapped/C_7626890;)V	m_9482658	m_9482658	
 		p	1		p_1	
@@ -4524,7 +4524,7 @@ c	net/minecraft/unmapped/C_4683110
 		p	10			p_10
 		p	12			p_12
 c	net/minecraft/unmapped/C_4683117
-	m	()Lnet/minecraft/unmapped/C_0611937;	m_3867290		m_3867290
+	m	()Lnet/minecraft/unmapped/C_0611937;	m_3867290		getBiomeNoise
 c	net/minecraft/unmapped/C_4972159
 	m	(Ljava/util/Random;Lnet/minecraft/unmapped/C_0636026;Lnet/minecraft/unmapped/C_4636105;IIIDIJLnet/minecraft/unmapped/C_7626890;)V	m_9482658	m_9482658	
 		p	1		p_1	
@@ -4611,15 +4611,15 @@ c	net/minecraft/unmapped/C_5532430
 		p	8		p_8	
 		p	9		p_9	
 	m	(Lnet/minecraft/unmapped/C_2627205;IIIIIIII)Z	m_5564018		hasLiquid
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
-		p	6			p_6
-		p	7			p_7
-		p	8			p_8
-		p	9			p_9
+		p	1			world
+		p	2			chunkX
+		p	3			chunkZ
+		p	4			minX
+		p	5			maxX
+		p	6			minY
+		p	7			maxY
+		p	8			minZ
+		p	9			maxZ
 c	net/minecraft/unmapped/C_6537776
 	m	(Ljava/util/Random;Lnet/minecraft/unmapped/C_0636026;Lnet/minecraft/unmapped/C_4636105;IIIDIJLnet/minecraft/unmapped/C_7626890;)V	m_9482658	m_9482658	
 		p	1		p_1	
@@ -4669,7 +4669,7 @@ c	net/minecraft/unmapped/C_6937124
 	m	(Lnet/minecraft/unmapped/C_6707278;)Z	m_0159225		removeBlock
 		p	1			pos
 c	net/minecraft/unmapped/C_7332071
-	f	Lnet/minecraft/unmapped/C_0611937;	f_9995529		f_9995529
+	f	Lnet/minecraft/unmapped/C_0611937;	f_9995529		biomeNoise
 	m	()Lnet/minecraft/unmapped/C_0611937;	m_3867290		m_3867290
 c	net/minecraft/unmapped/C_7338640
 	m	(Ljava/util/Random;Lnet/minecraft/unmapped/C_0636026;Lnet/minecraft/unmapped/C_4636105;IIIDIJLnet/minecraft/unmapped/C_7626890;)V	m_9482658	build	
@@ -5750,10 +5750,10 @@ c	net/minecraft/unmapped/C_5280919		net/minecraft/world/tick/TickList
 		p	1			pos
 		p	2			type
 c	net/minecraft/unmapped/C_5453070		net/minecraft/world/biome/source/CheckerboardBiomeSource
-	f	[Lnet/minecraft/unmapped/C_4636105;	f_4614710		f_4614710
-	f	I	f_8964588		f_8964588
+	f	[Lnet/minecraft/unmapped/C_4636105;	f_4614710		biomes
+	f	I	f_8964588		size
 	m	(Lnet/minecraft/unmapped/C_9356633;)V	<init>		<init>
-		p	1			p_1
+		p	1			settings
 	m	(Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_4636105;)Lnet/minecraft/unmapped/C_4636105;	m_2941275		m_2941275
 		p	1			p_1
 		p	2			p_2

@@ -3153,33 +3153,33 @@ c	net/minecraft/unmapped/C_5215591$C_0649834	HeadLayer
 		p	1		p_1	
 		p	2		p_2	
 c	net/minecraft/unmapped/C_7121928
-	m	(IIII)Z	m_4939967	m_4939967	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-	m	(IIII)Z	m_2905670	m_2905670	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-	m	(IIII)V	m_4551496	m_4551496	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
+	m	(IIII)Z	m_4939967	isArenaLoaded	
+		p	1		minChunkX	
+		p	2		maxChunkX	
+		p	3		minChunkZ	
+		p	4		maxChunkZ	
+	m	(IIII)Z	m_2905670	areChunksLoaded	
+		p	1		minChunkX	
+		p	2		maxChunkX	
+		p	3		minChunkZ	
+		p	4		maxChunkZ	
+	m	(IIII)V	m_4551496	loadArenaChunks	
+		p	1		minChunkX	
+		p	2		maxChunkX	
+		p	3		minChunkZ	
+		p	4		maxChunkZ	
 	m	(Lnet/minecraft/unmapped/C_7121928;IIII)Z	m_1585624	m_1585624	
 		p	0		p_0	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
 		p	4		p_4	
-	m	()Z	m_2905670		m_2905670
+	m	()Z	m_2905670		areChunksLoaded
 c	net/minecraft/unmapped/C_7121928$1466621	1466621	
-c	net/minecraft/unmapped/C_7121928$C_3506482	C_3506482	
-	f	Lnet/minecraft/unmapped/C_7121928$C_3506482;	f_8726196	f_8726196	
-	f	Lnet/minecraft/unmapped/C_7121928$C_3506482;	f_8842001	f_8842001	
-	f	Lnet/minecraft/unmapped/C_7121928$C_3506482;	f_0460635	f_0460635	
+c	net/minecraft/unmapped/C_7121928$C_3506482	ArenaStatus	
+	f	Lnet/minecraft/unmapped/C_7121928$C_3506482;	f_8726196	UNKNOWN	
+	f	Lnet/minecraft/unmapped/C_7121928$C_3506482;	f_8842001	NOT_LOADED	
+	f	Lnet/minecraft/unmapped/C_7121928$C_3506482;	f_0460635	LOADED	
 	f	[Lnet/minecraft/unmapped/C_7121928$C_3506482;	f_5973689	f_5973689	
 	m	()[Lnet/minecraft/unmapped/C_7121928$C_3506482;	values	values	
 	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_7121928$C_3506482;	valueOf	valueOf	
@@ -3188,12 +3188,12 @@ c	net/minecraft/unmapped/C_7121928$C_3506482	C_3506482
 		p	1		p_1	
 		p	2		p_2	
 	m	()V	<clinit>	<clinit>	
-c	net/minecraft/unmapped/C_7121928$C_5965677	C_5965677	
-	f	Lnet/minecraft/unmapped/C_7121928$C_3506482;	f_5080518	f_5080518	
+c	net/minecraft/unmapped/C_7121928$C_5965677	Arena	
+	f	Lnet/minecraft/unmapped/C_7121928$C_3506482;	f_5080518	status	
 	f	Lnet/minecraft/unmapped/C_7121928;	f_1228932	f_1228932	
 	m	(Lnet/minecraft/unmapped/C_7121928;)V	<init>	<init>	
 		p	1		p_1	
-	m	()Z	m_3327243	m_3327243	
+	m	()Z	m_3327243	isLoaded	
 	m	(Lnet/minecraft/unmapped/C_7121928;Lnet/minecraft/unmapped/C_7121928$1466621;)V	<init>	<init>	
 		p	1		p_1	
 		p	2		p_2	

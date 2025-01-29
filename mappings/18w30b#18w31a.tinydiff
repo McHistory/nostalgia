@@ -680,21 +680,21 @@ c	net/minecraft/unmapped/C_7549223
 	f	D	f_1136991	sizeLerpTarget	
 	f	J	f_5413473	sizeChangeEnd	
 	f	J	f_4675511	sizeChangeStart	
-	f	Lnet/minecraft/unmapped/C_7549223$C_3918686;	f_9204949		f_9204949
+	f	Lnet/minecraft/unmapped/C_7549223$C_3918686;	f_9204949		extent
 	m	()V	m_5646028		tick
 	m	(Lnet/minecraft/unmapped/C_7549223;)I	m_6543468		m_6543468
 		p	0			p_0
 c	net/minecraft/unmapped/C_7549223$7503339		7503339
-c	net/minecraft/unmapped/C_7549223$C_0169004		C_0169004
-	f	D	f_1144262		f_1144262
-	f	D	f_6504258		f_6504258
-	f	D	f_6840167		f_6840167
-	f	D	f_8844055		f_8844055
-	f	D	f_7747034		f_7747034
+c	net/minecraft/unmapped/C_7549223$C_0169004		StaticExtent
+	f	D	f_1144262		lerpSize
+	f	D	f_6504258		minX
+	f	D	f_6840167		minZ
+	f	D	f_8844055		maxX
+	f	D	f_7747034		maxZ
 	f	Lnet/minecraft/unmapped/C_7549223;	f_6149351		f_6149351
 	m	(Lnet/minecraft/unmapped/C_7549223;D)V	<init>		<init>
 		p	1			p_1
-		p	2			p_2
+		p	2			lerpSize
 	m	()D	m_8684525		m_8684525
 	m	()D	m_0723542		m_0723542
 	m	()D	m_5818948		m_5818948
@@ -704,35 +704,35 @@ c	net/minecraft/unmapped/C_7549223$C_0169004		C_0169004
 	m	()D	m_1482146		m_1482146
 	m	()J	m_4590205		m_4590205
 	m	()D	m_3962785		m_3962785
-	m	()V	m_6009567		m_6009567
+	m	()V	m_6009567		updateBounds
 	m	()V	m_2314494		m_2314494
 	m	()V	m_4318709		m_4318709
 	m	()Lnet/minecraft/unmapped/C_7549223$C_3918686;	m_7167267		m_7167267
-c	net/minecraft/unmapped/C_7549223$C_3918686		C_3918686
-	m	()D	m_8684525		m_8684525
-	m	()D	m_0723542		m_0723542
-	m	()D	m_5818948		m_5818948
-	m	()D	m_2637583		m_2637583
-	m	()D	m_2049932		m_2049932
-	m	()D	m_1482146		m_1482146
-	m	()J	m_4590205		m_4590205
-	m	()D	m_3962785		m_3962785
-	m	()Lnet/minecraft/unmapped/C_6168258;	m_8337211		m_8337211
-	m	()V	m_2314494		m_2314494
-	m	()V	m_4318709		m_4318709
-	m	()Lnet/minecraft/unmapped/C_7549223$C_3918686;	m_7167267		m_7167267
-c	net/minecraft/unmapped/C_7549223$C_4374034		C_4374034
-	f	D	f_6526703		f_6526703
-	f	D	f_1996041		f_1996041
-	f	J	f_0038003		f_0038003
-	f	J	f_8817440		f_8817440
-	f	D	f_1844705		f_1844705
+c	net/minecraft/unmapped/C_7549223$C_3918686		Extent
+	m	()D	m_8684525		getMinX
+	m	()D	m_0723542		getMaxX
+	m	()D	m_5818948		getMinZ
+	m	()D	m_2637583		getMaxZ
+	m	()D	m_2049932		getLerpSize
+	m	()D	m_1482146		getLerpRemainingTime
+	m	()J	m_4590205		getLerpTime
+	m	()D	m_3962785		getLerpSizeTarget
+	m	()Lnet/minecraft/unmapped/C_6168258;	m_8337211		getStatus
+	m	()V	m_2314494		onMaxSizeChanged
+	m	()V	m_4318709		onCenterChanged
+	m	()Lnet/minecraft/unmapped/C_7549223$C_3918686;	m_7167267		tick
+c	net/minecraft/unmapped/C_7549223$C_4374034		DynamicExtent
+	f	D	f_6526703		lerpSize
+	f	D	f_1996041		lerpSizeTarget
+	f	J	f_0038003		lerpStart
+	f	J	f_8817440		lerpEnd
+	f	D	f_1844705		lerpDuration
 	f	Lnet/minecraft/unmapped/C_7549223;	f_3795704		f_3795704
 	m	(Lnet/minecraft/unmapped/C_7549223;DDJ)V	<init>		<init>
 		p	1			p_1
-		p	2			p_2
-		p	4			p_4
-		p	6			p_6
+		p	2			lerpSize
+		p	4			lerpSizeTarget
+		p	6			lerpDuration
 	m	()D	m_8684525		m_8684525
 	m	()D	m_5818948		m_5818948
 	m	()D	m_0723542		m_0723542
@@ -903,18 +903,18 @@ c	net/minecraft/unmapped/C_0955331
 c	net/minecraft/unmapped/C_1576074
 	m	(Lnet/minecraft/unmapped/C_8407692;)V	<init>	<init>	
 		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_8407692;)V	m_2261809	m_2261809	
+	m	(Lnet/minecraft/unmapped/C_8407692;)V	m_2261809	populateCaches	
 		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_0013174;Lnet/minecraft/unmapped/C_8407692;)Lnet/minecraft/unmapped/C_1576074;	m_8186642	m_8186642	
+	m	(Lnet/minecraft/unmapped/C_0013174;Lnet/minecraft/unmapped/C_8407692;)Lnet/minecraft/unmapped/C_1576074;	m_8186642	forDimension	
 		p	0		p_0	
 		p	1		p_1	
 	m	(Lnet/minecraft/unmapped/C_8054043;)V	<init>		<init>
-		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_8054043;)V	m_2261809		m_2261809
-		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_0013174;Lnet/minecraft/unmapped/C_8054043;)Lnet/minecraft/unmapped/C_1576074;	m_8186642		m_8186642
-		p	0			p_0
-		p	1			p_1
+		p	1			dataStorage
+	m	(Lnet/minecraft/unmapped/C_8054043;)V	m_2261809		populateCaches
+		p	1			dataStorage
+	m	(Lnet/minecraft/unmapped/C_0013174;Lnet/minecraft/unmapped/C_8054043;)Lnet/minecraft/unmapped/C_1576074;	m_8186642		forDimension
+		p	0			dimension
+		p	1			dataStorage
 c	net/minecraft/unmapped/C_1576074$5308665	5308665	
 	f	[I	f_1920997	f_1920997	
 	m	()V	<clinit>	<clinit>	
