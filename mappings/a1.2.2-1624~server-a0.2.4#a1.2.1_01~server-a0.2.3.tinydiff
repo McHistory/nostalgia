@@ -59,16 +59,16 @@ c	net/minecraft/unmapped/C_0901730
 	f	D	f_6813137	velocityX	
 	f	D	f_4709038	velocityY	
 	f	D	f_9298322	velocityZ	
-	f	Z	f_4957386	alwaysUpdateVelocity	
+	f	Z	f_4957386	syncVelocity	
 	m	(Lnet/minecraft/unmapped/C_6385858;IIZ)V	<init>	<init>	
 		p	1		entity	
-		p	2		trackedDistance	
-		p	3		tracingFrequency	
-		p	4		alwaysUpdateVelocity	
+		p	2		trackingRange	
+		p	3		updateInterval	
+		p	4		syncVelocity	
 	m	(Lnet/minecraft/unmapped/C_6385858;II)V	<init>		<init>
 		p	1			entity
-		p	2			trackedDistance
-		p	3			trackingFrequency
+		p	2			trackingRange
+		p	3			updateInterval
 c	net/minecraft/unmapped/C_3906126
 	m	(Lnet/minecraft/unmapped/C_5009044;III)Z	m_6974620	canModify	
 		p	1		player	
@@ -179,17 +179,17 @@ c	net/minecraft/unmapped/C_8321936	net/minecraft/network/packet/RideEntityPacket
 c	net/minecraft/unmapped/C_8546801
 	m	(Lnet/minecraft/unmapped/C_6385858;II)V	m_1065567	startTracking	
 		p	1		entity	
-		p	2		trackedDistance	
-		p	3		tracingFrequency	
+		p	2		trackingRange	
+		p	3		updateInterval	
 	m	(Lnet/minecraft/unmapped/C_6385858;IIZ)V	m_4679752	startTracking	
 		p	1		entity	
-		p	2		trackedDistance	
-		p	3		tracingFrequency	
-		p	4		alwaysUpdateVelocity	
+		p	2		trackingRange	
+		p	3		updateInterval	
+		p	4		syncVelocity	
 	m	(Lnet/minecraft/unmapped/C_6385858;II)V	m_4679752		startTracking
 		p	1			entity
-		p	2			trackedDistance
-		p	3			trackingFrequency
+		p	2			trackingRange
+		p	3			updateInterval
 c	net/minecraft/unmapped/C_8752044
 	m	(Lnet/minecraft/unmapped/C_4946369;)V	m_9704705	m_9704705	
 		p	1		p_1	

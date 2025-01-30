@@ -3,24 +3,24 @@ c	net/minecraft/unmapped/C_0258789
 	m	(I)V	m_2911928		onTypeChanged
 		p	1			p_1
 c	net/minecraft/unmapped/C_0324512
-	m	(Lnet/minecraft/unmapped/C_6385858;)V	m_3594075		addRemovedEntity
+	m	(Lnet/minecraft/unmapped/C_6385858;)V	m_3594075		cancelRemoveEntity
 		p	1			entity
 c	net/minecraft/unmapped/C_0901730
-	f	I	f_4537190		tickInterval
+	f	I	f_4537190		viewDistance
 	m	(Lnet/minecraft/unmapped/C_6385858;IIZ)V	<init>	<init>	
 		p	1		entity	
-		p	2		trackedDistance	
-		p	3		tracingFrequency	
-		p	4		alwaysUpdateVelocity	
+		p	2		trackingRange	
+		p	3		updateInterval	
+		p	4		syncVelocity	
 	m	(Lnet/minecraft/unmapped/C_6385858;IIIZ)V	<init>		<init>
 		p	1			currentTrackedEntity
-		p	2			trackedDistance
-		p	3			tickInterval
-		p	4			trackingFrequency
-		p	5			alwaysUpdateVelocity
-	m	(I)V	m_2918251		setTickInterval
-		p	1			tickInterval
-	m	()V	m_4127420		onInitialized
+		p	2			trackingRange
+		p	3			viewDistance
+		p	4			updateInterval
+		p	5			syncVelocity
+	m	(I)V	m_2918251		setViewDistance
+		p	1			viewDistance
+	m	()V	m_4127420		onEntityTeleported
 c	net/minecraft/unmapped/C_1044273
 	m	(IIIIII)V	m_6084899	markDirty	
 		p	1		minX	

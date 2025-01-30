@@ -385,7 +385,7 @@ c	net/minecraft/server/MinecraftServer		net/minecraft/server/MinecraftServer
 	f	I	f_2690925		progress
 	f	Ljava/util/List;	f_9683837		tickables
 	f	Ljava/util/List;	f_6405794		pendingCommands
-	f	[Lnet/minecraft/unmapped/C_8546801;	f_4955494		entityTrackers
+	f	[Lnet/minecraft/unmapped/C_8546801;	f_4955494		entityMaps
 	f	Z	f_2598215		onlineMode
 	f	Z	f_9476002		spawnAnimals
 	f	Z	f_3140624		pvpEnabled
@@ -425,7 +425,7 @@ c	net/minecraft/server/MinecraftServer		net/minecraft/server/MinecraftServer
 	m	()Ljava/lang/String;	m_7291241		m_7291241
 	m	(I)Lnet/minecraft/unmapped/C_7366354;	m_7777040		getWorld
 		p	1			dimension
-	m	(I)Lnet/minecraft/unmapped/C_8546801;	m_9151553		getEntityTracker
+	m	(I)Lnet/minecraft/unmapped/C_8546801;	m_9151553		getEntityMap
 		p	1			dimension
 	m	(Ljava/lang/String;I)I	m_5848886		m_5848886
 		p	1			p_1
@@ -621,7 +621,7 @@ c	net/minecraft/unmapped/C_0324512		net/minecraft/server/entity/mob/player/Serve
 	f	Lnet/minecraft/unmapped/C_7897127;	f_7088670		interactionManager
 	f	D	f_5012703		trackedX
 	f	D	f_1801340		trackedZ
-	f	Ljava/util/List;	f_1683304		newLoadedChunks
+	f	Ljava/util/List;	f_1683304		pendingChunks
 		c		Coordinates of chunks that have come within view of the player, but have not yet\nbeen sent to the client.
 	f	Ljava/util/Set;	f_5806656		allLoadedChunks
 	f	I	f_5431237		lastHealth
@@ -865,10 +865,10 @@ c	net/minecraft/unmapped/C_0894181		net/minecraft/server/ServerProperties
 		p	1			key
 		p	2			value
 	m	()V	<clinit>		<clinit>
-c	net/minecraft/unmapped/C_0901730		net/minecraft/server/entity/EntityTrackerEntry
-	f	Lnet/minecraft/unmapped/C_6385858;	f_7181571		currentTrackedEntity
-	f	I	f_2248933		trackedDistance
-	f	I	f_7565514		trackingFrequency
+c	net/minecraft/unmapped/C_0901730		net/minecraft/server/TrackedEntity
+	f	Lnet/minecraft/unmapped/C_6385858;	f_7181571		entity
+	f	I	f_2248933		trackingRange
+	f	I	f_7565514		updateInterval
 	f	I	f_2016635		lastX
 	f	I	f_5423770		lastY
 	f	I	f_9375515		lastZ
@@ -881,34 +881,35 @@ c	net/minecraft/unmapped/C_0901730		net/minecraft/server/entity/EntityTrackerEnt
 	f	D	f_9148217		x
 	f	D	f_0347914		y
 	f	D	f_7468472		z
-	f	Z	f_6862607		isInitialized
-	f	Z	f_4957386		alwaysUpdateVelocity
-	f	I	f_0616724		ticksSinceLastDismount
-	f	Z	f_6324525		newPlayerDataUpdated
-	f	Ljava/util/Set;	f_5593093		listeners
+	f	Z	f_6862607		initialized
+	f	Z	f_4957386		syncVelocity
+	f	I	f_0616724		ticksWithoutVehicle
+	f	Z	f_6324525		moved
+	f	Ljava/util/Set;	f_5593093		players
 	m	(Lnet/minecraft/unmapped/C_6385858;IIZ)V	<init>		<init>
 		p	1			entity
-		p	2			trackedDistance
-		p	3			tracingFrequency
-		p	4			alwaysUpdateVelocity
+		p	2			trackingRange
+		p	3			updateInterval
+		p	4			syncVelocity
 	m	(Ljava/lang/Object;)Z	equals		equals
 		p	1			p_1
 	m	()I	hashCode		hashCode
-	m	(Ljava/util/List;)V	m_0667932		notifyNewLocation
+	m	(Ljava/util/List;)V	m_0667932		tick
 		p	1			players
-	m	(Lnet/minecraft/unmapped/C_4844124;)V	m_8503115		sendToListeners
+	m	(Lnet/minecraft/unmapped/C_4844124;)V	m_8503115		sendPacket
 		p	1			packet
-	m	(Lnet/minecraft/unmapped/C_4844124;)V	m_0423109		sendToListenersAndTrackedEntityIfPlayer
+	m	(Lnet/minecraft/unmapped/C_4844124;)V	m_0423109		sendPacketToAll
 		p	1			packet
-	m	()V	m_6134271		notifyEntityRemoved
-	m	(Lnet/minecraft/unmapped/C_0324512;)V	m_5326799		notifyEntityRemoved
+	m	()V	m_6134271		onRemoved
+		c		Called when this entity is removed from the world.
+	m	(Lnet/minecraft/unmapped/C_0324512;)V	m_5326799		removePlayer
 		p	1			player
-	m	(Lnet/minecraft/unmapped/C_0324512;)V	m_2096496		updateListener
+	m	(Lnet/minecraft/unmapped/C_0324512;)V	m_2096496		updatePlayer
 		p	1			player
-	m	(Ljava/util/List;)V	m_8051032		updateListeners
+	m	(Ljava/util/List;)V	m_8051032		updatePlayers
 		p	1			players
 	m	()Lnet/minecraft/unmapped/C_4844124;	m_0636384		createAddEntityPacket
-	m	(Lnet/minecraft/unmapped/C_0324512;)V	m_9656289		removeListener
+	m	(Lnet/minecraft/unmapped/C_0324512;)V	m_9656289		onPlayerRespawn
 		p	1			player
 c	net/minecraft/unmapped/C_1591456		net/minecraft/server/network/ConnectionListener
 	f	Ljava/util/logging/Logger;	f_4712395		LOGGER
@@ -1510,9 +1511,9 @@ c	net/minecraft/unmapped/C_8479751		net/minecraft/server/world/ServerWorldEventL
 		p	4			p_4
 		p	5			p_5
 		p	6			p_6
-c	net/minecraft/unmapped/C_8546801		net/minecraft/server/entity/EntityTracker
-	f	Ljava/util/Set;	f_6289612		entries
-	f	Lnet/minecraft/unmapped/C_3837238;	f_4296190		entriesById
+c	net/minecraft/unmapped/C_8546801		net/minecraft/server/EntityMap
+	f	Ljava/util/Set;	f_6289612		entities
+	f	Lnet/minecraft/unmapped/C_3837238;	f_4296190		entitiesById
 	f	Lnet/minecraft/server/MinecraftServer;	f_4208397		server
 	f	I	f_5753668		viewDistance
 	f	I	f_2737344		dimension
@@ -1520,26 +1521,28 @@ c	net/minecraft/unmapped/C_8546801		net/minecraft/server/entity/EntityTracker
 		p	1			server
 		p	2			dimension
 	m	(Lnet/minecraft/unmapped/C_6385858;)V	m_3801660		onEntityAdded
+		c		Called when the given entity is added to the world.
 		p	1			entity
 	m	(Lnet/minecraft/unmapped/C_6385858;II)V	m_1065567		startTracking
 		p	1			entity
-		p	2			trackedDistance
-		p	3			tracingFrequency
+		p	2			trackingRange
+		p	3			updateInterval
 	m	(Lnet/minecraft/unmapped/C_6385858;IIZ)V	m_4679752		startTracking
 		p	1			entity
-		p	2			trackedDistance
-		p	3			tracingFrequency
-		p	4			alwaysUpdateVelocity
+		p	2			trackingRange
+		p	3			updateInterval
+		p	4			syncVelocity
 	m	(Lnet/minecraft/unmapped/C_6385858;)V	m_9053164		onEntityRemoved
+		c		Called when the given entity is removed from the world.
 		p	1			entity
 	m	()V	m_6150524		tick
-	m	(Lnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_4844124;)V	m_9009727		sendToListeners
+	m	(Lnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_4844124;)V	m_9009727		sendPacket
 		p	1			entity
 		p	2			packet
-	m	(Lnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_4844124;)V	m_2555883		sendToListenersAndTrackedEntityIfPlayer
+	m	(Lnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_4844124;)V	m_2555883		sendPacketToAll
 		p	1			entity
 		p	2			packet
-	m	(Lnet/minecraft/unmapped/C_0324512;)V	m_7053892		removeListener
+	m	(Lnet/minecraft/unmapped/C_0324512;)V	m_7053892		onPlayerRespawn
 		p	1			player
 c	net/minecraft/unmapped/C_8550120		net/minecraft/server/rcon/RconServer
 	f	I	f_7768710		port
