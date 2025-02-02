@@ -3271,22 +3271,22 @@ c	net/minecraft/unmapped/C_5999260$C_1414314
 	m	(Ljava/util/Random;)Lnet/minecraft/unmapped/C_5999260$C_1414314;	m_5766328		m_5766328
 		p	0			p_0
 c	com/mojang/blaze3d/platform/GlStateManager
-	m	(Lcom/mojang/blaze3d/platform/GlStateManager$C_0114419;Lcom/mojang/blaze3d/platform/GlStateManager$C_0226345;)V	m_5757930	m_5757930	
+	m	(Lcom/mojang/blaze3d/platform/GlStateManager$C_0114419;Lcom/mojang/blaze3d/platform/GlStateManager$C_0226345;)V	m_5757930	blendFactor	
 		p	0		p_0	
 		p	1		p_1	
-	m	(Lcom/mojang/blaze3d/platform/GlStateManager$C_0114419;Lcom/mojang/blaze3d/platform/GlStateManager$C_0226345;Lcom/mojang/blaze3d/platform/GlStateManager$C_0114419;Lcom/mojang/blaze3d/platform/GlStateManager$C_0226345;)V	m_2693884	m_2693884	
+	m	(Lcom/mojang/blaze3d/platform/GlStateManager$C_0114419;Lcom/mojang/blaze3d/platform/GlStateManager$C_0226345;Lcom/mojang/blaze3d/platform/GlStateManager$C_0114419;Lcom/mojang/blaze3d/platform/GlStateManager$C_0226345;)V	m_2693884	blendFunc	
 		p	0		p_0	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
-	m	(Lcom/mojang/blaze3d/platform/GlStateManager$SourceFactor;Lcom/mojang/blaze3d/platform/GlStateManager$DestFactor;)V	m_5757930		m_5757930
-		p	0			p_0
-		p	1			p_1
-	m	(Lcom/mojang/blaze3d/platform/GlStateManager$SourceFactor;Lcom/mojang/blaze3d/platform/GlStateManager$DestFactor;Lcom/mojang/blaze3d/platform/GlStateManager$SourceFactor;Lcom/mojang/blaze3d/platform/GlStateManager$DestFactor;)V	m_2693884		m_2693884
-		p	0			p_0
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+	m	(Lcom/mojang/blaze3d/platform/GlStateManager$SourceFactor;Lcom/mojang/blaze3d/platform/GlStateManager$DestFactor;)V	m_5757930		blendFactor
+		p	0			sfactor
+		p	1			dfactor
+	m	(Lcom/mojang/blaze3d/platform/GlStateManager$SourceFactor;Lcom/mojang/blaze3d/platform/GlStateManager$DestFactor;Lcom/mojang/blaze3d/platform/GlStateManager$SourceFactor;Lcom/mojang/blaze3d/platform/GlStateManager$DestFactor;)V	m_2693884		blendFunc
+		p	0			sfactorRGB
+		p	1			dfactorRGB
+		p	2			sfactorAlpha
+		p	3			dfactorAlpha
 c	com/mojang/blaze3d/platform/GlStateManager$C_0114419	SourceFactor	
 	f	Lcom/mojang/blaze3d/platform/GlStateManager$C_0114419;	f_5189583	f_5189583	
 	f	Lcom/mojang/blaze3d/platform/GlStateManager$C_0114419;	f_2054210	f_2054210	
@@ -3353,7 +3353,7 @@ c	com/mojang/blaze3d/platform/GlStateManager$DestFactor		DestFactor
 	f	Lcom/mojang/blaze3d/platform/GlStateManager$DestFactor;	f_2898610		f_2898610
 	f	Lcom/mojang/blaze3d/platform/GlStateManager$DestFactor;	f_1566083		f_1566083
 	f	Lcom/mojang/blaze3d/platform/GlStateManager$DestFactor;	f_1370294		ZERO
-	f	I	f_0115643		f_0115643
+	f	I	f_0115643		value
 	f	[Lcom/mojang/blaze3d/platform/GlStateManager$DestFactor;	f_5603019		f_5603019
 	m	()[Lcom/mojang/blaze3d/platform/GlStateManager$DestFactor;	values		values
 	m	(Ljava/lang/String;)Lcom/mojang/blaze3d/platform/GlStateManager$DestFactor;	valueOf		valueOf
@@ -3379,7 +3379,7 @@ c	com/mojang/blaze3d/platform/GlStateManager$SourceFactor		SourceFactor
 	f	Lcom/mojang/blaze3d/platform/GlStateManager$SourceFactor;	f_0290823		f_0290823
 	f	Lcom/mojang/blaze3d/platform/GlStateManager$SourceFactor;	f_0594138		f_0594138
 	f	Lcom/mojang/blaze3d/platform/GlStateManager$SourceFactor;	f_8999057		f_8999057
-	f	I	f_8999640		f_8999640
+	f	I	f_8999640		value
 	f	[Lcom/mojang/blaze3d/platform/GlStateManager$SourceFactor;	f_7738643		f_7738643
 	m	()[Lcom/mojang/blaze3d/platform/GlStateManager$SourceFactor;	values		values
 	m	(Ljava/lang/String;)Lcom/mojang/blaze3d/platform/GlStateManager$SourceFactor;	valueOf		valueOf

@@ -935,7 +935,7 @@ c	net/minecraft/unmapped/C_3754158$C_8681832	Blend
 	m	()V	<init>	<init>	
 	m	(Lnet/minecraft/unmapped/C_3754158$1241808;)V	<init>	<init>	
 		p	1		p_1	
-c	net/minecraft/unmapped/C_3754158$C_8796143	GlState	
+c	net/minecraft/unmapped/C_3754158$C_8796143	GlCapability	
 	f	I	f_9723007	cap	
 	f	Z	f_1587713	enabled	
 	m	(I)V	<init>	<init>	
@@ -1295,8 +1295,8 @@ c	net/minecraft/unmapped/C_4011766	net/minecraft/client/render/platform/TextureU
 	m	(Ljava/io/InputStream;)Ljava/lang/String;	m_0065211	m_0065211	
 		p	0		p_0	
 c	net/minecraft/unmapped/C_7131921
-	m	(Ljava/lang/String;)V	m_8425650		m_8425650
-		p	1			p_1
+	m	(Ljava/lang/String;)V	m_8425650		write
+		p	1			filename
 c	net/minecraft/unmapped/C_1149034
 	m	(Lnet/minecraft/unmapped/C_9844932;Lnet/minecraft/unmapped/C_0705111;Ljava/util/Random;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_8661923;Lnet/minecraft/unmapped/C_6618366;Lnet/minecraft/unmapped/C_1858262;)Z	m_7820481	m_7820481	
 		p	1		p_1	
@@ -3495,14 +3495,14 @@ c	net/minecraft/client/renderer/system/GlStateManager$C_8681832		Blend
 	m	()V	<init>		<init>
 	m	(Lnet/minecraft/client/renderer/system/GlStateManager$1241808;)V	<init>		<init>
 		p	1			p_1
-c	net/minecraft/client/renderer/system/GlStateManager$C_8796143		GlState
-	f	I	f_9723007		f_9723007
-	f	Z	f_1587713		f_1587713
+c	net/minecraft/client/renderer/system/GlStateManager$C_8796143		GlCapability
+	f	I	f_9723007		cap
+	f	Z	f_1587713		enabled
 	m	(I)V	<init>		<init>
 		p	1			p_1
 	m	()V	m_2152392		disable
 	m	()V	m_0191435		enable
-	m	(Z)V	m_3245758		m_3245758
+	m	(Z)V	m_3245758		setEnabled
 		p	1			p_1
 c	net/minecraft/client/renderer/system/GlStateManager$C_9591274		TexGenMode
 	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_9591274;	f_5767840		S
