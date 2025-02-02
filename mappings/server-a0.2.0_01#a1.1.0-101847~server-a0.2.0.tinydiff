@@ -239,7 +239,7 @@ c	net/minecraft/unmapped/C_3906126
 		p	1			saveName
 	m	([Ljava/io/File;)V	m_4805602		deleteFilesRecursively
 		p	0			files
-	m	()V	m_3566975		resetSpawnPoint
+	m	()V	m_3766127		resetSpawnPoint
 	m	(Lnet/minecraft/unmapped/C_5009044;)V	m_0762970		loadPlayer
 		p	1			player
 	m	(I)Z	m_0537941		saveWhilePaused
@@ -287,7 +287,7 @@ c	net/minecraft/unmapped/C_3906126
 	m	(Lnet/minecraft/unmapped/C_6385858;)V	m_4614615		addEntityAlways
 		p	1			entity
 c	net/minecraft/unmapped/C_4030632
-	m	(Lnet/minecraft/unmapped/C_2750078;)I	m_1532371		getSprite
+	m	(Lnet/minecraft/unmapped/C_2750078;)I	m_8620274		getSprite
 		p	1			stack
 	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_5009044;)Lnet/minecraft/unmapped/C_2750078;	m_6337043		startUsing
 		p	1			stack
@@ -762,7 +762,7 @@ c	net/minecraft/client/Minecraft		net/minecraft/client/Minecraft
 	m	()Ljava/lang/String;	m_5864047		getRenderChunkDebugInfo
 	m	()Ljava/lang/String;	m_8898923		getRenderEntityDebugInfo
 	m	()Ljava/lang/String;	m_7590025		getWorldDebugInfo
-	m	()V	m_6862388		respawnPlayer
+	m	()V	m_8218202		respawnPlayer
 	m	(Ljava/lang/String;Ljava/lang/String;)V	m_6139283		start
 		p	0			username
 		p	1			sessionId
@@ -1031,14 +1031,6 @@ c	net/minecraft/unmapped/C_0309511$C_4312231		LetterBlock
 		p	2			y
 		p	3			x
 	m	()V	m_8935444		tick
-c	net/minecraft/unmapped/C_0310580		net/minecraft/client/gui/screen/inventory/menu/CraftingTableMenu
-	f	Lnet/minecraft/unmapped/C_2178068;	f_1214926		inventory
-	f	Lnet/minecraft/unmapped/C_4390289;	f_6387828		resultInventory
-	m	()V	<init>		<init>
-	m	(Lnet/minecraft/unmapped/C_4390289;)V	m_2326383		m_2326383
-		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_5009044;)V	m_3964499		m_3964499
-		p	1			p_1
 c	net/minecraft/unmapped/C_0384965		net/minecraft/client/render/texture/WaterSideSprite
 	f	[F	f_1247368		current
 	f	[F	f_8657575		next
@@ -1048,7 +1040,7 @@ c	net/minecraft/unmapped/C_0384965		net/minecraft/client/render/texture/WaterSid
 	m	()V	<init>		<init>
 	m	()V	m_4399705		m_4399705
 c	net/minecraft/unmapped/C_0387400		net/minecraft/client/gui/screen/inventory/menu/CraftingTableScreen
-	f	Lnet/minecraft/unmapped/C_0310580;	f_8048323		menu
+	f	Lnet/minecraft/unmapped/C_0873063;	f_8048323		menu
 	m	(Lnet/minecraft/unmapped/C_4286596;)V	<init>		<init>
 		p	1			playerInventory
 	m	()V	m_5056964		m_5056964
@@ -1167,6 +1159,14 @@ c	net/minecraft/unmapped/C_0823197		net/minecraft/client/entity/particle/Explosi
 		p	6			p_6
 		p	7			p_7
 	m	()V	m_0718337		m_0718337
+c	net/minecraft/unmapped/C_0873063		net/minecraft/client/gui/screen/inventory/menu/CraftingTableMenu
+	f	Lnet/minecraft/unmapped/C_2178068;	f_8748895		inventory
+	f	Lnet/minecraft/unmapped/C_4390289;	f_5994796		resultInventory
+	m	()V	<init>		<init>
+	m	(Lnet/minecraft/unmapped/C_4390289;)V	m_8603973		m_8603973
+		p	1			p_1
+	m	(Lnet/minecraft/unmapped/C_5009044;)V	m_5612215		m_5612215
+		p	1			p_1
 c	net/minecraft/unmapped/C_1017062		net/minecraft/client/gui/screen/GameMenuScreen
 	f	I	f_5290614		saveStep
 	f	I	f_2845584		ticks
@@ -1525,12 +1525,12 @@ c	net/minecraft/unmapped/C_2154975$7900111		7900111
 c	net/minecraft/unmapped/C_2178068		net/minecraft/inventory/CraftingInventory
 	f	[Lnet/minecraft/unmapped/C_2750078;	f_2413097		items
 	f	I	f_1604289		size
-	f	Lnet/minecraft/unmapped/C_3202835;	f_5304773		menu
-	m	(Lnet/minecraft/unmapped/C_3202835;II)V	<init>		<init>
+	f	Lnet/minecraft/unmapped/C_7699185;	f_5304773		menu
+	m	(Lnet/minecraft/unmapped/C_7699185;II)V	<init>		<init>
 		p	1			menu
 		p	2			width
 		p	3			height
-	m	(Lnet/minecraft/unmapped/C_3202835;[Lnet/minecraft/unmapped/C_2750078;)V	<init>		<init>
+	m	(Lnet/minecraft/unmapped/C_7699185;[Lnet/minecraft/unmapped/C_2750078;)V	<init>		<init>
 		p	1			menu
 		p	2			items
 	m	()I	m_5322905		m_5322905
@@ -1728,6 +1728,15 @@ c	net/minecraft/unmapped/C_2616453		net/minecraft/client/world/chunk/Multiplayer
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
+c	net/minecraft/unmapped/C_2616453$C_0932780		ChunkPos
+	f	I	f_7177981		x
+	f	I	f_0809651		z
+	m	(II)V	<init>		<init>
+		p	1			x
+		p	2			z
+	m	(Ljava/lang/Object;)Z	equals		equals
+		p	1			p_1
+	m	()I	hashCode		hashCode
 c	net/minecraft/unmapped/C_2621421		net/minecraft/client/gui/widget/ButtonWidget
 	f	I	f_9324441		width
 	f	I	f_2585197		height
@@ -1839,6 +1848,18 @@ c	net/minecraft/unmapped/C_2941751		net/minecraft/isom/IsomRenderChunk
 		p	1			world
 		p	2			chunkX
 		p	3			chunkZ
+c	net/minecraft/unmapped/C_3002588		net/minecraft/client/gui/screen/inventory/menu/CraftingResultSlot
+	f	Lnet/minecraft/unmapped/C_4390289;	f_4120416		craftingInventory
+	m	(Lnet/minecraft/unmapped/C_7542541;Lnet/minecraft/unmapped/C_4390289;Lnet/minecraft/unmapped/C_4390289;III)V	<init>		<init>
+		p	1			screen
+		p	2			craftingInventory
+		p	3			inventory
+		p	4			id
+		p	5			x
+		p	6			y
+	m	(Lnet/minecraft/unmapped/C_2750078;)Z	m_6628482		m_6628482
+		p	1			p_1
+	m	()V	m_7573710		m_7573710
 c	net/minecraft/unmapped/C_3172064		net/minecraft/client/Session
 	f	Ljava/util/List;	f_7459865		CREATIVE_INVENTORY
 	f	Ljava/lang/String;	f_6779482		username
@@ -1848,13 +1869,6 @@ c	net/minecraft/unmapped/C_3172064		net/minecraft/client/Session
 		p	1			username
 		p	2			id
 	m	()V	<clinit>		<clinit>
-c	net/minecraft/unmapped/C_3202835		net/minecraft/client/gui/screen/inventory/menu/InventoryMenu
-	f	Ljava/util/List;	f_1550981		f_1550981
-	m	()V	<init>		<init>
-	m	(Lnet/minecraft/unmapped/C_5009044;)V	m_3964499		close
-		p	1			player
-	m	(Lnet/minecraft/unmapped/C_4390289;)V	m_2326383		onContentsChanged
-		p	1			inventory
 c	net/minecraft/unmapped/C_3215913		net/minecraft/client/render/entity/SlimeRenderer
 	f	Lnet/minecraft/unmapped/C_3239917;	f_6164198		innerModel
 	m	(Lnet/minecraft/unmapped/C_3239917;Lnet/minecraft/unmapped/C_3239917;F)V	<init>		<init>
@@ -1910,7 +1924,7 @@ c	net/minecraft/unmapped/C_3271339		net/minecraft/client/SurvivalInteractionMana
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
-	m	(IIII)V	m_5386984		m_5386984
+	m	(IIII)V	m_1681170		m_1681170
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -1982,15 +1996,6 @@ c	net/minecraft/unmapped/C_3385278		net/minecraft/client/render/texture/TextureM
 	m	(I)V	m_2714907		bind
 		p	1			id
 	m	()V	<clinit>		<clinit>
-c	net/minecraft/unmapped/C_3424057		net/minecraft/client/gui/screen/inventory/menu/PlayerMenu
-	f	Lnet/minecraft/unmapped/C_2178068;	f_9008078		craftingInventory
-	f	Lnet/minecraft/unmapped/C_4390289;	f_0044212		resultInventory
-	m	([Lnet/minecraft/unmapped/C_2750078;)V	<init>		<init>
-		p	1			items
-	m	(Lnet/minecraft/unmapped/C_4390289;)V	m_2326383		m_2326383
-		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_5009044;)V	m_3964499		m_3964499
-		p	1			p_1
 c	net/minecraft/unmapped/C_3454805		net/minecraft/client/render/entity/SpiderRenderer
 	m	()V	<init>		<init>
 	m	(Lnet/minecraft/unmapped/C_2923961;)F	m_8092151		m_8092151
@@ -2390,7 +2395,7 @@ c	net/minecraft/unmapped/C_3699792		net/minecraft/client/gui/GameGui
 		p	2			x
 		p	3			z
 		p	4			tickDelta
-	m	()V	m_6434029		tick
+	m	()V	m_0073818		tick
 	m	(Ljava/lang/String;)V	m_4902001		addChatMessage
 		p	1			text
 	m	(Ljava/lang/String;)V	m_9430266		setRecordPlayingOverlay
@@ -2565,7 +2570,7 @@ c	net/minecraft/unmapped/C_4237166		net/minecraft/client/ClientPlayerInteraction
 		p	1			minecraft
 	m	(Lnet/minecraft/unmapped/C_3906126;)V	m_1565789		initWorld
 		p	1			world
-	m	(IIII)V	m_5386984		startMiningBlock
+	m	(IIII)V	m_1681170		startMiningBlock
 		p	1			x
 		p	2			y
 		p	3			z
@@ -2588,7 +2593,7 @@ c	net/minecraft/unmapped/C_4237166		net/minecraft/client/ClientPlayerInteraction
 		p	1			player
 	m	()V	m_8517616		tick
 	m	()Z	m_4103218		hasStatusBars
-	m	(Lnet/minecraft/unmapped/C_5009044;)V	m_9683549		adjustPlayer
+	m	(Lnet/minecraft/unmapped/C_5009044;)V	m_5484011		adjustPlayer
 		p	1			player
 	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_2750078;IIII)Z	m_0257155		useBlock
 		p	1			player
@@ -3477,7 +3482,7 @@ c	net/minecraft/unmapped/C_6794191		net/minecraft/client/MultiplayerInteractionM
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
-	m	(IIII)V	m_5386984		m_5386984
+	m	(IIII)V	m_1681170		m_1681170
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -3511,7 +3516,7 @@ c	net/minecraft/unmapped/C_6851947		net/minecraft/crafting/MineralRecipes
 	m	(Lnet/minecraft/unmapped/C_2154975;)V	m_1277241		register
 		p	1			manager
 c	net/minecraft/unmapped/C_6923352		net/minecraft/client/gui/screen/inventory/menu/SurvivalInventoryScreen
-	f	Lnet/minecraft/unmapped/C_3424057;	f_5463137		menu
+	f	Lnet/minecraft/unmapped/C_9404371;	f_5463137		menu
 	f	F	f_2259564		mouseX
 	f	F	f_9996971		mouseY
 	m	(Lnet/minecraft/unmapped/C_4390289;[Lnet/minecraft/unmapped/C_2750078;)V	<init>		<init>
@@ -3690,7 +3695,7 @@ c	net/minecraft/unmapped/C_7542541		net/minecraft/client/gui/screen/inventory/me
 c	net/minecraft/unmapped/C_7564962		net/minecraft/client/CreativeInteractionManager
 	m	(Lnet/minecraft/client/Minecraft;)V	<init>		<init>
 		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_5009044;)V	m_9683549		m_9683549
+	m	(Lnet/minecraft/unmapped/C_5009044;)V	m_5484011		m_5484011
 		p	1			p_1
 	m	()Z	m_4103218		m_4103218
 	m	(Lnet/minecraft/unmapped/C_3906126;)V	m_1565789		m_1565789
@@ -3776,6 +3781,13 @@ c	net/minecraft/unmapped/C_7688744		net/minecraft/client/options/GameOptions
 	m	()V	m_2257190		load
 	m	()V	m_2845725		save
 	m	()V	<clinit>		<clinit>
+c	net/minecraft/unmapped/C_7699185		net/minecraft/client/gui/screen/inventory/menu/InventoryMenu
+	f	Ljava/util/List;	f_1550981		f_1550981
+	m	()V	<init>		<init>
+	m	(Lnet/minecraft/unmapped/C_5009044;)V	m_5612215		close
+		p	1			player
+	m	(Lnet/minecraft/unmapped/C_4390289;)V	m_8603973		onContentsChanged
+		p	1			inventory
 c	net/minecraft/unmapped/C_7923429		net/minecraft/client/render/block/entity/SignRenderer
 	f	Lnet/minecraft/unmapped/C_6674892;	f_5710361		model
 	m	()V	<init>		<init>
@@ -4013,18 +4025,6 @@ c	net/minecraft/unmapped/C_8635993		net/minecraft/client/render/entity/PigRender
 	m	(Lnet/minecraft/unmapped/C_1013763;I)Z	m_5098475		m_5098475
 		p	1			p_1
 		p	2			p_2
-c	net/minecraft/unmapped/C_8687811		net/minecraft/client/gui/screen/inventory/menu/CraftingResultSlot
-	f	Lnet/minecraft/unmapped/C_4390289;	f_6291219		craftingInventory
-	m	(Lnet/minecraft/unmapped/C_7542541;Lnet/minecraft/unmapped/C_4390289;Lnet/minecraft/unmapped/C_4390289;III)V	<init>		<init>
-		p	1			screen
-		p	2			craftingInventory
-		p	3			inventory
-		p	4			id
-		p	5			x
-		p	6			y
-	m	(Lnet/minecraft/unmapped/C_2750078;)Z	m_6628482		m_6628482
-		p	1			p_1
-	m	()V	m_7573710		m_7573710
 c	net/minecraft/unmapped/C_8688622		net/minecraft/client/render/world/DirtyChunkSorter
 	f	Lnet/minecraft/unmapped/C_5009044;	f_9491045		camera
 	m	(Lnet/minecraft/unmapped/C_5009044;)V	<init>		<init>
@@ -4057,7 +4057,7 @@ c	net/minecraft/unmapped/C_8817873		net/minecraft/client/world/MultiplayerWorld
 		p	6			maxZ
 	m	(Ljava/io/File;)Lnet/minecraft/unmapped/C_9484672;	m_7447312		m_7447312
 		p	1			p_1
-	m	()V	m_3566975		m_3566975
+	m	()V	m_3766127		m_3766127
 	m	()V	m_6100908		m_6100908
 	m	(IIII)V	m_7641576		m_7641576
 		p	1			p_1
@@ -4306,6 +4306,15 @@ c	net/minecraft/unmapped/C_9315908		net/minecraft/client/gui/screen/inventory/me
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
+c	net/minecraft/unmapped/C_9404371		net/minecraft/client/gui/screen/inventory/menu/PlayerMenu
+	f	Lnet/minecraft/unmapped/C_2178068;	f_5673749		craftingInventory
+	f	Lnet/minecraft/unmapped/C_4390289;	f_8215645		resultInventory
+	m	([Lnet/minecraft/unmapped/C_2750078;)V	<init>		<init>
+		p	1			items
+	m	(Lnet/minecraft/unmapped/C_4390289;)V	m_8603973		m_8603973
+		p	1			p_1
+	m	(Lnet/minecraft/unmapped/C_5009044;)V	m_5612215		m_5612215
+		p	1			p_1
 c	net/minecraft/unmapped/C_9526661		net/minecraft/client/gui/screen/options/ControlsOptionsScreen
 	f	Lnet/minecraft/unmapped/C_0786431;	f_7810183		parent
 	f	Ljava/lang/String;	f_8754163		title

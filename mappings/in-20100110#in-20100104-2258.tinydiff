@@ -98,7 +98,7 @@ c	net/minecraft/unmapped/C_4030632	net/minecraft/item/Item
 	m	(I)V	<init>	<init>	
 		p	1		id	
 	m	()V	<clinit>	<clinit>	
-	m	()I	m_1532371	getSprite	
+	m	()I	m_8620274	getSprite	
 	m	(Lnet/minecraft/unmapped/C_3635204;)F	m_3907516	getMiningSpeed	
 		p	1		block	
 	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_3906126;IIII)V	m_9844872	useOn	
@@ -111,6 +111,14 @@ c	net/minecraft/unmapped/C_4030632	net/minecraft/item/Item
 	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_5009044;)Z	m_6337043	startUsing	
 		p	1		p_1	
 		p	2		p_2	
+c	net/minecraft/unmapped/C_4078372
+	f	I	f_7113452	surroundingGroundHeight	
+	f	Z	f_8767089	island	
+	f	Z	f_1849679	floating	
+	f	Z	f_0645994	flat	
+	f	I	f_5831401	theme	
+	m	(Lnet/minecraft/unmapped/C_3906126;)V	m_5594167	placeTrees	
+		p	1		world	
 c	net/minecraft/unmapped/C_4286596
 	m	(I)Z	m_1678832		removeOne
 		p	1			item
@@ -239,6 +247,8 @@ c	net/minecraft/unmapped/C_0756314	net/minecraft/client/render/texture/WaterSpri
 	f	I	f_4632629	ticks	
 	m	()V	<init>	<init>	
 	m	()V	m_4399705	m_4399705	
+c	net/minecraft/unmapped/C_2751481
+	m	()V	m_3915071	onItemUsed	
 c	net/minecraft/unmapped/C_3271339
 	m	(III)Z	m_9248676	m_9248676	
 		p	1		p_1	
@@ -316,8 +326,6 @@ c	net/minecraft/unmapped/C_5897181
 	m	(I)V	<init>	<init>	
 		p	1		p_1	
 	m	()V	<init>		<init>
-c	net/minecraft/unmapped/C_1022696
-	m	()V	m_3915071	onItemUsed	
 c	net/minecraft/unmapped/C_4393193
 	f	[Ljava/lang/String;	f_9025279	types	
 	f	[Ljava/lang/String;	f_1773455	shapes	
@@ -328,11 +336,3 @@ c	net/minecraft/unmapped/C_4393193
 	f	I	f_8065768	selectedSize	
 	f	I	f_9959653	selectedTheme	
 	m	()V	m_5312327	addButtons	
-c	net/minecraft/unmapped/C_5376418
-	f	I	f_7113452	surroundingGroundHeight	
-	f	Z	f_8767089	island	
-	f	Z	f_1849679	floating	
-	f	Z	f_0645994	flat	
-	f	I	f_5831401	theme	
-	m	(Lnet/minecraft/unmapped/C_3906126;)V	m_5594167	placeTrees	
-		p	1		world	

@@ -111,10 +111,10 @@ c	net/minecraft/client/Minecraft	net/minecraft/client/Minecraft
 	m	()V	m_6182440	changeDimension	
 	m	(Lnet/minecraft/unmapped/C_3906126;)V	m_3501995	setWorld	
 		p	1		world	
-	m	(Lnet/minecraft/unmapped/C_3906126;Ljava/lang/String;)V	m_5784106	setWorld	
+	m	(Lnet/minecraft/unmapped/C_3906126;Ljava/lang/String;)V	m_5733981	setWorld	
 		p	1		world	
 		p	2		message	
-	m	(Lnet/minecraft/unmapped/C_3906126;Ljava/lang/String;Lnet/minecraft/unmapped/C_5009044;)V	m_5733981	setWorld	
+	m	(Lnet/minecraft/unmapped/C_3906126;Ljava/lang/String;Lnet/minecraft/unmapped/C_5009044;)V	m_2859299	setWorld	
 		p	1		world	
 		p	2		message	
 		p	3		player	
@@ -147,7 +147,7 @@ c	net/minecraft/client/Minecraft	net/minecraft/client/Minecraft
 	m	(Ljava/lang/String;Ljava/lang/String;)V	m_4034211	convertWorldAndStartGame	
 		p	1		saveName	
 		p	2		name	
-	m	(Z)V	m_6862388	respawnPlayer	
+	m	(Z)V	m_8218202	respawnPlayer	
 		p	1		worldSpawn	
 	m	()Z	m_8894898	isDisplayGui	
 	m	()Z	m_4084752	isFancyGraphicsEnabled	
@@ -651,7 +651,7 @@ c	net/minecraft/unmapped/C_0823907
 		p	3		p_3	
 		p	4		p_4	
 c	net/minecraft/unmapped/C_0914500
-	m	(II)D	m_8849857	m_8849857	
+	m	(II)D	m_1491596	m_1491596	
 		p	1		p_1	
 		p	2		p_2	
 c	net/minecraft/unmapped/C_1013763
@@ -1068,7 +1068,7 @@ c	net/minecraft/unmapped/C_1693934
 		p	2		x	
 		p	3		y	
 		p	4		z	
-		p	5		dir	
+		p	5		facing	
 		p	6		motive	
 c	net/minecraft/unmapped/C_1805909	net/minecraft/client/gui/widget/OptionButtonWidget	
 	f	Lnet/minecraft/unmapped/C_7688744$C_0457152;	f_5503335	option	
@@ -1525,7 +1525,7 @@ c	net/minecraft/unmapped/C_3187085	net/minecraft/client/Screenshot
 	f	Ljava/nio/ByteBuffer;	f_5459073	pixels	
 	f	[B	f_1076717	colorBuffer	
 	f	[I	f_5034816	pixelBuffer	
-	m	(Ljava/io/File;II)Ljava/lang/String;	m_2872564	take	
+	m	(Ljava/io/File;II)Ljava/lang/String;	m_2520735	take	
 		p	0		gameDir	
 		p	1		width	
 		p	2		height	
@@ -1590,7 +1590,7 @@ c	net/minecraft/unmapped/C_3271339	net/minecraft/client/SurvivalInteractionManag
 		p	2		p_2	
 		p	3		p_3	
 		p	4		p_4	
-	m	(IIII)V	m_5386984	m_5386984	
+	m	(IIII)V	m_1681170	m_1681170	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
@@ -2229,7 +2229,7 @@ c	net/minecraft/unmapped/C_3699792	net/minecraft/client/gui/GameGui
 		p	2		x	
 		p	3		z	
 		p	4		tickDelta	
-	m	()V	m_6434029	tick	
+	m	()V	m_0073818	tick	
 	m	(Ljava/lang/String;)V	m_4902001	addChatMessage	
 		p	1		text	
 	m	(Ljava/lang/String;)V	m_9430266	setRecordPlayingOverlay	
@@ -2329,7 +2329,7 @@ c	net/minecraft/unmapped/C_3906126
 	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_9219192;)V	<init>	<init>	
 		p	1		world	
 		p	2		dimension	
-	m	()V	m_3566975	resetSpawnPoint	
+	m	()V	m_3766127	resetSpawnPoint	
 	m	()V	m_8530625	clearPlayerData	
 	m	(Lnet/minecraft/unmapped/C_5009044;)V	m_0762970	loadPlayer	
 		p	1		player	
@@ -2475,14 +2475,14 @@ c	net/minecraft/unmapped/C_3945099	net/minecraft/client/render/entity/PrimedTntR
 		p	8		p_8	
 		p	9		p_9	
 c	net/minecraft/unmapped/C_4030632
+	m	(Lnet/minecraft/unmapped/C_2750078;)I	m_8620274	getSprite	
+		p	1		stack	
 	m	()Z	m_6815351	isHandheld	
 	m	()Z	m_0231735	shouldRotate	
 	m	(Lnet/minecraft/unmapped/C_2750078;)Ljava/lang/String;	m_9222746	getTranslationKey	
 		p	1		stack	
 	m	(I)I	m_1532371	getSprite	
 		p	1		metadata	
-	m	(Lnet/minecraft/unmapped/C_2750078;)I	m_8620274	getSprite	
-		p	1		stack	
 	m	(I)I	m_6327257	getDisplayColor	
 		p	1		metadata	
 c	net/minecraft/unmapped/C_4045198	net/minecraft/client/entity/mob/player/Input	
@@ -2549,7 +2549,7 @@ c	net/minecraft/unmapped/C_4237166	net/minecraft/client/ClientPlayerInteractionM
 		p	1		minecraft	
 	m	(Lnet/minecraft/unmapped/C_3906126;)V	m_1565789	initWorld	
 		p	1		world	
-	m	(IIII)V	m_5386984	startMiningBlock	
+	m	(IIII)V	m_1681170	startMiningBlock	
 		p	1		x	
 		p	2		y	
 		p	3		z	
@@ -2576,7 +2576,7 @@ c	net/minecraft/unmapped/C_4237166	net/minecraft/client/ClientPlayerInteractionM
 		p	1		player	
 	m	()V	m_8517616	tick	
 	m	()Z	m_4103218	hasStatusBars	
-	m	(Lnet/minecraft/unmapped/C_5009044;)V	m_9683549	adjustPlayer	
+	m	(Lnet/minecraft/unmapped/C_5009044;)V	m_5484011	adjustPlayer	
 		p	1		player	
 	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_2750078;IIII)Z	m_0257155	useBlock	
 		p	1		player	
@@ -3840,7 +3840,7 @@ c	net/minecraft/unmapped/C_6794191	net/minecraft/client/MultiplayerInteractionMa
 		p	2		p_2	
 		p	3		p_3	
 		p	4		p_4	
-	m	(IIII)V	m_5386984	m_5386984	
+	m	(IIII)V	m_1681170	m_1681170	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
@@ -4142,7 +4142,7 @@ c	net/minecraft/unmapped/C_7557064
 c	net/minecraft/unmapped/C_7564962	net/minecraft/client/CreativeInteractionManager	
 	m	(Lnet/minecraft/client/Minecraft;)V	<init>	<init>	
 		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_5009044;)V	m_9683549	m_9683549	
+	m	(Lnet/minecraft/unmapped/C_5009044;)V	m_5484011	m_5484011	
 		p	1		p_1	
 	m	()Z	m_4103218	m_4103218	
 	m	(Lnet/minecraft/unmapped/C_3906126;)V	m_1565789	m_1565789	
@@ -4677,7 +4677,7 @@ c	net/minecraft/unmapped/C_8817873	net/minecraft/client/world/MultiplayerWorld
 		p	4		maxX	
 		p	5		maxY	
 		p	6		maxZ	
-	m	()V	m_3566975	m_3566975	
+	m	()V	m_3766127	m_3766127	
 	m	()V	m_6100908	m_6100908	
 	m	(Z)Z	m_3593710	m_3593710	
 		p	1		p_1	
@@ -4856,7 +4856,7 @@ c	net/minecraft/unmapped/C_9072802
 		p	4		p_4	
 		p	5		p_5	
 c	net/minecraft/unmapped/C_9143244
-	m	(II)D	m_8849857	getTemperature	
+	m	(II)D	m_1491596	getTemperature	
 		p	1		x	
 		p	2		z	
 c	net/minecraft/unmapped/C_9165859	net/minecraft/client/gui/ChatMessage	

@@ -9,7 +9,7 @@ c	net/minecraft/client/Minecraft
 	f	Lnet/minecraft/unmapped/C_7974592;	f_3994936		stats
 	m	(Ljava/lang/String;)V	m_2139624	startGame	
 		p	1		saveName	
-	m	()V	m_6862388	respawnPlayer	
+	m	()V	m_8218202	respawnPlayer	
 	m	()Lnet/minecraft/unmapped/C_2942118;	m_4372921		getWorldStorageSource
 	m	(Ljava/lang/String;Ljava/lang/String;J)V	m_2139624		startGame
 		p	1			saveName
@@ -18,7 +18,7 @@ c	net/minecraft/client/Minecraft
 	m	(Ljava/lang/String;Ljava/lang/String;)V	m_4034211		convertWorldAndStartGame
 		p	1			saveName
 		p	2			name
-	m	(Z)V	m_6862388		respawnPlayer
+	m	(Z)V	m_8218202		respawnPlayer
 		p	1			worldSpawn
 	m	()Z	m_8894898		isDisplayGui
 	m	()Z	m_4084752		isFancyGraphicsEnabled
@@ -92,15 +92,6 @@ c	net/minecraft/unmapped/C_0526782
 	m	()Z	m_5174884		canBeCooked
 c	net/minecraft/unmapped/C_0786431
 	f	Lnet/minecraft/unmapped/C_0053660;	f_4063956		particlesGui
-c	net/minecraft/unmapped/C_0932780	net/minecraft/client/world/chunk/MultiplayerChunkCache__ChunkPos	
-	f	I	f_7177981	x	
-	f	I	f_0809651	z	
-	m	(II)V	<init>	<init>	
-		p	1		x	
-		p	2		z	
-	m	(Ljava/lang/Object;)Z	equals	equals	
-		p	1		p_1	
-	m	()I	hashCode	hashCode	
 c	net/minecraft/unmapped/C_0974371
 	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_5009044;IIII)V	m_7011942		m_7011942
 		p	1			p_1
@@ -208,6 +199,19 @@ c	net/minecraft/unmapped/C_2422346
 	m	(IB)V	<init>		<init>
 		p	1			id
 		p	2			event
+c	net/minecraft/unmapped/C_2616453
+	m	(II)Lnet/minecraft/unmapped/C_6755599;	m_1066391	loadChunk	m_1066391
+		p	1		chunkX	p_1
+		p	2		chunkZ	p_2
+c	net/minecraft/unmapped/C_2616453$C_0932780	ChunkPos	
+	f	I	f_7177981	x	
+	f	I	f_0809651	z	
+	m	(II)V	<init>	<init>	
+		p	1		x	
+		p	2		z	
+	m	(Ljava/lang/Object;)Z	equals	equals	
+		p	1		p_1	
+	m	()I	hashCode	hashCode	
 c	net/minecraft/unmapped/C_2750078
 	m	(I)V	m_7305709	damageAndBreak	
 		p	1		damage	
@@ -1396,7 +1400,7 @@ c	net/minecraft/unmapped/C_0019534		net/minecraft/server/PlayerManager
 		p	1			player
 	m	(Lnet/minecraft/unmapped/C_0324512;)V	m_6320223		remove
 		p	1			player
-	m	(Lnet/minecraft/unmapped/C_0386427;Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/unmapped/C_0324512;	m_1007200		createForLogin
+	m	(Lnet/minecraft/unmapped/C_0386427;Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/unmapped/C_0324512;	m_7298898		createForLogin
 		p	1			networkHandler
 		p	2			name
 		p	3			password
@@ -1916,7 +1920,7 @@ c	net/minecraft/unmapped/C_7006834		net/minecraft/server/gui/PlayerStatsGui
 	f	[Ljava/lang/String;	f_2116086		lines
 	m	()V	<init>		<init>
 	m	()V	m_5567243		update
-	m	(Ljava/awt/Graphics;)V	m_4715079		paint
+	m	(Ljava/awt/Graphics;)V	paint		paint
 		p	1			graphics
 	m	(Lnet/minecraft/unmapped/C_7006834;)V	m_2060476		update
 		p	0			statGui
@@ -2502,7 +2506,7 @@ c	net/minecraft/unmapped/C_2077021		net/minecraft/block/AprilFoolsChestBlock
 c	net/minecraft/unmapped/C_2371258		net/minecraft/item/SlabItem
 	m	(I)V	<init>		<init>
 		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_2750078;)I	m_1532371		m_1532371
+	m	(Lnet/minecraft/unmapped/C_2750078;)I	m_8620274		m_8620274
 		p	1			p_1
 	m	(I)I	m_4638052		m_4638052
 		p	1			p_1
@@ -2821,7 +2825,7 @@ c	net/minecraft/unmapped/C_4473452		net/minecraft/world/storage/RegionWorldStora
 	m	()Ljava/util/List;	m_0492547		m_0492547
 	m	()V	m_7166895		m_7166895
 	m	(Ljava/lang/String;Z)Lnet/minecraft/unmapped/C_9147018;	m_5678133		get
-		p	1			saveName
+		p	1			p_1
 		p	2			createPlayerDataDir
 	m	(Ljava/lang/String;)Z	m_1749980		m_1749980
 		p	1			p_1
@@ -2900,7 +2904,7 @@ c	net/minecraft/unmapped/C_5525347		net/minecraft/stat/Stat
 		p	1			id
 		p	2			key
 	m	()Lnet/minecraft/unmapped/C_5525347;	m_5859257		register
-	m	()Z	m_3651694		isAchievement
+	m	()Z	m_1818304		isAchievement
 c	net/minecraft/unmapped/C_5956135		net/minecraft/locale/I18n
 	f	Lnet/minecraft/unmapped/C_1203617;	f_7786510		LANGUAGE
 	m	()V	<init>		<init>
@@ -3104,7 +3108,7 @@ c	net/minecraft/unmapped/C_7281219		net/minecraft/stat/achievement/AchievementSt
 		p	3			column
 		p	4			row
 		p	5			parent
-	m	()Z	m_3651694		m_3651694
+	m	()Z	m_1818304		m_1818304
 c	net/minecraft/unmapped/C_7302585		net/minecraft/client/entity/particle/EmotionParticle
 	f	F	f_8505190		baseScale
 	m	(Lnet/minecraft/unmapped/C_3906126;DDDDDD)V	<init>		<init>
@@ -3201,8 +3205,8 @@ c	net/minecraft/unmapped/C_7338567		net/minecraft/entity/mob/animal/tamable/Wolf
 	m	(Z)V	m_9911295		setTame
 		p	1			tame
 c	net/minecraft/unmapped/C_7974592		net/minecraft/stat/PlayerStats
-	f	Ljava/util/Map;	f_8895685		stats
-	f	Ljava/util/Map;	f_3788937		unsentStats
+	f	Ljava/util/Map;	f_3077720		stats
+	f	Ljava/util/Map;	f_4909231		unsentStats
 	m	()V	<init>		<init>
 	m	(Lnet/minecraft/unmapped/C_5525347;I)V	m_1383655		increment
 		p	1			stat
@@ -3442,7 +3446,3 @@ c	net/minecraft/unmapped/C_9833698		net/minecraft/world/chunk/storage/RegionIo
 		p	2			chunkZ
 			c		the absolute z-coordinate for the specified chunk
 	m	()V	<clinit>		<clinit>
-c	net/minecraft/unmapped/C_2616453
-	m	(II)Lnet/minecraft/unmapped/C_6755599;	m_1066391	loadChunk	m_1066391
-		p	1		chunkX	p_1
-		p	2		chunkZ	p_2

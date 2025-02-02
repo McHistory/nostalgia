@@ -9,7 +9,7 @@ c	net/minecraft/client/Minecraft
 	f	Lnet/minecraft/unmapped/C_7974592;	f_3994936		stats
 	m	(Ljava/lang/String;)V	m_2139624	startGame	
 		p	1		saveName	
-	m	()V	m_6862388	respawnPlayer	
+	m	()V	m_8218202	respawnPlayer	
 	m	()Lnet/minecraft/unmapped/C_2942118;	m_4372921		getWorldStorageSource
 	m	(Ljava/io/File;IIII)Ljava/lang/String;	m_0756011		takeHugeScreenshot
 		p	1			gameDir
@@ -24,7 +24,7 @@ c	net/minecraft/client/Minecraft
 	m	(Ljava/lang/String;Ljava/lang/String;)V	m_4034211		convertWorldAndStartGame
 		p	1			saveName
 		p	2			name
-	m	(Z)V	m_6862388		respawnPlayer
+	m	(Z)V	m_8218202		respawnPlayer
 		p	1			worldSpawn
 	m	()Z	m_8894898		isDisplayGui
 	m	()Z	m_4084752		isFancyGraphicsEnabled
@@ -165,15 +165,6 @@ c	net/minecraft/unmapped/C_0894181
 	m	(Ljava/lang/String;Z)V	m_5338880		setBoolean
 		p	1			key
 		p	2			value
-c	net/minecraft/unmapped/C_0932780	net/minecraft/client/world/chunk/MultiplayerChunkCache__ChunkPos	
-	f	I	f_7177981	x	
-	f	I	f_0809651	z	
-	m	(II)V	<init>	<init>	
-		p	1		x	
-		p	2		z	
-	m	(Ljava/lang/Object;)Z	equals	equals	
-		p	1		p_1	
-	m	()I	hashCode	hashCode	
 c	net/minecraft/unmapped/C_0974371
 	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_5009044;IIII)V	m_7011942		m_7011942
 		p	1			p_1
@@ -246,6 +237,19 @@ c	net/minecraft/unmapped/C_2293006
 		p	1			options
 		p	2			width
 		p	3			height
+c	net/minecraft/unmapped/C_2616453
+	m	(II)Lnet/minecraft/unmapped/C_6755599;	m_1066391	loadChunk	m_1066391
+		p	1		chunkX	p_1
+		p	2		chunkZ	p_2
+c	net/minecraft/unmapped/C_2616453$C_0932780	ChunkPos	
+	f	I	f_7177981	x	
+	f	I	f_0809651	z	
+	m	(II)V	<init>	<init>	
+		p	1		x	
+		p	2		z	
+	m	(Ljava/lang/Object;)Z	equals	equals	
+		p	1		p_1	
+	m	()I	hashCode	hashCode	
 c	net/minecraft/unmapped/C_2750078
 	m	(I)V	m_7305709	damageAndBreak	
 		p	1		damage	
@@ -407,6 +411,20 @@ c	net/minecraft/unmapped/C_3466301
 		p	5			r
 		p	6			g
 		p	7			b
+c	net/minecraft/unmapped/C_3571139
+	m	(II)Lnet/minecraft/unmapped/C_6755599;	m_1066391	loadChunk	m_1066391
+		c	Loads the world chunk at the given chunk coordinates, generating it if needed.	
+		p	1		chunkX	p_1
+		p	2		chunkZ	p_2
+c	net/minecraft/unmapped/C_3571139$C_6131076	ChunkPos	
+	f	I	f_3347531	x	
+	f	I	f_3707756	z	
+	m	(II)V	<init>	<init>	
+		p	1		x	
+		p	2		z	
+	m	(Ljava/lang/Object;)Z	equals	equals	
+		p	1		p_1	
+	m	()I	hashCode	hashCode	
 c	net/minecraft/unmapped/C_3604011
 	m	(Lnet/minecraft/unmapped/C_5009044;DDD)V	m_8171696		m_8171696
 		p	1			p_1
@@ -1529,7 +1547,7 @@ c	net/minecraft/unmapped/C_2077021		net/minecraft/block/AprilFoolsChestBlock
 c	net/minecraft/unmapped/C_2371258		net/minecraft/item/SlabItem
 	m	(I)V	<init>		<init>
 		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_2750078;)I	m_1532371		m_1532371
+	m	(Lnet/minecraft/unmapped/C_2750078;)I	m_8620274		m_8620274
 		p	1			p_1
 	m	(I)I	m_4638052		m_4638052
 		p	1			p_1
@@ -1927,7 +1945,7 @@ c	net/minecraft/unmapped/C_5525347		net/minecraft/stat/Stat
 		p	1			id
 		p	2			key
 	m	()Lnet/minecraft/unmapped/C_5525347;	m_5859257		register
-	m	()Z	m_3651694		isAchievement
+	m	()Z	m_1818304		isAchievement
 c	net/minecraft/unmapped/C_5956135		net/minecraft/locale/I18n
 	f	Lnet/minecraft/unmapped/C_1203617;	f_7786510		LANGUAGE
 	m	()V	<init>		<init>
@@ -2131,7 +2149,7 @@ c	net/minecraft/unmapped/C_7281219		net/minecraft/stat/achievement/AchievementSt
 		p	3			column
 		p	4			row
 		p	5			parent
-	m	()Z	m_3651694		m_3651694
+	m	()Z	m_1818304		m_1818304
 c	net/minecraft/unmapped/C_7302585		net/minecraft/client/entity/particle/EmotionParticle
 	f	F	f_8505190		baseScale
 	m	(Lnet/minecraft/unmapped/C_3906126;DDDDDD)V	<init>		<init>
@@ -2228,8 +2246,8 @@ c	net/minecraft/unmapped/C_7338567		net/minecraft/entity/mob/animal/tamable/Wolf
 	m	(Z)V	m_9911295		setTame
 		p	1			tame
 c	net/minecraft/unmapped/C_7974592		net/minecraft/stat/PlayerStats
-	f	Ljava/util/Map;	f_8895685		stats
-	f	Ljava/util/Map;	f_3788937		unsentStats
+	f	Ljava/util/Map;	f_3077720		stats
+	f	Ljava/util/Map;	f_4909231		unsentStats
 	m	()V	<init>		<init>
 	m	(Lnet/minecraft/unmapped/C_5525347;I)V	m_1383655		increment
 		p	1			stat
@@ -2469,12 +2487,3 @@ c	net/minecraft/unmapped/C_9833698		net/minecraft/world/chunk/storage/RegionIo
 		p	2			chunkZ
 			c		the absolute z-coordinate for the specified chunk
 	m	()V	<clinit>		<clinit>
-c	net/minecraft/unmapped/C_2616453
-	m	(II)Lnet/minecraft/unmapped/C_6755599;	m_1066391	loadChunk	m_1066391
-		p	1		chunkX	p_1
-		p	2		chunkZ	p_2
-c	net/minecraft/unmapped/C_3571139
-	m	(II)Lnet/minecraft/unmapped/C_6755599;	m_1066391	loadChunk	m_1066391
-		c	Loads the world chunk at the given chunk coordinates, generating it if needed.	
-		p	1		chunkX	p_1
-		p	2		chunkZ	p_2

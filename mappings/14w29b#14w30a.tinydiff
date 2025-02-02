@@ -7,7 +7,7 @@ c	net/minecraft/server/MinecraftServer
 	m	()Lnet/minecraft/unmapped/C_5521225;	m_3541520		createCommandHandler
 c	net/minecraft/unmapped/C_1011144
 	f	Lorg/apache/logging/log4j/Logger;	f_6961563		LOGGER
-	m	()Z	m_6319368		m_6319368
+	m	()Z	m_8686998		m_8686998
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_1044273
 	f	Ljava/util/List;	f_7404452	blockEntitiesToBeRendered	
@@ -58,7 +58,6 @@ c	net/minecraft/unmapped/C_1044273
 	f	D	f_9283560		lastCameraY
 	f	D	f_3975529		lastCameraZ
 	f	Z	f_8314381		viewChanged
-	m	()V	m_4170973	renderStars	
 	m	(III)V	m_9346630	sortChunks	
 		p	1		cameraX	
 		p	2		cameraY	
@@ -91,8 +90,7 @@ c	net/minecraft/unmapped/C_1044273
 		p	1			bufferBuilder
 		p	2			y
 		p	3			dark
-	m	()V	m_0537528		renderStars
-	m	(Lnet/minecraft/unmapped/C_8373595;)V	m_4170973		renderStars
+	m	(Lnet/minecraft/unmapped/C_8373595;)V	m_1587681		renderStars
 		p	1			bufferBuilder
 	m	()V	m_8143425		resetDirtyChunks
 	m	(Lnet/minecraft/unmapped/C_6385858;DLnet/minecraft/unmapped/C_1633510;I)V	m_8682700		setupRender
@@ -137,7 +135,7 @@ c	net/minecraft/unmapped/C_1044273$C_8051783		RenderChunkInfo
 		p	4			p_4
 		p	5			p_5
 c	net/minecraft/unmapped/C_1734428
-	m	()Z	m_6319368		m_6319368
+	m	()Z	m_8686998		m_8686998
 c	net/minecraft/unmapped/C_2154975
 	m	(Lnet/minecraft/unmapped/C_7177762;)V	m_7965780		register
 		p	1			recipe
@@ -184,9 +182,6 @@ c	net/minecraft/unmapped/C_2750078
 		p	2			orCreate
 c	net/minecraft/unmapped/C_2782822
 	m	()V	m_9738936	notifyEntityChanged	
-c	net/minecraft/unmapped/C_2800860
-	m	()Z	m_8686998	isEmpty	
-	m	()Z	m_6319368		isEmpty
 c	net/minecraft/unmapped/C_2813741	net/minecraft/client/render/world/DistanceChunkSorter	
 	f	D	f_2795955	cameraX	
 	f	D	f_6932661	cameraY	
@@ -218,7 +213,7 @@ c	net/minecraft/unmapped/C_3635204
 		p	5			blockEntity
 c	net/minecraft/unmapped/C_3906126
 	m	()V	m_5291384	onEntityChanged	
-	m	(Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_3635204;)Z	m_3304116	setBlock	
+	m	(Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_3635204;)Z	m_6927039	setBlock	
 		p	1		pos	
 		p	2		block	
 	m	(DDDD)Z	m_6453306		isPlayerWithinRange
@@ -227,7 +222,7 @@ c	net/minecraft/unmapped/C_3906126
 		p	5			z
 		p	7			range
 c	net/minecraft/unmapped/C_3984704
-	m	()Z	m_6319368		isEmpty
+	m	()Z	m_8686998		isEmpty
 c	net/minecraft/unmapped/C_4076851	net/minecraft/client/render/OpenGlCapabilities	
 	m	()Z	m_0600846	glArbOcclusionQuery	
 c	net/minecraft/unmapped/C_4176306
@@ -265,20 +260,19 @@ c	net/minecraft/unmapped/C_5102005
 	m	()Ljava/util/List;	m_1012852		getKeys
 c	net/minecraft/unmapped/C_5283200
 	f	I	f_6923294	glList	
+	f	Z	f_0382305	visible	
 	f	Lnet/minecraft/unmapped/C_8373595$C_3679149;	f_0420702	transparencyState	
 	f	Lnet/minecraft/unmapped/C_6707278;	f_5654898	edge	
 	f	Lnet/minecraft/unmapped/C_6707278;	f_5645267	size	
 	f	Lnet/minecraft/unmapped/C_6707278;	f_8218082	center	
-	f	Z	f_6292528	visible	
-	f	I	f_9793418	index	
 	f	Lnet/minecraft/unmapped/C_9450178;	f_6280856	boundsRenderer	
 	f	Lnet/minecraft/unmapped/C_5254514;	f_1727636	occlusion	
-	f	I	f_7126309		index
 	f	I	f_2255418		lastFrame
 	m	(Lnet/minecraft/unmapped/C_6385858;)F	m_9608130	squaredDistanceToCenter	
 		p	1		camera	
 	m	(Lnet/minecraft/unmapped/C_1633510;)V	m_5092852	cull	
 		p	1		culler	
+	m	()Z	m_0524223	isEmpty	
 	m	(Lnet/minecraft/unmapped/C_6385858;)F	m_2953364	squaredDistanceToCenterDoubleHeight	
 		p	1		camera	
 	m	()Lnet/minecraft/unmapped/C_6707278;	m_4170504	getCenter	
@@ -299,7 +293,6 @@ c	net/minecraft/unmapped/C_5283200
 	m	(Lnet/minecraft/unmapped/C_3333682;Lnet/minecraft/unmapped/C_2326439;)I	m_1829228	getGlList	
 		p	1		layer	
 		p	2		compiled	
-	m	()Z	m_8263433	isEmpty	
 	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_1044273;Lnet/minecraft/unmapped/C_6707278;I)V	<init>		<init>
 		p	1			world
 		p	2			renderer
@@ -401,8 +394,8 @@ c	net/minecraft/unmapped/C_8072579
 		p	4			p_4
 		p	5			p_5
 c	net/minecraft/unmapped/C_0396750
-	f	I	f_9452987	type	
-	f	Lnet/minecraft/unmapped/C_4701530;	f_3981924		type
+	f	I	f_4674169	type	
+	f	Lnet/minecraft/unmapped/C_4701530;	f_4674169		type
 	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6385858;I)V	<init>	<init>	
 		p	1		world	
 		p	2		target	
@@ -552,12 +545,16 @@ c	net/minecraft/unmapped/C_3333682
 		p	2			p_2
 		p	3			name
 	m	()Ljava/lang/String;	toString		toString
-c	net/minecraft/unmapped/C_3433673
+c	net/minecraft/unmapped/C_3710752
 	m	([Ljava/lang/String;I)Z	m_5755145	m_5755145	
 		p	1		p_1	
 		p	2		p_2	
 c	net/minecraft/unmapped/C_7184938
 	m	()Z	m_1016708		m_1016708
+c	net/minecraft/unmapped/C_3696583
+	f	Lnet/minecraft/unmapped/C_9077418;	f_0476734		BLOCK_ENTITY_MARKER
+	m	(Lnet/minecraft/unmapped/C_9077418;)Z	m_8711646		isBlockEntity
+		p	1			model
 c	net/minecraft/unmapped/C_5291991
 	f	Lnet/minecraft/unmapped/C_1945050;	f_8439213		formatting
 	m	(Ljava/lang/String;IIILjava/lang/String;Ljava/lang/String;Lnet/minecraft/unmapped/C_1160655;)V	<init>	<init>	
@@ -577,10 +574,6 @@ c	net/minecraft/unmapped/C_5291991
 		p	6			name
 		p	7			mapColor
 		p	8			formatting
-c	net/minecraft/unmapped/C_6781194
-	f	Lnet/minecraft/unmapped/C_9077418;	f_0476734		BLOCK_ENTITY_MARKER
-	m	(Lnet/minecraft/unmapped/C_9077418;)Z	m_8711646		isBlockEntity
-		p	1			model
 c	net/minecraft/unmapped/C_8298063
 	m	()Z	m_1016708		m_1016708
 c	net/minecraft/unmapped/C_8675191
@@ -1039,3 +1032,5 @@ c	net/minecraft/unmapped/C_9575469$C_7173622		AddPattern
 		p	1			inventory
 	m	(Lnet/minecraft/unmapped/C_9575469$4131182;)V	<init>		<init>
 		p	1			p_1
+c	net/minecraft/unmapped/C_2800860
+	m	()Z	m_8686998	isEmpty	m_8686998

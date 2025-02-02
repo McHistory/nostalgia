@@ -28,10 +28,6 @@ c	net/minecraft/unmapped/C_1013763
 	f	[F	f_5847296		INVENTORY_DROP_CHANCE
 		c		An array containing the probability of a mob dropping their inventory. These are sorted by increasing probability with item[0] being difficulty easy and item[3] being difficulty hard.
 	f	Z	f_9177400		capPickUpLoot
-	m	()Lnet/minecraft/unmapped/C_2750078;	m_2674028	getDisplayItemInHand	
-	m	(I)Lnet/minecraft/unmapped/C_2750078;	m_4716717	getEquipment	
-		p	1		slot	
-	m	()[Lnet/minecraft/unmapped/C_2750078;	m_9919834	m_9919834	
 	m	(II)Lnet/minecraft/unmapped/C_4030632;	m_9577593
 		p	2		p_2	
 		p	0			slot
@@ -39,10 +35,6 @@ c	net/minecraft/unmapped/C_1013763
 		p	1			p_1
 	m	(I)Z	m_2125280		hasStatusEffect
 		p	1			id
-	m	()Lnet/minecraft/unmapped/C_2750078;	m_7121925		getDisplayItemInHand
-	m	(I)Lnet/minecraft/unmapped/C_2750078;	m_5260880		getEquipment
-		p	1			slot
-	m	()[Lnet/minecraft/unmapped/C_2750078;	m_5543474		m_5543474
 	m	(Lnet/minecraft/unmapped/C_6385858;I)V	m_8950914		sendPickup
 		p	1			entity
 		p	2			count
@@ -77,11 +69,7 @@ c	net/minecraft/unmapped/C_1693934
 	m	()I	m_2183875		m_2183875
 	m	()V	m_1389123		m_1389123
 	m	(Lnet/minecraft/unmapped/C_3906126;IIII)V	<init>
-		p	1		world	p_1
-		p	2		x	p_2
-		p	3		y	p_3
-		p	4		z	p_4
-		p	5		dir	p_5
+		p	5		dir	facing
 c	net/minecraft/unmapped/C_1893966
 	m	(Lnet/minecraft/unmapped/C_2339776;DDDFF)V	m_7639788	m_7639788	
 		p	1		p_1	
@@ -261,13 +249,13 @@ c	net/minecraft/unmapped/C_5009044
 	m	()I	m_0706622		m_0706622
 	m	()F	m_7818374		getArmorEquippedRatio
 		c		@return the ratio of the number of the amount of armor equipped to the total armor slots
-	m	(I)Lnet/minecraft/unmapped/C_2750078;	m_5260880		m_5260880
+	m	(I)Lnet/minecraft/unmapped/C_2750078;	m_4716717		m_4716717
 		p	1			p_1
-	m	()Lnet/minecraft/unmapped/C_2750078;	m_7121925		m_7121925
+	m	()Lnet/minecraft/unmapped/C_2750078;	m_2674028		m_2674028
 	m	(ILnet/minecraft/unmapped/C_2750078;)V	m_0129682		m_0129682
 		p	1			p_1
 		p	2			p_2
-	m	()[Lnet/minecraft/unmapped/C_2750078;	m_5543474		m_5543474
+	m	()[Lnet/minecraft/unmapped/C_2750078;	m_9919834		m_9919834
 c	net/minecraft/unmapped/C_5196988
 	m	(Lnet/minecraft/unmapped/C_2750078;I)I	m_6327257		m_6327257
 		p	1			p_1
@@ -285,7 +273,7 @@ c	net/minecraft/unmapped/C_5196988
 c	net/minecraft/unmapped/C_5367636
 	f	F	f_0810045		portalTime
 	f	F	f_8292424		lastPortalTime
-	m	()Lnet/minecraft/unmapped/C_2750078;	m_7121925		m_7121925
+	m	()Lnet/minecraft/unmapped/C_2750078;	m_2674028		m_2674028
 c	net/minecraft/unmapped/C_5434245
 	m	()I	m_6901817		getAttackDamage
 c	net/minecraft/unmapped/C_5756990
@@ -301,13 +289,8 @@ c	net/minecraft/unmapped/C_6385858
 	f	Z	f_6329543		inPortal
 	f	I	f_3184704		portalTime
 	f	I	f_1255062		dimension
-	m	()V	m_2698485	onPortalCollision	
-	m	()[Lnet/minecraft/unmapped/C_2750078;	m_9919834	getEquipment	
 	m	()I	m_6798299		getMaxNetherPortalTime
-	m	()V	m_9794132		onPortalCollision
-		c		Called when this entity collides with a nether portal block.
 	m	()I	m_0706622		getPortalCooldown
-	m	()[Lnet/minecraft/unmapped/C_2750078;	m_5543474		getEquipment
 	m	()Z	m_6767884		isInvisible
 	m	(Z)V	m_5821397		setInvisible
 		p	1			invisible
@@ -316,6 +299,8 @@ c	net/minecraft/unmapped/C_6385858
 		p	2			p_2
 	m	(I)V	m_0210844		changeDimension
 		p	1			dimension
+	m	()V	m_2698485
+		c		Called when this entity collides with a nether portal block.
 c	net/minecraft/unmapped/C_6755599
 	f	I	f_6042239		lowestHeight
 		c		The lowest height among all columns of this chunk.
@@ -642,12 +627,21 @@ c	net/minecraft/unmapped/C_0368523
 	m	(Lnet/minecraft/unmapped/C_2750078;I)I	m_6327257		m_6327257
 		p	1			p_1
 		p	2			p_2
+c	net/minecraft/unmapped/C_1812555
+	f	Lnet/minecraft/unmapped/C_8878495;	f_1121777		targetFilter
+	m	(Lnet/minecraft/unmapped/C_1013763;Ljava/lang/Class;FIZZLnet/minecraft/unmapped/C_8878495;)V	<init>		<init>
+		p	1			p_1
+		p	2			p_2
+		p	3			p_3
+		p	4			p_4
+		p	5			p_5
+		p	6			p_6
+		p	7			p_7
 c	net/minecraft/unmapped/C_8716847
 	f	Lnet/minecraft/unmapped/C_3906126;	f_6805164	world	
-	f	I	f_7127546	cooldown	
+	f	I	f_2674034	projectileType	
 	f	Lnet/minecraft/unmapped/C_4886193;	f_6805164		rangedAttackMob
-	f	F	f_7127546		squaredAttackRange
-	f	I	f_2674034	projectileType	cooldown
+	f	F	f_8574611		squaredAttackRange
 	m	()V	m_2730240	shootProjectile	
 	m	(Lnet/minecraft/unmapped/C_1013763;FII)V	<init>	<init>	
 		p	1		mob	
@@ -659,16 +653,6 @@ c	net/minecraft/unmapped/C_8716847
 		p	2			speed
 		p	3			cooldown
 		p	4			attackRange
-c	net/minecraft/unmapped/C_1812555
-	f	Lnet/minecraft/unmapped/C_8878495;	f_1121777		targetFilter
-	m	(Lnet/minecraft/unmapped/C_1013763;Ljava/lang/Class;FIZZLnet/minecraft/unmapped/C_8878495;)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
-		p	6			p_6
-		p	7			p_7
 c	net/minecraft/unmapped/C_4114007	net/minecraft/item/MonsterEggItem	
 	m	(I)V	<init>	<init>	
 		p	1		p_1	

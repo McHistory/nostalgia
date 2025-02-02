@@ -294,7 +294,7 @@ c	net/minecraft/unmapped/C_0019534		net/minecraft/server/PlayerManager
 		p	1			player
 	m	(Lnet/minecraft/unmapped/C_0324512;)V	m_6320223		remove
 		p	1			player
-	m	(Lnet/minecraft/unmapped/C_0386427;Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/unmapped/C_0324512;	m_1007200		createForLogin
+	m	(Lnet/minecraft/unmapped/C_0386427;Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/unmapped/C_0324512;	m_7298898		createForLogin
 		p	1			networkHandler
 		p	2			name
 		p	3			password
@@ -762,6 +762,15 @@ c	net/minecraft/unmapped/C_3571139		net/minecraft/server/world/chunk/ServerChunk
 		p	2			p_2
 	m	()Z	m_1591842		m_1591842
 	m	()Z	m_2288809		m_2288809
+c	net/minecraft/unmapped/C_3571139$C_6131076		ChunkPos
+	f	I	f_3347531		x
+	f	I	f_3707756		z
+	m	(II)V	<init>		<init>
+		p	1			x
+		p	2			z
+	m	(Ljava/lang/Object;)Z	equals		equals
+		p	1			p_1
+	m	()I	hashCode		hashCode
 c	net/minecraft/unmapped/C_4753572		net/minecraft/util/Tickable
 	m	()V	m_5506965		tick
 c	net/minecraft/unmapped/C_4978736		net/minecraft/server/gui/PlayerListGui
@@ -793,7 +802,7 @@ c	net/minecraft/unmapped/C_7006834		net/minecraft/server/gui/PlayerStatsGui
 	f	[Ljava/lang/String;	f_2116086		lines
 	m	()V	<init>		<init>
 	m	()V	m_5567243		update
-	m	(Ljava/awt/Graphics;)V	m_4715079		paint
+	m	(Ljava/awt/Graphics;)V	paint		paint
 		p	1			graphics
 	m	(Lnet/minecraft/unmapped/C_7006834;)V	m_2060476		update
 		p	0			statGui

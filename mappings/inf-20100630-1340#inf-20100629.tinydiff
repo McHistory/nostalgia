@@ -352,7 +352,7 @@ c	net/minecraft/unmapped/C_3906126
 	m	(Lnet/minecraft/unmapped/C_2782822;)V	m_1367228	addEventListener	
 		p	1		listener	
 	m	()V	m_9859231	initAmbientDarkness	
-	m	()V	m_3566975	resetSpawnPoint	
+	m	()V	m_3766127	resetSpawnPoint	
 	m	(Lnet/minecraft/unmapped/C_2782822;)V	m_1985242	removeEventListener	
 		p	1		listener	
 	m	(II)I	m_8928585	getPrecipitationHeight	
@@ -398,9 +398,9 @@ c	net/minecraft/unmapped/C_4030632
 		p	5		face	
 	m	(Lnet/minecraft/unmapped/C_6385858;)I	m_1072215	getAttackDamage	
 		p	1		target	
-	m	(Lnet/minecraft/unmapped/C_2750078;)I	m_1532371	getSprite	
+	m	(Lnet/minecraft/unmapped/C_2750078;)I	m_8620274	getSprite	
 		p	1		stack	
-	m	()I	m_1532371		getSprite
+	m	()I	m_8620274		getSprite
 	m	(Lnet/minecraft/unmapped/C_3635204;)F	m_3907516		getMiningSpeed
 		p	1			block
 	m	(Lnet/minecraft/unmapped/C_2750078;)V	m_5872189		mineBlock
@@ -519,7 +519,7 @@ c	net/minecraft/unmapped/C_6108840
 	m	()Z	m_4501027	isNearPlayer	
 c	net/minecraft/unmapped/C_6385858
 	f	Z	f_9780990	colliding	
-	f	Z	f_6716342	f_6716342	
+	f	Z	f_3483979	f_3483979	
 	m	(FF)V	m_8787252	setRotation	
 		p	1		yaw	
 		p	2		pitch	
@@ -645,16 +645,18 @@ c	net/minecraft/unmapped/C_8125832
 		p	2		x	
 		p	3		y	
 		p	4		z	
-c	net/minecraft/unmapped/C_8135468	net/minecraft/nbt/NbtIo	net/minecraft/client/CrashException
-	f	Ljava/lang/Exception;	f_8880657		cause
+c	net/minecraft/unmapped/C_8135468	net/minecraft/nbt/NbtIo	
+	m	()V	<init>	<init>	
+	m	(Ljava/io/InputStream;)Lnet/minecraft/unmapped/C_2800860;	m_2540889	readCompressed	
+		p	0		is	
+	m	(Lnet/minecraft/unmapped/C_2800860;Ljava/io/OutputStream;)V	m_4670107	writeCompressed	
+		p	0		nbt	
+		p	1		os	
 	m	(Ljava/io/DataInput;)Lnet/minecraft/unmapped/C_2800860;	m_9475633	read	
 		p	0		input	
 	m	(Lnet/minecraft/unmapped/C_2800860;Ljava/io/DataOutput;)V	m_1247940	write	
 		p	0		nbt	
 		p	1		output	
-	m	(Ljava/lang/String;Ljava/lang/Exception;)V	<init>		<init>
-		p	1			description
-		p	2			cause
 c	net/minecraft/unmapped/C_8554894
 	f	Lnet/minecraft/unmapped/C_8554894;	f_0239110	CORAL	
 c	net/minecraft/unmapped/C_8565077
@@ -700,12 +702,12 @@ c	net/minecraft/unmapped/C_8998310
 		p	2		weight	
 	m	()Z	m_4926161	isEmpty	
 c	net/minecraft/unmapped/C_9377562
-	m	(Lnet/minecraft/unmapped/C_3906126;ILnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_7918626;)I	m_2453784	run	
+	m	(Lnet/minecraft/unmapped/C_3906126;ILnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_7918626;)I	m_1854971	run	
 		p	1		world	
 		p	2		p_2	
 		p	3		around	
 		p	4		listener	
-	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6385858;)I	m_2453784		run
+	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6385858;)I	m_1854971		run
 		p	1			world
 		p	2			around
 c	net/minecraft/unmapped/C_9484672
@@ -737,8 +739,6 @@ c	net/minecraft/client/Minecraft
 		p	4		width	
 		p	5		height	
 		p	6		fullscreen	
-	m	(Lnet/minecraft/unmapped/C_5269767;)V	m_8906868	handleCrash	
-		p	1		report	
 	m	(Ljava/lang/String;I)V	m_8972330	setStartupServer	
 		p	1		address	
 		p	2		port	
@@ -762,19 +762,14 @@ c	net/minecraft/client/Minecraft
 		p	3			width
 		p	4			height
 		p	5			fullscreen
-	m	(Lnet/minecraft/unmapped/C_8135468;)V	m_8906868		handleCrash
-		p	1			exception
+	m	(Lnet/minecraft/unmapped/C_5269767;)V	m_8906868
+		p	1		report	exception
 c	net/minecraft/client/MinecraftApplet
 	m	()V	m_6279050	startThread	
 	m	()V	m_5175249	clearMemory	
-c	net/minecraft/client/MinecraftApplet$7226165
-	m	(Lnet/minecraft/unmapped/C_5269767;)V	m_8906868	m_8906868	
-		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_8135468;)V	m_8906868		m_8906868
-		p	1			p_1
 c	net/minecraft/isom/IsomPreviewApplet
-c	net/minecraft/isom/IsomPreviewApplet$4868490		4868490
-	f	Lnet/minecraft/unmapped/C_5586685;	f_9833779		f_9833779
+c	net/minecraft/isom/IsomPreviewApplet$5794965		5794965
+	f	Lnet/minecraft/unmapped/C_5586685;	f_8378816		f_8378816
 	m	(Lnet/minecraft/unmapped/C_5586685;)V	<init>		<init>
 		p	1			p_1
 	m	()V	run		run
@@ -866,20 +861,12 @@ c	net/minecraft/unmapped/C_1044273
 	m	(Lnet/minecraft/unmapped/C_1633510;F)V	m_4361284	cullChunks	
 		p	1		culler	
 		p	2		tickDelta	
-	m	(Lnet/minecraft/unmapped/C_6385858;)V	m_9088355	m_9088355	
-		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_6385858;)V	m_0878478	m_0878478	
-		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_6385858;)V	m_0519413		notifyEntityAdded
-		p	1			entity
-	m	(Lnet/minecraft/unmapped/C_6385858;)V	m_3338259		notifyEntityRemoved
-		p	1			entity
 	m	(Lnet/minecraft/unmapped/C_0336319;Lnet/minecraft/unmapped/C_6516244;F)V	m_1380727		renderEntities
 		p	1			cameraPos
 		p	2			culler
 		p	3			tickDelta
 	m	()V	m_6291103		renderLastChunks
-	m	(Lnet/minecraft/unmapped/C_5009044;)V	m_8580944		compileChunks
+	m	(Lnet/minecraft/unmapped/C_5009044;)V	m_7785939		compileChunks
 		p	1			camera
 	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_5853518;IF)V	m_4049049		renderBlockOutline
 		p	1			camera
@@ -914,6 +901,10 @@ c	net/minecraft/unmapped/C_1044273
 		p	8		p_8	velocityX
 		p	10		p_10	velocityY
 		p	12		p_12	velocityZ
+	m	(Lnet/minecraft/unmapped/C_6385858;)V	m_9088355	m_9088355	notifyEntityAdded
+		p	1		p_1	entity
+	m	(Lnet/minecraft/unmapped/C_6385858;)V	m_0878478	m_0878478	notifyEntityRemoved
+		p	1		p_1	entity
 	m	()V	m_2968224	m_2968224	notifyAmbientDarknessChanged
 c	net/minecraft/unmapped/C_1633510	net/minecraft/client/render/Culler	
 	m	(Lnet/minecraft/unmapped/C_1414550;)Z	m_2658685	isVisible	
@@ -971,16 +962,7 @@ c	net/minecraft/unmapped/C_2621421
 	m	(II)Z	m_7801882	mouseClicked	
 		p	1		mouseX	
 		p	2		mouseY	
-c	net/minecraft/unmapped/C_2751481	net/minecraft/client/render/ItemInHandRenderer	
-	f	Lnet/minecraft/client/Minecraft;	f_1515651	minecraft	
-	f	Lnet/minecraft/unmapped/C_2750078;	f_0997266	itemInHand	
-	f	F	f_4282606	handHeight	
-	f	F	f_2262411	lastHandHeight	
-	f	Lnet/minecraft/unmapped/C_3466301;	f_9447755	blockRenderer	
-	f	I	f_0295170	swingArmTicks	
-	f	Z	f_2139208	swingArm	
-	m	(Lnet/minecraft/client/Minecraft;)V	<init>	<init>	
-		p	1		minecraft	
+c	net/minecraft/unmapped/C_2751481
 	m	(F)V	m_0066103	renderHand	
 		p	1		tickDelta	
 	m	(F)V	m_2544514	renderScreenEffects	
@@ -995,7 +977,6 @@ c	net/minecraft/unmapped/C_2751481	net/minecraft/client/render/ItemInHandRendere
 	m	()V	m_0593782	tick	
 	m	()V	m_0120829	onBlockUsed	
 	m	()V	m_8665200	onItemUsed	
-	m	()V	m_3835710	swingArm	
 c	net/minecraft/unmapped/C_2813741
 	m	(Lnet/minecraft/unmapped/C_5283200;Lnet/minecraft/unmapped/C_5283200;)I	m_7245845	m_7245845	
 		p	1		p_1	
@@ -1057,11 +1038,6 @@ c	net/minecraft/unmapped/C_3466301
 		p	2		x	
 		p	3		y	
 		p	4		z	
-	m	(Lnet/minecraft/unmapped/C_3635204;III)Z	m_8178628	tesselateGear	
-		p	1		block	
-		p	2		x	
-		p	3		y	
-		p	4		z	
 	m	(Lnet/minecraft/unmapped/C_3635204;III)Z	m_9806368	tesselateRail	
 		p	1		block	
 		p	2		x	
@@ -1112,6 +1088,11 @@ c	net/minecraft/unmapped/C_3466301
 		p	3		y	
 		p	4		z	
 	m	(Lnet/minecraft/unmapped/C_3635204;III)Z	m_4686013	tesselateDoor	
+		p	1		block	
+		p	2		x	
+		p	3		y	
+		p	4		z	
+	m	(Lnet/minecraft/unmapped/C_3635204;III)Z	m_2826641	tesselateGear	
 		p	1		block	
 		p	2		x	
 		p	3		y	
@@ -1222,8 +1203,6 @@ c	net/minecraft/unmapped/C_4712589
 		p	9		maxY	
 		p	11		maxZ	
 c	net/minecraft/unmapped/C_4824661
-	f	Lnet/minecraft/unmapped/C_2751481;	f_1035939	itemInHandRenderer	
-	f	Lnet/minecraft/unmapped/C_1022696;	f_1035939		itemInHandRenderer
 	m	()V	m_2304048	tick	
 	m	(F)V	m_1900644	pick	
 		p	1		tickDelta	
@@ -1297,11 +1276,6 @@ c	net/minecraft/unmapped/C_5027796
 	m	(Lnet/minecraft/unmapped/C_3324249;F)V	m_4693455	m_4693455	
 		p	1		p_1	
 		p	2		p_2	
-c	net/minecraft/unmapped/C_5147087
-	m	(Lnet/minecraft/unmapped/C_5269767;)V	<init>	<init>	
-		p	1		report	
-	m	(Lnet/minecraft/unmapped/C_8135468;)V	<init>		<init>
-		p	1			report
 c	net/minecraft/unmapped/C_5194365
 	m	(Lnet/minecraft/unmapped/C_3688914;DDDFF)V	m_0732339	m_0732339	
 		p	1		p_1	
@@ -1310,12 +1284,18 @@ c	net/minecraft/unmapped/C_5194365
 		p	6		p_6	
 		p	8		p_8	
 		p	9		p_9	
-c	net/minecraft/unmapped/C_5269767	net/minecraft/util/crash/CrashReport	
+c	net/minecraft/unmapped/C_5269767	net/minecraft/util/crash/CrashReport	net/minecraft/client/CrashException
 	f	Ljava/lang/String;	f_4765047	description	
-	f	Ljava/lang/Exception;	f_1347728	exception	
-	m	(Ljava/lang/String;Ljava/lang/Exception;)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
+	f	Ljava/lang/Exception;	f_1347728	exception	cause
+	m	()V	<init>		<init>
+	m	(Ljava/io/InputStream;)Lnet/minecraft/unmapped/C_2800860;	m_1415680		readCompressed
+		p	0			is
+	m	(Lnet/minecraft/unmapped/C_2800860;Ljava/io/OutputStream;)V	m_5829329		writeCompressed
+		p	0			nbt
+		p	1			os
+	m	(Ljava/lang/String;Ljava/lang/Exception;)V	<init>
+		p	1		p_1	description
+		p	2		p_2	cause
 c	net/minecraft/unmapped/C_5283200
 	f	F	f_4136253	radius	
 	f	I	f_7274514	id	
@@ -1564,17 +1544,6 @@ c	net/minecraft/unmapped/C_9610577
 c	net/minecraft/unmapped/C_9846877
 	m	()V	m_9618441	lock	
 	m	()V	m_2221405	unlock	
-c	net/minecraft/unmapped/C_1022696		net/minecraft/client/render/ItemInHandRenderer
-	f	Lnet/minecraft/client/Minecraft;	f_0306817		minecraft
-	f	Lnet/minecraft/unmapped/C_2750078;	f_8566506		item
-	f	F	f_2034266		handHeight
-	f	F	f_7047398		lastHandHeight
-	f	I	f_2636934		attackingTicks
-	f	Z	f_6876447		attacking
-	f	Lnet/minecraft/unmapped/C_3466301;	f_4903884		blockRenderer
-	m	(Lnet/minecraft/client/Minecraft;)V	<init>		<init>
-		p	1			minecraft
-	m	()V	m_5937910		onAttack
 c	net/minecraft/unmapped/C_2006351		net/minecraft/unmapped/C_2006351
 	m	()V	<init>		<init>
 c	net/minecraft/unmapped/C_5972394		net/minecraft/unmapped/C_5972394

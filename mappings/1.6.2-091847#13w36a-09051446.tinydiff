@@ -227,14 +227,12 @@ c	net/minecraft/unmapped/C_0559439
 		p	3			p_3
 c	net/minecraft/unmapped/C_0820158
 	f	I	f_3268047	block	
-	f	I	f_5447474	fishTravelTimer	
 	f	Ljava/util/List;	f_9951256		JUNK_LOOT
 	f	Ljava/util/List;	f_4387745		TREASURE_LOOT
 	f	Ljava/util/List;	f_2344857		FISH_LOOT
 	f	Lnet/minecraft/unmapped/C_3635204;	f_3268047		inBlock
 	f	I	f_6436134		selfHitTimer
 	f	I	f_7994687		catchTimer
-	f	I	f_5392148		fishTravelTimer
 	f	F	f_7541866		fishAngle
 	m	()Lnet/minecraft/unmapped/C_2750078;	m_9195976		getResult
 	m	()V	<clinit>		<clinit>
@@ -1448,6 +1446,11 @@ c	net/minecraft/unmapped/C_3906126
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
+	m	(IIII)Z	m_6927039	setBlock	
+		p	1		x	
+		p	2		y	
+		p	3		z	
+		p	4		block	
 	m	(IIII)V	m_5713760	onBlockChanged	
 		p	1		x	
 		p	2		y	
@@ -1480,6 +1483,11 @@ c	net/minecraft/unmapped/C_3906126
 		p	1		x	
 		p	2		y	
 		p	3		z	
+	m	(Lnet/minecraft/unmapped/C_5863046;III)V	m_3108055	updateLight	
+		p	1		type	
+		p	2		x	
+		p	3		y	
+		p	4		z	
 	m	(IIIIII)V	m_3224255	addBlockEvent	
 		p	1		x	
 		p	2		y	
@@ -1487,11 +1495,6 @@ c	net/minecraft/unmapped/C_3906126
 		p	4		block	
 		p	5		type	
 		p	6		data	
-	m	(Lnet/minecraft/unmapped/C_5863046;III)V	m_3108055	updateLight	
-		p	1		type	
-		p	2		x	
-		p	3		y	
-		p	4		z	
 	m	(IIIIII)V	m_1767133	scheduleTick	
 		p	1		x	
 		p	2		y	
@@ -1507,18 +1510,13 @@ c	net/minecraft/unmapped/C_3906126
 		p	8		volume	
 		p	9		pitch	
 		p	10		ignoreDistance	
-	m	(IIIIII)Z	m_3759788	setBlockWithMetadata	
+	m	(IIIIII)Z	m_2111420	setBlockWithMetadata	
 		p	1		x	
 		p	2		y	
 		p	3		z	
 		p	4		block	
 		p	5		metadata	
 		p	6		flags	
-	m	(IIII)Z	m_3304116	setBlock	
-		p	1		x	
-		p	2		y	
-		p	3		z	
-		p	4		block	
 	m	(IIII)Z	m_4919530	willTickThisTick	
 		p	1		x	
 		p	2		y	
@@ -1559,14 +1557,14 @@ c	net/minecraft/unmapped/C_3906126
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
-	m	(IIILnet/minecraft/unmapped/C_3635204;II)Z	m_3759788		setBlockWithMetadata
+	m	(IIILnet/minecraft/unmapped/C_3635204;II)Z	m_2111420		setBlockWithMetadata
 		p	1			x
 		p	2			y
 		p	3			z
 		p	4			block
 		p	5			metadata
 		p	6			flags
-	m	(IIILnet/minecraft/unmapped/C_3635204;)Z	m_3304116		setBlock
+	m	(IIILnet/minecraft/unmapped/C_3635204;)Z	m_6927039		setBlock
 		p	1			x
 		p	2			y
 		p	3			z
@@ -2124,7 +2122,6 @@ c	net/minecraft/unmapped/C_4636105
 	m	(IZ)Lnet/minecraft/unmapped/C_4636105;	m_5781216		setColor
 		p	1			color
 		p	2			modifyBaseColor
-	m	()Z	m_5296798		isSnowy
 	m	(III)F	m_0376165		getTemperature
 		p	1			x
 		p	2			y
@@ -2137,6 +2134,7 @@ c	net/minecraft/unmapped/C_4636105
 		p	1			x
 		p	2			y
 		p	3			z
+	m	()Z	m_9182020		isCold
 	m	(Lnet/minecraft/unmapped/C_3906126;Ljava/util/Random;[B[BIID)V	m_6243230		prepareAndBuildSurfaces
 		c		Places the bedrock layer, biome-dependent surface and subsurface blocks, and liquid bodies.
 		p	1			world
@@ -2160,7 +2158,6 @@ c	net/minecraft/unmapped/C_4636105
 	m	(Lnet/minecraft/unmapped/C_4636105;)Z	m_7144526		is
 		p	1			biome
 	m	()Lnet/minecraft/unmapped/C_4636105$C_5784858;	m_2779508		getTemperatureCategory
-	m	()Z	m_4952577	isSnowy	isCold
 c	net/minecraft/unmapped/C_4636105$C_5784858		TemperatureCategory
 	f	Lnet/minecraft/unmapped/C_4636105$C_5784858;	f_4742320		OCEAN
 	f	Lnet/minecraft/unmapped/C_4636105$C_5784858;	f_1950174		COLD
@@ -3240,7 +3237,7 @@ c	net/minecraft/unmapped/C_8241203
 	m	(II)Lnet/minecraft/unmapped/C_5307437;	m_5024410		m_5024410
 		p	1			p_1
 		p	2			p_2
-	m	(Lnet/minecraft/unmapped/C_2627205;IIII)Lnet/minecraft/unmapped/C_5307437;	m_4238763		m_4238763
+	m	(Lnet/minecraft/unmapped/C_2627205;IIII)Lnet/minecraft/unmapped/C_5307437;	m_6954536		m_6954536
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -3622,7 +3619,7 @@ c	net/minecraft/unmapped/C_9331929
 c	net/minecraft/unmapped/C_9526661
 	f	I	f_4217848	selectedKeyBinding	
 	f	[Lnet/minecraft/unmapped/C_7688744$C_0457152;	f_3285147		OPTIONS
-	f	Lnet/minecraft/unmapped/C_5027199;	f_4622902		selectedKeyBinding
+	f	Lnet/minecraft/unmapped/C_5027199;	f_4217848		selectedKeyBinding
 	f	Lnet/minecraft/unmapped/C_6512735;	f_1043326		controlsList
 	f	Lnet/minecraft/unmapped/C_2621421;	f_0611594		resetAllButton
 	m	()I	m_2887272	getControlsListX	
@@ -4955,7 +4952,12 @@ c	net/minecraft/unmapped/C_1975274
 	m	(Lnet/minecraft/unmapped/C_3635204;Z)V	<init>		<init>
 		p	1			block
 		p	2			stackable
-c	net/minecraft/unmapped/C_2373189	net/minecraft/world/biome/layer/FuzzyZoomLayer	net/minecraft/world/biome/layer/NormalZoomLayer
+c	net/minecraft/unmapped/C_2373189
+	m	(IIII)[I	m_3947820	m_3947820	
+		p	1		p_1	
+		p	2		p_2	
+		p	3		p_3	
+		p	4		p_4	
 	m	(II)I	m_7598494	pick	
 		p	1		i1	
 		p	2		i2	
@@ -4964,19 +4966,15 @@ c	net/minecraft/unmapped/C_2373189	net/minecraft/world/biome/layer/FuzzyZoomLaye
 		p	2		i2	
 		p	3		i3	
 		p	4		i4	
-	m	(JLnet/minecraft/unmapped/C_6297854;I)Lnet/minecraft/unmapped/C_6297854;	m_3315006		zoom
-		p	0			seed
-		p	2			layer
-		p	3			magnification
-c	net/minecraft/unmapped/C_2399225	net/minecraft/world/biome/layer/NormalZoomLayer	
-	m	(JLnet/minecraft/unmapped/C_6297854;)V	<init>	<init>	
-		p	1		seed	
-		p	3		parent	
-	m	(IIII)[I	m_3947820	m_3947820	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
+	m	(IIII)I	m_2474007		m_2474007
+		p	1			p_1
+		p	2			p_2
+		p	3			p_3
+		p	4			p_4
+	m	(JLnet/minecraft/unmapped/C_6297854;)V	<init>
+		p	1		seed	p_1
+		p	3		parent	p_3
+c	net/minecraft/unmapped/C_2399225
 	m	(II)I	m_2189519	pick	
 		p	1		i1	
 		p	2		i2	
@@ -4985,10 +4983,6 @@ c	net/minecraft/unmapped/C_2399225	net/minecraft/world/biome/layer/NormalZoomLay
 		p	2		i2	
 		p	3		i3	
 		p	4		i4	
-	m	(JLnet/minecraft/unmapped/C_6297854;I)Lnet/minecraft/unmapped/C_6297854;	m_7124401	zoom	
-		p	0		seed	
-		p	2		layer	
-		p	3		magnification	
 c	net/minecraft/unmapped/C_2979830
 	f	I	f_4808292	blockId	
 	f	Lnet/minecraft/unmapped/C_3635204;	f_4808292		block
@@ -5702,9 +5696,23 @@ c	net/minecraft/unmapped/C_7567310
 		p	1			dfactorRGB
 		p	2			sfactorAlpha
 		p	3			dfactorAlpha
-c	net/minecraft/unmapped/C_9255878	net/minecraft/world/biome/IceBiome	
+c	net/minecraft/unmapped/C_9255878
+	f	Z	f_0846428		spikes
+	f	Lnet/minecraft/unmapped/C_0980436;	f_7990177		iceSpike
+	f	Lnet/minecraft/unmapped/C_9928623;	f_1640899		icePatch
 	m	(I)V	<init>	<init>	
 		p	1		p_1	
+	m	(IZ)V	<init>		<init>
+		p	1			id
+		p	2			spikes
+	m	(Lnet/minecraft/unmapped/C_3906126;Ljava/util/Random;II)V	m_4370619		m_4370619
+		p	1			p_1
+		p	2			p_2
+		p	3			p_3
+		p	4			p_4
+	m	(Ljava/util/Random;)Lnet/minecraft/unmapped/C_6049345;	m_0608438		m_0608438
+		p	1			p_1
+	m	()Lnet/minecraft/unmapped/C_4636105;	m_1518983		m_1518983
 c	net/minecraft/unmapped/C_0154218
 	m	(I)V	<init>	<init>	
 		p	1		id	
@@ -7293,10 +7301,8 @@ c	net/minecraft/unmapped/C_5024060
 	f	Lnet/minecraft/unmapped/C_8078594;	f_5831416	f_5831416	
 	f	Ljava/lang/String;	f_6997032	f_6997032	
 c	net/minecraft/unmapped/C_5024060$C_8779132
-	f	Ljava/lang/String;	f_6730764	worldName	
 	f	Ljava/lang/String;	f_3482521	motd	
 	f	Ljava/lang/String;	f_3433414	location	
-	f	Ljava/lang/String;	f_1918445		worldName
 	m	(Lnet/minecraft/unmapped/C_5024060;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lnet/minecraft/unmapped/C_2361662;)V	<init>	<init>	
 		p	1		p_1	
 		p	2		p_2	
@@ -7593,7 +7599,7 @@ c	net/minecraft/unmapped/C_2983776
 		p	3			defaultPack
 		p	4			metadataSerializers
 		p	5			options
-	m	(Ljava/util/List;)V	m_1000027		apply
+	m	(Ljava/util/List;)V	m_6393957		apply
 		p	1			packs
 	m	(Ljava/lang/String;)V	m_9785882		downloadServerPack
 		p	1			url
@@ -7974,21 +7980,6 @@ c	net/minecraft/unmapped/C_3253801		net/minecraft/client/gui/screen/resourcepack
 	m	()Ljava/lang/String;	m_5540657		m_5540657
 	m	()Ljava/lang/String;	m_8613713		m_8613713
 	m	()Lnet/minecraft/unmapped/C_2983776$C_6945562;	m_9591000		getPack
-c	net/minecraft/unmapped/C_3585246		net/minecraft/world/biome/IceBiome
-	f	Z	f_0846428		spikes
-	f	Lnet/minecraft/unmapped/C_0980436;	f_7990177		iceSpike
-	f	Lnet/minecraft/unmapped/C_9928623;	f_1640899		icePatch
-	m	(IZ)V	<init>		<init>
-		p	1			id
-		p	2			spikes
-	m	(Lnet/minecraft/unmapped/C_3906126;Ljava/util/Random;II)V	m_4370619		m_4370619
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-	m	(Ljava/util/Random;)Lnet/minecraft/unmapped/C_6049345;	m_0608438		m_0608438
-		p	1			p_1
-	m	()Lnet/minecraft/unmapped/C_4636105;	m_1518983		m_1518983
 c	net/minecraft/unmapped/C_3656644		net/minecraft/world/gen/noise/SimplexNoiseSampler
 	f	[[I	f_0694508		gradient3D
 	f	D	f_8276763		SQRT_THREE
@@ -9029,15 +9020,6 @@ c	net/minecraft/unmapped/C_8473935		net/minecraft/client/gui/screen/ProgressScre
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
-c	net/minecraft/unmapped/C_8477263		net/minecraft/world/biome/layer/FuzzyZoomLayer
-	m	(JLnet/minecraft/unmapped/C_6297854;)V	<init>		<init>
-		p	1			p_1
-		p	3			p_3
-	m	(IIII)I	m_2474007		m_2474007
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
 c	net/minecraft/unmapped/C_8893224		net/minecraft/world/biome/PlainsBiome
 	f	Z	f_6536538		mutated
 	m	(I)V	<init>		<init>
@@ -9431,7 +9413,7 @@ c	net/minecraft/unmapped/C_9928623		net/minecraft/world/gen/feature/IcePatchFeat
 		p	3			p_3
 		p	4			p_4
 		p	5			p_5
-c	net/minecraft/unmapped/C_7255299
-	m	()Ljava/io/File;	m_6501199	getDirectory	m_6501199
 c	net/minecraft/unmapped/C_4443804
 	m	(Lnet/minecraft/unmapped/C_3298564;)V	m_2415920	handleStat	handleStats
+c	net/minecraft/unmapped/C_7255299
+	m	()Ljava/io/File;	m_6501199	getDirectory	m_6501199

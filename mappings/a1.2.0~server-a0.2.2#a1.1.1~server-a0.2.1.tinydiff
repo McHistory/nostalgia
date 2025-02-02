@@ -4,11 +4,6 @@ c	net/minecraft/unmapped/C_0258789
 	m	()V	<clinit>	<clinit>	
 	m	()Lnet/minecraft/unmapped/C_2750078;	m_2674028	m_2674028	
 c	net/minecraft/unmapped/C_0559439
-	m	(Lnet/minecraft/unmapped/C_3906126;III)V	m_4593295	breakLeaves	
-		p	1		world	
-		p	2		x	
-		p	3		y	
-		p	4		z	
 	m	(Lnet/minecraft/unmapped/C_2627205;III)I	m_4387507	m_4387507	
 		p	1		p_1	
 		p	2		p_2	
@@ -37,11 +32,6 @@ c	net/minecraft/unmapped/C_0559439
 		p	3			p_3
 		p	4			p_4
 		p	5			p_5
-	m	(Lnet/minecraft/unmapped/C_3906126;III)V	m_1351746		breakLeaves
-		p	1			world
-		p	2			x
-		p	3			y
-		p	4			z
 c	net/minecraft/unmapped/C_0611937
 	m	(IDD)D	m_6343956	gradient	
 		p	1		hash	
@@ -103,7 +93,7 @@ c	net/minecraft/unmapped/C_0914500	net/minecraft/world/biome/source/FixedBiomeSo
 		p	2		p_2	
 		p	3		p_3	
 		p	4		p_4	
-	m	([DIIII)[D	m_2137468	m_2137468	
+	m	([DIIII)[D	m_2266722	m_2266722	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
@@ -115,7 +105,7 @@ c	net/minecraft/unmapped/C_0914500	net/minecraft/world/biome/source/FixedBiomeSo
 		p	3		p_3	
 		p	4		p_4	
 		p	5		p_5	
-	m	(II)D	m_8849857	m_8849857	
+	m	(II)D	m_1491596	m_1491596	
 		p	1		p_1	
 		p	2		p_2	
 c	net/minecraft/unmapped/C_1013763
@@ -271,8 +261,6 @@ c	net/minecraft/unmapped/C_3906126
 		p	2		saveName	
 		p	3		seed	
 		p	5		dimension	
-	m	(Lnet/minecraft/unmapped/C_6385858;)V	m_6712451	updateEntity	
-		p	1		entity	
 	m	(Lnet/minecraft/unmapped/C_6385858;Z)V	m_3502009	updateEntity	
 		c	Attempts to tick the given entity and updates chunk management for this entity.\n\n<br>\nIf {@code requireLoaded} is {@code true}, then the entire area within a range of 32 blocks\nof the entity must be loaded, or the method will exit early. This effectively means an area\nof 5x5 chunks around the entity must be loaded.	
 		p	1		entity	
@@ -295,8 +283,6 @@ c	net/minecraft/unmapped/C_3906126
 		p	2			z
 	m	(F)Lnet/minecraft/unmapped/C_0336319;	m_2613927		getSkyColor
 		p	1			tickDelta
-	m	(Lnet/minecraft/unmapped/C_6385858;)V	m_3502009		updateEntity
-		p	1			entity
 c	net/minecraft/unmapped/C_4030632
 	f	Lnet/minecraft/unmapped/C_4030632;	f_8449599	CLOCK	
 	f	Lnet/minecraft/unmapped/C_4030632;	f_6611184	GLOWSTONE_DUST	
@@ -725,7 +711,7 @@ c	net/minecraft/unmapped/C_9143244	net/minecraft/world/biome/source/BiomeSource
 		p	2		z	
 		p	3		sizeX	
 		p	4		sizeZ	
-	m	([DIIII)[D	m_2137468	getTemperatures	
+	m	([DIIII)[D	m_2266722	getTemperatures	
 		p	1		temperatures	
 		p	2		x	
 		p	3		z	
@@ -737,7 +723,7 @@ c	net/minecraft/unmapped/C_9143244	net/minecraft/world/biome/source/BiomeSource
 		p	3		z	
 		p	4		sizeX	
 		p	5		sizeZ	
-	m	(II)D	m_8849857	getTemperature	
+	m	(II)D	m_1491596	getTemperature	
 		p	1		x	
 		p	2		z	
 	m	()V	<clinit>	<clinit>	
@@ -788,9 +774,9 @@ c	net/minecraft/unmapped/C_9377562
 		p	1			cap
 		p	2			baseType
 		p	3			types
-	m	(Lnet/minecraft/unmapped/C_3906126;)V	m_5502460		tick
+	m	(Lnet/minecraft/unmapped/C_3906126;)V	m_2453784		tick
 		p	1			world
-	m	(Lnet/minecraft/unmapped/C_3906126;ILnet/minecraft/unmapped/C_7918626;)I	m_2453784		run
+	m	(Lnet/minecraft/unmapped/C_3906126;ILnet/minecraft/unmapped/C_7918626;)I	m_1854971		run
 		p	1			world
 		p	2			p_2
 		p	3			listener
@@ -889,17 +875,11 @@ c	net/minecraft/client/Minecraft
 	m	(J)V	m_8779594	renderProfilerChart	
 		p	1		tickTime	
 	m	()V	m_6182440	changeDimension	
-	m	(Lnet/minecraft/unmapped/C_3906126;Ljava/lang/String;)V	m_5784106	setWorld	
-		p	1		world	
-		p	2		message	
-	m	(Lnet/minecraft/unmapped/C_3906126;Ljava/lang/String;Lnet/minecraft/unmapped/C_5009044;)V	m_5733981	setWorld	
+	m	(Lnet/minecraft/unmapped/C_3906126;Ljava/lang/String;Lnet/minecraft/unmapped/C_5009044;)V	m_2859299	setWorld	
 		p	1		world	
 		p	2		message	
 		p	3		player	
 	m	()V	m_8779594		renderProfilerChart
-	m	(Lnet/minecraft/unmapped/C_3906126;Ljava/lang/String;)V	m_5733981		setWorld
-		p	1			world
-		p	2			message
 c	net/minecraft/unmapped/C_0139979
 	m	(Ljava/net/URL;Ljava/lang/String;JI)V	m_1914282	download	
 		p	1		url	
@@ -967,7 +947,7 @@ c	net/minecraft/unmapped/C_3187085	net/minecraft/client/Screenshot
 	f	[B	f_1076717	colorBuffer	
 	f	[I	f_5034816	pixelBuffer	
 	m	()V	<init>	<init>	
-	m	(Ljava/io/File;II)Ljava/lang/String;	m_2872564	take	
+	m	(Ljava/io/File;II)Ljava/lang/String;	m_2520735	take	
 		p	0		gameDir	
 		p	1		width	
 		p	2		height	

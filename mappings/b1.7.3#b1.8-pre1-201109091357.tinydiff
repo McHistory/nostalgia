@@ -199,10 +199,10 @@ c	net/minecraft/unmapped/C_0914500
 		p	1		biome	
 		p	2		temperature	
 		p	4		downfall	
-	m	(II)D	m_8849857	m_8849857	
+	m	(II)D	m_1491596	m_1491596	
 		p	1		p_1	
 		p	2		p_2	
-	m	([DIIII)[D	m_2137468	m_2137468	
+	m	([DIIII)[D	m_2266722	m_2266722	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
@@ -212,7 +212,7 @@ c	net/minecraft/unmapped/C_0914500
 		p	1			biome
 		p	2			temperature
 		p	3			downfall
-	m	(II)F	m_8849857		m_8849857
+	m	(II)F	m_1491596		m_1491596
 		p	1			p_1
 		p	2			p_2
 	m	(IIILjava/util/List;Ljava/util/Random;)Lnet/minecraft/unmapped/C_8032589;	m_2521711		m_2521711
@@ -576,14 +576,6 @@ c	net/minecraft/unmapped/C_3134254
 		p	4			z
 	m	()I	m_0662443		m_0662443
 c	net/minecraft/unmapped/C_3187085
-	m	(Ljava/io/File;II)Ljava/lang/String;	m_2872564	take	
-		p	0		gameDir	
-		p	1		width	
-		p	2		height	
-	m	(Ljava/io/File;II)Ljava/lang/String;	m_2520735		take
-		p	0			gameDir
-		p	1			width
-		p	2			height
 	m	(Ljava/io/File;Ljava/lang/String;II)Ljava/lang/String;	m_2872564		take
 		p	0			gameDir
 		p	1			name
@@ -977,10 +969,8 @@ c	net/minecraft/unmapped/C_4078372
 	f	Lnet/minecraft/unmapped/C_6205974;	f_6330805	perlinNoise2	
 	f	[D	f_7022010	sandBuffer	
 	f	[D	f_1351414	gravelBuffer	
-	f	[D	f_9365664	depthBuffer	
 	f	[D	f_9021032	temperatures	
 	f	Z	f_5953559		placeStructures
-	f	[D	f_4647454		depthBuffer
 	f	Lnet/minecraft/unmapped/C_4873144;	f_8286393		stronghold
 	f	Lnet/minecraft/unmapped/C_8336555;	f_9845964		village
 	f	Lnet/minecraft/unmapped/C_3862529;	f_0070182		mineshaft
@@ -1607,7 +1597,7 @@ c	net/minecraft/unmapped/C_7564962
 		p	5			p_5
 		p	6			p_6
 		p	7			p_7
-	m	(IIII)V	m_5386984		m_5386984
+	m	(IIII)V	m_1681170		m_1681170
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -1767,15 +1757,15 @@ c	net/minecraft/unmapped/C_9143244
 	f	[D	f_1988858	downfalls	
 	f	[D	f_4870957	noises	
 	f	Lnet/minecraft/unmapped/C_6297854;	f_4199003		noiseBiomes
-	f	Lnet/minecraft/unmapped/C_6297854;	f_5073996		biomes
+	f	Lnet/minecraft/unmapped/C_6297854;	f_6495071		biomes
 	f	Lnet/minecraft/unmapped/C_6297854;	f_5401900		temperatures
-	f	Lnet/minecraft/unmapped/C_6297854;	f_6495071		downfalls
+	f	Lnet/minecraft/unmapped/C_6297854;	f_6136641		downfalls
 	f	Lnet/minecraft/unmapped/C_8588387;	f_4544929		cache
 	f	Ljava/util/List;	f_9134837		biomesForSpawnPoint
-	m	(II)D	m_8849857	getTemperature	
+	m	(II)D	m_1491596	getTemperature	
 		p	1		x	
 		p	2		z	
-	m	([DIIII)[D	m_2137468	getTemperatures	
+	m	([DIIII)[D	m_2266722	getTemperatures	
 		p	1		temperatures	
 		p	2		x	
 		p	3		z	
@@ -1791,7 +1781,7 @@ c	net/minecraft/unmapped/C_9143244
 		p	3			z
 		p	4			sizeX
 		p	5			sizeZ
-	m	(II)F	m_8849857		getTemperature
+	m	(II)F	m_1491596		getTemperature
 		p	1			x
 		p	2			z
 	m	([FIIII)[F	m_2266722		getTemperatures
@@ -2874,6 +2864,9 @@ c	net/minecraft/unmapped/C_4615590$5170368		5170368
 		p	3			p_3
 	m	(I)Z	m_9636418		m_9636418
 		p	1			p_1
+c	net/minecraft/unmapped/C_4615590$6545578		6545578
+	f	[I	f_1552426		f_1552426
+	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_4615590$C_2993950		FiveWayCrossing
 	f	Lnet/minecraft/unmapped/C_4615590$C_6985076$C_8333915;	f_9410529		entranceType
 	f	Z	f_4622582		leftLow
@@ -3068,9 +3061,6 @@ c	net/minecraft/unmapped/C_4615590$C_6985076		StrongholdPiece
 		p	5			offset
 	m	(Lnet/minecraft/unmapped/C_0624720;)Z	m_8498328		isValidBounds
 		p	0			bounds
-c	net/minecraft/unmapped/C_4615590$C_6985076$6545578		6545578
-	f	[I	f_1552426		f_1552426
-	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_4615590$C_6985076$C_8333915		EntranceType
 	f	Lnet/minecraft/unmapped/C_4615590$C_6985076$C_8333915;	f_9571430		OPENING
 	f	Lnet/minecraft/unmapped/C_4615590$C_6985076$C_8333915;	f_9323310		WOOD_DOOR

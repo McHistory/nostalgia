@@ -340,7 +340,7 @@ c	net/minecraft/unmapped/C_2616453
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
-	m	(II)Lnet/minecraft/unmapped/C_6755599;	m_3469388		m_3469388
+	m	(II)Lnet/minecraft/unmapped/C_6755599;	m_7947145		m_7947145
 		p	1			p_1
 		p	2			p_2
 	m	(II)Lnet/minecraft/unmapped/C_6755599;	m_8303908
@@ -553,7 +553,7 @@ c	net/minecraft/unmapped/C_3571139
 		c		@return the world chunk at the given chunk coordinates,\nloading it from storage if needed, or {@code null} if it does not exist.
 		p	1			chunkX
 		p	2			chunkZ
-	m	(II)Lnet/minecraft/unmapped/C_6755599;	m_3469388		m_3469388
+	m	(II)Lnet/minecraft/unmapped/C_6755599;	m_7947145		m_7947145
 		p	1			p_1
 		p	2			p_2
 	m	(Z)Z	m_6309491		save
@@ -908,6 +908,9 @@ c	net/minecraft/unmapped/C_4078372
 	f	Lnet/minecraft/unmapped/C_3635204;	f_3633382	defaultLiquid	
 	f	Lnet/minecraft/unmapped/C_2441996;	f_3513800		STONE
 	f	Lnet/minecraft/unmapped/C_2441996;	f_3633382		defaultLiquid
+	m	(II)Lnet/minecraft/unmapped/C_6755599;	m_8303908	m_8303908	
+		p	1		p_1	
+		p	2		p_2	
 	m	(II)Z	m_3469388	m_3469388	
 		p	1		p_1	
 		p	2		p_2	
@@ -934,6 +937,9 @@ c	net/minecraft/unmapped/C_4078372
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
+	m	(II)Lnet/minecraft/unmapped/C_6755599;	m_7202543		m_7202543
+		p	1			p_1
+		p	2			p_2
 	m	(II)V	m_3412382		m_3412382
 		p	1			p_1
 		p	2			p_2
@@ -977,6 +983,9 @@ c	net/minecraft/unmapped/C_4188659
 	f	Lnet/minecraft/unmapped/C_2441996;	f_4140378		LAVA
 	f	Lnet/minecraft/unmapped/C_2441996;	f_5354059		GRAVEL
 	f	Lnet/minecraft/unmapped/C_2441996;	f_9460693		SOUL_SAND
+	m	(II)Lnet/minecraft/unmapped/C_6755599;	m_8303908	m_8303908	
+		p	1		p_1	
+		p	2		p_2	
 	m	(II)Z	m_3469388	m_3469388	
 		p	1		p_1	
 		p	2		p_2	
@@ -1003,6 +1012,9 @@ c	net/minecraft/unmapped/C_4188659
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
+	m	(II)Lnet/minecraft/unmapped/C_6755599;	m_7202543		m_7202543
+		p	1			p_1
+		p	2			p_2
 	m	(II)V	m_3412382		m_3412382
 		p	1			p_1
 		p	2			p_2
@@ -1262,12 +1274,20 @@ c	net/minecraft/unmapped/C_6692735
 	m	(Lnet/minecraft/unmapped/C_2441996;)Lnet/minecraft/unmapped/C_0646374;	m_4839406		m_4839406
 		p	1			p_1
 c	net/minecraft/unmapped/C_6755599
+	m	(III)I	m_3471632	getBlockMetadataAt	
+		p	1		localX	
+		p	2		y	
+		p	3		localZ	
 	m	(Lnet/minecraft/unmapped/C_9484672;Lnet/minecraft/unmapped/C_9484672;II)V	m_8869128	populate	
 		p	1		source	
 		p	2		generator	
 		p	3		chunkX	
 		p	4		chunkZ	
-	m	(III)Lnet/minecraft/unmapped/C_3635204;	m_8688406	getBlockAt	
+	m	(III)I	m_8823776	getOpacityAt	
+		p	1		localX	
+		p	2		y	
+		p	3		localZ	
+	m	(III)Lnet/minecraft/unmapped/C_3635204;	m_2661127	getBlockAt	
 		p	1		localX	
 		p	2		y	
 		p	3		localZ	
@@ -1275,19 +1295,15 @@ c	net/minecraft/unmapped/C_6755599
 		p	1		x	
 		p	2		y	
 		p	3		z	
-	m	(Lnet/minecraft/unmapped/C_6707278;)Lnet/minecraft/unmapped/C_3635204;	m_2661127	getBlock	
+	m	(Lnet/minecraft/unmapped/C_6707278;)Lnet/minecraft/unmapped/C_3635204;	m_5231676	getBlock	
 		p	1		pos	
-	m	(III)I	m_0051654	getBlockMetadataAt	
-		p	1		localX	
-		p	2		y	
-		p	3		localZ	
-	m	(Lnet/minecraft/unmapped/C_6707278;)I	m_3471632	getBlockMetadata	
+	m	(Lnet/minecraft/unmapped/C_6707278;)I	m_9513801	getBlockMetadata	
 		p	1		pos	
-	m	(Lnet/minecraft/unmapped/C_6707278;)Lnet/minecraft/unmapped/C_2441996;	m_9971171	getBlockState	
-		p	1		pos	
-	m	(Lnet/minecraft/unmapped/C_6707278;)Lnet/minecraft/unmapped/C_2441996;	m_2661127		getBlockState
-		p	1			pos
-	m	(III)Lnet/minecraft/unmapped/C_2441996;	m_9971171		getBlockState
+	m	(III)I	m_9790087		getOpacity
+		p	1			x
+		p	2			y
+		p	3			z
+	m	(III)Lnet/minecraft/unmapped/C_2441996;	m_7720890		getBlockState
 		p	1			x
 		p	2			y
 		p	3			z
@@ -1296,9 +1312,6 @@ c	net/minecraft/unmapped/C_6755599
 		p	2			generator
 	m	(Lnet/minecraft/unmapped/C_0705111;)V	m_8113950		populate
 		p	1			generator
-	m	(III)I	m_8823776	getOpacityAt	getOpacity
-		p	1		localX	x
-		p	3		localZ	z
 c	net/minecraft/unmapped/C_6755599$6150841	6150841	
 	f	Lnet/minecraft/unmapped/C_6707278;	f_5280998	f_5280998	
 	f	Lnet/minecraft/unmapped/C_6755599;	f_0079615	f_0079615	
@@ -1762,7 +1775,7 @@ c	net/minecraft/unmapped/C_9484672
 		p	1		chunk	
 		p	2		chunkX	
 		p	3		chunkZ	
-	m	(II)Lnet/minecraft/unmapped/C_6755599;	m_3469388		getChunk
+	m	(II)Lnet/minecraft/unmapped/C_6755599;	m_7947145		getChunk
 		c		@return the world chunk at the given chunk coordinates, loading or generating it if needed.
 		p	1			chunkX
 		p	2			chunkZ
@@ -1909,11 +1922,11 @@ c	net/minecraft/unmapped/C_3140924
 	m	(Lnet/minecraft/unmapped/C_2441996;)Z	m_9803079		m_9803079
 		p	1			p_1
 c	net/minecraft/unmapped/C_9462692
-	m	(Lnet/minecraft/unmapped/C_6707278;)Lnet/minecraft/unmapped/C_3635204;	m_2661127	m_2661127	
+	m	(Lnet/minecraft/unmapped/C_6707278;)Lnet/minecraft/unmapped/C_3635204;	m_5231676	m_5231676	
 		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_6707278;)I	m_3471632	m_3471632	
+	m	(Lnet/minecraft/unmapped/C_6707278;)I	m_9513801	m_9513801	
 		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_6707278;)Lnet/minecraft/unmapped/C_2441996;	m_2661127		m_2661127
+	m	(Lnet/minecraft/unmapped/C_6707278;)Lnet/minecraft/unmapped/C_2441996;	m_9971171		m_9971171
 		p	1			p_1
 c	net/minecraft/unmapped/C_7000411
 	m	(Lnet/minecraft/unmapped/C_3635204;)Z	m_6861582	m_6861582	
@@ -2076,6 +2089,9 @@ c	net/minecraft/unmapped/C_6653510
 c	net/minecraft/unmapped/C_8839702
 	f	Lnet/minecraft/unmapped/C_2441996;	f_2716868		END_STONE
 	f	Lnet/minecraft/unmapped/C_2441996;	f_3930797		AIR
+	m	(II)Lnet/minecraft/unmapped/C_6755599;	m_8303908	m_8303908	
+		p	1		p_1	
+		p	2		p_2	
 	m	(II)Z	m_3469388	m_3469388	
 		p	1		p_1	
 		p	2		p_2	
@@ -2102,6 +2118,9 @@ c	net/minecraft/unmapped/C_8839702
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
+	m	(II)Lnet/minecraft/unmapped/C_6755599;	m_7202543		m_7202543
+		p	1			p_1
+		p	2			p_2
 	m	(II)V	m_3412382		m_3412382
 		p	1			p_1
 		p	2			p_2
@@ -2696,6 +2715,9 @@ c	net/minecraft/unmapped/C_1611709
 	f	J	f_5905573		lastTimeoutCheck
 	f	D	f_1407496		timeoutLimit
 c	net/minecraft/unmapped/C_7276582
+	m	(II)Lnet/minecraft/unmapped/C_6755599;	m_8303908	m_8303908	
+		p	1		p_1	
+		p	2		p_2	
 	m	(II)Z	m_3469388	m_3469388	
 		p	1		p_1	
 		p	2		p_2	
@@ -2722,6 +2744,9 @@ c	net/minecraft/unmapped/C_7276582
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
+	m	(II)Lnet/minecraft/unmapped/C_6755599;	m_7202543		m_7202543
+		p	1			p_1
+		p	2			p_2
 	m	(II)V	m_3412382		m_3412382
 		p	1			p_1
 		p	2			p_2
@@ -3352,13 +3377,13 @@ c	net/minecraft/unmapped/C_9939341
 	m	(Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_0480726;)Lnet/minecraft/unmapped/C_2441996;	m_6626229		m_6626229
 		p	1			p_1
 		p	2			p_2
-c	net/minecraft/unmapped/C_9697997
-	m	(Lnet/minecraft/unmapped/C_3635204;I)Z	m_9402308	isGui3d	
+c	net/minecraft/unmapped/C_7296673
+	m	(Lnet/minecraft/unmapped/C_3635204;I)Z	m_5854700	isGui3d	
 		p	1		block	
 		p	2		metadata	
-	m	(Lnet/minecraft/unmapped/C_3635204;)Z	m_9402308		isGui3d
+	m	(Lnet/minecraft/unmapped/C_3635204;)Z	m_5854700		isGui3d
 		p	1			p_1
-c	net/minecraft/unmapped/C_9697997$6196235		6196235
+c	net/minecraft/unmapped/C_7296673$6196235		6196235
 	f	[I	f_8525698		f_8525698
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_0076140
@@ -3534,6 +3559,9 @@ c	net/minecraft/unmapped/C_9830617
 c	net/minecraft/unmapped/C_5704602
 	f	Lnet/minecraft/unmapped/C_2441996;	f_6353179		AIR
 	f	Lnet/minecraft/unmapped/C_2441996;	f_1996665		BARRIER
+	m	(II)Lnet/minecraft/unmapped/C_6755599;	m_8303908	m_8303908	
+		p	1		p_1	
+		p	2		p_2	
 	m	(II)Z	m_3469388	m_3469388	
 		p	1		p_1	
 		p	2		p_2	
@@ -3560,6 +3588,9 @@ c	net/minecraft/unmapped/C_5704602
 		p	3		p_3	
 	m	(Lnet/minecraft/unmapped/C_6707278;)Lnet/minecraft/unmapped/C_6755599;	m_7603521	m_7603521	
 		p	1		p_1	
+	m	(II)Lnet/minecraft/unmapped/C_6755599;	m_7202543		m_7202543
+		p	1			p_1
+		p	2			p_2
 	m	(II)V	m_3412382		m_3412382
 		p	1			p_1
 		p	2			p_2
@@ -3575,29 +3606,11 @@ c	net/minecraft/unmapped/C_7212317
 	f	[S	f_7229556	states	
 	f	[C	f_7229556		states
 	f	Lnet/minecraft/unmapped/C_2441996;	f_4676582	defaultState	DEFAULT_STATE
-	m	(III)Lnet/minecraft/unmapped/C_2441996;	m_5467080	get	
-		p	1		x	
-		p	2		y	
-		p	3		z	
 	m	(I)Lnet/minecraft/unmapped/C_2441996;	m_3158679	get	
 		p	1		index	
-	m	(IIILnet/minecraft/unmapped/C_2441996;)V	m_1784770	set	
-		p	1		x	
-		p	2		y	
-		p	3		z	
-		p	4		state	
 	m	(ILnet/minecraft/unmapped/C_2441996;)V	m_2488966	set	
 		p	1		index	
 		p	2		state	
-	m	(III)Lnet/minecraft/unmapped/C_2441996;	m_3158679		get
-		p	1			x
-		p	2			y
-		p	3			z
-	m	(IIILnet/minecraft/unmapped/C_2441996;)V	m_2488966		set
-		p	1			x
-		p	2			y
-		p	3			z
-		p	4			state
 	m	(III)I	m_3442409		index
 		p	0			x
 		p	1			y
@@ -4043,7 +4056,7 @@ c	net/minecraft/unmapped/C_0646374		net/minecraft/block/piston/PistonMoveBehavio
 		p	2			p_2
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_0705111		net/minecraft/world/chunk/ChunkGenerator
-	m	(II)Lnet/minecraft/unmapped/C_6755599;	m_8303908		generateChunk
+	m	(II)Lnet/minecraft/unmapped/C_6755599;	m_7202543		generateChunk
 		c		Generates a world chunk at the given chunk coordinates.
 		p	1			chunkX
 		p	2			chunkZ

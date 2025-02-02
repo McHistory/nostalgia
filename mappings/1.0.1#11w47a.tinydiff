@@ -160,7 +160,7 @@ c	net/minecraft/unmapped/C_1693934
 		p	2			x
 		p	3			y
 		p	4			z
-		p	5			dir
+		p	5			facing
 		p	6			motive
 c	net/minecraft/unmapped/C_1826831
 	m	(F)F	m_7170499		getFuse
@@ -358,7 +358,7 @@ c	net/minecraft/unmapped/C_3906126
 		p	1			storage
 		p	2			name
 		p	3			settings
-	m	()V	m_3566975		resetSpawnPoint
+	m	()V	m_3766127		resetSpawnPoint
 	m	()V	m_8530625		clearPlayerData
 	m	(Lnet/minecraft/unmapped/C_5009044;)V	m_0762970		loadPlayer
 		p	1			player
@@ -1454,10 +1454,10 @@ c	net/minecraft/client/Minecraft		net/minecraft/client/Minecraft
 		p	1			message
 	m	(Lnet/minecraft/unmapped/C_3906126;)V	m_3501995		setWorld
 		p	1			world
-	m	(Lnet/minecraft/unmapped/C_3906126;Ljava/lang/String;)V	m_5784106		setWorld
+	m	(Lnet/minecraft/unmapped/C_3906126;Ljava/lang/String;)V	m_5733981		setWorld
 		p	1			world
 		p	2			message
-	m	(Lnet/minecraft/unmapped/C_3906126;Ljava/lang/String;Lnet/minecraft/unmapped/C_5009044;)V	m_5733981		setWorld
+	m	(Lnet/minecraft/unmapped/C_3906126;Ljava/lang/String;Lnet/minecraft/unmapped/C_5009044;)V	m_2859299		setWorld
 		p	1			world
 		p	2			message
 		p	3			player
@@ -1473,7 +1473,7 @@ c	net/minecraft/client/Minecraft		net/minecraft/client/Minecraft
 	m	()Ljava/lang/String;	m_8898923		getRenderEntityDebugInfo
 	m	()Ljava/lang/String;	m_4199269		getChunkSourceDebugInfo
 	m	()Ljava/lang/String;	m_7590025		getWorldDebugInfo
-	m	(ZIZ)V	m_6862388		respawnPlayer
+	m	(ZIZ)V	m_8218202		respawnPlayer
 		p	1			worldSpawn
 		p	2			dimension
 		p	3			keepInventory
@@ -3830,7 +3830,7 @@ c	net/minecraft/unmapped/C_3271339		net/minecraft/client/SurvivalInteractionMana
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
-	m	(IIII)V	m_5386984		m_5386984
+	m	(IIII)V	m_1681170		m_1681170
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -4862,7 +4862,7 @@ c	net/minecraft/unmapped/C_3699792		net/minecraft/client/gui/GameGui
 		p	2			x
 		p	3			z
 		p	4			tickDelta
-	m	()V	m_6434029		tick
+	m	()V	m_0073818		tick
 	m	()V	m_5633723		clearChat
 	m	(Ljava/lang/String;)V	m_4902001		addChatMessage
 		p	1			text
@@ -5323,7 +5323,7 @@ c	net/minecraft/unmapped/C_4237166		net/minecraft/client/ClientPlayerInteraction
 		p	1			minecraft
 	m	(Lnet/minecraft/unmapped/C_3906126;)V	m_1565789		initWorld
 		p	1			world
-	m	(IIII)V	m_5386984		startMiningBlock
+	m	(IIII)V	m_1681170		startMiningBlock
 		p	1			x
 		p	2			y
 		p	3			z
@@ -5350,7 +5350,7 @@ c	net/minecraft/unmapped/C_4237166		net/minecraft/client/ClientPlayerInteraction
 		p	1			player
 	m	()V	m_8517616		tick
 	m	()Z	m_4103218		hasStatusBars
-	m	(Lnet/minecraft/unmapped/C_5009044;)V	m_9683549		adjustPlayer
+	m	(Lnet/minecraft/unmapped/C_5009044;)V	m_5484011		adjustPlayer
 		p	1			player
 	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_2750078;IIII)Z	m_0257155		useBlock
 		p	1			player
@@ -6886,7 +6886,7 @@ c	net/minecraft/unmapped/C_6794191		net/minecraft/client/MultiplayerInteractionM
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
-	m	(IIII)V	m_5386984		m_5386984
+	m	(IIII)V	m_1681170		m_1681170
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -7479,7 +7479,7 @@ c	net/minecraft/unmapped/C_7564962		net/minecraft/client/CreativeInteractionMana
 		p	0			player
 	m	(Lnet/minecraft/unmapped/C_5009044;)V	m_4038307		setSurvivalMode
 		p	0			player
-	m	(Lnet/minecraft/unmapped/C_5009044;)V	m_9683549		m_9683549
+	m	(Lnet/minecraft/unmapped/C_5009044;)V	m_5484011		m_5484011
 		p	1			p_1
 	m	(Lnet/minecraft/client/Minecraft;Lnet/minecraft/unmapped/C_4237166;IIII)V	m_7418028		mineBlockInCreative
 		p	0			minecraft
@@ -7496,7 +7496,7 @@ c	net/minecraft/unmapped/C_7564962		net/minecraft/client/CreativeInteractionMana
 		p	5			p_5
 		p	6			p_6
 		p	7			p_7
-	m	(IIII)V	m_5386984		m_5386984
+	m	(IIII)V	m_1681170		m_1681170
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -8385,7 +8385,7 @@ c	net/minecraft/unmapped/C_8817873		net/minecraft/client/world/MultiplayerWorld
 		p	5			maxY
 		p	6			maxZ
 	m	()Lnet/minecraft/unmapped/C_9484672;	m_7447312		m_7447312
-	m	()V	m_3566975		m_3566975
+	m	()V	m_3766127		m_3766127
 	m	()V	m_6100908		m_6100908
 	m	(IIIII)V	m_7641576		m_7641576
 		p	1			p_1

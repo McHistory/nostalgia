@@ -147,7 +147,7 @@ c	net/minecraft/unmapped/C_7567310	net/minecraft/client/render/platform/GLX
 	f	Z	f_1943201	isAmd	
 	f	Z	f_0524196	f_0524196	
 	f	Ljava/lang/String;	f_2597073	cpuInfo	
-	f	Lnet/minecraft/unmapped/C_7567310$C_6669882;	f_2141217	fboMode	
+	f	Lnet/minecraft/unmapped/C_7567310$C_6669882;	f_8172821	fboMode	
 	f	Ljava/util/Map;	f_7715930	ERRORS	
 	f	Lorg/apache/logging/log4j/Logger;	f_5063318	LOGGER	
 	m	()V	m_1999546	init	
@@ -447,6 +447,41 @@ c	net/minecraft/unmapped/C_3010241$C_2547748	Instance
 	m	()I	m_1248177	getHeight	
 	m	()Z	m_5404576	isCrystalEncased	
 	m	()Lnet/minecraft/unmapped/C_1414550;	m_9269918	getCrystalBox	
+c	net/minecraft/unmapped/C_0979881	net/minecraft/client/render/texture/TextureUtil	
+	f	Lorg/apache/logging/log4j/Logger;	f_6453242	LOGGER	
+	m	(III)V	m_6605934	prepare	
+		p	0		id	
+		p	1		width	
+		p	2		height	
+	m	(I)V	m_1192743	bind	
+		p	0		id	
+	m	()V	<clinit>	<clinit>	
+	m	(I)V	m_3765285	deleteTextures	
+		p	0		id	
+	m	()I	m_3056191	genTextures	
+	m	(Lnet/minecraft/unmapped/C_6577431;Lnet/minecraft/unmapped/C_0561170;)[I	m_0580133	m_0580133	
+		p	0		p_0	
+		p	1		p_1	
+	m	(Ljava/io/InputStream;)Ljava/nio/ByteBuffer;	m_4774192	readResource	
+		p	0		is	
+	m	(Lnet/minecraft/unmapped/C_7131921$C_0506307;III)V	m_9065985	m_9065985	
+		p	0		p_0	
+		p	1		p_1	
+		p	2		p_2	
+		p	3		p_3	
+	m	(IIII)V	m_4864924	m_4864924	
+		p	0		p_0	
+		p	1		p_1	
+		p	2		p_2	
+		p	3		p_3	
+	m	(Lnet/minecraft/unmapped/C_7131921$C_0506307;IIII)V	m_0566541	prepare	
+		p	0		p_0	
+		p	1		p_1	
+		p	2		p_2	
+		p	3		p_3	
+		p	4		p_4	
+	m	(Ljava/io/InputStream;)Ljava/lang/String;	m_0065211	m_0065211	
+		p	0		p_0	
 c	net/minecraft/unmapped/C_2907104
 	m	()V	m_7430569	drawTpsChart	
 	m	(Lnet/minecraft/unmapped/C_6939891;IIZ)V	m_0838794		m_0838794
@@ -456,61 +491,7 @@ c	net/minecraft/unmapped/C_2907104
 		p	4			p_4
 c	net/minecraft/unmapped/C_2334768
 	m	()Lnet/minecraft/unmapped/C_2334768;	m_2352047		m_2352047
-c	net/minecraft/unmapped/C_9077418
-	m	(Lnet/minecraft/unmapped/C_8655923;Lnet/minecraft/unmapped/C_8191764;Lnet/minecraft/unmapped/C_3374628;Lnet/minecraft/unmapped/C_3544601;Lnet/minecraft/unmapped/C_2334768;Z)Lnet/minecraft/unmapped/C_7579090;	m_3507260	bakeFace	
-		p	0		element	
-		p	1		elementFace	
-		p	2		miningSprite	
-		p	3		face	
-		p	4		rotation	
-		p	5		uvLocked	
-	m	(Lnet/minecraft/unmapped/C_6781194;Ljava/util/function/Function;Lnet/minecraft/unmapped/C_2334768;Z)Lnet/minecraft/unmapped/C_8675191;	m_7854551	m_7854551	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-	m	(Lnet/minecraft/unmapped/C_6781194;Lnet/minecraft/unmapped/C_9077418;Ljava/util/function/Function;Lnet/minecraft/unmapped/C_2334768;Z)Lnet/minecraft/unmapped/C_8675191;	m_5986277	bake	
-		p	1		bakery	
-		p	2		model	
-		p	3		miningSprites	
-		p	4		rotation	
-		p	5		uvLocked	
-	m	(Lnet/minecraft/unmapped/C_6781194;Ljava/util/function/Function;Lnet/minecraft/unmapped/C_4810520;)Lnet/minecraft/unmapped/C_8675191;	m_7854551		m_7854551
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-	m	(Lnet/minecraft/unmapped/C_6781194;Lnet/minecraft/unmapped/C_9077418;Ljava/util/function/Function;Lnet/minecraft/unmapped/C_4810520;)Lnet/minecraft/unmapped/C_8675191;	m_5986277		bake
-		p	1			bakery
-		p	2			model
-		p	3			miningSprites
-		p	4			state
-	m	(Lnet/minecraft/unmapped/C_8655923;Lnet/minecraft/unmapped/C_8191764;Lnet/minecraft/unmapped/C_3374628;Lnet/minecraft/unmapped/C_3544601;Lnet/minecraft/unmapped/C_4810520;)Lnet/minecraft/unmapped/C_7579090;	m_3507260		bakeFace
-		p	0			element
-		p	1			elementFace
-		p	2			miningSprite
-		p	3			face
-		p	4			state
-c	net/minecraft/unmapped/C_1572627
-	m	(Lnet/minecraft/unmapped/C_3748478;Lnet/minecraft/unmapped/C_3748478;Lnet/minecraft/unmapped/C_8191764;Lnet/minecraft/unmapped/C_3374628;Lnet/minecraft/unmapped/C_3544601;Lnet/minecraft/unmapped/C_2334768;Lnet/minecraft/unmapped/C_4328322;ZZ)Lnet/minecraft/unmapped/C_7579090;	m_4643118	bakeQuad	
-		p	1		from	
-		p	2		to	
-		p	3		elementFace	
-		p	4		miningSprite	
-		p	5		face	
-		p	6		rotation	
-		p	7		elementRotation	
-		p	8		uvLocked	
-		p	9		shade	
-	m	(Lnet/minecraft/unmapped/C_3748478;Lnet/minecraft/unmapped/C_3748478;Lnet/minecraft/unmapped/C_8191764;Lnet/minecraft/unmapped/C_3374628;Lnet/minecraft/unmapped/C_3544601;Lnet/minecraft/unmapped/C_4810520;Lnet/minecraft/unmapped/C_4328322;Z)Lnet/minecraft/unmapped/C_7579090;	m_4643118		bakeQuad
-		p	1			from
-		p	2			to
-		p	3			elementFace
-		p	4			miningSprite
-		p	5			face
-		p	6			state
-		p	7			elementRotation
-		p	8			shade
-c	net/minecraft/unmapped/C_6781194
+c	net/minecraft/unmapped/C_3696583
 	m	(Lnet/minecraft/unmapped/C_0561170;Lnet/minecraft/unmapped/C_2334768;Z)Lnet/minecraft/unmapped/C_8675191;	m_1584434	m_1584434	
 		p	1		p_1	
 		p	2		p_2	
@@ -520,6 +501,60 @@ c	net/minecraft/unmapped/C_6781194
 	m	(Lnet/minecraft/unmapped/C_0561170;Lnet/minecraft/unmapped/C_4810520;)Lnet/minecraft/unmapped/C_8675191;	m_1584434		m_1584434
 		p	1			p_1
 		p	2			p_2
+c	net/minecraft/unmapped/C_9077418
+	m	(Lnet/minecraft/unmapped/C_8655923;Lnet/minecraft/unmapped/C_8191764;Lnet/minecraft/unmapped/C_3374628;Lnet/minecraft/unmapped/C_3544601;Lnet/minecraft/unmapped/C_2334768;Z)Lnet/minecraft/unmapped/C_2400640;	m_3507260	bakeFace	
+		p	0		element	
+		p	1		elementFace	
+		p	2		miningSprite	
+		p	3		face	
+		p	4		rotation	
+		p	5		uvLocked	
+	m	(Lnet/minecraft/unmapped/C_3696583;Ljava/util/function/Function;Lnet/minecraft/unmapped/C_2334768;Z)Lnet/minecraft/unmapped/C_8675191;	m_7854551	m_7854551	
+		p	1		p_1	
+		p	2		p_2	
+		p	3		p_3	
+		p	4		p_4	
+	m	(Lnet/minecraft/unmapped/C_3696583;Lnet/minecraft/unmapped/C_9077418;Ljava/util/function/Function;Lnet/minecraft/unmapped/C_2334768;Z)Lnet/minecraft/unmapped/C_8675191;	m_5986277	bake	
+		p	1		bakery	
+		p	2		model	
+		p	3		miningSprites	
+		p	4		rotation	
+		p	5		uvLocked	
+	m	(Lnet/minecraft/unmapped/C_3696583;Ljava/util/function/Function;Lnet/minecraft/unmapped/C_4810520;)Lnet/minecraft/unmapped/C_8675191;	m_7854551		m_7854551
+		p	1			p_1
+		p	2			p_2
+		p	3			p_3
+	m	(Lnet/minecraft/unmapped/C_3696583;Lnet/minecraft/unmapped/C_9077418;Ljava/util/function/Function;Lnet/minecraft/unmapped/C_4810520;)Lnet/minecraft/unmapped/C_8675191;	m_5986277		bake
+		p	1			bakery
+		p	2			model
+		p	3			miningSprites
+		p	4			state
+	m	(Lnet/minecraft/unmapped/C_8655923;Lnet/minecraft/unmapped/C_8191764;Lnet/minecraft/unmapped/C_3374628;Lnet/minecraft/unmapped/C_3544601;Lnet/minecraft/unmapped/C_4810520;)Lnet/minecraft/unmapped/C_2400640;	m_3507260		bakeFace
+		p	0			element
+		p	1			elementFace
+		p	2			miningSprite
+		p	3			face
+		p	4			state
+c	net/minecraft/unmapped/C_1572627
+	m	(Lnet/minecraft/unmapped/C_3748478;Lnet/minecraft/unmapped/C_3748478;Lnet/minecraft/unmapped/C_8191764;Lnet/minecraft/unmapped/C_3374628;Lnet/minecraft/unmapped/C_3544601;Lnet/minecraft/unmapped/C_2334768;Lnet/minecraft/unmapped/C_4328322;ZZ)Lnet/minecraft/unmapped/C_2400640;	m_4643118	bakeQuad	
+		p	1		from	
+		p	2		to	
+		p	3		elementFace	
+		p	4		miningSprite	
+		p	5		face	
+		p	6		rotation	
+		p	7		elementRotation	
+		p	8		uvLocked	
+		p	9		shade	
+	m	(Lnet/minecraft/unmapped/C_3748478;Lnet/minecraft/unmapped/C_3748478;Lnet/minecraft/unmapped/C_8191764;Lnet/minecraft/unmapped/C_3374628;Lnet/minecraft/unmapped/C_3544601;Lnet/minecraft/unmapped/C_4810520;Lnet/minecraft/unmapped/C_4328322;Z)Lnet/minecraft/unmapped/C_2400640;	m_4643118		bakeQuad
+		p	1			from
+		p	2			to
+		p	3			elementFace
+		p	4			miningSprite
+		p	5			face
+		p	6			state
+		p	7			elementRotation
+		p	8			shade
 c	net/minecraft/unmapped/C_3754158	net/minecraft/client/render/platform/GlStateManager	
 	f	Lnet/minecraft/unmapped/C_3754158$C_4886447;	f_9959836	ALPHA_TEST	
 	f	Lnet/minecraft/unmapped/C_3754158$C_8796143;	f_0463887	LIGHTING	
@@ -711,6 +746,14 @@ c	net/minecraft/unmapped/C_3754158	net/minecraft/client/render/platform/GlStateM
 		p	0		nx	
 		p	1		ny	
 		p	2		nz	
+	m	(Lnet/minecraft/unmapped/C_3754158$C_8013848;Lnet/minecraft/unmapped/C_3754158$C_6440302;)V	m_5757930	blendFunc	
+		p	0		sfactor	
+		p	1		dfactor	
+	m	(Lnet/minecraft/unmapped/C_3754158$C_8013848;Lnet/minecraft/unmapped/C_3754158$C_6440302;Lnet/minecraft/unmapped/C_3754158$C_8013848;Lnet/minecraft/unmapped/C_3754158$C_6440302;)V	m_2693884	blendFuncSeparate	
+		p	0		sfactorRGB	
+		p	1		dfactorRGB	
+		p	2		sfactorAlpha	
+		p	3		dfactorAlpha	
 	m	(I)V	m_7945603	blendEquation	
 		p	0		mode	
 	m	(I)V	m_8813933	setupSolidRenderingTextureCombine	
@@ -842,7 +885,7 @@ c	net/minecraft/unmapped/C_3754158	net/minecraft/client/render/platform/GlStateM
 		p	2		format	
 		p	3		type	
 		p	4		pixels	
-	m	(Lnet/minecraft/unmapped/C_0495439;)V	m_5680893	multMatrix	
+	m	(Lnet/minecraft/unmapped/C_0495439;)V	m_2937831	multMatrix	
 		p	0		m	
 	m	(IF)V	m_8878656	pixelTransfer	
 		p	0		pname	
@@ -871,14 +914,6 @@ c	net/minecraft/unmapped/C_3754158	net/minecraft/client/render/platform/GlStateM
 		p	0		p_0	
 	m	(Ljava/nio/FloatBuffer;)V	m_1339037	m_1339037	
 		p	0		p_0	
-	m	(Lnet/minecraft/unmapped/C_3754158$C_0114419;Lnet/minecraft/unmapped/C_3754158$C_0226345;)V	m_5757930	blendFunc	
-		p	0		sfactor	
-		p	1		dfactor	
-	m	(Lnet/minecraft/unmapped/C_3754158$C_0114419;Lnet/minecraft/unmapped/C_3754158$C_0226345;Lnet/minecraft/unmapped/C_3754158$C_0114419;Lnet/minecraft/unmapped/C_3754158$C_0226345;)V	m_2693884	blendFuncSeparate	
-		p	0		sfactorRGB	
-		p	1		dfactorRGB	
-		p	2		sfactorAlpha	
-		p	3		dfactorAlpha	
 	m	(DDDD)V	m_6669471	rotated	
 		p	0		angle	
 		p	2		x	
@@ -1120,6 +1155,57 @@ c	net/minecraft/unmapped/C_3754158$C_4408755	LogicOp
 		p	2		p_2	
 		p	3		value	
 	m	()V	<clinit>	<clinit>	
+c	net/minecraft/unmapped/C_3754158$C_6440302	DestFactor	
+	f	Lnet/minecraft/unmapped/C_3754158$C_6440302;	f_7453214	CONSTANT_ALPHA	
+	f	Lnet/minecraft/unmapped/C_3754158$C_6440302;	f_6857606	CONSTANT_COLOR	
+	f	Lnet/minecraft/unmapped/C_3754158$C_6440302;	f_6699036	DST_ALPHA	
+	f	Lnet/minecraft/unmapped/C_3754158$C_6440302;	f_1443673	DST_COLOR	
+	f	Lnet/minecraft/unmapped/C_3754158$C_6440302;	f_1934891	ONE	
+	f	Lnet/minecraft/unmapped/C_3754158$C_6440302;	f_7621661	ONE_MINUS_CONSTANT_ALPHA	
+	f	Lnet/minecraft/unmapped/C_3754158$C_6440302;	f_3656416	ONE_MINUS_CONSTANT_COLOR	
+	f	Lnet/minecraft/unmapped/C_3754158$C_6440302;	f_0633916	ONE_MINUS_DST_ALPHA	
+	f	Lnet/minecraft/unmapped/C_3754158$C_6440302;	f_4635146	ONE_MINUS_DST_COLOR	
+	f	Lnet/minecraft/unmapped/C_3754158$C_6440302;	f_9648564	ONE_MINUS_SRC_ALPHA	
+	f	Lnet/minecraft/unmapped/C_3754158$C_6440302;	f_8963355	ONE_MINUS_SRC_COLOR	
+	f	Lnet/minecraft/unmapped/C_3754158$C_6440302;	f_2841911	SRC_ALPHA	
+	f	Lnet/minecraft/unmapped/C_3754158$C_6440302;	f_0932785	SRC_COLOR	
+	f	Lnet/minecraft/unmapped/C_3754158$C_6440302;	f_8584378	ZERO	
+	f	I	f_7330565	value	
+	f	[Lnet/minecraft/unmapped/C_3754158$C_6440302;	f_8426670	f_8426670	
+	m	()[Lnet/minecraft/unmapped/C_3754158$C_6440302;	values	values	
+	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_3754158$C_6440302;	valueOf	valueOf	
+		p	0		p_0	
+	m	(Ljava/lang/String;II)V	<init>	<init>	
+		p	1		p_1	
+		p	2		p_2	
+		p	3		value	
+	m	()V	<clinit>	<clinit>	
+c	net/minecraft/unmapped/C_3754158$C_8013848	SourceFactor	
+	f	Lnet/minecraft/unmapped/C_3754158$C_8013848;	f_8461787	CONSTANT_ALPHA	
+	f	Lnet/minecraft/unmapped/C_3754158$C_8013848;	f_6860669	CONSTANT_COLOR	
+	f	Lnet/minecraft/unmapped/C_3754158$C_8013848;	f_8508904	DST_ALPHA	
+	f	Lnet/minecraft/unmapped/C_3754158$C_8013848;	f_0982501	DST_COLOR	
+	f	Lnet/minecraft/unmapped/C_3754158$C_8013848;	f_2585553	ONE	
+	f	Lnet/minecraft/unmapped/C_3754158$C_8013848;	f_0626801	ONE_MINUS_CONSTANT_ALPHA	
+	f	Lnet/minecraft/unmapped/C_3754158$C_8013848;	f_9211577	ONE_MINUS_CONSTANT_COLOR	
+	f	Lnet/minecraft/unmapped/C_3754158$C_8013848;	f_8687536	ONE_MINUS_DST_ALPHA	
+	f	Lnet/minecraft/unmapped/C_3754158$C_8013848;	f_6467497	ONE_MINUS_DST_COLOR	
+	f	Lnet/minecraft/unmapped/C_3754158$C_8013848;	f_6854241	ONE_MINUS_SRC_ALPHA	
+	f	Lnet/minecraft/unmapped/C_3754158$C_8013848;	f_5630787	ONE_MINUS_SRC_COLOR	
+	f	Lnet/minecraft/unmapped/C_3754158$C_8013848;	f_3174507	SRC_ALPHA	
+	f	Lnet/minecraft/unmapped/C_3754158$C_8013848;	f_2633287	SRC_ALPHA_SATURATE	
+	f	Lnet/minecraft/unmapped/C_3754158$C_8013848;	f_7526099	SRC_COLOR	
+	f	Lnet/minecraft/unmapped/C_3754158$C_8013848;	f_4192389	ZERO	
+	f	I	f_1664825	value	
+	f	[Lnet/minecraft/unmapped/C_3754158$C_8013848;	f_2716079	f_2716079	
+	m	()[Lnet/minecraft/unmapped/C_3754158$C_8013848;	values	values	
+	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_3754158$C_8013848;	valueOf	valueOf	
+		p	0		p_0	
+	m	(Ljava/lang/String;II)V	<init>	<init>	
+		p	1		p_1	
+		p	2		p_2	
+		p	3		value	
+	m	()V	<clinit>	<clinit>	
 c	net/minecraft/unmapped/C_3754158$C_5567883	Viewport	
 	f	Lnet/minecraft/unmapped/C_3754158$C_5567883;	f_8673422	INSTANCE	
 	f	I	f_2039316	x	
@@ -1134,57 +1220,6 @@ c	net/minecraft/unmapped/C_3754158$C_5567883	Viewport
 		p	1		p_1	
 		p	2		p_2	
 	m	()V	<clinit>	<clinit>	
-c	net/minecraft/unmapped/C_3754158$C_0114419	SourceFactor	
-	f	Lnet/minecraft/unmapped/C_3754158$C_0114419;	f_5189583	CONSTANT_ALPHA	
-	f	Lnet/minecraft/unmapped/C_3754158$C_0114419;	f_2054210	CONSTANT_COLOR	
-	f	Lnet/minecraft/unmapped/C_3754158$C_0114419;	f_3859295	DST_ALPHA	
-	f	Lnet/minecraft/unmapped/C_3754158$C_0114419;	f_8143117	DST_COLOR	
-	f	Lnet/minecraft/unmapped/C_3754158$C_0114419;	f_3216457	ONE	
-	f	Lnet/minecraft/unmapped/C_3754158$C_0114419;	f_3312318	ONE_MINUS_CONSTANT_ALPHA	
-	f	Lnet/minecraft/unmapped/C_3754158$C_0114419;	f_2975607	ONE_MINUS_CONSTANT_COLOR	
-	f	Lnet/minecraft/unmapped/C_3754158$C_0114419;	f_2575193	ONE_MINUS_DST_ALPHA	
-	f	Lnet/minecraft/unmapped/C_3754158$C_0114419;	f_6228007	ONE_MINUS_DST_COLOR	
-	f	Lnet/minecraft/unmapped/C_3754158$C_0114419;	f_5283159	ONE_MINUS_SRC_ALPHA	
-	f	Lnet/minecraft/unmapped/C_3754158$C_0114419;	f_3844407	ONE_MINUS_SRC_COLOR	
-	f	Lnet/minecraft/unmapped/C_3754158$C_0114419;	f_1752625	SRC_ALPHA	
-	f	Lnet/minecraft/unmapped/C_3754158$C_0114419;	f_0290823	SRC_ALPHA_SATURATE	
-	f	Lnet/minecraft/unmapped/C_3754158$C_0114419;	f_0594138	SRC_COLOR	
-	f	Lnet/minecraft/unmapped/C_3754158$C_0114419;	f_8999057	ZERO	
-	f	I	f_8999640	value	
-	f	[Lnet/minecraft/unmapped/C_3754158$C_0114419;	f_7738643	f_7738643	
-	m	()[Lnet/minecraft/unmapped/C_3754158$C_0114419;	values	values	
-	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_3754158$C_0114419;	valueOf	valueOf	
-		p	0		p_0	
-	m	(Ljava/lang/String;II)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		value	
-	m	()V	<clinit>	<clinit>	
-c	net/minecraft/unmapped/C_3754158$C_0226345	DestFactor	
-	f	Lnet/minecraft/unmapped/C_3754158$C_0226345;	f_0402751	CONSTANT_ALPHA	
-	f	Lnet/minecraft/unmapped/C_3754158$C_0226345;	f_8856714	CONSTANT_COLOR	
-	f	Lnet/minecraft/unmapped/C_3754158$C_0226345;	f_0237758	DST_ALPHA	
-	f	Lnet/minecraft/unmapped/C_3754158$C_0226345;	f_7684185	DST_COLOR	
-	f	Lnet/minecraft/unmapped/C_3754158$C_0226345;	f_4318298	ONE	
-	f	Lnet/minecraft/unmapped/C_3754158$C_0226345;	f_6910644	ONE_MINUS_CONSTANT_ALPHA	
-	f	Lnet/minecraft/unmapped/C_3754158$C_0226345;	f_5639356	ONE_MINUS_CONSTANT_COLOR	
-	f	Lnet/minecraft/unmapped/C_3754158$C_0226345;	f_4026587	ONE_MINUS_DST_ALPHA	
-	f	Lnet/minecraft/unmapped/C_3754158$C_0226345;	f_2501722	ONE_MINUS_DST_COLOR	
-	f	Lnet/minecraft/unmapped/C_3754158$C_0226345;	f_9515699	ONE_MINUS_SRC_ALPHA	
-	f	Lnet/minecraft/unmapped/C_3754158$C_0226345;	f_8207255	ONE_MINUS_SRC_COLOR	
-	f	Lnet/minecraft/unmapped/C_3754158$C_0226345;	f_2898610	SRC_ALPHA	
-	f	Lnet/minecraft/unmapped/C_3754158$C_0226345;	f_1566083	SRC_COLOR	
-	f	Lnet/minecraft/unmapped/C_3754158$C_0226345;	f_1370294	ZERO	
-	f	I	f_0115643	value	
-	f	[Lnet/minecraft/unmapped/C_3754158$C_0226345;	f_5603019	f_5603019	
-	m	()[Lnet/minecraft/unmapped/C_3754158$C_0226345;	values	values	
-	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_3754158$C_0226345;	valueOf	valueOf	
-		p	0		p_0	
-	m	(Ljava/lang/String;II)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		value	
-	m	()V	<clinit>	<clinit>	
 c	net/minecraft/unmapped/C_6939891
 	m	(JI)I	m_1373916	scaleFrameTime	
 		p	1		frameTime	
@@ -1194,22 +1229,22 @@ c	net/minecraft/unmapped/C_6939891
 		p	3			p_3
 		p	4			p_4
 c	net/minecraft/unmapped/C_0544489
-	m	(Lnet/minecraft/unmapped/C_6781194;Ljava/util/function/Function;Lnet/minecraft/unmapped/C_2334768;Z)Lnet/minecraft/unmapped/C_8675191;	m_7854551	m_7854551	
+	m	(Lnet/minecraft/unmapped/C_3696583;Ljava/util/function/Function;Lnet/minecraft/unmapped/C_2334768;Z)Lnet/minecraft/unmapped/C_8675191;	m_7854551	m_7854551	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
 		p	4		p_4	
-	m	(Lnet/minecraft/unmapped/C_6781194;Ljava/util/function/Function;Lnet/minecraft/unmapped/C_4810520;)Lnet/minecraft/unmapped/C_8675191;	m_7854551		m_7854551
+	m	(Lnet/minecraft/unmapped/C_3696583;Ljava/util/function/Function;Lnet/minecraft/unmapped/C_4810520;)Lnet/minecraft/unmapped/C_8675191;	m_7854551		m_7854551
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 c	net/minecraft/unmapped/C_2974946
-	m	(Lnet/minecraft/unmapped/C_6781194;Ljava/util/function/Function;Lnet/minecraft/unmapped/C_2334768;Z)Lnet/minecraft/unmapped/C_8675191;	m_7854551	m_7854551	
+	m	(Lnet/minecraft/unmapped/C_3696583;Ljava/util/function/Function;Lnet/minecraft/unmapped/C_2334768;Z)Lnet/minecraft/unmapped/C_8675191;	m_7854551	m_7854551	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
 		p	4		p_4	
-	m	(Lnet/minecraft/unmapped/C_6781194;Ljava/util/function/Function;Lnet/minecraft/unmapped/C_4810520;)Lnet/minecraft/unmapped/C_8675191;	m_7854551		m_7854551
+	m	(Lnet/minecraft/unmapped/C_3696583;Ljava/util/function/Function;Lnet/minecraft/unmapped/C_4810520;)Lnet/minecraft/unmapped/C_8675191;	m_7854551		m_7854551
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -1259,41 +1294,6 @@ c	net/minecraft/unmapped/C_4467576
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
-c	net/minecraft/unmapped/C_4011766	net/minecraft/client/render/platform/TextureUtil	
-	f	Lorg/apache/logging/log4j/Logger;	f_1555344	LOGGER	
-	m	()I	m_0976553	genTextures	
-	m	(I)V	m_7354424	deleteTexture	
-		p	0		texture	
-	m	(III)V	m_1974915	prepareImage	
-		p	0		p_0	
-		p	1		p_1	
-		p	2		p_2	
-	m	(I)V	m_3820211	bindTexture	
-		p	0		texture	
-	m	(Lnet/minecraft/unmapped/C_6577431;Lnet/minecraft/unmapped/C_0561170;)[I	m_0580133	m_0580133	
-		p	0		p_0	
-		p	1		p_1	
-	m	(Ljava/io/InputStream;)Ljava/nio/ByteBuffer;	m_4774192	readResource	
-		p	0		is	
-	m	()V	<clinit>	<clinit>	
-	m	(Lnet/minecraft/unmapped/C_7131921$C_0506307;III)V	m_9065985	m_9065985	
-		p	0		p_0	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-	m	(IIII)V	m_4864924	m_4864924	
-		p	0		p_0	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-	m	(Lnet/minecraft/unmapped/C_7131921$C_0506307;IIII)V	m_0845837	m_0845837	
-		p	0		p_0	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-	m	(Ljava/io/InputStream;)Ljava/lang/String;	m_0065211	m_0065211	
-		p	0		p_0	
 c	net/minecraft/unmapped/C_7131921
 	m	(Ljava/lang/String;)V	m_8425650		write
 		p	1			filename
@@ -2501,12 +2501,12 @@ c	net/minecraft/unmapped/C_1196299
 		p	2			p_2
 		p	3			p_3
 c	net/minecraft/unmapped/C_3174183
-	m	(Lnet/minecraft/unmapped/C_6781194;Ljava/util/function/Function;Lnet/minecraft/unmapped/C_2334768;Z)Lnet/minecraft/unmapped/C_8675191;	m_7854551	bake	
+	m	(Lnet/minecraft/unmapped/C_3696583;Ljava/util/function/Function;Lnet/minecraft/unmapped/C_2334768;Z)Lnet/minecraft/unmapped/C_8675191;	m_7854551	bake	
 		p	1		bakery	
 		p	2		miningSprites	
 		p	3		rotation	
 		p	4		uvLocked	
-	m	(Lnet/minecraft/unmapped/C_6781194;Ljava/util/function/Function;Lnet/minecraft/unmapped/C_4810520;)Lnet/minecraft/unmapped/C_8675191;	m_7854551		bake
+	m	(Lnet/minecraft/unmapped/C_3696583;Ljava/util/function/Function;Lnet/minecraft/unmapped/C_4810520;)Lnet/minecraft/unmapped/C_8675191;	m_7854551		bake
 		p	1			bakery
 		p	2			miningSprites
 		p	3			state
@@ -2531,7 +2531,7 @@ c	net/minecraft/unmapped/C_1166271
 		p	1			p_1
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_3674834
-	m	(Lnet/minecraft/unmapped/C_9550253;Lnet/minecraft/unmapped/C_1630803;Lnet/minecraft/unmapped/C_6385858;Ljava/lang/String;)V	m_0918901	m_0918901	
+	m	(Lnet/minecraft/unmapped/C_9550253;Lnet/minecraft/unmapped/C_1078566;Lnet/minecraft/unmapped/C_6385858;Ljava/lang/String;)V	m_0918901	m_0918901	
 		p	0		p_0	
 		p	1		p_1	
 		p	2		p_2	
@@ -2542,7 +2542,7 @@ c	net/minecraft/unmapped/C_3674834
 	m	(Lnet/minecraft/unmapped/C_9550253;Lnet/minecraft/unmapped/C_9550253;)Lnet/minecraft/unmapped/C_9550253;	m_8417773		m_8417773
 		p	0			p_0
 		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_1630803;Lnet/minecraft/unmapped/C_6385858;Ljava/lang/String;)Ljava/util/stream/Stream;	m_0918901		m_0918901
+	m	(Lnet/minecraft/unmapped/C_1078566;Lnet/minecraft/unmapped/C_6385858;Ljava/lang/String;)Ljava/util/stream/Stream;	m_0918901		m_0918901
 		p	0			p_0
 		p	1			p_1
 		p	2			p_2
@@ -2559,7 +2559,7 @@ c	net/minecraft/client/renderer/system/GLX		net/minecraft/client/renderer/system
 	f	I	f_8287781		GL_FRAMEBUFFER_INCOMPLETE_MISSING_ATTACHMENT
 	f	I	f_3237369		GL_FRAMEBUFFER_INCOMPLETE_DRAW_BUFFER
 	f	I	f_9664749		GL_FRAMEBUFFER_INCOMPLETE_READ_BUFFER
-	f	Lnet/minecraft/client/renderer/system/GLX$C_6669882;	f_2141217		fboMode
+	f	Lnet/minecraft/client/renderer/system/GLX$C_6669882;	f_8172821		fboMode
 	f	Z	f_2643242		useFramebufferObjects
 	f	Z	f_5006814		hasShaders
 	f	Z	f_6168393		useShaderArb
@@ -2862,13 +2862,13 @@ c	net/minecraft/client/renderer/system/GlStateManager		net/minecraft/client/rend
 		p	0			mask
 	m	()V	m_5313301		disableBlend
 	m	()V	m_9671730		enableBlend
-	m	(Lnet/minecraft/client/renderer/system/GlStateManager$C_0114419;Lnet/minecraft/client/renderer/system/GlStateManager$C_0226345;)V	m_5757930		blendFunc
+	m	(Lnet/minecraft/client/renderer/system/GlStateManager$C_8013848;Lnet/minecraft/client/renderer/system/GlStateManager$C_6440302;)V	m_5757930		blendFunc
 		p	0			sfactor
 		p	1			dfactor
 	m	(II)V	m_2076358		blendFunc
 		p	0			sfactor
 		p	1			dfactor
-	m	(Lnet/minecraft/client/renderer/system/GlStateManager$C_0114419;Lnet/minecraft/client/renderer/system/GlStateManager$C_0226345;Lnet/minecraft/client/renderer/system/GlStateManager$C_0114419;Lnet/minecraft/client/renderer/system/GlStateManager$C_0226345;)V	m_2693884		blendFuncSeparate
+	m	(Lnet/minecraft/client/renderer/system/GlStateManager$C_8013848;Lnet/minecraft/client/renderer/system/GlStateManager$C_6440302;Lnet/minecraft/client/renderer/system/GlStateManager$C_8013848;Lnet/minecraft/client/renderer/system/GlStateManager$C_6440302;)V	m_2693884		blendFuncSeparate
 		p	0			sfactorRGB
 		p	1			dfactorRGB
 		p	2			sfactorAlpha
@@ -3086,7 +3086,7 @@ c	net/minecraft/client/renderer/system/GlStateManager		net/minecraft/client/rend
 		p	4			p_4
 	m	(Ljava/nio/FloatBuffer;)V	m_1582721		m_1582721
 		p	0			p_0
-	m	(Lnet/minecraft/unmapped/C_0495439;)V	m_5680893		m_5680893
+	m	(Lnet/minecraft/unmapped/C_0495439;)V	m_2937831		m_2937831
 		p	0			p_0
 	m	(FFFF)V	m_3323122		m_3323122
 		p	0			p_0
@@ -3216,57 +3216,6 @@ c	net/minecraft/client/renderer/system/GlStateManager		net/minecraft/client/rend
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/client/renderer/system/GlStateManager$1241808		1241808
 	f	[I	f_6588363		f_6588363
-	m	()V	<clinit>		<clinit>
-c	net/minecraft/client/renderer/system/GlStateManager$C_0114419		SourceFactor
-	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_0114419;	f_5189583		f_5189583
-	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_0114419;	f_2054210		f_2054210
-	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_0114419;	f_3859295		f_3859295
-	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_0114419;	f_8143117		f_8143117
-	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_0114419;	f_3216457		f_3216457
-	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_0114419;	f_3312318		f_3312318
-	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_0114419;	f_2975607		f_2975607
-	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_0114419;	f_2575193		f_2575193
-	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_0114419;	f_6228007		f_6228007
-	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_0114419;	f_5283159		f_5283159
-	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_0114419;	f_3844407		f_3844407
-	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_0114419;	f_1752625		f_1752625
-	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_0114419;	f_0290823		f_0290823
-	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_0114419;	f_0594138		f_0594138
-	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_0114419;	f_8999057		f_8999057
-	f	I	f_8999640		value
-	f	[Lnet/minecraft/client/renderer/system/GlStateManager$C_0114419;	f_7738643		f_7738643
-	m	()[Lnet/minecraft/client/renderer/system/GlStateManager$C_0114419;	values		values
-	m	(Ljava/lang/String;)Lnet/minecraft/client/renderer/system/GlStateManager$C_0114419;	valueOf		valueOf
-		p	0			p_0
-	m	(Ljava/lang/String;II)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-	m	()V	<clinit>		<clinit>
-c	net/minecraft/client/renderer/system/GlStateManager$C_0226345		DestFactor
-	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_0226345;	f_0402751		f_0402751
-	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_0226345;	f_8856714		f_8856714
-	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_0226345;	f_0237758		f_0237758
-	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_0226345;	f_7684185		f_7684185
-	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_0226345;	f_4318298		f_4318298
-	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_0226345;	f_6910644		f_6910644
-	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_0226345;	f_5639356		f_5639356
-	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_0226345;	f_4026587		f_4026587
-	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_0226345;	f_2501722		f_2501722
-	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_0226345;	f_9515699		f_9515699
-	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_0226345;	f_8207255		f_8207255
-	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_0226345;	f_2898610		f_2898610
-	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_0226345;	f_1566083		f_1566083
-	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_0226345;	f_1370294		f_1370294
-	f	I	f_0115643		value
-	f	[Lnet/minecraft/client/renderer/system/GlStateManager$C_0226345;	f_5603019		f_5603019
-	m	()[Lnet/minecraft/client/renderer/system/GlStateManager$C_0226345;	values		values
-	m	(Ljava/lang/String;)Lnet/minecraft/client/renderer/system/GlStateManager$C_0226345;	valueOf		valueOf
-		p	0			p_0
-	m	(Ljava/lang/String;II)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/client/renderer/system/GlStateManager$C_1230864		PolygonOffset
 	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_8796143;	f_5693239		state
@@ -3463,6 +3412,31 @@ c	net/minecraft/client/renderer/system/GlStateManager$C_6288580		Color
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
+c	net/minecraft/client/renderer/system/GlStateManager$C_6440302		DestFactor
+	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_6440302;	f_7453214		f_7453214
+	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_6440302;	f_6857606		f_6857606
+	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_6440302;	f_6699036		f_6699036
+	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_6440302;	f_1443673		f_1443673
+	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_6440302;	f_1934891		f_1934891
+	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_6440302;	f_7621661		f_7621661
+	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_6440302;	f_3656416		f_3656416
+	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_6440302;	f_0633916		f_0633916
+	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_6440302;	f_4635146		f_4635146
+	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_6440302;	f_9648564		f_9648564
+	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_6440302;	f_8963355		f_8963355
+	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_6440302;	f_2841911		f_2841911
+	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_6440302;	f_0932785		f_0932785
+	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_6440302;	f_8584378		f_8584378
+	f	I	f_7330565		value
+	f	[Lnet/minecraft/client/renderer/system/GlStateManager$C_6440302;	f_8426670		f_8426670
+	m	()[Lnet/minecraft/client/renderer/system/GlStateManager$C_6440302;	values		values
+	m	(Ljava/lang/String;)Lnet/minecraft/client/renderer/system/GlStateManager$C_6440302;	valueOf		valueOf
+		p	0			p_0
+	m	(Ljava/lang/String;II)V	<init>		<init>
+		p	1			p_1
+		p	2			p_2
+		p	3			p_3
+	m	()V	<clinit>		<clinit>
 c	net/minecraft/client/renderer/system/GlStateManager$C_6972436		Clear
 	f	D	f_4844946		f_4844946
 	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_6288580;	f_6858167		f_6858167
@@ -3470,6 +3444,32 @@ c	net/minecraft/client/renderer/system/GlStateManager$C_6972436		Clear
 	m	()V	<init>		<init>
 	m	(Lnet/minecraft/client/renderer/system/GlStateManager$1241808;)V	<init>		<init>
 		p	1			p_1
+c	net/minecraft/client/renderer/system/GlStateManager$C_8013848		SourceFactor
+	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_8013848;	f_8461787		f_8461787
+	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_8013848;	f_6860669		f_6860669
+	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_8013848;	f_8508904		f_8508904
+	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_8013848;	f_0982501		f_0982501
+	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_8013848;	f_2585553		f_2585553
+	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_8013848;	f_0626801		f_0626801
+	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_8013848;	f_9211577		f_9211577
+	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_8013848;	f_8687536		f_8687536
+	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_8013848;	f_6467497		f_6467497
+	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_8013848;	f_6854241		f_6854241
+	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_8013848;	f_5630787		f_5630787
+	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_8013848;	f_3174507		f_3174507
+	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_8013848;	f_2633287		f_2633287
+	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_8013848;	f_7526099		f_7526099
+	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_8013848;	f_4192389		f_4192389
+	f	I	f_1664825		value
+	f	[Lnet/minecraft/client/renderer/system/GlStateManager$C_8013848;	f_2716079		f_2716079
+	m	()[Lnet/minecraft/client/renderer/system/GlStateManager$C_8013848;	values		values
+	m	(Ljava/lang/String;)Lnet/minecraft/client/renderer/system/GlStateManager$C_8013848;	valueOf		valueOf
+		p	0			p_0
+	m	(Ljava/lang/String;II)V	<init>		<init>
+		p	1			p_1
+		p	2			p_2
+		p	3			p_3
+	m	()V	<clinit>		<clinit>
 c	net/minecraft/client/renderer/system/GlStateManager$C_8203323		Stencil
 	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_4491114;	f_2448841		f_2448841
 	f	I	f_7569078		f_7569078
@@ -3518,14 +3518,14 @@ c	net/minecraft/client/renderer/system/GlStateManager$C_9591274		TexGenMode
 		p	2			p_2
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/client/renderer/system/TextureUtil		net/minecraft/client/renderer/system/TextureUtil
-	f	Lorg/apache/logging/log4j/Logger;	f_1555344		f_1555344
+	f	Lorg/apache/logging/log4j/Logger;	f_6453242		f_6453242
 	f	I	f_7110631		f_7110631
 	f	I	f_4739750		f_4739750
 	m	()V	<init>		<init>
-	m	()I	m_0976553		m_0976553
-	m	(I)V	m_7354424		m_7354424
+	m	()I	m_3056191		m_3056191
+	m	(I)V	m_3765285		m_3765285
 		p	0			p_0
-	m	(III)V	m_1974915		m_1974915
+	m	(III)V	m_6605934		m_6605934
 		p	0			p_0
 		p	1			p_1
 		p	2			p_2
@@ -3539,13 +3539,13 @@ c	net/minecraft/client/renderer/system/TextureUtil		net/minecraft/client/rendere
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
-	m	(Lnet/minecraft/unmapped/C_7131921$C_0506307;IIII)V	m_0845837		m_0845837
+	m	(Lnet/minecraft/unmapped/C_7131921$C_0506307;IIII)V	m_0566541		m_0566541
 		p	0			p_0
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
-	m	(I)V	m_3820211		m_3820211
+	m	(I)V	m_1192743		m_1192743
 		p	0			p_0
 	m	(Lnet/minecraft/unmapped/C_6577431;Lnet/minecraft/unmapped/C_0561170;)[I	m_0580133		m_0580133
 		p	0			p_0

@@ -761,16 +761,32 @@ c	net/minecraft/unmapped/C_3906126
 		p	3			z
 c	net/minecraft/unmapped/C_4030632
 	f	Lnet/minecraft/unmapped/C_4030632;	f_7036344	APPLE	
-	f	Lnet/minecraft/unmapped/C_4030632;	f_6650227	GOLDEN_APPLE	COOKED_PORKCHOP
-c	net/minecraft/unmapped/C_4078372	net/minecraft/world/gen/chunk/OverworldChunkGenerator	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_6650227	GOLDEN_APPLE	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_6618759		COOKED_PORKCHOP
+c	net/minecraft/unmapped/C_4078372	net/minecraft/world/gen/chunk/OverworldChunkGenerator	net/minecraft/world/WorldGenerator
 	f	Lnet/minecraft/unmapped/C_6205974;	f_6281590	minLimitPerlinNoise	
 	f	Lnet/minecraft/unmapped/C_6205974;	f_7885619	maxLimitPerlinNoise	
 	f	Lnet/minecraft/unmapped/C_6205974;	f_5435487	perlinNoise1	
-	f	Ljava/util/Random;	f_3952515	brickRandom	
 	f	Lnet/minecraft/unmapped/C_6205974;	f_4682337	f_4682337	
 	f	Lnet/minecraft/unmapped/C_6205974;	f_8421429	f_8421429	
 	f	Lnet/minecraft/unmapped/C_6205974;	f_1600301	f_1600301	
 	f	Ljava/util/Map;	f_9885111	chunks	
+	f	Lnet/minecraft/unmapped/C_2411117;	f_4854350		listener
+	f	I	f_3656430		sizeX
+	f	I	f_0729654		sizeZ
+	f	I	f_3160490		sizeY
+	f	[B	f_5268170		blocks
+	f	I	f_9811652		surroundingWaterHeight
+	f	I	f_7113452		surroundingGroundHeight
+	f	Z	f_8767089		island
+	f	Z	f_1849679		floating
+	f	Z	f_0645994		flat
+	f	I	f_5831401		theme
+	f	I	f_6894446		phase
+	f	I	f_8664228		phaseCount
+	f	F	f_1231443		f_1231443
+	f	[I	f_6516890		f_6516890
+	f	Ljava/util/Random;	f_3952515	brickRandom	random
 	m	(III)I	m_3243526	getBlock	
 		p	1		x	
 		p	2		y	
@@ -786,6 +802,39 @@ c	net/minecraft/unmapped/C_4078372	net/minecraft/world/gen/chunk/OverworldChunkG
 		p	2		chunkZ	
 	m	(Lnet/minecraft/unmapped/C_9392862;)[B	m_8303908	generateChunk	
 		p	1		pos	
+	m	(Lnet/minecraft/unmapped/C_2411117;)V	<init>		<init>
+		p	1			listener
+	m	(Ljava/lang/String;III)Lnet/minecraft/unmapped/C_3906126;	m_3824488		generate
+		p	1			username
+		p	2			sizeX
+		p	3			sizeZ
+		p	4			sizeY
+	m	(Lnet/minecraft/unmapped/C_3906126;)V	m_9836895		placeSpawnBuilding
+		p	0			world
+	m	(Lnet/minecraft/unmapped/C_3906126;)V	m_0638488		placeGrass
+		p	1			world
+	m	(Lnet/minecraft/unmapped/C_3906126;)V	m_5594167		placeTrees
+		p	1			world
+	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_1124552;I)V	m_4779864		placePlant
+		p	1			world
+		p	2			plant
+		p	3			chance
+	m	(IIII)I	m_8354142		placeOre
+		p	1			ore
+		p	2			chance
+		p	3			minY
+		p	4			maxY
+	m	()V	m_6717065		placeLakes
+	m	()V	m_1407652		nextPhase
+	m	(F)V	m_8611747		phaseProgress
+		p	1			progress
+	m	()V	m_0011421		placeUndergroundLakes
+	m	(IIIII)J	m_6366896		placeLake
+		p	1			x
+		p	2			z
+		p	3			y
+		p	4			maxY
+		p	5			liquid
 c	net/minecraft/unmapped/C_4286596
 	m	()I	m_2420174		getEmptySlot
 	m	(Lnet/minecraft/unmapped/C_2750078;)Z	m_3664489		addItem
@@ -1339,7 +1388,7 @@ c	net/minecraft/unmapped/C_3271339
 	m	(Lnet/minecraft/unmapped/C_3906126;)V	m_9659430		m_9659430
 		p	1			p_1
 c	net/minecraft/unmapped/C_3385278
-	m	(Ljava/lang/String;Lnet/minecraft/unmapped/C_3738802;)Lnet/minecraft/unmapped/C_1812290;	m_4173240		addHttpTexture
+	m	(Ljava/lang/String;Lnet/minecraft/unmapped/C_9087319;)Lnet/minecraft/unmapped/C_1812290;	m_4173240		addHttpTexture
 		p	1			url
 		p	2			processor
 	m	(Ljava/lang/String;)V	m_0137573		removeHttpTexture
@@ -1782,20 +1831,27 @@ c	net/minecraft/unmapped/C_5612112
 	m	(Lnet/minecraft/unmapped/C_3906126;Ljava/io/OutputStream;)V	m_1170247		save
 		p	1			world
 		p	2			os
-c	net/minecraft/unmapped/C_5708128	net/minecraft/client/ClientWorldStorage	net/minecraft/unmapped/C_5708128
-	f	Lnet/minecraft/unmapped/C_4561907;	f_1343857		f_1343857
-	f	Lnet/minecraft/unmapped/C_4561907;	f_6356450		f_6356450
-	m	(Lnet/minecraft/client/Minecraft;Lnet/minecraft/unmapped/C_2411117;)V	<init>	<init>	
-		p	1		minecraft	
-		p	2		listener	
-	m	(Lnet/minecraft/unmapped/C_4561907;Lnet/minecraft/unmapped/C_4561907;)V	<init>		<init>
+c	net/minecraft/unmapped/C_5708128
+	f	Lnet/minecraft/client/Minecraft;	f_3249342		minecraft
+	m	(Lnet/minecraft/unmapped/C_3906126;Ljava/lang/String;)Lnet/minecraft/unmapped/C_6385858;	m_4628500		m_4628500
 		p	1			p_1
 		p	2			p_2
-	m	(DD)D	m_7516921		m_7516921
-		p	1			p_1
-		p	3			p_3
-c	net/minecraft/unmapped/C_9087319	net/minecraft/unmapped/C_9087319	
-	m	()V	<init>	<init>	
+c	net/minecraft/unmapped/C_9087319
+	f	[I	f_2409439		data
+	f	I	f_3068049		width
+	f	I	f_0873984		height
+	m	(Ljava/awt/image/BufferedImage;)Ljava/awt/image/BufferedImage;	m_6933932		process
+		p	1			image
+	m	(IIII)V	m_4367110		setTransparent
+		p	1			u1
+		p	2			v1
+		p	3			u2
+		p	4			v2
+	m	(IIII)V	m_4599040		setOpaque
+		p	1			u1
+		p	2			v1
+		p	3			u2
+		p	4			v2
 c	net/minecraft/unmapped/C_9811916
 	f	Ljava/lang/String;	f_2921434		name
 	m	(Ljava/io/DataOutput;)V	m_7031777		write
@@ -1905,6 +1961,15 @@ c	net/minecraft/unmapped/C_1379168		net/minecraft/block/entity/ChestBlockEntity
 	m	(Lnet/minecraft/unmapped/C_2800860;)V	m_8325224		m_8325224
 		p	1			p_1
 	m	()I	m_6204563		m_6204563
+c	net/minecraft/unmapped/C_1405541		net/minecraft/unmapped/C_1405541
+	f	Lnet/minecraft/unmapped/C_4561907;	f_1343857		f_1343857
+	f	Lnet/minecraft/unmapped/C_4561907;	f_6356450		f_6356450
+	m	(Lnet/minecraft/unmapped/C_4561907;Lnet/minecraft/unmapped/C_4561907;)V	<init>		<init>
+		p	1			p_1
+		p	2			p_2
+	m	(DD)D	m_7516921		m_7516921
+		p	1			p_1
+		p	3			p_3
 c	net/minecraft/unmapped/C_1702853		net/minecraft/nbt/NbtEnd
 	m	()V	<init>		<init>
 	m	(Ljava/io/DataInput;)V	m_3656336		m_3656336
@@ -1918,14 +1983,14 @@ c	net/minecraft/unmapped/C_1812290		net/minecraft/client/render/texture/HttpText
 	f	I	f_0708736		requestCount
 	f	I	f_7896602		removedCount
 	f	Z	f_1660532		uploaded
-	m	(Ljava/lang/String;Lnet/minecraft/unmapped/C_3738802;)V	<init>		<init>
+	m	(Ljava/lang/String;Lnet/minecraft/unmapped/C_9087319;)V	<init>		<init>
 		p	1			url
 		p	2			processor
 c	net/minecraft/unmapped/C_1812290$7759597		7759597
 	f	Ljava/lang/String;	f_2566715		f_2566715
-	f	Lnet/minecraft/unmapped/C_3738802;	f_8477267		f_8477267
+	f	Lnet/minecraft/unmapped/C_9087319;	f_8477267		f_8477267
 	f	Lnet/minecraft/unmapped/C_1812290;	f_2701465		f_2701465
-	m	(Lnet/minecraft/unmapped/C_1812290;Ljava/lang/String;Lnet/minecraft/unmapped/C_3738802;)V	<init>		<init>
+	m	(Lnet/minecraft/unmapped/C_1812290;Ljava/lang/String;Lnet/minecraft/unmapped/C_9087319;)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -1952,23 +2017,6 @@ c	net/minecraft/unmapped/C_2805650		net/minecraft/world/ScheduledTick
 		p	2			y
 		p	3			z
 		p	4			block
-c	net/minecraft/unmapped/C_3738802		net/minecraft/client/render/texture/SkinImageProcessor
-	f	[I	f_2409439		data
-	f	I	f_3068049		width
-	f	I	f_0873984		height
-	m	(Ljava/awt/image/BufferedImage;)Ljava/awt/image/BufferedImage;	m_6933932		process
-		p	1			image
-	m	()V	<init>		<init>
-	m	(IIII)V	m_4367110		setTransparent
-		p	1			u1
-		p	2			v1
-		p	3			u2
-		p	4			v2
-	m	(IIII)V	m_4599040		setOpaque
-		p	1			u1
-		p	2			v1
-		p	3			u2
-		p	4			v2
 c	net/minecraft/unmapped/C_3851254		net/minecraft/nbt/NbtList
 	f	Ljava/util/List;	f_4282966		elements
 	f	B	f_1918247		type
@@ -2020,56 +2068,6 @@ c	net/minecraft/unmapped/C_4793608		net/minecraft/client/render/NonCuller
 	m	()V	<init>		<init>
 	m	(Lnet/minecraft/unmapped/C_1414550;)Z	m_2658685		m_2658685
 		p	1			p_1
-c	net/minecraft/unmapped/C_5376418		net/minecraft/world/WorldGenerator
-	f	Lnet/minecraft/unmapped/C_2411117;	f_4854350		listener
-	f	I	f_3656430		sizeX
-	f	I	f_0729654		sizeZ
-	f	I	f_3160490		sizeY
-	f	Ljava/util/Random;	f_3235868		random
-	f	[B	f_5268170		blocks
-	f	I	f_9811652		surroundingWaterHeight
-	f	I	f_7113452		surroundingGroundHeight
-	f	Z	f_8767089		island
-	f	Z	f_1849679		floating
-	f	Z	f_0645994		flat
-	f	I	f_5831401		theme
-	f	I	f_6894446		phase
-	f	I	f_8664228		phaseCount
-	f	F	f_1231443		f_1231443
-	f	[I	f_6516890		f_6516890
-	m	(Lnet/minecraft/unmapped/C_2411117;)V	<init>		<init>
-		p	1			listener
-	m	(Ljava/lang/String;III)Lnet/minecraft/unmapped/C_3906126;	m_3824488		generate
-		p	1			username
-		p	2			sizeX
-		p	3			sizeZ
-		p	4			sizeY
-	m	(Lnet/minecraft/unmapped/C_3906126;)V	m_9836895		placeSpawnBuilding
-		p	0			world
-	m	(Lnet/minecraft/unmapped/C_3906126;)V	m_0638488		placeGrass
-		p	1			world
-	m	(Lnet/minecraft/unmapped/C_3906126;)V	m_5594167		placeTrees
-		p	1			world
-	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_1124552;I)V	m_4779864		placePlant
-		p	1			world
-		p	2			plant
-		p	3			chance
-	m	(IIII)I	m_8354142		placeOre
-		p	1			ore
-		p	2			chance
-		p	3			minY
-		p	4			maxY
-	m	()V	m_6717065		placeLakes
-	m	()V	m_1407652		nextPhase
-	m	(F)V	m_8611747		phaseProgress
-		p	1			progress
-	m	()V	m_0011421		placeUndergroundLakes
-	m	(IIIII)J	m_6366896		placeLake
-		p	1			x
-		p	2			z
-		p	3			y
-		p	4			maxY
-		p	5			liquid
 c	net/minecraft/unmapped/C_6327435		net/minecraft/nbt/NbtInt
 	f	I	f_0046147		value
 	m	()V	<init>		<init>
@@ -2090,14 +2088,6 @@ c	net/minecraft/unmapped/C_6369636		net/minecraft/nbt/NbtDouble
 		p	1			p_1
 	m	()B	m_7876673		m_7876673
 	m	()Ljava/lang/String;	toString		toString
-c	net/minecraft/unmapped/C_6372142		net/minecraft/client/ClientWorldStorage
-	f	Lnet/minecraft/client/Minecraft;	f_3249342		minecraft
-	m	(Lnet/minecraft/client/Minecraft;Lnet/minecraft/unmapped/C_2411117;)V	<init>		<init>
-		p	1			minecraft
-		p	2			listener
-	m	(Lnet/minecraft/unmapped/C_3906126;Ljava/lang/String;)Lnet/minecraft/unmapped/C_6385858;	m_4628500		m_4628500
-		p	1			p_1
-		p	2			p_2
 c	net/minecraft/unmapped/C_7079324		net/minecraft/world/LightEngine
 	f	I	f_1773705		dirtyPositionsRemaining
 	f	Ljava/util/List;	f_4303376		pendingPositions
@@ -2122,7 +2112,7 @@ c	net/minecraft/unmapped/C_7079324		net/minecraft/world/LightEngine
 		c		Array of ositions that are marked dirty, i.e. needing a re-calculation of the light value.\n<p>\nThis array is limited to 2^15 (~32k) positions. If any more needed, this array is added\nto the {@link pendingPositions} queue, and a new array is created. This limits the number\nof light calculations that can happen at once.
 	f	[B	f_6713571		dirtyPositionsData
 		c		This array holds information about whether each position is marked as dirty.\nEach bit is flipped if the corresponding position is marked dirty.\nChecking through this array is much quicker than iterating over the {@link dirtyPositions}\narray to check if a position is present in it.
-	f	Lnet/minecraft/unmapped/C_8401487;	f_4421655		sunLightUpdate
+	f	Lnet/minecraft/unmapped/C_7079324$C_8401487;	f_4421655		sunLightUpdate
 		c		The remaining region that requires light updates after a change in sun light.
 	f	I	f_6635454		prevSunLight
 		c		The sun light value prior to the last change in sun light.
@@ -2159,18 +2149,7 @@ c	net/minecraft/unmapped/C_7079324		net/minecraft/world/LightEngine
 	m	()V	m_4706545		update
 		c		Work through the next batch of light calculations.\n<p>\nFirst, the light engine handles any pending regionChanged updates. These are queued\nafter light values have changed.\n<p>\nIf there is a pending sun light update, that will be handled next. Otherwise, the\nnext pending light update region is marked as dirty. The positions in this region will\nbe queued for light calculations later on in the method.\n<br> Then, the height map will be re-calculated for the next pending height map update\nregion. If the height for any column changes, the entire column will be marked dirty.\n<p>\nThen, the light engine will work through up to 1024 passes over the {@link dirtyPositions}\nand {@link pendingPositions} queues. If the {@link dirtyPositions} queue is empty,\nit will be replaced by the next queue in {@link pendingPositions}.\n<br> For each position in the {@link dirtyPositions} queue, the light value at that\nposition is recalculated based on the sun light, neighboring light values, and the\nopacity and light emission of the block at the position.\n<br> If the light value at the position changed, each of the 6 neighboring positions\nchecks if its light value needs updating, and if so, is marked dirty.\n<p>\nLastly, the region containing all positions where the light value changed is added\nto the {@link regionChangedUpdates} queue.
 	m	()Ljava/lang/String;	m_3359335		getDebugInfo
-c	net/minecraft/unmapped/C_7667301		net/minecraft/nbt/NbtByte
-	f	B	f_7947180		value
-	m	()V	<init>		<init>
-	m	(B)V	<init>		<init>
-		p	1			value
-	m	(Ljava/io/DataOutput;)V	m_7031777		m_7031777
-		p	1			p_1
-	m	(Ljava/io/DataInput;)V	m_3656336		m_3656336
-		p	1			p_1
-	m	()B	m_7876673		m_7876673
-	m	()Ljava/lang/String;	toString		toString
-c	net/minecraft/unmapped/C_8401487		net/minecraft/world/LightUpdate
+c	net/minecraft/unmapped/C_7079324$C_8401487		LightUpdate
 	f	I	f_9889018		minX
 	f	I	f_9201346		minY
 	f	I	f_8633789		minZ
@@ -2185,6 +2164,17 @@ c	net/minecraft/unmapped/C_8401487		net/minecraft/world/LightUpdate
 		p	5			maxX
 		p	6			maxY
 		p	7			maxZ
+c	net/minecraft/unmapped/C_7667301		net/minecraft/nbt/NbtByte
+	f	B	f_7947180		value
+	m	()V	<init>		<init>
+	m	(B)V	<init>		<init>
+		p	1			value
+	m	(Ljava/io/DataOutput;)V	m_7031777		m_7031777
+		p	1			p_1
+	m	(Ljava/io/DataInput;)V	m_3656336		m_3656336
+		p	1			p_1
+	m	()B	m_7876673		m_7876673
+	m	()Ljava/lang/String;	toString		toString
 c	net/minecraft/unmapped/C_9005806		net/minecraft/nbt/NbtFloat
 	f	F	f_0036635		value
 	m	()V	<init>		<init>

@@ -104,13 +104,13 @@ c	net/minecraft/unmapped/C_2286002	net/minecraft/world/chunk/storage/ChunkStorag
 c	net/minecraft/unmapped/C_2627205
 	m	(Lnet/minecraft/unmapped/C_6385858;)Z	m_2380060	collidesWithBorder	
 		p	1		entity	
-	m	(Lnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_1414550;DDD)Ljava/util/stream/Stream;	m_7648319	getCollisions	
+	m	(Lnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_1414550;DDD)Ljava/util/stream/Stream;	m_2984178	getCollisions	
 		p	1		entity	
 		p	2		shape	
 		p	3		dx	
 		p	5		dy	
 		p	7		dz	
-	m	(Lnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_1414550;Ljava/util/Set;DDD)Ljava/util/stream/Stream;	m_2984178	getCollisions	
+	m	(Lnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_1414550;Ljava/util/Set;DDD)Ljava/util/stream/Stream;	m_3348779	getCollisions	
 		p	1		entity	
 		p	2		shape	
 		p	3		excludeEntities	
@@ -629,7 +629,7 @@ c	net/minecraft/unmapped/C_4253713
 	f	Z	f_1141478	saving	
 	f	Lnet/minecraft/unmapped/C_1576074;	f_1696018	legacyStructureData	
 	f	Lcom/mojang/datafixers/DataFixer;	f_5689418	dfu	
-	f	Ljava/util/Map;	f_4074620	chunkSaveQueue	
+	f	Ljava/util/Map;	f_5894598	chunkSaveQueue	
 	m	()V	m_1776271	m_1776271	
 	m	(Lnet/minecraft/unmapped/C_9386942;Lnet/minecraft/unmapped/C_2800860;)V	m_5834548	queueChunkSave	
 		p	1		pos	
@@ -850,7 +850,7 @@ c	net/minecraft/unmapped/C_7255299
 		p	2		p_2	
 c	net/minecraft/unmapped/C_8664891	net/minecraft/world/storage/RegionWorldStorageSource	
 	f	Lorg/apache/logging/log4j/Logger;	f_7871637	LOGGER	
-	f	Ljava/nio/file/Path;	f_5786548	dir	
+	f	Ljava/nio/file/Path;	f_6173714	dir	
 	f	Ljava/nio/file/Path;	f_4425137	backupDir	
 	f	Lcom/mojang/datafixers/DataFixer;	f_5793859	datafixer	
 	m	()Ljava/util/List;	m_0492547	m_0492547	
@@ -1135,6 +1135,11 @@ c	net/minecraft/unmapped/C_7293551
 		p	7			p_7
 		p	8			p_8
 		p	9			p_9
+c	net/minecraft/unmapped/C_8295645
+	f	Lnet/minecraft/unmapped/C_8295645;	f_9954010	POTION	
+	f	Lnet/minecraft/unmapped/C_1033240;	f_9954010		POTION
+	m	(Lnet/minecraft/unmapped/C_0561170;)Ljava/util/Optional;	m_6375686		m_6375686
+		p	1			p_1
 c	net/minecraft/unmapped/C_1028001
 	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_1028001;	m_2745128	byName	
 		p	0		name	
@@ -1326,7 +1331,7 @@ c	net/minecraft/unmapped/C_6989017$C_5615337
 	m	(Lnet/minecraft/unmapped/C_6989017;)Lnet/minecraft/unmapped/C_0561170;	m_6648561		m_6648561
 		p	0			p_0
 c	net/minecraft/unmapped/C_6989017$C_7536438
-	m	(ILjava/util/ArrayDeque;Lnet/minecraft/unmapped/C_3285536;Lnet/minecraft/unmapped/C_1630803;Lnet/minecraft/unmapped/C_6989017;)V	m_5873653		m_5873653
+	m	(ILjava/util/ArrayDeque;Lnet/minecraft/unmapped/C_3285536;Lnet/minecraft/unmapped/C_1078566;Lnet/minecraft/unmapped/C_6989017;)V	m_5873653		m_5873653
 		p	0			p_0
 		p	1			p_1
 		p	2			p_2
@@ -1743,11 +1748,6 @@ c	net/minecraft/unmapped/C_8054043	net/minecraft/world/storage/DimensionDataStor
 	m	(Ljava/lang/String;I)Lnet/minecraft/unmapped/C_2800860;	m_5860852	fixData	
 		p	1		id	
 		p	2		dataVersion	
-c	net/minecraft/unmapped/C_2942281
-	f	Lnet/minecraft/unmapped/C_2942281;	f_9954010	POTION	
-	f	Lnet/minecraft/unmapped/C_1033240;	f_9954010		POTION
-	m	(Lnet/minecraft/unmapped/C_0561170;)Ljava/util/Optional;	m_6375686		m_6375686
-		p	1			p_1
 c	net/minecraft/unmapped/C_2823217
 	m	(Lnet/minecraft/unmapped/C_3635204;)Lnet/minecraft/unmapped/C_3605284$C_7790605;	m_3244914		m_3244914
 		p	0			p_0
@@ -1781,7 +1781,7 @@ c	net/minecraft/unmapped/C_9989529$C_1918787
 c	net/minecraft/unmapped/C_1817720
 	f	Lnet/minecraft/unmapped/C_9900956;	f_9253391		f_9253391
 	f	Lnet/minecraft/unmapped/C_3858757;	f_5826107		f_5826107
-	m	(Lnet/minecraft/unmapped/C_7300213;)Lnet/minecraft/unmapped/C_2441996;	m_7685061		m_7685061
+	m	(Lnet/minecraft/unmapped/C_7300213;)Lnet/minecraft/unmapped/C_2441996;	m_3586843		m_3586843
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_4360192;Lnet/minecraft/unmapped/C_9836145;)Z	m_2543653		m_2543653
 		p	1			p_1
@@ -1986,7 +1986,7 @@ c	net/minecraft/unmapped/C_1043478		net/minecraft/unmapped/C_1043478
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
-	m	(DDI)Z	m_3563586		m_3563586
+	m	(DDI)Z	m_5632085		m_5632085
 		p	1			p_1
 		p	3			p_3
 		p	5			p_5

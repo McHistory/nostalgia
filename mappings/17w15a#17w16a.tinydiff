@@ -84,7 +84,7 @@ c	net/minecraft/unmapped/C_5009044
 		p	1			p_1
 c	net/minecraft/unmapped/C_5027199
 	f	Ljava/util/List;	f_6970422	ALL	
-	f	Ljava/util/Map;	f_7568662		ALL
+	f	Ljava/util/Map;	f_6970422		ALL
 	f	Ljava/util/Map;	f_7443158		CATEGORY_SORT_ORDER
 	m	(Ljava/lang/String;)Ljava/util/function/Supplier;	m_4763628		createNameSupplier
 		p	0			keybind
@@ -702,7 +702,7 @@ c	net/minecraft/unmapped/C_9291783
 		p	1			p_1
 c	net/minecraft/unmapped/C_9291783$C_3391386
 	m	()I	m_8131633	m_8131633	
-	m	()Lnet/minecraft/unmapped/C_9224327$C_7790773;	m_0523334		m_0523334
+	m	()Lnet/minecraft/unmapped/C_9224327$C_7790773;	m_8131633		m_8131633
 c	net/minecraft/unmapped/C_9291783$C_4343115	LookAtTargetGoal	
 	f	Lnet/minecraft/unmapped/C_9291783;	f_1024672	f_1024672	
 	m	(Lnet/minecraft/unmapped/C_9291783;)V	<init>	<init>	
@@ -713,7 +713,7 @@ c	net/minecraft/unmapped/C_9291783$C_4343115	LookAtTargetGoal
 	m	()V	m_4528414	m_4528414	
 c	net/minecraft/unmapped/C_9291783$C_4361219
 	m	()I	m_8131633	m_8131633	
-	m	()Lnet/minecraft/unmapped/C_9224327$C_7790773;	m_0523334		m_0523334
+	m	()Lnet/minecraft/unmapped/C_9224327$C_7790773;	m_8131633		m_8131633
 c	net/minecraft/unmapped/C_9291783$C_5444162	SpellGoal	
 	f	I	f_1733543	spellTimer	
 	f	I	f_2230558	startTime	
@@ -735,7 +735,7 @@ c	net/minecraft/unmapped/C_9291783$C_5444162	SpellGoal
 		p	2		p_2	
 c	net/minecraft/unmapped/C_9291783$C_9253682
 	m	()I	m_8131633	m_8131633	
-	m	()Lnet/minecraft/unmapped/C_9224327$C_7790773;	m_0523334		m_0523334
+	m	()Lnet/minecraft/unmapped/C_9224327$C_7790773;	m_8131633		m_8131633
 c	net/minecraft/unmapped/C_9291783$C_5077296		LookAtSpellTargetGoal
 	f	Lnet/minecraft/unmapped/C_9291783;	f_7631320		f_7631320
 	m	(Lnet/minecraft/unmapped/C_9291783;)V	<init>		<init>
@@ -789,8 +789,6 @@ c	net/minecraft/unmapped/C_8249166
 	f	Ljava/util/regex/Pattern;	f_5897839		LAST_WORD
 c	net/minecraft/unmapped/C_3089894
 	f	Lnet/minecraft/unmapped/C_0561170;	f_4721370	TOASTS_LOCATION	
-	f	[Lnet/minecraft/unmapped/C_3089894$C_4004237;	f_5024484	toasts	
-	f	[Lnet/minecraft/unmapped/C_3089894$C_6750304;	f_5024484		toasts
 	m	(Lnet/minecraft/unmapped/C_1322485;)V	m_7828843	addAdvancement	
 		p	1		advancement	
 	m	(Lnet/minecraft/unmapped/C_3089894$C_4004237;)V	m_5938090	queue	
@@ -821,8 +819,26 @@ c	net/minecraft/unmapped/C_3089894$C_2276250	AbstractToast
 		p	1		p_1	
 		p	2		p_2	
 	m	()V	m_9993408	updateAnimationTime	
-c	net/minecraft/unmapped/C_3089894$C_4004237	ToastInstance	
+c	net/minecraft/unmapped/C_3089894$C_4004237
+	f	Lnet/minecraft/unmapped/C_7476141;	f_0952216		toast
+	f	J	f_6486138		time
+	f	J	f_5018507		visibleTime
+	f	Lnet/minecraft/unmapped/C_7476141$C_3198019;	f_7470135		visibility
+	f	Lnet/minecraft/unmapped/C_3089894;	f_4562184		toasts
 	m	()Z	m_1088833	render	
+	m	(Lnet/minecraft/unmapped/C_3089894;Lnet/minecraft/unmapped/C_7476141;)V	<init>		<init>
+		p	1			p_1
+		p	2			toast
+	m	()Lnet/minecraft/unmapped/C_7476141;	m_3426619		getToast
+	m	(J)F	m_2866074		getVisibility
+		p	1			time
+	m	(II)Z	m_1088833		render
+		p	1			x
+		p	2			y
+	m	(Lnet/minecraft/unmapped/C_3089894;Lnet/minecraft/unmapped/C_7476141;Lnet/minecraft/unmapped/C_3089894$6847806;)V	<init>		<init>
+		p	1			p_1
+		p	2			p_2
+		p	3			p_3
 c	net/minecraft/unmapped/C_3089894$C_8360213	AdvancementToast	
 	f	Lnet/minecraft/unmapped/C_1322485;	f_3422114	advancement	
 	f	Lnet/minecraft/unmapped/C_3089894;	f_5443288	f_5443288	
@@ -869,25 +885,6 @@ c	net/minecraft/unmapped/C_3089894$C_7324572	Type
 		p	1		p_1	
 		p	2		p_2	
 	m	()V	<clinit>	<clinit>	
-c	net/minecraft/unmapped/C_3089894$C_6750304		ToastInstance
-	f	Lnet/minecraft/unmapped/C_7476141;	f_0952216		toast
-	f	J	f_6486138		time
-	f	J	f_5018507		visibleTime
-	f	Lnet/minecraft/unmapped/C_7476141$C_3198019;	f_7470135		visibility
-	f	Lnet/minecraft/unmapped/C_3089894;	f_4562184		toasts
-	m	(Lnet/minecraft/unmapped/C_3089894;Lnet/minecraft/unmapped/C_7476141;)V	<init>		<init>
-		p	1			p_1
-		p	2			toast
-	m	()Lnet/minecraft/unmapped/C_7476141;	m_3426619		getToast
-	m	(J)F	m_2866074		getVisibility
-		p	1			time
-	m	(II)Z	m_4555593		render
-		p	1			x
-		p	2			y
-	m	(Lnet/minecraft/unmapped/C_3089894;Lnet/minecraft/unmapped/C_7476141;Lnet/minecraft/unmapped/C_3089894$6847806;)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
 c	net/minecraft/unmapped/C_0109568		net/minecraft/entity/living/mob/monster/illager/IllagerEntity
 	f	Lnet/minecraft/unmapped/C_6101761;	f_5793809		AGGRESSIVE
 	m	(Lnet/minecraft/unmapped/C_3906126;)V	<init>		<init>
@@ -943,13 +940,40 @@ c	net/minecraft/unmapped/C_1186819		net/minecraft/client/tutorial/Tutorial
 	m	()Lnet/minecraft/client/Minecraft;	m_1272962		getMinecraft
 	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_9550253;	m_9863819		nameKey
 		p	0			key
-c	net/minecraft/unmapped/C_2384544		net/minecraft/client/gui/toast/AdvancementToast
-	f	Lnet/minecraft/unmapped/C_1322485;	f_1237751		advancement
-	m	(Lnet/minecraft/unmapped/C_1322485;)V	<init>		<init>
-		p	1			advancement
-	m	(Lnet/minecraft/unmapped/C_3089894;J)Lnet/minecraft/unmapped/C_7476141$C_3198019;	m_1088833		m_1088833
+c	net/minecraft/unmapped/C_1910882		net/minecraft/client/gui/toast/SystemToast
+	f	Lnet/minecraft/unmapped/C_1910882$C_7324572;	f_2729474		type
+	f	Ljava/lang/String;	f_6190887		title
+	f	Ljava/lang/String;	f_9190072		description
+	f	J	f_7606684		animationTime
+	f	Z	f_6721602		changed
+	m	(Lnet/minecraft/unmapped/C_1910882$C_7324572;Lnet/minecraft/unmapped/C_9550253;Lnet/minecraft/unmapped/C_9550253;)V	<init>		<init>
+		p	1			icon
+		p	2			title
+		p	3			description
+	m	(Lnet/minecraft/unmapped/C_3089894;J)Lnet/minecraft/unmapped/C_7476141$C_3198019;	m_1728821		m_1728821
 		p	1			p_1
 		p	2			p_2
+	m	(Lnet/minecraft/unmapped/C_9550253;Lnet/minecraft/unmapped/C_9550253;)V	m_9292210		reset
+		p	1			title
+		p	2			description
+	m	()Lnet/minecraft/unmapped/C_1910882$C_7324572;	m_1009762		m_1009762
+	m	(Lnet/minecraft/unmapped/C_3089894;Lnet/minecraft/unmapped/C_1910882$C_7324572;Lnet/minecraft/unmapped/C_9550253;Lnet/minecraft/unmapped/C_9550253;)V	m_6306303		addOrUpdate
+		p	0			toasts
+		p	1			type
+		p	2			title
+		p	3			description
+	m	()Ljava/lang/Object;	m_6130998		m_6130998
+c	net/minecraft/unmapped/C_1910882$C_7324572		Type
+	f	Lnet/minecraft/unmapped/C_1910882$C_7324572;	f_3572220		TUTORIAL_HINT
+	f	Lnet/minecraft/unmapped/C_1910882$C_7324572;	f_3087886		NARRATOR_TOGGLE
+	f	[Lnet/minecraft/unmapped/C_1910882$C_7324572;	f_6097045		f_6097045
+	m	()[Lnet/minecraft/unmapped/C_1910882$C_7324572;	values		values
+	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_1910882$C_7324572;	valueOf		valueOf
+		p	0			p_0
+	m	(Ljava/lang/String;I)V	<init>		<init>
+		p	1			p_1
+		p	2			p_2
+	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_4225189		net/minecraft/entity/living/mob/monster/illager/IllusionerEntity
 	f	I	f_7611495		mirrorSpellTimer
 	f	[[Lnet/minecraft/unmapped/C_0336319;	f_0511275		mirrorCopyOffsets
@@ -993,7 +1017,7 @@ c	net/minecraft/unmapped/C_4225189$C_5716870		BlindnessSpellGoal
 	m	()I	m_5527679		m_5527679
 	m	()V	m_9152914		m_9152914
 	m	()Lnet/minecraft/unmapped/C_7721249;	m_2190312		m_2190312
-	m	()Lnet/minecraft/unmapped/C_9224327$C_7790773;	m_0523334		m_0523334
+	m	()Lnet/minecraft/unmapped/C_9224327$C_7790773;	m_8131633		m_8131633
 	m	(Lnet/minecraft/unmapped/C_4225189;Lnet/minecraft/unmapped/C_4225189$4684824;)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
@@ -1006,7 +1030,7 @@ c	net/minecraft/unmapped/C_4225189$C_8977019		DisappearSpellGoal
 	m	()I	m_5527679		m_5527679
 	m	()V	m_9152914		m_9152914
 	m	()Lnet/minecraft/unmapped/C_7721249;	m_2190312		m_2190312
-	m	()Lnet/minecraft/unmapped/C_9224327$C_7790773;	m_0523334		m_0523334
+	m	()Lnet/minecraft/unmapped/C_9224327$C_7790773;	m_8131633		m_8131633
 	m	(Lnet/minecraft/unmapped/C_4225189;Lnet/minecraft/unmapped/C_4225189$4684824;)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
@@ -1088,40 +1112,6 @@ c	net/minecraft/unmapped/C_6204647		net/minecraft/client/tutorial/MovementTutori
 	m	(Lnet/minecraft/unmapped/C_9846877;)V	m_4122203		m_4122203
 		p	1			p_1
 	m	()V	<clinit>		<clinit>
-c	net/minecraft/unmapped/C_6254461		net/minecraft/client/gui/toast/SystemToast
-	f	Lnet/minecraft/unmapped/C_6254461$C_7324572;	f_2891707		type
-	f	Ljava/lang/String;	f_3965633		title
-	f	Ljava/lang/String;	f_7429802		description
-	f	J	f_7606684		animationTime
-	f	Z	f_6721602		changed
-	m	(Lnet/minecraft/unmapped/C_6254461$C_7324572;Lnet/minecraft/unmapped/C_9550253;Lnet/minecraft/unmapped/C_9550253;)V	<init>		<init>
-		p	1			icon
-		p	2			title
-		p	3			description
-	m	(Lnet/minecraft/unmapped/C_3089894;J)Lnet/minecraft/unmapped/C_7476141$C_3198019;	m_1088833		m_1088833
-		p	1			p_1
-		p	2			p_2
-	m	(Lnet/minecraft/unmapped/C_9550253;Lnet/minecraft/unmapped/C_9550253;)V	m_1022864		reset
-		p	1			title
-		p	2			description
-	m	()Lnet/minecraft/unmapped/C_6254461$C_7324572;	m_5812673		m_5812673
-	m	(Lnet/minecraft/unmapped/C_3089894;Lnet/minecraft/unmapped/C_6254461$C_7324572;Lnet/minecraft/unmapped/C_9550253;Lnet/minecraft/unmapped/C_9550253;)V	m_6306303		addOrUpdate
-		p	0			toasts
-		p	1			type
-		p	2			title
-		p	3			description
-	m	()Ljava/lang/Object;	m_6130998		m_6130998
-c	net/minecraft/unmapped/C_6254461$C_7324572		Type
-	f	Lnet/minecraft/unmapped/C_6254461$C_7324572;	f_3572220		TUTORIAL_HINT
-	f	Lnet/minecraft/unmapped/C_6254461$C_7324572;	f_3087886		NARRATOR_TOGGLE
-	f	[Lnet/minecraft/unmapped/C_6254461$C_7324572;	f_6097045		f_6097045
-	m	()[Lnet/minecraft/unmapped/C_6254461$C_7324572;	values		values
-	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_6254461$C_7324572;	valueOf		valueOf
-		p	0			p_0
-	m	(Ljava/lang/String;I)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_6785795		net/minecraft/client/tutorial/OpenInventoryTutorialStep
 	f	Lnet/minecraft/unmapped/C_9550253;	f_6816318		TITLE
 	f	Lnet/minecraft/unmapped/C_9550253;	f_8355971		DESCRIPTION
@@ -1137,7 +1127,7 @@ c	net/minecraft/unmapped/C_6785795		net/minecraft/client/tutorial/OpenInventoryT
 c	net/minecraft/unmapped/C_7476141		net/minecraft/client/gui/toast/Toast
 	f	Lnet/minecraft/unmapped/C_0561170;	f_3137317		TOASTS_LOCATION
 	f	Ljava/lang/Object;	f_6752104		NONE
-	m	(Lnet/minecraft/unmapped/C_3089894;J)Lnet/minecraft/unmapped/C_7476141$C_3198019;	m_1088833		render
+	m	(Lnet/minecraft/unmapped/C_3089894;J)Lnet/minecraft/unmapped/C_7476141$C_3198019;	m_1728821		render
 		p	1			toasts
 		p	2			animationTime
 	m	()Ljava/lang/Object;	m_6130998		getToken
@@ -1208,6 +1198,13 @@ c	net/minecraft/unmapped/C_7975491		net/minecraft/text/KeyBindingText
 	m	(Ljava/lang/String;)Ljava/lang/String;	m_3059256		m_3059256
 		p	0			p_0
 	m	()V	<clinit>		<clinit>
+c	net/minecraft/unmapped/C_8360213		net/minecraft/client/gui/toast/AdvancementToast
+	f	Lnet/minecraft/unmapped/C_1322485;	f_3422114		advancement
+	m	(Lnet/minecraft/unmapped/C_1322485;)V	<init>		<init>
+		p	1			advancement
+	m	(Lnet/minecraft/unmapped/C_3089894;J)Lnet/minecraft/unmapped/C_7476141$C_3198019;	m_1728821		m_1728821
+		p	1			p_1
+		p	2			p_2
 c	net/minecraft/unmapped/C_8543698		net/minecraft/client/gui/toast/TutorialToast
 	f	Lnet/minecraft/unmapped/C_8543698$C_4643665;	f_7731237		icon
 	f	Ljava/lang/String;	f_1934505		title
@@ -1222,7 +1219,7 @@ c	net/minecraft/unmapped/C_8543698		net/minecraft/client/gui/toast/TutorialToast
 		p	2			title
 		p	3			description
 		p	4			hasProgress
-	m	(Lnet/minecraft/unmapped/C_3089894;J)Lnet/minecraft/unmapped/C_7476141$C_3198019;	m_1088833		m_1088833
+	m	(Lnet/minecraft/unmapped/C_3089894;J)Lnet/minecraft/unmapped/C_7476141$C_3198019;	m_1728821		m_1728821
 		p	1			p_1
 		p	2			p_2
 	m	()V	m_9619752		hide
@@ -1334,7 +1331,7 @@ c	net/minecraft/unmapped/C_9155402		net/minecraft/client/gui/toast/RecipeToast
 	f	Z	f_1069364		changed
 	m	(Lnet/minecraft/unmapped/C_2750078;)V	<init>		<init>
 		p	1			icon
-	m	(Lnet/minecraft/unmapped/C_3089894;J)Lnet/minecraft/unmapped/C_7476141$C_3198019;	m_1088833		m_1088833
+	m	(Lnet/minecraft/unmapped/C_3089894;J)Lnet/minecraft/unmapped/C_7476141$C_3198019;	m_1728821		m_1728821
 		p	1			p_1
 		p	2			p_2
 	m	(Lnet/minecraft/unmapped/C_2750078;)V	m_0102036		addIcon
@@ -1387,7 +1384,7 @@ c	net/minecraft/unmapped/C_9224327$C_5444162		SpellGoal
 	m	()I	m_9551094		getSpellTicks
 	m	()I	m_5527679		startTimeDelay
 	m	()Lnet/minecraft/unmapped/C_7721249;	m_2190312		getSoundPrepare
-	m	()Lnet/minecraft/unmapped/C_9224327$C_7790773;	m_0523334		getSpell
+	m	()Lnet/minecraft/unmapped/C_9224327$C_7790773;	m_8131633		getSpell
 c	net/minecraft/unmapped/C_9224327$C_7790773		Spell
 	f	Lnet/minecraft/unmapped/C_9224327$C_7790773;	f_7698643		NONE
 	f	Lnet/minecraft/unmapped/C_9224327$C_7790773;	f_4291284		SUMMON_VEX

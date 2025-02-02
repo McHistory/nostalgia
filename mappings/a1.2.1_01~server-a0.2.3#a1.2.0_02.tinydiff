@@ -90,7 +90,7 @@ c	net/minecraft/unmapped/C_0019534	net/minecraft/server/PlayerManager
 		p	1		player	
 	m	(Lnet/minecraft/unmapped/C_0324512;)V	m_6320223	remove	
 		p	1		player	
-	m	(Lnet/minecraft/unmapped/C_0386427;Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/unmapped/C_0324512;	m_1007200	createForLogin	
+	m	(Lnet/minecraft/unmapped/C_0386427;Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/unmapped/C_0324512;	m_7298898	createForLogin	
 		p	1		networkHandler	
 		p	2		name	
 		p	3		password	
@@ -534,6 +534,15 @@ c	net/minecraft/unmapped/C_3571139	net/minecraft/server/world/chunk/ServerChunkC
 		p	2		p_2	
 	m	()Z	m_1591842	m_1591842	
 	m	()Z	m_2288809	m_2288809	
+c	net/minecraft/unmapped/C_3571139$C_6131076	ChunkPos	
+	f	I	f_3347531	x	
+	f	I	f_3707756	z	
+	m	(II)V	<init>	<init>	
+		p	1		x	
+		p	2		z	
+	m	(Ljava/lang/Object;)Z	equals	equals	
+		p	1		p_1	
+	m	()I	hashCode	hashCode	
 c	net/minecraft/unmapped/C_3837238
 	m	(I)Z	m_1415693	containsKey	
 		p	1		key	
@@ -640,7 +649,7 @@ c	net/minecraft/unmapped/C_7006834	net/minecraft/server/gui/PlayerStatsGui
 	f	[Ljava/lang/String;	f_2116086	lines	
 	m	()V	<init>	<init>	
 	m	()V	m_5567243	update	
-	m	(Ljava/awt/Graphics;)V	m_4715079	paint	
+	m	(Ljava/awt/Graphics;)V	paint	paint	
 		p	1		graphics	
 	m	(Lnet/minecraft/unmapped/C_7006834;)V	m_2060476	update	
 		p	0		statGui	
@@ -797,6 +806,10 @@ c	net/minecraft/unmapped/C_8546801	net/minecraft/server/EntityMap
 	m	(Lnet/minecraft/unmapped/C_6385858;)V	m_3801660	onEntityAdded	
 		c	Called when the given entity is added to the world.	
 		p	1		entity	
+	m	(Lnet/minecraft/unmapped/C_6385858;II)V	m_1065567	startTracking	
+		p	1		entity	
+		p	2		trackingRange	
+		p	3		updateInterval	
 	m	(Lnet/minecraft/unmapped/C_6385858;)V	m_9053164	onEntityRemoved	
 		c	Called when the given entity is removed from the world.	
 		p	1		entity	
@@ -804,10 +817,6 @@ c	net/minecraft/unmapped/C_8546801	net/minecraft/server/EntityMap
 	m	(Lnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_4844124;)V	m_9009727	sendPacket	
 		p	1		entity	
 		p	2		packet	
-	m	(Lnet/minecraft/unmapped/C_6385858;II)V	m_4679752	startTracking	
-		p	1		entity	
-		p	2		trackingRange	
-		p	3		updateInterval	
 c	net/minecraft/unmapped/C_8752044	net/minecraft/server/network/handler/ServerPlayNetworkHandler	
 	f	Ljava/util/logging/Logger;	f_2099216	LOGGER	
 	f	Lnet/minecraft/unmapped/C_2354122;	f_7027179	connection	

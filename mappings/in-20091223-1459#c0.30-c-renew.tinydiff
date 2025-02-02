@@ -510,7 +510,7 @@ c	net/minecraft/unmapped/C_3906126	net/minecraft/world/World
 		p	3		z	
 	m	()V	<clinit>	<clinit>	
 	m	()Lnet/minecraft/unmapped/C_6385858;	m_0519267	getPlayers	
-	m	(Lnet/minecraft/unmapped/C_0336319;Lnet/minecraft/unmapped/C_0336319;)Lnet/minecraft/unmapped/C_5853518;	m_1107910	rayTrace	
+	m	(Lnet/minecraft/unmapped/C_0336319;Lnet/minecraft/unmapped/C_0336319;)Lnet/minecraft/unmapped/C_5853518;	m_9880818	rayTrace	
 		p	1		from	
 		p	2		to	
 	m	()V	<init>	<init>	
@@ -635,6 +635,32 @@ c	net/minecraft/unmapped/C_3906126	net/minecraft/world/World
 		p	2		p_2	
 		p	3		p_3	
 		p	4		p_4	
+c	net/minecraft/unmapped/C_4078372
+	f	I	f_3656430	sizeX	
+	f	I	f_0729654	sizeZ	
+	f	I	f_3160490	sizeY	
+	f	[B	f_5268170	blocks	
+	f	I	f_9811652	surroundingWaterHeight	
+	f	I	f_7275613		f_7275613
+	f	I	f_8175346		f_8175346
+	f	I	f_2316345		f_2316345
+	f	[B	f_8316515		f_8316515
+	f	I	f_2661209		f_2661209
+	m	(IIII)V	m_8354142	placeOre	
+		p	1		p_1	
+		p	2		p_2	
+		p	3		p_3	
+		p	4		p_4	
+	m	(Ljava/lang/String;III)Lcom/mojang/minecraft/level/Level;	m_0447977		m_0447977
+		p	1			p_1
+		p	2			p_2
+		p	3			p_3
+		p	4			p_4
+	m	(IIII)V	m_9667175		m_9667175
+		p	1			p_1
+		p	2			p_2
+		p	3			p_3
+		p	4			p_4
 c	net/minecraft/unmapped/C_4286596	net/minecraft/entity/mob/player/PlayerInventory	
 	f	I	f_2096892	selectedSlot	
 	f	[I	f_3513265	items	
@@ -1182,6 +1208,8 @@ c	net/minecraft/unmapped/C_2621421
 		p	4			p_4
 		p	5			p_5
 		p	6			p_6
+c	net/minecraft/unmapped/C_2751481
+	f	Lnet/minecraft/unmapped/C_3466301;	f_9447755	blockRenderer	
 c	net/minecraft/unmapped/C_2813741
 	f	Lnet/minecraft/unmapped/C_5009044;	f_6258221	camera	
 	f	Lcom/mojang/minecraft/player/Player;	f_6258221		camera
@@ -1220,7 +1248,7 @@ c	net/minecraft/unmapped/C_3271339	net/minecraft/client/SurvivalInteractionManag
 		p	1		p_1	
 	m	()F	m_5235168	m_5235168	
 	m	()V	m_8517616	m_8517616	
-	m	(III)V	m_5386984	m_5386984	
+	m	(III)V	m_1681170	m_1681170	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
@@ -1370,9 +1398,9 @@ c	net/minecraft/unmapped/C_4237166	net/minecraft/client/ClientPlayerInteractionM
 	m	()F	m_5235168	getReach	
 	m	()V	m_8517616	tick	
 	m	()Z	m_4103218	hasStatusBars	
-	m	(Lnet/minecraft/unmapped/C_5009044;)V	m_9683549	adjustPlayer	
+	m	(Lnet/minecraft/unmapped/C_5009044;)V	m_5484011	adjustPlayer	
 		p	1		player	
-	m	(III)V	m_5386984	startMiningBlock	
+	m	(III)V	m_1681170	startMiningBlock	
 		p	1		x	
 		p	2		y	
 		p	3		z	
@@ -1450,7 +1478,7 @@ c	net/minecraft/unmapped/C_4824661
 	f	F	f_9901150		f_9901150
 	f	F	f_6447311		f_6447311
 	f	F	f_3735549		f_3735549
-	m	(F)V	m_5195666	renderWorld	
+	m	(F)V	m_2927621	renderWorld	
 		p	1		tickDelta	
 	m	()V	m_1114865	setupFog	
 	m	(Z)V	m_2557984		m_2557984
@@ -1486,14 +1514,14 @@ c	net/minecraft/unmapped/C_7542541
 	f	Lnet/minecraft/unmapped/C_3466301;	f_6686932	itemRenderer	
 c	net/minecraft/unmapped/C_7564962
 	f	Lnet/minecraft/unmapped/C_1051907;	f_9765119	naturalSpawner	
-	m	(Lnet/minecraft/unmapped/C_5009044;)V	m_9683549	m_9683549	
+	m	(Lnet/minecraft/unmapped/C_5009044;)V	m_5484011	m_5484011	
 		p	1		p_1	
 	m	()V	m_8517616	m_8517616	
 	m	(Lnet/minecraft/unmapped/C_3906126;)V	m_9659430	m_9659430	
 		p	1		p_1	
 	m	(Lcom/mojang/minecraft/level/Level;)V	m_9151419		m_9151419
 		p	1			p_1
-	m	(Lcom/mojang/minecraft/player/Player;)V	m_9683549		m_9683549
+	m	(Lcom/mojang/minecraft/player/Player;)V	m_5484011		m_5484011
 		p	1			p_1
 c	net/minecraft/unmapped/C_8425960
 	m	(Ljava/lang/String;)V	m_1434192		m_1434192
@@ -1562,8 +1590,6 @@ c	net/minecraft/unmapped/C_9856888
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
-c	net/minecraft/unmapped/C_1022696
-	f	Lnet/minecraft/unmapped/C_3466301;	f_4903884	blockRenderer	
 c	net/minecraft/unmapped/C_6542415	net/minecraft/client/gui/ChatMessage	
 	f	I	f_6807072	timeOfCreation	
 c	net/minecraft/unmapped/C_0388903
@@ -1639,32 +1665,6 @@ c	net/minecraft/unmapped/C_1051907
 		p	1			p_1
 		p	2			center
 		p	3			listener
-c	net/minecraft/unmapped/C_5376418
-	f	I	f_3656430	sizeX	
-	f	I	f_0729654	sizeZ	
-	f	I	f_3160490	sizeY	
-	f	[B	f_5268170	blocks	
-	f	I	f_9811652	surroundingWaterHeight	
-	f	I	f_7275613		f_7275613
-	f	I	f_8175346		f_8175346
-	f	I	f_2316345		f_2316345
-	f	[B	f_8316515		f_8316515
-	f	I	f_2661209		f_2661209
-	m	(IIII)V	m_8354142	placeOre	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-	m	(Ljava/lang/String;III)Lcom/mojang/minecraft/level/Level;	m_0447977		m_0447977
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-	m	(IIII)V	m_9667175		m_9667175
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
 c	net/minecraft/unmapped/C_0998176	net/minecraft/entity/mob/ai/BasicMobAi	
 	f	Ljava/util/Random;	f_9850268	random	
 	f	F	f_7459712	sidewaysSpeed	
@@ -1819,7 +1819,7 @@ c	com/mojang/minecraft/Entity		com/mojang/minecraft/Entity
 	m	(F)V	causeFallDamage		causeFallDamage
 		p	1			distance
 	m	()Z	isInWater		isInWater
-	m	()Z	isUnderWater		isUnderwater
+	m	()Z	isUnderWater		isUnderWater
 	m	()Z	isInLava		isInLava
 	m	(FFF)V	moveRelative		moveRelative
 		p	1			sideways
@@ -2942,7 +2942,7 @@ c	net/minecraft/unmapped/C_1655833		net/minecraft/client/ClientPlayerInteraction
 	m	(Lcom/mojang/minecraft/level/Level;)V	m_9869738		spawnMobs
 		p	1			level
 	m	()Z	m_4103218		hasStatusBars
-	m	(Lcom/mojang/minecraft/player/Player;)V	m_9683549		adjustPlayer
+	m	(Lcom/mojang/minecraft/player/Player;)V	m_5484011		adjustPlayer
 		p	1			player
 c	net/minecraft/unmapped/C_1695696		net/minecraft/unmapped/C_1695696
 	f	I	f_5029809		f_5029809

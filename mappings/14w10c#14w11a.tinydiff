@@ -140,7 +140,7 @@ c	net/minecraft/unmapped/C_3906126
 		p	1		type	
 		p	2		bounds	
 		p	3		filter	
-	m	(Lnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_1414550;Lnet/minecraft/unmapped/C_8878495;)Ljava/util/List;	m_1689591	getEntities	
+	m	(Lnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_1414550;Lnet/minecraft/unmapped/C_8878495;)Ljava/util/List;	m_7249452	getEntities	
 		p	1		exclude	
 		p	2		bounds	
 		p	3		filter	
@@ -150,7 +150,7 @@ c	net/minecraft/unmapped/C_3906126
 	m	(Ljava/lang/Class;Lnet/minecraft/unmapped/C_8878495;)Ljava/util/List;	m_0897962	getPlayers	
 		p	1		type	
 		p	2		filter	
-	m	(Lnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_1414550;Lcom/google/common/base/Predicate;)Ljava/util/List;	m_1689591		getEntities
+	m	(Lnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_1414550;Lcom/google/common/base/Predicate;)Ljava/util/List;	m_7249452		getEntities
 		p	1			exclude
 		p	2			bounds
 		p	3			filter
@@ -361,6 +361,38 @@ c	net/minecraft/unmapped/C_3891497
 		p	1			p_1
 		p	2			p_2
 	m	()V	<clinit>		<clinit>
+c	net/minecraft/unmapped/C_1812555
+	f	Lnet/minecraft/unmapped/C_8878495;	f_1121777	targetFilter	
+	f	Lcom/google/common/base/Predicate;	f_1121777		targetFilter
+	m	(Lnet/minecraft/unmapped/C_3419581;Ljava/lang/Class;IZZLnet/minecraft/unmapped/C_8878495;)V	<init>	<init>	
+		p	1		entity	
+		p	2		targetType	
+		p	3		chanceToStartGoal	
+		p	4		checkVisibility	
+		p	5		checkCanNavigate	
+		p	6		targetFilter	
+	m	(Lnet/minecraft/unmapped/C_3419581;Ljava/lang/Class;IZZLcom/google/common/base/Predicate;)V	<init>		<init>
+		p	1			entity
+		p	2			targetType
+		p	3			chanceToStartGoal
+		p	4			checkVisibility
+		p	5			checkCanNavigate
+		p	6			targetFilter
+c	net/minecraft/unmapped/C_1812555$2734921
+	f	Lnet/minecraft/unmapped/C_8878495;	f_5955365	f_5955365	
+	f	Lcom/google/common/base/Predicate;	f_5955365		f_5955365
+	m	(Lnet/minecraft/unmapped/C_1812555;Lnet/minecraft/unmapped/C_8878495;)V	<init>	<init>	
+		p	1		p_1	
+		p	2		p_2	
+	m	(Lnet/minecraft/unmapped/C_6385858;)Z	m_1473293	m_1473293	
+		p	1		p_1	
+	m	(Lnet/minecraft/unmapped/C_1812555;Lcom/google/common/base/Predicate;)V	<init>		<init>
+		p	1			p_1
+		p	2			p_2
+	m	(Lnet/minecraft/unmapped/C_6385858;)Z	m_5260111		m_5260111
+		p	1			p_1
+	m	(Ljava/lang/Object;)Z	apply		apply
+		p	1			p_1
 c	net/minecraft/unmapped/C_0219847
 	m	()V	m_3524319		onTamedChanged
 c	net/minecraft/unmapped/C_0380387
@@ -397,38 +429,6 @@ c	net/minecraft/unmapped/C_0492953$8513396
 	m	(Lnet/minecraft/unmapped/C_6385858;)Z	m_1473293	m_1473293	
 		p	1		p_1	
 	m	(Lnet/minecraft/unmapped/C_6385858;)Z	m_7208190		m_7208190
-		p	1			p_1
-	m	(Ljava/lang/Object;)Z	apply		apply
-		p	1			p_1
-c	net/minecraft/unmapped/C_1812555
-	f	Lnet/minecraft/unmapped/C_8878495;	f_1121777	targetFilter	
-	f	Lcom/google/common/base/Predicate;	f_1121777		targetFilter
-	m	(Lnet/minecraft/unmapped/C_3419581;Ljava/lang/Class;IZZLnet/minecraft/unmapped/C_8878495;)V	<init>	<init>	
-		p	1		entity	
-		p	2		targetType	
-		p	3		chanceToStartGoal	
-		p	4		checkVisibility	
-		p	5		checkCanNavigate	
-		p	6		targetFilter	
-	m	(Lnet/minecraft/unmapped/C_3419581;Ljava/lang/Class;IZZLcom/google/common/base/Predicate;)V	<init>		<init>
-		p	1			entity
-		p	2			targetType
-		p	3			chanceToStartGoal
-		p	4			checkVisibility
-		p	5			checkCanNavigate
-		p	6			targetFilter
-c	net/minecraft/unmapped/C_1812555$2734921
-	f	Lnet/minecraft/unmapped/C_8878495;	f_5955365	f_5955365	
-	f	Lcom/google/common/base/Predicate;	f_5955365		f_5955365
-	m	(Lnet/minecraft/unmapped/C_1812555;Lnet/minecraft/unmapped/C_8878495;)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
-	m	(Lnet/minecraft/unmapped/C_6385858;)Z	m_1473293	m_1473293	
-		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_1812555;Lcom/google/common/base/Predicate;)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-	m	(Lnet/minecraft/unmapped/C_6385858;)Z	m_5260111		m_5260111
 		p	1			p_1
 	m	(Ljava/lang/Object;)Z	apply		apply
 		p	1			p_1
@@ -651,7 +651,7 @@ c	net/minecraft/unmapped/C_5100287$2897779
 	m	(Ljava/lang/Object;)Z	apply		apply
 		p	1			p_1
 c	net/minecraft/unmapped/C_0547482
-c	net/minecraft/unmapped/C_0547482$7451714
+c	net/minecraft/unmapped/C_0547482$1173860
 	m	(Lnet/minecraft/unmapped/C_6385858;)Z	m_1473293	m_1473293	
 		p	1		p_1	
 	m	(Lnet/minecraft/unmapped/C_6385858;)Z	m_8116650		m_8116650
@@ -755,51 +755,51 @@ c	net/minecraft/unmapped/C_6263113	net/minecraft/entity/ChainedEntityFilter
 		p	0		filter1	
 		p	1		filter2	
 		p	2		filters	
-c	net/minecraft/unmapped/C_0107211	net/minecraft/client/render/block/BrewingStandRenderer	
-	m	()V	<init>	<init>	
-	m	(Lnet/minecraft/unmapped/C_3635204;Lnet/minecraft/unmapped/C_6707278;)Z	m_2563994	m_2563994	
-		p	1		p_1	
-		p	2		p_2	
-	m	(Lnet/minecraft/unmapped/C_3891497;Lnet/minecraft/unmapped/C_6707278;)Z	m_7352165	tesselateBrewingStand	
-		p	1		brewingStand	
-		p	2		pos	
-c	net/minecraft/unmapped/C_1414620	net/minecraft/client/render/block/FenceGateRenderer	
-	m	()V	<init>	<init>	
-	m	(Lnet/minecraft/unmapped/C_3635204;Lnet/minecraft/unmapped/C_6707278;)Z	m_2563994	m_2563994	
-		p	1		p_1	
-		p	2		p_2	
-	m	(Lnet/minecraft/unmapped/C_0023955;Lnet/minecraft/unmapped/C_6707278;)Z	m_3349235	tesselateFenceGate	
-		p	1		fenceGate	
-		p	2		pos	
-	m	(Lnet/minecraft/unmapped/C_3635204;IF)V	m_6974549	m_6974549	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-c	net/minecraft/unmapped/C_6150205
+c	net/minecraft/unmapped/C_0650589
 	f	Lcom/google/common/cache/LoadingCache;	f_7884611		skinCache
-	m	(Lcom/mojang/authlib/minecraft/MinecraftProfileTexture;Lcom/mojang/authlib/minecraft/MinecraftProfileTexture$Type;Lnet/minecraft/unmapped/C_6150205$C_1108006;)V	m_0126816	register	
+	m	(Lcom/mojang/authlib/minecraft/MinecraftProfileTexture;Lcom/mojang/authlib/minecraft/MinecraftProfileTexture$Type;Lnet/minecraft/unmapped/C_0650589$C_1108006;)V	m_2042445	register	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
 	m	(Lcom/mojang/authlib/minecraft/MinecraftProfileTexture;Lcom/mojang/authlib/minecraft/MinecraftProfileTexture$Type;)Lnet/minecraft/unmapped/C_0561170;	m_0666335		register
 		p	1			texture
 		p	2			type
-	m	(Lcom/mojang/authlib/minecraft/MinecraftProfileTexture;Lcom/mojang/authlib/minecraft/MinecraftProfileTexture$Type;Lnet/minecraft/unmapped/C_6150205$C_1108006;)Lnet/minecraft/unmapped/C_0561170;	m_0126816		register
+	m	(Lcom/mojang/authlib/minecraft/MinecraftProfileTexture;Lcom/mojang/authlib/minecraft/MinecraftProfileTexture$Type;Lnet/minecraft/unmapped/C_0650589$C_1108006;)Lnet/minecraft/unmapped/C_0561170;	m_2042445		register
 		p	1			texture
 		p	2			type
 		p	3			callback
 	m	(Lcom/mojang/authlib/GameProfile;)Ljava/util/Map;	m_2057870		getTextures
 		p	1			profile
-c	net/minecraft/unmapped/C_6150205$7735257		7735257
-	f	Lnet/minecraft/unmapped/C_6150205;	f_3145149		f_3145149
-	m	(Lnet/minecraft/unmapped/C_6150205;)V	<init>		<init>
+c	net/minecraft/unmapped/C_0650589$7735257		7735257
+	f	Lnet/minecraft/unmapped/C_0650589;	f_3145149		f_3145149
+	m	(Lnet/minecraft/unmapped/C_0650589;)V	<init>		<init>
 		p	1			p_1
 	m	(Lcom/mojang/authlib/GameProfile;)Ljava/util/Map;	m_8804171		m_8804171
 		p	1			p_1
 	m	(Ljava/lang/Object;)Ljava/lang/Object;	load		load
 		p	1			p_1
-c	net/minecraft/unmapped/C_9697997
-c	net/minecraft/unmapped/C_9697997$C_3178688		FenceGateModelProvider
+c	net/minecraft/unmapped/C_3018339	net/minecraft/client/render/block/BrewingStandRenderer	
+	m	()V	<init>	<init>	
+	m	(Lnet/minecraft/unmapped/C_3635204;Lnet/minecraft/unmapped/C_6707278;)Z	m_2563994	m_2563994	
+		p	1		p_1	
+		p	2		p_2	
+	m	(Lnet/minecraft/unmapped/C_3891497;Lnet/minecraft/unmapped/C_6707278;)Z	m_9772065	tesselateBrewingStand	
+		p	1		brewingStand	
+		p	2		pos	
+c	net/minecraft/unmapped/C_5217448	net/minecraft/client/render/block/FenceGateRenderer	
+	m	()V	<init>	<init>	
+	m	(Lnet/minecraft/unmapped/C_3635204;Lnet/minecraft/unmapped/C_6707278;)Z	m_2563994	m_2563994	
+		p	1		p_1	
+		p	2		p_2	
+	m	(Lnet/minecraft/unmapped/C_0023955;Lnet/minecraft/unmapped/C_6707278;)Z	m_4133489	tesselateFenceGate	
+		p	1		fenceGate	
+		p	2		pos	
+	m	(Lnet/minecraft/unmapped/C_3635204;IF)V	m_6974549	m_6974549	
+		p	1		p_1	
+		p	2		p_2	
+		p	3		p_3	
+c	net/minecraft/unmapped/C_7296673
+c	net/minecraft/unmapped/C_7296673$C_3178688		FenceGateModelProvider
 	f	Ljava/util/List;	f_6829721		models
 	m	()V	<init>		<init>
 	m	(Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_6707278;)Lnet/minecraft/unmapped/C_6390485;	m_5784337		m_5784337

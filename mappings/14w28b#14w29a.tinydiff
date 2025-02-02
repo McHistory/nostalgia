@@ -135,7 +135,7 @@ c	net/minecraft/unmapped/C_3466301	net/minecraft/client/render/block/BlockRender
 		p	3		brightness	
 	m	(Lnet/minecraft/unmapped/C_3635204;)V	m_7312222	prepare	
 		p	1		block	
-	m	(Lnet/minecraft/unmapped/C_2627205;)V	m_3534583	setWorld	
+	m	(Lnet/minecraft/unmapped/C_2627205;)V	m_3884632	setWorld	
 		p	1		world	
 	m	(Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_8373595;)Z	m_2563994	tesselateInWorld	
 		p	1		state	
@@ -161,9 +161,9 @@ c	net/minecraft/unmapped/C_3831356
 		p	8		tickDelta	
 	m	(Lnet/minecraft/unmapped/C_2074023;DDDFI)V	m_7825810		render
 		p	1			blockEntity
-		p	2			x
-		p	4			y
-		p	6			z
+		p	2			dx
+		p	4			dy
+		p	6			dz
 		p	8			tickDelta
 		p	9			blockMiningProgress
 	m	()V	<clinit>		<clinit>
@@ -339,31 +339,9 @@ c	net/minecraft/unmapped/C_7261559$3645192	3645192
 c	net/minecraft/unmapped/C_7318150
 	m	()Lnet/minecraft/unmapped/C_2441996;	m_9077732	m_9077732	
 c	net/minecraft/unmapped/C_7366354
-	m	(Lnet/minecraft/unmapped/C_4701530;DDDIDDDD[I)V	m_9889416	addParticle	
-		p	1		type	
-		p	2		x	
-		p	4		y	
-		p	6		z	
-		p	8		count	
-		p	9		velocityX	
-		p	11		velocityY	
-		p	13		velocityZ	
-		p	15		velocityScale	
-		p	17		parameters	
 	m	()Z	m_3629369		shouldSpawnNpcs
 	m	()Z	m_9064050		shouldSpawnAnimals
-	m	(Lnet/minecraft/unmapped/C_4701530;DDDIDDDD[I)V	m_8368623		addParticle
-		p	1			type
-		p	2			x
-		p	4			y
-		p	6			z
-		p	8			count
-		p	9			velocityX
-		p	11			velocityY
-		p	13			velocityZ
-		p	15			velocityScale
-		p	17			parameters
-	m	(Lnet/minecraft/unmapped/C_4701530;ZDDDIDDDD[I)V	m_9889416		addParticle
+	m	(Lnet/minecraft/unmapped/C_4701530;ZDDDIDDDD[I)V	m_9220993		addParticle
 		p	1			type
 		p	2			ignoreDistance
 		p	3			x
@@ -588,7 +566,7 @@ c	net/minecraft/unmapped/C_2947887
 		p	9			p_9
 c	net/minecraft/unmapped/C_8621747
 	m	()Lnet/minecraft/unmapped/C_2441996;	m_9077732	m_9077732	
-	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_2441996;)V	m_7323624		m_7323624
+	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_2441996;)V	m_5709385		m_5709385
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -607,7 +585,7 @@ c	net/minecraft/unmapped/C_5552928
 	m	(I)Lorg/apache/commons/lang3/tuple/ImmutablePair;	m_1912958	getHostBlock	
 		p	0		variant	
 	m	()Lnet/minecraft/unmapped/C_2441996;	m_9077732	m_9077732	
-	m	(Lnet/minecraft/unmapped/C_2441996;)I	m_0848374	getVariant	
+	m	(Lnet/minecraft/unmapped/C_2441996;)I	m_8148066	getVariant	
 		p	0		state	
 c	net/minecraft/unmapped/C_5552928$3633285
 	f	[I	f_8991349	f_8991349	
@@ -1010,8 +988,16 @@ c	net/minecraft/unmapped/C_3273454
 	m	()Lnet/minecraft/unmapped/C_2441996;	m_9077732	m_9077732	
 c	net/minecraft/unmapped/C_8414608
 	m	()Lnet/minecraft/unmapped/C_2441996;	m_9077732	m_9077732	
-c	net/minecraft/unmapped/C_1036880
-	m	(Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_8554894;)F	m_3804482	getLiquidHeight	
+c	net/minecraft/unmapped/C_1475884
+	m	(Lnet/minecraft/unmapped/C_3635204;IF)V	m_6974549	m_6974549	
+		p	1		p_1	
+		p	2		p_2	
+		p	3		p_3	
+	m	(Lnet/minecraft/unmapped/C_3635204;F)V	m_6974549		render
+		p	1			block
+		p	2			brightness
+c	net/minecraft/unmapped/C_4382481
+	m	(Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_8554894;)F	m_7921402	getLiquidHeight	
 		p	1		pos	
 		p	2		material	
 	m	(Lnet/minecraft/unmapped/C_3635204;IF)V	m_6974549	m_6974549	
@@ -1026,30 +1012,22 @@ c	net/minecraft/unmapped/C_1036880
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
-	m	(Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_8373595;)Z	m_4873374	tesselateLiquid	
+	m	(Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_8373595;)Z	m_8082559	tesselateLiquid	
 		p	1		state	
 		p	2		pos	
 		p	3		bufferBuilder	
-	m	(Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_8373595;)Z	m_4873374		render
+	m	(Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_8373595;)Z	m_8082559		render
 		p	1			world
 		p	2			state
 		p	3			pos
 		p	4			bufferBuilder
-	m	(Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_8554894;)F	m_3804482		getLiquidHeight
+	m	(Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_8554894;)F	m_7921402		getLiquidHeight
 		p	1			world
 		p	2			pos
 		p	3			material
-c	net/minecraft/unmapped/C_8271252
-	m	(Lnet/minecraft/unmapped/C_3635204;IF)V	m_6974549	m_6974549	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-	m	(Lnet/minecraft/unmapped/C_3635204;F)V	m_6974549		render
-		p	1			block
-		p	2			brightness
-c	net/minecraft/unmapped/C_9697997
-	f	Ljava/util/List;	f_2726562	renderers	
-	f	Lnet/minecraft/unmapped/C_8271252;	f_6562809		blockEntityRenderer
+c	net/minecraft/unmapped/C_7296673
+	f	Ljava/util/List;	f_5613039	renderers	
+	f	Lnet/minecraft/unmapped/C_1475884;	f_6562809		blockEntityRenderer
 	m	(ILnet/minecraft/unmapped/C_3466301;)V	m_3569738	register	
 		p	1		type	
 		p	2		renderer	
@@ -1058,7 +1036,7 @@ c	net/minecraft/unmapped/C_9697997
 		p	2		metadata	
 		p	3		world	
 		p	4		pos	
-	m	(Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_6707278;)Lnet/minecraft/unmapped/C_3466301;	m_5764987	getRenderer	
+	m	(Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_6707278;)Lnet/minecraft/unmapped/C_3466301;	m_6998111	getRenderer	
 		p	1		state	
 		p	2		world	
 		p	3		pos	
@@ -1066,7 +1044,7 @@ c	net/minecraft/unmapped/C_9697997
 		p	1			block
 		p	2			metadata
 		p	3			pos
-	m	(Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_6707278;)Lnet/minecraft/unmapped/C_8675191;	m_5764987		getModel
+	m	(Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_6707278;)Lnet/minecraft/unmapped/C_8675191;	m_6998111		getModel
 		p	1			state
 		p	2			world
 		p	3			pos
@@ -1223,7 +1201,7 @@ c	net/minecraft/unmapped/C_7184938$C_9932371
 	m	(Lnet/minecraft/unmapped/C_8675191;Lnet/minecraft/unmapped/C_3374628;)V	m_2282737		unculledMiningFaces
 		p	1			model
 		p	2			miningSprite
-	m	(Lnet/minecraft/unmapped/C_7579090;)Lnet/minecraft/unmapped/C_7184938$C_9932371;	m_3782369		unculledFace
+	m	(Lnet/minecraft/unmapped/C_2400640;)Lnet/minecraft/unmapped/C_7184938$C_9932371;	m_3782369		unculledFace
 		p	1			quad
 c	net/minecraft/unmapped/C_2972137
 	m	()Lnet/minecraft/unmapped/C_2441996;	m_9077732	m_9077732	

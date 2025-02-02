@@ -289,6 +289,8 @@ c	net/minecraft/unmapped/C_3906126
 	m	(Lnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_1414550;)Ljava/util/List;	m_1845335	getCollisions	
 		p	1		entity	
 		p	2		shape	
+	m	(Lnet/minecraft/unmapped/C_6385858;)V	m_6712451	updateEntity	
+		p	1		entity	
 	m	(Lnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_6385858;F)Lnet/minecraft/unmapped/C_7641996;	m_7084862	findPath	
 		p	1		entity	
 		p	2		target	
@@ -299,8 +301,6 @@ c	net/minecraft/unmapped/C_3906126
 		p	3		y	
 		p	4		z	
 		p	5		range	
-	m	(Lnet/minecraft/unmapped/C_6385858;)V	m_3502009	updateEntity	
-		p	1		entity	
 	m	(ZLnet/minecraft/unmapped/C_5902900;)V	m_4418114	save	
 		p	1		p_1	
 		p	2		p_2	
@@ -492,23 +492,6 @@ c	net/minecraft/unmapped/C_8125832
 		p	3			p_3
 		p	4			p_4
 		p	5			p_5
-c	net/minecraft/unmapped/C_8135468	net/minecraft/client/CrashException	
-	f	Ljava/lang/Exception;	f_8880657	cause	
-	m	()V	<init>	<init>	
-	m	(Ljava/io/InputStream;)Lnet/minecraft/unmapped/C_2800860;	m_2540889	readCompressed	
-		p	0		is	
-	m	(Lnet/minecraft/unmapped/C_2800860;Ljava/io/OutputStream;)V	m_4670107	writeCompressed	
-		p	0		nbt	
-		p	1		os	
-	m	(Ljava/lang/String;Ljava/lang/Exception;)V	<init>	<init>	
-		p	1		description	
-		p	2		cause	
-	m	([B)Lnet/minecraft/unmapped/C_2800860;	m_8871842	m_8871842	
-		p	0		p_0	
-	m	(Lnet/minecraft/unmapped/C_2800860;)[B	m_2766149	m_2766149	
-		p	0		p_0	
-	m	(Ljava/io/DataInput;)Lnet/minecraft/unmapped/C_2800860;	m_3407981	m_3407981	
-		p	0		p_0	
 c	net/minecraft/unmapped/C_8443484
 	m	(Lnet/minecraft/unmapped/C_2627205;IIII)Z	m_8199947	m_8199947	
 		p	1		p_1	
@@ -554,10 +537,10 @@ c	net/minecraft/unmapped/C_9377562
 		p	1		world	
 		p	2		chunkX	
 		p	3		chunkZ	
-	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6385858;)I	m_2453784	run	
+	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6385858;)I	m_1854971	run	
 		p	1		world	
 		p	2		around	
-	m	(Lnet/minecraft/unmapped/C_3906126;ILnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_5902900;)I	m_2453784		run
+	m	(Lnet/minecraft/unmapped/C_3906126;ILnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_5902900;)I	m_1854971		run
 		p	1			world
 		p	2			p_2
 		p	3			around
@@ -583,9 +566,9 @@ c	net/minecraft/client/Minecraft
 	f	[J	f_4898713	frameTimes	
 	f	I	f_9040180	frameTimeIndex	
 	f	J	f_4786763	timeAfterLastTick	
-	m	()V	m_8779594	renderProfilerChart	
-	m	(Lnet/minecraft/unmapped/C_8135468;)V	m_8906868	handleCrash	
+	m	(Lnet/minecraft/unmapped/C_5269767;)V	m_8906868	handleCrash	
 		p	1		exception	
+	m	()V	m_8779594	renderProfilerChart	
 c	net/minecraft/client/MinecraftApplet
 c	net/minecraft/client/MinecraftApplet$7226165	7226165	
 	f	Lnet/minecraft/client/MinecraftApplet;	f_0922998	f_0922998	
@@ -597,7 +580,7 @@ c	net/minecraft/client/MinecraftApplet$7226165	7226165
 		p	5		p_5	
 		p	6		p_6	
 		p	7		p_7	
-	m	(Lnet/minecraft/unmapped/C_8135468;)V	m_8906868	m_8906868	
+	m	(Lnet/minecraft/unmapped/C_5269767;)V	m_8906868	m_8906868	
 		p	1		p_1	
 c	net/minecraft/unmapped/C_1044273
 	f	I	f_6504228	emptyChunkCount	
@@ -673,7 +656,7 @@ c	net/minecraft/unmapped/C_4643161
 		p	1			title
 		p	2			description
 c	net/minecraft/unmapped/C_5147087	net/minecraft/client/CrashReportPanel	
-	m	(Lnet/minecraft/unmapped/C_8135468;)V	<init>	<init>	
+	m	(Lnet/minecraft/unmapped/C_5269767;)V	<init>	<init>	
 		p	1		report	
 c	net/minecraft/unmapped/C_5147087$C_4977943	LogoCanvas	
 	f	Ljava/awt/image/BufferedImage;	f_7327812	logo	
@@ -683,6 +666,23 @@ c	net/minecraft/unmapped/C_5147087$C_4977943	LogoCanvas
 c	net/minecraft/unmapped/C_5147087$C_7334919	BorderCanvas	
 	m	(I)V	<init>	<init>	
 		p	1		size	
+c	net/minecraft/unmapped/C_5269767	net/minecraft/client/CrashException	
+	f	Ljava/lang/Exception;	f_1347728	cause	
+	m	(Ljava/lang/String;Ljava/lang/Exception;)V	<init>	<init>	
+		p	1		description	
+		p	2		cause	
+	m	()V	<init>	<init>	
+	m	(Ljava/io/InputStream;)Lnet/minecraft/unmapped/C_2800860;	m_1415680	readCompressed	
+		p	0		is	
+	m	(Lnet/minecraft/unmapped/C_2800860;Ljava/io/OutputStream;)V	m_5829329	writeCompressed	
+		p	0		nbt	
+		p	1		os	
+	m	([B)Lnet/minecraft/unmapped/C_2800860;	m_8871842	m_8871842	
+		p	0		p_0	
+	m	(Lnet/minecraft/unmapped/C_2800860;)[B	m_2766149	m_2766149	
+		p	0		p_0	
+	m	(Ljava/io/DataInput;)Lnet/minecraft/unmapped/C_2800860;	m_3407981	m_3407981	
+		p	0		p_0	
 c	net/minecraft/unmapped/C_5283200
 	f	Z	f_8843907	compiled	
 	f	Lnet/minecraft/unmapped/C_3466301;	f_3953567		blockRenderer

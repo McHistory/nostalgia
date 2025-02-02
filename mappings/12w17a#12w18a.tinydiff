@@ -13,10 +13,10 @@ c	net/minecraft/client/Minecraft
 	f	Z	f_9756392		reloadTextures
 	m	(Lnet/minecraft/unmapped/C_3906126;)V	m_3501995	setWorld	
 		p	1		world	
-	m	(Lnet/minecraft/unmapped/C_3906126;Ljava/lang/String;)V	m_5784106	setWorld	
+	m	(Lnet/minecraft/unmapped/C_3906126;Ljava/lang/String;)V	m_5733981	setWorld	
 		p	1		world	
 		p	2		message	
-	m	(Lnet/minecraft/unmapped/C_3906126;Ljava/lang/String;Lnet/minecraft/unmapped/C_5009044;)V	m_5733981	setWorld	
+	m	(Lnet/minecraft/unmapped/C_3906126;Ljava/lang/String;Lnet/minecraft/unmapped/C_5009044;)V	m_2859299	setWorld	
 		p	1		world	
 		p	2		message	
 		p	3		player	
@@ -33,7 +33,7 @@ c	net/minecraft/client/Minecraft
 		p	1		message	
 	m	(I)V	m_6182440	changeDimension	
 		p	1		dimension	
-	m	(ZIZ)V	m_6862388	respawnPlayer	
+	m	(ZIZ)V	m_8218202	respawnPlayer	
 		p	1		worldSpawn	
 		p	2		dimension	
 		p	3		keepInventory	
@@ -54,10 +54,10 @@ c	net/minecraft/client/Minecraft
 		p	2			settings
 	m	(Lnet/minecraft/unmapped/C_8817873;)V	m_3501995		setWorld
 		p	1			world
-	m	(Lnet/minecraft/unmapped/C_8817873;Ljava/lang/String;)V	m_5784106		setWorld
+	m	(Lnet/minecraft/unmapped/C_8817873;Ljava/lang/String;)V	m_5733981		setWorld
 		p	1			world
 		p	2			message
-	m	(Lnet/minecraft/unmapped/C_8817873;Ljava/lang/String;Lnet/minecraft/unmapped/C_5009044;)V	m_5733981		setWorld
+	m	(Lnet/minecraft/unmapped/C_8817873;Ljava/lang/String;Lnet/minecraft/unmapped/C_5009044;)V	m_2859299		setWorld
 		p	1			world
 		p	2			message
 		p	3			player
@@ -320,7 +320,7 @@ c	net/minecraft/unmapped/C_3271339	net/minecraft/client/SurvivalInteractionManag
 		p	2		p_2	
 		p	3		p_3	
 		p	4		p_4	
-	m	(IIII)V	m_5386984	m_5386984	
+	m	(IIII)V	m_1681170	m_1681170	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
@@ -357,7 +357,6 @@ c	net/minecraft/unmapped/C_3906126
 	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_9219192;)V	<init>	<init>	
 		p	1		world	
 		p	2		dimension	
-	m	()V	m_3566975	resetSpawnPoint	
 	m	(Lnet/minecraft/unmapped/C_5009044;)V	m_0762970	loadPlayer	
 		p	1		player	
 	m	(ZLnet/minecraft/unmapped/C_7918626;)V	m_4418114	save	
@@ -397,7 +396,6 @@ c	net/minecraft/unmapped/C_3906126
 		p	5		range	
 	m	()V	m_4453174	placeBonusChest	
 	m	()V	<clinit>	<clinit>	
-	m	()V	m_3766127		resetSpawnPoint
 c	net/minecraft/unmapped/C_4030632
 	m	(Lnet/minecraft/unmapped/C_2750078;)Ljava/lang/String;	m_3229391		getDisplayName
 		p	1			stack
@@ -434,11 +432,6 @@ c	net/minecraft/unmapped/C_4237166
 	f	I	f_4863811		selectedHotbarSlot
 	m	(Lnet/minecraft/client/Minecraft;)V	<init>	<init>	
 		p	1		minecraft	
-	m	(IIII)V	m_5386984	startMiningBlock	
-		p	1		x	
-		p	2		y	
-		p	3		z	
-		p	4		face	
 	m	(Lnet/minecraft/unmapped/C_3906126;)Lnet/minecraft/unmapped/C_5009044;	m_8774636	createPlayer	
 		p	1		world	
 	m	(ILnet/minecraft/unmapped/C_5009044;)V	m_6318085	closeMenu	
@@ -467,11 +460,6 @@ c	net/minecraft/unmapped/C_4237166
 		p	5			face
 	m	(Z)V	m_4850235		setGameMode
 		p	1			isCreative
-	m	(IIII)V	m_1681170		startMiningBlock
-		p	1			x
-		p	2			y
-		p	3			z
-		p	4			face
 	m	()V	m_9607021		updateSelectedHotbarSlot
 	m	(Lnet/minecraft/unmapped/C_3906126;)Lnet/minecraft/unmapped/C_1388208;	m_8774636		createPlayer
 		p	1			world
@@ -535,7 +523,7 @@ c	net/minecraft/unmapped/C_6794191	net/minecraft/client/MultiplayerInteractionMa
 		p	2		p_2	
 		p	3		p_3	
 		p	4		p_4	
-	m	(IIII)V	m_5386984	m_5386984	
+	m	(IIII)V	m_1681170	m_1681170	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
@@ -663,7 +651,7 @@ c	net/minecraft/unmapped/C_7564962	net/minecraft/client/CreativeInteractionManag
 	f	I	f_0630310	miningCooldown	
 	m	(Lnet/minecraft/client/Minecraft;)V	<init>	<init>	
 		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_5009044;)V	m_9683549	m_9683549	
+	m	(Lnet/minecraft/unmapped/C_5009044;)V	m_5484011	m_5484011	
 		p	1		p_1	
 	m	()Z	m_4103218	m_4103218	
 	m	(Lnet/minecraft/unmapped/C_5009044;)V	m_8662838	setCreativeMode	
@@ -685,7 +673,7 @@ c	net/minecraft/unmapped/C_7564962	net/minecraft/client/CreativeInteractionManag
 		p	5		p_5	
 		p	6		p_6	
 		p	7		p_7	
-	m	(IIII)V	m_5386984	m_5386984	
+	m	(IIII)V	m_1681170	m_1681170	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
@@ -755,7 +743,7 @@ c	net/minecraft/unmapped/C_8546801
 		p	1			world
 c	net/minecraft/unmapped/C_8817873	net/minecraft/client/world/MultiplayerWorld	net/minecraft/client/world/ClientWorld
 	f	Lnet/minecraft/client/Minecraft;	f_9084124		minecraft
-	m	()V	m_3566975	m_3566975	
+	m	()V	m_3766127	m_3766127	
 	m	(Z)Z	m_3593710	m_3593710	
 		p	1		p_1	
 	m	(IIIII)V	m_7641576	m_7641576	
@@ -869,7 +857,6 @@ c	net/minecraft/unmapped/C_4179150
 c	net/minecraft/unmapped/C_4473452
 	m	()Ljava/lang/String;	m_3513722	m_3513722	
 	m	(Ljava/lang/String;Z)Lnet/minecraft/unmapped/C_9147018;	m_5678133	get	m_5678133
-		p	1		saveName	p_1
 		p	2		createPlayerDataDir	p_2
 c	net/minecraft/unmapped/C_4507027
 	m	(Lnet/minecraft/unmapped/C_3473914;Ljava/util/List;)V	m_5729738	m_5729738	
@@ -1275,7 +1262,7 @@ c	net/minecraft/unmapped/C_8572978	net/minecraft/world/DemoPlayerInteractionMana
 		p	5		p_5	
 		p	6		p_6	
 	m	()V	m_3635927	sendDemoReminder	
-	m	(IIII)V	m_5386984	m_5386984	
+	m	(IIII)V	m_1681170	m_1681170	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
@@ -1562,25 +1549,25 @@ c	net/minecraft/unmapped/C_5009044
 	m	()Ljava/lang/String;	m_7291241	getSourceName	m_7291241
 c	net/minecraft/unmapped/C_6605607	net/minecraft/world/ScheduledTick	net/minecraft/server/world/ScheduledTick
 c	net/minecraft/unmapped/C_8361473	net/minecraft/world/PortalForcer	net/minecraft/server/world/PortalForcer
+c	net/minecraft/unmapped/C_6015078	net/minecraft/command/handler/CommandHandler	net/minecraft/server/command/handler/CommandHandler
+c	net/minecraft/unmapped/C_0423750	net/minecraft/command/exception/CommandException	net/minecraft/server/command/exception/CommandException
+c	net/minecraft/unmapped/C_0823212	net/minecraft/command/exception/CommandNotFoundException	net/minecraft/server/command/exception/CommandNotFoundException
 c	net/minecraft/unmapped/C_1237929	net/minecraft/command/Command	net/minecraft/server/command/Command
 c	net/minecraft/unmapped/C_1700891	net/minecraft/command/ToggleDownfallCommand	net/minecraft/server/command/ToggleDownfallCommand
+c	net/minecraft/unmapped/C_1858949	net/minecraft/command/exception/InvalidNumberException	net/minecraft/server/command/exception/InvalidNumberException
 c	net/minecraft/unmapped/C_2327948	net/minecraft/command/MeCommand	net/minecraft/server/command/MeCommand
+c	net/minecraft/unmapped/C_3503433	net/minecraft/command/exception/CommandSyntaxException	net/minecraft/server/command/exception/CommandSyntaxException
 c	net/minecraft/unmapped/C_3507951	net/minecraft/command/AbstractCommand	net/minecraft/server/command/AbstractCommand
 c	net/minecraft/unmapped/C_4066358	net/minecraft/command/SayCommand	net/minecraft/server/command/SayCommand
+c	net/minecraft/unmapped/C_5270961	net/minecraft/command/handler/CommandListener	net/minecraft/server/command/handler/CommandListener
 c	net/minecraft/unmapped/C_5365098	net/minecraft/command/ExperienceCommand	net/minecraft/server/command/ExperienceCommand
+c	net/minecraft/unmapped/C_5521225	net/minecraft/command/handler/CommandManager	net/minecraft/server/command/handler/CommandManager
+c	net/minecraft/unmapped/C_7023269	net/minecraft/command/handler/CommandRegistry	net/minecraft/server/command/handler/CommandRegistry
 c	net/minecraft/unmapped/C_8055952	net/minecraft/command/TimeCommand	net/minecraft/server/command/TimeCommand
 c	net/minecraft/unmapped/C_8509539	net/minecraft/command/TpCommand	net/minecraft/server/command/TpCommand
 c	net/minecraft/unmapped/C_9007058	net/minecraft/command/GiveCommand	net/minecraft/server/command/GiveCommand
 c	net/minecraft/unmapped/C_9580631	net/minecraft/command/GameModeCommand	net/minecraft/server/command/GameModeCommand
-c	net/minecraft/unmapped/C_9694875	net/minecraft/command/KillCommand	net/minecraft/server/command/KillCommand
-c	net/minecraft/unmapped/C_7192742	net/minecraft/command/HelpCommand	net/minecraft/server/command/HelpCommand
-c	net/minecraft/unmapped/C_6015078	net/minecraft/command/handler/CommandHandler	net/minecraft/server/command/handler/CommandHandler
-c	net/minecraft/unmapped/C_0423750	net/minecraft/command/exception/CommandException	net/minecraft/server/command/exception/CommandException
-c	net/minecraft/unmapped/C_0823212	net/minecraft/command/exception/CommandNotFoundException	net/minecraft/server/command/exception/CommandNotFoundException
-c	net/minecraft/unmapped/C_1858949	net/minecraft/command/exception/InvalidNumberException	net/minecraft/server/command/exception/InvalidNumberException
-c	net/minecraft/unmapped/C_3503433	net/minecraft/command/exception/CommandSyntaxException	net/minecraft/server/command/exception/CommandSyntaxException
-c	net/minecraft/unmapped/C_5270961	net/minecraft/command/handler/CommandListener	net/minecraft/server/command/handler/CommandListener
-c	net/minecraft/unmapped/C_5521225	net/minecraft/command/handler/CommandManager	net/minecraft/server/command/handler/CommandManager
-c	net/minecraft/unmapped/C_7023269	net/minecraft/command/handler/CommandRegistry	net/minecraft/server/command/handler/CommandRegistry
 c	net/minecraft/unmapped/C_9664956	net/minecraft/command/exception/PlayerNotFoundException	net/minecraft/server/command/exception/PlayerNotFoundException
+c	net/minecraft/unmapped/C_9694875	net/minecraft/command/KillCommand	net/minecraft/server/command/KillCommand
 c	net/minecraft/unmapped/C_3771898	net/minecraft/command/exception/IncorrectUsageException	net/minecraft/server/command/exception/IncorrectUsageException
+c	net/minecraft/unmapped/C_7192742	net/minecraft/command/HelpCommand	net/minecraft/server/command/HelpCommand

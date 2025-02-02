@@ -47,7 +47,7 @@ c	net/minecraft/unmapped/C_5283200
 	f	Z	f_8843907	compiled	
 	f	Ljava/util/List;	f_3957331	renderableBlockEntities	
 	f	Ljava/util/List;	f_1904622	blockEntitiesToBeRendered	
-	f	Lnet/minecraft/unmapped/C_9697997;	f_0543293	blockRenderDispatcher	
+	f	Lnet/minecraft/unmapped/C_7296673;	f_0543293	blockRenderDispatcher	
 	f	Z	f_8856499	empty	
 	f	[Z	f_8171855	layers	
 	f	Ljava/util/concurrent/locks/ReentrantLock;	f_0176851	lock	
@@ -58,27 +58,26 @@ c	net/minecraft/unmapped/C_5283200
 	f	Lnet/minecraft/unmapped/C_0245906;	f_7580783		pendingTask
 	m	(I)I	m_1829228	getGlList	
 		p	1		layer	
-	m	()Z	m_0524223	isEmpty	
 	m	(Lnet/minecraft/unmapped/C_3906126;Ljava/util/List;Lnet/minecraft/unmapped/C_6707278;II)V	<init>	<init>	
 		p	1		world	
 		p	2		blockEntitiesToBeRendered	
 		p	3		origin	
 		p	4		glList	
 		p	5		index	
-	m	(FFFLnet/minecraft/unmapped/C_8093177;)V	m_6673972	compile	
+	m	(FFFLnet/minecraft/unmapped/C_8093177;)V	m_0330444	compile	
 		p	1		cameraX	
 		p	2		cameraY	
 		p	3		cameraZ	
 		p	4		bufferBuilders	
-	m	(Lnet/minecraft/unmapped/C_8373595;)V	m_3148018	beginLayer	
+	m	(Lnet/minecraft/unmapped/C_8373595;)V	m_4591428	beginLayer	
 		p	1		bufferBuilder	
-	m	(Lnet/minecraft/unmapped/C_3333682;FFFLnet/minecraft/unmapped/C_8373595;)V	m_5353001	endLayer	
+	m	(Lnet/minecraft/unmapped/C_3333682;FFFLnet/minecraft/unmapped/C_8373595;)V	m_8781874	endLayer	
 		p	1		layer	
 		p	2		cameraX	
 		p	3		cameraY	
 		p	4		cameraZ	
 		p	5		bufferBuilder	
-	m	(FFFLnet/minecraft/unmapped/C_8373595;)V	m_8519042	rebuildTranslucent	
+	m	(FFFLnet/minecraft/unmapped/C_8373595;)V	m_4304248	rebuildTranslucent	
 		p	1		cameraX	
 		p	2		cameraY	
 		p	3		cameraZ	
@@ -94,12 +93,12 @@ c	net/minecraft/unmapped/C_5283200
 		p	3			pos
 		p	4			glList
 		p	5			index
-	m	(FFFLnet/minecraft/unmapped/C_0245906;)V	m_8519042		rebuildTranslucent
+	m	(FFFLnet/minecraft/unmapped/C_0245906;)V	m_4304248		rebuildTranslucent
 		p	1			cameraX
 		p	2			cameraY
 		p	3			cameraZ
 		p	4			task
-	m	(FFFLnet/minecraft/unmapped/C_0245906;)V	m_6673972		compile
+	m	(FFFLnet/minecraft/unmapped/C_0245906;)V	m_0330444		compile
 		p	1			cameraX
 		p	2			cameraY
 		p	3			cameraZ
@@ -108,10 +107,10 @@ c	net/minecraft/unmapped/C_5283200
 	m	()Ljava/util/concurrent/locks/ReentrantLock;	m_6366257		getTaskLock
 	m	()Lnet/minecraft/unmapped/C_0245906;	m_2815220		startCompile
 	m	()Lnet/minecraft/unmapped/C_0245906;	m_2472432		startResortTransparency
-	m	(Lnet/minecraft/unmapped/C_8373595;Lnet/minecraft/unmapped/C_6707278;)V	m_3148018		beginLayer
+	m	(Lnet/minecraft/unmapped/C_8373595;Lnet/minecraft/unmapped/C_6707278;)V	m_4591428		beginLayer
 		p	1			bufferBuilder
 		p	2			offset
-	m	(Lnet/minecraft/unmapped/C_3333682;FFFLnet/minecraft/unmapped/C_8373595;Lnet/minecraft/unmapped/C_2326439;)V	m_5353001		endLayer
+	m	(Lnet/minecraft/unmapped/C_3333682;FFFLnet/minecraft/unmapped/C_8373595;Lnet/minecraft/unmapped/C_2326439;)V	m_8781874		endLayer
 		p	1			layer
 		p	2			cameraX
 		p	3			cameraY
@@ -124,7 +123,6 @@ c	net/minecraft/unmapped/C_5283200
 	m	(Lnet/minecraft/unmapped/C_3333682;Lnet/minecraft/unmapped/C_2326439;)I	m_1829228		getGlList
 		p	1			layer
 		p	2			compiled
-	m	()Z	m_8263433		isEmpty
 c	net/minecraft/unmapped/C_6385858
 	m	(Lnet/minecraft/unmapped/C_6385858;)V	m_6441534		copyCommandResults
 		p	1			entity

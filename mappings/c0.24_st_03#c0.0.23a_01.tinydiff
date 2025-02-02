@@ -84,6 +84,15 @@ c	net/minecraft/unmapped/C_3635204
 		p	3			p_3
 		p	4			p_4
 		p	5			p_5
+c	net/minecraft/unmapped/C_4078372
+	f	I	f_2661209	f_2661209	
+	m	(Lcom/mojang/minecraft/level/Level;[I)V	m_5249159	m_5249159	
+		p	1		p_1	
+		p	2		p_2	
+	m	([I)V	m_2640230	m_2640230	
+		p	1		p_1	
+	m	(Lcom/mojang/minecraft/level/Level;)V	m_7001967	m_7001967	
+		p	1		p_1	
 c	net/minecraft/unmapped/C_4558465
 	m	()Z	m_1538589	m_1538589	
 	m	(Lcom/mojang/minecraft/level/Level;III)V	m_6201869	m_6201869	
@@ -141,7 +150,7 @@ c	net/minecraft/client/Minecraft
 	f	Lnet/minecraft/unmapped/C_1655833;	f_7165322	interactionManager	
 	f	Lcom/mojang/minecraft/MinecraftApplet;	f_3801925	f_3801925	
 	f	I	f_0440810		f_0440810
-	f	Lnet/minecraft/unmapped/C_5376418;	f_0254108		f_0254108
+	f	Lnet/minecraft/unmapped/C_4078372;	f_0254108		f_0254108
 	f	Lnet/minecraft/unmapped/C_7898033;	f_3067732		f_3067732
 	m	(I)V	m_5678101	handleMouseClick	
 		p	1		button	
@@ -214,6 +223,15 @@ c	net/minecraft/unmapped/C_2334550
 c	net/minecraft/unmapped/C_2454294
 	m	(Lcom/mojang/minecraft/particle/Particle;)V	m_6487687	m_6487687	
 		p	1		p_1	
+c	net/minecraft/unmapped/C_2751481	net/minecraft/client/render/ItemInHandRenderer	
+	f	Lnet/minecraft/client/Minecraft;	f_1515651	minecraft	
+	f	F	f_4282606	handHeight	
+	f	F	f_2262411	lastHandHeight	
+	f	I	f_0295170	swingArmTicks	
+	f	Z	f_2139208	swingArm	
+	f	Lnet/minecraft/unmapped/C_3635204;	f_0997266	itemInHand	
+	m	(Lnet/minecraft/client/Minecraft;)V	<init>	<init>	
+		p	1		minecraft	
 c	net/minecraft/unmapped/C_3239917	net/minecraft/client/render/model/Model	
 	f	F	f_1553858	f_1553858	
 	m	()V	<init>	<init>	
@@ -285,7 +303,7 @@ c	net/minecraft/unmapped/C_4590573	net/minecraft/client/render/model/entity/Huma
 		p	5		p_5	
 		p	6		p_6	
 c	net/minecraft/unmapped/C_4824661
-	f	Lnet/minecraft/unmapped/C_1022696;	f_1035939	itemInHandRenderer	
+	f	Lnet/minecraft/unmapped/C_2751481;	f_1035939	itemInHandRenderer	
 	m	(F)V	m_3843665	applyHurtCam	
 		p	1		tickDelta	
 	m	(F)V	m_3610985	applyViewBobbing	
@@ -309,24 +327,6 @@ c	net/minecraft/unmapped/C_7688744
 	f	Z	f_4447879	anaglyph	
 	f	Lnet/minecraft/client/Minecraft;	f_1112220	minecraft	
 	f	Z	f_7745395	f_7745395	
-c	net/minecraft/unmapped/C_1022696	net/minecraft/client/render/ItemInHandRenderer	
-	f	Lnet/minecraft/client/Minecraft;	f_0306817	minecraft	
-	f	F	f_2034266	handHeight	
-	f	F	f_7047398	lastHandHeight	
-	f	I	f_2636934	attackingTicks	
-	f	Z	f_6876447	attacking	
-	f	Lnet/minecraft/unmapped/C_3635204;	f_8566506	item	
-	m	(Lnet/minecraft/client/Minecraft;)V	<init>	<init>	
-		p	1		minecraft	
-c	net/minecraft/unmapped/C_5376418
-	f	I	f_2661209	f_2661209	
-	m	(Lcom/mojang/minecraft/level/Level;[I)V	m_5249159	m_5249159	
-		p	1		p_1	
-		p	2		p_2	
-	m	([I)V	m_2640230	m_2640230	
-		p	1		p_1	
-	m	(Lcom/mojang/minecraft/level/Level;)V	m_7001967	m_7001967	
-		p	1		p_1	
 c	net/minecraft/unmapped/C_8199124
 	m	(FFFFFF)Z	m_0617681	m_0617681	
 		p	1		p_1	
@@ -347,7 +347,7 @@ c	com/mojang/minecraft/Entity
 	f	Lnet/minecraft/unmapped/C_5343712;	blockMap	blockMap	
 	m	(F)V	causeFallDamage	causeFallDamage	
 		p	1		distance	
-	m	()Z	isUnderWater	isUnderwater	
+	m	()Z	isUnderWater	isUnderWater	
 	m	(F)F	getBrightness	getBrightness	
 		p	1		p_1	
 	m	(Lcom/mojang/minecraft/Entity;)F	distanceToSqr	distanceToSqr	

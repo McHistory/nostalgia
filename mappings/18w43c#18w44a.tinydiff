@@ -71,8 +71,8 @@ c	net/minecraft/unmapped/C_1013763
 	m	(ZI)V	m_5891931	dropItems	
 		p	1		loot	
 		p	2		lootingMultiplier	
-	m	(ZI)V	m_1749276	dropEquipment	
-		p	1		hasBeenHit	
+	m	(ZI)V	m_3954997	dropEquipment	
+		p	1		hitByPlayer	
 		p	2		lootingLevel	
 	m	(ZILnet/minecraft/unmapped/C_6907923;)V	m_4681282	dropItemsFromLootTable	
 		p	1		player	
@@ -85,7 +85,7 @@ c	net/minecraft/unmapped/C_1013763
 	m	(Lnet/minecraft/unmapped/C_6907923;)V	m_6911118		m_6911118
 		p	1			p_1
 	m	()V	m_6848449		m_6848449
-	m	(Lnet/minecraft/unmapped/C_6907923;IZ)V	m_1749276		dropEquipment
+	m	(Lnet/minecraft/unmapped/C_6907923;IZ)V	m_3954997		dropEquipment
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -139,7 +139,7 @@ c	net/minecraft/unmapped/C_1196485
 c	net/minecraft/unmapped/C_1826831
 	m	(Lnet/minecraft/unmapped/C_6907923;)V	m_4650833	m_4650833	
 		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_6907923;IZ)V	m_1749276		m_1749276
+	m	(Lnet/minecraft/unmapped/C_6907923;IZ)V	m_3954997		m_3954997
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -555,7 +555,7 @@ c	net/minecraft/unmapped/C_8215726
 c	net/minecraft/unmapped/C_8345828
 	m	(Lnet/minecraft/unmapped/C_6907923;)V	m_4650833	m_4650833	
 		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_6907923;IZ)V	m_1749276		m_1749276
+	m	(Lnet/minecraft/unmapped/C_6907923;IZ)V	m_3954997		m_3954997
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -611,10 +611,10 @@ c	net/minecraft/unmapped/C_0956869
 		p	2		p_2	
 		p	3		p_3	
 c	net/minecraft/unmapped/C_1481722
-	m	(ZI)V	m_1749276	m_1749276	
+	m	(ZI)V	m_3954997	m_3954997	
 		p	1		p_1	
 		p	2		p_2	
-	m	(Lnet/minecraft/unmapped/C_6907923;IZ)V	m_1749276		m_1749276
+	m	(Lnet/minecraft/unmapped/C_6907923;IZ)V	m_3954997		m_3954997
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -816,7 +816,7 @@ c	net/minecraft/unmapped/C_1444189
 		p	1		p_1	
 		p	2		p_2	
 	m	()Lnet/minecraft/unmapped/C_0561170;	m_3514816		m_3514816
-	m	(Lnet/minecraft/unmapped/C_6907923;IZ)V	m_1749276		m_1749276
+	m	(Lnet/minecraft/unmapped/C_6907923;IZ)V	m_3954997		m_3954997
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -828,7 +828,7 @@ c	net/minecraft/unmapped/C_2587956
 	m	(ZI)V	m_5891931	m_5891931	
 		p	1		p_1	
 		p	2		p_2	
-	m	(ZI)V	m_1749276	m_1749276	
+	m	(ZI)V	m_3954997	m_3954997	
 		p	1		p_1	
 		p	2		p_2	
 	m	()Lnet/minecraft/unmapped/C_4030632;	m_2225185	getDefaultDropLoot	
@@ -842,7 +842,7 @@ c	net/minecraft/unmapped/C_2587956
 	m	(ZLnet/minecraft/unmapped/C_6907923;)Lnet/minecraft/unmapped/C_7630919$C_2187393;	m_6728527		m_6728527
 		p	1			p_1
 		p	2			p_2
-	m	(Lnet/minecraft/unmapped/C_6907923;IZ)V	m_1749276		m_1749276
+	m	(Lnet/minecraft/unmapped/C_6907923;IZ)V	m_3954997		m_3954997
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -1059,7 +1059,7 @@ c	net/minecraft/unmapped/C_4879372
 		p	2		pos	
 		p	3		settings	
 		p	4		flags	
-	m	(Lnet/minecraft/unmapped/C_9844932;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_5660241;Lnet/minecraft/unmapped/C_5517808;I)Z	m_6393844	place	
+	m	(Lnet/minecraft/unmapped/C_9844932;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_5660241;Lnet/minecraft/unmapped/C_5517808;I)Z	m_0824970	place	
 		p	1		world	
 		p	2		pos	
 		p	3		processor	
@@ -1069,7 +1069,7 @@ c	net/minecraft/unmapped/C_4879372
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
-	m	(Lnet/minecraft/unmapped/C_9844932;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_5517808;I)Z	m_6393844		place
+	m	(Lnet/minecraft/unmapped/C_9844932;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_5517808;I)Z	m_0824970		place
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -1155,6 +1155,12 @@ c	net/minecraft/unmapped/C_5863756
 		p	4		p_4	
 		p	5		p_5	
 		p	6		p_6	
+c	net/minecraft/unmapped/C_7171701	net/minecraft/client/render/platform/PngInfo	com/mojang/blaze3d/platform/PngInfo
+	m	(Lnet/minecraft/unmapped/C_1676943;)V	<init>	<init>	
+		p	1		resource	
+	m	(Ljava/lang/String;Ljava/io/InputStream;)V	<init>		<init>
+		p	1			p_1
+		p	2			p_2
 c	net/minecraft/unmapped/C_8452767
 	f	Lnet/minecraft/unmapped/C_0561170;	f_8110686		f_8110686
 	f	Lnet/minecraft/unmapped/C_0561170;	f_3326637		f_3326637
@@ -1224,14 +1230,14 @@ c	net/minecraft/unmapped/C_6562519
 c	net/minecraft/unmapped/C_7149293
 	m	(Lnet/minecraft/unmapped/C_6907923;)V	m_4650833	m_4650833	
 		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_6907923;IZ)V	m_1749276		m_1749276
+	m	(Lnet/minecraft/unmapped/C_6907923;IZ)V	m_3954997		m_3954997
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 c	net/minecraft/unmapped/C_7956549
 	m	(Lnet/minecraft/unmapped/C_6907923;)V	m_4650833	m_4650833	
 		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_6907923;IZ)V	m_1749276		m_1749276
+	m	(Lnet/minecraft/unmapped/C_6907923;IZ)V	m_3954997		m_3954997
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -1374,12 +1380,6 @@ c	net/minecraft/unmapped/C_7719787
 		p	0			p_0
 		p	1			p_1
 		p	3			p_3
-c	net/minecraft/unmapped/C_8215809	net/minecraft/client/render/platform/PngInfo	com/mojang/blaze3d/platform/PngInfo
-	m	(Lnet/minecraft/unmapped/C_1676943;)V	<init>	<init>	
-		p	1		resource	
-	m	(Ljava/lang/String;Ljava/io/InputStream;)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
 c	net/minecraft/unmapped/C_8881785	net/minecraft/client/render/platform/InputConstants	com/mojang/blaze3d/platform/InputConstants
 	m	(I)Z	m_3545877	getKey	
 		p	0		value	
@@ -2056,11 +2056,11 @@ c	net/minecraft/unmapped/C_1166271
 	m	(Lnet/minecraft/unmapped/C_3571139;)Z	m_4302175		m_4302175
 		p	1			p_1
 c	net/minecraft/unmapped/C_3122043
-	m	(Lnet/minecraft/unmapped/C_1630803;Ljava/util/List;I)V	m_6178821	m_6178821	
+	m	(Lnet/minecraft/unmapped/C_1078566;Ljava/util/List;I)V	m_6178821	m_6178821	
 		p	0		p_0	
 		p	1		p_1	
 		p	2		p_2	
-	m	(Lnet/minecraft/unmapped/C_1630803;Ljava/util/List;ILnet/minecraft/unmapped/C_0561170;)V	m_3681945	m_3681945	
+	m	(Lnet/minecraft/unmapped/C_1078566;Ljava/util/List;ILnet/minecraft/unmapped/C_0561170;)V	m_3681945	m_3681945	
 		p	0		p_0	
 		p	1		p_1	
 		p	2		p_2	
@@ -2069,16 +2069,16 @@ c	net/minecraft/unmapped/C_3122043
 		p	0		p_0	
 		p	1		p_1	
 		p	2		p_2	
-	m	(Lnet/minecraft/unmapped/C_1630803;Ljava/util/List;I)V	m_4288171	m_4288171	
+	m	(Lnet/minecraft/unmapped/C_1078566;Ljava/util/List;I)V	m_4288171	m_4288171	
 		p	0		p_0	
 		p	1		p_1	
 		p	2		p_2	
-	m	(Lnet/minecraft/unmapped/C_1630803;Ljava/util/List;Lnet/minecraft/unmapped/C_0561170;I)V	m_6526206	m_6526206	
+	m	(Lnet/minecraft/unmapped/C_1078566;Ljava/util/List;Lnet/minecraft/unmapped/C_0561170;I)V	m_6526206	m_6526206	
 		p	0		p_0	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
-	m	(Lnet/minecraft/unmapped/C_1630803;Ljava/util/List;Lnet/minecraft/unmapped/C_2441996;I)V	m_6088544	m_6088544	
+	m	(Lnet/minecraft/unmapped/C_1078566;Ljava/util/List;Lnet/minecraft/unmapped/C_2441996;I)V	m_6088544	m_6088544	
 		p	0		p_0	
 		p	1		p_1	
 		p	2		p_2	
@@ -2092,21 +2092,21 @@ c	net/minecraft/unmapped/C_3122043
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
-	m	(Lnet/minecraft/unmapped/C_1630803;Ljava/util/List;)V	m_6178821		m_6178821
+	m	(Lnet/minecraft/unmapped/C_1078566;Ljava/util/List;)V	m_6178821		m_6178821
 		p	0			p_0
 		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_1630803;Ljava/util/List;Lnet/minecraft/unmapped/C_0561170;)V	m_3681945		m_3681945
-		p	0			p_0
-		p	1			p_1
-		p	2			p_2
-	m	(Lnet/minecraft/unmapped/C_1630803;Ljava/util/List;)V	m_4288171		m_4288171
-		p	0			p_0
-		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_1630803;Lnet/minecraft/unmapped/C_0561170;Ljava/util/List;)V	m_6526206		m_6526206
+	m	(Lnet/minecraft/unmapped/C_1078566;Ljava/util/List;Lnet/minecraft/unmapped/C_0561170;)V	m_3681945		m_3681945
 		p	0			p_0
 		p	1			p_1
 		p	2			p_2
-	m	(Lnet/minecraft/unmapped/C_1630803;Lnet/minecraft/unmapped/C_2441996;Ljava/util/List;)V	m_6088544		m_6088544
+	m	(Lnet/minecraft/unmapped/C_1078566;Ljava/util/List;)V	m_4288171		m_4288171
+		p	0			p_0
+		p	1			p_1
+	m	(Lnet/minecraft/unmapped/C_1078566;Lnet/minecraft/unmapped/C_0561170;Ljava/util/List;)V	m_6526206		m_6526206
+		p	0			p_0
+		p	1			p_1
+		p	2			p_2
+	m	(Lnet/minecraft/unmapped/C_1078566;Lnet/minecraft/unmapped/C_2441996;Ljava/util/List;)V	m_6088544		m_6088544
 		p	0			p_0
 		p	1			p_1
 		p	2			p_2
@@ -2255,7 +2255,7 @@ c	net/minecraft/client/renderer/system/GLX	net/minecraft/client/renderer/system/
 	f	I	f_8287781	GL_FRAMEBUFFER_INCOMPLETE_MISSING_ATTACHMENT	
 	f	I	f_3237369	GL_FRAMEBUFFER_INCOMPLETE_DRAW_BUFFER	
 	f	I	f_9664749	GL_FRAMEBUFFER_INCOMPLETE_READ_BUFFER	
-	f	Lnet/minecraft/client/renderer/system/GLX$C_6669882;	f_2141217	fboMode	
+	f	Lnet/minecraft/client/renderer/system/GLX$C_6669882;	f_8172821	fboMode	
 	f	Z	f_2643242	useFramebufferObjects	
 	f	Z	f_5006814	hasShaders	
 	f	Z	f_6168393	useShaderArb	
@@ -2558,13 +2558,13 @@ c	net/minecraft/client/renderer/system/GlStateManager	net/minecraft/client/rende
 		p	0		mask	
 	m	()V	m_5313301	disableBlend	
 	m	()V	m_9671730	enableBlend	
-	m	(Lnet/minecraft/client/renderer/system/GlStateManager$C_0114419;Lnet/minecraft/client/renderer/system/GlStateManager$C_0226345;)V	m_5757930	blendFunc	
+	m	(Lnet/minecraft/client/renderer/system/GlStateManager$C_8013848;Lnet/minecraft/client/renderer/system/GlStateManager$C_6440302;)V	m_5757930	blendFunc	
 		p	0		sfactor	
 		p	1		dfactor	
 	m	(II)V	m_2076358	blendFunc	
 		p	0		sfactor	
 		p	1		dfactor	
-	m	(Lnet/minecraft/client/renderer/system/GlStateManager$C_0114419;Lnet/minecraft/client/renderer/system/GlStateManager$C_0226345;Lnet/minecraft/client/renderer/system/GlStateManager$C_0114419;Lnet/minecraft/client/renderer/system/GlStateManager$C_0226345;)V	m_2693884	blendFuncSeparate	
+	m	(Lnet/minecraft/client/renderer/system/GlStateManager$C_8013848;Lnet/minecraft/client/renderer/system/GlStateManager$C_6440302;Lnet/minecraft/client/renderer/system/GlStateManager$C_8013848;Lnet/minecraft/client/renderer/system/GlStateManager$C_6440302;)V	m_2693884	blendFuncSeparate	
 		p	0		sfactorRGB	
 		p	1		dfactorRGB	
 		p	2		sfactorAlpha	
@@ -2782,7 +2782,7 @@ c	net/minecraft/client/renderer/system/GlStateManager	net/minecraft/client/rende
 		p	4		p_4	
 	m	(Ljava/nio/FloatBuffer;)V	m_1582721	m_1582721	
 		p	0		p_0	
-	m	(Lnet/minecraft/unmapped/C_0495439;)V	m_5680893	m_5680893	
+	m	(Lnet/minecraft/unmapped/C_0495439;)V	m_2937831	m_2937831	
 		p	0		p_0	
 	m	(FFFF)V	m_3323122	m_3323122	
 		p	0		p_0	
@@ -2912,57 +2912,6 @@ c	net/minecraft/client/renderer/system/GlStateManager	net/minecraft/client/rende
 	m	()V	<clinit>	<clinit>	
 c	net/minecraft/client/renderer/system/GlStateManager$1241808	1241808	
 	f	[I	f_6588363	f_6588363	
-	m	()V	<clinit>	<clinit>	
-c	net/minecraft/client/renderer/system/GlStateManager$C_0114419	SourceFactor	
-	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_0114419;	f_5189583	f_5189583	
-	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_0114419;	f_2054210	f_2054210	
-	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_0114419;	f_3859295	f_3859295	
-	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_0114419;	f_8143117	f_8143117	
-	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_0114419;	f_3216457	f_3216457	
-	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_0114419;	f_3312318	f_3312318	
-	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_0114419;	f_2975607	f_2975607	
-	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_0114419;	f_2575193	f_2575193	
-	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_0114419;	f_6228007	f_6228007	
-	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_0114419;	f_5283159	f_5283159	
-	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_0114419;	f_3844407	f_3844407	
-	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_0114419;	f_1752625	f_1752625	
-	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_0114419;	f_0290823	f_0290823	
-	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_0114419;	f_0594138	f_0594138	
-	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_0114419;	f_8999057	f_8999057	
-	f	I	f_8999640	value	
-	f	[Lnet/minecraft/client/renderer/system/GlStateManager$C_0114419;	f_7738643	f_7738643	
-	m	()[Lnet/minecraft/client/renderer/system/GlStateManager$C_0114419;	values	values	
-	m	(Ljava/lang/String;)Lnet/minecraft/client/renderer/system/GlStateManager$C_0114419;	valueOf	valueOf	
-		p	0		p_0	
-	m	(Ljava/lang/String;II)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-	m	()V	<clinit>	<clinit>	
-c	net/minecraft/client/renderer/system/GlStateManager$C_0226345	DestFactor	
-	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_0226345;	f_0402751	f_0402751	
-	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_0226345;	f_8856714	f_8856714	
-	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_0226345;	f_0237758	f_0237758	
-	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_0226345;	f_7684185	f_7684185	
-	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_0226345;	f_4318298	f_4318298	
-	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_0226345;	f_6910644	f_6910644	
-	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_0226345;	f_5639356	f_5639356	
-	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_0226345;	f_4026587	f_4026587	
-	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_0226345;	f_2501722	f_2501722	
-	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_0226345;	f_9515699	f_9515699	
-	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_0226345;	f_8207255	f_8207255	
-	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_0226345;	f_2898610	f_2898610	
-	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_0226345;	f_1566083	f_1566083	
-	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_0226345;	f_1370294	f_1370294	
-	f	I	f_0115643	value	
-	f	[Lnet/minecraft/client/renderer/system/GlStateManager$C_0226345;	f_5603019	f_5603019	
-	m	()[Lnet/minecraft/client/renderer/system/GlStateManager$C_0226345;	values	values	
-	m	(Ljava/lang/String;)Lnet/minecraft/client/renderer/system/GlStateManager$C_0226345;	valueOf	valueOf	
-		p	0		p_0	
-	m	(Ljava/lang/String;II)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
 	m	()V	<clinit>	<clinit>	
 c	net/minecraft/client/renderer/system/GlStateManager$C_1230864	PolygonOffset	
 	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_8796143;	f_5693239	state	
@@ -3159,6 +3108,31 @@ c	net/minecraft/client/renderer/system/GlStateManager$C_6288580	Color
 		p	2		p_2	
 		p	3		p_3	
 		p	4		p_4	
+c	net/minecraft/client/renderer/system/GlStateManager$C_6440302	DestFactor	
+	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_6440302;	f_7453214	f_7453214	
+	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_6440302;	f_6857606	f_6857606	
+	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_6440302;	f_6699036	f_6699036	
+	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_6440302;	f_1443673	f_1443673	
+	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_6440302;	f_1934891	f_1934891	
+	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_6440302;	f_7621661	f_7621661	
+	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_6440302;	f_3656416	f_3656416	
+	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_6440302;	f_0633916	f_0633916	
+	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_6440302;	f_4635146	f_4635146	
+	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_6440302;	f_9648564	f_9648564	
+	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_6440302;	f_8963355	f_8963355	
+	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_6440302;	f_2841911	f_2841911	
+	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_6440302;	f_0932785	f_0932785	
+	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_6440302;	f_8584378	f_8584378	
+	f	I	f_7330565	value	
+	f	[Lnet/minecraft/client/renderer/system/GlStateManager$C_6440302;	f_8426670	f_8426670	
+	m	()[Lnet/minecraft/client/renderer/system/GlStateManager$C_6440302;	values	values	
+	m	(Ljava/lang/String;)Lnet/minecraft/client/renderer/system/GlStateManager$C_6440302;	valueOf	valueOf	
+		p	0		p_0	
+	m	(Ljava/lang/String;II)V	<init>	<init>	
+		p	1		p_1	
+		p	2		p_2	
+		p	3		p_3	
+	m	()V	<clinit>	<clinit>	
 c	net/minecraft/client/renderer/system/GlStateManager$C_6972436	Clear	
 	f	D	f_4844946	f_4844946	
 	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_6288580;	f_6858167	f_6858167	
@@ -3166,6 +3140,32 @@ c	net/minecraft/client/renderer/system/GlStateManager$C_6972436	Clear
 	m	()V	<init>	<init>	
 	m	(Lnet/minecraft/client/renderer/system/GlStateManager$1241808;)V	<init>	<init>	
 		p	1		p_1	
+c	net/minecraft/client/renderer/system/GlStateManager$C_8013848	SourceFactor	
+	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_8013848;	f_8461787	f_8461787	
+	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_8013848;	f_6860669	f_6860669	
+	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_8013848;	f_8508904	f_8508904	
+	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_8013848;	f_0982501	f_0982501	
+	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_8013848;	f_2585553	f_2585553	
+	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_8013848;	f_0626801	f_0626801	
+	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_8013848;	f_9211577	f_9211577	
+	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_8013848;	f_8687536	f_8687536	
+	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_8013848;	f_6467497	f_6467497	
+	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_8013848;	f_6854241	f_6854241	
+	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_8013848;	f_5630787	f_5630787	
+	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_8013848;	f_3174507	f_3174507	
+	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_8013848;	f_2633287	f_2633287	
+	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_8013848;	f_7526099	f_7526099	
+	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_8013848;	f_4192389	f_4192389	
+	f	I	f_1664825	value	
+	f	[Lnet/minecraft/client/renderer/system/GlStateManager$C_8013848;	f_2716079	f_2716079	
+	m	()[Lnet/minecraft/client/renderer/system/GlStateManager$C_8013848;	values	values	
+	m	(Ljava/lang/String;)Lnet/minecraft/client/renderer/system/GlStateManager$C_8013848;	valueOf	valueOf	
+		p	0		p_0	
+	m	(Ljava/lang/String;II)V	<init>	<init>	
+		p	1		p_1	
+		p	2		p_2	
+		p	3		p_3	
+	m	()V	<clinit>	<clinit>	
 c	net/minecraft/client/renderer/system/GlStateManager$C_8203323	Stencil	
 	f	Lnet/minecraft/client/renderer/system/GlStateManager$C_4491114;	f_2448841	f_2448841	
 	f	I	f_7569078	f_7569078	
@@ -3214,14 +3214,14 @@ c	net/minecraft/client/renderer/system/GlStateManager$C_9591274	TexGenMode
 		p	2		p_2	
 	m	()V	<clinit>	<clinit>	
 c	net/minecraft/client/renderer/system/TextureUtil	net/minecraft/client/renderer/system/TextureUtil	
-	f	Lorg/apache/logging/log4j/Logger;	f_1555344	f_1555344	
+	f	Lorg/apache/logging/log4j/Logger;	f_6453242	f_6453242	
 	f	I	f_7110631	f_7110631	
 	f	I	f_4739750	f_4739750	
 	m	()V	<init>	<init>	
-	m	()I	m_0976553	m_0976553	
-	m	(I)V	m_7354424	m_7354424	
+	m	()I	m_3056191	m_3056191	
+	m	(I)V	m_3765285	m_3765285	
 		p	0		p_0	
-	m	(III)V	m_1974915	m_1974915	
+	m	(III)V	m_6605934	m_6605934	
 		p	0		p_0	
 		p	1		p_1	
 		p	2		p_2	
@@ -3235,13 +3235,13 @@ c	net/minecraft/client/renderer/system/TextureUtil	net/minecraft/client/renderer
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
-	m	(Lnet/minecraft/unmapped/C_7131921$C_0506307;IIII)V	m_0845837	m_0845837	
+	m	(Lnet/minecraft/unmapped/C_7131921$C_0506307;IIII)V	m_0566541	m_0566541	
 		p	0		p_0	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
 		p	4		p_4	
-	m	(I)V	m_3820211	m_3820211	
+	m	(I)V	m_1192743	m_1192743	
 		p	0		p_0	
 	m	(Lnet/minecraft/unmapped/C_6577431;Lnet/minecraft/unmapped/C_0561170;)[I	m_0580133	m_0580133	
 		p	0		p_0	
@@ -3274,7 +3274,7 @@ c	com/mojang/blaze3d/platform/GLX		com/mojang/blaze3d/platform/GLX
 	f	I	f_8287781		errFramebufferIncompleteMissingAttachment
 	f	I	f_3237369		errFramebufferIncompleteDrawBuffer
 	f	I	f_9664749		errFramebufferIncompleteReadBuffer
-	f	Lcom/mojang/blaze3d/platform/GLX$C_6669882;	f_2141217		arbExtFramebuffer
+	f	Lcom/mojang/blaze3d/platform/GLX$C_6669882;	f_8172821		arbExtFramebuffer
 	f	Z	f_2643242		f_2643242
 	f	Z	f_5006814		shaders
 	f	Z	f_6168393		arbSHaderObjects
@@ -3587,13 +3587,13 @@ c	com/mojang/blaze3d/platform/GlStateManager		com/mojang/blaze3d/platform/GlStat
 		p	0			mask
 	m	()V	m_5313301		disableBlend
 	m	()V	m_9671730		enableBlend
-	m	(Lcom/mojang/blaze3d/platform/GlStateManager$C_0114419;Lcom/mojang/blaze3d/platform/GlStateManager$C_0226345;)V	m_5757930		blendFactor
+	m	(Lcom/mojang/blaze3d/platform/GlStateManager$C_8013848;Lcom/mojang/blaze3d/platform/GlStateManager$C_6440302;)V	m_5757930		blendFactor
 		p	0			p_0
 		p	1			p_1
 	m	(II)V	m_2076358		blendFunc
 		p	0			sfactor
 		p	1			dfactor
-	m	(Lcom/mojang/blaze3d/platform/GlStateManager$C_0114419;Lcom/mojang/blaze3d/platform/GlStateManager$C_0226345;Lcom/mojang/blaze3d/platform/GlStateManager$C_0114419;Lcom/mojang/blaze3d/platform/GlStateManager$C_0226345;)V	m_2693884		blendFunc
+	m	(Lcom/mojang/blaze3d/platform/GlStateManager$C_8013848;Lcom/mojang/blaze3d/platform/GlStateManager$C_6440302;Lcom/mojang/blaze3d/platform/GlStateManager$C_8013848;Lcom/mojang/blaze3d/platform/GlStateManager$C_6440302;)V	m_2693884		blendFunc
 		p	0			p_0
 		p	1			p_1
 		p	2			p_2
@@ -3812,7 +3812,7 @@ c	com/mojang/blaze3d/platform/GlStateManager		com/mojang/blaze3d/platform/GlStat
 		p	4			z
 	m	(Ljava/nio/FloatBuffer;)V	m_1582721		multMatrix
 		p	0			m
-	m	(Lnet/minecraft/unmapped/C_0495439;)V	m_5680893		m_5680893
+	m	(Lnet/minecraft/unmapped/C_0495439;)V	m_2937831		m_2937831
 		p	0			m
 	m	(FFFF)V	m_3323122		color
 		p	0			r
@@ -3942,57 +3942,6 @@ c	com/mojang/blaze3d/platform/GlStateManager		com/mojang/blaze3d/platform/GlStat
 	m	()V	<clinit>		<clinit>
 c	com/mojang/blaze3d/platform/GlStateManager$1241808		1241808
 	f	[I	f_6588363		f_6588363
-	m	()V	<clinit>		<clinit>
-c	com/mojang/blaze3d/platform/GlStateManager$C_0114419		SourceFactor
-	f	Lcom/mojang/blaze3d/platform/GlStateManager$C_0114419;	f_5189583		f_5189583
-	f	Lcom/mojang/blaze3d/platform/GlStateManager$C_0114419;	f_2054210		f_2054210
-	f	Lcom/mojang/blaze3d/platform/GlStateManager$C_0114419;	f_3859295		f_3859295
-	f	Lcom/mojang/blaze3d/platform/GlStateManager$C_0114419;	f_8143117		f_8143117
-	f	Lcom/mojang/blaze3d/platform/GlStateManager$C_0114419;	f_3216457		f_3216457
-	f	Lcom/mojang/blaze3d/platform/GlStateManager$C_0114419;	f_3312318		f_3312318
-	f	Lcom/mojang/blaze3d/platform/GlStateManager$C_0114419;	f_2975607		f_2975607
-	f	Lcom/mojang/blaze3d/platform/GlStateManager$C_0114419;	f_2575193		f_2575193
-	f	Lcom/mojang/blaze3d/platform/GlStateManager$C_0114419;	f_6228007		f_6228007
-	f	Lcom/mojang/blaze3d/platform/GlStateManager$C_0114419;	f_5283159		f_5283159
-	f	Lcom/mojang/blaze3d/platform/GlStateManager$C_0114419;	f_3844407		f_3844407
-	f	Lcom/mojang/blaze3d/platform/GlStateManager$C_0114419;	f_1752625		f_1752625
-	f	Lcom/mojang/blaze3d/platform/GlStateManager$C_0114419;	f_0290823		f_0290823
-	f	Lcom/mojang/blaze3d/platform/GlStateManager$C_0114419;	f_0594138		f_0594138
-	f	Lcom/mojang/blaze3d/platform/GlStateManager$C_0114419;	f_8999057		f_8999057
-	f	I	f_8999640		value
-	f	[Lcom/mojang/blaze3d/platform/GlStateManager$C_0114419;	f_7738643		f_7738643
-	m	()[Lcom/mojang/blaze3d/platform/GlStateManager$C_0114419;	values		values
-	m	(Ljava/lang/String;)Lcom/mojang/blaze3d/platform/GlStateManager$C_0114419;	valueOf		valueOf
-		p	0			p_0
-	m	(Ljava/lang/String;II)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-	m	()V	<clinit>		<clinit>
-c	com/mojang/blaze3d/platform/GlStateManager$C_0226345		DestFactor
-	f	Lcom/mojang/blaze3d/platform/GlStateManager$C_0226345;	f_0402751		f_0402751
-	f	Lcom/mojang/blaze3d/platform/GlStateManager$C_0226345;	f_8856714		f_8856714
-	f	Lcom/mojang/blaze3d/platform/GlStateManager$C_0226345;	f_0237758		f_0237758
-	f	Lcom/mojang/blaze3d/platform/GlStateManager$C_0226345;	f_7684185		f_7684185
-	f	Lcom/mojang/blaze3d/platform/GlStateManager$C_0226345;	f_4318298		f_4318298
-	f	Lcom/mojang/blaze3d/platform/GlStateManager$C_0226345;	f_6910644		f_6910644
-	f	Lcom/mojang/blaze3d/platform/GlStateManager$C_0226345;	f_5639356		f_5639356
-	f	Lcom/mojang/blaze3d/platform/GlStateManager$C_0226345;	f_4026587		f_4026587
-	f	Lcom/mojang/blaze3d/platform/GlStateManager$C_0226345;	f_2501722		f_2501722
-	f	Lcom/mojang/blaze3d/platform/GlStateManager$C_0226345;	f_9515699		f_9515699
-	f	Lcom/mojang/blaze3d/platform/GlStateManager$C_0226345;	f_8207255		f_8207255
-	f	Lcom/mojang/blaze3d/platform/GlStateManager$C_0226345;	f_2898610		f_2898610
-	f	Lcom/mojang/blaze3d/platform/GlStateManager$C_0226345;	f_1566083		f_1566083
-	f	Lcom/mojang/blaze3d/platform/GlStateManager$C_0226345;	f_1370294		f_1370294
-	f	I	f_0115643		value
-	f	[Lcom/mojang/blaze3d/platform/GlStateManager$C_0226345;	f_5603019		f_5603019
-	m	()[Lcom/mojang/blaze3d/platform/GlStateManager$C_0226345;	values		values
-	m	(Ljava/lang/String;)Lcom/mojang/blaze3d/platform/GlStateManager$C_0226345;	valueOf		valueOf
-		p	0			p_0
-	m	(Ljava/lang/String;II)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
 	m	()V	<clinit>		<clinit>
 c	com/mojang/blaze3d/platform/GlStateManager$C_1230864		PolygonOffset
 	f	Lcom/mojang/blaze3d/platform/GlStateManager$C_8796143;	f_5693239		state
@@ -4189,6 +4138,31 @@ c	com/mojang/blaze3d/platform/GlStateManager$C_6288580		Color
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
+c	com/mojang/blaze3d/platform/GlStateManager$C_6440302		DestFactor
+	f	Lcom/mojang/blaze3d/platform/GlStateManager$C_6440302;	f_7453214		f_7453214
+	f	Lcom/mojang/blaze3d/platform/GlStateManager$C_6440302;	f_6857606		f_6857606
+	f	Lcom/mojang/blaze3d/platform/GlStateManager$C_6440302;	f_6699036		f_6699036
+	f	Lcom/mojang/blaze3d/platform/GlStateManager$C_6440302;	f_1443673		f_1443673
+	f	Lcom/mojang/blaze3d/platform/GlStateManager$C_6440302;	f_1934891		f_1934891
+	f	Lcom/mojang/blaze3d/platform/GlStateManager$C_6440302;	f_7621661		f_7621661
+	f	Lcom/mojang/blaze3d/platform/GlStateManager$C_6440302;	f_3656416		f_3656416
+	f	Lcom/mojang/blaze3d/platform/GlStateManager$C_6440302;	f_0633916		f_0633916
+	f	Lcom/mojang/blaze3d/platform/GlStateManager$C_6440302;	f_4635146		f_4635146
+	f	Lcom/mojang/blaze3d/platform/GlStateManager$C_6440302;	f_9648564		f_9648564
+	f	Lcom/mojang/blaze3d/platform/GlStateManager$C_6440302;	f_8963355		f_8963355
+	f	Lcom/mojang/blaze3d/platform/GlStateManager$C_6440302;	f_2841911		f_2841911
+	f	Lcom/mojang/blaze3d/platform/GlStateManager$C_6440302;	f_0932785		f_0932785
+	f	Lcom/mojang/blaze3d/platform/GlStateManager$C_6440302;	f_8584378		f_8584378
+	f	I	f_7330565		value
+	f	[Lcom/mojang/blaze3d/platform/GlStateManager$C_6440302;	f_8426670		f_8426670
+	m	()[Lcom/mojang/blaze3d/platform/GlStateManager$C_6440302;	values		values
+	m	(Ljava/lang/String;)Lcom/mojang/blaze3d/platform/GlStateManager$C_6440302;	valueOf		valueOf
+		p	0			p_0
+	m	(Ljava/lang/String;II)V	<init>		<init>
+		p	1			p_1
+		p	2			p_2
+		p	3			p_3
+	m	()V	<clinit>		<clinit>
 c	com/mojang/blaze3d/platform/GlStateManager$C_6972436		Clear
 	f	D	f_4844946		depth
 	f	Lcom/mojang/blaze3d/platform/GlStateManager$C_6288580;	f_6858167		color
@@ -4196,6 +4170,32 @@ c	com/mojang/blaze3d/platform/GlStateManager$C_6972436		Clear
 	m	()V	<init>		<init>
 	m	(Lcom/mojang/blaze3d/platform/GlStateManager$1241808;)V	<init>		<init>
 		p	1			p_1
+c	com/mojang/blaze3d/platform/GlStateManager$C_8013848		SourceFactor
+	f	Lcom/mojang/blaze3d/platform/GlStateManager$C_8013848;	f_8461787		f_8461787
+	f	Lcom/mojang/blaze3d/platform/GlStateManager$C_8013848;	f_6860669		f_6860669
+	f	Lcom/mojang/blaze3d/platform/GlStateManager$C_8013848;	f_8508904		f_8508904
+	f	Lcom/mojang/blaze3d/platform/GlStateManager$C_8013848;	f_0982501		f_0982501
+	f	Lcom/mojang/blaze3d/platform/GlStateManager$C_8013848;	f_2585553		f_2585553
+	f	Lcom/mojang/blaze3d/platform/GlStateManager$C_8013848;	f_0626801		f_0626801
+	f	Lcom/mojang/blaze3d/platform/GlStateManager$C_8013848;	f_9211577		f_9211577
+	f	Lcom/mojang/blaze3d/platform/GlStateManager$C_8013848;	f_8687536		f_8687536
+	f	Lcom/mojang/blaze3d/platform/GlStateManager$C_8013848;	f_6467497		f_6467497
+	f	Lcom/mojang/blaze3d/platform/GlStateManager$C_8013848;	f_6854241		f_6854241
+	f	Lcom/mojang/blaze3d/platform/GlStateManager$C_8013848;	f_5630787		f_5630787
+	f	Lcom/mojang/blaze3d/platform/GlStateManager$C_8013848;	f_3174507		f_3174507
+	f	Lcom/mojang/blaze3d/platform/GlStateManager$C_8013848;	f_2633287		f_2633287
+	f	Lcom/mojang/blaze3d/platform/GlStateManager$C_8013848;	f_7526099		f_7526099
+	f	Lcom/mojang/blaze3d/platform/GlStateManager$C_8013848;	f_4192389		f_4192389
+	f	I	f_1664825		value
+	f	[Lcom/mojang/blaze3d/platform/GlStateManager$C_8013848;	f_2716079		f_2716079
+	m	()[Lcom/mojang/blaze3d/platform/GlStateManager$C_8013848;	values		values
+	m	(Ljava/lang/String;)Lcom/mojang/blaze3d/platform/GlStateManager$C_8013848;	valueOf		valueOf
+		p	0			p_0
+	m	(Ljava/lang/String;II)V	<init>		<init>
+		p	1			p_1
+		p	2			p_2
+		p	3			p_3
+	m	()V	<clinit>		<clinit>
 c	com/mojang/blaze3d/platform/GlStateManager$C_8203323		Stencil
 	f	Lcom/mojang/blaze3d/platform/GlStateManager$C_4491114;	f_2448841		state
 	f	I	f_7569078		mask
@@ -4244,14 +4244,14 @@ c	com/mojang/blaze3d/platform/GlStateManager$C_9591274		TexGenMode
 		p	2			p_2
 	m	()V	<clinit>		<clinit>
 c	com/mojang/blaze3d/platform/TextureUtil		com/mojang/blaze3d/platform/TextureUtil
-	f	Lorg/apache/logging/log4j/Logger;	f_1555344		LOGGER
+	f	Lorg/apache/logging/log4j/Logger;	f_6453242		LOGGER
 	f	I	f_7110631		f_7110631
 	f	I	f_4739750		f_4739750
 	m	()V	<init>		<init>
-	m	()I	m_0976553		genTextures
-	m	(I)V	m_7354424		deleteTextures
+	m	()I	m_3056191		genTextures
+	m	(I)V	m_3765285		deleteTextures
 		p	0			p_0
-	m	(III)V	m_1974915		m_1974915
+	m	(III)V	m_6605934		m_6605934
 		p	0			p_0
 		p	1			p_1
 		p	2			p_2
@@ -4265,13 +4265,13 @@ c	com/mojang/blaze3d/platform/TextureUtil		com/mojang/blaze3d/platform/TextureUt
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
-	m	(Lnet/minecraft/unmapped/C_7131921$C_0506307;IIII)V	m_0845837		m_0845837
+	m	(Lnet/minecraft/unmapped/C_7131921$C_0506307;IIII)V	m_0566541		m_0566541
 		p	0			format
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
-	m	(I)V	m_3820211		bindTexture
+	m	(I)V	m_1192743		bindTexture
 		p	0			p_0
 	m	(Ljava/io/InputStream;)Ljava/nio/ByteBuffer;	m_4774192		readStream
 		p	0			p_0
@@ -4347,13 +4347,13 @@ c	net/minecraft/unmapped/C_1010936		net/minecraft/unmapped/C_1010936
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_2441996;)Z	m_1538589		m_1538589
 		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_7300213;)Lnet/minecraft/unmapped/C_2441996;	m_7685061		m_7685061
+	m	(Lnet/minecraft/unmapped/C_7300213;)Lnet/minecraft/unmapped/C_2441996;	m_3586843		m_3586843
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_5250955;Lnet/minecraft/unmapped/C_6707278;)Lnet/minecraft/unmapped/C_7345216;	m_9650578		m_9650578
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
-	m	(Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_5250955;Lnet/minecraft/unmapped/C_6707278;)Lnet/minecraft/unmapped/C_7345216;	m_5728949		m_5728949
+	m	(Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_5250955;Lnet/minecraft/unmapped/C_6707278;)Lnet/minecraft/unmapped/C_7345216;	m_6769480		m_6769480
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -4408,7 +4408,7 @@ c	net/minecraft/unmapped/C_1817720		net/minecraft/unmapped/C_1817720
 	f	Lnet/minecraft/unmapped/C_7345216;	f_7637759		f_7637759
 	m	(Lnet/minecraft/unmapped/C_3635204$C_6799794;)V	<init>		<init>
 		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_5250955;Lnet/minecraft/unmapped/C_6707278;)Lnet/minecraft/unmapped/C_7345216;	m_5728949		m_5728949
+	m	(Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_5250955;Lnet/minecraft/unmapped/C_6707278;)Lnet/minecraft/unmapped/C_7345216;	m_6769480		m_6769480
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -4500,7 +4500,7 @@ c	net/minecraft/unmapped/C_2853580		net/minecraft/unmapped/C_2853580
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
-	m	(Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_5250955;Lnet/minecraft/unmapped/C_6707278;)Lnet/minecraft/unmapped/C_7345216;	m_5728949		m_5728949
+	m	(Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_5250955;Lnet/minecraft/unmapped/C_6707278;)Lnet/minecraft/unmapped/C_7345216;	m_6769480		m_6769480
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -4508,9 +4508,9 @@ c	net/minecraft/unmapped/C_2853580		net/minecraft/unmapped/C_2853580
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_2441996;)Z	m_1538589		m_1538589
 		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_7300213;)Lnet/minecraft/unmapped/C_2441996;	m_7685061		m_7685061
+	m	(Lnet/minecraft/unmapped/C_7300213;)Lnet/minecraft/unmapped/C_2441996;	m_3586843		m_3586843
 		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_3544601;Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_9844932;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_6707278;)Lnet/minecraft/unmapped/C_2441996;	m_3015465		m_3015465
+	m	(Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_3544601;Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_9844932;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_6707278;)Lnet/minecraft/unmapped/C_2441996;	m_5408908		m_5408908
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -4619,7 +4619,7 @@ c	net/minecraft/unmapped/C_3981729		net/minecraft/unmapped/C_3981729
 	m	(Lnet/minecraft/unmapped/C_2627205;)Z	m_0974034		m_0974034
 		p	1			p_1
 	m	()V	m_4246806		m_4246806
-	m	(Lnet/minecraft/unmapped/C_9844932;Lnet/minecraft/unmapped/C_2716056;Lnet/minecraft/unmapped/C_2928020;Lnet/minecraft/unmapped/C_2800860;)Lnet/minecraft/unmapped/C_2928020;	m_0405912		m_0405912
+	m	(Lnet/minecraft/unmapped/C_9844932;Lnet/minecraft/unmapped/C_2716056;Lnet/minecraft/unmapped/C_2928020;Lnet/minecraft/unmapped/C_2800860;)Lnet/minecraft/unmapped/C_2928020;	m_9890197		m_9890197
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -4653,7 +4653,7 @@ c	net/minecraft/unmapped/C_4242195		net/minecraft/unmapped/C_4242195
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_3981729;)Lnet/minecraft/unmapped/C_0561170;	m_7705817		m_7705817
 		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_6385858;)Lnet/minecraft/unmapped/C_0561170;	m_2912652		m_2912652
+	m	(Lnet/minecraft/unmapped/C_6385858;)Lnet/minecraft/unmapped/C_0561170;	m_7036687		m_7036687
 		p	1			p_1
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_4515201		net/minecraft/unmapped/C_4515201
@@ -4690,7 +4690,7 @@ c	net/minecraft/unmapped/C_4624793		net/minecraft/unmapped/C_4624793
 		p	2			p_2
 	m	(Lnet/minecraft/unmapped/C_9264598$C_1068461;)V	m_3079613		m_3079613
 		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_7300213;)Lnet/minecraft/unmapped/C_2441996;	m_7685061		m_7685061
+	m	(Lnet/minecraft/unmapped/C_7300213;)Lnet/minecraft/unmapped/C_2441996;	m_3586843		m_3586843
 		p	1			p_1
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_4701521		net/minecraft/unmapped/C_4701521
@@ -4828,7 +4828,7 @@ c	net/minecraft/unmapped/C_5544198		net/minecraft/unmapped/C_5544198
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
-	m	(Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_5250955;Lnet/minecraft/unmapped/C_6707278;)Lnet/minecraft/unmapped/C_7345216;	m_5728949		m_5728949
+	m	(Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_5250955;Lnet/minecraft/unmapped/C_6707278;)Lnet/minecraft/unmapped/C_7345216;	m_6769480		m_6769480
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3

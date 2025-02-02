@@ -174,14 +174,14 @@ c	net/minecraft/unmapped/C_3215913
 		p	1			p_1
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_3385278
-	m	(Ljava/lang/String;)V	m_5325521	bind	
+	m	(Ljava/lang/String;)V	m_4291731	bind	
 		p	1		path	
-	m	(Ljava/lang/String;Lnet/minecraft/unmapped/C_4882708;)V	m_0381205	register	
+	m	(Ljava/lang/String;Lnet/minecraft/unmapped/C_4882708;)V	m_6177175	register	
 		p	1		path	
 		p	2		texture	
 	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_4882708;	m_1605001	get	
 		p	1		path	
-	m	(Lnet/minecraft/unmapped/C_3779718;Ljava/lang/String;)Ljava/lang/String;	m_3538832	register	
+	m	(Lnet/minecraft/unmapped/C_3779718;Ljava/lang/String;)Ljava/lang/String;	m_1120529	register	
 		p	1		dynamicTexture	
 		p	2		path	
 	m	(Ljava/lang/String;)V	m_6976760	remove	
@@ -189,17 +189,17 @@ c	net/minecraft/unmapped/C_3385278
 	m	(Ljava/lang/String;Lnet/minecraft/unmapped/C_6618055;)V	m_9577918	register	
 		p	1		path	
 		p	2		tickableTexture	
-	m	(Lnet/minecraft/unmapped/C_0561170;)V	m_5325521		bind
+	m	(Lnet/minecraft/unmapped/C_0561170;)V	m_4291731		bind
 		p	1			location
 	m	(Lnet/minecraft/unmapped/C_0561170;Lnet/minecraft/unmapped/C_6618055;)V	m_9577918		register
 		p	1			id
 		p	2			tickableTexture
-	m	(Lnet/minecraft/unmapped/C_0561170;Lnet/minecraft/unmapped/C_4882708;)V	m_0381205		register
+	m	(Lnet/minecraft/unmapped/C_0561170;Lnet/minecraft/unmapped/C_4882708;)V	m_6177175		register
 		p	1			id
 		p	2			texture
 	m	(Lnet/minecraft/unmapped/C_0561170;)Lnet/minecraft/unmapped/C_4882708;	m_1605001		get
 		p	1			id
-	m	(Lnet/minecraft/unmapped/C_3779718;Ljava/lang/String;)Lnet/minecraft/unmapped/C_0561170;	m_3538832		register
+	m	(Lnet/minecraft/unmapped/C_3779718;Ljava/lang/String;)Lnet/minecraft/unmapped/C_0561170;	m_1120529		register
 		p	1			dynamicTexture
 		p	2			path
 c	net/minecraft/unmapped/C_3454805
@@ -339,7 +339,7 @@ c	net/minecraft/unmapped/C_4608907	net/minecraft/client/resource/pack/BuiltInTex
 	m	()V	m_5993409	m_5993409	
 	m	(Ljava/lang/String;)Z	m_3120376	m_3120376	
 		p	1		p_1	
-	m	()Z	m_9415399	m_9415399	
+	m	()Z	m_4367684	m_4367684	
 	m	(Ljava/lang/String;)Ljava/io/InputStream;	m_3649582	m_3649582	
 		p	1		p_1	
 c	net/minecraft/unmapped/C_4766485
@@ -486,7 +486,7 @@ c	net/minecraft/unmapped/C_6899601	net/minecraft/client/resource/pack/ZippedText
 		p	1		p_1	
 	m	(Ljava/lang/String;)Z	m_3120376	m_3120376	
 		p	1		p_1	
-	m	()Z	m_9415399	m_9415399	
+	m	()Z	m_4367684	m_4367684	
 c	net/minecraft/unmapped/C_7146036
 	m	(Lnet/minecraft/unmapped/C_9549188;)V	m_9955335	m_9955335	
 		p	1		p_1	
@@ -501,13 +501,13 @@ c	net/minecraft/unmapped/C_7378130	net/minecraft/client/resource/pack/TexturePac
 	m	()Ljava/lang/String;	m_3258720	getName	
 	m	()Ljava/lang/String;	m_9645173	getDescriptionLine1	
 	m	()Ljava/lang/String;	m_9206871	getDescriptionLine2	
+	m	()Z	m_4367684	isCompatible	
 	m	(Ljava/lang/String;Z)Ljava/io/InputStream;	m_6645802	getResource	
 		p	1		path	
 		p	2		orDefault	
 	m	(Ljava/lang/String;Z)Z	m_9486124	hasResource	
 		p	1		path	
 		p	2		orDefault	
-	m	()Z	m_9415399	isCompatible	
 c	net/minecraft/unmapped/C_7542541
 	f	Lnet/minecraft/unmapped/C_0561170;	f_8035937		MENU_LOCATION
 c	net/minecraft/unmapped/C_7918626
@@ -866,7 +866,7 @@ c	net/minecraft/unmapped/C_6207491	net/minecraft/client/resource/pack/DirectoryT
 		p	1		p_1	
 	m	(Ljava/lang/String;)Z	m_3120376	m_3120376	
 		p	1		p_1	
-	m	()Z	m_9415399	m_9415399	
+	m	()Z	m_4367684	m_4367684	
 c	net/minecraft/unmapped/C_8555815
 	f	[Ljava/lang/String;	f_7504864	SPRITE_NAMES	
 c	net/minecraft/unmapped/C_4384798
@@ -1131,8 +1131,6 @@ c	net/minecraft/unmapped/C_3779718
 		p	1			image
 c	net/minecraft/unmapped/C_6347954
 	f	Lcom/google/common/base/Splitter;	f_7681935	COMMA_SPLITTER	
-	f	Ljava/util/List;	f_1530370	frames	
-	f	Ljava/util/List;	f_1724592		frames
 	f	I	f_0267147		width
 	f	I	f_7850929		height
 	f	I	f_8955552		time

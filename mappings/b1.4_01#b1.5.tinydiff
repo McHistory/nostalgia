@@ -15,11 +15,11 @@ c	net/minecraft/client/Minecraft$0497028		0497028
 c	net/minecraft/server/MinecraftServer
 	f	Z	f_5361901		flightEnabled
 c	net/minecraft/unmapped/C_0019534
-	m	(Lnet/minecraft/unmapped/C_0386427;Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/unmapped/C_0324512;	m_1007200	createForLogin	
+	m	(Lnet/minecraft/unmapped/C_0386427;Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/unmapped/C_0324512;	m_7298898	createForLogin	
 		p	1		networkHandler	
 		p	2		name	
 		p	3		password	
-	m	(Lnet/minecraft/unmapped/C_0386427;Ljava/lang/String;)Lnet/minecraft/unmapped/C_0324512;	m_1007200		createForLogin
+	m	(Lnet/minecraft/unmapped/C_0386427;Ljava/lang/String;)Lnet/minecraft/unmapped/C_0324512;	m_7298898		createForLogin
 		p	1			networkHandler
 		p	2			name
 c	net/minecraft/unmapped/C_0043270
@@ -196,12 +196,8 @@ c	net/minecraft/unmapped/C_3906126
 		p	2			y
 		p	3			z
 c	net/minecraft/unmapped/C_4030632
-	m	(Lnet/minecraft/unmapped/C_2750078;)I	m_1532371	getSprite	
-		p	1		stack	
 	m	(I)I	m_1532371		getSprite
 		p	1			metadata
-	m	(Lnet/minecraft/unmapped/C_2750078;)I	m_8620274		getSprite
-		p	1			stack
 	m	(I)I	m_6327257		getDisplayColor
 		p	1			metadata
 c	net/minecraft/unmapped/C_4176306
@@ -349,7 +345,8 @@ c	net/minecraft/unmapped/C_5422301
 	m	(I)I	m_3974337		m_3974337
 		p	1			p_1
 c	net/minecraft/unmapped/C_6385858
-	f	Z	f_6716342	f_6716342	inCobweb
+	f	Z	f_3483979	f_3483979	
+	f	Z	f_6716342		inCobweb
 	m	()Z	m_7260987		isInWaterOrRain
 	m	()Z	m_5438767		isInWater
 	m	(Lnet/minecraft/unmapped/C_1992549;)V	m_0423668		struckByLightning
@@ -454,17 +451,17 @@ c	net/minecraft/unmapped/C_9614477
 		p	3			p_3
 		p	5			dimensionId
 c	net/minecraft/unmapped/C_1176458
-	m	(Lnet/minecraft/unmapped/C_2750078;)I	m_1532371	m_1532371	
+	m	(Lnet/minecraft/unmapped/C_2750078;)I	m_8620274	m_8620274	
 		p	1		p_1	
 	m	(I)I	m_1532371		m_1532371
 		p	1			p_1
 c	net/minecraft/unmapped/C_3077593
-	m	(Lnet/minecraft/unmapped/C_2750078;)I	m_1532371	m_1532371	
+	m	(Lnet/minecraft/unmapped/C_2750078;)I	m_8620274	m_8620274	
 		p	1		p_1	
 	m	(I)I	m_1532371		m_1532371
 		p	1			p_1
 c	net/minecraft/unmapped/C_5287522
-	m	(Lnet/minecraft/unmapped/C_2750078;)I	m_1532371	m_1532371	
+	m	(Lnet/minecraft/unmapped/C_2750078;)I	m_8620274	m_8620274	
 		p	1		p_1	
 	m	(I)I	m_1532371		m_1532371
 		p	1			p_1
@@ -501,7 +498,7 @@ c	net/minecraft/unmapped/C_1790740	net/minecraft/stat/TimeStat
 		p	2		p_2	
 	m	()V	<clinit>	<clinit>	
 c	net/minecraft/unmapped/C_2371258
-	m	(Lnet/minecraft/unmapped/C_2750078;)I	m_1532371	m_1532371	
+	m	(Lnet/minecraft/unmapped/C_2750078;)I	m_8620274	m_8620274	
 		p	1		p_1	
 	m	(I)I	m_1532371		m_1532371
 		p	1			p_1
@@ -584,13 +581,11 @@ c	net/minecraft/unmapped/C_5525347
 	f	Ljava/text/DecimalFormat;	f_6066041		DECIMAL_FORMAT
 	f	Lnet/minecraft/unmapped/C_7646636;	f_8697868		TIME_FORMATTER
 	f	Lnet/minecraft/unmapped/C_7646636;	f_5628217		DISTANCE_FORMATTER
-	m	()Z	m_3651694	isAchievement	
 	m	(ILjava/lang/String;Lnet/minecraft/unmapped/C_7646636;)V	<init>		<init>
 		p	1			id
 		p	2			key
 		p	3			formatter
 	m	()Lnet/minecraft/unmapped/C_5525347;	m_4898738		setLocal
-	m	()Z	m_1818304		isAchievement
 	m	(I)Ljava/lang/String;	m_9322525		format
 		p	1			value
 	m	()Ljava/lang/String;	toString		toString
@@ -625,7 +620,6 @@ c	net/minecraft/unmapped/C_7281219
 		p	3		column	
 		p	4		row	
 		p	5		parent	
-	m	()Z	m_3651694	m_3651694	
 	m	(ILjava/lang/String;IILnet/minecraft/unmapped/C_4030632;Lnet/minecraft/unmapped/C_7281219;)V	<init>		<init>
 		p	1			id
 		p	2			name
@@ -650,7 +644,6 @@ c	net/minecraft/unmapped/C_7281219
 	m	()Lnet/minecraft/unmapped/C_7281219;	m_2205937		m_2205937
 	m	()Lnet/minecraft/unmapped/C_7281219;	m_1632348		setChallenge
 	m	()Lnet/minecraft/unmapped/C_7281219;	m_0233212		m_0233212
-	m	()Z	m_1818304		m_1818304
 	m	()Ljava/lang/String;	m_5454587		getDescription
 	m	(Lnet/minecraft/unmapped/C_2785183;)Lnet/minecraft/unmapped/C_7281219;	m_8312996		setFormatter
 		p	1			formatter
@@ -658,10 +651,6 @@ c	net/minecraft/unmapped/C_7281219
 	m	()Lnet/minecraft/unmapped/C_5525347;	m_5859257		m_5859257
 	m	()Lnet/minecraft/unmapped/C_5525347;	m_4898738		m_4898738
 c	net/minecraft/unmapped/C_7974592
-	f	Ljava/util/Map;	f_8895685	stats	
-	f	Ljava/util/Map;	f_3788937	unsentStats	
-	f	Ljava/util/Map;	f_3077720		stats
-	f	Ljava/util/Map;	f_4909231		unsentStats
 	f	Z	f_1028827		dirty
 	f	Lnet/minecraft/unmapped/C_3413703;	f_7614897		syncer
 	m	()V	<init>	<init>	

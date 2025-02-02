@@ -5,7 +5,7 @@ c	net/minecraft/client/Minecraft
 	m	()Lnet/minecraft/unmapped/C_6471932;	m_6004666		getBlockColors
 c	net/minecraft/unmapped/C_0559439
 	m	()I	m_8742290	m_8742290	
-	m	(Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_6707278;I)I	m_4387507	m_4387507	
+	m	(Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_6707278;I)I	m_7968533	m_7968533	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
@@ -13,7 +13,7 @@ c	net/minecraft/unmapped/C_0559439
 		p	1		p_1	
 c	net/minecraft/unmapped/C_0823907
 	m	()I	m_8742290	m_8742290	
-	m	(Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_6707278;I)I	m_4387507	m_4387507	
+	m	(Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_6707278;I)I	m_7968533	m_7968533	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
@@ -53,7 +53,7 @@ c	net/minecraft/unmapped/C_2689622
 	m	(I)I	m_0347051
 		p	1		power	
 		p	0			power
-	m	(Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_6707278;I)I	m_4387507	m_4387507	
+	m	(Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_6707278;I)I	m_7968533	m_7968533	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
@@ -86,13 +86,13 @@ c	net/minecraft/unmapped/C_3624347
 		p	1			sound
 c	net/minecraft/unmapped/C_3635204
 	m	()I	m_8742290	getColor	
-	m	(Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_6707278;I)I	m_4387507	getColor	
+	m	(Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_6707278;)I	m_4387507	getColor	
+		p	1		world	
+		p	2		pos	
+	m	(Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_6707278;I)I	m_7968533	getColor	
 		p	1		world	
 		p	2		pos	
 		p	3		tint	
-	m	(Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_6707278;)I	m_5476435	getColor	
-		p	1		world	
-		p	2		pos	
 	m	(Lnet/minecraft/unmapped/C_2441996;)I	m_8501302	getColor	
 		p	1		state	
 c	net/minecraft/unmapped/C_3655018
@@ -156,7 +156,7 @@ c	net/minecraft/unmapped/C_4030632
 		p	1		stack	
 		p	2		stage	
 c	net/minecraft/unmapped/C_4558465
-	m	(Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_6707278;I)I	m_4387507	m_4387507	
+	m	(Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_6707278;I)I	m_7968533	m_7968533	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
@@ -167,7 +167,6 @@ c	net/minecraft/unmapped/C_4636105
 	f	Lnet/minecraft/unmapped/C_4636105;	f_0359476	DESERT	
 	f	Lnet/minecraft/unmapped/C_4636105;	f_8243635	PLAINS	
 	f	Lnet/minecraft/unmapped/C_4636105;	f_0467620	HELL	
-	f	Ljava/lang/String;	f_1274684	name	
 	f	I	f_1895912	baseColor	
 	f	I	f_3675268	mutatedColor	
 	f	Lnet/minecraft/unmapped/C_4636105;	f_6847613	THE_END	
@@ -177,8 +176,6 @@ c	net/minecraft/unmapped/C_4636105
 	f	Lnet/minecraft/unmapped/C_4636105;	f_5710937	RIVER	
 	f	F	f_0932456	baseHeight	
 	f	F	f_8159255	heightVariation	
-	f	F	f_4089065	temperature	
-	f	F	f_5407299	downfall	
 	f	I	f_1215107	id	
 	f	Lnet/minecraft/unmapped/C_4636105;	f_0827753	FROZEN_OCEAN	
 	f	Lnet/minecraft/unmapped/C_4636105;	f_2801327	FROZEN_RIVER	
@@ -229,11 +226,8 @@ c	net/minecraft/unmapped/C_4636105
 	f	Lnet/minecraft/unmapped/C_4636105;	f_3233437	VOID	
 	f	Lnet/minecraft/unmapped/C_2991535;	f_7328142		MUTATED_BIOMES
 	f	Lnet/minecraft/unmapped/C_9241136;	f_8917085		REGISTRY
-	f	Ljava/lang/String;	f_0193611		name
 	f	F	f_0908540		depth
 	f	F	f_2149042		scale
-	f	F	f_9664360		temperature
-	f	F	f_6417499		downfall
 	f	Ljava/lang/String;	f_7626140		parent
 	f	Lnet/minecraft/unmapped/C_6160704;	f_7706376	tree	TREE
 	f	Lnet/minecraft/unmapped/C_0546437;	f_9114374	largeTree	LARGE_TREE
@@ -356,7 +350,7 @@ c	net/minecraft/unmapped/C_6385858
 		p	1			glowing
 	m	()Lnet/minecraft/unmapped/C_2787601;	m_8372771		getSoundCategory
 c	net/minecraft/unmapped/C_6391166
-	m	(Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_6707278;I)I	m_4387507	m_4387507	
+	m	(Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_6707278;I)I	m_7968533	m_7968533	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
@@ -454,7 +448,7 @@ c	net/minecraft/unmapped/C_9331929
 c	net/minecraft/unmapped/C_1825698
 	f	I	f_5246287	variant	
 		c	The variant of forest. The possible values are:\n<br> 0: normal\n<br> 1: flower\n<br> 2: birch\n<br> 3: roofed	
-	f	Lnet/minecraft/unmapped/C_1825698$C_8427198;	f_1046317		variant
+	f	Lnet/minecraft/unmapped/C_1825698$C_8427198;	f_5246287		variant
 	m	(II)V	<init>	<init>	
 		p	1		id	
 		p	2		type	
@@ -510,7 +504,7 @@ c	net/minecraft/unmapped/C_1825698$C_8427198		Variant
 c	net/minecraft/unmapped/C_2051228
 	f	I	f_1388653	variant	
 		c	The variant of forest. The possible values are:\n<br> 0: normal\n<br> 1: mega\n<br> 2: mega spruce	
-	f	Lnet/minecraft/unmapped/C_2051228$C_6634414;	f_8807757		variant
+	f	Lnet/minecraft/unmapped/C_2051228$C_6634414;	f_1388653		variant
 	m	(II)V	<init>	<init>	
 		p	1		id	
 		p	2		variant	
@@ -551,7 +545,7 @@ c	net/minecraft/unmapped/C_4402685
 		p	1			p_1
 c	net/minecraft/unmapped/C_6588851
 	m	()I	m_8742290	m_8742290	
-	m	(Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_6707278;I)I	m_4387507	m_4387507	
+	m	(Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_6707278;I)I	m_7968533	m_7968533	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
@@ -598,7 +592,7 @@ c	net/minecraft/unmapped/C_4413269$C_4731123
 		p	1			defaultValue
 c	net/minecraft/unmapped/C_5908980
 	m	()I	m_8742290	m_8742290	
-	m	(Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_6707278;I)I	m_4387507	m_4387507	
+	m	(Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_6707278;I)I	m_7968533	m_7968533	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
@@ -618,7 +612,7 @@ c	net/minecraft/unmapped/C_6297854$6379251	6379251
 	m	(Lnet/minecraft/unmapped/C_4636105;)V	<init>	<init>	
 		p	1		p_1	
 c	net/minecraft/unmapped/C_7015659
-	m	(Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_6707278;I)I	m_4387507	m_4387507	
+	m	(Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_6707278;I)I	m_7968533	m_7968533	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
@@ -634,7 +628,7 @@ c	net/minecraft/unmapped/C_8998010
 	f	I	f_9069115	moreTreesVariant	
 	f	I	f_6999529	mutatedVariant	
 	f	I	f_0135736	variant	
-	f	Lnet/minecraft/unmapped/C_8998010$C_8520406;	f_5075194		variant
+	f	Lnet/minecraft/unmapped/C_8998010$C_8520406;	f_0135736		variant
 	m	(IZ)V	<init>	<init>	
 		p	1		id	
 		p	2		moreTrees	
@@ -664,12 +658,21 @@ c	net/minecraft/unmapped/C_1250976
 		p	1			p_1
 c	net/minecraft/unmapped/C_3583868
 	m	()I	m_8742290	m_8742290	
-	m	(Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_6707278;I)I	m_4387507	m_4387507	
+	m	(Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_6707278;I)I	m_7968533	m_7968533	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
 	m	(Lnet/minecraft/unmapped/C_2441996;)I	m_8501302	m_8501302	
 		p	1		p_1	
+c	net/minecraft/unmapped/C_9255878
+	m	(IZ)V	<init>	<init>	
+		p	1		id	
+		p	2		spikes	
+	m	(I)Lnet/minecraft/unmapped/C_4636105;	m_0050328	m_0050328	
+		p	1		p_1	
+	m	(ZLnet/minecraft/unmapped/C_4636105$C_3036414;)V	<init>		<init>
+		p	1			spikes
+		p	2			settings
 c	net/minecraft/unmapped/C_4696879
 	m	(Lnet/minecraft/unmapped/C_2750078;I)I	m_6327257	m_6327257	
 		p	1		p_1	
@@ -740,7 +743,7 @@ c	net/minecraft/unmapped/C_8878495$9018156		9018156
 	m	(Ljava/lang/Object;)Z	apply		apply
 		p	1			entity
 c	net/minecraft/unmapped/C_9685768
-	m	(Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_6707278;I)I	m_4387507	m_4387507	
+	m	(Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_6707278;I)I	m_7968533	m_7968533	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
@@ -786,21 +789,12 @@ c	net/minecraft/unmapped/C_2787601	net/minecraft/client/sound/SoundCategory	net/
 		p	2			p_2
 		p	3			name
 	m	()Ljava/util/Set;	m_3496187		getNames
-c	net/minecraft/unmapped/C_3585246
-	m	(IZ)V	<init>	<init>	
-		p	1		id	
-		p	2		spikes	
-	m	(I)Lnet/minecraft/unmapped/C_4636105;	m_0050328	m_0050328	
-		p	1		p_1	
-	m	(ZLnet/minecraft/unmapped/C_4636105$C_3036414;)V	<init>		<init>
-		p	1			spikes
-		p	2			settings
 c	net/minecraft/unmapped/C_5279693
-	m	(Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_6707278;I)I	m_4387507	m_4387507	
+	m	(Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_6707278;I)I	m_7968533	m_7968533	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
-	m	(Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_6707278;)Lnet/minecraft/unmapped/C_5279693$C_4019419;	m_3892031	getVariant	
+	m	(Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_6707278;)Lnet/minecraft/unmapped/C_5279693$C_4019419;	m_6347806	getVariant	
 		p	1		world	
 		p	2		pos	
 c	net/minecraft/unmapped/C_5375025	net/minecraft/item/BushItem	
@@ -1111,23 +1105,23 @@ c	net/minecraft/unmapped/C_9588086
 	m	()Lnet/minecraft/unmapped/C_3245228;	m_4559372		getSound
 	m	()Lnet/minecraft/unmapped/C_2787601;	m_4621376		getCategory
 c	net/minecraft/unmapped/C_3273454
-	m	(Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_6707278;I)I	m_4387507	m_4387507	
+	m	(Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_6707278;I)I	m_7968533	m_7968533	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
 	m	(Lnet/minecraft/unmapped/C_2441996;)I	m_8501302	m_8501302	
 		p	1		p_1	
-c	net/minecraft/unmapped/C_1036880
+c	net/minecraft/unmapped/C_0756214
+	m	(Lnet/minecraft/unmapped/C_6954368;Lnet/minecraft/unmapped/C_0756214$C_4099433;Z)V	<init>		<init>
+		p	1			tracker
+		p	2			event
+		p	3			message
+c	net/minecraft/unmapped/C_4382481
 	f	Lnet/minecraft/unmapped/C_6471932;	f_5306831		colors
 	m	()V	<init>	<init>	
 	m	(Lnet/minecraft/unmapped/C_6471932;)V	<init>		<init>
 		p	1			colors
-c	net/minecraft/unmapped/C_5806653
-	m	(Lnet/minecraft/unmapped/C_6954368;Lnet/minecraft/unmapped/C_5806653$C_1507763;Z)V	<init>		<init>
-		p	1			tracker
-		p	2			event
-		p	3			message
-c	net/minecraft/unmapped/C_9697997
+c	net/minecraft/unmapped/C_7296673
 	f	Lnet/minecraft/unmapped/C_7688744;	f_3676614	options	
 	m	(Lnet/minecraft/unmapped/C_8559585;Lnet/minecraft/unmapped/C_7688744;)V	<init>	<init>	
 		p	1		modelShaper	

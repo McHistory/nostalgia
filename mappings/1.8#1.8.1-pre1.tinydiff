@@ -93,6 +93,12 @@ c	net/minecraft/unmapped/C_1124552
 	m	(Lnet/minecraft/unmapped/C_8554894;Lnet/minecraft/unmapped/C_1160655;)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
+c	net/minecraft/unmapped/C_1591456
+	f	Lnet/minecraft/unmapped/C_2861100;	f_7547462		EPOLL_EVENT_LOOP_GROUP
+c	net/minecraft/unmapped/C_1591456$8955729		8955729
+	m	()V	<init>		<init>
+	m	()Lio/netty/channel/epoll/EpollEventLoopGroup;	m_4072936		m_4072936
+	m	()Ljava/lang/Object;	m_0496269		m_0496269
 c	net/minecraft/unmapped/C_1826831
 c	net/minecraft/unmapped/C_1826831$3181655	3181655	
 	f	Lnet/minecraft/unmapped/C_1826831;	f_3214219	f_3214219	
@@ -107,6 +113,12 @@ c	net/minecraft/unmapped/C_2923961
 c	net/minecraft/unmapped/C_3080471
 	m	(Lnet/minecraft/unmapped/C_2441996;)Lnet/minecraft/unmapped/C_1160655;	m_3247759		m_3247759
 		p	1			p_1
+c	net/minecraft/unmapped/C_3414480	net/minecraft/block/MineralBlock	
+	f	Lnet/minecraft/unmapped/C_1160655;	f_7410812	color	
+	m	(Lnet/minecraft/unmapped/C_1160655;)V	<init>	<init>	
+		p	1		color	
+	m	(Lnet/minecraft/unmapped/C_2441996;)Lnet/minecraft/unmapped/C_1160655;	m_3247759	m_3247759	
+		p	1		p_1	
 c	net/minecraft/unmapped/C_3484604
 	m	()Ljava/lang/String;	m_0757767		m_0757767
 c	net/minecraft/unmapped/C_3635204
@@ -353,13 +365,6 @@ c	net/minecraft/unmapped/C_3891497
 c	net/minecraft/unmapped/C_5613525
 	m	()[Ljava/lang/String;	m_2603888	getKeys	
 	m	()Ljava/util/Set;	m_2603888		getKeys
-c	net/minecraft/unmapped/C_3440247
-	m	()Ljava/lang/String;	m_1043304	getPlugins	
-	m	(Ljava/lang/String;)Ljava/lang/String;	m_2998752	runRconCommand	
-		p	1		command	
-	m	()Ljava/lang/String;	m_1801574		getPlugins
-	m	(Ljava/lang/String;)Ljava/lang/String;	m_9179530		runRconCommand
-		p	1			command
 c	net/minecraft/unmapped/C_0380387
 c	net/minecraft/unmapped/C_0380387$6603455	6603455	
 	f	Lnet/minecraft/unmapped/C_0380387;	f_8045771	f_8045771	
@@ -443,8 +448,8 @@ c	net/minecraft/unmapped/C_5293696
 c	net/minecraft/unmapped/C_7293551
 	m	()Z	m_8770657		m_8770657
 	m	()Z	m_9232652		m_9232652
-	m	()Ljava/lang/String;	m_1801574		m_1801574
-	m	(Ljava/lang/String;)Ljava/lang/String;	m_9179530		m_9179530
+	m	()Ljava/lang/String;	m_1043304		m_1043304
+	m	(Ljava/lang/String;)Ljava/lang/String;	m_2998752		m_2998752
 		p	1			p_1
 c	net/minecraft/unmapped/C_8412059
 	m	()Z	m_9232652		m_9232652
@@ -536,7 +541,7 @@ c	net/minecraft/unmapped/C_2279766
 	f	Lgnu/trove/map/TIntObjectMap;	f_7341945	BY_ID	
 	f	I	f_6930527		MIN_ID
 	f	I	f_7041163		MAX_ID
-	f	[Lnet/minecraft/unmapped/C_2279766;	f_0334071		BY_ID
+	f	[Lnet/minecraft/unmapped/C_2279766;	f_7341945		BY_ID
 c	net/minecraft/unmapped/C_4354908
 	f	Lnet/minecraft/unmapped/C_2861100;	f_3497305		EPOLL_NETWORK_GROUP
 	m	(Ljava/net/InetAddress;I)Lnet/minecraft/unmapped/C_4354908;	m_4804240	connect	
@@ -550,18 +555,6 @@ c	net/minecraft/unmapped/C_4354908$1821364		1821364
 	m	()V	<init>		<init>
 	m	()Lio/netty/channel/epoll/EpollEventLoopGroup;	m_5549892		m_5549892
 	m	()Ljava/lang/Object;	m_0496269		m_0496269
-c	net/minecraft/unmapped/C_8345387
-	f	Lnet/minecraft/unmapped/C_2861100;	f_7547462		EPOLL_EVENT_LOOP_GROUP
-c	net/minecraft/unmapped/C_8345387$8955729		8955729
-	m	()V	<init>		<init>
-	m	()Lio/netty/channel/epoll/EpollEventLoopGroup;	m_4072936		m_4072936
-	m	()Ljava/lang/Object;	m_0496269		m_0496269
-c	net/minecraft/unmapped/C_1463666	net/minecraft/block/MineralBlock	
-	f	Lnet/minecraft/unmapped/C_1160655;	f_7410812	color	
-	m	(Lnet/minecraft/unmapped/C_1160655;)V	<init>	<init>	
-		p	1		color	
-	m	(Lnet/minecraft/unmapped/C_2441996;)Lnet/minecraft/unmapped/C_1160655;	m_3247759	m_3247759	
-		p	1		p_1	
 c	net/minecraft/unmapped/C_8414608
 	m	(Lnet/minecraft/unmapped/C_2441996;)Lnet/minecraft/unmapped/C_1160655;	m_3247759		m_3247759
 		p	1			p_1
@@ -612,7 +605,7 @@ c	net/minecraft/unmapped/C_1572627
 	m	(Ljavax/vecmath/Vector3f;Ljavax/vecmath/Vector3f;)[F	m_3958793	getShape	
 		p	1		from	
 		p	2		to	
-	m	(Ljavax/vecmath/Vector3f;Ljavax/vecmath/Vector3f;Lnet/minecraft/unmapped/C_8191764;Lnet/minecraft/unmapped/C_3374628;Lnet/minecraft/unmapped/C_3544601;Lnet/minecraft/unmapped/C_2334768;Lnet/minecraft/unmapped/C_4328322;ZZ)Lnet/minecraft/unmapped/C_7579090;	m_4643118	bakeQuad	
+	m	(Ljavax/vecmath/Vector3f;Ljavax/vecmath/Vector3f;Lnet/minecraft/unmapped/C_8191764;Lnet/minecraft/unmapped/C_3374628;Lnet/minecraft/unmapped/C_3544601;Lnet/minecraft/unmapped/C_2334768;Lnet/minecraft/unmapped/C_4328322;ZZ)Lnet/minecraft/unmapped/C_2400640;	m_4643118	bakeQuad	
 		p	1		from	
 		p	2		to	
 		p	3		elementFace	
@@ -647,7 +640,7 @@ c	net/minecraft/unmapped/C_1572627
 	m	(Ljavax/vecmath/AxisAngle4d;)Ljavax/vecmath/Matrix4d;	m_7352125	getRotationMatrix	
 		p	1		angle	
 	m	()Ljavax/vecmath/Matrix4d;	m_4549062	identityMatrix	
-	m	(Lorg/lwjgl/util/vector/Vector3f;Lorg/lwjgl/util/vector/Vector3f;Lnet/minecraft/unmapped/C_8191764;Lnet/minecraft/unmapped/C_3374628;Lnet/minecraft/unmapped/C_3544601;Lnet/minecraft/unmapped/C_2334768;Lnet/minecraft/unmapped/C_4328322;ZZ)Lnet/minecraft/unmapped/C_7579090;	m_4643118		bakeQuad
+	m	(Lorg/lwjgl/util/vector/Vector3f;Lorg/lwjgl/util/vector/Vector3f;Lnet/minecraft/unmapped/C_8191764;Lnet/minecraft/unmapped/C_3374628;Lnet/minecraft/unmapped/C_3544601;Lnet/minecraft/unmapped/C_2334768;Lnet/minecraft/unmapped/C_4328322;ZZ)Lnet/minecraft/unmapped/C_2400640;	m_4643118		bakeQuad
 		p	1			from
 		p	2			to
 		p	3			elementFace
@@ -694,12 +687,8 @@ c	net/minecraft/unmapped/C_0464265$C_8266237
 	m	(Lnet/minecraft/unmapped/C_0464265$C_8266237;)Lnet/minecraft/unmapped/C_0043270;	m_1052287		m_1052287
 		p	0			p_0
 c	net/minecraft/unmapped/C_0868273
-	m	(Z)V	m_8812589	updateButtons	
-		p	1		defaults	
 	m	(Z)V	m_7002538		updateDefaultsButton
 		p	1			active
-	m	(Z)V	m_0331508		updateButtons
-		p	1			defaults
 c	net/minecraft/unmapped/C_0488071
 c	net/minecraft/unmapped/C_0488071$C_6163144
 	f	Lcom/mojang/authlib/properties/PropertyMap;	f_4154352		profileProperties

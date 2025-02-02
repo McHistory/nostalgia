@@ -165,9 +165,9 @@ c	net/minecraft/unmapped/C_3699792
 c	net/minecraft/unmapped/C_3831356
 	m	(Lnet/minecraft/unmapped/C_2074023;DDDFI)V	m_7825810	render	
 		p	1		blockEntity	
-		p	2		x	
-		p	4		y	
-		p	6		z	
+		p	2		dx	
+		p	4		dy	
+		p	6		dz	
 		p	8		tickDelta	
 		p	9		blockMiningProgress	
 	m	(Lnet/minecraft/unmapped/C_2074023;DDDFIF)V	m_7825810		render
@@ -194,14 +194,10 @@ c	net/minecraft/unmapped/C_4237166
 		p	3			p_3
 		p	4			p_4
 c	net/minecraft/unmapped/C_4286596
-	m	(Lnet/minecraft/unmapped/C_2750078;)Z	m_1691146	addItem	
-		p	1		item	
 	m	(ILnet/minecraft/unmapped/C_2750078;)I	m_6343646		addItemStack
 		p	1			slot
 		p	2			item
-	m	(Lnet/minecraft/unmapped/C_2750078;)Z	m_4381741		addItem
-		p	1			item
-	m	(ILnet/minecraft/unmapped/C_2750078;)Z	m_1691146		addItem
+	m	(ILnet/minecraft/unmapped/C_2750078;)Z	m_8593839		addItem
 		p	1			slot
 		p	2			item
 	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_2750078;)V	m_8232326		offerItem
@@ -235,7 +231,7 @@ c	net/minecraft/unmapped/C_4917405
 		p	3		item	
 	m	(Lnet/minecraft/unmapped/C_8675191;)V	m_3967818	renderEnchantmentGlint	
 		p	1		model	
-	m	(Lnet/minecraft/unmapped/C_8373595;Lnet/minecraft/unmapped/C_7579090;I)V	m_1106133	renderQuad	
+	m	(Lnet/minecraft/unmapped/C_8373595;Lnet/minecraft/unmapped/C_2400640;I)V	m_1106133	renderQuad	
 		p	1		bufferBuilder	
 		p	2		quad	
 		p	3		color	
@@ -277,7 +273,7 @@ c	net/minecraft/unmapped/C_4917405
 	m	(Lnet/minecraft/unmapped/C_8675191;F)V	m_3967818		renderEnchantmentGlint
 		p	1			p_1
 		p	2			p_2
-	m	(Lnet/minecraft/unmapped/C_8373595;Lnet/minecraft/unmapped/C_7579090;IF)V	m_1106133		renderQuad
+	m	(Lnet/minecraft/unmapped/C_8373595;Lnet/minecraft/unmapped/C_2400640;IF)V	m_1106133		renderQuad
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -444,12 +440,6 @@ c	net/minecraft/unmapped/C_6923352
 	m	()V	m_9485001		m_9485001
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_7153081
-	m	(Lnet/minecraft/unmapped/C_2074023;DDDF)V	m_9869649	render	
-		p	1		blockEntity	
-		p	2		dx	
-		p	4		dy	
-		p	6		dz	
-		p	8		tickDelta	
 	m	(Lnet/minecraft/unmapped/C_2074023;DDDFI)V	m_1726036	render	
 		p	1		blockEntity	
 		p	2		dx	
@@ -457,13 +447,7 @@ c	net/minecraft/unmapped/C_7153081
 		p	6		dz	
 		p	8		tickDelta	
 		p	9		blockMiningProgress	
-	m	(Lnet/minecraft/unmapped/C_2074023;DDDF)V	m_4494721		render
-		p	1			blockEntity
-		p	2			dx
-		p	4			dy
-		p	6			dz
-		p	8			tickDelta
-	m	(Lnet/minecraft/unmapped/C_2074023;DDDFF)V	m_9869649		render
+	m	(Lnet/minecraft/unmapped/C_2074023;DDDFF)V	m_9241923		render
 		p	1			blockEntity
 		p	2			dx
 		p	4			dy
@@ -743,10 +727,10 @@ c	net/minecraft/unmapped/C_7281219	net/minecraft/stat/achievement/AchievementSta
 	f	Lnet/minecraft/unmapped/C_2785183;	f_2637800	achievementFormatter	
 	f	Lnet/minecraft/unmapped/C_2750078;	f_5998011	icon	
 	f	Z	f_1102336	challenge	
+	m	()Z	m_1818304	m_1818304	
 	m	()Lnet/minecraft/unmapped/C_7281219;	m_2205937	m_2205937	
 	m	()Lnet/minecraft/unmapped/C_7281219;	m_1632348	setChallenge	
 	m	()Lnet/minecraft/unmapped/C_7281219;	m_0233212	m_0233212	
-	m	()Z	m_1818304	m_1818304	
 	m	()Ljava/lang/String;	m_5454587	getDescription	
 	m	(Lnet/minecraft/unmapped/C_2785183;)Lnet/minecraft/unmapped/C_7281219;	m_8312996	setFormatter	
 		p	1		formatter	
@@ -1008,11 +992,7 @@ c	net/minecraft/unmapped/C_6028060$C_7731590
 		p	3		p_3	
 		p	4		p_4	
 c	net/minecraft/unmapped/C_6142023
-	m	(Lnet/minecraft/unmapped/C_2750078;)V	m_7015504	render	
-		p	1		item	
-	m	(Lnet/minecraft/unmapped/C_2750078;)V	m_2610812		render
-		p	1			item
-	m	(Lnet/minecraft/unmapped/C_2750078;F)V	m_7015504		render
+	m	(Lnet/minecraft/unmapped/C_2750078;F)V	m_5667716		render
 		p	1			item
 		p	2			tickDelta
 c	net/minecraft/unmapped/C_6600815
@@ -1202,35 +1182,35 @@ c	net/minecraft/unmapped/C_3514359
 		p	8		p_8	
 		p	9		p_9	
 	m	(DDDDDLjava/util/List;D)V	m_1103410	renderBeam	
-		p	1		x	
-		p	3		y	
-		p	5		z	
+		p	1		dx	
+		p	3		dy	
+		p	5		dz	
 		p	7		tickDelta	
 		p	9		beamAngle	
 		p	11		beamSections	
 		p	12		time	
-	m	(DDDDDDII[F)V	m_5308185	renderBeamSection	
-		p	0		x	
-		p	2		y	
-		p	4		z	
+	m	(DDDDDDII[F)V	m_1924778	renderBeamSection	
+		p	0		dx	
+		p	2		dy	
+		p	4		dz	
 		p	6		tickDelta	
 		p	8		beamAngle	
 		p	10		time	
-		p	12		bottom	
+		p	12		y	
 		p	13		height	
 		p	14		color	
-	m	(DDDDDDII[FDD)V	m_1924778	renderBeamSection	
-		p	0		x	
-		p	2		y	
-		p	4		z	
+	m	(DDDDDDII[FDD)V	m_8644843	renderBeamSection	
+		p	0		dx	
+		p	2		dy	
+		p	4		dz	
 		p	6		tickDelta	
 		p	8		beamAngle	
 		p	10		time	
-		p	12		bottom	
+		p	12		y	
 		p	13		height	
 		p	14		color	
-		p	15		rotationSpeed	
-		p	17		radius	
+		p	15		innerRadius	
+		p	17		outerRadius	
 c	net/minecraft/unmapped/C_6989019
 	f	J	f_8498546	lastBeamRenderTime	
 	f	F	f_2556684	beamAngle	

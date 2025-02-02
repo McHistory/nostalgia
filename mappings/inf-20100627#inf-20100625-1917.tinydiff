@@ -140,8 +140,6 @@ c	net/minecraft/unmapped/C_1021050
 c	net/minecraft/unmapped/C_1044273
 	m	(F)V	m_8428282	renderFancyClouds	
 		p	1		tickDelta	
-	m	()V	m_2968224	notifyAmbientDarknessChanged	
-	m	()V	m_0340972		m_0340972
 	m	(III)V	m_7307167	notifyBlockChanged	m_7307167
 		p	1		x	p_1
 		p	2		y	p_2
@@ -168,10 +166,11 @@ c	net/minecraft/unmapped/C_1044273
 		p	8		velocityX	p_8
 		p	10		velocityY	p_10
 		p	12		velocityZ	p_12
-	m	(Lnet/minecraft/unmapped/C_6385858;)V	m_0519413	notifyEntityAdded	m_0519413
+	m	(Lnet/minecraft/unmapped/C_6385858;)V	m_9088355	notifyEntityAdded	m_9088355
 		p	1		entity	p_1
-	m	(Lnet/minecraft/unmapped/C_6385858;)V	m_3338259	notifyEntityRemoved	m_3338259
+	m	(Lnet/minecraft/unmapped/C_6385858;)V	m_0878478	notifyEntityRemoved	m_0878478
 		p	1		entity	p_1
+	m	()V	m_2968224	notifyAmbientDarknessChanged	m_2968224
 c	net/minecraft/unmapped/C_2293006
 	m	()I	m_2112110		getWidth
 	m	()I	m_3634999		getHeight
@@ -209,6 +208,14 @@ c	net/minecraft/unmapped/C_2621421
 	m	(II)Z	m_7971956		mouseClicked
 		p	1			mouseX
 		p	2			mouseY
+c	net/minecraft/unmapped/C_2751481
+	m	(F)V	m_8801525		render
+		p	1			tickDelta
+	m	(F)V	m_6811825		renderOnFireEffect
+		p	1			tickDelta
+	m	()V	m_7443987		tick
+	m	()V	m_7973700		onBlockUsed
+	m	()V	m_3915071		onItemUsed
 c	net/minecraft/unmapped/C_3385278
 	m	(Ljava/lang/String;Lnet/minecraft/unmapped/C_1021050;)Lnet/minecraft/unmapped/C_3540933;	m_4982093		addHttpTexture
 		p	1			url
@@ -246,9 +253,8 @@ c	net/minecraft/unmapped/C_3624347
 		p	3			pitch
 c	net/minecraft/unmapped/C_4824661
 	m	()V	m_5102280		tick
-	m	(F)V	m_8576613		render
+	m	(F)V	m_2927621		renderWorld
 		p	1			tickDelta
-	m	(F)V	m_5195666	render	renderWorld
 c	net/minecraft/unmapped/C_5283200
 	f	Ljava/util/List;	f_1904622	blockEntitiesToBeRendered	
 	m	(Lnet/minecraft/unmapped/C_3906126;Ljava/util/List;IIIII)V	<init>	<init>	
@@ -287,14 +293,6 @@ c	net/minecraft/unmapped/C_8593406
 		p	2			p_2
 c	net/minecraft/unmapped/C_9846877
 	m	()V	m_7285859		lock
-c	net/minecraft/unmapped/C_1022696
-	m	(F)V	m_8801525		render
-		p	1			tickDelta
-	m	(F)V	m_6811825		renderOnFireEffect
-		p	1			tickDelta
-	m	()V	m_7443987		tick
-	m	()V	m_7973700		onBlockUsed
-	m	()V	m_3915071		onItemUsed
 c	net/minecraft/unmapped/C_5902900		net/minecraft/util/ProgressListener
 	m	()V	m_5266201		progressStartNoAbort
 	m	(Ljava/lang/String;)V	m_5570081		progressStage
@@ -328,11 +326,11 @@ c	net/minecraft/unmapped/C_9232749		net/minecraft/world/WorldEventListener
 		p	8			velocityX
 		p	10			velocityY
 		p	12			velocityZ
-	m	(Lnet/minecraft/unmapped/C_6385858;)V	m_0519413		notifyEntityAdded
+	m	(Lnet/minecraft/unmapped/C_6385858;)V	m_9088355		notifyEntityAdded
 		p	1			entity
-	m	(Lnet/minecraft/unmapped/C_6385858;)V	m_3338259		notifyEntityRemoved
+	m	(Lnet/minecraft/unmapped/C_6385858;)V	m_0878478		notifyEntityRemoved
 		p	1			entity
-	m	()V	m_0340972		notifyAmbientDarknessChanged
+	m	()V	m_2968224		notifyAmbientDarknessChanged
 c	net/minecraft/unmapped/C_8425960
 	m	(Ljava/lang/String;)V	m_5570081	progressStage	m_5570081
 		p	1		stage	p_1

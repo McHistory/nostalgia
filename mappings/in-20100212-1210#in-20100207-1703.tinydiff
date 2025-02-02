@@ -18,11 +18,21 @@ c	net/minecraft/unmapped/C_1013763
 	m	()Ljava/lang/String;	m_6640029	getDeathSound	
 	m	()Ljava/lang/String;	m_4351874	m_4351874	
 c	net/minecraft/unmapped/C_1124552
+	m	(Lnet/minecraft/unmapped/C_3906126;III)V	m_6712308	canSurviveOrBreak	
+		p	1		world	
+		p	2		x	
+		p	3		y	
+		p	4		z	
 	m	(Lnet/minecraft/unmapped/C_3906126;III)Z	m_6532724	canSurvive	
 		p	1		world	
 		p	2		x	
 		p	3		y	
 		p	4		z	
+	m	(Lnet/minecraft/unmapped/C_3906126;III)V	m_8518941		canSurviveOrBreak
+		p	1			world
+		p	2			x
+		p	3			y
+		p	4			z
 c	net/minecraft/unmapped/C_1414550
 	m	()Lnet/minecraft/unmapped/C_0336319;	m_9537830		m_9537830
 c	net/minecraft/unmapped/C_1415320
@@ -155,6 +165,38 @@ c	net/minecraft/unmapped/C_4030632
 	f	Lnet/minecraft/unmapped/C_4030632;	f_0810948	GOLDEN_CHESTPLATE	
 	f	Lnet/minecraft/unmapped/C_4030632;	f_5377435	GOLDEN_LEGGINGS	
 	f	Lnet/minecraft/unmapped/C_4030632;	f_1037523	GOLDEN_BOOTS	
+c	net/minecraft/unmapped/C_4078372
+	f	I	f_6894446	phase	
+	f	I	f_8664228	phaseCount	
+	f	F	f_1231443	f_1231443	
+	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_1124552;I)V	m_4779864	placePlant	
+		p	1		world	
+		p	2		plant	
+		p	3		chance	
+	m	(IIII)I	m_8354142	placeOre	
+		p	1		ore	
+		p	2		chance	
+		p	3		minY	
+		p	4		maxY	
+	m	()V	m_1407652	nextPhase	
+	m	(F)V	m_8611747	phaseProgress	
+		p	1		progress	
+	m	([I)V	m_7857109		placeSurface
+		p	1			heightMap
+	m	([I)V	m_6681430		placeFlowers
+		p	1			heightMap
+	m	([I)V	m_9961605		placeMushrooms
+		p	1			heightMap
+	m	(IIIIII)I	m_8354142		placeOre
+		p	1			ore
+		p	2			chance
+		p	3			minY
+		p	4			p_4
+		p	5			p_5
+		p	6			maxY
+	m	(I)V	m_8611747		phaseProgress
+		p	1			percentage
+	m	()V	m_9060872		placeUndergroundLakes
 c	net/minecraft/unmapped/C_4718187
 	m	()V	m_5818797	m_5818797	
 	m	(FFF)Z	m_2527158	m_2527158	
@@ -216,7 +258,7 @@ c	net/minecraft/unmapped/C_6644571
 		p	2		p_2	
 		p	3		p_3	
 		p	4		p_4	
-	m	(Lnet/minecraft/unmapped/C_3906126;III)V	m_6712308		m_6712308
+	m	(Lnet/minecraft/unmapped/C_3906126;III)V	m_8518941		m_8518941
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -235,7 +277,7 @@ c	net/minecraft/client/Minecraft$7968884
 		p	2		p_2	
 	m	(Lnet/minecraft/client/Minecraft;)V	<init>		<init>
 		p	1			p_1
-c	net/minecraft/client/Minecraft$7759597		7759597
+c	net/minecraft/client/Minecraft$3076803		3076803
 	f	Lnet/minecraft/client/Minecraft;	f_0270155		f_0270155
 	m	(Lnet/minecraft/client/Minecraft;)V	<init>		<init>
 		p	1			p_1
@@ -266,7 +308,7 @@ c	net/minecraft/unmapped/C_3385278
 		p	2		backup	
 	m	(I)V	m_2714907	bind	
 		p	0		id	
-	m	(Ljava/lang/String;Lnet/minecraft/unmapped/C_3738802;)Lnet/minecraft/unmapped/C_1812290;	m_4173240	addHttpTexture	
+	m	(Ljava/lang/String;Lnet/minecraft/unmapped/C_9087319;)Lnet/minecraft/unmapped/C_1812290;	m_4173240	addHttpTexture	
 		p	1		url	
 		p	2		processor	
 	m	(Ljava/lang/String;)V	m_0137573	removeHttpTexture	
@@ -337,35 +379,13 @@ c	net/minecraft/unmapped/C_9232749
 	m	(Lnet/minecraft/unmapped/C_6385858;)V	m_5011830	notifyEntityRemoved	
 		p	1		entity	
 	m	()V	m_5371592	notifySunLightChanged	
-c	net/minecraft/unmapped/C_1051907
-	m	(ILnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_2411117;)I	m_6963744		run
-		p	1			attempts
-		p	2			center
-		p	3			listener
-c	net/minecraft/unmapped/C_1812290	net/minecraft/client/render/texture/HttpTexture	
-	f	Ljava/awt/image/BufferedImage;	f_0926982	image	
-	f	I	f_0708736	requestCount	
-	f	I	f_7896602	removedCount	
-	f	Z	f_1660532	uploaded	
-	m	(Ljava/lang/String;Lnet/minecraft/unmapped/C_3738802;)V	<init>	<init>	
-		p	1		url	
-		p	2		processor	
-c	net/minecraft/unmapped/C_1812290$7759597	7759597	
-	f	Ljava/lang/String;	f_2566715	f_2566715	
-	f	Lnet/minecraft/unmapped/C_3738802;	f_8477267	f_8477267	
-	f	Lnet/minecraft/unmapped/C_1812290;	f_2701465	f_2701465	
-	m	(Lnet/minecraft/unmapped/C_1812290;Ljava/lang/String;Lnet/minecraft/unmapped/C_3738802;)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-	m	()V	run	run	
-c	net/minecraft/unmapped/C_3738802	net/minecraft/client/render/texture/SkinImageProcessor	
+c	net/minecraft/unmapped/C_9087319	net/minecraft/client/render/texture/SkinImageProcessor	
 	f	[I	f_2409439	data	
 	f	I	f_3068049	width	
 	f	I	f_0873984	height	
+	m	()V	<init>	<init>	
 	m	(Ljava/awt/image/BufferedImage;)Ljava/awt/image/BufferedImage;	m_6933932	process	
 		p	1		image	
-	m	()V	<init>	<init>	
 	m	(IIII)V	m_4367110	setTransparent	
 		p	1		u1	
 		p	2		v1	
@@ -376,38 +396,28 @@ c	net/minecraft/unmapped/C_3738802	net/minecraft/client/render/texture/SkinImage
 		p	2		v1	
 		p	3		u2	
 		p	4		v2	
-c	net/minecraft/unmapped/C_5376418
-	f	I	f_6894446	phase	
-	f	I	f_8664228	phaseCount	
-	f	F	f_1231443	f_1231443	
-	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_1124552;I)V	m_4779864	placePlant	
-		p	1		world	
-		p	2		plant	
-		p	3		chance	
-	m	(IIII)I	m_8354142	placeOre	
-		p	1		ore	
-		p	2		chance	
-		p	3		minY	
-		p	4		maxY	
-	m	()V	m_1407652	nextPhase	
-	m	(F)V	m_8611747	phaseProgress	
-		p	1		progress	
-	m	([I)V	m_7857109		placeSurface
-		p	1			heightMap
-	m	([I)V	m_6681430		placeFlowers
-		p	1			heightMap
-	m	([I)V	m_9961605		placeMushrooms
-		p	1			heightMap
-	m	(IIIIII)I	m_8354142		placeOre
-		p	1			ore
-		p	2			chance
-		p	3			minY
-		p	4			p_4
-		p	5			p_5
-		p	6			maxY
-	m	(I)V	m_8611747		phaseProgress
-		p	1			percentage
-	m	()V	m_9060872		placeUndergroundLakes
+c	net/minecraft/unmapped/C_1051907
+	m	(ILnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_2411117;)I	m_6963744		run
+		p	1			attempts
+		p	2			center
+		p	3			listener
+c	net/minecraft/unmapped/C_1812290	net/minecraft/client/render/texture/HttpTexture	
+	f	Ljava/awt/image/BufferedImage;	f_0926982	image	
+	f	I	f_0708736	requestCount	
+	f	I	f_7896602	removedCount	
+	f	Z	f_1660532	uploaded	
+	m	(Ljava/lang/String;Lnet/minecraft/unmapped/C_9087319;)V	<init>	<init>	
+		p	1		url	
+		p	2		processor	
+c	net/minecraft/unmapped/C_1812290$7759597	7759597	
+	f	Ljava/lang/String;	f_2566715	f_2566715	
+	f	Lnet/minecraft/unmapped/C_9087319;	f_8477267	f_8477267	
+	f	Lnet/minecraft/unmapped/C_1812290;	f_2701465	f_2701465	
+	m	(Lnet/minecraft/unmapped/C_1812290;Ljava/lang/String;Lnet/minecraft/unmapped/C_9087319;)V	<init>	<init>	
+		p	1		p_1	
+		p	2		p_2	
+		p	3		p_3	
+	m	()V	run	run	
 c	net/minecraft/unmapped/C_7079324	net/minecraft/world/LightEngine	
 	f	I	f_1773705	dirtyPositionsRemaining	
 	f	Ljava/util/List;	f_4303376	pendingPositions	
@@ -422,7 +432,7 @@ c	net/minecraft/unmapped/C_7079324	net/minecraft/world/LightEngine
 	f	[I	f_7568118	heightMap	
 	f	[I	f_5882030	dirtyPositions	
 		c	Array of ositions that are marked dirty, i.e. needing a re-calculation of the light value.\n<p>\nThis array is limited to 2^15 (~32k) positions. If any more needed, this array is added\nto the {@link pendingPositions} queue, and a new array is created. This limits the number\nof light calculations that can happen at once.	
-	f	Lnet/minecraft/unmapped/C_8401487;	f_4421655	sunLightUpdate	
+	f	Lnet/minecraft/unmapped/C_7079324$C_8401487;	f_4421655	sunLightUpdate	
 		c	The remaining region that requires light updates after a change in sun light.	
 	f	I	f_6849912	prevSunLightChange	
 		c	The change in the sun light value due to the last change in sun light.	
@@ -457,7 +467,7 @@ c	net/minecraft/unmapped/C_7079324	net/minecraft/world/LightEngine
 	m	()V	m_4706545	update	
 		c	Work through the next batch of light calculations.\n<p>\nFirst, the light engine handles any pending regionChanged updates. These are queued\nafter light values have changed.\n<p>\nIf there is a pending sun light update, that will be handled next. Otherwise, the\nnext pending light update region is marked as dirty. The positions in this region will\nbe queued for light calculations later on in the method.\n<br> Then, the height map will be re-calculated for the next pending height map update\nregion. If the height for any column changes, the entire column will be marked dirty.\n<p>\nThen, the light engine will work through up to 1024 passes over the {@link dirtyPositions}\nand {@link pendingPositions} queues. If the {@link dirtyPositions} queue is empty,\nit will be replaced by the next queue in {@link pendingPositions}.\n<br> For each position in the {@link dirtyPositions} queue, the light value at that\nposition is recalculated based on the sun light, neighboring light values, and the\nopacity and light emission of the block at the position.\n<br> If the light value at the position changed, each of the 6 neighboring positions\nchecks if its light value needs updating, and if so, is marked dirty.\n<p>\nLastly, the region containing all positions where the light value changed is added\nto the {@link regionChangedUpdates} queue.	
 	m	()Ljava/lang/String;	m_3359335	getDebugInfo	
-c	net/minecraft/unmapped/C_8401487	net/minecraft/world/LightUpdate	
+c	net/minecraft/unmapped/C_7079324$C_8401487	LightUpdate	
 	f	I	f_9889018	minX	
 	f	I	f_9201346	minY	
 	f	I	f_8633789	minZ	

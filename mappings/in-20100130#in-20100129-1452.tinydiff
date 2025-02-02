@@ -111,6 +111,16 @@ c	net/minecraft/unmapped/C_0387400$C_2178068		CraftingInventory
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_0387400$C_2178068;)[Lnet/minecraft/unmapped/C_2750078;	m_7061829		m_7061829
 		p	0			p_0
+c	net/minecraft/unmapped/C_0387400$C_3002588		CraftingResultSlot
+	f	Lnet/minecraft/unmapped/C_0387400;	f_4120416		inventory
+	m	(Lnet/minecraft/unmapped/C_0387400;Lnet/minecraft/unmapped/C_4390289;III)V	<init>		<init>
+		p	1			p_1
+		p	2			p_2
+		p	3			p_3
+		p	4			p_4
+		p	5			p_5
+	m	()Z	m_6628482		m_6628482
+	m	()V	m_7573710		m_7573710
 c	net/minecraft/unmapped/C_0387400$C_6095546		ResultInventory
 	f	[Lnet/minecraft/unmapped/C_2750078;	f_8023306		items
 	m	(Lnet/minecraft/unmapped/C_0387400;B)V	<init>		<init>
@@ -126,16 +136,6 @@ c	net/minecraft/unmapped/C_0387400$C_6095546		ResultInventory
 	m	()I	m_6204563		m_6204563
 	m	(Lnet/minecraft/unmapped/C_0387400;)V	<init>		<init>
 		p	1			p_1
-c	net/minecraft/unmapped/C_0387400$C_8687811		CraftingResultSlot
-	f	Lnet/minecraft/unmapped/C_0387400;	f_6291219		inventory
-	m	(Lnet/minecraft/unmapped/C_0387400;Lnet/minecraft/unmapped/C_4390289;III)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
-	m	()Z	m_6628482		m_6628482
-	m	()V	m_7573710		m_7573710
 c	net/minecraft/unmapped/C_1991567	net/minecraft/crafting/ToolRecipes	
 	f	[[Ljava/lang/String;	f_7879373	patterns	
 	f	[[Ljava/lang/Object;	f_2659207	recipes	
@@ -174,6 +174,17 @@ c	net/minecraft/unmapped/C_2725397	net/minecraft/crafting/WeaponRecipes
 	m	()V	<init>	<init>	
 	m	(Lnet/minecraft/unmapped/C_2154975;)V	m_1391002	register	
 		p	0		p_0	
+c	net/minecraft/unmapped/C_3002588	net/minecraft/client/gui/screen/inventory/menu/CraftingResultSlot	
+	f	Lnet/minecraft/unmapped/C_4390289;	f_4120416	craftingInventory	
+	m	(Lnet/minecraft/unmapped/C_7542541;Lnet/minecraft/unmapped/C_4390289;Lnet/minecraft/unmapped/C_4390289;III)V	<init>	<init>	
+		p	1		screen	
+		p	2		craftingInventory	
+		p	3		inventory	
+		p	4		id	
+		p	5		x	
+		p	6		y	
+	m	()V	m_7573710	m_7573710	
+	m	()Z	m_6628482	m_6628482	
 c	net/minecraft/unmapped/C_3699792
 	f	Lnet/minecraft/unmapped/C_4917405;	f_8774221	ITEM_RENDERER	
 	f	Lnet/minecraft/unmapped/C_3466301;	f_8774221		ITEM_RENDERER
@@ -281,17 +292,6 @@ c	net/minecraft/unmapped/C_7542541$C_7192378		InventorySlot
 		p	1			item
 	m	(Lnet/minecraft/unmapped/C_7542541$C_7192378;)Lnet/minecraft/unmapped/C_4390289;	m_0357715		m_0357715
 		p	0			p_0
-c	net/minecraft/unmapped/C_8687811	net/minecraft/client/gui/screen/inventory/menu/CraftingResultSlot	
-	f	Lnet/minecraft/unmapped/C_4390289;	f_6291219	craftingInventory	
-	m	(Lnet/minecraft/unmapped/C_7542541;Lnet/minecraft/unmapped/C_4390289;Lnet/minecraft/unmapped/C_4390289;III)V	<init>	<init>	
-		p	1		screen	
-		p	2		craftingInventory	
-		p	3		inventory	
-		p	4		id	
-		p	5		x	
-		p	6		y	
-	m	()V	m_7573710	m_7573710	
-	m	()Z	m_6628482	m_6628482	
 c	net/minecraft/unmapped/C_9302567
 	m	(Lnet/minecraft/unmapped/C_1414550;)V	m_4654281	renderShapeFlat	
 		p	0		shape	
@@ -309,7 +309,7 @@ c	net/minecraft/unmapped/C_1379168
 c	net/minecraft/unmapped/C_0726496	net/minecraft/unmapped/C_0726496	
 	f	Ljavax/swing/JDialog;	f_6928057	f_6928057	
 	m	()V	<init>	<init>	
-	m	(Ljava/awt/Component;)Ljavax/swing/JDialog;	m_1414449	m_1414449	
+	m	(Ljava/awt/Component;)Ljavax/swing/JDialog;	createDialog	createDialog	
 		p	1		p_1	
 c	net/minecraft/unmapped/C_0726496$4939092	4939092	
 	f	Lnet/minecraft/unmapped/C_0726496;	f_1093342	f_1093342	
