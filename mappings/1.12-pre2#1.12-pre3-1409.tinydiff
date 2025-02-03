@@ -1193,15 +1193,15 @@ c	net/minecraft/unmapped/C_5942367		net/minecraft/item/StackedContents
 	m	()V	<init>		<init>
 	m	(Lnet/minecraft/unmapped/C_2750078;)V	m_8765760		addUnenchantedInput
 		p	1			item
-	m	(Lnet/minecraft/unmapped/C_2750078;)I	m_1214573		getItemId
+	m	(Lnet/minecraft/unmapped/C_2750078;)I	m_1214573		getStackingIndex
 		p	0			item
 	m	(I)Z	m_3649072		contains
-		p	1			itemId
+		p	1			index
 	m	(II)I	m_7820743		consume
-		p	1			itemId
+		p	1			index
 		p	2			count
 	m	(II)V	m_2824674		addInput
-		p	1			itemId
+		p	1			index
 		p	2			count
 	m	(Lnet/minecraft/unmapped/C_7177762;Lit/unimi/dsi/fastutil/ints/IntList;)Z	m_5261135		canCraft
 		p	1			recipe
@@ -1217,8 +1217,8 @@ c	net/minecraft/unmapped/C_5942367		net/minecraft/item/StackedContents
 		p	1			recipe
 		p	2			limit
 		p	3			output
-	m	(I)Lnet/minecraft/unmapped/C_2750078;	m_2369449		getStackFromId
-		p	0			itemId
+	m	(I)Lnet/minecraft/unmapped/C_2750078;	m_2369449		fromStackingIndex
+		p	0			index
 	m	()V	m_6851576		clear
 	m	(Lnet/minecraft/unmapped/C_5942367;II)V	m_4322618		m_4322618
 		p	0			p_0
@@ -1243,36 +1243,36 @@ c	net/minecraft/unmapped/C_5942367$C_2663751		Matcher
 	m	(I)Z	m_5892711		checkRequirements
 		p	1			multiplier
 	m	(I)Z	m_2640085		getRequirement
-		p	1			itemId
+		p	1			item
 	m	(I)V	m_7047496		unfulfillRequirement
-		p	1			itemId
+		p	1			item
 	m	(I)I	m_1140792		getRequirementIndex
-		p	1			itemId
+		p	1			item
 	m	(ZII)Z	m_4897973		needsRequirement
 		p	1			reversed
-		p	2			itemIndex
+		p	2			index
 		p	3			ingredientIndex
 	m	(ZII)Z	m_7360841		checkRequirement
 		p	1			reversed
-		p	2			itemIndex
+		p	2			index
 		p	3			ingredientIndex
 	m	(ZII)V	m_8303505		flipRequirement
 		p	1			reversed
-		p	2			itemIndex
+		p	2			index
 		p	3			ingredientIndex
 	m	(ZII)I	m_9193620		getRequirementIndex
 		p	1			reversed
-		p	2			itemIndex
+		p	2			index
 		p	3			ingredientIndex
 	m	(ZI)V	m_1015906		addRequirement
 		p	1			reversed
-		p	2			itemId
+		p	2			item
 	m	(ZI)Z	m_8457609		isRequirementUnfulfilled
 		p	1			reversed
-		p	2			itemId
+		p	2			item
 	m	(ZI)I	m_8634996		getRequirementIndex
 		p	1			reversed
-		p	2			itemId
+		p	2			item
 	m	(ILit/unimi/dsi/fastutil/ints/IntList;)I	m_8550965		countCrafts
 		p	1			minimum
 		p	2			output
