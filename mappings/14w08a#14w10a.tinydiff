@@ -428,13 +428,13 @@ c	net/minecraft/unmapped/C_0097022$C_2493958		Serializer
 		p	2			p_2
 		p	3			p_3
 	m	(Ljava/lang/Object;Ljava/lang/reflect/Type;Lcom/google/gson/JsonSerializationContext;)Lcom/google/gson/JsonElement;	serialize		serialize
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+		p	1			value
+		p	2			type
+		p	3			ctx
 	m	(Lcom/google/gson/JsonElement;Ljava/lang/reflect/Type;Lcom/google/gson/JsonDeserializationContext;)Ljava/lang/Object;	deserialize		deserialize
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+		p	1			element
+		p	2			type
+		p	3			ctx
 	m	(Lnet/minecraft/unmapped/C_0097022;Lnet/minecraft/unmapped/C_0097022$5084338;)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
@@ -2039,10 +2039,10 @@ c	net/minecraft/unmapped/C_7143605$3022970		3022970
 	m	([Lcom/mojang/authlib/GameProfile;)V	<init>		<init>
 		p	1			p_1
 	m	(Lcom/mojang/authlib/GameProfile;)V	onProfileLookupSucceeded		onProfileLookupSucceeded
-		p	1			p_1
+		p	1			profile
 	m	(Lcom/mojang/authlib/GameProfile;Ljava/lang/Exception;)V	onProfileLookupFailed		onProfileLookupFailed
-		p	1			p_1
-		p	2			p_2
+		p	1			profile
+		p	2			e
 c	net/minecraft/unmapped/C_7143605$7184979		7184979
 	m	()V	<init>		<init>
 	m	()[Ljava/lang/reflect/Type;	getActualTypeArguments		getActualTypeArguments
@@ -2078,13 +2078,13 @@ c	net/minecraft/unmapped/C_7143605$C_7326232		Serializer
 		p	2			p_2
 		p	3			p_3
 	m	(Ljava/lang/Object;Ljava/lang/reflect/Type;Lcom/google/gson/JsonSerializationContext;)Lcom/google/gson/JsonElement;	serialize		serialize
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+		p	1			value
+		p	2			type
+		p	3			ctx
 	m	(Lcom/google/gson/JsonElement;Ljava/lang/reflect/Type;Lcom/google/gson/JsonDeserializationContext;)Ljava/lang/Object;	deserialize		deserialize
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+		p	1			element
+		p	2			type
+		p	3			ctx
 	m	(Lnet/minecraft/unmapped/C_7143605;Lnet/minecraft/unmapped/C_7143605$3022970;)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
@@ -2343,10 +2343,10 @@ c	net/minecraft/unmapped/C_9156763$0725254		0725254
 		p	1			p_1
 		p	2			p_2
 	m	(Lcom/mojang/authlib/GameProfile;)V	onProfileLookupSucceeded		onProfileLookupSucceeded
-		p	1			p_1
+		p	1			profile
 	m	(Lcom/mojang/authlib/GameProfile;Ljava/lang/Exception;)V	onProfileLookupFailed		onProfileLookupFailed
-		p	1			p_1
-		p	2			p_2
+		p	1			profile
+		p	2			e
 c	net/minecraft/unmapped/C_9156763$2617738		2617738
 	f	Lnet/minecraft/server/MinecraftServer;	f_4946064		f_4946064
 	f	Lnet/minecraft/unmapped/C_8127368;	f_0441390		f_0441390
@@ -2354,10 +2354,10 @@ c	net/minecraft/unmapped/C_9156763$2617738		2617738
 		p	1			p_1
 		p	2			p_2
 	m	(Lcom/mojang/authlib/GameProfile;)V	onProfileLookupSucceeded		onProfileLookupSucceeded
-		p	1			p_1
+		p	1			profile
 	m	(Lcom/mojang/authlib/GameProfile;Ljava/lang/Exception;)V	onProfileLookupFailed		onProfileLookupFailed
-		p	1			p_1
-		p	2			p_2
+		p	1			profile
+		p	2			e
 c	net/minecraft/unmapped/C_9156763$6656922		6656922
 	f	Lnet/minecraft/server/MinecraftServer;	f_8454284		f_8454284
 	f	Ljava/util/Map;	f_9749436		f_9749436
@@ -2367,10 +2367,10 @@ c	net/minecraft/unmapped/C_9156763$6656922		6656922
 		p	2			p_2
 		p	3			p_3
 	m	(Lcom/mojang/authlib/GameProfile;)V	onProfileLookupSucceeded		onProfileLookupSucceeded
-		p	1			p_1
+		p	1			profile
 	m	(Lcom/mojang/authlib/GameProfile;Ljava/lang/Exception;)V	onProfileLookupFailed		onProfileLookupFailed
-		p	1			p_1
-		p	2			p_2
+		p	1			profile
+		p	2			e
 c	net/minecraft/unmapped/C_9156763$8494773		8494773
 	f	Lnet/minecraft/server/MinecraftServer;	f_3957924		f_3957924
 	f	Lnet/minecraft/unmapped/C_0411092;	f_3561987		f_3561987
@@ -2378,10 +2378,10 @@ c	net/minecraft/unmapped/C_9156763$8494773		8494773
 		p	1			p_1
 		p	2			p_2
 	m	(Lcom/mojang/authlib/GameProfile;)V	onProfileLookupSucceeded		onProfileLookupSucceeded
-		p	1			p_1
+		p	1			profile
 	m	(Lcom/mojang/authlib/GameProfile;Ljava/lang/Exception;)V	onProfileLookupFailed		onProfileLookupFailed
-		p	1			p_1
-		p	2			p_2
+		p	1			profile
+		p	2			e
 c	net/minecraft/unmapped/C_9156763$9795744		9795744
 	f	Lnet/minecraft/unmapped/C_7293551;	f_3030994		f_3030994
 	f	Ljava/io/File;	f_9418380		f_9418380
@@ -2395,10 +2395,10 @@ c	net/minecraft/unmapped/C_9156763$9795744		9795744
 		p	4			p_4
 		p	5			p_5
 	m	(Lcom/mojang/authlib/GameProfile;)V	onProfileLookupSucceeded		onProfileLookupSucceeded
-		p	1			p_1
+		p	1			profile
 	m	(Lcom/mojang/authlib/GameProfile;Ljava/lang/Exception;)V	onProfileLookupFailed		onProfileLookupFailed
-		p	1			p_1
-		p	2			p_2
+		p	1			profile
+		p	2			e
 	m	(Ljava/io/File;Ljava/lang/String;Ljava/lang/String;)V	m_9557492		convertPlayerFile
 		p	1			dir
 		p	2			fileName

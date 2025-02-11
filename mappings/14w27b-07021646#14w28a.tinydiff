@@ -30,7 +30,7 @@ c	net/minecraft/unmapped/C_0386427$0027322		0027322
 	m	(Lio/netty/channel/ChannelFuture;)V	m_1182008		m_1182008
 		p	1			p_1
 	m	(Lio/netty/util/concurrent/Future;)V	operationComplete		operationComplete
-		p	1			p_1
+		p	1			future
 c	net/minecraft/unmapped/C_0806362
 	m	(Lnet/minecraft/unmapped/C_2334550;Lnet/minecraft/unmapped/C_6385858;FFFFFF)V	m_7521183	m_7521183	
 		p	1		p_1	
@@ -2649,9 +2649,9 @@ c	net/minecraft/unmapped/C_5170502		net/minecraft/network/CompressionEncoder
 	m	(I)V	m_0811546		setThreshold
 		p	1			threshold
 	m	(Lio/netty/channel/ChannelHandlerContext;Ljava/lang/Object;Lio/netty/buffer/ByteBuf;)V	encode		encode
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+		p	1			ctx
+		p	2			msg
+		p	3			out
 c	net/minecraft/unmapped/C_6447889		net/minecraft/network/packet/s2c/play/CompressionThresholdS2CPacket
 	f	I	f_9381381		compressionThreshold
 	m	()V	<init>		<init>

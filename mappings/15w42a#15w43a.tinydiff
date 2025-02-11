@@ -1368,13 +1368,13 @@ c	net/minecraft/unmapped/C_1506042$C_6674240		Serializer
 		p	2			p_2
 		p	3			p_3
 	m	(Ljava/lang/Object;Ljava/lang/reflect/Type;Lcom/google/gson/JsonSerializationContext;)Lcom/google/gson/JsonElement;	serialize		serialize
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+		p	1			value
+		p	2			type
+		p	3			ctx
 	m	(Lcom/google/gson/JsonElement;Ljava/lang/reflect/Type;Lcom/google/gson/JsonDeserializationContext;)Ljava/lang/Object;	deserialize		deserialize
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+		p	1			element
+		p	2			type
+		p	3			ctx
 c	net/minecraft/unmapped/C_1973575		net/minecraft/world/gen/loot/functions/EnchantWithLevelsFunction
 	f	Lnet/minecraft/unmapped/C_8197819;	f_0640655		levels
 	f	Z	f_8596933		treasure
@@ -1490,13 +1490,13 @@ c	net/minecraft/unmapped/C_3605284$C_0091716		Serializer
 		p	2			p_2
 		p	3			p_3
 	m	(Ljava/lang/Object;Ljava/lang/reflect/Type;Lcom/google/gson/JsonSerializationContext;)Lcom/google/gson/JsonElement;	serialize		serialize
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+		p	1			value
+		p	2			type
+		p	3			ctx
 	m	(Lcom/google/gson/JsonElement;Ljava/lang/reflect/Type;Lcom/google/gson/JsonDeserializationContext;)Ljava/lang/Object;	deserialize		deserialize
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+		p	1			element
+		p	2			type
+		p	3			ctx
 c	net/minecraft/unmapped/C_3735648		net/minecraft/world/gen/loot/conditions/LootItemCondition
 	m	(Ljava/util/Random;Lnet/minecraft/unmapped/C_7630919;)Z	m_4020207		test
 		p	1			random
@@ -1609,13 +1609,13 @@ c	net/minecraft/unmapped/C_6941981$C_7010632		Serializer
 		p	2			p_2
 		p	3			p_3
 	m	(Ljava/lang/Object;Ljava/lang/reflect/Type;Lcom/google/gson/JsonSerializationContext;)Lcom/google/gson/JsonElement;	serialize		serialize
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+		p	1			value
+		p	2			type
+		p	3			ctx
 	m	(Lcom/google/gson/JsonElement;Ljava/lang/reflect/Type;Lcom/google/gson/JsonDeserializationContext;)Ljava/lang/Object;	deserialize		deserialize
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+		p	1			element
+		p	2			type
+		p	3			ctx
 c	net/minecraft/unmapped/C_7281155		net/minecraft/world/gen/loot/functions/SetNbtFunction
 	f	Lnet/minecraft/unmapped/C_2800860;	f_4291982		nbt
 	m	([Lnet/minecraft/unmapped/C_3735648;Lnet/minecraft/unmapped/C_2800860;)V	<init>		<init>
@@ -1672,7 +1672,7 @@ c	net/minecraft/unmapped/C_7464728$C_8228305		CacheLoader
 	m	(Lnet/minecraft/unmapped/C_0561170;)Lnet/minecraft/unmapped/C_3605284;	m_5398410		loadFromAssets
 		p	1			id
 	m	(Ljava/lang/Object;)Ljava/lang/Object;	load		load
-		p	1			p_1
+		p	1			key
 	m	(Lnet/minecraft/unmapped/C_7464728;Lnet/minecraft/unmapped/C_7464728$7410399;)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
@@ -1720,10 +1720,10 @@ c	net/minecraft/unmapped/C_7630919$C_1590282$C_7988249		Serializer
 	m	(Lcom/google/gson/stream/JsonReader;)Lnet/minecraft/unmapped/C_7630919$C_1590282;	m_5788856		m_5788856
 		p	1			p_1
 	m	(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;	read		read
-		p	1			p_1
+		p	1			reader
 	m	(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Object;)V	write		write
-		p	1			p_1
-		p	2			p_2
+		p	1			writer
+		p	2			value
 c	net/minecraft/unmapped/C_7630919$C_2187393		Builder
 	f	Lnet/minecraft/unmapped/C_6385858;	f_5155033		thisEntity
 	f	Lnet/minecraft/unmapped/C_5009044;	f_8786121		killerPlayer
@@ -1769,13 +1769,13 @@ c	net/minecraft/unmapped/C_8197819$C_7152879		Serializer
 		p	2			p_2
 		p	3			p_3
 	m	(Ljava/lang/Object;Ljava/lang/reflect/Type;Lcom/google/gson/JsonSerializationContext;)Lcom/google/gson/JsonElement;	serialize		serialize
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+		p	1			value
+		p	2			type
+		p	3			ctx
 	m	(Lcom/google/gson/JsonElement;Ljava/lang/reflect/Type;Lcom/google/gson/JsonDeserializationContext;)Ljava/lang/Object;	deserialize		deserialize
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+		p	1			element
+		p	2			type
+		p	3			ctx
 c	net/minecraft/unmapped/C_8253832		net/minecraft/world/gen/loot/properties/LootEntityProperties
 	f	Ljava/util/Map;	f_9876090		SERIALIZERS_BY_ID
 	f	Ljava/util/Map;	f_3193687		SERIALIZERS_BY_TYPE
@@ -1979,13 +1979,13 @@ c	net/minecraft/unmapped/C_9034508$C_9760502		Serializer
 		p	2			p_2
 		p	3			p_3
 	m	(Ljava/lang/Object;Ljava/lang/reflect/Type;Lcom/google/gson/JsonSerializationContext;)Lcom/google/gson/JsonElement;	serialize		serialize
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+		p	1			value
+		p	2			type
+		p	3			ctx
 	m	(Lcom/google/gson/JsonElement;Ljava/lang/reflect/Type;Lcom/google/gson/JsonDeserializationContext;)Ljava/lang/Object;	deserialize		deserialize
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+		p	1			element
+		p	2			type
+		p	3			ctx
 c	net/minecraft/unmapped/C_9221482		net/minecraft/sound/SoundEvents
 	f	Lnet/minecraft/unmapped/C_7721249;	f_8013556		AMBIENT_CAVE
 	f	Lnet/minecraft/unmapped/C_7721249;	f_6942977		BLOCK_ANVIL_BREAK

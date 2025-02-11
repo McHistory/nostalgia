@@ -246,13 +246,13 @@ c	net/minecraft/unmapped/C_1591456$0161546		0161546
 	m	(Lnet/minecraft/unmapped/C_1591456;)V	<init>		<init>
 		p	1			p_1
 	m	(Lio/netty/channel/Channel;)V	initChannel		initChannel
-		p	1			p_1
+		p	1			channel
 c	net/minecraft/unmapped/C_1591456$6137135		6137135
 	f	Lnet/minecraft/unmapped/C_1591456;	f_8131780		f_8131780
 	m	(Lnet/minecraft/unmapped/C_1591456;)V	<init>		<init>
 		p	1			p_1
 	m	(Lio/netty/channel/Channel;)V	initChannel		initChannel
-		p	1			p_1
+		p	1			chennel
 c	net/minecraft/unmapped/C_1613050	net/minecraft/network/packet/SelectSlotPacket	net/minecraft/network/packet/s2c/play/SelectSlotS2CPacket
 	m	()I	m_0079091	m_0079091	
 	m	()Z	m_9362922	m_9362922	
@@ -3245,9 +3245,9 @@ c	net/minecraft/unmapped/C_5256931		net/minecraft/network/encryption/PacketDecry
 		p	2			p_2
 		p	3			p_3
 	m	(Lio/netty/channel/ChannelHandlerContext;Ljava/lang/Object;Ljava/util/List;)V	decode		decode
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+		p	1			ctx
+		p	2			message
+		p	3			out
 c	net/minecraft/unmapped/C_5624070		net/minecraft/client/network/handler/ClientQueryPacketHandler
 	m	(Lnet/minecraft/unmapped/C_6008016;)V	m_8981911		handleServerStatus
 		p	1			packet
@@ -3276,9 +3276,9 @@ c	net/minecraft/unmapped/C_5784338		net/minecraft/network/EncoderHandler
 		p	2			p_2
 		p	3			p_3
 	m	(Lio/netty/channel/ChannelHandlerContext;Ljava/lang/Object;Lio/netty/buffer/ByteBuf;)V	encode		encode
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+		p	1			ctx
+		p	2			msg
+		p	3			out
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_5862375		net/minecraft/network/packet/c2s/login/HelloC2SPacket
 	f	Lcom/mojang/authlib/GameProfile;	f_0201144		profile
@@ -3318,9 +3318,9 @@ c	net/minecraft/unmapped/C_6114366		net/minecraft/network/SizePrepender
 		p	2			p_2
 		p	3			p_3
 	m	(Lio/netty/channel/ChannelHandlerContext;Ljava/lang/Object;Lio/netty/buffer/ByteBuf;)V	encode		encode
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+		p	1			ctx
+		p	2			msg
+		p	3			out
 c	net/minecraft/unmapped/C_6402019		net/minecraft/network/packet/s2c/login/LoginSuccessS2CPacket
 	f	Lcom/mojang/authlib/GameProfile;	f_7285541		profile
 	m	()V	<init>		<init>
@@ -3433,9 +3433,9 @@ c	net/minecraft/unmapped/C_7082179		net/minecraft/network/encryption/PacketEncry
 		p	2			p_2
 		p	3			p_3
 	m	(Lio/netty/channel/ChannelHandlerContext;Ljava/lang/Object;Lio/netty/buffer/ByteBuf;)V	encode		encode
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+		p	1			ctx
+		p	2			message
+		p	3			out
 c	net/minecraft/unmapped/C_7240405		net/minecraft/network/PacketByteBuf
 	f	Lio/netty/buffer/ByteBuf;	f_5290637		delegate
 	m	(Lio/netty/buffer/ByteBuf;)V	<init>		<init>
@@ -3932,13 +3932,13 @@ c	net/minecraft/unmapped/C_8607758$C_5060278$C_4261278		Serializer
 		p	2			p_2
 		p	3			p_3
 	m	(Ljava/lang/Object;Ljava/lang/reflect/Type;Lcom/google/gson/JsonSerializationContext;)Lcom/google/gson/JsonElement;	serialize		serialize
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+		p	1			value
+		p	2			type
+		p	3			ctx
 	m	(Lcom/google/gson/JsonElement;Ljava/lang/reflect/Type;Lcom/google/gson/JsonDeserializationContext;)Ljava/lang/Object;	deserialize		deserialize
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+		p	1			element
+		p	2			type
+		p	3			ctx
 c	net/minecraft/unmapped/C_8607758$C_6894722		Serializer
 	m	()V	<init>		<init>
 	m	(Lcom/google/gson/JsonElement;Ljava/lang/reflect/Type;Lcom/google/gson/JsonDeserializationContext;)Lnet/minecraft/unmapped/C_8607758;	m_3191316		m_3191316
@@ -3950,13 +3950,13 @@ c	net/minecraft/unmapped/C_8607758$C_6894722		Serializer
 		p	2			p_2
 		p	3			p_3
 	m	(Ljava/lang/Object;Ljava/lang/reflect/Type;Lcom/google/gson/JsonSerializationContext;)Lcom/google/gson/JsonElement;	serialize		serialize
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+		p	1			value
+		p	2			type
+		p	3			ctx
 	m	(Lcom/google/gson/JsonElement;Ljava/lang/reflect/Type;Lcom/google/gson/JsonDeserializationContext;)Ljava/lang/Object;	deserialize		deserialize
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+		p	1			element
+		p	2			type
+		p	3			ctx
 c	net/minecraft/unmapped/C_8607758$C_9316504		Players
 	f	I	f_1732365		max
 	f	I	f_3080366		online
@@ -3980,13 +3980,13 @@ c	net/minecraft/unmapped/C_8607758$C_9316504$C_3005694		Serializer
 		p	2			p_2
 		p	3			p_3
 	m	(Ljava/lang/Object;Ljava/lang/reflect/Type;Lcom/google/gson/JsonSerializationContext;)Lcom/google/gson/JsonElement;	serialize		serialize
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+		p	1			value
+		p	2			type
+		p	3			ctx
 	m	(Lcom/google/gson/JsonElement;Ljava/lang/reflect/Type;Lcom/google/gson/JsonDeserializationContext;)Ljava/lang/Object;	deserialize		deserialize
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+		p	1			element
+		p	2			type
+		p	3			ctx
 c	net/minecraft/unmapped/C_9130685		net/minecraft/client/gui/screen/multiplayer/MultiplayerServerListWidget
 	f	Lnet/minecraft/unmapped/C_7653691;	f_5891891		parent
 	f	Ljava/util/List;	f_9130775		servers
