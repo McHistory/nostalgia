@@ -109,7 +109,7 @@ c	net/minecraft/unmapped/C_0386427$0027322	0027322
 	m	(Lio/netty/channel/ChannelFuture;)V	m_1182008	m_1182008	
 		p	1		p_1	
 	m	(Lio/netty/util/concurrent/Future;)V	operationComplete	operationComplete	
-		p	1		p_1	
+		p	1		future	
 c	net/minecraft/unmapped/C_0400468
 	m	(Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_3544601;Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_9844932;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_6707278;)Lnet/minecraft/unmapped/C_2441996;	m_5408908		m_5408908
 		p	1			p_1
@@ -170,7 +170,7 @@ c	net/minecraft/unmapped/C_1591456$2363444	2363444
 		p	2		p_2	
 		p	3		p_3	
 	m	(Lio/netty/util/concurrent/Future;)V	operationComplete	operationComplete	
-		p	1		p_1	
+		p	1		future	
 c	net/minecraft/unmapped/C_1851525
 	m	(Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_2441996;)V	m_6138806	m_6138806	
 		p	1		p_1	
@@ -202,8 +202,8 @@ c	net/minecraft/unmapped/C_1896634$2622244	2622244
 		p	1		p_1	
 		p	2		p_2	
 	m	(Ljava/lang/Object;Ljava/lang/Object;)I	compare	compare	
-		p	1		p_1	
-		p	2		p_2	
+		p	1		o1	
+		p	2		o2	
 c	net/minecraft/unmapped/C_1896634$3430155	3430155	
 	m	()V	<init>	<init>	
 	m	(Lnet/minecraft/unmapped/C_0324512;)Z	m_3140466	m_3140466	
@@ -218,8 +218,8 @@ c	net/minecraft/unmapped/C_1896634$6542686	6542686
 		p	1		p_1	
 		p	2		p_2	
 	m	(Ljava/lang/Object;Ljava/lang/Object;)I	compare	compare	
-		p	1		p_1	
-		p	2		p_2	
+		p	1		o1	
+		p	2		o2	
 c	net/minecraft/unmapped/C_1896634$8703389	8703389	
 	m	()V	<init>	<init>	
 	m	(Lnet/minecraft/unmapped/C_0324512;)Z	m_7915007	m_7915007	
@@ -864,7 +864,7 @@ c	net/minecraft/unmapped/C_7006834$4816709	4816709
 	m	(Lnet/minecraft/unmapped/C_7006834;)V	<init>	<init>	
 		p	1		p_1	
 	m	(Ljava/awt/event/ActionEvent;)V	actionPerformed	actionPerformed	
-		p	1		p_1	
+		p	1		e	
 c	net/minecraft/unmapped/C_7029902
 	m	(Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_5250955;Lnet/minecraft/unmapped/C_6707278;)Z	m_6314636	m_6314636	
 		p	1		p_1	
@@ -895,7 +895,7 @@ c	net/minecraft/unmapped/C_7102748$3093966	3093966
 		p	1		p_1	
 		p	2		p_2	
 	m	(Ljava/awt/event/ActionEvent;)V	actionPerformed	actionPerformed	
-		p	1		p_1	
+		p	1		e	
 c	net/minecraft/unmapped/C_7102748$8230050	8230050	
 	f	Ljavax/swing/JTextArea;	f_3557043	f_3557043	
 	f	Ljavax/swing/JScrollPane;	f_7009871	f_7009871	
@@ -1038,7 +1038,7 @@ c	net/minecraft/unmapped/C_8752044$4252041	4252041
 	f	Lnet/minecraft/unmapped/C_8752044;	f_2408120	f_2408120	
 	f	Lnet/minecraft/unmapped/C_9550253;	f_1561277	f_1561277	
 	m	(Lio/netty/util/concurrent/Future;)V	operationComplete	operationComplete	
-		p	1		p_1	
+		p	1		future	
 	m	(Lnet/minecraft/unmapped/C_8752044;Lnet/minecraft/unmapped/C_9550253;)V	<init>	<init>	
 		p	1		p_1	
 		p	2		p_2	
@@ -1296,8 +1296,8 @@ c	net/minecraft/unmapped/C_4473452$8719942	8719942
 	m	(Lnet/minecraft/unmapped/C_4473452;)V	<init>	<init>	
 		p	1		p_1	
 	m	(Ljava/io/File;Ljava/lang/String;)Z	accept	accept	
-		p	1		p_1	
-		p	2		p_2	
+		p	1		dir	
+		p	2		name	
 c	net/minecraft/unmapped/C_6707278
 	m	(IIIIII)Ljava/util/Iterator;	m_1343455		m_1343455
 		p	0			p_0
@@ -2100,8 +2100,8 @@ c	net/minecraft/unmapped/C_3526030$0934552	0934552
 		p	1		p_1	
 		p	2		p_2	
 	m	(Ljava/lang/Object;Ljava/lang/Object;)I	compare	compare	
-		p	1		p_1	
-		p	2		p_2	
+		p	1		o1	
+		p	2		o2	
 c	net/minecraft/unmapped/C_1492128
 c	net/minecraft/unmapped/C_1492128$C_7723875
 	m	(Ljava/net/URL;)Ljava/lang/Process;	m_7424508		m_7424508
@@ -3018,9 +3018,9 @@ c	net/minecraft/unmapped/C_0890491$3328360	3328360
 		p	2		p_2	
 		p	3		p_3	
 	m	(Lcom/google/gson/JsonElement;Ljava/lang/reflect/Type;Lcom/google/gson/JsonDeserializationContext;)Ljava/lang/Object;	deserialize	deserialize	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
+		p	1		element	
+		p	2		type	
+		p	3		ctx	
 c	net/minecraft/unmapped/C_5389817
 	m	(Lnet/minecraft/unmapped/C_2587956;Lnet/minecraft/unmapped/C_2587956;)Z	m_0772164		m_0772164
 		p	0			p_0
