@@ -68,7 +68,7 @@ c	net/minecraft/unmapped/C_0125843
 c	net/minecraft/unmapped/C_1244774
 	m	()Z	m_1667313		m_1667313
 c	net/minecraft/unmapped/C_2842201
-	f	Z	f_8329035		canWalkThroughDoors
+	f	Z	f_8329035		canPassThroughDoors
 	f	Z	f_0011981		canOpenDoors
 	f	Z	f_8800642		canFloat
 	m	(Lnet/minecraft/unmapped/C_2627205;III)Lnet/minecraft/unmapped/C_6124529;	m_6849805		getBlockingType
@@ -76,13 +76,13 @@ c	net/minecraft/unmapped/C_2842201
 		p	2			x
 		p	3			y
 		p	4			z
-	m	(Z)V	m_2988250		setCanWalkThroughDoors
-		p	1			canWalkThroughDoors
+	m	(Z)V	m_2988250		setCanPassThroughDoors
+		p	1			canPassThroughDoors
 	m	(Z)V	m_0384439		setCanOpenDoors
 		p	1			canOpenDoors
 	m	(Z)V	m_4028310		setCanFloat
 		p	1			canFloat
-	m	()Z	m_6223014		canWalkThroughDoors
+	m	()Z	m_6223014		canPassThroughDoors
 	m	()Z	m_3409460		canFloat
 c	net/minecraft/unmapped/C_3734002
 	m	(Lnet/minecraft/unmapped/C_2627205;III)Lnet/minecraft/unmapped/C_6124529;	m_6849805		m_6849805
@@ -93,17 +93,17 @@ c	net/minecraft/unmapped/C_3734002
 c	net/minecraft/unmapped/C_8008980
 	f	Lnet/minecraft/unmapped/C_8009477;	f_8640788	nodeEvaluator	
 c	net/minecraft/unmapped/C_8009477
-	f	Z	f_1375429	canOpenDoors	
-	f	Z	f_6676583	canWalkThroughDoors	
-	f	Z	f_8834710	canSwim	
-	m	(Z)V	m_2851044	setCanOpenDoors	
+	f	Z	f_1375429	canPassThroughDoors	
+	f	Z	f_6676583	canOpenDoors	
+	f	Z	f_8834710	canFloat	
+	m	(Z)V	m_2851044	setCanPassThroughDoors	
+		p	1		canPassThroughDoors	
+	m	(Z)V	m_5716698	setCanOpenDoors	
 		p	1		canOpenDoors	
-	m	(Z)V	m_5716698	setCanFloat	
+	m	(Z)V	m_5310404	setCanFloat	
 		p	1		canFloat	
-	m	(Z)V	m_5310404	setCanSwim	
-		p	1		canSwim	
-	m	()Z	m_3317051	canOpenDoors	
-	m	()Z	m_1545253	canSwim	
+	m	()Z	m_3317051	canPassThroughDoors	
+	m	()Z	m_1545253	canFloat	
 	m	(Lnet/minecraft/unmapped/C_6385858;III)Lnet/minecraft/unmapped/C_6124529;	m_8137616	getBlockingType	
 		p	1		entity	
 		p	2		x	
@@ -119,7 +119,7 @@ c	net/minecraft/unmapped/C_8009477
 		p	6		height	
 		p	7		depth	
 		p	8		canOpenDoors	
-		p	9		canWalkThroughDoors	
+		p	9		canPassThroughDoors	
 	m	(IIIID)Lnet/minecraft/unmapped/C_7694617;	m_4161093	getValidNode	
 		p	1		x	
 		p	2		y	
