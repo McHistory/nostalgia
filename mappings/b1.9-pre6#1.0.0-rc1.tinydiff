@@ -517,7 +517,7 @@ c	net/minecraft/unmapped/C_0990852
 		p	2		dataId	
 		p	3		value	
 c	net/minecraft/unmapped/C_1013763
-	m	(Lnet/minecraft/unmapped/C_2750078;)V	m_3981766		renderBrokenItem
+	m	(Lnet/minecraft/unmapped/C_2750078;)V	m_3981766		onBrokenItem
 		p	1			item
 c	net/minecraft/unmapped/C_1019530
 	m	(Lnet/minecraft/unmapped/C_6385858;I)V	<init>	<init>	
@@ -683,12 +683,12 @@ c	net/minecraft/unmapped/C_2422346
 		p	2		event	
 c	net/minecraft/unmapped/C_2750078
 	m	()Ljava/lang/String;	m_4535639	getTranslationKey	
-	m	(ILnet/minecraft/unmapped/C_6385858;)V	m_7305709	damageAndBreak	
-		p	1		damage	
-		p	2		entity	
-	m	(ILnet/minecraft/unmapped/C_1013763;)V	m_7305709		damageAndBreak
+	m	(ILnet/minecraft/unmapped/C_6385858;)V	m_7305709	takeDamageAndBreak	
+		p	1		amount	
+		p	2		holder	
+	m	(ILnet/minecraft/unmapped/C_1013763;)V	m_7305709		takeDamageAndBreak
 		p	1			amount
-		p	2			entity
+		p	2			holder
 c	net/minecraft/unmapped/C_2786920
 	m	(Lnet/minecraft/unmapped/C_7699185;Ljava/util/List;)V	m_0076107	onMenuChanged	
 		p	1		menu	
