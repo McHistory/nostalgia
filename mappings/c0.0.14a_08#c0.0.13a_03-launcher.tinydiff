@@ -105,7 +105,7 @@ c	net/minecraft/unmapped/C_3635204
 		p	3		y	
 		p	4		z	
 		p	5		random	
-	m	(Lcom/mojang/minecraft/level/Level;IIILnet/minecraft/unmapped/C_2454294;)V	m_3427045	m_3427045	
+	m	(Lcom/mojang/minecraft/level/Level;IIILnet/minecraft/unmapped/C_2454294;)V	m_3427045	addBreakParticles	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
@@ -144,7 +144,7 @@ c	net/minecraft/unmapped/C_3635204
 		p	2		p_2	
 		p	3		p_3	
 		p	4		p_4	
-	m	(III)Lcom/mojang/minecraft/phys/AABB;	m_5049680	m_5049680	
+	m	(III)Lcom/mojang/minecraft/phys/AABB;	m_5049680	getOutlineShape	
 		p	0		p_0	
 		p	1		p_1	
 		p	2		p_2	
@@ -176,7 +176,7 @@ c	net/minecraft/unmapped/C_3635204
 		p	3			p_3
 		p	4			p_4
 		p	5			p_5
-	m	(III)Lnet/minecraft/unmapped/C_3499172;	m_5049680		m_5049680
+	m	(III)Lnet/minecraft/unmapped/C_3499172;	m_5049680		getOutlineShape
 		p	0			p_0
 		p	1			p_1
 		p	2			p_2
@@ -191,12 +191,12 @@ c	net/minecraft/unmapped/C_3635204
 		p	3			y
 		p	4			z
 		p	5			random
-	m	(Lnet/minecraft/unmapped/C_6495127;IIILnet/minecraft/unmapped/C_2454294;)V	m_3427045		m_3427045
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
+	m	(Lnet/minecraft/unmapped/C_6495127;IIILnet/minecraft/unmapped/C_2454294;)V	m_3427045		addBreakParticles
+		p	1			world
+		p	2			x
+		p	3			y
+		p	4			z
+		p	5			particleManager
 	m	(Lnet/minecraft/unmapped/C_6495127;IIII)V	m_9130741		neighborChanged
 		c		Performs a block update. This method is called when a neighboring block has updated\n(i.e. placed, broken, or otherwise changed state).
 		p	1			world
@@ -337,7 +337,7 @@ c	net/minecraft/client/Minecraft
 	f	[I	f_8115571	f_8115571	
 	f	Lnet/minecraft/unmapped/C_6495127;	f_5337597		world
 	f	Lnet/minecraft/unmapped/C_0693652;	f_5473933		player
-	f	Ljava/util/ArrayList;	f_6333965		f_6333965
+	f	Ljava/util/ArrayList;	f_6333965		mobs
 	m	(I)V	m_6392526	createWorld	
 		p	1		p_1	
 	m	(Lcom/mojang/minecraft/level/Level;)V	m_6427459	setWorld	
@@ -408,16 +408,16 @@ c	net/minecraft/unmapped/C_2454294
 	m	(Lcom/mojang/minecraft/level/Level;Lnet/minecraft/unmapped/C_3385278;)V	<init>	<init>	
 		p	1		world	
 		p	2		textureManager	
-	m	(Lcom/mojang/minecraft/player/Player;F)V	m_5775841	m_5775841	
+	m	(Lcom/mojang/minecraft/player/Player;F)V	m_5775841	render	
 		p	1		p_1	
 		p	2		p_2	
 	m	(Lnet/minecraft/unmapped/C_6495127;Lnet/minecraft/unmapped/C_3385278;)V	<init>		<init>
 		p	1			world
 		p	2			textureManager
-	m	(Lnet/minecraft/unmapped/C_0693652;FI)V	m_5775841		m_5775841
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+	m	(Lnet/minecraft/unmapped/C_0693652;FI)V	m_5775841		render
+		p	1			camera
+		p	2			tickDelta
+		p	3			layer
 c	net/minecraft/unmapped/C_2813741
 	f	Lcom/mojang/minecraft/player/Player;	f_6258221	camera	
 	f	Lnet/minecraft/unmapped/C_0693652;	f_6258221		camera
@@ -453,9 +453,9 @@ c	net/minecraft/unmapped/C_5283200
 	f	I	f_7189000		sizeX
 	f	I	f_5146300		sizeY
 	f	I	f_4548682		sizeZ
-	f	F	f_7537396		f_7537396
-	f	F	f_1919969		f_1919969
-	f	F	f_9635507		f_9635507
+	f	F	f_7537396		centerX
+	f	F	f_1919969		centerY
+	f	F	f_9635507		centerZ
 	f	Z	f_3962903		dirty
 	f	Z	f_8081709		empty
 	f	I	f_0688670		blockCount
@@ -927,7 +927,7 @@ c	net/minecraft/unmapped/C_6495127		net/minecraft/world/World
 	f	Ljava/lang/String;	f_9682862		f_9682862
 	f	Ljava/lang/String;	f_1116933		f_1116933
 	f	J	f_4885013		f_4885013
-	f	I	f_4520014		f_4520014
+	f	I	f_4520014		remainingBlockTicks
 	m	()V	<init>		<init>
 	m	(III[B)V	m_8619392		assemble
 		p	1			sizeX
@@ -956,10 +956,10 @@ c	net/minecraft/unmapped/C_6495127		net/minecraft/world/World
 		p	2			y
 		p	3			z
 		p	4			neighborBlock
-	m	(III)Z	m_2758555		m_2758555
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+	m	(III)Z	m_2758555		isLit
+		p	1			x
+		p	2			y
+		p	3			z
 	m	(III)I	m_2318510		getBlock
 		p	1			x
 		p	2			y
@@ -967,12 +967,12 @@ c	net/minecraft/unmapped/C_6495127		net/minecraft/world/World
 	m	(Lnet/minecraft/unmapped/C_3499172;I)Z	m_7901152		containsMaterial
 		p	1			p_1
 		p	2			p_2
-c	net/minecraft/unmapped/C_6501689		net/minecraft/unmapped/C_6501689
-	f	F	f_7034797		f_7034797
-	f	F	f_0087772		f_0087772
-	f	F	f_4659285		f_4659285
-	f	F	f_1524676		f_1524676
-	f	Lnet/minecraft/unmapped/C_7898033;	f_6031782		f_6031782
+c	net/minecraft/unmapped/C_6501689		net/minecraft/entity/mob/MobEntity
+	f	F	f_7034797		rotation
+	f	F	f_0087772		timeOffset
+	f	F	f_4659285		timeScale
+	f	F	f_1524676		rotationSpeed
+	f	Lnet/minecraft/unmapped/C_7898033;	f_6031782		model
 	f	Lnet/minecraft/unmapped/C_3385278;	f_2431506		f_2431506
 	m	(Lnet/minecraft/unmapped/C_6495127;Lnet/minecraft/unmapped/C_3385278;FFF)V	<init>		<init>
 		p	1			p_1
@@ -981,13 +981,13 @@ c	net/minecraft/unmapped/C_6501689		net/minecraft/unmapped/C_6501689
 		p	4			p_4
 		p	5			p_5
 	m	()V	m_8155790		m_8155790
-	m	(F)V	m_1301804		m_1301804
-		p	1			p_1
+	m	(F)V	m_1301804		render
+		p	1			tickDelta
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_6749951		net/minecraft/client/entity/particle/Particle
-	f	F	f_1525837		f_1525837
-	f	F	f_4924863		f_4924863
-	f	F	f_8887748		f_8887748
+	f	F	f_1525837		velocityX
+	f	F	f_4924863		velocityY
+	f	F	f_8887748		velocityZ
 	f	I	f_1939853		sprite
 	f	F	f_2760180		offsetU
 	f	F	f_4092870		offsetV
@@ -996,32 +996,32 @@ c	net/minecraft/unmapped/C_6749951		net/minecraft/client/entity/particle/Particl
 	f	F	f_4008712		size
 	m	(Lnet/minecraft/unmapped/C_6495127;FFFFFFI)V	<init>		<init>
 		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
-		p	6			p_6
-		p	7			p_7
+		p	2			x
+		p	3			y
+		p	4			z
+		p	5			velocityX
+		p	6			velocityY
+		p	7			velocityZ
 		p	8			p_8
 	m	()V	m_8155790		m_8155790
 c	net/minecraft/unmapped/C_8146558		net/minecraft/entity/Entity
 	f	Lnet/minecraft/unmapped/C_6495127;	f_4782229		world
-	f	F	f_8790464		f_8790464
-	f	F	f_6816771		f_6816771
-	f	F	f_6416307		f_6416307
-	f	F	f_3391035		f_3391035
-	f	F	f_0547682		f_0547682
-	f	F	f_1907542		f_1907542
-	f	F	f_7956007		f_7956007
-	f	F	f_0863141		f_0863141
-	f	F	f_9305494		f_9305494
-	f	F	f_1114131		f_1114131
-	f	F	f_7225612		f_7225612
+	f	F	f_8790464		lastX
+	f	F	f_6816771		lastY
+	f	F	f_6416307		lastZ
+	f	F	f_3391035		x
+	f	F	f_0547682		y
+	f	F	f_1907542		z
+	f	F	f_7956007		velocityX
+	f	F	f_0863141		velocityY
+	f	F	f_9305494		velocityZ
+	f	F	f_1114131		yaw
+	f	F	f_7225612		pitch
 	f	Lnet/minecraft/unmapped/C_3499172;	f_4337200		shape
 	f	Z	f_4660122		onGround
 	f	Z	f_3340018		f_3340018
 	f	Z	f_5526352		removed
-	f	F	f_6996390		f_6996390
+	f	F	f_6996390		eyeHeight
 	f	F	f_0714072		width
 	f	F	f_3652430		height
 	m	(Lnet/minecraft/unmapped/C_6495127;)V	<init>		<init>
@@ -1031,24 +1031,24 @@ c	net/minecraft/unmapped/C_8146558		net/minecraft/entity/Entity
 		p	1			width
 		p	2			height
 	m	(FFF)V	m_5494968		setPosition
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+		p	1			x
+		p	2			y
+		p	3			z
 	m	()V	m_8155790		tick
 	m	(FFF)Z	m_9186097		canMove
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
-	m	(FFF)V	m_3096039		m_3096039
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+	m	(FFF)V	m_3096039		move
+		p	1			dx
+		p	2			dy
+		p	3			dz
 	m	()Z	m_2577214		checkWaterCollisions
 	m	()Z	m_6782658		isInLava
 	m	(FFF)V	m_6123244		updateVelocity
 		p	1			sideways
 		p	2			forwards
 		p	3			scale
-	m	()Z	m_1220167		m_1220167
+	m	()Z	m_1220167		isLit
 	m	(F)V	m_1301804		m_1301804
 		p	1			p_1

@@ -1,12 +1,12 @@
 tiny	2	0
 c	net/minecraft/unmapped/C_0336319
-	m	(Lnet/minecraft/unmapped/C_0336319;F)Lnet/minecraft/unmapped/C_0336319;	m_1062681		m_1062681
-		p	1			p_1
-		p	2			p_2
-	m	(FFF)V	m_1646852		m_1646852
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+	m	(Lnet/minecraft/unmapped/C_0336319;F)Lnet/minecraft/unmapped/C_0336319;	m_1062681		lerp
+		p	1			to
+		p	2			t
+	m	(FFF)V	m_1646852		set
+		p	1			x
+		p	2			y
+		p	3			z
 c	net/minecraft/unmapped/C_2682589	net/minecraft/block/LiquidSourceBlock	
 	m	(II)V	<init>	<init>	
 		p	1		p_1	
@@ -36,10 +36,10 @@ c	net/minecraft/unmapped/C_3635204
 	f	F	f_3364884	maxZ	
 	f	Lnet/minecraft/unmapped/C_3635204;	f_1957938	f_1957938	
 	f	Lnet/minecraft/unmapped/C_3635204;	f_1788821	f_1788821	
-	f	Lnet/minecraft/unmapped/C_3635204;	f_2297673		f_2297673
-	f	Lnet/minecraft/unmapped/C_3635204;	f_8037066		f_8037066
-	f	Lnet/minecraft/unmapped/C_3635204;	f_0374553		f_0374553
-	f	Lnet/minecraft/unmapped/C_3635204;	f_2157077		f_2157077
+	f	Lnet/minecraft/unmapped/C_3635204;	f_2297673		AIR
+	f	Lnet/minecraft/unmapped/C_3635204;	f_8037066		COBBLESTONE
+	f	Lnet/minecraft/unmapped/C_3635204;	f_0374553		PLANKS
+	f	Lnet/minecraft/unmapped/C_3635204;	f_2157077		SAPLING
 	m	(Z)V	m_3405751	setTicksRandomly	
 		c	Sets whether this block accepts random ticks. Random ticks are mostly used by plants\nand crops to update growth, but some other blocks are affected by random ticks as well,\nlike e.g. leaves (to update decay).\nNote that while this field might be set to true the block might not do anything with the random tick.\n\n<p>\nNOTE: this method should only be used during the block's creation before it is registered.	
 		p	1		ticksRandomly	
@@ -148,29 +148,29 @@ c	net/minecraft/client/Minecraft
 	m	(Ljava/lang/String;Ljava/lang/String;)V	m_6843433	m_6843433	
 		p	1		p_1	
 		p	2		p_2	
-	m	()V	m_4376992		m_4376992
+	m	()V	m_4376992		init
 	m	()V	m_2574939		m_2574939
 	m	()V	m_1564062		m_1564062
 	m	(Lnet/minecraft/unmapped/C_3499172;)Z	m_1239911		m_1239911
 		p	1			p_1
-	m	(F)V	m_3391297		m_3391297
+	m	(F)V	m_3391297		setupCamera
 		p	1			p_1
-	m	(FII)V	m_2707803		m_2707803
+	m	(FII)V	m_2707803		updateViewport
 		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-	m	(F)V	m_6229653		m_6229653
+		p	2			x
+		p	3			y
+	m	(F)V	m_6229653		pick
 		p	1			p_1
-	m	(F)V	m_8998448		m_8998448
-		p	1			p_1
-	m	()V	m_8794255		m_8794255
+	m	(F)V	m_8998448		renderGui
+		p	1			tickDelta
+	m	()V	m_8794255		logGlError
 	m	([Ljava/lang/String;)V	main		main
-		p	0			p_0
+		p	0			args
 c	net/minecraft/unmapped/C_0289174
-	m	(II)V	m_6733519		m_6733519
-		p	1			p_1
-		p	2			p_2
-	m	()V	m_3430241		m_3430241
+	m	(II)V	m_6733519		setUV
+		p	1			u
+		p	2			v
+	m	()V	m_3430241		compile
 c	net/minecraft/unmapped/C_1044273
 	f	[Lnet/minecraft/unmapped/C_5283200;	f_9451185	sortedChunks	
 	f	I	f_0437423	f_0437423	
@@ -178,7 +178,7 @@ c	net/minecraft/unmapped/C_1044273
 	f	F	f_1619923	prevCameraY	
 	f	F	f_4269846	prevCameraZ	
 	f	I	f_9039970	f_9039970	
-	f	I	f_1898565		f_1898565
+	f	I	f_1898565		MAX_CHUNK_UPDATES
 	f	I	f_9838191		CHUNK_SIZE
 	m	(Lnet/minecraft/unmapped/C_0693652;Lnet/minecraft/unmapped/C_5853518;II)V	m_3006844	renderBlockSelection	
 		p	1		p_1	
@@ -188,12 +188,12 @@ c	net/minecraft/unmapped/C_1044273
 	m	()V	m_8326440	m_8326440	
 	m	()V	m_5383151	m_5383151	
 	m	()V	m_2908225	m_2908225	
-	m	()Ljava/util/List;	m_2981807		m_2981807
-	m	(Lnet/minecraft/unmapped/C_0693652;)V	m_0477995		m_0477995
-		p	1			p_1
+	m	()Ljava/util/List;	m_2981807		getDirtyChunks
+	m	(Lnet/minecraft/unmapped/C_0693652;)V	m_0477995		updateDirtyChunks
+		p	1			player
 	m	(Lnet/minecraft/unmapped/C_0693652;Lnet/minecraft/unmapped/C_8199124;)V	m_3613911		renderBlocksNearPlayer
-		p	1			p_1
-		p	2			p_2
+		p	1			camera
+		p	2			frustum
 	m	(Lnet/minecraft/unmapped/C_5853518;II)V	m_3006844		renderBlockSelection
 		p	1			p_1
 		p	2			p_2
@@ -209,8 +209,8 @@ c	net/minecraft/unmapped/C_1044273
 		p	4			p_4
 	m	()V	m_4670696		m_4670696
 c	net/minecraft/unmapped/C_2334550
-	f	I	f_7163362		f_7163362
-	f	I	f_4841604		f_4841604
+	f	I	f_7163362		BYTE_COUNT
+	f	I	f_4841604		VERTEX_COUNT
 	m	(III)V	m_5703686	color	
 		p	1		r	
 		p	2		g	
@@ -227,10 +227,10 @@ c	net/minecraft/unmapped/C_2334550
 		p	2			g
 		p	3			b
 c	net/minecraft/unmapped/C_2454294
-	f	Lnet/minecraft/unmapped/C_6495127;	f_2258233		f_2258233
-	m	(Lnet/minecraft/unmapped/C_6749951;)V	m_2704131		m_2704131
-		p	1			p_1
-	m	()V	m_3625891		m_3625891
+	f	Lnet/minecraft/unmapped/C_6495127;	f_2258233		world
+	m	(Lnet/minecraft/unmapped/C_6749951;)V	m_2704131		add
+		p	1			particle
+	m	()V	m_3625891		tick
 c	net/minecraft/unmapped/C_2813741	net/minecraft/client/render/world/DirtyChunkSorter	
 	f	Lnet/minecraft/unmapped/C_0693652;	f_6258221	camera	
 	m	(Ljava/lang/Object;Ljava/lang/Object;)I	compare	compare	
@@ -239,8 +239,8 @@ c	net/minecraft/unmapped/C_2813741	net/minecraft/client/render/world/DirtyChunkS
 	m	(Lnet/minecraft/unmapped/C_0693652;)V	<init>	<init>	
 		p	1		camera	
 c	net/minecraft/unmapped/C_3589148
-	f	I	f_3494774		f_3494774
-	m	()V	m_4430908		m_4430908
+	f	I	f_3494774		vertexCount
+	m	()V	m_4430908		render
 c	net/minecraft/unmapped/C_4766485
 	m	(Ljava/lang/String;III)V	m_1536819		m_1536819
 		p	1			p_1
@@ -249,7 +249,7 @@ c	net/minecraft/unmapped/C_4766485
 		p	4			p_4
 c	net/minecraft/unmapped/C_5283200
 	f	Z	f_0382305	visible	
-	f	J	f_7820675		f_7820675
+	f	J	f_7820675		dirtyTime
 	m	()V	m_0499834	reset	
 	m	(Lnet/minecraft/unmapped/C_0693652;)F	m_9608130	m_9608130	squaredDistanceToCenter
 c	net/minecraft/unmapped/C_5974036
@@ -259,10 +259,9 @@ c	net/minecraft/unmapped/C_5974036
 	f	F	f_6567507		partialTick
 	f	F	f_6634432	partialTick	ticksPassed
 	m	()V	m_2550551		update
-c	net/minecraft/unmapped/C_8688622	net/minecraft/client/render/world/DistanceChunkSorter	net/minecraft/unmapped/C_8688622
-	f	Lnet/minecraft/unmapped/C_8199124;	f_1226031		f_1226031
-	f	J	f_0566945		f_0566945
-	f	Lnet/minecraft/unmapped/C_0693652;	f_9491045	camera	f_9491045
+c	net/minecraft/unmapped/C_8688622	net/minecraft/client/render/world/DistanceChunkSorter	net/minecraft/client/render/world/DirtyChunkSorter
+	f	Lnet/minecraft/unmapped/C_8199124;	f_1226031		frustum
+	f	J	f_0566945		time
 	m	(Lnet/minecraft/unmapped/C_0693652;)V	<init>	<init>	
 		p	1		camera	
 	m	(Lnet/minecraft/unmapped/C_0693652;Lnet/minecraft/unmapped/C_8199124;)V	<init>		<init>
@@ -272,16 +271,16 @@ c	net/minecraft/unmapped/C_8688622	net/minecraft/client/render/world/DistanceChu
 		p	1			p_1
 		p	2			p_2
 c	net/minecraft/unmapped/C_8199124
-	f	I	f_1013777		f_1013777
-	f	I	f_0449444		f_0449444
-	f	I	f_3850690		f_3850690
-	f	I	f_0266392		f_0266392
-	f	I	f_4703127		f_4703127
-	f	I	f_6431321		f_6431321
-	f	I	f_8967816		f_8967816
-	f	I	f_2003851		f_2003851
-	f	I	f_3617466		f_3617466
-	f	I	f_4870409		f_4870409
+	f	I	f_1013777		SIDE_RIGHT
+	f	I	f_0449444		SIDE_LEFT
+	f	I	f_3850690		SIDE_BOTTOM
+	f	I	f_0266392		SIDE_TOP
+	f	I	f_4703127		SIDE_BACK
+	f	I	f_6431321		SIDE_FRONT
+	f	I	f_8967816		PLANE_X
+	f	I	f_2003851		PLANE_Y
+	f	I	f_3617466		PLANE_Z
+	f	I	f_4870409		PLANE_W
 	m	([[FI)V	m_5256054
 		p	0		p_0	
 		p	2			side
@@ -324,8 +323,8 @@ c	com/mojang/minecraft/MinecraftApplet$1		1
 	m	()V	addNotify		addNotify
 	m	()V	removeNotify		removeNotify
 c	net/minecraft/unmapped/C_7898033
-	m	(F)V	m_2456266		m_2456266
-		p	1			p_1
+	m	(F)V	m_2456266		render
+		p	1			tickDelta
 c	net/minecraft/unmapped/C_3499172
 	m	(FFF)Lnet/minecraft/unmapped/C_3499172;	m_6152302		expandOneSided
 		p	1			dx
@@ -348,7 +347,7 @@ c	net/minecraft/unmapped/C_6495127
 	f	I	f_5915199	f_5915199	
 	f	Lnet/minecraft/client/Minecraft;	f_7026537	f_7026537	
 	f	[I	f_3421274	f_3421274	
-	f	I	f_5226865		f_5226865
+	f	I	f_5226865		BLOCK_PROCESS_PER_TICK
 	m	(IIII)Z	m_3566243	setBlockButSpecial	
 		p	1		x	
 		p	2		y	
@@ -382,7 +381,7 @@ c	net/minecraft/unmapped/C_6495127
 		p	1			updateListener
 	m	(Lnet/minecraft/unmapped/C_4502654;)V	m_1632456		removeUpdateListener
 		p	1			updateListener
-	m	(III)Z	m_1890831		isSolid3
+	m	(III)Z	m_1890831		isOpaque
 		p	1			x
 		p	2			y
 		p	3			z
@@ -392,23 +391,23 @@ c	net/minecraft/unmapped/C_6495127
 		p	1			x
 		p	2			y
 		p	3			z
-	m	()V	m_1544961		m_1544961
+	m	()V	m_1544961		tick
 c	net/minecraft/unmapped/C_6749951
-	m	(Lnet/minecraft/unmapped/C_2334550;FFFFFF)V	m_6133468		m_6133468
+	m	(Lnet/minecraft/unmapped/C_2334550;FFFFFF)V	m_6133468		render
 		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
-		p	6			p_6
-		p	7			p_7
+		p	2			tickDelta
+		p	3			dx
+		p	4			dy
+		p	5			dz
+		p	6			forwards
+		p	7			sideways
 c	net/minecraft/unmapped/C_8146558
 	m	()Z	m_2577214	checkWaterCollisions	
 	m	()Z	m_6782658	isInLava	
-	m	()V	m_0096317		m_0096317
-	m	(FF)V	m_3908099		m_3908099
-		p	1			p_1
-		p	2			p_2
+	m	()V	m_0096317		remove
+	m	(FF)V	m_3908099		updateLocalPlayerCamera
+		p	1			yaw
+		p	2			pitch
 c	net/minecraft/unmapped/C_0590356
 	f	Z	f_8615816	f_8615816	
 	f	I	f_0317559		f_0317559
@@ -417,7 +416,7 @@ c	net/minecraft/unmapped/C_0590356
 		p	2		p_2	
 		p	3		p_3	
 	m	(I)V	<init>		<init>
-		p	1			p_1
+		p	1			octaves
 c	net/minecraft/unmapped/C_1313688		net/minecraft/unmapped/C_1313688
 	f	Lnet/minecraft/unmapped/C_5800226;	f_0156979		f_0156979
 	f	Ljava/util/Map;	f_1503126		f_1503126
