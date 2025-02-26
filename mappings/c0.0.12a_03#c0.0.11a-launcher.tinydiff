@@ -180,7 +180,7 @@ c	net/minecraft/unmapped/C_1044273
 	f	I	f_9039970	f_9039970	
 	f	I	f_1898565		MAX_CHUNK_UPDATES
 	f	I	f_9838191		CHUNK_SIZE
-	m	(Lnet/minecraft/unmapped/C_0693652;Lnet/minecraft/unmapped/C_5853518;II)V	m_3006844	renderBlockSelection	
+	m	(Lnet/minecraft/unmapped/C_0693652;Lnet/minecraft/unmapped/C_5853518;II)V	m_3006844	renderBlockOutline	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
@@ -190,11 +190,11 @@ c	net/minecraft/unmapped/C_1044273
 	m	()V	m_2908225	m_2908225	
 	m	()Ljava/util/List;	m_2981807		getDirtyChunks
 	m	(Lnet/minecraft/unmapped/C_0693652;)V	m_0477995		updateDirtyChunks
-		p	1			player
+		p	1			camera
 	m	(Lnet/minecraft/unmapped/C_0693652;Lnet/minecraft/unmapped/C_8199124;)V	m_3613911		renderBlocksNearPlayer
 		p	1			camera
 		p	2			frustum
-	m	(Lnet/minecraft/unmapped/C_5853518;II)V	m_3006844		renderBlockSelection
+	m	(Lnet/minecraft/unmapped/C_5853518;II)V	m_3006844		renderBlockOutline
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -215,14 +215,14 @@ c	net/minecraft/unmapped/C_2334550
 		p	1		r	
 		p	2		g	
 		p	3		b	
-	m	(BBB)V	m_3482462	setColor	
+	m	(BBB)V	m_3482462	color	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
-	m	(FF)V	m_7884283		setUVs
+	m	(FF)V	m_7884283		texture
 		p	1			u
 		p	2			v
-	m	(FFF)V	m_3482462		setColor
+	m	(FFF)V	m_3482462		color
 		p	1			r
 		p	2			g
 		p	3			b
@@ -254,11 +254,10 @@ c	net/minecraft/unmapped/C_5283200
 	m	(Lnet/minecraft/unmapped/C_0693652;)F	m_9608130	m_9608130	squaredDistanceToCenter
 c	net/minecraft/unmapped/C_5974036
 	f	J	f_2069125		NANOS_PER_SECOND
-	f	J	f_6322592		NANOS_PER_SECOND1
+	f	J	f_6322592		MAX_NANOS_PER_UPDATE
 	f	I	f_9920113		MAX_TICKS
-	f	F	f_6567507		partialTick
-	f	F	f_6634432	partialTick	ticksPassed
-	m	()V	m_2550551		update
+	f	F	f_6567507		timeDelta
+	m	()V	m_2550551		advance
 c	net/minecraft/unmapped/C_8688622	net/minecraft/client/render/world/DistanceChunkSorter	net/minecraft/client/render/world/DirtyChunkSorter
 	f	Lnet/minecraft/unmapped/C_8199124;	f_1226031		frustum
 	f	J	f_0566945		time
@@ -271,19 +270,19 @@ c	net/minecraft/unmapped/C_8688622	net/minecraft/client/render/world/DistanceChu
 		p	1			p_1
 		p	2			p_2
 c	net/minecraft/unmapped/C_8199124
-	f	I	f_1013777		SIDE_RIGHT
-	f	I	f_0449444		SIDE_LEFT
-	f	I	f_3850690		SIDE_BOTTOM
-	f	I	f_0266392		SIDE_TOP
-	f	I	f_4703127		SIDE_BACK
-	f	I	f_6431321		SIDE_FRONT
+	f	I	f_1013777		FACE_RIGHT
+	f	I	f_0449444		FACE_LEFT
+	f	I	f_3850690		FACE_BOTTOM
+	f	I	f_0266392		FACE_TOP
+	f	I	f_4703127		FACE_BACK
+	f	I	f_6431321		FACE_FRONT
 	f	I	f_8967816		PLANE_X
 	f	I	f_2003851		PLANE_Y
 	f	I	f_3617466		PLANE_Z
 	f	I	f_4870409		PLANE_W
 	m	([[FI)V	m_5256054
 		p	0		p_0	
-		p	2			side
+		p	2			face
 	m	()V	m_3418415		generateFrustum
 	m	(FFF)Z	m_2710320		isInside
 		p	1			x
@@ -326,23 +325,23 @@ c	net/minecraft/unmapped/C_7898033
 	m	(F)V	m_2456266		render
 		p	1			tickDelta
 c	net/minecraft/unmapped/C_3499172
-	m	(FFF)Lnet/minecraft/unmapped/C_3499172;	m_6152302		expandOneSided
+	m	(FFF)Lnet/minecraft/unmapped/C_3499172;	m_6152302		expanded
 		p	1			dx
 		p	2			dy
 		p	3			dz
-	m	(FFF)Lnet/minecraft/unmapped/C_3499172;	m_4157271		expandCentred
+	m	(FFF)Lnet/minecraft/unmapped/C_3499172;	m_4157271		grown
 		p	1			dx
 		p	2			dy
 		p	3			dz
-	m	(Lnet/minecraft/unmapped/C_3499172;F)F	m_5984123		isWithinXDist
+	m	(Lnet/minecraft/unmapped/C_3499172;F)F	m_5984123		intersectX
 		p	1			box
-		p	2			dx
-	m	(Lnet/minecraft/unmapped/C_3499172;F)F	m_1137652		isWithinYDist
+		p	2			limit
+	m	(Lnet/minecraft/unmapped/C_3499172;F)F	m_1137652		intersectY
 		p	1			box
-		p	2			dy
-	m	(Lnet/minecraft/unmapped/C_3499172;F)F	m_5832453		isWithinZDist
+		p	2			limit
+	m	(Lnet/minecraft/unmapped/C_3499172;F)F	m_5832453		intersectZ
 		p	1			box
-		p	2			dz
+		p	2			limit
 c	net/minecraft/unmapped/C_6495127
 	f	I	f_5915199	f_5915199	
 	f	Lnet/minecraft/client/Minecraft;	f_7026537	f_7026537	
@@ -377,10 +376,10 @@ c	net/minecraft/unmapped/C_6495127
 		p	1			sizeX
 		p	2			sizeZ
 		p	3			sizeY
-	m	(Lnet/minecraft/unmapped/C_4502654;)V	m_6604813		addUpdateListener
-		p	1			updateListener
-	m	(Lnet/minecraft/unmapped/C_4502654;)V	m_1632456		removeUpdateListener
-		p	1			updateListener
+	m	(Lnet/minecraft/unmapped/C_4502654;)V	m_6604813		addEventListener
+		p	1			listener
+	m	(Lnet/minecraft/unmapped/C_4502654;)V	m_1632456		removeEventListener
+		p	1			listener
 	m	(III)Z	m_1890831		isOpaque
 		p	1			x
 		p	2			y
@@ -449,16 +448,16 @@ c	net/minecraft/unmapped/C_2971394		net/minecraft/unmapped/C_2971394
 		p	1			p_1
 	m	()V	m_0662649		m_0662649
 c	net/minecraft/unmapped/C_4502654		net/minecraft/world/WorldEventListener
-	m	(III)V	m_6028586		setPosDirty
+	m	(III)V	m_6028586		notifyBlockChanged
 		p	1			x
 		p	2			y
 		p	3			z
-	m	(IIII)V	m_0269289		setColumnDirty
+	m	(IIII)V	m_0269289		notifyColumnChanged
 		p	1			x
 		p	2			z
 		p	3			minY
 		p	4			maxY
-	m	()V	m_4670696		setWorldDirty
+	m	()V	m_4670696		notifyWorldChanged
 c	net/minecraft/unmapped/C_5558122		net/minecraft/unmapped/C_5558122
 	m	(Lnet/minecraft/unmapped/C_8184723;)V	m_9131252		m_9131252
 		p	1			p_1

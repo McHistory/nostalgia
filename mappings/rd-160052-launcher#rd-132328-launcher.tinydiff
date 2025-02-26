@@ -66,7 +66,7 @@ c	net/minecraft/unmapped/C_1044273
 	f	Lnet/minecraft/unmapped/C_2334550;	f_7101910		tesselator
 	m	()Ljava/util/List;	m_2981807	getDirtyChunks	
 	m	(Lnet/minecraft/unmapped/C_0693652;)V	m_0477995	updateDirtyChunks	
-		p	1		player	
+		p	1		camera	
 c	net/minecraft/unmapped/C_2334550
 	f	I	f_9540616	index	
 	f	Lnet/minecraft/unmapped/C_2334550;	f_9148274	INSTANCE	
@@ -99,12 +99,12 @@ c	net/minecraft/unmapped/C_2454294	net/minecraft/client/ParticleManager
 	m	(Lnet/minecraft/unmapped/C_6495127;)V	<init>	<init>	
 		p	1		p_1	
 c	net/minecraft/unmapped/C_3385278
-	f	I	f_1400095		id
+	f	I	f_1400095		lastId
 c	net/minecraft/unmapped/C_5283200
 	f	F	f_7537396	centerX	
 	f	F	f_1919969	centerY	
 	f	F	f_9635507	centerZ	
-	f	J	f_3074401	compileTime	
+	f	J	f_3074401	updateTime	
 	f	J	f_7820675	dirtyTime	
 	m	()V	m_0330444	compile	
 	m	()Z	m_1389639	isDirty	
@@ -142,7 +142,7 @@ c	net/minecraft/unmapped/C_6495127
 		p	2		y	
 		p	3		z	
 		p	4		block	
-	m	(III)Z	m_2758555	isLit	
+	m	(III)Z	m_2758555	hasSkyAccess	
 		p	1		x	
 		p	2		y	
 		p	3		z	
@@ -166,7 +166,7 @@ c	net/minecraft/unmapped/C_6495127
 		p	1			x
 		p	2			y
 		p	3			z
-		p	4			blockID
+		p	4			block
 c	net/minecraft/unmapped/C_6501689
 	f	Lnet/minecraft/unmapped/C_7898033;	f_6031782	model	
 	f	Lnet/minecraft/unmapped/C_0289174;	f_6816342		head

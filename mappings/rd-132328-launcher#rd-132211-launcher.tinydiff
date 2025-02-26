@@ -44,7 +44,7 @@ c	net/minecraft/unmapped/C_0289174	net/minecraft/client/render/model/ModelPart
 		p	1		u	
 		p	2		v	
 c	net/minecraft/unmapped/C_3385278
-	m	(I)V	m_1818598		updateID
+	m	(I)V	m_1818598		bind
 		p	0			id
 c	net/minecraft/unmapped/C_3589148	net/minecraft/client/render/model/Polygon	
 	f	[Lnet/minecraft/unmapped/C_9856888;	f_2471300	vertices	
@@ -59,7 +59,7 @@ c	net/minecraft/unmapped/C_3589148	net/minecraft/client/render/model/Polygon
 		p	5		v2	
 	m	()V	m_4430908	render	
 c	net/minecraft/unmapped/C_5283200
-	f	I	f_7665448		textureMap
+	f	I	f_7665448		terrainTexture
 c	net/minecraft/unmapped/C_9856888	net/minecraft/client/render/model/Vertex	
 	f	Lnet/minecraft/unmapped/C_0336319;	f_4350793	pos	
 	f	F	f_5311158	u	
@@ -89,26 +89,26 @@ c	net/minecraft/unmapped/C_0693652
 	f	F	f_5468762		x
 	f	F	f_9288806		y
 	f	F	f_7729520		z
-	f	F	f_1232132		xSpeed
-	f	F	f_1590037		ySpeed
-	f	F	f_5438529		zSpeed
+	f	F	f_1232132		velocityX
+	f	F	f_1590037		velocityY
+	f	F	f_5438529		velocityZ
 	f	F	f_3334993		yaw
 	f	F	f_6558595		pitch
-	f	Lnet/minecraft/unmapped/C_3499172;	f_9063862		hitbox
-	f	Z	f_4356625		isGrounded
-	m	()V	m_8580902		respawn
-	m	(FFF)V	m_5869793		moveHitbox
+	f	Lnet/minecraft/unmapped/C_3499172;	f_9063862		shape
+	f	Z	f_4356625		onGround
+	m	()V	m_8580902		resetPos
+	m	(FFF)V	m_5869793		setPosition
 		p	1			x
 		p	2			y
 		p	3			z
-	m	(FF)V	m_9506191		turnCamera
-		p	1			mouseDx
-		p	2			mouseDy
+	m	(FF)V	m_9506191		updateLocalPlayerCamera
+		p	1			yaw
+		p	2			pitch
 	m	(FFF)V	m_4530351		move
 		p	1			dx
 		p	2			dy
 		p	3			dz
-	m	(FFF)V	m_0704988		processMovement
+	m	(FFF)V	m_0704988		updateVelocity
 		p	1			dx
 		p	2			dz
 		p	3			speed
