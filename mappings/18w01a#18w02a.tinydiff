@@ -896,8 +896,8 @@ c	net/minecraft/unmapped/C_5196988
 		p	1		stack	
 		p	2		color	
 	m	(Lnet/minecraft/unmapped/C_5196988$C_7022258;ILnet/minecraft/unmapped/C_7278838;)V	<init>	<init>	
-		p	1		material	
-		p	2		materialId	
+		p	1		tier	
+		p	2		material	
 		p	3		slot	
 	m	(Lnet/minecraft/unmapped/C_6893850;Lnet/minecraft/unmapped/C_7278838;Lnet/minecraft/unmapped/C_4030632$C_7918174;)V	<init>		<init>
 		p	1			tier
@@ -953,16 +953,16 @@ c	net/minecraft/unmapped/C_5422301
 		p	1			treeGenerator
 		p	2			properties
 c	net/minecraft/unmapped/C_5434245
-	f	Lnet/minecraft/unmapped/C_4030632$C_5478196;	f_8032657	material	
+	f	Lnet/minecraft/unmapped/C_4030632$C_5478196;	f_8032657	tier	
 	f	F	f_3388323		attackSpeed
 	m	()Z	m_6815351	m_6815351	
 	m	()I	m_7905054	m_7905054	
-	m	()Ljava/lang/String;	m_9240751	getToolMaterial	
+	m	()Ljava/lang/String;	m_9240751	getTierName	
 	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_2750078;)Z	m_4452348	m_4452348	
 		p	1		p_1	
 		p	2		p_2	
 	m	(Lnet/minecraft/unmapped/C_4030632$C_5478196;)V	<init>	<init>	
-		p	1		material	
+		p	1		tier	
 	m	(Lnet/minecraft/unmapped/C_7691801;IFLnet/minecraft/unmapped/C_4030632$C_7918174;)V	<init>		<init>
 		p	1			material
 		p	2			attackDamage
@@ -1127,11 +1127,11 @@ c	net/minecraft/unmapped/C_7029902
 c	net/minecraft/unmapped/C_7137679
 	f	Lnet/minecraft/unmapped/C_4030632$C_5478196;	f_5798561	tier	
 	m	()Z	m_6815351	m_6815351	
-	m	()Ljava/lang/String;	m_3450929	getAsString	
+	m	()Ljava/lang/String;	m_3450929	getTierName	
 	m	(Lnet/minecraft/unmapped/C_4030632$C_5478196;)V	<init>	<init>	
 		p	1		tier	
 	m	(Lnet/minecraft/unmapped/C_7691801;FLnet/minecraft/unmapped/C_4030632$C_7918174;)V	<init>		<init>
-		p	1			material
+		p	1			tier
 		p	2			attackSpeed
 		p	3			properties
 c	net/minecraft/unmapped/C_7146036
@@ -1257,14 +1257,14 @@ c	net/minecraft/unmapped/C_8906619	net/minecraft/item/ToolItem	net/minecraft/ite
 	f	Lnet/minecraft/unmapped/C_4030632$C_5478196;	f_2854125	tier	
 	m	()Z	m_6815351	m_6815351	
 	m	()I	m_7905054	m_7905054	
-	m	()Ljava/lang/String;	m_9618840	getMaterialAsString	
+	m	()Ljava/lang/String;	m_9618840	getTierName	
 	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_2750078;)Z	m_4452348	m_4452348	
 		p	1		p_1	
 		p	2		p_2	
 	m	(FFLnet/minecraft/unmapped/C_4030632$C_5478196;Ljava/util/Set;)V	<init>	<init>	
 		p	1		attackDamage	
 		p	2		attackSpeed	
-		p	3		material	
+		p	3		tier	
 		p	4		effectiveBlocks	
 	m	(Lnet/minecraft/unmapped/C_4030632$C_5478196;Ljava/util/Set;)V	<init>	<init>	
 		p	1		material	
@@ -1272,7 +1272,7 @@ c	net/minecraft/unmapped/C_8906619	net/minecraft/item/ToolItem	net/minecraft/ite
 	m	(FFLnet/minecraft/unmapped/C_7691801;Ljava/util/Set;Lnet/minecraft/unmapped/C_4030632$C_7918174;)V	<init>		<init>
 		p	1			attackDamage
 		p	2			attackSpeed
-		p	3			material
+		p	3			tier
 		p	4			effectiveBlocks
 		p	5			properties
 c	net/minecraft/unmapped/C_8986452
@@ -4033,11 +4033,11 @@ c	net/minecraft/unmapped/C_7022258		net/minecraft/item/armor/BuiltInArmorTier
 	m	()Lnet/minecraft/unmapped/C_0241772;	m_4141753		m_4141753
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_7490628		net/minecraft/item/ToolItem
-	f	Lnet/minecraft/unmapped/C_7691801;	f_9057200		material
+	f	Lnet/minecraft/unmapped/C_7691801;	f_9057200		tier
 	m	(Lnet/minecraft/unmapped/C_7691801;Lnet/minecraft/unmapped/C_4030632$C_7918174;)V	<init>		<init>
-		p	1			material
+		p	1			tier
 		p	2			properties
-	m	()Lnet/minecraft/unmapped/C_7691801;	m_4214895		getMaterial
+	m	()Lnet/minecraft/unmapped/C_7691801;	m_4214895		getTier
 	m	()I	m_7905054		m_7905054
 	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_2750078;)Z	m_4452348		m_4452348
 		p	1			p_1
@@ -4056,7 +4056,7 @@ c	net/minecraft/unmapped/C_7555433		net/minecraft/item/DyeableArmorItem
 	m	(Lnet/minecraft/unmapped/C_2750078;I)V	m_0592101		setColor
 		p	1			stack
 		p	2			color
-c	net/minecraft/unmapped/C_7691801		net/minecraft/item/tool/ToolMaterial
+c	net/minecraft/unmapped/C_7691801		net/minecraft/item/tool/ToolTier
 	m	()I	m_7028273		getDurability
 	m	()F	m_4202567		getSpeed
 	m	()F	m_8471659		getAttackDamage
