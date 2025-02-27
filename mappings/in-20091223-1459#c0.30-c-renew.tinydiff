@@ -219,8 +219,8 @@ c	net/minecraft/unmapped/C_3635204
 	f	Lnet/minecraft/unmapped/C_3635204;	f_7315821	LEAVES	
 	f	Ljava/util/Random;	f_0457756		RANDOM
 	f	[I	f_0375741		f_0375741
-	f	Lnet/minecraft/unmapped/C_3635204;	f_5708490		AIR
-	f	Lnet/minecraft/unmapped/C_3635204;	f_6242213		f_6242213
+	f	Lnet/minecraft/unmapped/C_3635204;	f_5708490		GRASS
+	f	Lnet/minecraft/unmapped/C_3635204;	f_6242213		DIRT
 	f	Lnet/minecraft/unmapped/C_3635204;	f_5091096		f_5091096
 	f	Lnet/minecraft/unmapped/C_3635204;	f_8866375		f_8866375
 	f	Lnet/minecraft/unmapped/C_3635204;	f_1957938		f_1957938
@@ -328,12 +328,12 @@ c	net/minecraft/unmapped/C_3635204
 		p	3			y
 		p	4			z
 		p	5			face
-	m	(Lnet/minecraft/unmapped/C_2334550;IIII)V	m_2253214		m_2253214
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
+	m	(Lnet/minecraft/unmapped/C_2334550;IIII)V	m_2253214		renderTexturedFace
+		p	1			tessellator
+		p	2			x
+		p	3			y
+		p	4			z
+		p	5			face
 	m	(Lnet/minecraft/unmapped/C_2334550;IIIII)V	m_3802329		m_3802329
 		p	1			p_1
 		p	2			p_2
@@ -355,7 +355,7 @@ c	net/minecraft/unmapped/C_3635204
 		p	1			x
 		p	2			y
 		p	3			z
-	m	()Z	m_3237591		m_3237591
+	m	()Z	m_3237591		isOpaque
 	m	(Lcom/mojang/minecraft/level/Level;IIILjava/util/Random;)V	m_3941370		tick
 		c		Performs a scheduled tick. Blocks that want to perform some action after a delay can\ntell the world to schedule the update, which is then executed by calling this method.
 		p	1			world
@@ -363,7 +363,7 @@ c	net/minecraft/unmapped/C_3635204
 		p	3			y
 		p	4			z
 		p	5			random
-	m	(Lcom/mojang/minecraft/level/Level;IIILnet/minecraft/unmapped/C_2454294;)V	m_3427045		m_3427045
+	m	(Lcom/mojang/minecraft/level/Level;IIILnet/minecraft/unmapped/C_2454294;)V	m_3427045		addBreakParticles
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -1127,23 +1127,23 @@ c	net/minecraft/unmapped/C_0139979
 c	net/minecraft/unmapped/C_0289174
 	f	[Lnet/minecraft/unmapped/C_9856888;	f_1032831	vertices	
 	f	[Lnet/minecraft/unmapped/C_3589148;	f_7982391	polygons	
-	f	[Lnet/minecraft/unmapped/C_9856888;	f_4964947		f_4964947
-	f	[Lnet/minecraft/unmapped/C_3589148;	f_0337920		f_0337920
-	f	F	f_8501929		f_8501929
-	f	F	f_8710519		f_8710519
-	f	F	f_2757164		f_2757164
-	f	F	f_4296307		f_4296307
-	f	F	f_5432517		f_5432517
-	f	F	f_0768495		f_0768495
-	f	Z	f_7948508		f_7948508
-	f	I	f_3894400		f_3894400
+	f	[Lnet/minecraft/unmapped/C_9856888;	f_4964947		vertices
+	f	[Lnet/minecraft/unmapped/C_3589148;	f_0337920		polygons
+	f	F	f_8501929		x
+	f	F	f_8710519		y
+	f	F	f_2757164		z
+	f	F	f_4296307		rotationX
+	f	F	f_5432517		rotationY
+	f	F	f_0768495		rotationZ
+	f	Z	f_7948508		compiled
+	f	I	f_3894400		glList
 	f	Z	f_2797670		f_2797670
 	f	Z	f_6766296		f_6766296
-	m	(FFF)V	m_4478491		m_4478491
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-	m	(F)V	m_8346450		m_8346450
+	m	(FFF)V	m_4478491		setPos
+		p	1			x
+		p	2			y
+		p	3			z
+	m	(F)V	m_8346450		render
 		p	1			p_1
 	m	(F)V	m_3169058		m_3169058
 		p	1			p_1
@@ -1576,20 +1576,20 @@ c	net/minecraft/unmapped/C_9302567	net/minecraft/client/render/entity/EntityRend
 	f	Lnet/minecraft/unmapped/C_3906126;	f_1797121	dispatcher	
 	m	()V	<init>	<init>	
 c	net/minecraft/unmapped/C_9856888
-	f	F	f_5311158		f_5311158
-	f	F	f_9595578		f_9595578
+	f	F	f_5311158		u
+	f	F	f_9595578		v
 	m	(Lnet/minecraft/unmapped/C_9856888;)V	<init>	<init>	
 		p	1		p_1	
 	m	(Lnet/minecraft/unmapped/C_0336319;)V	<init>	<init>	
 		p	1		p_1	
 	m	(Lnet/minecraft/unmapped/C_9856888;FF)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+		p	1			pos
+		p	2			u
+		p	3			v
 	m	(Lnet/minecraft/unmapped/C_0336319;FF)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+		p	1			pos
+		p	2			u
+		p	3			v
 c	net/minecraft/unmapped/C_6542415	net/minecraft/client/gui/ChatMessage	
 	f	I	f_6807072	timeOfCreation	
 c	net/minecraft/unmapped/C_0388903
@@ -3454,14 +3454,14 @@ c	net/minecraft/unmapped/C_7598507		net/minecraft/unmapped/C_7598507
 	m	(Lnet/minecraft/unmapped/C_8534347;Ljava/lang/String;)Z	m_6859432		m_6859432
 		p	1			p_1
 		p	2			p_2
-c	net/minecraft/unmapped/C_7898033		net/minecraft/unmapped/C_7898033
-	f	Lnet/minecraft/unmapped/C_0289174;	f_6250892		f_6250892
+c	net/minecraft/unmapped/C_7898033		net/minecraft/client/render/model/entity/HumanoidModel
+	f	Lnet/minecraft/unmapped/C_0289174;	f_6250892		head
 	f	Lnet/minecraft/unmapped/C_0289174;	f_3515609		f_3515609
-	f	Lnet/minecraft/unmapped/C_0289174;	f_4812958		f_4812958
-	f	Lnet/minecraft/unmapped/C_0289174;	f_9339598		f_9339598
-	f	Lnet/minecraft/unmapped/C_0289174;	f_7661525		f_7661525
-	f	Lnet/minecraft/unmapped/C_0289174;	f_0860911		f_0860911
-	f	Lnet/minecraft/unmapped/C_0289174;	f_9956807		f_9956807
+	f	Lnet/minecraft/unmapped/C_0289174;	f_4812958		body
+	f	Lnet/minecraft/unmapped/C_0289174;	f_9339598		rightArm
+	f	Lnet/minecraft/unmapped/C_0289174;	f_7661525		leftArm
+	f	Lnet/minecraft/unmapped/C_0289174;	f_0860911		rightLeg
+	f	Lnet/minecraft/unmapped/C_0289174;	f_9956807		leftLeg
 	m	()V	<init>		<init>
 	m	(F)V	<init>		<init>
 		p	1			p_1
