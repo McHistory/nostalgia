@@ -57,11 +57,11 @@ c	net/minecraft/unmapped/C_1013763
 	f	[Lnet/minecraft/unmapped/C_2750078;	f_2021350		equipment
 		c		The inventory of the mob. This has 5 slots:\n <ul>\n  <li>Slot 0: weapon</li>\n  <li>Slot 1: boots</li>\n  <li>Slot 2: leggins</li>\n  <li>Slot 3: chestplate</li>\n  <li>Slot 4: helmet</li>\n</ul>
 	f	[Lnet/minecraft/unmapped/C_2750078;	f_2960352		f_2960352
-	f	Z	f_1813673		handSwinging
-	f	I	f_7845384		handSwingTicks
+	f	Z	f_1813673		armSwinging
+	f	I	f_7845384		armSwingingTicks
 	m	(Lnet/minecraft/unmapped/C_6385858;)V	m_1202560		pushAway
 		p	1			entity
-	m	()V	m_0480570		updateHandSwing
+	m	()V	m_0480570		updateArmSwing
 	m	(I)V	m_7500176		removeStatusEffect
 		p	1			id
 	m	(I)Lnet/minecraft/unmapped/C_2750078;	m_4716717		getEquipment
@@ -81,9 +81,8 @@ c	net/minecraft/unmapped/C_1013763
 	m	()V	m_3681089		enchantWeaponsAndArmor
 	m	()V	m_6896447		setEntityVariety
 		c		This method is used to set which variety of entity is spawned. For zombies this can be a zombie or zombie pigman. It can be a spider spawning with a jockey, the color of the sheep etc.
-	m	()I	m_6916890		getMiningSpeedMultiplier
-		c		Gets the mining speed f the player. Mining speed is increased by haste and reduced by mining fatige
-	m	()V	m_5308766		swingHand
+	m	()I	m_6916890		getArmSwingDuration
+	m	()V	m_5308766		swingArm
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_1309851
 	m	(Ljava/lang/String;)Z	m_5330743	m_5330743	

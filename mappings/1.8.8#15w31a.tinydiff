@@ -201,7 +201,7 @@ c	net/minecraft/unmapped/C_1013763
 	f	I	f_6562973		EFFECT_PARTICLES_AMBIENT
 	f	I	f_7450833		STUCK_ARROWS
 	f	[Lnet/minecraft/unmapped/C_2750078;	f_5469608		armor
-	f	Lnet/minecraft/unmapped/C_4360192;	f_6119003		mainHand
+	f	Lnet/minecraft/unmapped/C_4360192;	f_6119003		swingingArm
 	f	Lnet/minecraft/unmapped/C_2750078;	f_9963671		itemInUse
 	f	I	f_2425220		itemInUseDuration
 	m	()Lnet/minecraft/unmapped/C_2750078;	m_2674028	getDisplayItemInHand	
@@ -215,7 +215,7 @@ c	net/minecraft/unmapped/C_1013763
 		p	1		p_1	
 		p	2		p_2	
 	m	()[Lnet/minecraft/unmapped/C_2750078;	m_9919834	m_9919834	
-	m	()V	m_5308766	swingHand	
+	m	()V	m_5308766	swingArm	
 	m	(I)Z	m_2125280	hasStatusEffect	
 		p	1		id	
 	m	(I)Lnet/minecraft/unmapped/C_2750078;	m_5901136	getArmor	
@@ -229,7 +229,7 @@ c	net/minecraft/unmapped/C_1013763
 	m	(Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_2441996;)Z	m_1223943		canClimbTrapdoor
 		p	1			pos
 		p	2			state
-	m	(Lnet/minecraft/unmapped/C_4360192;)V	m_5308766		swingHand
+	m	(Lnet/minecraft/unmapped/C_4360192;)V	m_5308766		swingArm
 		p	1			hand
 	m	()Lnet/minecraft/unmapped/C_2750078;	m_6358554		getItemInMainHand
 	m	()Lnet/minecraft/unmapped/C_2750078;	m_0203268		getItemInOffHand
@@ -463,7 +463,7 @@ c	net/minecraft/unmapped/C_2751481
 		p	1		player	
 		p	2		swapProgress	
 		p	3		swingProgress	
-	m	(F)V	m_6540229	applyHandSwing	
+	m	(F)V	m_6540229	applyArmSwing	
 		p	1		swingProgress	
 	m	(Lnet/minecraft/unmapped/C_7106153;F)V	m_6895155	applyConsuming	
 		p	1		player	
