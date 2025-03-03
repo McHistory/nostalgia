@@ -213,8 +213,8 @@ c	net/minecraft/unmapped/C_2616453$C_0932780	ChunkPos
 		p	1		p_1	
 	m	()I	hashCode	hashCode	
 c	net/minecraft/unmapped/C_2750078
-	m	(I)V	m_7305709	damageAndBreak	
-		p	1		damage	
+	m	(I)V	m_7305709	takeDamageAndBreak	
+		p	1		amount	
 	m	(Lnet/minecraft/unmapped/C_1013763;)V	m_3149288	attack	
 		p	1		entity	
 	m	(IIII)V	m_3316715	mineBlock	
@@ -224,9 +224,9 @@ c	net/minecraft/unmapped/C_2750078
 		p	4		face	
 	m	(Lnet/minecraft/unmapped/C_2750078;)Lnet/minecraft/unmapped/C_2750078;	m_6559409		copyOf
 		p	0			stack
-	m	(ILnet/minecraft/unmapped/C_6385858;)V	m_7305709		damageAndBreak
-		p	1			damage
-		p	2			entity
+	m	(ILnet/minecraft/unmapped/C_6385858;)V	m_7305709		takeDamageAndBreak
+		p	1			amount
+		p	2			holder
 	m	(Lnet/minecraft/unmapped/C_1013763;Lnet/minecraft/unmapped/C_5009044;)V	m_3149288		attack
 		p	1			target
 		p	2			attacker
@@ -3137,10 +3137,10 @@ c	net/minecraft/unmapped/C_7302585		net/minecraft/client/entity/particle/Emotion
 		p	6			p_6
 		p	7			p_7
 	m	()V	m_0718337		m_0718337
-c	net/minecraft/unmapped/C_7338567		net/minecraft/entity/mob/animal/tamable/WolfEntity
+c	net/minecraft/unmapped/C_7338567		net/minecraft/entity/mob/animal/WolfEntity
 	f	Z	f_0518827		interested
-	f	F	f_8834819		interestedAngle
-	f	F	f_9497596		lastInterestedAngle
+	f	F	f_8834819		headRollAngle
+	f	F	f_9497596		lastHeadRollAngle
 	f	Z	f_3768344		wet
 	f	Z	f_2582494		shaking
 	f	F	f_6924990		shakeProgress

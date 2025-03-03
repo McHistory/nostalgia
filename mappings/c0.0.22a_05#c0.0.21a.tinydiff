@@ -19,8 +19,8 @@ c	net/minecraft/client/Minecraft
 	f	Lnet/minecraft/unmapped/C_0139979;	f_3881621	resourceDownloader	
 	f	Lnet/minecraft/unmapped/C_7598507;	f_2497216	f_2497216	
 	f	Lnet/minecraft/unmapped/C_8534347;	f_1501934	f_1501934	
-	f	Ljava/nio/FloatBuffer;	f_2682162		f_2682162
-	f	Ljava/nio/FloatBuffer;	f_4839363		f_4839363
+	f	Ljava/nio/FloatBuffer;	f_2682162		fogColor
+	f	Ljava/nio/FloatBuffer;	f_4839363		shadowFogColor
 	f	F	f_9762585		f_9762585
 	f	F	f_7808593		f_7808593
 	f	F	f_0991746		f_0991746
@@ -29,20 +29,20 @@ c	net/minecraft/client/Minecraft
 	f	Z	f_2099688		f_2099688
 	f	I	f_5984003		f_5984003
 	f	I	f_4890835		f_4890835
-	f	Ljava/nio/FloatBuffer;	f_6477821		f_6477821
+	f	Ljava/nio/FloatBuffer;	f_6477821		floatBuffer
 	f	Ljava/lang/String;	f_0125064		f_0125064
 	f	Ljava/lang/String;	f_3100662		f_3100662
-	m	(F)V	m_0675932		m_0675932
+	m	(F)V	m_0675932		render
 		p	1			p_1
 	m	(Z)V	m_6824580		m_6824580
 		p	1			p_1
 	m	()V	m_2422356		m_2422356
-	m	()V	m_1963333		m_1963333
-	m	(FFFF)Ljava/nio/FloatBuffer;	m_8273881		m_8273881
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
+	m	()V	m_1963333		setupFog
+	m	(FFFF)Ljava/nio/FloatBuffer;	m_8273881		getBuffer
+		p	1			f1
+		p	2			f2
+		p	3			f3
+		p	4			f4
 	m	(Ljava/lang/String;)V	m_3461043		m_3461043
 		p	1			p_1
 	m	(Ljava/lang/String;)V	m_6843433		m_6843433

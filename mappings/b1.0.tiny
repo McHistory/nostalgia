@@ -864,7 +864,7 @@ c	net/minecraft/unmapped/C_0400468	net/minecraft/block/SignBlock
 		p	3		p_3
 		p	4		p_4
 		p	5		p_5
-c	net/minecraft/unmapped/C_0456473	net/minecraft/block/TransparentBlock
+c	net/minecraft/unmapped/C_0456473	net/minecraft/block/TranslucentBlock
 	f	Z	f_2146168	culling
 	m	(IILnet/minecraft/unmapped/C_8554894;Z)V	<init>	<init>
 		p	1		id
@@ -3648,8 +3648,8 @@ c	net/minecraft/unmapped/C_2750078	net/minecraft/item/ItemStack
 		p	1		nbt
 	m	()I	m_0308377	getMaxSize
 	m	()I	m_7267649	getMaxDamage
-	m	(I)V	m_7305709	damageAndBreak
-		p	1		damage
+	m	(I)V	m_7305709	takeDamageAndBreak
+		p	1		amount
 	m	(Lnet/minecraft/unmapped/C_1013763;)V	m_3149288	attack
 		p	1		entity
 	m	(IIII)V	m_3316715	mineBlock
@@ -4518,7 +4518,7 @@ c	net/minecraft/unmapped/C_3484604	net/minecraft/block/DoorBlock
 		p	3		p_3
 		p	4		p_4
 	m	(I)V	m_0892110	updateShape
-		p	1		metadata
+		p	1		facing
 	m	(Lnet/minecraft/unmapped/C_3906126;IIILnet/minecraft/unmapped/C_5009044;)V	m_8322574	m_8322574
 		p	1		p_1
 		p	2		p_2
@@ -4933,7 +4933,7 @@ c	net/minecraft/unmapped/C_3635204	net/minecraft/block/Block
 	f	Lnet/minecraft/unmapped/C_3635204;	f_5874408	LIT_PUMPKIN
 	f	I	f_2648035	sprite
 	f	I	f_2860341	id
-	f	F	f_2859729	miningSpeed
+	f	F	f_2859729	miningTime
 	f	F	f_0979704	blastResistance
 	f	D	f_8954589	minX
 	f	D	f_1532370	minY
@@ -5129,7 +5129,7 @@ c	net/minecraft/unmapped/C_3635204	net/minecraft/block/Block
 		p	2		x
 		p	3		y
 		p	4		z
-		p	5		metadata
+		p	5		face
 	m	(Lnet/minecraft/unmapped/C_3906126;IIILnet/minecraft/unmapped/C_5009044;)V	m_8322574	startMining
 		p	1		world
 		p	2		x
@@ -7974,7 +7974,7 @@ c	net/minecraft/unmapped/C_5283200	net/minecraft/client/render/world/RenderChunk
 		p	1		layer
 	m	(Lnet/minecraft/unmapped/C_1633510;)V	m_5092852	cull
 		p	1		culler
-	m	()V	m_7170652	glCallList
+	m	()V	m_7170652	renderOcclusionTest
 	m	()Z	m_0524223	isEmpty
 	m	()V	m_2772530	markDirty
 	m	()V	<clinit>	<clinit>
@@ -9043,7 +9043,7 @@ c	net/minecraft/unmapped/C_6385858	net/minecraft/entity/Entity
 	m	()Z	m_7828889	hasCollision
 	m	()Z	m_4933034	isPushable
 	m	(Lnet/minecraft/unmapped/C_6385858;I)V	m_6349202	takeKillScore
-		p	1		entity
+		p	1		victim
 		p	2		score
 	m	(Lnet/minecraft/unmapped/C_0336319;)Z	m_5739228	shouldRender
 		p	1		cameraPos
@@ -9980,7 +9980,7 @@ c	net/minecraft/unmapped/C_7213435	net/minecraft/crafting/Recipe
 	f	I	f_3431472	resultItem
 	m	(II[ILnet/minecraft/unmapped/C_2750078;)V	<init>	<init>
 		p	1		width
-		p	2		heigt
+		p	2		height
 		p	3		ingredients
 		p	4		result
 	m	([I)Z	m_7723385	matches
@@ -11268,7 +11268,7 @@ c	net/minecraft/unmapped/C_8425960	net/minecraft/client/render/ProgressRenderer
 		p	1		p_1
 	m	(I)V	m_3915830	m_3915830
 		p	1		p_1
-c	net/minecraft/unmapped/C_8443484	net/minecraft/block/TransparentBlock2
+c	net/minecraft/unmapped/C_8443484	net/minecraft/block/TransparentBlock
 	f	Z	f_0425222	culling
 	m	(IILnet/minecraft/unmapped/C_8554894;Z)V	<init>	<init>
 		p	1		id

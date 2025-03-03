@@ -5807,9 +5807,9 @@ c	net/minecraft/unmapped/C_4824661		net/minecraft/client/render/GameRenderer
 	f	J	f_6359657		lastWorldRenderTime
 	f	Z	f_8188428		lightMapDirty
 	f	F	f_2364933		lightMapFlicker
-	f	F	f_5581964		lightMapRandoms
-	f	F	f_8042509		lightMapTexture
-	f	F	f_2513974		lightMapRandoms2
+	f	F	f_5581964		lightMapFlickerTotal
+	f	F	f_8042509		lightMapFlicker2
+	f	F	f_2513974		lightMapFlickerTotal2
 	f	Ljava/util/Random;	f_8687356		random
 	f	I	f_6644116		weatherSoundAttempts
 	f	[F	f_8781472		weatherChunkDistanceNormalizedX
@@ -6238,7 +6238,7 @@ c	net/minecraft/unmapped/C_5283200		net/minecraft/client/render/world/RenderChun
 		p	1			layer
 	m	(Lnet/minecraft/unmapped/C_1633510;)V	m_5092852		cull
 		p	1			culler
-	m	()V	m_7170652		glCallList
+	m	()V	m_7170652		renderOcclusionTest
 	m	()Z	m_0524223		isEmpty
 	m	()V	m_2772530		markDirty
 	m	()V	<clinit>		<clinit>
@@ -8282,9 +8282,9 @@ c	net/minecraft/unmapped/C_8599705		net/minecraft/client/gui/ToastGui
 	m	(Lnet/minecraft/client/Minecraft;)V	<init>		<init>
 		p	1			minecraft
 	m	(Lnet/minecraft/unmapped/C_7281219;)V	m_9575755		set
-		p	1			achieved
+		p	1			achievement
 	m	(Lnet/minecraft/unmapped/C_7281219;)V	m_5457070		setTutorial
-		p	1			achieved
+		p	1			achievement
 	m	()V	m_0450789		render
 	m	()V	m_9427414		tick
 c	net/minecraft/unmapped/C_8635993		net/minecraft/client/render/entity/PigRenderer

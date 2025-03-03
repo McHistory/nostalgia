@@ -379,8 +379,8 @@ c	net/minecraft/unmapped/C_3635204$C_6799794		Properties
 	f	Z	f_0705073		hasCollision
 	f	Lnet/minecraft/unmapped/C_0529894;	f_8438273		sounds
 	f	I	f_1334571		lightLevel
-	f	F	f_4912860		resistance
-	f	F	f_0343083		miningSpeed
+	f	F	f_4912860		blastResistance
+	f	F	f_0343083		miningTime
 	f	Z	f_3667970		ticksRandomly
 	f	F	f_9010229		slipperiness
 	m	(Lnet/minecraft/unmapped/C_8554894;Lnet/minecraft/unmapped/C_1160655;)V	<init>		<init>
@@ -404,8 +404,8 @@ c	net/minecraft/unmapped/C_3635204$C_6799794		Properties
 	m	(I)Lnet/minecraft/unmapped/C_3635204$C_6799794;	m_5222968		lightLevel
 		p	1			lightLevel
 	m	(FF)Lnet/minecraft/unmapped/C_3635204$C_6799794;	m_0247587		strength
-		p	1			miningSpeed
-		p	2			resistance
+		p	1			miningTime
+		p	2			blastResistance
 	m	()Lnet/minecraft/unmapped/C_3635204$C_6799794;	m_0756339		instabreak
 	m	(F)Lnet/minecraft/unmapped/C_3635204$C_6799794;	m_7749922		strength
 		p	1			strength
@@ -587,8 +587,8 @@ c	net/minecraft/unmapped/C_4030632$C_5478196	Tier
 	f	Lnet/minecraft/unmapped/C_4030632$C_5478196;	f_4504648	IRON	
 	f	Lnet/minecraft/unmapped/C_4030632$C_5478196;	f_7243276	DIAMOND	
 	f	Lnet/minecraft/unmapped/C_4030632$C_5478196;	f_3268656	GOLD	
-	f	I	f_6212882	strength	
-	f	I	f_5962588	maxDurability	
+	f	I	f_6212882	level	
+	f	I	f_5962588	durability	
 	f	F	f_5999863	miningSpeed	
 	f	[Lnet/minecraft/unmapped/C_4030632$C_5478196;	f_4952499	f_4952499	
 	f	I	f_9049487	enchantability	
@@ -596,16 +596,16 @@ c	net/minecraft/unmapped/C_4030632$C_5478196	Tier
 	m	()[Lnet/minecraft/unmapped/C_4030632$C_5478196;	values	values	
 	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_4030632$C_5478196;	valueOf	valueOf	
 		p	0		p_0	
-	m	()I	m_7028273	getMaxDurability	
+	m	()I	m_7028273	getDurability	
 	m	()F	m_4202567	getMiningSpeed	
-	m	()I	m_2839066	getStrength	
+	m	()I	m_2839066	getLevel	
 	m	()V	<clinit>	<clinit>	
 	m	()I	m_2230077	getEnchantability	
 	m	(Ljava/lang/String;IIIFFI)V	<init>	<init>	
 		p	1		p_1	
 		p	2		p_2	
-		p	3		strength	
-		p	4		maxDurability	
+		p	3		level	
+		p	4		durability	
 		p	5		miningSpeed	
 		p	6		attackDamage	
 		p	7		enchantability	
@@ -896,8 +896,8 @@ c	net/minecraft/unmapped/C_5196988
 		p	1		stack	
 		p	2		color	
 	m	(Lnet/minecraft/unmapped/C_5196988$C_7022258;ILnet/minecraft/unmapped/C_7278838;)V	<init>	<init>	
-		p	1		material	
-		p	2		materialId	
+		p	1		tier	
+		p	2		material	
 		p	3		slot	
 	m	(Lnet/minecraft/unmapped/C_6893850;Lnet/minecraft/unmapped/C_7278838;Lnet/minecraft/unmapped/C_4030632$C_7918174;)V	<init>		<init>
 		p	1			tier
@@ -953,16 +953,16 @@ c	net/minecraft/unmapped/C_5422301
 		p	1			treeGenerator
 		p	2			properties
 c	net/minecraft/unmapped/C_5434245
-	f	Lnet/minecraft/unmapped/C_4030632$C_5478196;	f_8032657	material	
+	f	Lnet/minecraft/unmapped/C_4030632$C_5478196;	f_8032657	tier	
 	f	F	f_3388323		attackSpeed
 	m	()Z	m_6815351	m_6815351	
 	m	()I	m_7905054	m_7905054	
-	m	()Ljava/lang/String;	m_9240751	getToolMaterial	
+	m	()Ljava/lang/String;	m_9240751	getTierName	
 	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_2750078;)Z	m_4452348	m_4452348	
 		p	1		p_1	
 		p	2		p_2	
 	m	(Lnet/minecraft/unmapped/C_4030632$C_5478196;)V	<init>	<init>	
-		p	1		material	
+		p	1		tier	
 	m	(Lnet/minecraft/unmapped/C_7691801;IFLnet/minecraft/unmapped/C_4030632$C_7918174;)V	<init>		<init>
 		p	1			material
 		p	2			attackDamage
@@ -1127,11 +1127,11 @@ c	net/minecraft/unmapped/C_7029902
 c	net/minecraft/unmapped/C_7137679
 	f	Lnet/minecraft/unmapped/C_4030632$C_5478196;	f_5798561	tier	
 	m	()Z	m_6815351	m_6815351	
-	m	()Ljava/lang/String;	m_3450929	getAsString	
+	m	()Ljava/lang/String;	m_3450929	getTierName	
 	m	(Lnet/minecraft/unmapped/C_4030632$C_5478196;)V	<init>	<init>	
 		p	1		tier	
 	m	(Lnet/minecraft/unmapped/C_7691801;FLnet/minecraft/unmapped/C_4030632$C_7918174;)V	<init>		<init>
-		p	1			material
+		p	1			tier
 		p	2			attackSpeed
 		p	3			properties
 c	net/minecraft/unmapped/C_7146036
@@ -1257,14 +1257,14 @@ c	net/minecraft/unmapped/C_8906619	net/minecraft/item/ToolItem	net/minecraft/ite
 	f	Lnet/minecraft/unmapped/C_4030632$C_5478196;	f_2854125	tier	
 	m	()Z	m_6815351	m_6815351	
 	m	()I	m_7905054	m_7905054	
-	m	()Ljava/lang/String;	m_9618840	getMaterialAsString	
+	m	()Ljava/lang/String;	m_9618840	getTierName	
 	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_2750078;)Z	m_4452348	m_4452348	
 		p	1		p_1	
 		p	2		p_2	
 	m	(FFLnet/minecraft/unmapped/C_4030632$C_5478196;Ljava/util/Set;)V	<init>	<init>	
 		p	1		attackDamage	
 		p	2		attackSpeed	
-		p	3		material	
+		p	3		tier	
 		p	4		effectiveBlocks	
 	m	(Lnet/minecraft/unmapped/C_4030632$C_5478196;Ljava/util/Set;)V	<init>	<init>	
 		p	1		material	
@@ -1272,7 +1272,7 @@ c	net/minecraft/unmapped/C_8906619	net/minecraft/item/ToolItem	net/minecraft/ite
 	m	(FFLnet/minecraft/unmapped/C_7691801;Ljava/util/Set;Lnet/minecraft/unmapped/C_4030632$C_7918174;)V	<init>		<init>
 		p	1			attackDamage
 		p	2			attackSpeed
-		p	3			material
+		p	3			tier
 		p	4			effectiveBlocks
 		p	5			properties
 c	net/minecraft/unmapped/C_8986452
@@ -3896,16 +3896,16 @@ c	net/minecraft/unmapped/C_3652263$C_6085362		C_6085362
 	m	(Lcom/mojang/brigadier/arguments/ArgumentType;Lnet/minecraft/unmapped/C_7240405;)V	m_8932200		m_8932200
 		p	1			p_1
 		p	2			p_2
-c	net/minecraft/unmapped/C_5478196		net/minecraft/item/tool/BuiltInTier
+c	net/minecraft/unmapped/C_5478196		net/minecraft/item/BuiltInTiers
 	f	Lnet/minecraft/unmapped/C_5478196;	f_7849035		WOOD
 	f	Lnet/minecraft/unmapped/C_5478196;	f_2207273		STONE
 	f	Lnet/minecraft/unmapped/C_5478196;	f_4504648		IRON
 	f	Lnet/minecraft/unmapped/C_5478196;	f_7243276		DIAMOND
 	f	Lnet/minecraft/unmapped/C_5478196;	f_3268656		GOLD
-	f	I	f_6212882		tier
+	f	I	f_6212882		level
 	f	I	f_5962588		durability
-	f	F	f_5999863		speed
-	f	F	f_0011367		damage
+	f	F	f_5999863		miningSpeed
+	f	F	f_0011367		attackDamage
 	f	I	f_9049487		enchantability
 	f	Lnet/minecraft/unmapped/C_2861100;	f_4156176		repairIngredient
 	f	[Lnet/minecraft/unmapped/C_5478196;	f_4952499		f_4952499
@@ -3915,10 +3915,10 @@ c	net/minecraft/unmapped/C_5478196		net/minecraft/item/tool/BuiltInTier
 	m	(Ljava/lang/String;IIIFFILjava/util/function/Supplier;)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
-		p	3			tier
+		p	3			level
 		p	4			durability
-		p	5			speed
-		p	6			damage
+		p	5			miningSpeed
+		p	6			attackDamage
 		p	7			enchantability
 		p	8			repairIngredient
 	m	()I	m_7028273		m_7028273
@@ -3979,17 +3979,17 @@ c	net/minecraft/unmapped/C_6680357$C_4414943		Anchor
 		p	1			entity
 	m	()Ljava/util/Map;	m_8403822		m_8403822
 	m	()V	<clinit>		<clinit>
-c	net/minecraft/unmapped/C_6893850		net/minecraft/item/armor/ArmorTier
-	m	(Lnet/minecraft/unmapped/C_7278838;)I	m_9159704		getArmorDurability
-		p	1			armorSlot
-	m	(Lnet/minecraft/unmapped/C_7278838;)I	m_8437521		getArmorPoints
-		p	1			armorPiece
+c	net/minecraft/unmapped/C_6893850		net/minecraft/item/ArmorTier
+	m	(Lnet/minecraft/unmapped/C_7278838;)I	m_9159704		getDurability
+		p	1			slot
+	m	(Lnet/minecraft/unmapped/C_7278838;)I	m_8437521		getProtection
+		p	1			slot
 	m	()I	m_8916811		getEnchantability
 	m	()Lnet/minecraft/unmapped/C_7721249;	m_8032982		getEquipSound
 	m	()Lnet/minecraft/unmapped/C_0241772;	m_8916405		getRepairIngredient
 	m	()Ljava/lang/String;	m_6469872		getName
 	m	()F	m_7620332		getToughness
-c	net/minecraft/unmapped/C_7022258		net/minecraft/item/armor/BuiltInArmorTier
+c	net/minecraft/unmapped/C_7022258		net/minecraft/item/BuiltInArmorTiers
 	f	Lnet/minecraft/unmapped/C_7022258;	f_5564659		LEATHER
 	f	Lnet/minecraft/unmapped/C_7022258;	f_7948120		CHAIN
 	f	Lnet/minecraft/unmapped/C_7022258;	f_3517169		IRON
@@ -3998,7 +3998,7 @@ c	net/minecraft/unmapped/C_7022258		net/minecraft/item/armor/BuiltInArmorTier
 	f	[I	f_5456667		DURABILITY
 	f	Ljava/lang/String;	f_9574224		name
 	f	I	f_2200228		durabilityMultiplier
-	f	[I	f_0179096		armor
+	f	[I	f_0179096		protection
 	f	I	f_8501573		enchantability
 	f	Lnet/minecraft/unmapped/C_7721249;	f_3230561		equipSound
 	f	F	f_9717014		toughness
@@ -4012,7 +4012,7 @@ c	net/minecraft/unmapped/C_7022258		net/minecraft/item/armor/BuiltInArmorTier
 		p	2			p_2
 		p	3			name
 		p	4			durabilityMultiplier
-		p	5			armor
+		p	5			protection
 		p	6			enchantability
 		p	7			equipSound
 		p	8			toughness
@@ -4033,11 +4033,11 @@ c	net/minecraft/unmapped/C_7022258		net/minecraft/item/armor/BuiltInArmorTier
 	m	()Lnet/minecraft/unmapped/C_0241772;	m_4141753		m_4141753
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_7490628		net/minecraft/item/ToolItem
-	f	Lnet/minecraft/unmapped/C_7691801;	f_9057200		material
+	f	Lnet/minecraft/unmapped/C_7691801;	f_9057200		tier
 	m	(Lnet/minecraft/unmapped/C_7691801;Lnet/minecraft/unmapped/C_4030632$C_7918174;)V	<init>		<init>
-		p	1			material
+		p	1			tier
 		p	2			properties
-	m	()Lnet/minecraft/unmapped/C_7691801;	m_4214895		getMaterial
+	m	()Lnet/minecraft/unmapped/C_7691801;	m_4214895		getTier
 	m	()I	m_7905054		m_7905054
 	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_2750078;)Z	m_4452348		m_4452348
 		p	1			p_1
@@ -4056,11 +4056,11 @@ c	net/minecraft/unmapped/C_7555433		net/minecraft/item/DyeableArmorItem
 	m	(Lnet/minecraft/unmapped/C_2750078;I)V	m_0592101		setColor
 		p	1			stack
 		p	2			color
-c	net/minecraft/unmapped/C_7691801		net/minecraft/item/tool/ToolMaterial
+c	net/minecraft/unmapped/C_7691801		net/minecraft/item/Tier
 	m	()I	m_7028273		getDurability
-	m	()F	m_4202567		getSpeed
+	m	()F	m_4202567		getMiningSpeed
 	m	()F	m_8471659		getAttackDamage
-	m	()I	m_2839066		getTier
+	m	()I	m_2839066		getLevel
 	m	()I	m_2230077		getEnchantability
 	m	()Lnet/minecraft/unmapped/C_0241772;	m_4918556		getRepairIngredient
 c	net/minecraft/unmapped/C_8313839		net/minecraft/block/entity/BlockEntityType

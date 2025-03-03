@@ -77,7 +77,7 @@ c	net/minecraft/unmapped/C_3635204
 		p	4			p_4
 		p	5			p_5
 		p	6			p_6
-	m	()I	m_3282602		m_3282602
+	m	()I	m_3282602		getId
 	m	(Lcom/mojang/minecraft/level/Level;IIIF)V	m_5317075		m_5317075
 		p	1			p_1
 		p	2			p_2
@@ -178,7 +178,7 @@ c	net/minecraft/unmapped/C_1044273
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
-	m	(Lnet/minecraft/unmapped/C_5853518;II)V	m_3006844		renderBlockSelection
+	m	(Lnet/minecraft/unmapped/C_5853518;II)V	m_3006844		renderBlockOutline
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -187,7 +187,7 @@ c	net/minecraft/unmapped/C_2454294
 		p	1		p_1	
 	m	(Lcom/mojang/minecraft/particle/Particle;)V	m_6487687		m_6487687
 		p	1			p_1
-	m	(Lcom/mojang/minecraft/player/Player;F)V	m_5775841		m_5775841
+	m	(Lcom/mojang/minecraft/player/Player;F)V	m_5775841		render
 		p	1			p_1
 		p	2			p_2
 c	net/minecraft/unmapped/C_4824661
@@ -264,9 +264,9 @@ c	net/minecraft/unmapped/C_0669153	net/minecraft/client/render/FrustumData
 		p	6		maxZ	
 c	net/minecraft/unmapped/C_8199124
 	f	[[F	f_2943825		frustum
-	f	[F	f_6016742		projectionArr
-	f	[F	f_3267753		modelViewArr
-	f	[F	f_8138591		transformArr
+	f	[F	f_6016742		projectionMatrix
+	f	[F	f_3267753		modelMatrix
+	f	[F	f_8138591		clipMatrix
 	m	()Lnet/minecraft/unmapped/C_0669153;	m_4703353	compute	
 	m	()Lnet/minecraft/unmapped/C_8199124;	m_4703353		compute
 	m	(FFFFFF)Z	m_0617681		m_0617681

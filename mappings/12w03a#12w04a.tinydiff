@@ -76,7 +76,7 @@ c	net/minecraft/unmapped/C_9595287
 c	net/minecraft/unmapped/C_6214100
 	m	(C)Z	m_9441768		isValidChatChar
 		p	0			chr
-c	net/minecraft/unmapped/C_7338567
+c	net/minecraft/unmapped/C_7338567	net/minecraft/entity/mob/animal/WolfEntity	net/minecraft/entity/mob/animal/tameable/WolfEntity
 	m	(Z)V	m_3938100	addFeedingParticle	
 		p	1		breeding	
 	m	()Ljava/lang/String;	m_4222583	getOwner	
@@ -85,7 +85,7 @@ c	net/minecraft/unmapped/C_7338567
 	m	()Z	m_7959412	isTame	
 	m	(Z)V	m_9911295	setTame	
 		p	1		tame	
-	m	()Lnet/minecraft/unmapped/C_1013763;	m_1707291	m_1707291	
+	m	()Lnet/minecraft/unmapped/C_1013763;	m_1707291	getOwnerMob	
 	m	()V	m_2363546		m_2363546
 c	net/minecraft/unmapped/C_0728298
 	m	(Lnet/minecraft/unmapped/C_2627205;III)Z	m_6314636		m_6314636
@@ -180,7 +180,7 @@ c	net/minecraft/unmapped/C_9913950
 	m	(Lnet/minecraft/unmapped/C_1013763;F)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
-c	net/minecraft/unmapped/C_0219847		net/minecraft/entity/mob/animal/tamable/TameableEntity
+c	net/minecraft/unmapped/C_0219847		net/minecraft/entity/mob/animal/tameable/TameableEntity
 	m	(Lnet/minecraft/unmapped/C_3906126;)V	<init>		<init>
 		p	1			p_1
 	m	()V	m_5855336		m_5855336
@@ -199,7 +199,7 @@ c	net/minecraft/unmapped/C_0219847		net/minecraft/entity/mob/animal/tamable/Tame
 	m	(Ljava/lang/String;)V	m_8955468		setOwnerName
 		p	1			name
 	m	()Lnet/minecraft/unmapped/C_1013763;	m_3556409		getOwner
-c	net/minecraft/unmapped/C_0380387		net/minecraft/entity/mob/animal/tamable/OcelotEntity
+c	net/minecraft/unmapped/C_0380387		net/minecraft/entity/mob/animal/tameable/OcelotEntity
 	f	Lnet/minecraft/unmapped/C_1441870;	f_1697178		temptGoal
 	m	(Lnet/minecraft/unmapped/C_3906126;)V	<init>		<init>
 		p	1			world
@@ -338,11 +338,11 @@ c	net/minecraft/unmapped/C_1483911		net/minecraft/entity/ai/goal/AvoidSunlightGo
 	m	()V	m_4528414		m_4528414
 	m	()Z	m_3298012		m_3298012
 	m	()Z	m_1332509		m_1332509
-c	net/minecraft/unmapped/C_2492854		net/minecraft/unmapped/C_2492854
-	f	Lnet/minecraft/unmapped/C_3906126;	f_4826350		f_4826350
-	f	Lnet/minecraft/unmapped/C_0380387;	f_2500648		f_2500648
+c	net/minecraft/unmapped/C_2492854		net/minecraft/entity/ai/goal/OcelotAttackChickenGoal
+	f	Lnet/minecraft/unmapped/C_3906126;	f_4826350		world
+	f	Lnet/minecraft/unmapped/C_0380387;	f_2500648		ocelot
 	m	(Lnet/minecraft/unmapped/C_0380387;)V	<init>		<init>
-		p	1			p_1
+		p	1			ocelot
 	m	()V	m_3938570		m_3938570
 c	net/minecraft/unmapped/C_3124833		net/minecraft/world/gen/feature/DesertWellFeature
 	m	()V	<init>		<init>

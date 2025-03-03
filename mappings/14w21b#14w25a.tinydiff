@@ -1084,7 +1084,7 @@ c	net/minecraft/unmapped/C_2751481
 		p	1			player
 		p	2			swapProgress
 		p	3			swingProgress
-	m	(F)V	m_6540229		applyHandSwing
+	m	(F)V	m_6540229		applyArmSwing
 		p	1			swingProgress
 	m	(Lnet/minecraft/unmapped/C_7106153;F)V	m_6895155		applyConsuming
 		p	1			player
@@ -11231,25 +11231,25 @@ c	net/minecraft/unmapped/C_8008980		net/minecraft/entity/ai/pathing/GroundPathNa
 		p	7			pos
 		p	8			distanceX
 		p	10			distanceZ
-	m	(Z)V	m_4656051		setCanFloat
-		p	1			canFloat
-	m	()Z	m_7730897		canFloat
-	m	(Z)V	m_8435532		setCanWalkThroughDoors
-		p	1			canWalkThroughDoors
-	m	(Z)V	m_1920024		setCanOpenDoors
-		p	1			canOpenDoors
-	m	()Z	m_3074476		canOpenDoors
-	m	(Z)V	m_0130327		setCanSwim
+	m	(Z)V	m_4656051		setCanSwim
 		p	1			canSwim
-	m	()Z	m_6631396		canSwim
+	m	()Z	m_7730897		canSwim
+	m	(Z)V	m_8435532		setCanOpenDoors
+		p	1			canOpenDoors
+	m	(Z)V	m_1920024		setCanPassThroughDoors
+		p	1			canPassThroughDoors
+	m	()Z	m_3074476		canPassThroughDoors
+	m	(Z)V	m_0130327		setCanFloat
+		p	1			canFloat
+	m	()Z	m_6631396		canFloat
 	m	(Z)V	m_7411884		setAvoidSunLight
 		p	1			avoidSunLight
 c	net/minecraft/unmapped/C_8009477		net/minecraft/entity/ai/pathing/WalkNodeEvaluator
-	f	Z	f_1375429		canOpenDoors
-	f	Z	f_6676583		canWalkThroughDoors
-	f	Z	f_4744787		canFloat
-	f	Z	f_8834710		canSwim
-	f	Z	f_4786922		couldFloat
+	f	Z	f_1375429		canPassThroughDoors
+	f	Z	f_6676583		canOpenDoors
+	f	Z	f_4744787		canSwim
+	f	Z	f_8834710		canFloat
+	f	Z	f_4786922		savedCanSwim
 	m	()V	<init>		<init>
 	m	(Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_6385858;)V	m_9094843		m_9094843
 		p	1			p_1
@@ -11288,20 +11288,20 @@ c	net/minecraft/unmapped/C_8009477		net/minecraft/entity/ai/pathing/WalkNodeEval
 		p	5			width
 		p	6			height
 		p	7			depth
-		p	8			canFloat
+		p	8			canSwim
 		p	9			canOpenDoors
-		p	10			canWalkThroughDoors
-	m	(Z)V	m_2851044		setCanOpenDoors
+		p	10			canPassThroughDoors
+	m	(Z)V	m_2851044		setCanPassThroughDoors
+		p	1			canPassThroughDoors
+	m	(Z)V	m_1869907		setCanOpenDoors
 		p	1			canOpenDoors
-	m	(Z)V	m_1869907		setCanWalkThroughDoors
-		p	1			canWalkThroughDoors
-	m	(Z)V	m_5716698		setCanFloat
-		p	1			canFloat
-	m	(Z)V	m_5310404		setCanSwim
+	m	(Z)V	m_5716698		setCanSwim
 		p	1			canSwim
-	m	()Z	m_3317051		canOpenDoors
-	m	()Z	m_1545253		canSwim
-	m	()Z	m_2144666		canFloat
+	m	(Z)V	m_5310404		setCanFloat
+		p	1			canFloat
+	m	()Z	m_3317051		canPassThroughDoors
+	m	()Z	m_1545253		canFloat
+	m	()Z	m_2144666		canSwim
 c	net/minecraft/unmapped/C_8365102		net/minecraft/entity/living/mob/monster/GuardianEntity
 	f	F	f_2291101		tailAngle
 	f	F	f_0194355		prevTailAngle

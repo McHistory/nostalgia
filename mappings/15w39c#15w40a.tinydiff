@@ -107,16 +107,18 @@ c	net/minecraft/unmapped/C_7240405
 	m	(Lnet/minecraft/unmapped/C_2750078;)Lnet/minecraft/unmapped/C_7240405;	m_1594978		writeItem
 		p	1			item
 c	net/minecraft/unmapped/C_8008980
-	m	()Z	m_7730897	canFloat	
-	m	(Z)V	m_8435532	setCanWalkThroughDoors	
-		p	1		canWalkThroughDoors	
+	m	()Z	m_7730897	canSwim	
+	m	(Z)V	m_8435532	setCanOpenDoors	
+		p	1		canOpenDoors	
+	m	(Z)V	m_4656051	setCanSwim	setCanOpenDoors
+		p	1		canSwim	canOpenDoors
 c	net/minecraft/unmapped/C_8009477
-	f	Z	f_4744787	canFloat	
-	f	Z	f_4786922	couldFloat	
+	f	Z	f_4744787	canSwim	
+	f	Z	f_4786922	savedCanSwim	
 	f	F	f_6012643		oldWaterWeight
-	m	(Z)V	m_1869907	setCanWalkThroughDoors	
-		p	1		canWalkThroughDoors	
-	m	()Z	m_2144666	canFloat	
+	m	(Z)V	m_1869907	setCanOpenDoors	
+		p	1		canOpenDoors	
+	m	()Z	m_2144666	canSwim	
 	m	(Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_6385858;IIIIIIZZZ)Lnet/minecraft/unmapped/C_6124529;	m_4381403	getBlockingType	
 		p	0		world	
 		p	1		entity	
@@ -126,9 +128,9 @@ c	net/minecraft/unmapped/C_8009477
 		p	5		width	
 		p	6		height	
 		p	7		depth	
-		p	8		canFloat	
+		p	8		canSwim	
 		p	9		canOpenDoors	
-		p	10		canWalkThroughDoors	
+		p	10		canPassThroughDoors	
 	m	(Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_6385858;IIIIIIZZ)Lnet/minecraft/unmapped/C_6124529;	m_4381403		getBlockingType
 		p	0			world
 		p	1			entity
@@ -139,7 +141,9 @@ c	net/minecraft/unmapped/C_8009477
 		p	6			height
 		p	7			depth
 		p	8			canOpenDoors
-		p	9			canWalkThroughDoors
+		p	9			canPassThroughDoors
+	m	(Z)V	m_5716698	setCanSwim	setCanOpenDoors
+		p	1		canSwim	canOpenDoors
 c	net/minecraft/unmapped/C_0131593
 c	net/minecraft/unmapped/C_0131593$C_6132220
 	f	Lnet/minecraft/unmapped/C_0131593;	f_8711122		f_8711122
