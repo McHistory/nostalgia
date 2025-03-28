@@ -192,8 +192,8 @@ c	net/minecraft/unmapped/C_1013763
 	m	()Z	m_3400324		renderCustomName
 c	net/minecraft/unmapped/C_1044273
 	f	[Lnet/minecraft/unmapped/C_5307437;	f_6308342		miningProgressSprites
-	m	(Lnet/minecraft/unmapped/C_9549188;)V	m_8065061		loadSprites
-		p	1			loader
+	m	(Lnet/minecraft/unmapped/C_9549188;)V	m_8065061		registerSprites
+		p	1			registry
 c	net/minecraft/unmapped/C_1124552
 	m	(II)V	<init>	<init>	
 		p	1		id	
@@ -696,8 +696,8 @@ c	net/minecraft/unmapped/C_3635204
 		p	5			entity
 		p	6			item
 	m	()Ljava/lang/String;	m_4868665		getKey
-	m	(Lnet/minecraft/unmapped/C_9549188;)V	m_9955335		loadSprites
-		p	1			loader
+	m	(Lnet/minecraft/unmapped/C_9549188;)V	m_9955335		registerSprites
+		p	1			registry
 	m	()Ljava/lang/String;	m_6595694		getItemSpriteName
 c	net/minecraft/unmapped/C_3682532
 	f	Lnet/minecraft/unmapped/C_5307437;	f_3750683		blockSprite
@@ -862,8 +862,8 @@ c	net/minecraft/unmapped/C_4030632
 	m	(II)Lnet/minecraft/unmapped/C_5307437;	m_2843658		getSprite
 		p	1			metadata
 		p	2			layer
-	m	(Lnet/minecraft/unmapped/C_9549188;)V	m_3643261		loadSprites
-		p	1			loader
+	m	(Lnet/minecraft/unmapped/C_9549188;)V	m_3643261		registerSprites
+		p	1			registry
 c	net/minecraft/unmapped/C_4048548	net/minecraft/client/render/texture/LavaSideSprite	
 	f	[F	f_9622654	current	
 	f	[F	f_6511976	next	
@@ -1534,8 +1534,8 @@ c	net/minecraft/unmapped/C_9072802
 	m	(Lnet/minecraft/unmapped/C_9549188;)V	m_9955335		m_9955335
 		p	1			p_1
 c	net/minecraft/unmapped/C_9302567
-	m	(Lnet/minecraft/unmapped/C_9549188;)V	m_3048225		loadSprites
-		p	1			loader
+	m	(Lnet/minecraft/unmapped/C_9549188;)V	m_3048225		registerSprites
+		p	1			registry
 c	net/minecraft/unmapped/C_9331929
 	f	Lnet/minecraft/unmapped/C_5307437;	f_3400168		topSprite
 	m	(I)I	m_9597800	m_9597800	
@@ -1572,8 +1572,8 @@ c	net/minecraft/unmapped/C_9532309
 		p	5			p_5
 		p	6			p_6
 c	net/minecraft/unmapped/C_9610577
-	m	(Lnet/minecraft/unmapped/C_9549188;)V	m_5453048		loadSprites
-		p	1			loader
+	m	(Lnet/minecraft/unmapped/C_9549188;)V	m_5453048		registerSprites
+		p	1			registry
 c	net/minecraft/unmapped/C_9764049
 	f	[Lnet/minecraft/unmapped/C_5307437;	f_3144583		fireSprite
 	m	(II)V	<init>	<init>	
@@ -2943,12 +2943,15 @@ c	net/minecraft/unmapped/C_6088271		net/minecraft/client/render/texture/TextureA
 	f	Ljava/lang/String;	f_2023636		name
 	f	Ljava/lang/String;	f_7052366		path
 	f	Ljava/lang/String;	f_7911883		extension
-	f	Ljava/util/HashMap;	f_9135712		sprites
+	f	Ljava/util/HashMap;	f_9135712		stitchedSprites
+		c		All sprites that were successfully stitched into this texture atlas.\nSprites from {@link sourcedSprites} that could not be loaded were not stitched.
 	f	Ljava/awt/image/BufferedImage;	f_9805912		image
 	f	Lnet/minecraft/unmapped/C_3374628;	f_6104951		missingTextureSprite
 	f	Lnet/minecraft/unmapped/C_2686552;	f_5547213		texture
 	f	Ljava/util/List;	f_7728926		animatedSprites
-	f	Ljava/util/Map;	f_3873032		spritesToLoad
+		c		All animated sprites that were successfully stitched into this texture atlas.\nSprites from {@link sourcedSprites} that could not be loaded were not stitched.
+	f	Ljava/util/Map;	f_3873032		sourcedSprites
+		c		All sprites added to this texture atlas by the sprite source.
 	m	(ILjava/lang/String;Ljava/lang/String;Ljava/awt/image/BufferedImage;)V	<init>		<init>
 		p	1			type
 		p	2			name
@@ -3060,8 +3063,8 @@ c	net/minecraft/unmapped/C_8663313		net/minecraft/client/render/entity/TntMineca
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
-c	net/minecraft/unmapped/C_9549188		net/minecraft/client/render/texture/SpriteLoader
-	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_5307437;	m_3135860		loadSprite
+c	net/minecraft/unmapped/C_9549188		net/minecraft/client/render/texture/SpriteRegistry
+	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_5307437;	m_3135860		registerSprite
 		p	1			name
 c	net/minecraft/unmapped/C_9713437		net/minecraft/client/render/texture/TextureHolder
 	f	Ljava/lang/String;	f_5925888		f_5925888
