@@ -1854,21 +1854,21 @@ c	net/minecraft/unmapped/C_3828683		net/minecraft/entity/living/mob/passive/anim
 	f	Lnet/minecraft/unmapped/C_1441870;	f_4523614		temptGoal
 	f	F	f_8791298		f_8791298
 	f	Z	f_3089674		lastOnGround
-	f	Z	f_5050053		f_5050053
+	f	Z	f_5050053		attacking
 	f	I	f_5434688		jumpDelayTicks
 	f	Lnet/minecraft/unmapped/C_3828683$C_9821175;	f_4128899		nextAction
 	f	Lnet/minecraft/unmapped/C_3828683$C_9821175;	f_0685702		action
 	f	Lnet/minecraft/unmapped/C_3828683$C_9821175;	f_9792125		attackAction
 	f	I	f_1289381		ticksBeforeHungry
-	f	Lnet/minecraft/unmapped/C_5009044;	f_5797499		f_5797499
+	f	Lnet/minecraft/unmapped/C_5009044;	f_5797499		attackTarget
 	m	(Lnet/minecraft/unmapped/C_3906126;)V	<init>		<init>
 		p	1			world
 	m	()F	m_5659543		m_5659543
 	m	(Lnet/minecraft/unmapped/C_3828683$C_9821175;)V	m_1389165		setAction
 		p	1			action
-	m	()F	m_5944202		m_5944202
-	m	(F)V	m_3322255		m_3322255
-		p	1			p_1
+	m	()F	m_5944202		getJumpProgress
+	m	(F)V	m_3322255		setJumpProgress
+		p	1			progress
 	m	(D)V	m_0178573		setSpeed
 		p	1			speed
 	m	(ZLnet/minecraft/unmapped/C_3828683$C_9821175;)V	m_8379744		startAction
