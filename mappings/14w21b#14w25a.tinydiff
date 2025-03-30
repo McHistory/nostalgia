@@ -480,7 +480,7 @@ c	net/minecraft/unmapped/C_1044273
 	f	[Lnet/minecraft/unmapped/C_5307437;	f_6308342	miningProgressSprites	
 	f	I	f_2286754	glCallList	
 	f	Lnet/minecraft/unmapped/C_9610577;	f_0580814		entityRenderDispatcher
-	f	[Lnet/minecraft/unmapped/C_3374628;	f_6308342		miningProgressTextures
+	f	[Lnet/minecraft/unmapped/C_3374628;	f_6308342		miningProgressSprites
 	f	Lnet/minecraft/unmapped/C_0561170;	f_6067140	worldBorderTextureLocation	WORLD_BORDER_LOCATION
 	m	(Lnet/minecraft/unmapped/C_9549188;)V	m_8065061	registerSprites	
 		p	1		registry	
@@ -8436,8 +8436,8 @@ c	net/minecraft/unmapped/C_6088271
 		p	1			resourceManager
 		p	2			spriteSource
 	m	(Lnet/minecraft/unmapped/C_0561170;)Lnet/minecraft/unmapped/C_3374628;	m_3135860		registerSprite
-		p	1			id
-	m	()Lnet/minecraft/unmapped/C_3374628;	m_9754427		getMissingTextureId
+		p	1			location
+	m	()Lnet/minecraft/unmapped/C_3374628;	m_9754427		getMissingSprite
 c	net/minecraft/unmapped/C_7465586
 	m	(Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_3635204;I)V	m_0846998	m_0846998	
 		p	1		p_1	
@@ -8689,14 +8689,14 @@ c	net/minecraft/unmapped/C_6347954
 	f	Z	f_1909293		interpolated
 	m	(Ljava/util/List;III)V	<init>	<init>	
 		p	1		frames	
-		p	2		width	
-		p	3		height	
-		p	4		time	
+		p	2		frameWidth	
+		p	3		frameHeight	
+		p	4		defaultFrameTime	
 	m	(Ljava/util/List;IIIZ)V	<init>		<init>
 		p	1			frames
-		p	2			width
+		p	2			frameWidth
 		p	3			height
-		p	4			time
+		p	4			defaultFrameTime
 		p	5			interpolated
 	m	()Z	m_6379132		isInterpolated
 c	net/minecraft/unmapped/C_7106153
@@ -9834,7 +9834,7 @@ c	net/minecraft/unmapped/C_3696583
 	f	Lnet/minecraft/unmapped/C_6390485;	f_6626561		MISSING
 	f	Ljava/util/Map;	f_5835816		BUILT_IN
 	f	Lcom/google/common/base/Joiner;	f_1245351		PARENT_CHAIN_JOINER
-	f	Ljava/util/Map;	f_1544986		textures
+	f	Ljava/util/Map;	f_1544986		sprites
 	f	Ljava/util/Map;	f_2378894		variants
 	f	Lnet/minecraft/unmapped/C_6088271;	f_1001580		blockAtlas
 	f	Lnet/minecraft/unmapped/C_1572627;	f_0132919		faceBakery
@@ -9906,7 +9906,7 @@ c	net/minecraft/unmapped/C_3696583
 		p	1			location
 	m	(Lnet/minecraft/unmapped/C_9077418;)Ljava/util/Set;	m_1234414		getTextures
 		p	1			model
-	m	()V	m_8914224		loadTextures
+	m	()V	m_8914224		loadSprites
 	m	()Ljava/util/Set;	m_8405633		getItemTextures
 	m	(Lnet/minecraft/unmapped/C_9077418;)Z	m_4811562		isGeneration
 		p	1			model
@@ -10908,11 +10908,11 @@ c	net/minecraft/unmapped/C_4311621		net/minecraft/client/render/model/block/Item
 		p	2			key
 		p	3			blockSprite
 	m	(Lnet/minecraft/unmapped/C_3374628;Ljava/lang/String;I)Ljava/util/List;	m_0807694		addSideElements
-		p	1			blockAtlas
+		p	1			blockSprite
 		p	2			key
 		p	3			layer
 	m	(Lnet/minecraft/unmapped/C_3374628;)Ljava/util/List;	m_8567410		getSpans
-		p	1			blockAtlas
+		p	1			blockSprite
 	m	(Lnet/minecraft/unmapped/C_4311621$C_0858293;Ljava/util/List;[IIIIIZ)V	m_3098940		checkTransition
 		p	1			facing
 		p	2			spans
