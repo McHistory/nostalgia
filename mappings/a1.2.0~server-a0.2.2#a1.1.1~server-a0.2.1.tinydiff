@@ -33,7 +33,8 @@ c	net/minecraft/unmapped/C_0559439
 		p	4			p_4
 		p	5			p_5
 c	net/minecraft/unmapped/C_0611937
-	m	(IDD)D	m_6343956	gradient	
+	m	(IDD)D	m_6343956	gradientDot	
+		c	Computes the dot product of the gradient vector at a grid point and the vector {@code x, 0, z}.\nThe gradient vector is identified by the given hash of the grid point.	
 		p	1		hash	
 		p	2		x	
 		p	4		z	
@@ -488,7 +489,7 @@ c	net/minecraft/unmapped/C_5164011	net/minecraft/world/gen/feature/FirePatchFeat
 		p	3		p_3	
 		p	4		p_4	
 		p	5		p_5	
-c	net/minecraft/unmapped/C_5587398	net/minecraft/world/gen/noise/PerlinSimplexNoiseGenerator	
+c	net/minecraft/unmapped/C_5587398	net/minecraft/world/gen/noise/PerlinSimplexNoise	
 	f	[Lnet/minecraft/unmapped/C_6668603;	f_8552802	noiseLevels	
 	f	I	f_3662090	levels	
 	m	(Ljava/util/Random;I)V	<init>	<init>	
@@ -497,22 +498,22 @@ c	net/minecraft/unmapped/C_5587398	net/minecraft/world/gen/noise/PerlinSimplexNo
 	m	([DDDIIDDD)[D	m_0409990	getRegion	
 		p	1		values	
 		p	2		x	
-		p	4		z	
+		p	4		y	
 		p	6		sizeX	
-		p	7		sizeZ	
+		p	7		sizeY	
 		p	8		scaleX	
-		p	10		scaleZ	
+		p	10		scaleY	
 		p	12		scaleExponent	
 	m	([DDDIIDDDD)[D	m_8911618	getRegion	
 		p	1		values	
 		p	2		x	
-		p	4		z	
+		p	4		y	
 		p	6		sizeX	
-		p	7		sizeZ	
+		p	7		sizeY	
 		p	8		scaleX	
-		p	10		scaleZ	
+		p	10		scaleY	
 		p	12		scaleExponentX	
-		p	14		scaleExponentZ	
+		p	14		scaleExponentY	
 c	net/minecraft/unmapped/C_6041373	net/minecraft/world/gen/feature/RareGlowstoneClusterFeature	
 	m	()V	<init>	<init>	
 	m	(Lnet/minecraft/unmapped/C_3906126;Ljava/util/Random;III)Z	m_2665009	m_2665009	
@@ -555,9 +556,9 @@ c	net/minecraft/unmapped/C_6205974
 		p	3		z	
 		p	4		sizeX	
 		p	5		sizeZ	
-		p	6		saleX	
+		p	6		scaleX	
 		p	8		scaleZ	
-		p	10		scaleExponent	
+		p	10		p_10	
 c	net/minecraft/unmapped/C_6329603
 	m	(Lnet/minecraft/unmapped/C_9484672;Lnet/minecraft/unmapped/C_3906126;II[B)V	m_8752868	place	
 		p	1		source	
@@ -578,31 +579,33 @@ c	net/minecraft/unmapped/C_6385858
 	m	()V	m_2698485	onPortalCollision	
 	m	()F	m_5737866	getPickRadius	
 c	net/minecraft/unmapped/C_6668603	net/minecraft/world/gen/noise/SimplexNoise	
-	f	[[I	f_8224262	f_8224262	
+	f	[[I	f_8224262	GRADIENTS	
 	f	[I	f_7243905	permutations	
-	f	D	f_7649317	x	
-	f	D	f_2647257	y	
-	f	D	f_4945832	z	
+		c	A randomly generated permutation table used to determine\nthe gradient vector for each grid intersection.	
+	f	D	f_7649317	offsetX	
+	f	D	f_2647257	offsetY	
+	f	D	f_4945832	offsetZ	
 	f	D	f_5088452	F2	
 	f	D	f_4045714	G2	
 	m	()V	<init>	<init>	
 	m	(Ljava/util/Random;)V	<init>	<init>	
 		p	1		random	
-	m	(D)I	m_6635210	floor	
+	m	(D)I	m_6635210	fastFloor	
 		p	0		x	
 	m	([IDD)D	m_1516795	dot	
-		p	0		a	
-		p	1		b1	
-		p	3		b2	
-	m	([DDDIIDDD)V	m_7268602	getValue	
+		c	Computes the dot product of the given gradient vector and the vector {@code x, y}.	
+		p	0		gradient	
+		p	1		x	
+		p	3		y	
+	m	([DDDIIDDD)V	m_7268602	add	
 		p	1		values	
 		p	2		x	
-		p	4		z	
+		p	4		y	
 		p	6		sizeX	
-		p	7		sizeZ	
+		p	7		sizeY	
 		p	8		scaleX	
-		p	10		scaleZ	
-		p	12		scaleExponent	
+		p	10		scaleY	
+		p	12		noiseScale	
 	m	()V	<clinit>	<clinit>	
 c	net/minecraft/unmapped/C_6755599
 	m	()V	m_2789942	populateBlockLight	

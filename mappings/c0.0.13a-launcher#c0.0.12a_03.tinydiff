@@ -7,30 +7,32 @@ c	net/minecraft/unmapped/C_0336319
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
-c	net/minecraft/unmapped/C_0611937	net/minecraft/world/gen/noise/ImprovedNoiseGenerator	
+c	net/minecraft/unmapped/C_0611937	net/minecraft/world/gen/noise/ImprovedNoise	
 	f	[I	f_3721058	permutations	
+		c	A randomly generated permutation table used to determine\nthe gradient vector for each grid intersection.	
 	f	D	f_8194504	f_8194504	
 	m	()V	<init>	<init>	
 	m	(Ljava/util/Random;)V	<init>	<init>	
 		p	1		random	
 	m	(DDD)D	m_2882229	lerp	
-		p	1		p_1	
-		p	3		p_3	
-		p	5		p_5	
-	m	(IDDD)D	m_2595755	gradient	
+		p	1		delta	
+		p	3		min	
+		p	5		max	
+	m	(IDDD)D	m_2595755	gradientDot	
+		c	Computes the dot product of the gradient vector at a grid point and the vector {@code x, y, z}.\nThe gradient vector is identified by the given hash of the grid point.	
 		p	1		hash	
-		p	2		p_2	
-		p	4		p_4	
-		p	6		p_6	
-	m	(DD)D	m_7516921	m_7516921	
-		p	1		p_1	
-		p	3		p_3	
-	m	(D)D	m_7396482	m_7396482	
-		p	1		p_1	
-	m	(DDD)D	m_4010806	m_4010806	
-		p	1		p_1	
-		p	3		p_3	
-		p	5		p_5	
+		p	2		x	
+		p	4		y	
+		p	6		z	
+	m	(DD)D	m_7516921	getValue	
+		p	1		x	
+		p	3		y	
+	m	(D)D	m_7396482	smootherstep	
+		p	1		x	
+	m	(DDD)D	m_4010806	getValue	
+		p	1		x	
+		p	3		y	
+		p	5		z	
 c	net/minecraft/unmapped/C_3635204
 	f	I	f_3619644	f_3619644	
 	f	I	f_7546002	f_7546002	
@@ -102,11 +104,11 @@ c	net/minecraft/unmapped/C_4558465
 		p	3			p_3
 		p	4			p_4
 		p	5			p_5
-c	net/minecraft/unmapped/C_4561907	net/minecraft/world/gen/noise/NoiseGenerator	
+c	net/minecraft/unmapped/C_4561907	net/minecraft/world/gen/noise/Noise	
 	m	()V	<init>	<init>	
-	m	(DD)D	m_7516921	m_7516921	
-		p	1		p_1	
-		p	3		p_3	
+	m	(DD)D	m_7516921	getValue	
+		p	1		x	
+		p	3		y	
 	m	(II)[D	m_7688847	m_7688847	
 		p	1		p_1	
 		p	2		p_2	
@@ -116,7 +118,7 @@ c	net/minecraft/unmapped/C_5853518
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
-c	net/minecraft/unmapped/C_6205974	net/minecraft/world/gen/noise/PerlinNoiseGenerator	
+c	net/minecraft/unmapped/C_6205974	net/minecraft/world/gen/noise/PerlinNoise	
 	f	[Lnet/minecraft/unmapped/C_0611937;	f_4448671	noiseLevels	
 	f	I	f_6571600	levels	
 	m	(Ljava/util/Random;I)V	<init>	<init>	
@@ -317,12 +319,12 @@ c	net/minecraft/unmapped/C_8688622
 	m	(Lnet/minecraft/unmapped/C_5283200;Lnet/minecraft/unmapped/C_5283200;)I	m_3956771	m_3956771	
 		p	1		p_1	
 		p	2		p_2	
-c	net/minecraft/unmapped/C_1405541	net/minecraft/unmapped/C_1405541	
-	f	Lnet/minecraft/unmapped/C_4561907;	f_1343857	f_1343857	
-	f	Lnet/minecraft/unmapped/C_4561907;	f_6356450	f_6356450	
+c	net/minecraft/unmapped/C_1405541	net/minecraft/world/gen/noise/Distort	
+	f	Lnet/minecraft/unmapped/C_4561907;	f_1343857	source	
+	f	Lnet/minecraft/unmapped/C_4561907;	f_6356450	distort	
 	m	(Lnet/minecraft/unmapped/C_4561907;Lnet/minecraft/unmapped/C_4561907;)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
+		p	1		source	
+		p	2		distort	
 	m	(DD)D	m_7516921	m_7516921	
 		p	1		p_1	
 		p	3		p_3	

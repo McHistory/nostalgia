@@ -90,11 +90,12 @@ c	net/minecraft/unmapped/C_0559439
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
-c	net/minecraft/unmapped/C_0611937	net/minecraft/world/gen/noise/ImprovedNoiseGenerator	
+c	net/minecraft/unmapped/C_0611937	net/minecraft/world/gen/noise/ImprovedNoise	
 	f	[I	f_3721058	permutations	
-	f	D	f_9098504	x	
-	f	D	f_6604140	y	
-	f	D	f_2617120	z	
+		c	A randomly generated permutation table used to determine\nthe gradient vector for each grid intersection.	
+	f	D	f_9098504	offsetX	
+	f	D	f_6604140	offsetY	
+	f	D	f_2617120	offsetZ	
 	f	[D	f_7466302	SEED_POOL_0	
 	f	[D	f_6194789	SEED_POOL_1	
 	f	[D	f_8654180	SEED_POOL_2	
@@ -106,11 +107,13 @@ c	net/minecraft/unmapped/C_0611937	net/minecraft/world/gen/noise/ImprovedNoiseGe
 		p	0		p_0	
 		p	2		p_2	
 		p	4		p_4	
-	m	(IDD)D	m_6343956	gradient	
+	m	(IDD)D	m_6343956	gradientDot	
+		c	Computes the dot product of the gradient vector at a grid point and the vector {@code x, 0, z}.\nThe gradient vector is identified by the given hash of the grid point.	
 		p	1		hash	
 		p	2		x	
 		p	4		z	
-	m	(IDDD)D	m_2595755	gradient	
+	m	(IDDD)D	m_2595755	gradientDot	
+		c	Computes the dot product of the gradient vector at a grid point and the vector {@code x, y, z}.\nThe gradient vector is identified by the given hash of the grid point.	
 		p	1		hash	
 		p	2		x	
 		p	4		y	
@@ -126,7 +129,7 @@ c	net/minecraft/unmapped/C_0611937	net/minecraft/world/gen/noise/ImprovedNoiseGe
 		p	11		scaleX	
 		p	13		scaleY	
 		p	15		scaleZ	
-		p	17		scaleExponent	
+		p	17		noiseScale	
 	m	()V	<clinit>	<clinit>	
 	m	(DDD)D	m_8886637	m_8886637	
 		p	1		p_1	
@@ -329,8 +332,8 @@ c	net/minecraft/unmapped/C_4078372
 	f	Lnet/minecraft/unmapped/C_6205974;	f_6281590	minLimitPerlinNoise	
 	f	Lnet/minecraft/unmapped/C_6205974;	f_7885619	maxLimitPerlinNoise	
 	f	Lnet/minecraft/unmapped/C_6205974;	f_5435487	perlinNoise1	
-	f	Lnet/minecraft/unmapped/C_6205974;	f_6725025	floatingIslandScale	
-	f	Lnet/minecraft/unmapped/C_6205974;	f_2236408	floatingIslandNoise	
+	f	Lnet/minecraft/unmapped/C_6205974;	f_6725025	scaleNoise	
+	f	Lnet/minecraft/unmapped/C_6205974;	f_2236408	depthNoise	
 	f	Lnet/minecraft/unmapped/C_9070784;	f_4543428	perlinNoise3	
 	f	Lnet/minecraft/unmapped/C_3997653;	f_5843321	type	
 	f	Lnet/minecraft/unmapped/C_2441996;	f_3633382	defaultLiquid	
@@ -430,7 +433,7 @@ c	net/minecraft/unmapped/C_4188659
 c	net/minecraft/unmapped/C_4558465
 	m	(Lnet/minecraft/unmapped/C_2441996;)Z	m_1538589	m_1538589	
 		p	1		p_1	
-c	net/minecraft/unmapped/C_4561907	net/minecraft/world/gen/noise/NoiseGenerator	
+c	net/minecraft/unmapped/C_4561907	net/minecraft/world/gen/noise/Noise	
 	m	()V	<init>	<init>	
 c	net/minecraft/unmapped/C_4590573
 	m	(FFF)F	m_4176808	lerp	
@@ -558,22 +561,22 @@ c	net/minecraft/unmapped/C_6205974
 	f	[Lnet/minecraft/unmapped/C_0611937;	f_4448671	noiseLevels	
 	f	[Lnet/minecraft/unmapped/C_5077341;	f_4448671		noiseLevels
 	m	(IIIIIIDDD)[D	m_2945258	getRegion	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-		p	6		p_6	
-		p	7		p_7	
-		p	9		p_9	
-		p	11		p_11	
+		p	1		x	
+		p	2		y	
+		p	3		z	
+		p	4		sizeX	
+		p	5		sizeY	
+		p	6		sizeZ	
+		p	7		scaleX	
+		p	9		scaleY	
+		p	11		scaleZ	
 	m	(IIIIDDD)[D	m_0480685	getRegion	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-		p	7		p_7	
+		p	1		x	
+		p	2		z	
+		p	3		sizeX	
+		p	4		sizeZ	
+		p	5		scaleX	
+		p	7		scaleZ	
 		p	9		p_9	
 	m	(DDDDDZ)D	m_1554066		m_1554066
 		p	1			p_1
@@ -947,8 +950,8 @@ c	net/minecraft/unmapped/C_8839702
 	f	Lnet/minecraft/unmapped/C_6205974;	f_3709572	minLimitPerlinNoise	
 	f	Lnet/minecraft/unmapped/C_6205974;	f_6467863	maxLimitPerlinNoise	
 	f	Lnet/minecraft/unmapped/C_6205974;	f_7496696	perlinNoise1	
-	f	Lnet/minecraft/unmapped/C_6205974;	f_0543303	floatingIslandScale	
-	f	Lnet/minecraft/unmapped/C_6205974;	f_4293936	floatingIslandNoise	
+	f	Lnet/minecraft/unmapped/C_6205974;	f_0543303	scaleNoise	
+	f	Lnet/minecraft/unmapped/C_6205974;	f_4293936	depthNoise	
 	f	Lnet/minecraft/unmapped/C_2441996;	f_3930797	AIR	
 	f	Lnet/minecraft/unmapped/C_8609675;	f_2223120	settings	
 	f	Lnet/minecraft/unmapped/C_9070784;	f_2395484	surfaceNoise	
@@ -1920,18 +1923,19 @@ c	net/minecraft/unmapped/C_3656644
 	m	(D)I	m_5737774	fastFloor	
 		p	0		x	
 	m	([IDD)D	m_2845986	dot	
-		p	0		noise	
+		c	Computes the dot product of the given gradient vector and the vector {@code x, y}.	
+		p	0		gradient	
 		p	1		x	
-		p	3		z	
-	m	([DDDIIDDD)V	m_5828996	addNoise	
-		p	1		noise	
+		p	3		y	
+	m	([DDDIIDDD)V	m_5828996	add	
+		p	1		values	
 		p	2		x	
-		p	4		z	
+		p	4		y	
 		p	6		sizeX	
-		p	7		sizeZ	
+		p	7		sizeY	
 		p	8		scaleX	
-		p	10		scaleZ	
-		p	12		scaleExponent	
+		p	10		scaleY	
+		p	12		noiseScale	
 	m	(I)I	m_3899712		m_3899712
 		p	1			p_1
 	m	([IDDD)D	m_2845986		dot
@@ -2157,22 +2161,22 @@ c	net/minecraft/unmapped/C_8089590
 	f	Lnet/minecraft/unmapped/C_4030632;	f_0236992		f_0236992
 c	net/minecraft/unmapped/C_9070784
 	m	(DDIIDDD)[D	m_6472130	getRegion	
-		p	1		p_1	
-		p	3		p_3	
-		p	5		p_5	
-		p	6		p_6	
-		p	7		p_7	
-		p	9		p_9	
-		p	11		p_11	
+		p	1		x	
+		p	3		y	
+		p	5		sizeX	
+		p	6		sizeY	
+		p	7		scaleX	
+		p	9		scaleY	
+		p	11		scaleExponent	
 	m	(DDIIDDDD)[D	m_5581270	getRegion	
-		p	1		p_1	
-		p	3		p_3	
-		p	5		p_5	
-		p	6		p_6	
-		p	7		p_7	
-		p	9		p_9	
-		p	11		p_11	
-		p	13		p_13	
+		p	1		x	
+		p	3		y	
+		p	5		sizeX	
+		p	6		sizeY	
+		p	7		scaleX	
+		p	9		scaleY	
+		p	11		scaleExponentX	
+		p	13		scaleExponentY	
 	m	(DDZ)D	m_2105084		m_2105084
 		p	1			p_1
 		p	3			p_3
