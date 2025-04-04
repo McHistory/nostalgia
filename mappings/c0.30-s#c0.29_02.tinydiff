@@ -40,9 +40,9 @@ c	net/minecraft/unmapped/C_7318150
 c	net/minecraft/unmapped/C_9331929
 	m	()I	m_1206777	m_1206777	
 c	net/minecraft/client/Minecraft
-	f	Lcom/mojang/minecraft/MinecraftApplet;	f_0976645	f_0976645	
+	f	Lcom/mojang/minecraft/MinecraftApplet;	f_0976645	applet	
 c	net/minecraft/unmapped/C_3172064
-	f	Z	f_0965783	f_0965783	
+	f	Z	f_0965783	paid	
 c	net/minecraft/unmapped/C_7564962
 	m	(Lnet/minecraft/client/Minecraft;)V	<init>		<init>
 		p	1			p_1
@@ -55,10 +55,10 @@ c	net/minecraft/unmapped/C_0388903
 	m	(Ljava/io/File;)V	m_2685840	m_2685840	
 		p	1		p_1	
 c	net/minecraft/unmapped/C_5540851
-	f	Ljavax/swing/JFileChooser;	f_8271264	f_8271264	
-	f	Z	f_4651522	f_4651522	
-	f	Ljava/io/File;	f_8809966	f_8809966	
-	m	(Ljava/io/File;)V	m_2685840	m_2685840	
+	f	Ljavax/swing/JFileChooser;	f_8271264	fileChooser	
+	f	Z	f_4651522	shouldSave	
+	f	Ljava/io/File;	f_8809966	selectedFile	
+	m	(Ljava/io/File;)V	m_2685840	handleSelection	
 		p	1		p_1	
 	m	()V	m_5056964	m_5056964	
 	m	()V	m_7135145	m_7135145	
@@ -111,8 +111,8 @@ c	net/minecraft/unmapped/C_5044387
 	m	(Lnet/minecraft/client/Minecraft;)V	<init>	<init>	
 		p	1		p_1	
 c	net/minecraft/unmapped/C_9665058
-	m	(Lcom/mojang/minecraft/level/Level;Ljava/io/File;)Z	m_7243453	m_7243453	
-		p	1		p_1	
-		p	2		p_2	
-	m	(Ljava/io/File;)Lcom/mojang/minecraft/level/Level;	m_2273715	m_2273715	
+	m	(Lcom/mojang/minecraft/level/Level;Ljava/io/File;)Z	m_7243453	save	
+		p	1		world	
+		p	2		file	
+	m	(Ljava/io/File;)Lcom/mojang/minecraft/level/Level;	m_2273715	load	
 		p	1		p_1	

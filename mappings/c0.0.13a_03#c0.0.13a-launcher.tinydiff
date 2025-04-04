@@ -105,16 +105,16 @@ c	net/minecraft/unmapped/C_6205974
 		p	1			p_1
 c	net/minecraft/client/Minecraft
 	f	Ljava/lang/String;	f_1371651	hostAddress	
-	f	Ljava/lang/String;	f_6753290	f_6753290	
-	f	I	f_5242116	f_5242116	
+	f	Ljava/lang/String;	f_6753290	loadmapUser	
+	f	I	f_5242116	loadmapId	
 	f	Ljava/lang/String;	f_3100662	f_3100662	
 	f	Ljava/lang/String;	f_2284011		f_2284011
 	m	(Ljava/lang/String;)V	m_0572353
-		p	0		p_0	
+		p	0		message	
 		p	1			p_1
-	m	(Ljava/lang/String;I)Z	m_8752834	m_8752834	
-		p	1		p_1	
-		p	2		p_2	
+	m	(Ljava/lang/String;I)Z	m_8752834	loadWorld	
+		p	1		username	
+		p	2		slot	
 	m	(I)V	m_6284575	m_6284575	
 		p	1		p_1	
 	m	()V	m_1425842		m_1425842
@@ -219,7 +219,7 @@ c	net/minecraft/unmapped/C_2813741	net/minecraft/client/render/world/DistanceChu
 	m	(Lnet/minecraft/unmapped/C_0693652;)V	<init>
 		p	1		p_1	camera
 c	net/minecraft/unmapped/C_3172064
-	f	Ljava/lang/String;	f_1305529	f_1305529	
+	f	Ljava/lang/String;	f_1305529	id	
 	m	(Ljava/lang/String;Ljava/lang/String;)V	<init>	<init>	
 		p	1		p_1	
 		p	2		p_2	
@@ -265,7 +265,7 @@ c	net/minecraft/unmapped/C_1525636	net/minecraft/client/gui/screen/world/EnterWo
 	f	Ljava/lang/String;	f_5633768	title	
 	f	Ljava/lang/String;	f_0866064	name	
 	f	I	f_2617005	ticks	
-	f	I	f_6675555	f_6675555	
+	f	I	f_6675555	slot	
 	m	(Lnet/minecraft/unmapped/C_0786431;Ljava/lang/String;I)V	<init>	<init>	
 		p	1		parent	
 		p	2		name	
@@ -365,21 +365,21 @@ c	net/minecraft/unmapped/C_7898033
 	m	(F)V	m_1101418		m_1101418
 		p	1			p_1
 c	net/minecraft/unmapped/C_9665058
-	f	Lnet/minecraft/client/Minecraft;	f_7071680	f_7071680	
+	f	Lnet/minecraft/client/Minecraft;	f_7071680	listener	
 	f	I	f_7397851		f_7397851
 	f	I	f_1846789		f_1846789
-	f	Lnet/minecraft/unmapped/C_6108531;	f_7071680		f_7071680
+	f	Lnet/minecraft/unmapped/C_6108531;	f_7071680		listener
 	f	Ljava/lang/String;	f_1036795		f_1036795
 	m	(Lnet/minecraft/client/Minecraft;)V	<init>	<init>	
 		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_6495127;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)Z	m_5551734	m_5551734	
+	m	(Lnet/minecraft/unmapped/C_6495127;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)Z	m_5551734	save	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
 		p	4		p_4	
 		p	5		p_5	
 		p	6		p_6	
-	m	(Lnet/minecraft/unmapped/C_6495127;Ljava/lang/String;Ljava/lang/String;I)Z	m_2468514	m_2468514	
+	m	(Lnet/minecraft/unmapped/C_6495127;Ljava/lang/String;Ljava/lang/String;I)Z	m_2468514	load	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	

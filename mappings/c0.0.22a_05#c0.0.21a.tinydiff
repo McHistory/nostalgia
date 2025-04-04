@@ -83,34 +83,34 @@ c	net/minecraft/unmapped/C_0139979	net/minecraft/client/resource/ResourceDownloa
 	m	(Lnet/minecraft/client/Minecraft;)V	<init>	<init>	
 		p	1		p_1	
 c	net/minecraft/unmapped/C_0786431
-	m	()V	m_0614547	m_0614547	
+	m	()V	m_0614547	handleInputs	
 c	net/minecraft/unmapped/C_2454294
-	m	()V	m_4221773	m_4221773	
+	m	()V	m_4221773	tick	
 c	net/minecraft/unmapped/C_3699792
-	m	(Ljava/lang/String;)V	m_6992985	m_6992985	
-		p	1		p_1	
+	m	(Ljava/lang/String;)V	m_6992985	addMessage	
+		p	1		content	
 c	net/minecraft/unmapped/C_4824661	net/minecraft/client/render/GameRenderer	
 	f	Lnet/minecraft/client/Minecraft;	f_8246436	minecraft	
 	f	I	f_5289597	f_5289597	
 	f	I	f_7860895	f_7860895	
 	f	Ljava/nio/FloatBuffer;	f_4117573	floatBuffer	
 	f	Z	f_3616371	displayActive	
-	f	F	f_9070619	f_9070619	
-	f	F	f_3370476	f_3370476	
-	f	F	f_9901150	f_9901150	
-	f	F	f_6447311	f_6447311	
-	f	F	f_3735549	f_3735549	
+	f	F	f_9070619	fogBrightness	
+	f	F	f_3370476	renderDistance	
+	f	F	f_9901150	fogRed	
+	f	F	f_6447311	fogGreen	
+	f	F	f_3735549	fogBlue	
 	m	(Lnet/minecraft/client/Minecraft;)V	<init>	<init>	
 		p	1		minecraft	
 	m	()V	m_4946406	setupGuiState	
-	m	(Z)V	m_2557984	m_2557984	
-		p	1		p_1	
-	m	()V	m_6382667	m_6382667	
-	m	(FFFF)Ljava/nio/FloatBuffer;	m_2787702	m_2787702	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
+	m	(Z)V	m_2557984	setLighting	
+		p	1		enable	
+	m	()V	m_6382667	setupFog	
+	m	(FFFF)Ljava/nio/FloatBuffer;	m_2787702	getBuffer	
+		p	1		f1	
+		p	2		f2	
+		p	3		f3	
+		p	4		f4	
 c	net/minecraft/unmapped/C_8425960	net/minecraft/client/render/ProgressRenderer	
 	f	Ljava/lang/String;	f_1486409	stage	
 	f	Lnet/minecraft/client/Minecraft;	f_4801953	minecraft	
@@ -119,10 +119,10 @@ c	net/minecraft/unmapped/C_8425960	net/minecraft/client/render/ProgressRenderer
 		p	1		minecraft	
 	m	(Ljava/lang/String;)V	m_3915830	progressStage	
 		p	1		stage	
-	m	(I)V	m_1991224	progressPercentage	
+	m	(I)V	m_1991224	progressStagePercentage	
 		p	1		percentage	
-	m	(Ljava/lang/String;)V	m_1434192	m_1434192	
-		p	1		p_1	
+	m	(Ljava/lang/String;)V	m_1434192	progressStart	
+		p	1		title	
 c	com/mojang/minecraft/Entity
 	f	F	walkDist	walkDist	
 	f	Z	makeStepSound	makeStepSound	
@@ -650,8 +650,8 @@ c	net/minecraft/unmapped/C_9158347	net/minecraft/unmapped/C_9158347
 		p	3		p_3	
 	m	()V	<clinit>	<clinit>	
 c	net/minecraft/unmapped/C_9665058
-	f	Lnet/minecraft/unmapped/C_8425960;	f_7071680	f_7071680	
-	f	Lnet/minecraft/client/Minecraft;	f_7071680		f_7071680
+	f	Lnet/minecraft/unmapped/C_8425960;	f_7071680	listener	
+	f	Lnet/minecraft/client/Minecraft;	f_7071680		listener
 	m	(Lnet/minecraft/unmapped/C_8425960;)V	<init>	<init>	
 		p	1		p_1	
 	m	(Lnet/minecraft/client/Minecraft;)V	<init>		<init>

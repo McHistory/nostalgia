@@ -325,7 +325,7 @@ c	net/minecraft/unmapped/C_5853518
 c	net/minecraft/client/Minecraft
 	f	I	f_2615354	ticks	
 	f	I	f_7539337	lastClickTicks	
-	f	Ljava/awt/Robot;	f_9154570	f_9154570	
+	f	Ljava/awt/Robot;	f_9154570	robot	
 	f	Lcom/mojang/minecraft/level/Level;	f_5337597	world	
 	f	Lcom/mojang/minecraft/player/Player;	f_5473933	player	
 	f	F	f_9762585	f_9762585	
@@ -339,9 +339,9 @@ c	net/minecraft/client/Minecraft
 	f	Lnet/minecraft/unmapped/C_0693652;	f_5473933		player
 	f	Ljava/util/ArrayList;	f_6333965		mobs
 	m	(I)V	m_6392526	createWorld	
-		p	1		p_1	
+		p	1		size	
 	m	(Lcom/mojang/minecraft/level/Level;)V	m_6427459	setWorld	
-		p	1		p_1	
+		p	1		world	
 	m	()V	m_5678101	handleMouseClick	
 	m	()V	m_5998520	m_5998520	
 	m	(ILjava/lang/String;)Z	m_7765695	m_7765695	
@@ -829,43 +829,43 @@ c	com/mojang/minecraft/player/Player	com/mojang/minecraft/player/Player
 		p	2		p_2	
 	m	()V	tick	tick	
 c	net/minecraft/unmapped/C_9665058
-	m	(Lcom/mojang/minecraft/level/Level;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)Z	m_5551734	m_5551734	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-		p	6		p_6	
-	m	(Ljava/lang/String;Ljava/lang/String;I)Lcom/mojang/minecraft/level/Level;	m_2468514	m_2468514	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-	m	(Ljava/io/InputStream;)Lcom/mojang/minecraft/level/Level;	m_7729189	m_7729189	
-		p	1		p_1	
-	m	(Lcom/mojang/minecraft/level/Level;Ljava/io/OutputStream;)V	m_5611887	m_5611887	
-		p	0		p_0	
-		p	1		p_1	
+	m	(Lcom/mojang/minecraft/level/Level;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)Z	m_5551734	save	
+		p	1		world	
+		p	2		hostAddress	
+		p	3		username	
+		p	4		sessionId	
+		p	5		name	
+		p	6		slot	
+	m	(Ljava/lang/String;Ljava/lang/String;I)Lcom/mojang/minecraft/level/Level;	m_2468514	load	
+		p	1		hostAddress	
+		p	2		username	
+		p	3		slot	
+	m	(Ljava/io/InputStream;)Lcom/mojang/minecraft/level/Level;	m_7729189	load	
+		p	1		input	
+	m	(Lcom/mojang/minecraft/level/Level;Ljava/io/OutputStream;)V	m_5611887	save	
+		p	0		world	
+		p	1		output	
 	m	(Ljava/io/InputStream;)Lcom/mojang/minecraft/level/Level;	m_2718498	m_2718498	
 		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_6495127;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)Z	m_5551734		m_5551734
+	m	(Lnet/minecraft/unmapped/C_6495127;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)Z	m_5551734		save
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
 		p	5			p_5
 		p	6			p_6
-	m	(Lnet/minecraft/unmapped/C_6495127;Ljava/lang/String;Ljava/lang/String;I)Z	m_2468514		m_2468514
+	m	(Lnet/minecraft/unmapped/C_6495127;Ljava/lang/String;Ljava/lang/String;I)Z	m_2468514		load
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
-	m	(Lnet/minecraft/unmapped/C_6495127;Ljava/io/InputStream;)Z	m_7729189		m_7729189
+	m	(Lnet/minecraft/unmapped/C_6495127;Ljava/io/InputStream;)Z	m_7729189		load
 		p	1			p_1
 		p	2			p_2
 	m	(Lnet/minecraft/unmapped/C_6495127;Ljava/io/InputStream;)Z	m_2718498		m_2718498
 		p	1			p_1
 		p	2			p_2
-	m	(Lnet/minecraft/unmapped/C_6495127;Ljava/io/OutputStream;)V	m_5611887		m_5611887
+	m	(Lnet/minecraft/unmapped/C_6495127;Ljava/io/OutputStream;)V	m_5611887		save
 		p	0			p_0
 		p	1			p_1
 c	com/mojang/minecraft/character/Zombie	com/mojang/minecraft/character/Zombie	

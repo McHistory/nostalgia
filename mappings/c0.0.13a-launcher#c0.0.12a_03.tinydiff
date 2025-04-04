@@ -132,7 +132,7 @@ c	net/minecraft/unmapped/C_6205974	net/minecraft/world/gen/noise/PerlinNoise
 c	net/minecraft/client/Minecraft
 	f	Lnet/minecraft/unmapped/C_3172064;	f_8811754	session	
 	f	Lnet/minecraft/unmapped/C_0786431;	f_4327097	screen	
-	f	Lnet/minecraft/unmapped/C_9665058;	f_1737492	f_1737492	
+	f	Lnet/minecraft/unmapped/C_9665058;	f_1737492	worldStorage	
 	f	Lnet/minecraft/unmapped/C_4078372;	f_0254108	f_0254108	
 	f	Ljava/lang/String;	f_0125064	f_0125064	
 	f	Ljava/lang/String;	f_2284011	f_2284011	
@@ -189,8 +189,8 @@ c	net/minecraft/unmapped/C_0786431	net/minecraft/client/gui/screen/Screen
 	m	()V	m_1498751	handleMouse	
 	m	()V	m_7135145	tick	
 	m	(II)V	m_3426670	render	
-		p	1		p_1	
-		p	2		p_2	
+		p	1		mouseX	
+		p	2		mouseY	
 	m	(IIIII)V	m_2880262	m_2880262	
 		p	1		p_1	
 		p	2		p_2	
@@ -237,7 +237,7 @@ c	net/minecraft/unmapped/C_1017062	net/minecraft/client/gui/screen/GameMenuScree
 c	net/minecraft/unmapped/C_1044273
 	f	I	f_3252359	f_3252359	
 	f	I	f_0774661	f_0774661	
-	m	()V	m_8889498	m_8889498	
+	m	()V	m_8889498	reload	
 	m	()Ljava/util/List;	m_6759097	m_6759097	
 	m	()V	m_5152808	m_5152808	
 	m	()V	m_4912347	m_4912347	
@@ -287,7 +287,7 @@ c	net/minecraft/unmapped/C_2621421	net/minecraft/client/gui/widget/ButtonWidget
 		p	2		p_2	
 		p	3		p_3	
 		p	4		p_4	
-		p	5		p_5	
+		p	5		height	
 		p	6		p_6	
 c	net/minecraft/unmapped/C_2813741
 	m	(Lnet/minecraft/unmapped/C_5283200;Lnet/minecraft/unmapped/C_5283200;)I	m_8911644	m_8911644	
@@ -391,18 +391,18 @@ c	com/mojang/minecraft/MinecraftApplet$2322793		2322793
 c	net/minecraft/unmapped/C_7898033
 	m	(F)V	m_1101418	m_1101418	
 		p	1		p_1	
-c	net/minecraft/unmapped/C_9665058	net/minecraft/unmapped/C_9665058	
+c	net/minecraft/unmapped/C_9665058	net/minecraft/world/storage/WorldStorage	
 	f	I	f_7397851	f_7397851	
 	f	I	f_1846789	f_1846789	
-	f	Lnet/minecraft/unmapped/C_6108531;	f_7071680	f_7071680	
+	f	Lnet/minecraft/unmapped/C_6108531;	f_7071680	listener	
 	f	Ljava/lang/String;	f_1036795	f_1036795	
-	m	(Lnet/minecraft/unmapped/C_6495127;Ljava/io/InputStream;)Z	m_7729189	m_7729189	
+	m	(Lnet/minecraft/unmapped/C_6495127;Ljava/io/InputStream;)Z	m_7729189	load	
 		p	1		p_1	
 		p	2		p_2	
 	m	(Lnet/minecraft/unmapped/C_6495127;Ljava/io/InputStream;)Z	m_2718498	m_2718498	
 		p	1		p_1	
 		p	2		p_2	
-	m	(Lnet/minecraft/unmapped/C_6495127;Ljava/io/OutputStream;)V	m_5611887	m_5611887	
+	m	(Lnet/minecraft/unmapped/C_6495127;Ljava/io/OutputStream;)V	m_5611887	save	
 		p	1		p_1	
 		p	2		p_2	
 	m	(Lnet/minecraft/unmapped/C_6108531;)V	<init>	<init>	

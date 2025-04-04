@@ -168,8 +168,8 @@ c	net/minecraft/client/Minecraft
 	m	()V	m_5678101		handleMouseClick
 c	net/minecraft/unmapped/C_0289174
 	f	Z	f_2994085	flipped	
-	f	Z	f_2797670	f_2797670	
-	f	Z	f_6766296	f_6766296	
+	f	Z	f_2797670	visible	
+	f	Z	f_6766296	invisible	
 	m	(FFFIIIF)V	m_7902911	addBox	
 		p	1		x	
 		p	2		y	
@@ -178,8 +178,8 @@ c	net/minecraft/unmapped/C_0289174
 		p	5		sizeY	
 		p	6		sizeZ	
 		p	7		increase	
-	m	(F)V	m_3169058	m_3169058	
-		p	1		p_1	
+	m	(F)V	m_3169058	compile	
+		p	1		scale	
 	m	(FFFIII)V	m_7902911		addBox
 		p	1			x
 		p	2			y
@@ -190,7 +190,7 @@ c	net/minecraft/unmapped/C_0289174
 c	net/minecraft/unmapped/C_1044273
 	f	Lnet/minecraft/client/Minecraft;	f_5470803	minecraft	
 	f	F	f_6975940	miningProgress	
-	f	[I	f_6069347	f_6069347	
+	f	[I	f_6069347	chunkLists	
 	m	(Lnet/minecraft/client/Minecraft;Lnet/minecraft/unmapped/C_3385278;)V	<init>	<init>	
 		p	1		minecraft	
 		p	2		textureManager	
@@ -221,7 +221,7 @@ c	net/minecraft/unmapped/C_2334550
 		p	2			g
 		p	3			b
 c	net/minecraft/unmapped/C_2454294
-	m	(Lcom/mojang/minecraft/particle/Particle;)V	m_6487687	m_6487687	
+	m	(Lcom/mojang/minecraft/particle/Particle;)V	m_6487687	add	
 		p	1		p_1	
 c	net/minecraft/unmapped/C_2751481	net/minecraft/client/render/ItemInHandRenderer	
 	f	Lnet/minecraft/client/Minecraft;	f_1515651	minecraft	
@@ -233,15 +233,15 @@ c	net/minecraft/unmapped/C_2751481	net/minecraft/client/render/ItemInHandRendere
 	m	(Lnet/minecraft/client/Minecraft;)V	<init>	<init>	
 		p	1		minecraft	
 c	net/minecraft/unmapped/C_3239917	net/minecraft/client/render/model/Model	
-	f	F	f_1553858	f_1553858	
+	f	F	f_1553858	attackAnimationProgress	
 	m	()V	<init>	<init>	
-	m	(FFFFFF)V	m_2584069	m_2584069	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-		p	6		p_6	
+	m	(FFFFFF)V	m_2584069	render	
+		p	1		walkAnimationProgress	
+		p	2		walkAnimationSpeed	
+		p	3		bob	
+		p	4		yaw	
+		p	5		pitch	
+		p	6		scale	
 c	net/minecraft/unmapped/C_3385278
 	f	Ljava/util/HashMap;	f_2107354	textureImages	
 	f	Lnet/minecraft/unmapped/C_7688744;	f_9630201	options	
@@ -260,19 +260,19 @@ c	net/minecraft/unmapped/C_3544790
 c	net/minecraft/unmapped/C_3589148
 	m	([Lnet/minecraft/unmapped/C_9856888;FFFF)V	<init>	<init>	
 		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
+		p	2		u1	
+		p	3		v1	
+		p	4		u2	
+		p	5		v2	
 c	net/minecraft/unmapped/C_3699792
 	f	Ljava/util/Random;	f_2993990	random	
 	f	I	f_8652332	ticks	
-	m	(FZII)V	m_1122306	m_1122306	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-	m	(ZII)V	m_1122306		m_1122306
+	m	(FZII)V	m_1122306	render	
+		p	1		tickDelta	
+		p	2		screenOpen	
+		p	3		mouseX	
+		p	4		mouseY	
+	m	(ZII)V	m_1122306		render
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -405,7 +405,7 @@ c	com/mojang/minecraft/item/Arrow	com/mojang/minecraft/item/Arrow
 		p	6		p_6	
 		p	7		p_7	
 c	com/mojang/minecraft/item/Item	com/mojang/minecraft/item/Item	
-	f	[Lnet/minecraft/unmapped/C_9882464;	f_5539600	f_5539600	
+	f	[Lnet/minecraft/unmapped/C_9882464;	f_5539600	models	
 	f	F	xd	xd	
 	f	F	yd	yd	
 	f	F	zd	zd	
@@ -686,7 +686,7 @@ c	net/minecraft/unmapped/C_1655833	net/minecraft/client/ClientPlayerInteractionM
 	m	(Lcom/mojang/minecraft/player/Player;I)Z	m_1105336	useItem	
 		p	1		player	
 		p	2		item	
-c	net/minecraft/unmapped/C_3292694	net/minecraft/unmapped/C_3292694	
+c	net/minecraft/unmapped/C_3292694	net/minecraft/client/render/model/entity/SkeletonModel	
 	m	()V	<init>	<init>	
 c	net/minecraft/unmapped/C_3464647
 	m	()Ljava/util/List;	m_8518413	getPlayers	
@@ -721,7 +721,7 @@ c	net/minecraft/unmapped/C_5044387	net/minecraft/client/SurvivalInteractionManag
 		p	2		p_2	
 	m	(Lnet/minecraft/client/Minecraft;)V	<init>	<init>	
 		p	1		p_1	
-c	net/minecraft/unmapped/C_7237913	net/minecraft/unmapped/C_7237913	
+c	net/minecraft/unmapped/C_7237913	net/minecraft/client/render/model/entity/ZombieModel	
 	m	()V	<init>	<init>	
 	m	(FFFFFF)V	m_5512614	m_5512614	
 		p	1		p_1	
@@ -731,26 +731,26 @@ c	net/minecraft/unmapped/C_7237913	net/minecraft/unmapped/C_7237913
 		p	5		p_5	
 		p	6		p_6	
 c	net/minecraft/unmapped/C_7898033
-	f	Lnet/minecraft/unmapped/C_0289174;	f_3515609	f_3515609	
+	f	Lnet/minecraft/unmapped/C_0289174;	f_3515609	hat	
 	m	(F)V	<init>	<init>	
-		p	1		p_1	
-	m	(FFFFFF)V	m_5512614	m_5512614	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-		p	6		p_6	
+		p	1		reduction	
+	m	(FFFFFF)V	m_5512614	setupAnimation	
+		p	1		walkAnimationProgress	
+		p	2		walkAnimationSpeed	
+		p	3		bob	
+		p	4		yaw	
+		p	5		pitch	
+		p	6		scale	
 c	net/minecraft/unmapped/C_9665058
 	m	(Ljava/io/InputStream;)Lcom/mojang/minecraft/level/Level;	m_2718498		m_2718498
 		p	1			p_1
-c	net/minecraft/unmapped/C_9823221	net/minecraft/unmapped/C_9823221	
-	f	Lnet/minecraft/unmapped/C_0289174;	f_8509466	f_8509466	
-	f	Lnet/minecraft/unmapped/C_0289174;	f_8035309	f_8035309	
-	f	Lnet/minecraft/unmapped/C_0289174;	f_2619317	f_2619317	
-	f	Lnet/minecraft/unmapped/C_0289174;	f_5376010	f_5376010	
-	f	Lnet/minecraft/unmapped/C_0289174;	f_1202510	f_1202510	
-	f	Lnet/minecraft/unmapped/C_0289174;	f_6231305	f_6231305	
+c	net/minecraft/unmapped/C_9823221	net/minecraft/client/render/model/entity/QuadrupedModel	
+	f	Lnet/minecraft/unmapped/C_0289174;	f_8509466	head	
+	f	Lnet/minecraft/unmapped/C_0289174;	f_8035309	body	
+	f	Lnet/minecraft/unmapped/C_0289174;	f_2619317	backRightLeg	
+	f	Lnet/minecraft/unmapped/C_0289174;	f_5376010	backLeftLeg	
+	f	Lnet/minecraft/unmapped/C_0289174;	f_1202510	frontRightLeg	
+	f	Lnet/minecraft/unmapped/C_0289174;	f_6231305	frontLeftLeg	
 	m	(FFFFFF)V	m_2584069	m_2584069	
 		p	1		p_1	
 		p	2		p_2	
@@ -759,11 +759,11 @@ c	net/minecraft/unmapped/C_9823221	net/minecraft/unmapped/C_9823221
 		p	5		p_5	
 		p	6		p_6	
 	m	()V	<init>	<init>	
-c	net/minecraft/unmapped/C_9882464	net/minecraft/unmapped/C_9882464	
-	f	Lnet/minecraft/unmapped/C_0289174;	f_0436548	f_0436548	
+c	net/minecraft/unmapped/C_9882464	net/minecraft/client/render/model/BlockModel	
+	f	Lnet/minecraft/unmapped/C_0289174;	f_0436548	part	
 	m	(I)V	<init>	<init>	
-		p	1		p_1	
-	m	()V	m_1955164	m_1955164	
+		p	1		sprite	
+	m	()V	m_1955164	render	
 c	com/mojang/minecraft/item/Sign	com/mojang/minecraft/item/Sign	
 	f	Lnet/minecraft/unmapped/C_7841284;	f_2632459	f_2632459	
 	f	F	xd	xd	

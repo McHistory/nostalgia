@@ -183,9 +183,9 @@ c	net/minecraft/unmapped/C_1044273
 		p	2			p_2
 		p	3			p_3
 c	net/minecraft/unmapped/C_2454294
-	m	(Lcom/mojang/minecraft/Entity;)V	m_6487687	m_6487687	
-		p	1		p_1	
-	m	(Lcom/mojang/minecraft/particle/Particle;)V	m_6487687		m_6487687
+	m	(Lcom/mojang/minecraft/Entity;)V	m_6487687	add	
+		p	1		particle	
+	m	(Lcom/mojang/minecraft/particle/Particle;)V	m_6487687		add
 		p	1			p_1
 	m	(Lcom/mojang/minecraft/player/Player;F)V	m_5775841		render
 		p	1			p_1
@@ -198,8 +198,8 @@ c	net/minecraft/unmapped/C_5283200
 	f	Z	f_7818563		dirty
 	m	()V	m_0330444	compile	
 	m	([III)I	m_8783499	getGlList	
-		p	1		p_1	
-		p	2		p_2	
+		p	1		glLists	
+		p	2		offset	
 		p	3		layer	
 	m	(Lnet/minecraft/unmapped/C_0669153;)V	m_5092852	cull	
 		p	1		frustum	
@@ -223,9 +223,9 @@ c	net/minecraft/unmapped/C_7542541	net/minecraft/client/gui/screen/inventory/men
 	m	(II)V	m_3426670	m_3426670	
 		p	1		p_1	
 		p	2		p_2	
-	m	(II)I	m_8154932	m_8154932	
-		p	1		p_1	
-		p	2		p_2	
+	m	(II)I	m_8154932	findClosestSlot	
+		p	1		mouseX	
+		p	2		mouseY	
 c	net/minecraft/unmapped/C_7564962	net/minecraft/client/CreativeInteractionManager	
 	m	()Z	m_4103218	m_4103218	
 	m	()V	m_1894352	m_1894352	
@@ -240,7 +240,7 @@ c	net/minecraft/unmapped/C_7688744
 c	net/minecraft/unmapped/C_0388903
 	m	()V	m_2060594	m_2060594	
 c	net/minecraft/unmapped/C_5540851
-	f	Z	f_9717986	f_9717986	
+	f	Z	f_9717986	selecting	
 c	net/minecraft/unmapped/C_1051907	net/minecraft/world/NaturalSpawner	
 	f	Lcom/mojang/minecraft/level/Level;	f_5139716	world	
 	m	(Lcom/mojang/minecraft/level/Level;)V	<init>	<init>	
@@ -396,7 +396,7 @@ c	com/mojang/minecraft/player/Player
 		p	1		p_1	
 		p	2		p_2	
 	m	()Z	isCreativeModeAllowed	isCreativeModeAllowed	
-c	net/minecraft/unmapped/C_1168442	net/minecraft/unmapped/C_1168442	
+c	net/minecraft/unmapped/C_1168442	net/minecraft/client/render/model/entity/SheepFurModel	
 	m	()V	<init>	<init>	
 c	net/minecraft/unmapped/C_1655833
 	m	(Lcom/mojang/minecraft/level/Level;)V	m_9151419	initLevel	
@@ -410,7 +410,7 @@ c	net/minecraft/unmapped/C_1655833
 		p	1		player	
 c	net/minecraft/unmapped/C_2964760
 	m	()I	m_3282602		m_3282602
-c	net/minecraft/unmapped/C_4632560	net/minecraft/unmapped/C_4632560	
+c	net/minecraft/unmapped/C_4632560	net/minecraft/client/render/model/entity/SheepModel	
 	m	()V	<init>	<init>	
 c	net/minecraft/unmapped/C_5044387
 	f	Lnet/minecraft/unmapped/C_1051907;	f_8072963	naturalSpawner	
@@ -422,9 +422,9 @@ c	net/minecraft/unmapped/C_5044387
 	m	(Lnet/minecraft/client/Minecraft;)V	<init>		<init>
 		p	1			p_1
 c	net/minecraft/unmapped/C_6760097
-	f	Lnet/minecraft/unmapped/C_9823221;	f_6381842	f_6381842	
-	f	Lnet/minecraft/unmapped/C_1168442;	f_7721878	f_7721878	
-c	net/minecraft/unmapped/C_7138722	net/minecraft/unmapped/C_7138722	
+	f	Lnet/minecraft/unmapped/C_9823221;	f_6381842	sheep	
+	f	Lnet/minecraft/unmapped/C_1168442;	f_7721878	sheepFur	
+c	net/minecraft/unmapped/C_7138722	net/minecraft/client/render/model/entity/PigModel	
 	m	()V	<init>	<init>	
 c	net/minecraft/unmapped/C_8100347	net/minecraft/unmapped/C_8100347	
 	f	Ljava/util/Set;	f_9798909	f_9798909	
@@ -433,8 +433,8 @@ c	net/minecraft/unmapped/C_8100347	net/minecraft/unmapped/C_8100347
 	m	()Ljava/io/ObjectStreamClass;	readClassDescriptor	readClassDescriptor	
 c	net/minecraft/unmapped/C_9823221
 	m	(IF)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
+		p	1		pivotPoint	
+		p	2		reduction	
 	m	()V	<init>		<init>
 c	com/mojang/minecraft/item/PrimedTnt		com/mojang/minecraft/item/PrimedTnt
 	f	J	serialVersionUID		serialVersionUID
