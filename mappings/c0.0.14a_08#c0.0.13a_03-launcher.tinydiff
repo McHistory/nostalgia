@@ -88,11 +88,11 @@ c	net/minecraft/unmapped/C_3635204
 	f	Lnet/minecraft/unmapped/C_3635204;	f_7106883	SAND	
 	f	Lnet/minecraft/unmapped/C_3635204;	f_7543153	GRAVEL	
 	f	Lnet/minecraft/unmapped/C_3635204;	f_8676132	LOG	
-	f	Lnet/minecraft/unmapped/C_3635204;	f_8866375	f_8866375	
-	f	Lnet/minecraft/unmapped/C_3635204;	f_7230133	f_7230133	
-	f	Lnet/minecraft/unmapped/C_3635204;	f_4107115	f_4107115	
-	f	Lnet/minecraft/unmapped/C_3635204;	f_0069613	f_0069613	
-	f	Lnet/minecraft/unmapped/C_3635204;	f_4511668	f_4511668	
+	f	Lnet/minecraft/unmapped/C_3635204;	f_8866375	SAPLING	
+	f	Lnet/minecraft/unmapped/C_3635204;	f_7230133	GOLD_ORE	
+	f	Lnet/minecraft/unmapped/C_3635204;	f_4107115	IRON_ORE	
+	f	Lnet/minecraft/unmapped/C_3635204;	f_0069613	COAL_ORE	
+	f	Lnet/minecraft/unmapped/C_3635204;	f_4511668	LEAVES	
 	f	Lnet/minecraft/unmapped/C_3635204;	f_4388356	f_4388356	
 	m	(III)Lcom/mojang/minecraft/phys/AABB;	m_9650578	getCollisionShape	
 		p	1		x	
@@ -106,11 +106,11 @@ c	net/minecraft/unmapped/C_3635204
 		p	4		z	
 		p	5		random	
 	m	(Lcom/mojang/minecraft/level/Level;IIILnet/minecraft/unmapped/C_2454294;)V	m_3427045	addBreakParticles	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
+		p	1		world	
+		p	2		x	
+		p	3		y	
+		p	4		z	
+		p	5		particleManager	
 	m	(Lcom/mojang/minecraft/level/Level;IIII)V	m_9130741	neighborChanged	
 		c	Performs a block update. This method is called when a neighboring block has updated\n(i.e. placed, broken, or otherwise changed state).	
 		p	1		world	
@@ -219,10 +219,10 @@ c	net/minecraft/unmapped/C_3724278	net/minecraft/block/FallingBlock
 		p	3		p_3	
 		p	4		p_4	
 		p	5		p_5	
-	m	(Lcom/mojang/minecraft/level/Level;III)V	m_0416811	m_0416811	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
+	m	(Lcom/mojang/minecraft/level/Level;III)V	m_0416811	tryFall	
+		p	1		world	
+		p	2		x	
+		p	3		y	
 		p	0		p_0	
 c	net/minecraft/unmapped/C_4078372
 	m	(Ljava/lang/String;III)Lcom/mojang/minecraft/level/Level;	m_0447977	m_0447977	
