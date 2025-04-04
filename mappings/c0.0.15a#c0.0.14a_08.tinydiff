@@ -41,7 +41,7 @@ c	net/minecraft/unmapped/C_8554894	net/minecraft/block/material/Material
 	m	(I)V	<init>	<init>	
 		p	1		id	
 c	net/minecraft/client/Minecraft
-	f	Lnet/minecraft/unmapped/C_3464647;	f_9951748	f_9951748	
+	f	Lnet/minecraft/unmapped/C_3464647;	f_9951748	networkHandler	
 	f	F	f_9356698	f_9356698	
 	m	()Z	m_7044458	m_7044458	
 	m	(Ljava/lang/String;I)V	m_1909243	m_1909243	
@@ -109,54 +109,54 @@ c	com/mojang/minecraft/particle/Particle
 		p	6			p_6
 		p	7			p_7
 		p	8			p_8
-c	net/minecraft/unmapped/C_3464647	net/minecraft/unmapped/C_3464647	
-	f	Ljava/io/ByteArrayOutputStream;	f_1074422	f_1074422	
-	f	Lnet/minecraft/unmapped/C_8995754;	f_6951774	f_6951774	
+c	net/minecraft/unmapped/C_3464647	net/minecraft/client/network/ClientNetworkHandler	
+	f	Ljava/io/ByteArrayOutputStream;	f_1074422	output	
+	f	Lnet/minecraft/unmapped/C_8995754;	f_6951774	conection	
 	f	Lnet/minecraft/client/Minecraft;	f_1892126	f_1892126	
-	f	Ljava/util/HashMap;	f_4932152	f_4932152	
+	f	Ljava/util/HashMap;	f_4932152	players	
 	m	(Lnet/minecraft/client/Minecraft;Ljava/lang/String;ILjava/lang/String;)V	<init>	<init>	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
 		p	4		p_4	
-c	net/minecraft/unmapped/C_3600653	net/minecraft/unmapped/C_3600653	
-	f	[Lnet/minecraft/unmapped/C_3600653;	f_7217191	f_7217191	
-	f	Lnet/minecraft/unmapped/C_3600653;	f_3149308	f_3149308	
-	f	Lnet/minecraft/unmapped/C_3600653;	f_4461768	f_4461768	
-	f	Lnet/minecraft/unmapped/C_3600653;	f_5289207	f_5289207	
-	f	Lnet/minecraft/unmapped/C_3600653;	f_8546696	f_8546696	
-	f	Lnet/minecraft/unmapped/C_3600653;	f_2373056	f_2373056	
-	f	Lnet/minecraft/unmapped/C_3600653;	f_3895897	f_3895897	
-	f	Lnet/minecraft/unmapped/C_3600653;	f_7782816	f_7782816	
-	f	Lnet/minecraft/unmapped/C_3600653;	f_5917851	f_5917851	
-	f	Lnet/minecraft/unmapped/C_3600653;	f_7798170	f_7798170	
-	f	I	f_7304734	f_7304734	
-	f	I	f_5406195	f_5406195	
-	f	B	f_6782781	f_6782781	
-	f	[Ljava/lang/Class;	f_8463791	f_8463791	
+c	net/minecraft/unmapped/C_3600653	net/minecraft/network/packet/Packet	
+	f	[Lnet/minecraft/unmapped/C_3600653;	f_7217191	PACKETS	
+	f	Lnet/minecraft/unmapped/C_3600653;	f_3149308	LOGIN	
+	f	Lnet/minecraft/unmapped/C_3600653;	f_4461768	PING	
+	f	Lnet/minecraft/unmapped/C_3600653;	f_5289207	WORLD_CHUNK	
+	f	Lnet/minecraft/unmapped/C_3600653;	f_8546696	WORLD_SIZE	
+	f	Lnet/minecraft/unmapped/C_3600653;	f_2373056	SET_BLOCK	
+	f	Lnet/minecraft/unmapped/C_3600653;	f_3895897	BLOCK_UPDATE	
+	f	Lnet/minecraft/unmapped/C_3600653;	f_7782816	ADD_PLAYER	
+	f	Lnet/minecraft/unmapped/C_3600653;	f_5917851	PLAYER_TELEPORT	
+	f	Lnet/minecraft/unmapped/C_3600653;	f_7798170	REMOVE_PLAYER	
+	f	I	f_7304734	size	
+	f	I	f_5406195	lastId	
+	f	B	f_6782781	id	
+	f	[Ljava/lang/Class;	f_8463791	dataTypes	
 	m	([Ljava/lang/Class;)V	<init>	<init>	
-		p	1		p_1	
+		p	1		dataTypes	
 	m	()V	<clinit>	<clinit>	
 c	net/minecraft/unmapped/C_7898033
 	m	(FF)V	m_2584069	m_2584069	
 		p	1		p_1	
 		p	2		p_2	
-c	net/minecraft/unmapped/C_8995754	net/minecraft/unmapped/C_8995754	
-	f	Z	f_8629289	f_8629289	
-	f	Ljava/nio/channels/SocketChannel;	f_6794126	f_6794126	
-	f	Ljava/nio/ByteBuffer;	f_1990451	f_1990451	
-	f	Ljava/nio/ByteBuffer;	f_4137365	f_4137365	
-	f	Lnet/minecraft/unmapped/C_3464647;	f_9596163	f_9596163	
-	f	Ljava/net/Socket;	f_0307332	f_0307332	
+c	net/minecraft/unmapped/C_8995754	net/minecraft/network/Connection	
+	f	Z	f_8629289	open	
+	f	Ljava/nio/channels/SocketChannel;	f_6794126	channel	
+	f	Ljava/nio/ByteBuffer;	f_1990451	input	
+	f	Ljava/nio/ByteBuffer;	f_4137365	output	
+	f	Lnet/minecraft/unmapped/C_3464647;	f_9596163	listener	
+	f	Ljava/net/Socket;	f_0307332	socket	
 	f	Z	f_3124921	f_3124921	
-	f	[B	f_8341920	f_8341920	
+	f	[B	f_8341920	stringBuffer	
 	m	(Ljava/lang/String;I)V	<init>	<init>	
-		p	1		p_1	
+		p	1		address	
 		p	2		p_2	
-	m	()V	m_3957784	m_3957784	
-	m	(Lnet/minecraft/unmapped/C_3600653;[Ljava/lang/Object;)V	m_9207877	m_9207877	
-		p	1		p_1	
-		p	2		p_2	
+	m	()V	m_3957784	close	
+	m	(Lnet/minecraft/unmapped/C_3600653;[Ljava/lang/Object;)V	m_9207877	send	
+		p	1		packet	
+		p	2		payload	
 	m	()V	m_1055827	m_1055827	
 c	net/minecraft/unmapped/C_9665058
 	m	(Ljava/io/InputStream;)[B	m_8590209	m_8590209	

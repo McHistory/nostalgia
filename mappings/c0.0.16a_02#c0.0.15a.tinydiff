@@ -92,21 +92,21 @@ c	com/mojang/minecraft/net/NetworkPlayer
 		p	7			p_7
 		p	8			p_8
 c	net/minecraft/unmapped/C_3464647
-	m	(IIIII)V	m_8042486	m_8042486	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
+	m	(IIIII)V	m_8042486	setBlock	
+		p	1		x	
+		p	2		y	
+		p	3		z	
+		p	4		mode	
+		p	5		block	
 c	net/minecraft/unmapped/C_3600653
-	f	Lnet/minecraft/unmapped/C_3600653;	f_6187456	f_6187456	
-	f	Lnet/minecraft/unmapped/C_3600653;	f_9528793	f_9528793	
-	f	Lnet/minecraft/unmapped/C_3600653;	f_6653682	f_6653682	
-	f	Lnet/minecraft/unmapped/C_3600653;	f_0872420	f_0872420	
-	f	Lnet/minecraft/unmapped/C_3600653;	f_5317033	f_5317033	
-c	net/minecraft/unmapped/C_5169041	net/minecraft/unmapped/C_5169041	
-	f	Ljava/lang/String;	f_0533128	f_0533128	
-	f	I	f_9208767	f_9208767	
+	f	Lnet/minecraft/unmapped/C_3600653;	f_6187456	PLAYER_MOVE	
+	f	Lnet/minecraft/unmapped/C_3600653;	f_9528793	PLAYER_VELOCITY	
+	f	Lnet/minecraft/unmapped/C_3600653;	f_6653682	PLAYER_ROTATE	
+	f	Lnet/minecraft/unmapped/C_3600653;	f_0872420	MESSAGE	
+	f	Lnet/minecraft/unmapped/C_3600653;	f_5317033	DISCONNECT	
+c	net/minecraft/unmapped/C_5169041	net/minecraft/client/gui/screen/ChatScreen	
+	f	Ljava/lang/String;	f_0533128	lastChatMessage	
+	f	I	f_9208767	ticks	
 	m	()V	<init>	<init>	
 	m	()V	m_2060594	m_2060594	
 	m	()V	m_5056964	m_5056964	
@@ -117,14 +117,14 @@ c	net/minecraft/unmapped/C_5169041	net/minecraft/unmapped/C_5169041
 	m	(II)V	m_3426670	m_3426670	
 		p	1		p_1	
 		p	2		p_2	
-c	net/minecraft/unmapped/C_7018681	net/minecraft/unmapped/C_7018681	
-	f	F	f_6477721	f_6477721	
-	f	F	f_7870468	f_7870468	
-	f	F	f_0110066	f_0110066	
-	f	F	f_2382842	f_2382842	
-	f	F	f_1369203	f_1369203	
-	f	Z	f_5972456	f_5972456	
-	f	Z	f_9167360	f_9167360	
+c	net/minecraft/unmapped/C_7018681	net/minecraft/entity/mob/player/PlayerTransform	
+	f	F	f_6477721	x	
+	f	F	f_7870468	y	
+	f	F	f_0110066	z	
+	f	F	f_2382842	yaw	
+	f	F	f_1369203	pitch	
+	f	Z	f_5972456	position	
+	f	Z	f_9167360	rotation	
 	m	(FFFFF)V	<init>	<init>	
 		p	1		p_1	
 		p	2		p_2	
@@ -147,8 +147,8 @@ c	net/minecraft/unmapped/C_7898033
 		p	1			p_1
 		p	2			p_2
 c	net/minecraft/unmapped/C_8995754
-	m	(Ljava/lang/Class;)Ljava/lang/Object;	m_9294968	m_9294968	
-		p	1		p_1	
+	m	(Ljava/lang/Class;)Ljava/lang/Object;	m_9294968	read	
+		p	1		type	
 c	net/minecraft/unmapped/C_9437404	net/minecraft/unmapped/C_9437404	
 	f	Ljava/lang/String;	f_4623692	f_4623692	
 	f	I	f_5528963	f_5528963	
