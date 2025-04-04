@@ -482,25 +482,25 @@ c	net/minecraft/unmapped/C_0998176
 c	net/minecraft/unmapped/C_7181464
 	f	I	f_1741213	f_1741213	
 c	net/minecraft/unmapped/C_0951268
-	m	(Ljava/nio/ByteBuffer;)Lnet/minecraft/unmapped/C_4869715;	m_9604406	m_9604406	
-		p	1		p_1	
-	m	(Ljava/nio/ByteBuffer;I)Lnet/minecraft/unmapped/C_4869715;	m_9604406		m_9604406
-		p	1			p_1
-		p	2			p_2
+	m	(Ljava/nio/ByteBuffer;)Lnet/minecraft/unmapped/C_4869715;	m_9604406	readSurface	
+		p	1		buf	
+	m	(Ljava/nio/ByteBuffer;I)Lnet/minecraft/unmapped/C_4869715;	m_9604406		readSurface
+		p	1			buf
+		p	2			offset
 c	net/minecraft/unmapped/C_4869715
-	m	(IIF)V	m_3373737	m_3373737	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-	m	(Ljava/nio/FloatBuffer;IIF)V	m_9181198	m_9181198	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
+	m	(IIF)V	m_3373737	setupBuffers	
+		p	1		prevFrame	
+		p	2		frame	
+		p	3		tickDelta	
+	m	(Ljava/nio/FloatBuffer;IIF)V	m_9181198	setupBuffer	
+		p	1		buf	
+		p	2		prevFrame	
+		p	3		frame	
+		p	4		tickDelta	
 c	net/minecraft/unmapped/C_6942422
 	f	Z	f_7800829	f_7800829	
-	m	(IIF)V	m_5828552	m_5828552	
-		p	1		p_1	
+	m	(IIF)V	m_5828552	render	
+		p	1		frame	
 		p	2		p_2	
 		p	3		p_3	
 c	net/minecraft/unmapped/C_8425960
