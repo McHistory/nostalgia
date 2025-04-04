@@ -641,23 +641,23 @@ c	net/minecraft/unmapped/C_4078372
 	f	I	f_3160490	sizeY	
 	f	[B	f_5268170	blocks	
 	f	I	f_9811652	surroundingWaterHeight	
-	f	I	f_7275613		f_7275613
-	f	I	f_8175346		f_8175346
-	f	I	f_2316345		f_2316345
-	f	[B	f_8316515		f_8316515
+	f	I	f_7275613		sizeX
+	f	I	f_8175346		sizeZ
+	f	I	f_2316345		sizeY
+	f	[B	f_8316515		blocks
 	f	I	f_2661209		f_2661209
 	m	(IIII)V	m_8354142	placeOre	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
 		p	4		p_4	
-	m	(Ljava/lang/String;III)Lcom/mojang/minecraft/level/Level;	m_0447977		m_0447977
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-	m	(IIII)V	m_9667175		m_9667175
-		p	1			p_1
+	m	(Ljava/lang/String;III)Lcom/mojang/minecraft/level/Level;	m_0447977		generate
+		p	1			name
+		p	2			sizeX
+		p	3			sizeZ
+		p	4			sizeY
+	m	(IIII)V	m_9667175		placeOre
+		p	1			block
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
@@ -3497,8 +3497,8 @@ c	net/minecraft/unmapped/C_7900390		de/jarnbjo/util/io/ByteArrayBitInputStream
 		p	1			root
 	m	(I)J	m_1016947		getLong
 		p	1			bits
-c	net/minecraft/unmapped/C_8100347		net/minecraft/unmapped/C_8100347
-	f	Ljava/util/Set;	f_9798909		f_9798909
+c	net/minecraft/unmapped/C_8100347		net/minecraft/world/storage/EntityObjectInputStream
+	f	Ljava/util/Set;	f_9798909		types
 	m	(Ljava/io/InputStream;)V	<init>		<init>
 		p	1			p_1
 	m	()Ljava/io/ObjectStreamClass;	readClassDescriptor		readClassDescriptor
