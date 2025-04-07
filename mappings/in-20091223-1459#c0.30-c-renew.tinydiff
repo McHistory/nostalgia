@@ -1572,7 +1572,7 @@ c	net/minecraft/unmapped/C_8905061	net/minecraft/client/entity/particle/Particle
 	m	(F)Lnet/minecraft/unmapped/C_8905061;	m_3489622	multiplyVelocity	
 		p	1		scalar	
 c	net/minecraft/unmapped/C_9302567	net/minecraft/client/render/entity/EntityRenderer	
-	f	[Lnet/minecraft/unmapped/C_6942422;	f_7707208	f_7707208	
+	f	[Lnet/minecraft/unmapped/C_6942422;	f_7707208	models	
 	f	Lnet/minecraft/unmapped/C_3906126;	f_1797121	dispatcher	
 	m	()V	<init>	<init>	
 c	net/minecraft/unmapped/C_9856888
@@ -1685,60 +1685,60 @@ c	net/minecraft/unmapped/C_7181464	net/minecraft/entity/mob/ai/MobAi
 	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_1013763;)V	m_1710270	tick	
 		p	1		world	
 		p	2		mob	
-c	net/minecraft/unmapped/C_0951268	net/minecraft/unmapped/C_0951268	
+c	net/minecraft/unmapped/C_0951268	net/minecraft/client/render/entity/md3/MD3ModelLoader	
 	m	()V	<init>	<init>	
-	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_9058620;	m_1548761	m_1548761	
-		p	1		p_1	
-	m	(Ljava/nio/ByteBuffer;)Lnet/minecraft/unmapped/C_9058620;	m_0980951	m_0980951	
-		p	1		p_1	
-	m	(Ljava/nio/ByteBuffer;)Lnet/minecraft/unmapped/C_0336319;	m_8071722	m_8071722	
-		p	0		p_0	
-	m	(Ljava/nio/ByteBuffer;I)Ljava/lang/String;	m_4046591	m_4046591	
-		p	0		p_0	
-		p	1		p_1	
-	m	(Ljava/nio/ByteBuffer;I)Lnet/minecraft/unmapped/C_4869715;	m_9604406	m_9604406	
-		p	1		p_1	
-		p	2		p_2	
-c	net/minecraft/unmapped/C_4493146	net/minecraft/unmapped/C_4493146	
+	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_9058620;	m_1548761	loadModel	
+		p	1		path	
+	m	(Ljava/nio/ByteBuffer;)Lnet/minecraft/unmapped/C_9058620;	m_0980951	readFromBuffer	
+		p	1		buf	
+	m	(Ljava/nio/ByteBuffer;)Lnet/minecraft/unmapped/C_0336319;	m_8071722	readVector	
+		p	0		buf	
+	m	(Ljava/nio/ByteBuffer;I)Ljava/lang/String;	m_4046591	readString	
+		p	0		buf	
+		p	1		len	
+	m	(Ljava/nio/ByteBuffer;I)Lnet/minecraft/unmapped/C_4869715;	m_9604406	readSurface	
+		p	1		buf	
+		p	2		offset	
+c	net/minecraft/unmapped/C_4493146	net/minecraft/client/render/entity/md3/MD3Shader	
 	m	()V	<init>	<init>	
-c	net/minecraft/unmapped/C_4869715	net/minecraft/unmapped/C_4869715	
-	f	I	f_5405096	f_5405096	
-	f	I	f_7674973	f_7674973	
-	f	[Lnet/minecraft/unmapped/C_4493146;	f_4808055	f_4808055	
-	f	Ljava/nio/IntBuffer;	f_9410219	f_9410219	
-	f	Ljava/nio/FloatBuffer;	f_9638801	f_9638801	
-	f	Ljava/nio/FloatBuffer;	f_8931866	f_8931866	
-	f	Ljava/nio/FloatBuffer;	f_4169926	f_4169926	
-	f	[F	f_7496044	f_7496044	
-	f	[F	f_2945089	f_2945089	
+c	net/minecraft/unmapped/C_4869715	net/minecraft/client/render/entity/md3/MD3Surface	
+	f	I	f_5405096	uvCount	
+	f	I	f_7674973	normalCount	
+	f	[Lnet/minecraft/unmapped/C_4493146;	f_4808055	shaders	
+	f	Ljava/nio/IntBuffer;	f_9410219	triangles	
+	f	Ljava/nio/FloatBuffer;	f_9638801	uvs	
+	f	Ljava/nio/FloatBuffer;	f_8931866	normalPositions	
+	f	Ljava/nio/FloatBuffer;	f_4169926	normalVectors	
+	f	[F	f_7496044	prevFrame	
+	f	[F	f_2945089	frame	
 	m	(III)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-c	net/minecraft/unmapped/C_5346059	net/minecraft/unmapped/C_5346059	
+		p	1		triangleCount	
+		p	2		uvCount	
+		p	3		normalCount	
+c	net/minecraft/unmapped/C_5346059	net/minecraft/client/render/entity/md3/MD3Frame	
 	m	()V	<init>	<init>	
-c	net/minecraft/unmapped/C_6942422	net/minecraft/unmapped/C_6942422	
-	f	Lnet/minecraft/unmapped/C_9058620;	f_7075810	f_7075810	
-	f	I	f_2870767	f_2870767	
+c	net/minecraft/unmapped/C_6942422	net/minecraft/client/render/entity/md3/MD3ModelRenderer	
+	f	Lnet/minecraft/unmapped/C_9058620;	f_7075810	model	
+	f	I	f_2870767	frameList	
 	m	(Lnet/minecraft/unmapped/C_9058620;)V	<init>	<init>	
 		p	1		p_1	
-	m	(IIF)V	m_6150053	m_6150053	
+	m	(IIF)V	m_6150053	render	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
-c	net/minecraft/unmapped/C_7946382	net/minecraft/unmapped/C_7946382	
-	f	Ljava/lang/String;	f_2200494	f_2200494	
-	f	[Lnet/minecraft/unmapped/C_0336319;	f_8641337	f_8641337	
-	f	[Lnet/minecraft/unmapped/C_0336319;	f_4617685	f_4617685	
-	f	[Lnet/minecraft/unmapped/C_0336319;	f_2576323	f_2576323	
-	f	[Lnet/minecraft/unmapped/C_0336319;	f_4055240	f_4055240	
+c	net/minecraft/unmapped/C_7946382	net/minecraft/client/render/entity/md3/MD3Tags	
+	f	Ljava/lang/String;	f_2200494	name	
+	f	[Lnet/minecraft/unmapped/C_0336319;	f_8641337	origin	
+	f	[Lnet/minecraft/unmapped/C_0336319;	f_4617685	axisX	
+	f	[Lnet/minecraft/unmapped/C_0336319;	f_2576323	axisY	
+	f	[Lnet/minecraft/unmapped/C_0336319;	f_4055240	axisZ	
 	m	(I)V	<init>	<init>	
-		p	1		p_1	
-c	net/minecraft/unmapped/C_9058620	net/minecraft/unmapped/C_9058620	
-	f	I	f_4190471	f_4190471	
-	f	[Lnet/minecraft/unmapped/C_5346059;	f_2567970	f_2567970	
-	f	Ljava/util/HashMap;	f_4202705	f_4202705	
-	f	[Lnet/minecraft/unmapped/C_4869715;	f_6623291	f_6623291	
+		p	1		tagCount	
+c	net/minecraft/unmapped/C_9058620	net/minecraft/client/render/entity/md3/MD3Model	
+	f	I	f_4190471	frameCount	
+	f	[Lnet/minecraft/unmapped/C_5346059;	f_2567970	frames	
+	f	Ljava/util/HashMap;	f_4202705	tags	
+	f	[Lnet/minecraft/unmapped/C_4869715;	f_6623291	surfaces	
 	m	()V	<init>	<init>	
 c	com/mojang/minecraft/Entity		com/mojang/minecraft/Entity
 	f	J	serialVersionUID		serialVersionUID
