@@ -1,9 +1,9 @@
 tiny	2	0
 c	net/minecraft/unmapped/C_4078372	net/minecraft/world/WorldGenerator	
 	f	Ljava/util/Random;	f_3952515	random	
-	f	I	f_7275613	f_7275613	
-	f	I	f_8175346	f_8175346	
-	f	I	f_2316345	f_2316345	
+	f	I	f_7275613	sizeX	
+	f	I	f_8175346	sizeZ	
+	f	I	f_2316345	sizeY	
 	m	(III)V	<init>	<init>	
 		p	1		p_1	
 		p	2		p_2	
@@ -18,15 +18,15 @@ c	net/minecraft/client/Minecraft
 	f	Z	f_5170474	running	
 	f	Ljava/lang/String;	f_8891450	fpsDebugInfo	
 	f	Z	f_0682520	focused	
-	f	Z	f_7579809	f_7579809	
-	f	Lorg/lwjgl/input/Cursor;	f_5333905	f_5333905	
+	f	Z	f_7579809	appletMode	
+	f	Lorg/lwjgl/input/Cursor;	f_5333905	cursor	
 	f	I	f_0440810	f_0440810	
 	f	I	f_6184923	f_6184923	
 	f	Ljava/lang/String;	f_8370076	f_8370076	
 	f	Z	f_7113536		FULLSCREEN
 	m	()V	m_7502890	lockMouse	
 	m	()V	m_7834074	pauseGame	
-	m	(Ljava/lang/String;)V	m_0572353	m_0572353	
+	m	(Ljava/lang/String;)V	m_0572353	logGlError	
 		p	1		p_1	
 	m	(Ljava/awt/Canvas;IIZ)V	<init>	<init>	
 		p	1		p_1	
@@ -79,11 +79,11 @@ c	net/minecraft/unmapped/C_4766485	net/minecraft/client/render/TextRenderer
 		p	5		shadow	
 	m	(Ljava/lang/String;)I	m_3908105	getWidth	
 		p	1		text	
-	m	(Ljava/lang/String;III)V	m_4507504	m_4507504	
-		p	1		p_1	
+	m	(Ljava/lang/String;III)V	m_4507504	drawWithShadow	
+		p	1		text	
 		p	2		p_2	
 		p	3		p_3	
-		p	4		p_4	
+		p	4		color	
 	m	(Ljava/lang/String;Lnet/minecraft/unmapped/C_3385278;)V	<init>	<init>	
 		p	1		p_1	
 		p	2		p_2	

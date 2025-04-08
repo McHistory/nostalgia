@@ -88,11 +88,11 @@ c	net/minecraft/unmapped/C_3635204
 	f	Lnet/minecraft/unmapped/C_3635204;	f_7106883	SAND	
 	f	Lnet/minecraft/unmapped/C_3635204;	f_7543153	GRAVEL	
 	f	Lnet/minecraft/unmapped/C_3635204;	f_8676132	LOG	
-	f	Lnet/minecraft/unmapped/C_3635204;	f_8866375	f_8866375	
-	f	Lnet/minecraft/unmapped/C_3635204;	f_7230133	f_7230133	
-	f	Lnet/minecraft/unmapped/C_3635204;	f_4107115	f_4107115	
-	f	Lnet/minecraft/unmapped/C_3635204;	f_0069613	f_0069613	
-	f	Lnet/minecraft/unmapped/C_3635204;	f_4511668	f_4511668	
+	f	Lnet/minecraft/unmapped/C_3635204;	f_8866375	SAPLING	
+	f	Lnet/minecraft/unmapped/C_3635204;	f_7230133	GOLD_ORE	
+	f	Lnet/minecraft/unmapped/C_3635204;	f_4107115	IRON_ORE	
+	f	Lnet/minecraft/unmapped/C_3635204;	f_0069613	COAL_ORE	
+	f	Lnet/minecraft/unmapped/C_3635204;	f_4511668	LEAVES	
 	f	Lnet/minecraft/unmapped/C_3635204;	f_4388356	f_4388356	
 	m	(III)Lcom/mojang/minecraft/phys/AABB;	m_9650578	getCollisionShape	
 		p	1		x	
@@ -106,11 +106,11 @@ c	net/minecraft/unmapped/C_3635204
 		p	4		z	
 		p	5		random	
 	m	(Lcom/mojang/minecraft/level/Level;IIILnet/minecraft/unmapped/C_2454294;)V	m_3427045	addBreakParticles	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
+		p	1		world	
+		p	2		x	
+		p	3		y	
+		p	4		z	
+		p	5		particleManager	
 	m	(Lcom/mojang/minecraft/level/Level;IIII)V	m_9130741	neighborChanged	
 		c	Performs a block update. This method is called when a neighboring block has updated\n(i.e. placed, broken, or otherwise changed state).	
 		p	1		world	
@@ -219,19 +219,19 @@ c	net/minecraft/unmapped/C_3724278	net/minecraft/block/FallingBlock
 		p	3		p_3	
 		p	4		p_4	
 		p	5		p_5	
-	m	(Lcom/mojang/minecraft/level/Level;III)V	m_0416811	m_0416811	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
+	m	(Lcom/mojang/minecraft/level/Level;III)V	m_0416811	tryFall	
+		p	1		world	
+		p	2		x	
+		p	3		y	
 		p	0		p_0	
 c	net/minecraft/unmapped/C_4078372
-	m	(Ljava/lang/String;III)Lcom/mojang/minecraft/level/Level;	m_0447977	m_0447977	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-	m	(IIII)V	m_9667175	m_9667175	
-		p	1		p_1	
+	m	(Ljava/lang/String;III)Lcom/mojang/minecraft/level/Level;	m_0447977	generate	
+		p	1		name	
+		p	2		sizeX	
+		p	3		sizeZ	
+		p	4		sizeY	
+	m	(IIII)V	m_9667175	placeOre	
+		p	1		block	
 		p	2		p_2	
 		p	3		p_3	
 		p	4		p_4	
@@ -239,7 +239,7 @@ c	net/minecraft/unmapped/C_4078372
 		p	1		p_1	
 	m	([I)V	m_1162242	m_1162242	
 		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_6495127;Ljava/lang/String;III)Z	m_0447977		m_0447977
+	m	(Lnet/minecraft/unmapped/C_6495127;Ljava/lang/String;III)Z	m_0447977		generate
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -325,7 +325,7 @@ c	net/minecraft/unmapped/C_5853518
 c	net/minecraft/client/Minecraft
 	f	I	f_2615354	ticks	
 	f	I	f_7539337	lastClickTicks	
-	f	Ljava/awt/Robot;	f_9154570	f_9154570	
+	f	Ljava/awt/Robot;	f_9154570	robot	
 	f	Lcom/mojang/minecraft/level/Level;	f_5337597	world	
 	f	Lcom/mojang/minecraft/player/Player;	f_5473933	player	
 	f	F	f_9762585	f_9762585	
@@ -339,9 +339,9 @@ c	net/minecraft/client/Minecraft
 	f	Lnet/minecraft/unmapped/C_0693652;	f_5473933		player
 	f	Ljava/util/ArrayList;	f_6333965		mobs
 	m	(I)V	m_6392526	createWorld	
-		p	1		p_1	
+		p	1		size	
 	m	(Lcom/mojang/minecraft/level/Level;)V	m_6427459	setWorld	
-		p	1		p_1	
+		p	1		world	
 	m	()V	m_5678101	handleMouseClick	
 	m	()V	m_5998520	m_5998520	
 	m	(ILjava/lang/String;)Z	m_7765695	m_7765695	
@@ -829,43 +829,43 @@ c	com/mojang/minecraft/player/Player	com/mojang/minecraft/player/Player
 		p	2		p_2	
 	m	()V	tick	tick	
 c	net/minecraft/unmapped/C_9665058
-	m	(Lcom/mojang/minecraft/level/Level;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)Z	m_5551734	m_5551734	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-		p	6		p_6	
-	m	(Ljava/lang/String;Ljava/lang/String;I)Lcom/mojang/minecraft/level/Level;	m_2468514	m_2468514	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-	m	(Ljava/io/InputStream;)Lcom/mojang/minecraft/level/Level;	m_7729189	m_7729189	
-		p	1		p_1	
-	m	(Lcom/mojang/minecraft/level/Level;Ljava/io/OutputStream;)V	m_5611887	m_5611887	
-		p	0		p_0	
-		p	1		p_1	
+	m	(Lcom/mojang/minecraft/level/Level;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)Z	m_5551734	save	
+		p	1		world	
+		p	2		hostAddress	
+		p	3		username	
+		p	4		sessionId	
+		p	5		name	
+		p	6		slot	
+	m	(Ljava/lang/String;Ljava/lang/String;I)Lcom/mojang/minecraft/level/Level;	m_2468514	load	
+		p	1		hostAddress	
+		p	2		username	
+		p	3		slot	
+	m	(Ljava/io/InputStream;)Lcom/mojang/minecraft/level/Level;	m_7729189	load	
+		p	1		input	
+	m	(Lcom/mojang/minecraft/level/Level;Ljava/io/OutputStream;)V	m_5611887	save	
+		p	0		world	
+		p	1		output	
 	m	(Ljava/io/InputStream;)Lcom/mojang/minecraft/level/Level;	m_2718498	m_2718498	
 		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_6495127;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)Z	m_5551734		m_5551734
+	m	(Lnet/minecraft/unmapped/C_6495127;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)Z	m_5551734		save
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
 		p	5			p_5
 		p	6			p_6
-	m	(Lnet/minecraft/unmapped/C_6495127;Ljava/lang/String;Ljava/lang/String;I)Z	m_2468514		m_2468514
+	m	(Lnet/minecraft/unmapped/C_6495127;Ljava/lang/String;Ljava/lang/String;I)Z	m_2468514		load
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
-	m	(Lnet/minecraft/unmapped/C_6495127;Ljava/io/InputStream;)Z	m_7729189		m_7729189
+	m	(Lnet/minecraft/unmapped/C_6495127;Ljava/io/InputStream;)Z	m_7729189		load
 		p	1			p_1
 		p	2			p_2
 	m	(Lnet/minecraft/unmapped/C_6495127;Ljava/io/InputStream;)Z	m_2718498		m_2718498
 		p	1			p_1
 		p	2			p_2
-	m	(Lnet/minecraft/unmapped/C_6495127;Ljava/io/OutputStream;)V	m_5611887		m_5611887
+	m	(Lnet/minecraft/unmapped/C_6495127;Ljava/io/OutputStream;)V	m_5611887		save
 		p	0			p_0
 		p	1			p_1
 c	com/mojang/minecraft/character/Zombie	com/mojang/minecraft/character/Zombie	
