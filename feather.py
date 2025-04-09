@@ -3,7 +3,7 @@ import sys
 import subprocess
 
 MAPPINGS_DIR = 'mappings'
-GRADLE_TASKS = ['clean', 'enigma', 'build', 'javadoc', 'javadocJar', 'checkMappings',
+GRADLE_TASKS = ['clean', 'enigma', 'enigmaWithoutUnpick', 'build', 'javadoc', 'javadocJar', 'checkMappings',
                 'mapMinecraftToIntermediary', 'mapMinecraftToNamed', 'decompileWithCfr', 'decompileWithVineflower',
                 'publish', 'loadMappings', 'insertMappings', 'saveMappingsDown', 'saveMappingsUp', 'saveMappings']
 GRADLEW = 'gradlew' if os.name == 'nt' else './gradlew'
