@@ -6,14 +6,14 @@ jobs:
 
   display_versions:
     needs: matrix_prep
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     steps:
       - name: display versions
         run: echo '${{ needs.matrix_prep.outputs.versions }}' | jq '.include[].version_range[]'
 
   build:
     needs: matrix_prep
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
 
     strategy:
       max-parallel: 20
@@ -28,10 +28,10 @@ jobs:
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
-          java-version: '17'
+          java-version: '21'
 
       - name: wrapper validation
-        uses: gradle/actions/wrapper-validation@v3
+        uses: gradle/actions/wrapper-validation@v4
 
       - name: make gradle wrapper executable
         if: ${{ runner.os != 'Windows' }}
