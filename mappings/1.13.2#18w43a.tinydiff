@@ -3828,78 +3828,80 @@ c	net/minecraft/unmapped/C_3240173
 	m	(Ljava/util/function/Function;)V	<init>		<init>
 		p	1			p_1
 c	net/minecraft/unmapped/C_4420677
-	f	Lnet/minecraft/unmapped/C_0591668;	f_3025457		f_3025457
-	f	I	f_6529284		f_6529284
+	f	Lnet/minecraft/unmapped/C_0591668;	f_3025457		effect
+	f	I	f_6529284		effectDuration
 	m	(Lnet/minecraft/unmapped/C_3635204$C_6799794;)V	<init>	<init>	
 		p	1		p_1	
 	m	(Lnet/minecraft/unmapped/C_0591668;ILnet/minecraft/unmapped/C_3635204$C_6799794;)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
+		p	1			effect
+		p	2			duration
 		p	3			p_3
-	m	()Lnet/minecraft/unmapped/C_0591668;	m_3967302		m_3967302
-	m	()I	m_0252938		m_0252938
+	m	()Lnet/minecraft/unmapped/C_0591668;	m_3967302		getEffect
+	m	()I	m_0252938		getEffectDuration
 c	net/minecraft/unmapped/C_5251467
 	f	Ljava/util/Set;	f_2270171	ALL	
 	f	Lnet/minecraft/unmapped/C_3635204;	f_2270171		ALL
-	f	Lnet/minecraft/unmapped/C_3635204;	f_7149815		f_7149815
-	f	Lnet/minecraft/unmapped/C_3635204;	f_7621195		f_7621195
-	f	Lnet/minecraft/unmapped/C_3635204;	f_9355829		f_9355829
-	f	Lnet/minecraft/unmapped/C_3635204;	f_3085089		f_3085089
-	f	Lnet/minecraft/unmapped/C_3635204;	f_4831206		f_4831206
-	f	Lnet/minecraft/unmapped/C_3635204;	f_9329361		f_9329361
-	f	Lnet/minecraft/unmapped/C_3635204;	f_1154292		f_1154292
-	f	Lnet/minecraft/unmapped/C_3635204;	f_9324274		f_9324274
-	f	Lnet/minecraft/unmapped/C_3635204;	f_7293127		f_7293127
-	f	Lnet/minecraft/unmapped/C_3635204;	f_4654686		f_4654686
-	f	Lnet/minecraft/unmapped/C_3635204;	f_4656817		f_4656817
-	f	Lnet/minecraft/unmapped/C_3635204;	f_6216656		f_6216656
-	f	Lnet/minecraft/unmapped/C_3635204;	f_9601846		f_9601846
-	f	Lnet/minecraft/unmapped/C_3635204;	f_5027583		f_5027583
-	f	Lnet/minecraft/unmapped/C_3635204;	f_9307964		f_9307964
-	f	Lnet/minecraft/unmapped/C_3635204;	f_2448707		f_2448707
-	f	Lnet/minecraft/unmapped/C_3635204;	f_7330540		f_7330540
-	f	Lnet/minecraft/unmapped/C_3635204;	f_1403442		f_1403442
-	f	Lnet/minecraft/unmapped/C_3635204;	f_8638484		f_8638484
-	f	Lnet/minecraft/unmapped/C_3635204;	f_5872892		f_5872892
-	f	Lnet/minecraft/unmapped/C_3635204;	f_9048671		f_9048671
-	f	Lnet/minecraft/unmapped/C_3635204;	f_5463615		f_5463615
-	f	Lnet/minecraft/unmapped/C_3635204;	f_8927754		f_8927754
-	f	Lnet/minecraft/unmapped/C_3635204;	f_4403036		f_4403036
-	f	Lnet/minecraft/unmapped/C_3635204;	f_2331009		f_2331009
+	f	Lnet/minecraft/unmapped/C_3635204;	f_7149815		CORNFLOWER
+	f	Lnet/minecraft/unmapped/C_3635204;	f_7621195		WITHER_ROSE
+	f	Lnet/minecraft/unmapped/C_3635204;	f_9355829		LILY_OF_THE_VALLEY
+	f	Lnet/minecraft/unmapped/C_3635204;	f_3085089		SPRUCE_STANDING_SIGN
+	f	Lnet/minecraft/unmapped/C_3635204;	f_4831206		BIRCH_STANDING_SIGN
+	f	Lnet/minecraft/unmapped/C_3635204;	f_9329361		ACACIA_STANDING_SIGN
+	f	Lnet/minecraft/unmapped/C_3635204;	f_1154292		JUNGLE_STANDING_SIGN
+	f	Lnet/minecraft/unmapped/C_3635204;	f_9324274		DARK_OAK_STANDING_SIGN
+	f	Lnet/minecraft/unmapped/C_3635204;	f_7293127		SPRUCE_WALL_SIGN
+	f	Lnet/minecraft/unmapped/C_3635204;	f_4654686		BIRCH_WALL_SIGN
+	f	Lnet/minecraft/unmapped/C_3635204;	f_4656817		ACACIA_WALL_SIGN
+	f	Lnet/minecraft/unmapped/C_3635204;	f_6216656		JUNGLE_WALL_SIGN
+	f	Lnet/minecraft/unmapped/C_3635204;	f_9601846		DARK_OAK_WALL_SIGN
+	f	Lnet/minecraft/unmapped/C_3635204;	f_5027583		POTTED_LILY_OF_THE_VALLEY
+	f	Lnet/minecraft/unmapped/C_3635204;	f_9307964		POTTED_WITHER_ROSE
+	f	Lnet/minecraft/unmapped/C_3635204;	f_2448707		SMOOTH_STONE_SLAB
+	f	Lnet/minecraft/unmapped/C_3635204;	f_7330540		BAMBOO_SAPLING
+	f	Lnet/minecraft/unmapped/C_3635204;	f_1403442		BAMBOO
+	f	Lnet/minecraft/unmapped/C_3635204;	f_8638484		POTTED_BAMBOO
+	f	Lnet/minecraft/unmapped/C_3635204;	f_5872892		POLISHED_GRANITE_STAIRS
+	f	Lnet/minecraft/unmapped/C_3635204;	f_9048671		SMOOTH_RED_SANDSTONE_STAIRS
+	f	Lnet/minecraft/unmapped/C_3635204;	f_5463615		MOSSY_STONE_BRICK_STAIRS
+	f	Lnet/minecraft/unmapped/C_3635204;	f_8927754		POLISHED_DIORITE_STAIRS
+	f	Lnet/minecraft/unmapped/C_3635204;	f_4403036		MOSSY_COBBLESTONE_STAIRS
+	f	Lnet/minecraft/unmapped/C_3635204;	f_2331009		END_STONE_BRICK_STAIRS
 	f	Lnet/minecraft/unmapped/C_3635204;	f_4472694		STONE_STAIRS
-	f	Lnet/minecraft/unmapped/C_3635204;	f_5665832		f_5665832
-	f	Lnet/minecraft/unmapped/C_3635204;	f_9120564		f_9120564
-	f	Lnet/minecraft/unmapped/C_3635204;	f_2176632		f_2176632
-	f	Lnet/minecraft/unmapped/C_3635204;	f_9932346		f_9932346
-	f	Lnet/minecraft/unmapped/C_3635204;	f_8362266		f_8362266
-	f	Lnet/minecraft/unmapped/C_3635204;	f_0076312		f_0076312
-	f	Lnet/minecraft/unmapped/C_3635204;	f_3941589		f_3941589
-	f	Lnet/minecraft/unmapped/C_3635204;	f_8497853		f_8497853
-	f	Lnet/minecraft/unmapped/C_3635204;	f_0763542		f_0763542
-	f	Lnet/minecraft/unmapped/C_3635204;	f_1447292		f_1447292
-	f	Lnet/minecraft/unmapped/C_3635204;	f_9937620		f_9937620
-	f	Lnet/minecraft/unmapped/C_3635204;	f_1453344		f_1453344
-	f	Lnet/minecraft/unmapped/C_3635204;	f_8632472		f_8632472
-	f	Lnet/minecraft/unmapped/C_3635204;	f_2813528		f_2813528
-	f	Lnet/minecraft/unmapped/C_3635204;	f_3602097		f_3602097
-	f	Lnet/minecraft/unmapped/C_3635204;	f_3057268		f_3057268
-	f	Lnet/minecraft/unmapped/C_3635204;	f_4892807		f_4892807
-	f	Lnet/minecraft/unmapped/C_3635204;	f_1819423		f_1819423
-	f	Lnet/minecraft/unmapped/C_3635204;	f_2852513		f_2852513
-	f	Lnet/minecraft/unmapped/C_3635204;	f_3067706		f_3067706
-	f	Lnet/minecraft/unmapped/C_3635204;	f_1508375		f_1508375
-	f	Lnet/minecraft/unmapped/C_3635204;	f_3282471		f_3282471
-	f	Lnet/minecraft/unmapped/C_3635204;	f_3110101		f_3110101
-	f	Lnet/minecraft/unmapped/C_3635204;	f_5173074		f_5173074
-	f	Lnet/minecraft/unmapped/C_3635204;	f_1986174		f_1986174
-	f	Lnet/minecraft/unmapped/C_3635204;	f_1308382		f_1308382
-	f	Lnet/minecraft/unmapped/C_3635204;	f_7338785		f_7338785
-	f	Lnet/minecraft/unmapped/C_3635204;	f_3290604		f_3290604
-	f	Lnet/minecraft/unmapped/C_3635204;	f_3886947		f_3886947
-	f	Lnet/minecraft/unmapped/C_3635204;	f_8161222		f_8161222
-	f	Lnet/minecraft/unmapped/C_3635204;	f_4934322		f_4934322
-	f	Lnet/minecraft/unmapped/C_3635204;	f_6797049		f_6797049
-	f	Lnet/minecraft/unmapped/C_3635204;	f_9131718		f_9131718
+	f	Lnet/minecraft/unmapped/C_3635204;	f_5665832		SMOOTH_SANDSTONE_STAIRS
+	f	Lnet/minecraft/unmapped/C_3635204;	f_9120564		SMOOTH_QUARTZ_STAIRS
+	f	Lnet/minecraft/unmapped/C_3635204;	f_2176632		GRANITE_STAIRS
+	f	Lnet/minecraft/unmapped/C_3635204;	f_9932346		ANDESITE_STAIRS
+	f	Lnet/minecraft/unmapped/C_3635204;	f_8362266		RED_NETHER_BRICK_STAIRS
+	f	Lnet/minecraft/unmapped/C_3635204;	f_0076312		POLISHED_ANDESITE_STAIRS
+	f	Lnet/minecraft/unmapped/C_3635204;	f_3941589		DIORITE_STAIRS
+	f	Lnet/minecraft/unmapped/C_3635204;	f_8497853		POLISHED_GRANITE_SLAB
+	f	Lnet/minecraft/unmapped/C_3635204;	f_0763542		SMOOTH_RED_SANDSTONE_SLAB
+	f	Lnet/minecraft/unmapped/C_3635204;	f_1447292		MOSSY_STONE_BRICK_SLAB
+	f	Lnet/minecraft/unmapped/C_3635204;	f_9937620		POLISHED_DIORITE_SLAB
+	f	Lnet/minecraft/unmapped/C_3635204;	f_1453344		MOSSY_COBBLESTONE_SLAB
+	f	Lnet/minecraft/unmapped/C_3635204;	f_8632472		END_STONE_BRICK_SLAB
+	f	Lnet/minecraft/unmapped/C_3635204;	f_2813528		SMOOTH_SANDSTONE_SLAB
+	f	Lnet/minecraft/unmapped/C_3635204;	f_3602097		SMOOTH_QUARTZ_SLAB
+	f	Lnet/minecraft/unmapped/C_3635204;	f_3057268		GRANITE_SLAB
+	f	Lnet/minecraft/unmapped/C_3635204;	f_4892807		ANDESITE_SLAB
+	f	Lnet/minecraft/unmapped/C_3635204;	f_1819423		RED_NETHER_BRICK_SLAB
+	f	Lnet/minecraft/unmapped/C_3635204;	f_2852513		POLISHED_ANDESITE_SLAB
+	f	Lnet/minecraft/unmapped/C_3635204;	f_3067706		DIORITE_SLAB
+	f	Lnet/minecraft/unmapped/C_3635204;	f_1508375		BRICK_WALL
+	f	Lnet/minecraft/unmapped/C_3635204;	f_3282471		PRISMARINE_WALL
+	f	Lnet/minecraft/unmapped/C_3635204;	f_3110101		RED_SANDSTONE_WALL
+	f	Lnet/minecraft/unmapped/C_3635204;	f_5173074		MOSSY_STONE_BRICK_WALL
+	f	Lnet/minecraft/unmapped/C_3635204;	f_1986174		GRANITE_WALL
+	f	Lnet/minecraft/unmapped/C_3635204;	f_1308382		STONE_BRICK_WALL
+	f	Lnet/minecraft/unmapped/C_3635204;	f_7338785		NETHER_BRICK_WALL
+	f	Lnet/minecraft/unmapped/C_3635204;	f_3290604		ANDESITE_WALL
+	f	Lnet/minecraft/unmapped/C_3635204;	f_3886947		RED_NETHER_BRICK_WALL
+	f	Lnet/minecraft/unmapped/C_3635204;	f_8161222		SANDSTONE_WALL
+	f	Lnet/minecraft/unmapped/C_3635204;	f_4934322		END_STONE_BRICK_WALL
+	f	Lnet/minecraft/unmapped/C_3635204;	f_6797049		DIORITE_WALL
+	f	Lnet/minecraft/unmapped/C_3635204;	f_9131718		LOOM
+	f	Lnet/minecraft/unmapped/C_3635204;	f_5578179	STANDING_SIGN	OAK_STANDING_SIGN
+	f	Lnet/minecraft/unmapped/C_3635204;	f_2154990	WALL_SIGN	OAK_WALL_SIGN
 	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_3635204;	m_0173951	getOrThrow	
 		p	0		key	
 	m	(Ljava/lang/String;Lnet/minecraft/unmapped/C_3635204;)Lnet/minecraft/unmapped/C_3635204;	m_0146664		register
@@ -3968,546 +3970,553 @@ c	net/minecraft/unmapped/C_7915035
 		p	4			p_4
 		p	5			p_5
 c	net/minecraft/unmapped/C_8089590
-	f	Lnet/minecraft/unmapped/C_4030632;	f_0641270		f_0641270
-	f	Lnet/minecraft/unmapped/C_4030632;	f_9806425		f_9806425
-	f	Lnet/minecraft/unmapped/C_4030632;	f_0601040		f_0601040
-	f	Lnet/minecraft/unmapped/C_4030632;	f_6106910		f_6106910
-	f	Lnet/minecraft/unmapped/C_4030632;	f_5221718		f_5221718
-	f	Lnet/minecraft/unmapped/C_4030632;	f_9707299		f_9707299
-	f	Lnet/minecraft/unmapped/C_4030632;	f_4488733		f_4488733
-	f	Lnet/minecraft/unmapped/C_4030632;	f_1079772		f_1079772
-	f	Lnet/minecraft/unmapped/C_4030632;	f_6101461		f_6101461
-	f	Lnet/minecraft/unmapped/C_4030632;	f_7719712		f_7719712
-	f	Lnet/minecraft/unmapped/C_4030632;	f_4463882		f_4463882
-	f	Lnet/minecraft/unmapped/C_4030632;	f_0377588		f_0377588
-	f	Lnet/minecraft/unmapped/C_4030632;	f_4821123		f_4821123
-	f	Lnet/minecraft/unmapped/C_4030632;	f_5022557		f_5022557
-	f	Lnet/minecraft/unmapped/C_4030632;	f_5310913		f_5310913
-	f	Lnet/minecraft/unmapped/C_4030632;	f_3853001		f_3853001
-	f	Lnet/minecraft/unmapped/C_4030632;	f_5364051		f_5364051
-	f	Lnet/minecraft/unmapped/C_4030632;	f_8878027		f_8878027
-	f	Lnet/minecraft/unmapped/C_4030632;	f_8623190		f_8623190
-	f	Lnet/minecraft/unmapped/C_4030632;	f_0610269		f_0610269
-	f	Lnet/minecraft/unmapped/C_4030632;	f_6297941		f_6297941
-	f	Lnet/minecraft/unmapped/C_4030632;	f_6866791		f_6866791
-	f	Lnet/minecraft/unmapped/C_4030632;	f_0470573		f_0470573
-	f	Lnet/minecraft/unmapped/C_4030632;	f_4845427		f_4845427
-	f	Lnet/minecraft/unmapped/C_4030632;	f_8269983		f_8269983
-	f	Lnet/minecraft/unmapped/C_4030632;	f_6708404		f_6708404
-	f	Lnet/minecraft/unmapped/C_4030632;	f_9725812		f_9725812
-	f	Lnet/minecraft/unmapped/C_4030632;	f_1616091		f_1616091
-	f	Lnet/minecraft/unmapped/C_4030632;	f_0397049		f_0397049
-	f	Lnet/minecraft/unmapped/C_4030632;	f_4949745		f_4949745
-	f	Lnet/minecraft/unmapped/C_4030632;	f_3456329		f_3456329
-	f	Lnet/minecraft/unmapped/C_4030632;	f_4666013		f_4666013
-	f	Lnet/minecraft/unmapped/C_4030632;	f_0176996		f_0176996
-	f	Lnet/minecraft/unmapped/C_4030632;	f_3734985		f_3734985
-	f	Lnet/minecraft/unmapped/C_4030632;	f_2619372		f_2619372
-	f	Lnet/minecraft/unmapped/C_4030632;	f_0506602		f_0506602
-	f	Lnet/minecraft/unmapped/C_4030632;	f_3046491		f_3046491
-	f	Lnet/minecraft/unmapped/C_4030632;	f_5662038		f_5662038
-	f	Lnet/minecraft/unmapped/C_4030632;	f_2656670		f_2656670
-	f	Lnet/minecraft/unmapped/C_4030632;	f_0481599		f_0481599
-	f	Lnet/minecraft/unmapped/C_4030632;	f_7469754		f_7469754
-	f	Lnet/minecraft/unmapped/C_4030632;	f_5230384		f_5230384
-	f	Lnet/minecraft/unmapped/C_4030632;	f_6196700		f_6196700
-	f	Lnet/minecraft/unmapped/C_4030632;	f_3515408		f_3515408
-	f	Lnet/minecraft/unmapped/C_4030632;	f_3702540		f_3702540
-	f	Lnet/minecraft/unmapped/C_4030632;	f_7617482		f_7617482
-	f	Lnet/minecraft/unmapped/C_4030632;	f_0948386		f_0948386
-	f	Lnet/minecraft/unmapped/C_4030632;	f_6483874		f_6483874
-	f	Lnet/minecraft/unmapped/C_4030632;	f_0941930		f_0941930
-	f	Lnet/minecraft/unmapped/C_4030632;	f_3764222		f_3764222
-	f	Lnet/minecraft/unmapped/C_4030632;	f_1825726		f_1825726
-	f	Lnet/minecraft/unmapped/C_4030632;	f_6984127		f_6984127
-	f	Lnet/minecraft/unmapped/C_4030632;	f_9324740		f_9324740
-	f	Lnet/minecraft/unmapped/C_4030632;	f_7915787		f_7915787
-	f	Lnet/minecraft/unmapped/C_4030632;	f_9604562		f_9604562
-	f	Lnet/minecraft/unmapped/C_4030632;	f_7299685		f_7299685
-	f	Lnet/minecraft/unmapped/C_4030632;	f_8269118		f_8269118
-	f	Lnet/minecraft/unmapped/C_4030632;	f_9734502		f_9734502
-	f	Lnet/minecraft/unmapped/C_4030632;	f_7501250		f_7501250
-	f	Lnet/minecraft/unmapped/C_4030632;	f_9455010		f_9455010
-	f	Lnet/minecraft/unmapped/C_4030632;	f_1480906		f_1480906
-	f	Lnet/minecraft/unmapped/C_4030632;	f_3013650		f_3013650
-	f	Lnet/minecraft/unmapped/C_4030632;	f_3852552		f_3852552
-	f	Lnet/minecraft/unmapped/C_4030632;	f_2894247		f_2894247
-	f	Lnet/minecraft/unmapped/C_4030632;	f_1145896		f_1145896
-	f	Lnet/minecraft/unmapped/C_4030632;	f_5869701		f_5869701
-	f	Lnet/minecraft/unmapped/C_4030632;	f_7906071		f_7906071
-	f	Lnet/minecraft/unmapped/C_4030632;	f_4126346		f_4126346
-	f	Lnet/minecraft/unmapped/C_4030632;	f_4943014		f_4943014
-	f	Lnet/minecraft/unmapped/C_4030632;	f_1187987		f_1187987
-	f	Lnet/minecraft/unmapped/C_4030632;	f_8454958		f_8454958
-	f	Lnet/minecraft/unmapped/C_4030632;	f_7345211		f_7345211
-	f	Lnet/minecraft/unmapped/C_4030632;	f_7630380		f_7630380
-	f	Lnet/minecraft/unmapped/C_4030632;	f_4623740		f_4623740
-	f	Lnet/minecraft/unmapped/C_4030632;	f_6517394		f_6517394
-	f	Lnet/minecraft/unmapped/C_4030632;	f_8189809		f_8189809
-	f	Lnet/minecraft/unmapped/C_4030632;	f_9439681		f_9439681
-	f	Lnet/minecraft/unmapped/C_4030632;	f_9989356		f_9989356
-	f	Lnet/minecraft/unmapped/C_4030632;	f_1491804		f_1491804
-	f	Lnet/minecraft/unmapped/C_4030632;	f_0438172		f_0438172
-	f	Lnet/minecraft/unmapped/C_4030632;	f_2550604		f_2550604
-	f	Lnet/minecraft/unmapped/C_4030632;	f_9195965		f_9195965
-	f	Lnet/minecraft/unmapped/C_4030632;	f_7285793		f_7285793
-	f	Lnet/minecraft/unmapped/C_4030632;	f_7958688		f_7958688
-	f	Lnet/minecraft/unmapped/C_4030632;	f_5597929		f_5597929
-	f	Lnet/minecraft/unmapped/C_4030632;	f_6546491		f_6546491
-	f	Lnet/minecraft/unmapped/C_4030632;	f_7789093		f_7789093
-	f	Lnet/minecraft/unmapped/C_4030632;	f_7399286		f_7399286
-	f	Lnet/minecraft/unmapped/C_4030632;	f_3673219		f_3673219
-	f	Lnet/minecraft/unmapped/C_4030632;	f_0237031		f_0237031
-	f	Lnet/minecraft/unmapped/C_4030632;	f_0345933		f_0345933
-	f	Lnet/minecraft/unmapped/C_4030632;	f_8971631		f_8971631
-	f	Lnet/minecraft/unmapped/C_4030632;	f_7541285		f_7541285
-	f	Lnet/minecraft/unmapped/C_4030632;	f_0322729		f_0322729
-	f	Lnet/minecraft/unmapped/C_4030632;	f_0313324		f_0313324
-	f	Lnet/minecraft/unmapped/C_4030632;	f_3929604		f_3929604
-	f	Lnet/minecraft/unmapped/C_4030632;	f_3083805		f_3083805
-	f	Lnet/minecraft/unmapped/C_4030632;	f_2508314		f_2508314
-	f	Lnet/minecraft/unmapped/C_4030632;	f_1769289		f_1769289
-	f	Lnet/minecraft/unmapped/C_4030632;	f_4421354		f_4421354
-	f	Lnet/minecraft/unmapped/C_4030632;	f_5029556		f_5029556
-	f	Lnet/minecraft/unmapped/C_4030632;	f_3532895		f_3532895
-	f	Lnet/minecraft/unmapped/C_4030632;	f_7678278		f_7678278
-	f	Lnet/minecraft/unmapped/C_4030632;	f_8710689		f_8710689
-	f	Lnet/minecraft/unmapped/C_4030632;	f_1471103		f_1471103
-	f	Lnet/minecraft/unmapped/C_4030632;	f_6919076		f_6919076
-	f	Lnet/minecraft/unmapped/C_4030632;	f_2166267		f_2166267
-	f	Lnet/minecraft/unmapped/C_4030632;	f_5710508		f_5710508
-	f	Lnet/minecraft/unmapped/C_4030632;	f_3624299		f_3624299
-	f	Lnet/minecraft/unmapped/C_4030632;	f_1224043		f_1224043
-	f	Lnet/minecraft/unmapped/C_4030632;	f_5074071		f_5074071
-	f	Lnet/minecraft/unmapped/C_4030632;	f_7655749		f_7655749
-	f	Lnet/minecraft/unmapped/C_4030632;	f_1037349		f_1037349
-	f	Lnet/minecraft/unmapped/C_4030632;	f_6414116		f_6414116
-	f	Lnet/minecraft/unmapped/C_4030632;	f_8046786		f_8046786
-	f	Lnet/minecraft/unmapped/C_4030632;	f_9170838		f_9170838
-	f	Lnet/minecraft/unmapped/C_4030632;	f_0340563		f_0340563
-	f	Lnet/minecraft/unmapped/C_4030632;	f_6335139		f_6335139
-	f	Lnet/minecraft/unmapped/C_4030632;	f_1927600		f_1927600
-	f	Lnet/minecraft/unmapped/C_4030632;	f_2242190		f_2242190
-	f	Lnet/minecraft/unmapped/C_4030632;	f_3156771		f_3156771
-	f	Lnet/minecraft/unmapped/C_4030632;	f_6117762		f_6117762
-	f	Lnet/minecraft/unmapped/C_4030632;	f_8749460		f_8749460
-	f	Lnet/minecraft/unmapped/C_4030632;	f_5293278		f_5293278
-	f	Lnet/minecraft/unmapped/C_4030632;	f_8054888		f_8054888
-	f	Lnet/minecraft/unmapped/C_4030632;	f_3398412		f_3398412
-	f	Lnet/minecraft/unmapped/C_4030632;	f_8777307		f_8777307
-	f	Lnet/minecraft/unmapped/C_4030632;	f_0545836		f_0545836
-	f	Lnet/minecraft/unmapped/C_4030632;	f_0388219		f_0388219
-	f	Lnet/minecraft/unmapped/C_4030632;	f_5257371		f_5257371
-	f	Lnet/minecraft/unmapped/C_4030632;	f_5822881		f_5822881
-	f	Lnet/minecraft/unmapped/C_4030632;	f_4019815		f_4019815
-	f	Lnet/minecraft/unmapped/C_4030632;	f_9300429		f_9300429
-	f	Lnet/minecraft/unmapped/C_4030632;	f_2955201		f_2955201
-	f	Lnet/minecraft/unmapped/C_4030632;	f_6575120		f_6575120
-	f	Lnet/minecraft/unmapped/C_4030632;	f_8707663		f_8707663
-	f	Lnet/minecraft/unmapped/C_4030632;	f_9222336		f_9222336
-	f	Lnet/minecraft/unmapped/C_4030632;	f_0882229		f_0882229
-	f	Lnet/minecraft/unmapped/C_4030632;	f_1810301		f_1810301
-	f	Lnet/minecraft/unmapped/C_4030632;	f_5174366		f_5174366
-	f	Lnet/minecraft/unmapped/C_4030632;	f_2801669		f_2801669
-	f	Lnet/minecraft/unmapped/C_4030632;	f_0074728		f_0074728
-	f	Lnet/minecraft/unmapped/C_4030632;	f_6714461		f_6714461
-	f	Lnet/minecraft/unmapped/C_4030632;	f_4947257		f_4947257
-	f	Lnet/minecraft/unmapped/C_4030632;	f_0478869		f_0478869
-	f	Lnet/minecraft/unmapped/C_4030632;	f_8693393		f_8693393
-	f	Lnet/minecraft/unmapped/C_4030632;	f_2185442		f_2185442
-	f	Lnet/minecraft/unmapped/C_4030632;	f_5143305		f_5143305
-	f	Lnet/minecraft/unmapped/C_4030632;	f_1825541		f_1825541
-	f	Lnet/minecraft/unmapped/C_4030632;	f_8719616		f_8719616
-	f	Lnet/minecraft/unmapped/C_4030632;	f_5394587		f_5394587
-	f	Lnet/minecraft/unmapped/C_4030632;	f_4702828		f_4702828
-	f	Lnet/minecraft/unmapped/C_4030632;	f_4589178		f_4589178
-	f	Lnet/minecraft/unmapped/C_4030632;	f_1621012		f_1621012
-	f	Lnet/minecraft/unmapped/C_4030632;	f_9377194		f_9377194
-	f	Lnet/minecraft/unmapped/C_4030632;	f_8761695		f_8761695
-	f	Lnet/minecraft/unmapped/C_4030632;	f_7883122		f_7883122
-	f	Lnet/minecraft/unmapped/C_4030632;	f_9862258		f_9862258
-	f	Lnet/minecraft/unmapped/C_4030632;	f_4752188		f_4752188
-	f	Lnet/minecraft/unmapped/C_4030632;	f_3933936		f_3933936
-	f	Lnet/minecraft/unmapped/C_4030632;	f_6453435		f_6453435
-	f	Lnet/minecraft/unmapped/C_4030632;	f_3983312		f_3983312
-	f	Lnet/minecraft/unmapped/C_4030632;	f_5230644		f_5230644
-	f	Lnet/minecraft/unmapped/C_4030632;	f_9037176		f_9037176
-	f	Lnet/minecraft/unmapped/C_4030632;	f_7752892		f_7752892
-	f	Lnet/minecraft/unmapped/C_4030632;	f_3501534		f_3501534
-	f	Lnet/minecraft/unmapped/C_4030632;	f_9211144		f_9211144
-	f	Lnet/minecraft/unmapped/C_4030632;	f_7332177		f_7332177
-	f	Lnet/minecraft/unmapped/C_4030632;	f_4577519		f_4577519
-	f	Lnet/minecraft/unmapped/C_4030632;	f_0391775		f_0391775
-	f	Lnet/minecraft/unmapped/C_4030632;	f_7108929		f_7108929
-	f	Lnet/minecraft/unmapped/C_4030632;	f_4363744		f_4363744
-	f	Lnet/minecraft/unmapped/C_4030632;	f_0779005		f_0779005
-	f	Lnet/minecraft/unmapped/C_4030632;	f_1127043		f_1127043
-	f	Lnet/minecraft/unmapped/C_4030632;	f_6535188		f_6535188
-	f	Lnet/minecraft/unmapped/C_4030632;	f_1222950		f_1222950
-	f	Lnet/minecraft/unmapped/C_4030632;	f_5412550		f_5412550
-	f	Lnet/minecraft/unmapped/C_4030632;	f_6936576		f_6936576
-	f	Lnet/minecraft/unmapped/C_4030632;	f_8842153		f_8842153
-	f	Lnet/minecraft/unmapped/C_4030632;	f_4479656		f_4479656
-	f	Lnet/minecraft/unmapped/C_4030632;	f_9186971		f_9186971
-	f	Lnet/minecraft/unmapped/C_4030632;	f_1280755		f_1280755
-	f	Lnet/minecraft/unmapped/C_4030632;	f_8726675		f_8726675
-	f	Lnet/minecraft/unmapped/C_4030632;	f_1550895		f_1550895
-	f	Lnet/minecraft/unmapped/C_4030632;	f_3599073		f_3599073
-	f	Lnet/minecraft/unmapped/C_4030632;	f_1839762		f_1839762
-	f	Lnet/minecraft/unmapped/C_4030632;	f_2993464		f_2993464
-	f	Lnet/minecraft/unmapped/C_4030632;	f_1891755		f_1891755
-	f	Lnet/minecraft/unmapped/C_4030632;	f_4500838		f_4500838
-	f	Lnet/minecraft/unmapped/C_4030632;	f_2268215		f_2268215
-	f	Lnet/minecraft/unmapped/C_4030632;	f_4846234		f_4846234
-	f	Lnet/minecraft/unmapped/C_4030632;	f_1975069		f_1975069
-	f	Lnet/minecraft/unmapped/C_4030632;	f_9546564		f_9546564
-	f	Lnet/minecraft/unmapped/C_4030632;	f_0959804		f_0959804
-	f	Lnet/minecraft/unmapped/C_4030632;	f_6061050		f_6061050
-	f	Lnet/minecraft/unmapped/C_4030632;	f_0260715		f_0260715
-	f	Lnet/minecraft/unmapped/C_4030632;	f_9882604		f_9882604
-	f	Lnet/minecraft/unmapped/C_4030632;	f_4269622		f_4269622
-	f	Lnet/minecraft/unmapped/C_4030632;	f_7607343		f_7607343
-	f	Lnet/minecraft/unmapped/C_4030632;	f_2060361		f_2060361
-	f	Lnet/minecraft/unmapped/C_4030632;	f_2433335		f_2433335
-	f	Lnet/minecraft/unmapped/C_4030632;	f_9128113		f_9128113
-	f	Lnet/minecraft/unmapped/C_4030632;	f_8694428		f_8694428
-	f	Lnet/minecraft/unmapped/C_4030632;	f_9823828		f_9823828
-	f	Lnet/minecraft/unmapped/C_4030632;	f_8287831		f_8287831
-	f	Lnet/minecraft/unmapped/C_4030632;	f_8333054		f_8333054
-	f	Lnet/minecraft/unmapped/C_4030632;	f_7229367		f_7229367
-	f	Lnet/minecraft/unmapped/C_4030632;	f_5420267		f_5420267
-	f	Lnet/minecraft/unmapped/C_4030632;	f_2361822		f_2361822
-	f	Lnet/minecraft/unmapped/C_4030632;	f_4603896		f_4603896
-	f	Lnet/minecraft/unmapped/C_4030632;	f_5065884		f_5065884
-	f	Lnet/minecraft/unmapped/C_4030632;	f_2987304		f_2987304
-	f	Lnet/minecraft/unmapped/C_4030632;	f_8118767		f_8118767
-	f	Lnet/minecraft/unmapped/C_4030632;	f_0390327		f_0390327
-	f	Lnet/minecraft/unmapped/C_4030632;	f_5990136		f_5990136
-	f	Lnet/minecraft/unmapped/C_4030632;	f_3354992		f_3354992
-	f	Lnet/minecraft/unmapped/C_4030632;	f_7677181		f_7677181
-	f	Lnet/minecraft/unmapped/C_4030632;	f_6758650		f_6758650
-	f	Lnet/minecraft/unmapped/C_4030632;	f_0112113		f_0112113
-	f	Lnet/minecraft/unmapped/C_4030632;	f_5273698		f_5273698
-	f	Lnet/minecraft/unmapped/C_4030632;	f_2680652		f_2680652
-	f	Lnet/minecraft/unmapped/C_4030632;	f_2940615		f_2940615
-	f	Lnet/minecraft/unmapped/C_4030632;	f_9081738		f_9081738
-	f	Lnet/minecraft/unmapped/C_4030632;	f_0059852		f_0059852
-	f	Lnet/minecraft/unmapped/C_4030632;	f_5609764		f_5609764
-	f	Lnet/minecraft/unmapped/C_4030632;	f_3126742		f_3126742
-	f	Lnet/minecraft/unmapped/C_4030632;	f_3285987		f_3285987
-	f	Lnet/minecraft/unmapped/C_4030632;	f_3667833		f_3667833
-	f	Lnet/minecraft/unmapped/C_4030632;	f_6130305		f_6130305
-	f	Lnet/minecraft/unmapped/C_4030632;	f_9398628		f_9398628
-	f	Lnet/minecraft/unmapped/C_4030632;	f_9293098		f_9293098
-	f	Lnet/minecraft/unmapped/C_4030632;	f_4666256		f_4666256
-	f	Lnet/minecraft/unmapped/C_4030632;	f_5276721		f_5276721
-	f	Lnet/minecraft/unmapped/C_4030632;	f_7175755		f_7175755
-	f	Lnet/minecraft/unmapped/C_4030632;	f_9174743		f_9174743
-	f	Lnet/minecraft/unmapped/C_4030632;	f_1414641		f_1414641
-	f	Lnet/minecraft/unmapped/C_4030632;	f_3747011		f_3747011
-	f	Lnet/minecraft/unmapped/C_4030632;	f_4514456		f_4514456
-	f	Lnet/minecraft/unmapped/C_4030632;	f_9272722		f_9272722
-	f	Lnet/minecraft/unmapped/C_4030632;	f_7419877		f_7419877
-	f	Lnet/minecraft/unmapped/C_4030632;	f_4598740		f_4598740
-	f	Lnet/minecraft/unmapped/C_4030632;	f_7135492		f_7135492
-	f	Lnet/minecraft/unmapped/C_4030632;	f_7237527		f_7237527
-	f	Lnet/minecraft/unmapped/C_4030632;	f_4240254		f_4240254
-	f	Lnet/minecraft/unmapped/C_4030632;	f_7899733		f_7899733
-	f	Lnet/minecraft/unmapped/C_4030632;	f_6897253		f_6897253
-	f	Lnet/minecraft/unmapped/C_4030632;	f_8148230		f_8148230
-	f	Lnet/minecraft/unmapped/C_4030632;	f_8594059		f_8594059
-	f	Lnet/minecraft/unmapped/C_4030632;	f_1294674		f_1294674
-	f	Lnet/minecraft/unmapped/C_4030632;	f_6246642		f_6246642
-	f	Lnet/minecraft/unmapped/C_4030632;	f_5513591		f_5513591
-	f	Lnet/minecraft/unmapped/C_4030632;	f_5719465		f_5719465
-	f	Lnet/minecraft/unmapped/C_4030632;	f_4152208		f_4152208
-	f	Lnet/minecraft/unmapped/C_4030632;	f_9204766		f_9204766
-	f	Lnet/minecraft/unmapped/C_4030632;	f_5307694		f_5307694
-	f	Lnet/minecraft/unmapped/C_4030632;	f_7630175		f_7630175
-	f	Lnet/minecraft/unmapped/C_4030632;	f_5571749		f_5571749
-	f	Lnet/minecraft/unmapped/C_4030632;	f_9710710		f_9710710
-	f	Lnet/minecraft/unmapped/C_4030632;	f_7800603		f_7800603
-	f	Lnet/minecraft/unmapped/C_4030632;	f_3329557		f_3329557
-	f	Lnet/minecraft/unmapped/C_4030632;	f_4438437		f_4438437
-	f	Lnet/minecraft/unmapped/C_4030632;	f_0070046		f_0070046
-	f	Lnet/minecraft/unmapped/C_4030632;	f_9099418		f_9099418
-	f	Lnet/minecraft/unmapped/C_4030632;	f_0474102		f_0474102
-	f	Lnet/minecraft/unmapped/C_4030632;	f_1579218		f_1579218
-	f	Lnet/minecraft/unmapped/C_4030632;	f_1693602		f_1693602
-	f	Lnet/minecraft/unmapped/C_4030632;	f_5576741		f_5576741
-	f	Lnet/minecraft/unmapped/C_4030632;	f_1252596		f_1252596
-	f	Lnet/minecraft/unmapped/C_4030632;	f_9503580		f_9503580
-	f	Lnet/minecraft/unmapped/C_4030632;	f_2937366		f_2937366
-	f	Lnet/minecraft/unmapped/C_4030632;	f_5296675		f_5296675
-	f	Lnet/minecraft/unmapped/C_4030632;	f_1797923		f_1797923
-	f	Lnet/minecraft/unmapped/C_4030632;	f_5538327		f_5538327
-	f	Lnet/minecraft/unmapped/C_4030632;	f_0464966		f_0464966
-	f	Lnet/minecraft/unmapped/C_4030632;	f_4129150		f_4129150
-	f	Lnet/minecraft/unmapped/C_4030632;	f_3659942		f_3659942
-	f	Lnet/minecraft/unmapped/C_4030632;	f_0682439		f_0682439
-	f	Lnet/minecraft/unmapped/C_4030632;	f_9579081		f_9579081
-	f	Lnet/minecraft/unmapped/C_4030632;	f_5440704		f_5440704
-	f	Lnet/minecraft/unmapped/C_4030632;	f_7157235		f_7157235
-	f	Lnet/minecraft/unmapped/C_4030632;	f_8085344		f_8085344
-	f	Lnet/minecraft/unmapped/C_4030632;	f_3858259		f_3858259
-	f	Lnet/minecraft/unmapped/C_4030632;	f_2373308		f_2373308
-	f	Lnet/minecraft/unmapped/C_4030632;	f_1748940		f_1748940
-	f	Lnet/minecraft/unmapped/C_4030632;	f_3048502		f_3048502
-	f	Lnet/minecraft/unmapped/C_4030632;	f_8766290		f_8766290
-	f	Lnet/minecraft/unmapped/C_4030632;	f_2738176		f_2738176
-	f	Lnet/minecraft/unmapped/C_4030632;	f_4132535		f_4132535
-	f	Lnet/minecraft/unmapped/C_4030632;	f_5939678		f_5939678
-	f	Lnet/minecraft/unmapped/C_4030632;	f_8698875		f_8698875
-	f	Lnet/minecraft/unmapped/C_4030632;	f_3521163		f_3521163
-	f	Lnet/minecraft/unmapped/C_4030632;	f_4339813		f_4339813
-	f	Lnet/minecraft/unmapped/C_4030632;	f_7477151		f_7477151
-	f	Lnet/minecraft/unmapped/C_4030632;	f_3884944		f_3884944
-	f	Lnet/minecraft/unmapped/C_4030632;	f_8069405		f_8069405
-	f	Lnet/minecraft/unmapped/C_4030632;	f_9366884		f_9366884
-	f	Lnet/minecraft/unmapped/C_4030632;	f_6685268		f_6685268
-	f	Lnet/minecraft/unmapped/C_4030632;	f_0760595		f_0760595
-	f	Lnet/minecraft/unmapped/C_4030632;	f_6109733		f_6109733
-	f	Lnet/minecraft/unmapped/C_4030632;	f_6876601		f_6876601
-	f	Lnet/minecraft/unmapped/C_4030632;	f_3615109		f_3615109
-	f	Lnet/minecraft/unmapped/C_4030632;	f_2448197		f_2448197
-	f	Lnet/minecraft/unmapped/C_4030632;	f_9708770		f_9708770
-	f	Lnet/minecraft/unmapped/C_4030632;	f_7307648		f_7307648
-	f	Lnet/minecraft/unmapped/C_4030632;	f_4178155		f_4178155
-	f	Lnet/minecraft/unmapped/C_4030632;	f_8011247		f_8011247
-	f	Lnet/minecraft/unmapped/C_4030632;	f_7828851		f_7828851
-	f	Lnet/minecraft/unmapped/C_4030632;	f_1925612		f_1925612
-	f	Lnet/minecraft/unmapped/C_4030632;	f_1971454		f_1971454
-	f	Lnet/minecraft/unmapped/C_4030632;	f_7555813		f_7555813
-	f	Lnet/minecraft/unmapped/C_4030632;	f_0111333		f_0111333
-	f	Lnet/minecraft/unmapped/C_4030632;	f_5624775		f_5624775
-	f	Lnet/minecraft/unmapped/C_4030632;	f_3733625		f_3733625
-	f	Lnet/minecraft/unmapped/C_4030632;	f_8528115		f_8528115
-	f	Lnet/minecraft/unmapped/C_4030632;	f_7929225		f_7929225
-	f	Lnet/minecraft/unmapped/C_4030632;	f_6407777		f_6407777
-	f	Lnet/minecraft/unmapped/C_4030632;	f_3712813		f_3712813
-	f	Lnet/minecraft/unmapped/C_4030632;	f_4935150		f_4935150
-	f	Lnet/minecraft/unmapped/C_4030632;	f_8203707		f_8203707
-	f	Lnet/minecraft/unmapped/C_4030632;	f_4383852		f_4383852
-	f	Lnet/minecraft/unmapped/C_4030632;	f_1588130		f_1588130
-	f	Lnet/minecraft/unmapped/C_4030632;	f_9405683		f_9405683
-	f	Lnet/minecraft/unmapped/C_4030632;	f_2281360		f_2281360
-	f	Lnet/minecraft/unmapped/C_4030632;	f_6812799		f_6812799
-	f	Lnet/minecraft/unmapped/C_4030632;	f_5496432		f_5496432
-	f	Lnet/minecraft/unmapped/C_4030632;	f_1716811		f_1716811
-	f	Lnet/minecraft/unmapped/C_4030632;	f_6843928		f_6843928
-	f	Lnet/minecraft/unmapped/C_4030632;	f_8307202		f_8307202
-	f	Lnet/minecraft/unmapped/C_4030632;	f_3405221		f_3405221
-	f	Lnet/minecraft/unmapped/C_4030632;	f_9363453		f_9363453
-	f	Lnet/minecraft/unmapped/C_4030632;	f_9685360		f_9685360
-	f	Lnet/minecraft/unmapped/C_4030632;	f_7745538		f_7745538
-	f	Lnet/minecraft/unmapped/C_4030632;	f_3579620		f_3579620
-	f	Lnet/minecraft/unmapped/C_4030632;	f_6106358		f_6106358
-	f	Lnet/minecraft/unmapped/C_4030632;	f_6889418		f_6889418
-	f	Lnet/minecraft/unmapped/C_4030632;	f_3615634		f_3615634
-	f	Lnet/minecraft/unmapped/C_4030632;	f_8193615		f_8193615
-	f	Lnet/minecraft/unmapped/C_4030632;	f_9053097		f_9053097
-	f	Lnet/minecraft/unmapped/C_4030632;	f_9063478		f_9063478
-	f	Lnet/minecraft/unmapped/C_4030632;	f_8944945		f_8944945
-	f	Lnet/minecraft/unmapped/C_4030632;	f_2010371		f_2010371
-	f	Lnet/minecraft/unmapped/C_4030632;	f_4970113		f_4970113
-	f	Lnet/minecraft/unmapped/C_4030632;	f_7831507		f_7831507
-	f	Lnet/minecraft/unmapped/C_4030632;	f_0480899		f_0480899
-	f	Lnet/minecraft/unmapped/C_4030632;	f_3882069		f_3882069
-	f	Lnet/minecraft/unmapped/C_4030632;	f_0317740		f_0317740
-	f	Lnet/minecraft/unmapped/C_4030632;	f_2587870		f_2587870
-	f	Lnet/minecraft/unmapped/C_4030632;	f_3578445		f_3578445
-	f	Lnet/minecraft/unmapped/C_4030632;	f_9951864		f_9951864
-	f	Lnet/minecraft/unmapped/C_4030632;	f_7316074		f_7316074
-	f	Lnet/minecraft/unmapped/C_4030632;	f_9193414		f_9193414
-	f	Lnet/minecraft/unmapped/C_4030632;	f_4172252		f_4172252
-	f	Lnet/minecraft/unmapped/C_4030632;	f_8004068		f_8004068
-	f	Lnet/minecraft/unmapped/C_4030632;	f_5207522		f_5207522
-	f	Lnet/minecraft/unmapped/C_4030632;	f_9517219		f_9517219
-	f	Lnet/minecraft/unmapped/C_4030632;	f_8368926		f_8368926
-	f	Lnet/minecraft/unmapped/C_4030632;	f_8437592		f_8437592
-	f	Lnet/minecraft/unmapped/C_4030632;	f_8155672		f_8155672
-	f	Lnet/minecraft/unmapped/C_4030632;	f_3508802		f_3508802
-	f	Lnet/minecraft/unmapped/C_4030632;	f_8765459		f_8765459
-	f	Lnet/minecraft/unmapped/C_4030632;	f_2357204		f_2357204
-	f	Lnet/minecraft/unmapped/C_4030632;	f_9884615		f_9884615
-	f	Lnet/minecraft/unmapped/C_4030632;	f_9977814		f_9977814
-	f	Lnet/minecraft/unmapped/C_4030632;	f_9328180		f_9328180
-	f	Lnet/minecraft/unmapped/C_4030632;	f_3961523		f_3961523
-	f	Lnet/minecraft/unmapped/C_4030632;	f_0475598		f_0475598
-	f	Lnet/minecraft/unmapped/C_4030632;	f_5593058		f_5593058
-	f	Lnet/minecraft/unmapped/C_4030632;	f_2626638		f_2626638
-	f	Lnet/minecraft/unmapped/C_4030632;	f_9330199		f_9330199
-	f	Lnet/minecraft/unmapped/C_4030632;	f_3901579		f_3901579
-	f	Lnet/minecraft/unmapped/C_4030632;	f_2799466		f_2799466
-	f	Lnet/minecraft/unmapped/C_4030632;	f_2761643		f_2761643
-	f	Lnet/minecraft/unmapped/C_4030632;	f_1250279		f_1250279
-	f	Lnet/minecraft/unmapped/C_4030632;	f_2786635		f_2786635
-	f	Lnet/minecraft/unmapped/C_4030632;	f_5554635		f_5554635
-	f	Lnet/minecraft/unmapped/C_4030632;	f_6788980		f_6788980
-	f	Lnet/minecraft/unmapped/C_4030632;	f_7864133		f_7864133
-	f	Lnet/minecraft/unmapped/C_4030632;	f_2159819		f_2159819
-	f	Lnet/minecraft/unmapped/C_4030632;	f_1529176		f_1529176
-	f	Lnet/minecraft/unmapped/C_4030632;	f_7348920		f_7348920
-	f	Lnet/minecraft/unmapped/C_4030632;	f_4944898		f_4944898
-	f	Lnet/minecraft/unmapped/C_4030632;	f_2386367		f_2386367
-	f	Lnet/minecraft/unmapped/C_4030632;	f_8663750		f_8663750
-	f	Lnet/minecraft/unmapped/C_4030632;	f_4789618		f_4789618
-	f	Lnet/minecraft/unmapped/C_4030632;	f_2668941		f_2668941
-	f	Lnet/minecraft/unmapped/C_4030632;	f_6260613		f_6260613
-	f	Lnet/minecraft/unmapped/C_4030632;	f_9390517		f_9390517
-	f	Lnet/minecraft/unmapped/C_4030632;	f_6570369		f_6570369
-	f	Lnet/minecraft/unmapped/C_4030632;	f_4599598		f_4599598
-	f	Lnet/minecraft/unmapped/C_4030632;	f_2107011		f_2107011
-	f	Lnet/minecraft/unmapped/C_4030632;	f_9133889		f_9133889
-	f	Lnet/minecraft/unmapped/C_4030632;	f_8051661		f_8051661
-	f	Lnet/minecraft/unmapped/C_4030632;	f_9145615		f_9145615
-	f	Lnet/minecraft/unmapped/C_4030632;	f_9873581		f_9873581
-	f	Lnet/minecraft/unmapped/C_4030632;	f_0164895		f_0164895
-	f	Lnet/minecraft/unmapped/C_4030632;	f_1863762		f_1863762
-	f	Lnet/minecraft/unmapped/C_4030632;	f_8339752		f_8339752
-	f	Lnet/minecraft/unmapped/C_4030632;	f_6691163		f_6691163
-	f	Lnet/minecraft/unmapped/C_4030632;	f_9653993		f_9653993
-	f	Lnet/minecraft/unmapped/C_4030632;	f_0061563		f_0061563
-	f	Lnet/minecraft/unmapped/C_4030632;	f_3876269		f_3876269
-	f	Lnet/minecraft/unmapped/C_4030632;	f_5038151		f_5038151
-	f	Lnet/minecraft/unmapped/C_4030632;	f_9138784		f_9138784
-	f	Lnet/minecraft/unmapped/C_4030632;	f_6103503		f_6103503
-	f	Lnet/minecraft/unmapped/C_4030632;	f_6261424		f_6261424
-	f	Lnet/minecraft/unmapped/C_4030632;	f_9630082		f_9630082
-	f	Lnet/minecraft/unmapped/C_4030632;	f_3607705		f_3607705
-	f	Lnet/minecraft/unmapped/C_4030632;	f_8786971		f_8786971
-	f	Lnet/minecraft/unmapped/C_4030632;	f_1957733		f_1957733
-	f	Lnet/minecraft/unmapped/C_4030632;	f_3781162		f_3781162
-	f	Lnet/minecraft/unmapped/C_4030632;	f_2832919		f_2832919
-	f	Lnet/minecraft/unmapped/C_4030632;	f_1545220		f_1545220
-	f	Lnet/minecraft/unmapped/C_4030632;	f_8746787		f_8746787
-	f	Lnet/minecraft/unmapped/C_4030632;	f_0621033		f_0621033
-	f	Lnet/minecraft/unmapped/C_4030632;	f_3491190		f_3491190
-	f	Lnet/minecraft/unmapped/C_4030632;	f_2474134		f_2474134
-	f	Lnet/minecraft/unmapped/C_4030632;	f_8548714		f_8548714
-	f	Lnet/minecraft/unmapped/C_4030632;	f_4160737		f_4160737
-	f	Lnet/minecraft/unmapped/C_4030632;	f_0867414		f_0867414
-	f	Lnet/minecraft/unmapped/C_4030632;	f_2599975		f_2599975
-	f	Lnet/minecraft/unmapped/C_4030632;	f_9284499		f_9284499
-	f	Lnet/minecraft/unmapped/C_4030632;	f_7479021		f_7479021
-	f	Lnet/minecraft/unmapped/C_4030632;	f_5796946		f_5796946
-	f	Lnet/minecraft/unmapped/C_4030632;	f_5724383		f_5724383
-	f	Lnet/minecraft/unmapped/C_4030632;	f_3956516		f_3956516
-	f	Lnet/minecraft/unmapped/C_4030632;	f_4803547		f_4803547
-	f	Lnet/minecraft/unmapped/C_4030632;	f_5031046		f_5031046
-	f	Lnet/minecraft/unmapped/C_4030632;	f_4026841		f_4026841
-	f	Lnet/minecraft/unmapped/C_4030632;	f_6153853		f_6153853
-	f	Lnet/minecraft/unmapped/C_4030632;	f_4536120		f_4536120
-	f	Lnet/minecraft/unmapped/C_4030632;	f_8987758		f_8987758
-	f	Lnet/minecraft/unmapped/C_4030632;	f_8390995		f_8390995
-	f	Lnet/minecraft/unmapped/C_4030632;	f_1859302		f_1859302
-	f	Lnet/minecraft/unmapped/C_4030632;	f_1502129		f_1502129
-	f	Lnet/minecraft/unmapped/C_4030632;	f_0084189		f_0084189
-	f	Lnet/minecraft/unmapped/C_4030632;	f_6060572		f_6060572
-	f	Lnet/minecraft/unmapped/C_4030632;	f_8469712		f_8469712
-	f	Lnet/minecraft/unmapped/C_4030632;	f_1295100		f_1295100
-	f	Lnet/minecraft/unmapped/C_4030632;	f_3305470		f_3305470
-	f	Lnet/minecraft/unmapped/C_4030632;	f_8105352		f_8105352
-	f	Lnet/minecraft/unmapped/C_4030632;	f_4498252		f_4498252
-	f	Lnet/minecraft/unmapped/C_4030632;	f_8578535		f_8578535
-	f	Lnet/minecraft/unmapped/C_4030632;	f_9916113		f_9916113
-	f	Lnet/minecraft/unmapped/C_4030632;	f_2641933		f_2641933
-	f	Lnet/minecraft/unmapped/C_4030632;	f_4347736		f_4347736
-	f	Lnet/minecraft/unmapped/C_4030632;	f_1978727		f_1978727
-	f	Lnet/minecraft/unmapped/C_4030632;	f_6198499		f_6198499
-	f	Lnet/minecraft/unmapped/C_4030632;	f_7200849		f_7200849
-	f	Lnet/minecraft/unmapped/C_4030632;	f_3539973		f_3539973
-	f	Lnet/minecraft/unmapped/C_4030632;	f_2273071		f_2273071
-	f	Lnet/minecraft/unmapped/C_4030632;	f_3353219		f_3353219
-	f	Lnet/minecraft/unmapped/C_4030632;	f_8799346		f_8799346
-	f	Lnet/minecraft/unmapped/C_4030632;	f_7439188		f_7439188
-	f	Lnet/minecraft/unmapped/C_4030632;	f_4873848		f_4873848
-	f	Lnet/minecraft/unmapped/C_4030632;	f_4863255		f_4863255
-	f	Lnet/minecraft/unmapped/C_4030632;	f_8902916		f_8902916
-	f	Lnet/minecraft/unmapped/C_4030632;	f_3976847		f_3976847
-	f	Lnet/minecraft/unmapped/C_4030632;	f_3069097		f_3069097
-	f	Lnet/minecraft/unmapped/C_4030632;	f_2171228		f_2171228
-	f	Lnet/minecraft/unmapped/C_4030632;	f_5136292		f_5136292
-	f	Lnet/minecraft/unmapped/C_4030632;	f_4993744		f_4993744
-	f	Lnet/minecraft/unmapped/C_4030632;	f_8854674		f_8854674
-	f	Lnet/minecraft/unmapped/C_4030632;	f_5414015		f_5414015
-	f	Lnet/minecraft/unmapped/C_4030632;	f_8393219		f_8393219
-	f	Lnet/minecraft/unmapped/C_4030632;	f_3899575		f_3899575
-	f	Lnet/minecraft/unmapped/C_4030632;	f_6569609		f_6569609
-	f	Lnet/minecraft/unmapped/C_4030632;	f_2564850		f_2564850
-	f	Lnet/minecraft/unmapped/C_4030632;	f_6423554		f_6423554
-	f	Lnet/minecraft/unmapped/C_4030632;	f_7586506		f_7586506
-	f	Lnet/minecraft/unmapped/C_4030632;	f_8767560		f_8767560
-	f	Lnet/minecraft/unmapped/C_4030632;	f_5614752		f_5614752
-	f	Lnet/minecraft/unmapped/C_4030632;	f_9232826		f_9232826
-	f	Lnet/minecraft/unmapped/C_4030632;	f_7647885		f_7647885
-	f	Lnet/minecraft/unmapped/C_4030632;	f_9354100		f_9354100
-	f	Lnet/minecraft/unmapped/C_4030632;	f_5064515		f_5064515
-	f	Lnet/minecraft/unmapped/C_4030632;	f_7769178		f_7769178
-	f	Lnet/minecraft/unmapped/C_4030632;	f_7085265		f_7085265
-	f	Lnet/minecraft/unmapped/C_4030632;	f_0193159		f_0193159
-	f	Lnet/minecraft/unmapped/C_4030632;	f_6390596		f_6390596
-	f	Lnet/minecraft/unmapped/C_4030632;	f_6738500		f_6738500
-	f	Lnet/minecraft/unmapped/C_4030632;	f_0640743		f_0640743
-	f	Lnet/minecraft/unmapped/C_4030632;	f_2331982		f_2331982
-	f	Lnet/minecraft/unmapped/C_4030632;	f_4790058		f_4790058
-	f	Lnet/minecraft/unmapped/C_4030632;	f_3978144		f_3978144
-	f	Lnet/minecraft/unmapped/C_4030632;	f_1173578		f_1173578
-	f	Lnet/minecraft/unmapped/C_4030632;	f_9846714		f_9846714
-	f	Lnet/minecraft/unmapped/C_4030632;	f_7684454		f_7684454
-	f	Lnet/minecraft/unmapped/C_4030632;	f_3264566		f_3264566
-	f	Lnet/minecraft/unmapped/C_4030632;	f_5773598		f_5773598
-	f	Lnet/minecraft/unmapped/C_4030632;	f_5856676		f_5856676
-	f	Lnet/minecraft/unmapped/C_4030632;	f_5488104		f_5488104
-	f	Lnet/minecraft/unmapped/C_4030632;	f_1179272		f_1179272
-	f	Lnet/minecraft/unmapped/C_4030632;	f_8122838		f_8122838
-	f	Lnet/minecraft/unmapped/C_4030632;	f_5417874		f_5417874
-	f	Lnet/minecraft/unmapped/C_4030632;	f_4204958		f_4204958
-	f	Lnet/minecraft/unmapped/C_4030632;	f_5168673		f_5168673
-	f	Lnet/minecraft/unmapped/C_4030632;	f_8427643		f_8427643
-	f	Lnet/minecraft/unmapped/C_4030632;	f_9886000		f_9886000
-	f	Lnet/minecraft/unmapped/C_4030632;	f_8681120		f_8681120
-	f	Lnet/minecraft/unmapped/C_4030632;	f_0195436		f_0195436
-	f	Lnet/minecraft/unmapped/C_4030632;	f_4455853		f_4455853
-	f	Lnet/minecraft/unmapped/C_4030632;	f_5289944		f_5289944
-	f	Lnet/minecraft/unmapped/C_4030632;	f_5821721		f_5821721
-	f	Lnet/minecraft/unmapped/C_4030632;	f_5141778		f_5141778
-	f	Lnet/minecraft/unmapped/C_4030632;	f_0170235		f_0170235
-	f	Lnet/minecraft/unmapped/C_4030632;	f_0511425		f_0511425
-	f	Lnet/minecraft/unmapped/C_4030632;	f_2184581		f_2184581
-	f	Lnet/minecraft/unmapped/C_4030632;	f_0678844		f_0678844
-	f	Lnet/minecraft/unmapped/C_4030632;	f_9683060		f_9683060
-	f	Lnet/minecraft/unmapped/C_4030632;	f_4531096		f_4531096
-	f	Lnet/minecraft/unmapped/C_4030632;	f_3678033		f_3678033
-	f	Lnet/minecraft/unmapped/C_4030632;	f_7136484		f_7136484
-	f	Lnet/minecraft/unmapped/C_4030632;	f_1979895		f_1979895
-	f	Lnet/minecraft/unmapped/C_4030632;	f_9921372		f_9921372
-	f	Lnet/minecraft/unmapped/C_4030632;	f_1592891		f_1592891
-	f	Lnet/minecraft/unmapped/C_4030632;	f_1531070		f_1531070
-	f	Lnet/minecraft/unmapped/C_4030632;	f_8030330		f_8030330
-	f	Lnet/minecraft/unmapped/C_4030632;	f_2301522		f_2301522
-	f	Lnet/minecraft/unmapped/C_4030632;	f_7863359		f_7863359
-	f	Lnet/minecraft/unmapped/C_4030632;	f_9146359		f_9146359
-	f	Lnet/minecraft/unmapped/C_4030632;	f_8362984		f_8362984
-	f	Lnet/minecraft/unmapped/C_4030632;	f_8029727		f_8029727
-	f	Lnet/minecraft/unmapped/C_4030632;	f_2915220		f_2915220
-	f	Lnet/minecraft/unmapped/C_4030632;	f_7947708		f_7947708
-	f	Lnet/minecraft/unmapped/C_4030632;	f_5248075		f_5248075
-	f	Lnet/minecraft/unmapped/C_4030632;	f_4005864		f_4005864
-	f	Lnet/minecraft/unmapped/C_4030632;	f_4048673		f_4048673
-	f	Lnet/minecraft/unmapped/C_4030632;	f_5756895		f_5756895
-	f	Lnet/minecraft/unmapped/C_4030632;	f_1672147		f_1672147
-	f	Lnet/minecraft/unmapped/C_4030632;	f_1929792		f_1929792
-	f	Lnet/minecraft/unmapped/C_4030632;	f_2908633		f_2908633
-	f	Lnet/minecraft/unmapped/C_4030632;	f_4185394		f_4185394
-	f	Lnet/minecraft/unmapped/C_4030632;	f_8697563		f_8697563
-	f	Lnet/minecraft/unmapped/C_4030632;	f_2929280		f_2929280
-	f	Lnet/minecraft/unmapped/C_4030632;	f_7941826		f_7941826
-	f	Lnet/minecraft/unmapped/C_4030632;	f_2354563		f_2354563
-	f	Lnet/minecraft/unmapped/C_4030632;	f_7045131		f_7045131
-	f	Lnet/minecraft/unmapped/C_4030632;	f_7264053		f_7264053
-	f	Lnet/minecraft/unmapped/C_4030632;	f_0298347		f_0298347
-	f	Lnet/minecraft/unmapped/C_4030632;	f_6643377		f_6643377
+	f	Lnet/minecraft/unmapped/C_4030632;	f_0641270		STONE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_9806425		GRANITE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_0601040		POLISHED_GRANITE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_6106910		DIORITE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_5221718		POLISHED_DIORITE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_9707299		ANDESITE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_4488733		POLISHED_ANDESITE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_1079772		GRASS_BLOCK
+	f	Lnet/minecraft/unmapped/C_4030632;	f_6101461		DIRT
+	f	Lnet/minecraft/unmapped/C_4030632;	f_7719712		COARSE_DIRT
+	f	Lnet/minecraft/unmapped/C_4030632;	f_4463882		PODZOL
+	f	Lnet/minecraft/unmapped/C_4030632;	f_0377588		COBBLESTONE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_4821123		OAK_PLANKS
+	f	Lnet/minecraft/unmapped/C_4030632;	f_5022557		SPRUCE_PLANKS
+	f	Lnet/minecraft/unmapped/C_4030632;	f_5310913		BIRCH_PLANKS
+	f	Lnet/minecraft/unmapped/C_4030632;	f_3853001		JUNGLE_PLANKS
+	f	Lnet/minecraft/unmapped/C_4030632;	f_5364051		ACACIA_PLANKS
+	f	Lnet/minecraft/unmapped/C_4030632;	f_8878027		DARK_OAK_PLANKS
+	f	Lnet/minecraft/unmapped/C_4030632;	f_8623190		OAK_SAPLING
+	f	Lnet/minecraft/unmapped/C_4030632;	f_0610269		SPRUCE_SAPLING
+	f	Lnet/minecraft/unmapped/C_4030632;	f_6297941		BIRCH_SAPLING
+	f	Lnet/minecraft/unmapped/C_4030632;	f_6866791		JUNGLE_SAPLING
+	f	Lnet/minecraft/unmapped/C_4030632;	f_0470573		ACACIA_SAPLING
+	f	Lnet/minecraft/unmapped/C_4030632;	f_4845427		DARK_OAK_SAPLING
+	f	Lnet/minecraft/unmapped/C_4030632;	f_8269983		BEDROCK
+	f	Lnet/minecraft/unmapped/C_4030632;	f_6708404		SAND
+	f	Lnet/minecraft/unmapped/C_4030632;	f_9725812		RED_SAND
+	f	Lnet/minecraft/unmapped/C_4030632;	f_1616091		GRAVEL
+	f	Lnet/minecraft/unmapped/C_4030632;	f_0397049		GOLD_ORE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_4949745		IRON_ORE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_3456329		COAL_ORE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_4666013		OAK_LOG
+	f	Lnet/minecraft/unmapped/C_4030632;	f_0176996		SPRUCE_LOG
+	f	Lnet/minecraft/unmapped/C_4030632;	f_3734985		BIRCH_LOG
+	f	Lnet/minecraft/unmapped/C_4030632;	f_2619372		JUNGLE_LOG
+	f	Lnet/minecraft/unmapped/C_4030632;	f_0506602		ACACIA_LOG
+	f	Lnet/minecraft/unmapped/C_4030632;	f_3046491		DARK_OAK_LOG
+	f	Lnet/minecraft/unmapped/C_4030632;	f_5662038		STRIPPED_OAK_LOG
+	f	Lnet/minecraft/unmapped/C_4030632;	f_2656670		STRIPPED_SPRUCE_LOG
+	f	Lnet/minecraft/unmapped/C_4030632;	f_0481599		STRIPPED_BIRCH_LOG
+	f	Lnet/minecraft/unmapped/C_4030632;	f_7469754		STRIPPED_JUNGLE_LOG
+	f	Lnet/minecraft/unmapped/C_4030632;	f_5230384		STRIPPED_ACACIA_LOG
+	f	Lnet/minecraft/unmapped/C_4030632;	f_6196700		STRIPPED_DARK_OAK_LOG
+	f	Lnet/minecraft/unmapped/C_4030632;	f_3515408		STRIPPED_OAK_WOOD
+	f	Lnet/minecraft/unmapped/C_4030632;	f_3702540		STRIPPED_SPRUCE_WOOD
+	f	Lnet/minecraft/unmapped/C_4030632;	f_7617482		STRIPPED_BIRCH_WOOD
+	f	Lnet/minecraft/unmapped/C_4030632;	f_0948386		STRIPPED_JUNGLE_WOOD
+	f	Lnet/minecraft/unmapped/C_4030632;	f_6483874		STRIPPED_ACACIA_WOOD
+	f	Lnet/minecraft/unmapped/C_4030632;	f_0941930		STRIPPED_DARK_OAK_WOOD
+	f	Lnet/minecraft/unmapped/C_4030632;	f_3764222		OAK_WOOD
+	f	Lnet/minecraft/unmapped/C_4030632;	f_1825726		SPRUCE_WOOD
+	f	Lnet/minecraft/unmapped/C_4030632;	f_6984127		BIRCH_WOOD
+	f	Lnet/minecraft/unmapped/C_4030632;	f_9324740		JUNGLE_WOOD
+	f	Lnet/minecraft/unmapped/C_4030632;	f_7915787		ACACIA_WOOD
+	f	Lnet/minecraft/unmapped/C_4030632;	f_9604562		DARK_OAK_WOOD
+	f	Lnet/minecraft/unmapped/C_4030632;	f_7299685		OAK_LEAVES
+	f	Lnet/minecraft/unmapped/C_4030632;	f_8269118		SPRUCE_LEAVES
+	f	Lnet/minecraft/unmapped/C_4030632;	f_9734502		BIRCH_LEAVES
+	f	Lnet/minecraft/unmapped/C_4030632;	f_7501250		JUNGLE_LEAVES
+	f	Lnet/minecraft/unmapped/C_4030632;	f_9455010		ACACIA_LEAVES
+	f	Lnet/minecraft/unmapped/C_4030632;	f_1480906		DARK_OAK_LEAVES
+	f	Lnet/minecraft/unmapped/C_4030632;	f_3013650		SPONGE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_3852552		WET_SPONGE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_2894247		GLASS
+	f	Lnet/minecraft/unmapped/C_4030632;	f_1145896		LAPIS_ORE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_5869701		LAPIS_BLOCK
+	f	Lnet/minecraft/unmapped/C_4030632;	f_7906071		DISPENSER
+	f	Lnet/minecraft/unmapped/C_4030632;	f_4126346		SANDSTONE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_4943014		CHISELED_SANDSTONE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_1187987		CUT_SANDSTONE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_8454958		NOTE_BLOCK
+	f	Lnet/minecraft/unmapped/C_4030632;	f_7345211		POWERED_RAIL
+	f	Lnet/minecraft/unmapped/C_4030632;	f_7630380		DETECTOR_RAIL
+	f	Lnet/minecraft/unmapped/C_4030632;	f_4623740		STICKY_PISTON
+	f	Lnet/minecraft/unmapped/C_4030632;	f_6517394		COBWEB
+	f	Lnet/minecraft/unmapped/C_4030632;	f_8189809		GRASS
+	f	Lnet/minecraft/unmapped/C_4030632;	f_9439681		FERN
+	f	Lnet/minecraft/unmapped/C_4030632;	f_9989356		DEAD_BUSH
+	f	Lnet/minecraft/unmapped/C_4030632;	f_1491804		SEAGRASS
+	f	Lnet/minecraft/unmapped/C_4030632;	f_0438172		SEA_PICKLE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_2550604		PISTON
+	f	Lnet/minecraft/unmapped/C_4030632;	f_9195965		WHITE_WOOL
+	f	Lnet/minecraft/unmapped/C_4030632;	f_7285793		ORANGE_WOOL
+	f	Lnet/minecraft/unmapped/C_4030632;	f_7958688		MAGENTA_WOOL
+	f	Lnet/minecraft/unmapped/C_4030632;	f_5597929		LIGHT_BLUE_WOOL
+	f	Lnet/minecraft/unmapped/C_4030632;	f_6546491		YELLOW_WOOL
+	f	Lnet/minecraft/unmapped/C_4030632;	f_7789093		LIME_WOOL
+	f	Lnet/minecraft/unmapped/C_4030632;	f_7399286		PINK_WOOL
+	f	Lnet/minecraft/unmapped/C_4030632;	f_3673219		GRAY_WOOL
+	f	Lnet/minecraft/unmapped/C_4030632;	f_0237031		LIGHT_GRAY_WOOL
+	f	Lnet/minecraft/unmapped/C_4030632;	f_0345933		CYAN_WOOL
+	f	Lnet/minecraft/unmapped/C_4030632;	f_8971631		PURPLE_WOOL
+	f	Lnet/minecraft/unmapped/C_4030632;	f_7541285		BLUE_WOOL
+	f	Lnet/minecraft/unmapped/C_4030632;	f_0322729		BROWN_WOOL
+	f	Lnet/minecraft/unmapped/C_4030632;	f_0313324		GREEN_WOOL
+	f	Lnet/minecraft/unmapped/C_4030632;	f_3929604		RED_WOOL
+	f	Lnet/minecraft/unmapped/C_4030632;	f_3083805		BLACK_WOOL
+	f	Lnet/minecraft/unmapped/C_4030632;	f_2508314		DANDELION
+	f	Lnet/minecraft/unmapped/C_4030632;	f_1769289		POPPY
+	f	Lnet/minecraft/unmapped/C_4030632;	f_4421354		BLUE_ORCHID
+	f	Lnet/minecraft/unmapped/C_4030632;	f_5029556		ALLIUM
+	f	Lnet/minecraft/unmapped/C_4030632;	f_3532895		AZURE_BLUET
+	f	Lnet/minecraft/unmapped/C_4030632;	f_7678278		RED_TULIP
+	f	Lnet/minecraft/unmapped/C_4030632;	f_8710689		ORANGE_TULIP
+	f	Lnet/minecraft/unmapped/C_4030632;	f_1471103		WHITE_TULIP
+	f	Lnet/minecraft/unmapped/C_4030632;	f_6919076		PINK_TULIP
+	f	Lnet/minecraft/unmapped/C_4030632;	f_2166267		OXEYE_DAISY
+	f	Lnet/minecraft/unmapped/C_4030632;	f_5710508		CORNFLOWER
+	f	Lnet/minecraft/unmapped/C_4030632;	f_3624299		LILY_OF_THE_VALLEY
+	f	Lnet/minecraft/unmapped/C_4030632;	f_1224043		WITHER_ROSE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_5074071		BROWN_MUSHROOM
+	f	Lnet/minecraft/unmapped/C_4030632;	f_7655749		RED_MUSHROOM
+	f	Lnet/minecraft/unmapped/C_4030632;	f_1037349		GOLD_BLOCK
+	f	Lnet/minecraft/unmapped/C_4030632;	f_6414116		IRON_BLOCK
+	f	Lnet/minecraft/unmapped/C_4030632;	f_8046786		OAK_SLAB
+	f	Lnet/minecraft/unmapped/C_4030632;	f_9170838		SPRUCE_SLAB
+	f	Lnet/minecraft/unmapped/C_4030632;	f_0340563		BIRCH_SLAB
+	f	Lnet/minecraft/unmapped/C_4030632;	f_6335139		JUNGLE_SLAB
+	f	Lnet/minecraft/unmapped/C_4030632;	f_1927600		ACACIA_SLAB
+	f	Lnet/minecraft/unmapped/C_4030632;	f_2242190		DARK_OAK_SLAB
+	f	Lnet/minecraft/unmapped/C_4030632;	f_3156771		STONE_SLAB
+	f	Lnet/minecraft/unmapped/C_4030632;	f_6117762		SMOOTH_STONE_SLAB
+	f	Lnet/minecraft/unmapped/C_4030632;	f_8749460		SANDSTONE_SLAB
+	f	Lnet/minecraft/unmapped/C_4030632;	f_5293278		PETRIFIED_OAK_SLAB
+	f	Lnet/minecraft/unmapped/C_4030632;	f_8054888		COBBLESTONE_SLAB
+	f	Lnet/minecraft/unmapped/C_4030632;	f_3398412		BRICK_SLAB
+	f	Lnet/minecraft/unmapped/C_4030632;	f_8777307		STONE_BRICK_SLAB
+	f	Lnet/minecraft/unmapped/C_4030632;	f_0545836		NETHER_BRICK_SLAB
+	f	Lnet/minecraft/unmapped/C_4030632;	f_0388219		QUARTZ_SLAB
+	f	Lnet/minecraft/unmapped/C_4030632;	f_5257371		RED_SANDSTONE_SLAB
+	f	Lnet/minecraft/unmapped/C_4030632;	f_5822881		PURPUR_SLAB
+	f	Lnet/minecraft/unmapped/C_4030632;	f_4019815		PRISMARINE_SLAB
+	f	Lnet/minecraft/unmapped/C_4030632;	f_9300429		PRISMARINE_BRICK_SLAB
+	f	Lnet/minecraft/unmapped/C_4030632;	f_2955201		DARK_PRISMARINE_SLAB
+	f	Lnet/minecraft/unmapped/C_4030632;	f_6575120		SMOOTH_QUARTZ
+	f	Lnet/minecraft/unmapped/C_4030632;	f_8707663		SMOOTH_RED_SANDSTONE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_9222336		SMOOTH_SANDSTONE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_0882229		SMOOTH_STONE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_1810301		BRICKS
+	f	Lnet/minecraft/unmapped/C_4030632;	f_5174366		TNT
+	f	Lnet/minecraft/unmapped/C_4030632;	f_2801669		BOOKSHELF
+	f	Lnet/minecraft/unmapped/C_4030632;	f_0074728		MOSSY_COBBLESTONE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_6714461		OBSIDIAN
+	f	Lnet/minecraft/unmapped/C_4030632;	f_4947257		TORCH
+	f	Lnet/minecraft/unmapped/C_4030632;	f_0478869		END_ROD
+	f	Lnet/minecraft/unmapped/C_4030632;	f_8693393		CHORUS_PLANT
+	f	Lnet/minecraft/unmapped/C_4030632;	f_2185442		CHORUS_FLOWER
+	f	Lnet/minecraft/unmapped/C_4030632;	f_5143305		PURPUR_BLOCK
+	f	Lnet/minecraft/unmapped/C_4030632;	f_1825541		PURPUR_PILLAR
+	f	Lnet/minecraft/unmapped/C_4030632;	f_8719616		PURPUR_STAIRS
+	f	Lnet/minecraft/unmapped/C_4030632;	f_5394587		SPAWNER
+	f	Lnet/minecraft/unmapped/C_4030632;	f_4702828		OAK_STAIRS
+	f	Lnet/minecraft/unmapped/C_4030632;	f_4589178		CHEST
+	f	Lnet/minecraft/unmapped/C_4030632;	f_1621012		DIAMOND_ORE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_9377194		DIAMOND_BLOCK
+	f	Lnet/minecraft/unmapped/C_4030632;	f_8761695		CRAFTING_TABLE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_7883122		FARMLAND
+	f	Lnet/minecraft/unmapped/C_4030632;	f_9862258		FURNACE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_4752188		LADDER
+	f	Lnet/minecraft/unmapped/C_4030632;	f_3933936		RAIL
+	f	Lnet/minecraft/unmapped/C_4030632;	f_6453435		COBBLESTONE_STAIRS
+	f	Lnet/minecraft/unmapped/C_4030632;	f_3983312		LEVER
+	f	Lnet/minecraft/unmapped/C_4030632;	f_5230644		STONE_PRESSURE_PLATE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_9037176		OAK_PRESSURE_PLATE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_7752892		SPRUCE_PRESSURE_PLATE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_3501534		BIRCH_PRESSURE_PLATE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_9211144		JUNGLE_PRESSURE_PLATE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_7332177		ACACIA_PRESSURE_PLATE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_4577519		DARK_OAK_PRESSURE_PLATE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_0391775		REDSTONE_ORE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_7108929		REDSTONE_TORCH
+	f	Lnet/minecraft/unmapped/C_4030632;	f_4363744		STONE_BUTTON
+	f	Lnet/minecraft/unmapped/C_4030632;	f_0779005		SNOW
+	f	Lnet/minecraft/unmapped/C_4030632;	f_1127043		ICE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_6535188		SNOW_BLOCK
+	f	Lnet/minecraft/unmapped/C_4030632;	f_1222950		CACTUS
+	f	Lnet/minecraft/unmapped/C_4030632;	f_5412550		CLAY
+	f	Lnet/minecraft/unmapped/C_4030632;	f_6936576		JUKEBOX
+	f	Lnet/minecraft/unmapped/C_4030632;	f_8842153		OAK_FENCE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_4479656		SPRUCE_FENCE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_9186971		BIRCH_FENCE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_1280755		JUNGLE_FENCE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_8726675		ACACIA_FENCE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_1550895		DARK_OAK_FENCE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_3599073		PUMPKIN
+	f	Lnet/minecraft/unmapped/C_4030632;	f_1839762		CARVED_PUMPKIN
+	f	Lnet/minecraft/unmapped/C_4030632;	f_2993464		NETHERRACK
+	f	Lnet/minecraft/unmapped/C_4030632;	f_1891755		SOUL_SAND
+	f	Lnet/minecraft/unmapped/C_4030632;	f_4500838		GLOWSTONE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_2268215		JACK_O_LANTERN
+	f	Lnet/minecraft/unmapped/C_4030632;	f_4846234		OAK_TRAPDOOR
+	f	Lnet/minecraft/unmapped/C_4030632;	f_1975069		SPRUCE_TRAPDOOR
+	f	Lnet/minecraft/unmapped/C_4030632;	f_9546564		BIRCH_TRAPDOOR
+	f	Lnet/minecraft/unmapped/C_4030632;	f_0959804		JUNGLE_TRAPDOOR
+	f	Lnet/minecraft/unmapped/C_4030632;	f_6061050		ACACIA_TRAPDOOR
+	f	Lnet/minecraft/unmapped/C_4030632;	f_0260715		DARK_OAK_TRAPDOOR
+	f	Lnet/minecraft/unmapped/C_4030632;	f_9882604		INFESTED_STONE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_4269622		INFESTED_COBBLESTONE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_7607343		INFESTED_STONE_BRICKS
+	f	Lnet/minecraft/unmapped/C_4030632;	f_2060361		INFESTED_MOSSY_STONE_BRICKS
+	f	Lnet/minecraft/unmapped/C_4030632;	f_2433335		INFESTED_CRACKED_STONE_BRICKS
+	f	Lnet/minecraft/unmapped/C_4030632;	f_9128113		INFESTED_CHISELED_STONE_BRICKS
+	f	Lnet/minecraft/unmapped/C_4030632;	f_8694428		STONE_BRICKS
+	f	Lnet/minecraft/unmapped/C_4030632;	f_9823828		MOSSY_STONE_BRICKS
+	f	Lnet/minecraft/unmapped/C_4030632;	f_8287831		CRACKED_STONE_BRICKS
+	f	Lnet/minecraft/unmapped/C_4030632;	f_8333054		CHISELED_STONE_BRICKS
+	f	Lnet/minecraft/unmapped/C_4030632;	f_7229367		BROWN_MUSHROOM_BLOCK
+	f	Lnet/minecraft/unmapped/C_4030632;	f_5420267		RED_MUSHROOM_BLOCK
+	f	Lnet/minecraft/unmapped/C_4030632;	f_2361822		MUSHROOM_STEM
+	f	Lnet/minecraft/unmapped/C_4030632;	f_4603896		IRON_BARS
+	f	Lnet/minecraft/unmapped/C_4030632;	f_5065884		GLASS_PANE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_2987304		MELON
+	f	Lnet/minecraft/unmapped/C_4030632;	f_8118767		VINE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_0390327		OAK_FENCE_GATE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_5990136		SPRUCE_FENCE_GATE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_3354992		BIRCH_FENCE_GATE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_7677181		JUNGLE_FENCE_GATE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_6758650		ACACIA_FENCE_GATE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_0112113		DARK_OAK_FENCE_GATE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_5273698		BRICK_STAIRS
+	f	Lnet/minecraft/unmapped/C_4030632;	f_2680652		STONE_BRICK_STAIRS
+	f	Lnet/minecraft/unmapped/C_4030632;	f_2940615		MYCELIUM
+	f	Lnet/minecraft/unmapped/C_4030632;	f_9081738		LILY_PAD
+	f	Lnet/minecraft/unmapped/C_4030632;	f_0059852		NETHER_BRICKS
+	f	Lnet/minecraft/unmapped/C_4030632;	f_5609764		NETHER_BRICK_FENCE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_3126742		NETHER_BRICK_STAIRS
+	f	Lnet/minecraft/unmapped/C_4030632;	f_3285987		ENCHANTING_TABLE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_3667833		END_PORTAL_FRAME
+	f	Lnet/minecraft/unmapped/C_4030632;	f_6130305		END_STONE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_9398628		END_STONE_BRICKS
+	f	Lnet/minecraft/unmapped/C_4030632;	f_9293098		DRAGON_EGG
+	f	Lnet/minecraft/unmapped/C_4030632;	f_4666256		REDSTONE_LAMP
+	f	Lnet/minecraft/unmapped/C_4030632;	f_5276721		SANDSTONE_STAIRS
+	f	Lnet/minecraft/unmapped/C_4030632;	f_7175755		EMERALD_ORE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_9174743		ENDER_CHEST
+	f	Lnet/minecraft/unmapped/C_4030632;	f_1414641		TRIPWIRE_HOOK
+	f	Lnet/minecraft/unmapped/C_4030632;	f_3747011		EMERALD_BLOCK
+	f	Lnet/minecraft/unmapped/C_4030632;	f_4514456		SPRUCE_STAIRS
+	f	Lnet/minecraft/unmapped/C_4030632;	f_9272722		BIRCH_STAIRS
+	f	Lnet/minecraft/unmapped/C_4030632;	f_7419877		JUNGLE_STAIRS
+	f	Lnet/minecraft/unmapped/C_4030632;	f_4598740		COMMAND_BLOCK
+	f	Lnet/minecraft/unmapped/C_4030632;	f_7135492		BEACON
+	f	Lnet/minecraft/unmapped/C_4030632;	f_7237527		COBBLESTONE_WALL
+	f	Lnet/minecraft/unmapped/C_4030632;	f_4240254		MOSSY_COBBLESTONE_WALL
+	f	Lnet/minecraft/unmapped/C_4030632;	f_7899733		OAK_BUTTON
+	f	Lnet/minecraft/unmapped/C_4030632;	f_6897253		SPRUCE_BUTTON
+	f	Lnet/minecraft/unmapped/C_4030632;	f_8148230		BIRCH_BUTTON
+	f	Lnet/minecraft/unmapped/C_4030632;	f_8594059		JUNGLE_BUTTON
+	f	Lnet/minecraft/unmapped/C_4030632;	f_1294674		ACACIA_BUTTON
+	f	Lnet/minecraft/unmapped/C_4030632;	f_6246642		DARK_OAK_BUTTON
+	f	Lnet/minecraft/unmapped/C_4030632;	f_5513591		ANVIL
+	f	Lnet/minecraft/unmapped/C_4030632;	f_5719465		CHIPPED_ANVIL
+	f	Lnet/minecraft/unmapped/C_4030632;	f_4152208		DAMAGED_ANVIL
+	f	Lnet/minecraft/unmapped/C_4030632;	f_9204766		TRAPPED_CHEST
+	f	Lnet/minecraft/unmapped/C_4030632;	f_5307694		LIGHT_WEIGHTED_PRESSURE_PLATE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_7630175		HEAVY_WEIGHTED_PRESSURE_PLATE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_5571749		DAYLIGHT_DETECTOR
+	f	Lnet/minecraft/unmapped/C_4030632;	f_9710710		REDSTONE_BLOCK
+	f	Lnet/minecraft/unmapped/C_4030632;	f_7800603		NETHER_QUARTZ_ORE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_3329557		HOPPER
+	f	Lnet/minecraft/unmapped/C_4030632;	f_4438437		CHISELED_QUARTZ_BLOCK
+	f	Lnet/minecraft/unmapped/C_4030632;	f_0070046		QUARTZ_BLOCK
+	f	Lnet/minecraft/unmapped/C_4030632;	f_9099418		QUARTZ_PILLAR
+	f	Lnet/minecraft/unmapped/C_4030632;	f_0474102		QUARTZ_STAIRS
+	f	Lnet/minecraft/unmapped/C_4030632;	f_1579218		ACTIVATOR_RAIL
+	f	Lnet/minecraft/unmapped/C_4030632;	f_1693602		DROPPER
+	f	Lnet/minecraft/unmapped/C_4030632;	f_5576741		WHITE_TERRACOTTA
+	f	Lnet/minecraft/unmapped/C_4030632;	f_1252596		ORANGE_TERRACOTTA
+	f	Lnet/minecraft/unmapped/C_4030632;	f_9503580		MAGENTA_TERRACOTTA
+	f	Lnet/minecraft/unmapped/C_4030632;	f_2937366		LIGHT_BLUE_TERRACOTTA
+	f	Lnet/minecraft/unmapped/C_4030632;	f_5296675		YELLOW_TERRACOTTA
+	f	Lnet/minecraft/unmapped/C_4030632;	f_1797923		LIME_TERRACOTTA
+	f	Lnet/minecraft/unmapped/C_4030632;	f_5538327		PINK_TERRACOTTA
+	f	Lnet/minecraft/unmapped/C_4030632;	f_0464966		GRAY_TERRACOTTA
+	f	Lnet/minecraft/unmapped/C_4030632;	f_4129150		LIGHT_GRAY_TERRACOTTA
+	f	Lnet/minecraft/unmapped/C_4030632;	f_3659942		CYAN_TERRACOTTA
+	f	Lnet/minecraft/unmapped/C_4030632;	f_0682439		PURPLE_TERRACOTTA
+	f	Lnet/minecraft/unmapped/C_4030632;	f_9579081		BLUE_TERRACOTTA
+	f	Lnet/minecraft/unmapped/C_4030632;	f_5440704		BROWN_TERRACOTTA
+	f	Lnet/minecraft/unmapped/C_4030632;	f_7157235		GREEN_TERRACOTTA
+	f	Lnet/minecraft/unmapped/C_4030632;	f_8085344		RED_TERRACOTTA
+	f	Lnet/minecraft/unmapped/C_4030632;	f_3858259		BLACK_TERRACOTTA
+	f	Lnet/minecraft/unmapped/C_4030632;	f_2373308		BARRIER
+	f	Lnet/minecraft/unmapped/C_4030632;	f_1748940		IRON_TRAPDOOR
+	f	Lnet/minecraft/unmapped/C_4030632;	f_3048502		HAY
+	f	Lnet/minecraft/unmapped/C_4030632;	f_8766290		WHITE_CARPET
+	f	Lnet/minecraft/unmapped/C_4030632;	f_2738176		ORANGE_CARPET
+	f	Lnet/minecraft/unmapped/C_4030632;	f_4132535		MAGENTA_CARPET
+	f	Lnet/minecraft/unmapped/C_4030632;	f_5939678		LIGHT_BLUE_CARPET
+	f	Lnet/minecraft/unmapped/C_4030632;	f_8698875		YELLOW_CARPET
+	f	Lnet/minecraft/unmapped/C_4030632;	f_3521163		LIME_CARPET
+	f	Lnet/minecraft/unmapped/C_4030632;	f_4339813		PINK_CARPET
+	f	Lnet/minecraft/unmapped/C_4030632;	f_7477151		GRAY_CARPET
+	f	Lnet/minecraft/unmapped/C_4030632;	f_3884944		LIGHT_GRAY_CARPET
+	f	Lnet/minecraft/unmapped/C_4030632;	f_8069405		CYAN_CARPET
+	f	Lnet/minecraft/unmapped/C_4030632;	f_9366884		PURPLE_CARPET
+	f	Lnet/minecraft/unmapped/C_4030632;	f_6685268		BLUE_CARPET
+	f	Lnet/minecraft/unmapped/C_4030632;	f_0760595		BROWN_CARPET
+	f	Lnet/minecraft/unmapped/C_4030632;	f_6109733		GREEN_CARPET
+	f	Lnet/minecraft/unmapped/C_4030632;	f_6876601		RED_CARPET
+	f	Lnet/minecraft/unmapped/C_4030632;	f_3615109		BLACK_CARPET
+	f	Lnet/minecraft/unmapped/C_4030632;	f_2448197		TERRACOTTA
+	f	Lnet/minecraft/unmapped/C_4030632;	f_9708770		COAL_BLOCK
+	f	Lnet/minecraft/unmapped/C_4030632;	f_7307648		PACKED_ICE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_4178155		ACACIA_STAIRS
+	f	Lnet/minecraft/unmapped/C_4030632;	f_8011247		DARK_OAK_STAIRS
+	f	Lnet/minecraft/unmapped/C_4030632;	f_7828851		SLIME
+	f	Lnet/minecraft/unmapped/C_4030632;	f_1925612		GRASS_PATH
+	f	Lnet/minecraft/unmapped/C_4030632;	f_1971454		SUNFLOWER
+	f	Lnet/minecraft/unmapped/C_4030632;	f_7555813		LILAC
+	f	Lnet/minecraft/unmapped/C_4030632;	f_0111333		ROSE_BUSH
+	f	Lnet/minecraft/unmapped/C_4030632;	f_5624775		PEONY
+	f	Lnet/minecraft/unmapped/C_4030632;	f_3733625		TALL_GRASS
+	f	Lnet/minecraft/unmapped/C_4030632;	f_8528115		LARGE_FERN
+	f	Lnet/minecraft/unmapped/C_4030632;	f_7929225		WHITE_STAINED_GLASS
+	f	Lnet/minecraft/unmapped/C_4030632;	f_6407777		ORANGE_STAINED_GLASS
+	f	Lnet/minecraft/unmapped/C_4030632;	f_3712813		MAGENTA_STAINED_GLASS
+	f	Lnet/minecraft/unmapped/C_4030632;	f_4935150		LIGHT_BLUE_STAINED_GLASS
+	f	Lnet/minecraft/unmapped/C_4030632;	f_8203707		YELLOW_STAINED_GLASS
+	f	Lnet/minecraft/unmapped/C_4030632;	f_4383852		LIME_STAINED_GLASS
+	f	Lnet/minecraft/unmapped/C_4030632;	f_1588130		PINK_STAINED_GLASS
+	f	Lnet/minecraft/unmapped/C_4030632;	f_9405683		GRAY_STAINED_GLASS
+	f	Lnet/minecraft/unmapped/C_4030632;	f_2281360		LIGHT_GRAY_STAINED_GLASS
+	f	Lnet/minecraft/unmapped/C_4030632;	f_6812799		CYAN_STAINED_GLASS
+	f	Lnet/minecraft/unmapped/C_4030632;	f_5496432		PURPLE_STAINED_GLASS
+	f	Lnet/minecraft/unmapped/C_4030632;	f_1716811		BLUE_STAINED_GLASS
+	f	Lnet/minecraft/unmapped/C_4030632;	f_6843928		BROWN_STAINED_GLASS
+	f	Lnet/minecraft/unmapped/C_4030632;	f_8307202		GREEN_STAINED_GLASS
+	f	Lnet/minecraft/unmapped/C_4030632;	f_3405221		RED_STAINED_GLASS
+	f	Lnet/minecraft/unmapped/C_4030632;	f_9363453		BLACK_STAINED_GLASS
+	f	Lnet/minecraft/unmapped/C_4030632;	f_9685360		WHITE_STAINED_GLASS_PANE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_7745538		ORANGE_STAINED_GLASS_PANE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_3579620		MAGENTA_STAINED_GLASS_PANE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_6106358		LIGHT_BLUE_STAINED_GLASS_PANE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_6889418		YELLOW_STAINED_GLASS_PANE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_3615634		LIME_STAINED_GLASS_PANE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_8193615		PINK_STAINED_GLASS_PANE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_9053097		GRAY_STAINED_GLASS_PANE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_9063478		LIGHT_GRAY_STAINED_GLASS_PANE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_8944945		CYAN_STAINED_GLASS_PANE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_2010371		PURPLE_STAINED_GLASS_PANE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_4970113		BLUE_STAINED_GLASS_PANE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_7831507		BROWN_STAINED_GLASS_PANE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_0480899		GREEN_STAINED_GLASS_PANE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_3882069		RED_STAINED_GLASS_PANE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_0317740		BLACK_STAINED_GLASS_PANE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_2587870		PRISMARINE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_3578445		PRISMARINE_BRICKS
+	f	Lnet/minecraft/unmapped/C_4030632;	f_9951864		DARK_PRISMARINE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_7316074		PRISMARINE_STAIRS
+	f	Lnet/minecraft/unmapped/C_4030632;	f_9193414		PRISMARINE_BRICK_STAIRS
+	f	Lnet/minecraft/unmapped/C_4030632;	f_4172252		DARK_PRISMARINE_STAIRS
+	f	Lnet/minecraft/unmapped/C_4030632;	f_8004068		SEA_LANTERN
+	f	Lnet/minecraft/unmapped/C_4030632;	f_5207522		RED_SANDSTONE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_9517219		CHISELED_RED_SANDSTONE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_8368926		CUT_RED_SANDSTONE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_8437592		RED_SANDSTONE_STAIRS
+	f	Lnet/minecraft/unmapped/C_4030632;	f_8155672		REPEATING_COMMAND_BLOCK
+	f	Lnet/minecraft/unmapped/C_4030632;	f_3508802		CHAIN_COMMAND_BLOCK
+	f	Lnet/minecraft/unmapped/C_4030632;	f_8765459		MAGMA
+	f	Lnet/minecraft/unmapped/C_4030632;	f_2357204		NETHER_WART_BLOCK
+	f	Lnet/minecraft/unmapped/C_4030632;	f_9884615		RED_NETHER_BRICKS
+	f	Lnet/minecraft/unmapped/C_4030632;	f_9977814		BONE_BLOCK
+	f	Lnet/minecraft/unmapped/C_4030632;	f_9328180		STRUCTURE_VOID
+	f	Lnet/minecraft/unmapped/C_4030632;	f_3961523		OBSERVER
+	f	Lnet/minecraft/unmapped/C_4030632;	f_0475598		SHULKER_BOX
+	f	Lnet/minecraft/unmapped/C_4030632;	f_5593058		WHITE_SHULKER_BOX
+	f	Lnet/minecraft/unmapped/C_4030632;	f_2626638		ORANGE_SHULKER_BOX
+	f	Lnet/minecraft/unmapped/C_4030632;	f_9330199		MAGENTA_SHULKER_BOX
+	f	Lnet/minecraft/unmapped/C_4030632;	f_3901579		LIGHT_BLUE_SHULKER_BOX
+	f	Lnet/minecraft/unmapped/C_4030632;	f_2799466		YELLOW_SHULKER_BOX
+	f	Lnet/minecraft/unmapped/C_4030632;	f_2761643		LIME_SHULKER_BOX
+	f	Lnet/minecraft/unmapped/C_4030632;	f_1250279		PINK_SHULKER_BOX
+	f	Lnet/minecraft/unmapped/C_4030632;	f_2786635		GRAY_SHULKER_BOX
+	f	Lnet/minecraft/unmapped/C_4030632;	f_5554635		LIGHT_GRAY_SHULKER_BOX
+	f	Lnet/minecraft/unmapped/C_4030632;	f_6788980		CYAN_SHULKER_BOX
+	f	Lnet/minecraft/unmapped/C_4030632;	f_7864133		PURPLE_SHULKER_BOX
+	f	Lnet/minecraft/unmapped/C_4030632;	f_2159819		BLUE_SHULKER_BOX
+	f	Lnet/minecraft/unmapped/C_4030632;	f_1529176		BROWN_SHULKER_BOX
+	f	Lnet/minecraft/unmapped/C_4030632;	f_7348920		GREEN_SHULKER_BOX
+	f	Lnet/minecraft/unmapped/C_4030632;	f_4944898		RED_SHULKER_BOX
+	f	Lnet/minecraft/unmapped/C_4030632;	f_2386367		BLACK_SHULKER_BOX
+	f	Lnet/minecraft/unmapped/C_4030632;	f_8663750		WHITE_GLAZED_TERRACOTTA
+	f	Lnet/minecraft/unmapped/C_4030632;	f_4789618		ORANGE_GLAZED_TERRACOTTA
+	f	Lnet/minecraft/unmapped/C_4030632;	f_2668941		MAGENTA_GLAZED_TERRACOTTA
+	f	Lnet/minecraft/unmapped/C_4030632;	f_6260613		LIGHT_BLUE_GLAZED_TERRACOTTA
+	f	Lnet/minecraft/unmapped/C_4030632;	f_9390517		YELLOW_GLAZED_TERRACOTTA
+	f	Lnet/minecraft/unmapped/C_4030632;	f_6570369		LIME_GLAZED_TERRACOTTA
+	f	Lnet/minecraft/unmapped/C_4030632;	f_4599598		PINK_GLAZED_TERRACOTTA
+	f	Lnet/minecraft/unmapped/C_4030632;	f_2107011		GRAY_GLAZED_TERRACOTTA
+	f	Lnet/minecraft/unmapped/C_4030632;	f_9133889		LIGHT_GRAY_GLAZED_TERRACOTTA
+	f	Lnet/minecraft/unmapped/C_4030632;	f_8051661		CYAN_GLAZED_TERRACOTTA
+	f	Lnet/minecraft/unmapped/C_4030632;	f_9145615		PURPLE_GLAZED_TERRACOTTA
+	f	Lnet/minecraft/unmapped/C_4030632;	f_9873581		BLUE_GLAZED_TERRACOTTA
+	f	Lnet/minecraft/unmapped/C_4030632;	f_0164895		BROWN_GLAZED_TERRACOTTA
+	f	Lnet/minecraft/unmapped/C_4030632;	f_1863762		GREEN_GLAZED_TERRACOTTA
+	f	Lnet/minecraft/unmapped/C_4030632;	f_8339752		RED_GLAZED_TERRACOTTA
+	f	Lnet/minecraft/unmapped/C_4030632;	f_6691163		BLACK_GLAZED_TERRACOTTA
+	f	Lnet/minecraft/unmapped/C_4030632;	f_9653993		WHITE_CONCRETE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_0061563		ORANGE_CONCRETE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_3876269		MAGENTA_CONCRETE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_5038151		LIGHT_BLUE_CONCRETE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_9138784		YELLOW_CONCRETE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_6103503		LIME_CONCRETE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_6261424		PINK_CONCRETE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_9630082		GRAY_CONCRETE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_3607705		LIGHT_GRAY_CONCRETE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_8786971		CYAN_CONCRETE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_1957733		PURPLE_CONCRETE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_3781162		BLUE_CONCRETE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_2832919		BROWN_CONCRETE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_1545220		GREEN_CONCRETE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_8746787		RED_CONCRETE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_0621033		BLACK_CONCRETE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_3491190		WHITE_CONCRETE_POWDER
+	f	Lnet/minecraft/unmapped/C_4030632;	f_2474134		ORANGE_CONCRETE_POWDER
+	f	Lnet/minecraft/unmapped/C_4030632;	f_8548714		MAGENTA_CONCRETE_POWDER
+	f	Lnet/minecraft/unmapped/C_4030632;	f_4160737		LIGHT_BLUE_CONCRETE_POWDER
+	f	Lnet/minecraft/unmapped/C_4030632;	f_0867414		YELLOW_CONCRETE_POWDER
+	f	Lnet/minecraft/unmapped/C_4030632;	f_2599975		LIME_CONCRETE_POWDER
+	f	Lnet/minecraft/unmapped/C_4030632;	f_9284499		PINK_CONCRETE_POWDER
+	f	Lnet/minecraft/unmapped/C_4030632;	f_7479021		GRAY_CONCRETE_POWDER
+	f	Lnet/minecraft/unmapped/C_4030632;	f_5796946		LIGHT_GRAY_CONCRETE_POWDER
+	f	Lnet/minecraft/unmapped/C_4030632;	f_5724383		CYAN_CONCRETE_POWDER
+	f	Lnet/minecraft/unmapped/C_4030632;	f_3956516		PURPLE_CONCRETE_POWDER
+	f	Lnet/minecraft/unmapped/C_4030632;	f_4803547		BLUE_CONCRETE_POWDER
+	f	Lnet/minecraft/unmapped/C_4030632;	f_5031046		BROWN_CONCRETE_POWDER
+	f	Lnet/minecraft/unmapped/C_4030632;	f_4026841		GREEN_CONCRETE_POWDER
+	f	Lnet/minecraft/unmapped/C_4030632;	f_6153853		RED_CONCRETE_POWDER
+	f	Lnet/minecraft/unmapped/C_4030632;	f_4536120		BLACK_CONCRETE_POWDER
+	f	Lnet/minecraft/unmapped/C_4030632;	f_8987758		TURTLE_EGG
+	f	Lnet/minecraft/unmapped/C_4030632;	f_8390995		DEAD_TUBE_CORAL_BLOCK
+	f	Lnet/minecraft/unmapped/C_4030632;	f_1859302		DEAD_BRAIN_CORAL_BLOCK
+	f	Lnet/minecraft/unmapped/C_4030632;	f_1502129		DEAD_BUBBLE_CORAL_BLOCK
+	f	Lnet/minecraft/unmapped/C_4030632;	f_0084189		DEAD_FIRE_CORAL_BLOCK
+	f	Lnet/minecraft/unmapped/C_4030632;	f_6060572		DEAD_HORN_CORAL_BLOCK
+	f	Lnet/minecraft/unmapped/C_4030632;	f_8469712		TUBE_CORAL_BLOCK
+	f	Lnet/minecraft/unmapped/C_4030632;	f_1295100		BRAIN_CORAL_BLOCK
+	f	Lnet/minecraft/unmapped/C_4030632;	f_3305470		BUBBLE_CORAL_BLOCK
+	f	Lnet/minecraft/unmapped/C_4030632;	f_8105352		FIRE_CORAL_BLOCK
+	f	Lnet/minecraft/unmapped/C_4030632;	f_4498252		HORN_CORAL_BLOCK
+	f	Lnet/minecraft/unmapped/C_4030632;	f_8578535		TUBE_CORAL
+	f	Lnet/minecraft/unmapped/C_4030632;	f_9916113		BRAIN_CORAL
+	f	Lnet/minecraft/unmapped/C_4030632;	f_2641933		BUBBLE_CORAL
+	f	Lnet/minecraft/unmapped/C_4030632;	f_4347736		FIRE_CORAL
+	f	Lnet/minecraft/unmapped/C_4030632;	f_1978727		HORN_CORAL
+	f	Lnet/minecraft/unmapped/C_4030632;	f_6198499		DEAD_BRAIN_CORAL
+	f	Lnet/minecraft/unmapped/C_4030632;	f_7200849		DEAD_BUBBLE_CORAL
+	f	Lnet/minecraft/unmapped/C_4030632;	f_3539973		DEAD_FIRE_CORAL
+	f	Lnet/minecraft/unmapped/C_4030632;	f_2273071		DEAD_HORN_CORAL
+	f	Lnet/minecraft/unmapped/C_4030632;	f_3353219		DEAD_TUBE_CORAL
+	f	Lnet/minecraft/unmapped/C_4030632;	f_8799346		TUBE_CORAL_FAN
+	f	Lnet/minecraft/unmapped/C_4030632;	f_7439188		BRAIN_CORAL_FAN
+	f	Lnet/minecraft/unmapped/C_4030632;	f_4873848		BUBBLE_CORAL_FAN
+	f	Lnet/minecraft/unmapped/C_4030632;	f_4863255		FIRE_CORAL_FAN
+	f	Lnet/minecraft/unmapped/C_4030632;	f_8902916		HORN_CORAL_FAN
+	f	Lnet/minecraft/unmapped/C_4030632;	f_3976847		DEAD_TUBE_CORAL_FAN
+	f	Lnet/minecraft/unmapped/C_4030632;	f_3069097		DEAD_BRAIN_CORAL_FAN
+	f	Lnet/minecraft/unmapped/C_4030632;	f_2171228		DEAD_BUBBLE_CORAL_FAN
+	f	Lnet/minecraft/unmapped/C_4030632;	f_5136292		DEAD_FIRE_CORAL_FAN
+	f	Lnet/minecraft/unmapped/C_4030632;	f_4993744		DEAD_HORN_CORAL_FAN
+	f	Lnet/minecraft/unmapped/C_4030632;	f_8854674		BLUE_ICE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_5414015		CONDUIT
+	f	Lnet/minecraft/unmapped/C_4030632;	f_8393219		POLISHED_GRANITE_STAIRS
+	f	Lnet/minecraft/unmapped/C_4030632;	f_3899575		SMOOTH_RED_SANDSTONE_STAIRS
+	f	Lnet/minecraft/unmapped/C_4030632;	f_6569609		MOSSY_STONE_BRICK_STAIRS
+	f	Lnet/minecraft/unmapped/C_4030632;	f_2564850		POLISHED_DIORITE_STAIRS
+	f	Lnet/minecraft/unmapped/C_4030632;	f_6423554		MOSSY_COBBLESTONE_STAIRS
+	f	Lnet/minecraft/unmapped/C_4030632;	f_7586506		END_STONE_BRICK_STAIRS
+	f	Lnet/minecraft/unmapped/C_4030632;	f_8767560		STONE_STAIRS
+	f	Lnet/minecraft/unmapped/C_4030632;	f_5614752		SMOOTH_SANDSTONE_STAIRS
+	f	Lnet/minecraft/unmapped/C_4030632;	f_9232826		SMOOTH_QUARTZ_STAIRS
+	f	Lnet/minecraft/unmapped/C_4030632;	f_7647885		GRANITE_STAIRS
+	f	Lnet/minecraft/unmapped/C_4030632;	f_9354100		ANDESITE_STAIRS
+	f	Lnet/minecraft/unmapped/C_4030632;	f_5064515		RED_NETHER_BRICK_STAIRS
+	f	Lnet/minecraft/unmapped/C_4030632;	f_7769178		POLISHED_ANDESITE_STAIRS
+	f	Lnet/minecraft/unmapped/C_4030632;	f_7085265		DIORITE_STAIRS
+	f	Lnet/minecraft/unmapped/C_4030632;	f_0193159		POLISHED_GRANITE_SLAB
+	f	Lnet/minecraft/unmapped/C_4030632;	f_6390596		SMOOTH_RED_SANDSTONE_SLAB
+	f	Lnet/minecraft/unmapped/C_4030632;	f_6738500		MOSSY_STONE_BRICK_SLAB
+	f	Lnet/minecraft/unmapped/C_4030632;	f_0640743		POLISHED_DIORITE_SLAB
+	f	Lnet/minecraft/unmapped/C_4030632;	f_2331982		MOSSY_COBBLESTONE_SLAB
+	f	Lnet/minecraft/unmapped/C_4030632;	f_4790058		END_STONE_BRICK_SLAB
+	f	Lnet/minecraft/unmapped/C_4030632;	f_3978144		SMOOTH_SANDSTONE_SLAB
+	f	Lnet/minecraft/unmapped/C_4030632;	f_1173578		SMOOTH_QUARTZ_SLAB
+	f	Lnet/minecraft/unmapped/C_4030632;	f_9846714		GRANITE_SLAB
+	f	Lnet/minecraft/unmapped/C_4030632;	f_7684454		ANDESITE_SLAB
+	f	Lnet/minecraft/unmapped/C_4030632;	f_3264566		RED_NETHER_BRICK_SLAB
+	f	Lnet/minecraft/unmapped/C_4030632;	f_5773598		POLISHED_ANDESITE_SLAB
+	f	Lnet/minecraft/unmapped/C_4030632;	f_5856676		DIORITE_SLAB
+	f	Lnet/minecraft/unmapped/C_4030632;	f_5488104		BRICK_WALL
+	f	Lnet/minecraft/unmapped/C_4030632;	f_1179272		PRISMARINE_WALL
+	f	Lnet/minecraft/unmapped/C_4030632;	f_8122838		RED_SANDSTONE_WALL
+	f	Lnet/minecraft/unmapped/C_4030632;	f_5417874		MOSSY_STONE_BRICK_WALL
+	f	Lnet/minecraft/unmapped/C_4030632;	f_4204958		GRANITE_WALL
+	f	Lnet/minecraft/unmapped/C_4030632;	f_5168673		STONE_BRICK_WALL
+	f	Lnet/minecraft/unmapped/C_4030632;	f_8427643		NETHER_BRICK_WALL
+	f	Lnet/minecraft/unmapped/C_4030632;	f_9886000		ANDESITE_WALL
+	f	Lnet/minecraft/unmapped/C_4030632;	f_8681120		RED_NETHER_BRICK_WALL
+	f	Lnet/minecraft/unmapped/C_4030632;	f_0195436		SANDSTONE_WALL
+	f	Lnet/minecraft/unmapped/C_4030632;	f_4455853		END_STONE_BRICK_WALL
+	f	Lnet/minecraft/unmapped/C_4030632;	f_5289944		DIORITE_WALL
+	f	Lnet/minecraft/unmapped/C_4030632;	f_5821721		IRON_DOOR
+	f	Lnet/minecraft/unmapped/C_4030632;	f_5141778		OAK_DOOR
+	f	Lnet/minecraft/unmapped/C_4030632;	f_0170235		SPRUCE_DOOR
+	f	Lnet/minecraft/unmapped/C_4030632;	f_0511425		BIRCH_DOOR
+	f	Lnet/minecraft/unmapped/C_4030632;	f_2184581		JUNGLE_DOOR
+	f	Lnet/minecraft/unmapped/C_4030632;	f_0678844		ACACIA_DOOR
+	f	Lnet/minecraft/unmapped/C_4030632;	f_9683060		DARK_OAK_DOOR
+	f	Lnet/minecraft/unmapped/C_4030632;	f_4531096		REPEATER
+	f	Lnet/minecraft/unmapped/C_4030632;	f_3678033		COMPARATOR
+	f	Lnet/minecraft/unmapped/C_4030632;	f_7136484		STRUCTURE_BLOCK
+	f	Lnet/minecraft/unmapped/C_4030632;	f_1979895		SPRUCE_SIGN
+	f	Lnet/minecraft/unmapped/C_4030632;	f_9921372		BIRCH_SIGN
+	f	Lnet/minecraft/unmapped/C_4030632;	f_1592891		ACACIA_SIGN
+	f	Lnet/minecraft/unmapped/C_4030632;	f_1531070		JUNGLE_SIGN
+	f	Lnet/minecraft/unmapped/C_4030632;	f_8030330		DARK_OAK_SIGN
+	f	Lnet/minecraft/unmapped/C_4030632;	f_2301522		SUGAR_CANE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_7863359		KELP
+	f	Lnet/minecraft/unmapped/C_4030632;	f_9146359		DRIED_KELP_BLOCK
+	f	Lnet/minecraft/unmapped/C_4030632;	f_8362984		BAMBOO
+	f	Lnet/minecraft/unmapped/C_4030632;	f_8029727		BLUE_DYE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_2915220		BROWN_DYE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_7947708		CAKE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_5248075		ORANGE_BED
+	f	Lnet/minecraft/unmapped/C_4030632;	f_4005864		MAGENTA_BED
+	f	Lnet/minecraft/unmapped/C_4030632;	f_4048673		BREWING_STAND
+	f	Lnet/minecraft/unmapped/C_4030632;	f_5756895		CAULDRON
+	f	Lnet/minecraft/unmapped/C_4030632;	f_1672147		DROWNED_SPAWN_EGG
+	f	Lnet/minecraft/unmapped/C_4030632;	f_1929792		RAVAGER_SPAWN_EGG
+	f	Lnet/minecraft/unmapped/C_4030632;	f_2908633		PANDA_SPAWN_EGG
+	f	Lnet/minecraft/unmapped/C_4030632;	f_4185394		PILLAGER_SPAWN_EGG
+	f	Lnet/minecraft/unmapped/C_4030632;	f_8697563		FLOWER_POT
+	f	Lnet/minecraft/unmapped/C_4030632;	f_2929280		CROSSBOW
+	f	Lnet/minecraft/unmapped/C_4030632;	f_7941826		SUSPICIOUS_STEW
+	f	Lnet/minecraft/unmapped/C_4030632;	f_2354563		LOOM
+	f	Lnet/minecraft/unmapped/C_4030632;	f_7045131		FLOWER_BANNER_PATTERN
+	f	Lnet/minecraft/unmapped/C_4030632;	f_7264053		CREEPER_BANNER_PATTERN
+	f	Lnet/minecraft/unmapped/C_4030632;	f_0298347		SKULL_BANNER_PATTERN
+	f	Lnet/minecraft/unmapped/C_4030632;	f_6643377		MOJANG_BANNER_PATTERN
+	f	Lnet/minecraft/unmapped/C_4030632;	f_9509175	SIGN	OAK_SIGN
+	f	Lnet/minecraft/unmapped/C_4030632;	f_5412856	MELON	MELON_SLICE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_7840723	DANDELION_YELLOW	YELLOW_DYE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_3723344	CACTUS_GREEN	GREEN_DYE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_9009393	ROSE_RED	RED_DYE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_5656223	ORANGE_BED	BLACK_DYE
+	f	Lnet/minecraft/unmapped/C_4030632;	f_9880538	MAGENTA_BED	WHITE_DYE
 	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_4030632;	m_4032152	getOrThrow	
 		p	0		key	
 	m	(Lnet/minecraft/unmapped/C_3635204;)Lnet/minecraft/unmapped/C_4030632;	m_5792329		m_5792329
@@ -5561,8 +5570,8 @@ c	net/minecraft/unmapped/C_6490875
 		p	8			p_8
 		p	9			p_9
 c	net/minecraft/unmapped/C_0529894
-	f	Lnet/minecraft/unmapped/C_0529894;	f_0614438		f_0614438
-	f	Lnet/minecraft/unmapped/C_0529894;	f_9399542		f_9399542
+	f	Lnet/minecraft/unmapped/C_0529894;	f_0614438		BAMBOO
+	f	Lnet/minecraft/unmapped/C_0529894;	f_9399542		BAMBOO_SAPLING
 c	net/minecraft/unmapped/C_1231004
 	m	([Lnet/minecraft/unmapped/C_3735648;)V	<init>	<init>	
 		p	1		p_1	
@@ -7167,14 +7176,14 @@ c	net/minecraft/unmapped/C_9034508$C_4154009		C_4154009
 	m	(Lnet/minecraft/unmapped/C_5199647$C_4630898;)Ljava/lang/Object;	m_3259801		m_3259801
 		p	1			p_1
 c	net/minecraft/unmapped/C_9221482
-	f	Lnet/minecraft/unmapped/C_7721249;	f_4114778		f_4114778
-	f	Lnet/minecraft/unmapped/C_7721249;	f_3743523		f_3743523
-	f	Lnet/minecraft/unmapped/C_7721249;	f_2016614		f_2016614
-	f	Lnet/minecraft/unmapped/C_7721249;	f_3596308		f_3596308
-	f	Lnet/minecraft/unmapped/C_7721249;	f_7831711		f_7831711
-	f	Lnet/minecraft/unmapped/C_7721249;	f_7626673		f_7626673
-	f	Lnet/minecraft/unmapped/C_7721249;	f_0010335		f_0010335
-	f	Lnet/minecraft/unmapped/C_7721249;	f_8894987		f_8894987
+	f	Lnet/minecraft/unmapped/C_7721249;	f_4114778		BLOCK_BAMBOO_BREAK
+	f	Lnet/minecraft/unmapped/C_7721249;	f_3743523		BLOCK_BAMBOO_FALL
+	f	Lnet/minecraft/unmapped/C_7721249;	f_2016614		BLOCK_BAMBOO_HIT
+	f	Lnet/minecraft/unmapped/C_7721249;	f_3596308		BLOCK_BAMBOO_PLACE
+	f	Lnet/minecraft/unmapped/C_7721249;	f_7831711		BLOCK_BAMBOO_STEP
+	f	Lnet/minecraft/unmapped/C_7721249;	f_7626673		BLOCK_BAMBOO_SAPLING_BREAK
+	f	Lnet/minecraft/unmapped/C_7721249;	f_0010335		BLOCK_BAMBOO_SAPLING_HIT
+	f	Lnet/minecraft/unmapped/C_7721249;	f_8894987		BLOCK_BAMBOO_SAPLING_PLACE
 	f	Lnet/minecraft/unmapped/C_7721249;	f_7990246		f_7990246
 	f	Lnet/minecraft/unmapped/C_7721249;	f_5016456		f_5016456
 	f	Lnet/minecraft/unmapped/C_7721249;	f_6346070		f_6346070
@@ -8733,7 +8742,7 @@ c	net/minecraft/unmapped/C_9991912
 		p	0			p_0
 c	net/minecraft/unmapped/C_1951451
 	f	Lnet/minecraft/unmapped/C_1951451$C_7487928;	f_7939878	BANNER_ADD_PATTERN	
-	f	Lnet/minecraft/unmapped/C_1951451$C_7487928;	f_3158822		f_3158822
+	f	Lnet/minecraft/unmapped/C_1951451$C_7487928;	f_3158822		SUSPICIOUS_STEW
 c	net/minecraft/unmapped/C_0852140
 	f	Lnet/minecraft/unmapped/C_9086953;	f_7578940		f_7578940
 	f	Lnet/minecraft/unmapped/C_9086953;	f_3017628		f_3017628
@@ -9578,7 +9587,7 @@ c	net/minecraft/unmapped/C_3331146$C_8660221		C_8660221
 		p	6			p_6
 c	net/minecraft/unmapped/C_3369986
 	m	()I	m_9222502	getSeaLevel	
-c	net/minecraft/unmapped/C_3390067
+c	net/minecraft/unmapped/C_3390067	net/minecraft/world/gen/feature/FlowerConfiguration	net/minecraft/item/SignItem
 	m	(Lnet/minecraft/unmapped/C_1033329;Lnet/minecraft/unmapped/C_9151514;Lnet/minecraft/unmapped/C_5701379;)V	<init>	<init>	
 		p	1		feature	
 		p	2		decorator	
@@ -11229,8 +11238,8 @@ c	net/minecraft/unmapped/C_9695581
 	m	(Lcom/mojang/datafixers/Dynamic;)Lnet/minecraft/unmapped/C_9695581;	m_1009688		m_1009688
 		p	0			p_0
 c	net/minecraft/unmapped/C_0802816
-	f	Lnet/minecraft/unmapped/C_7077852;	f_9982258		f_9982258
-	f	Lnet/minecraft/unmapped/C_2925148;	f_6959802		f_6959802
+	f	Lnet/minecraft/unmapped/C_7077852;	f_9982258		AGE_1
+	f	Lnet/minecraft/unmapped/C_2925148;	f_6959802		BAMBOO_LEAVES
 c	net/minecraft/unmapped/C_5208378
 	f	Lnet/minecraft/unmapped/C_0636026;	f_9818751	delegate	
 	f	Lnet/minecraft/unmapped/C_6755599;	f_9818751		delegate
@@ -11854,7 +11863,7 @@ c	net/minecraft/unmapped/C_0080226		net/minecraft/unmapped/C_0080226
 		p	1			p_1
 	m	(Lcom/mojang/datafixers/schemas/Schema;)Lcom/mojang/datafixers/types/templates/TypeTemplate;	m_3295914		m_3295914
 		p	0			p_0
-c	net/minecraft/unmapped/C_0109117		net/minecraft/unmapped/C_0109117
+c	net/minecraft/unmapped/C_0109117		net/minecraft/crafting/recipe/SuspiciousStewRecipe
 	m	(Lnet/minecraft/unmapped/C_0561170;)V	<init>		<init>
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_4390289;Lnet/minecraft/unmapped/C_3906126;)Z	m_7723385		m_7723385
@@ -12414,7 +12423,7 @@ c	net/minecraft/unmapped/C_1166271$C_0165189		C_0165189
 	m	()V	m_5835611		m_5835611
 	m	(Lnet/minecraft/unmapped/C_1166271$C_0165189;)Lit/unimi/dsi/fastutil/longs/Long2ByteMap;	m_6566025		m_6566025
 		p	0			p_0
-c	net/minecraft/unmapped/C_1170965		net/minecraft/unmapped/C_1170965
+c	net/minecraft/unmapped/C_1170965		net/minecraft/world/gen/feature/FlowerConfiguration
 	m	()V	<init>		<init>
 	m	(Lcom/mojang/datafixers/Dynamic;)Lnet/minecraft/unmapped/C_1170965;	m_4910389		m_4910389
 		p	0			p_0
@@ -13333,7 +13342,7 @@ c	net/minecraft/unmapped/C_3152949		net/minecraft/unmapped/C_3152949
 		p	4			p_4
 	m	(Lcom/mojang/datafixers/Dynamic;)Lnet/minecraft/unmapped/C_3152949;	m_3680612		m_3680612
 		p	0			p_0
-c	net/minecraft/unmapped/C_3155824		net/minecraft/unmapped/C_3155824
+c	net/minecraft/unmapped/C_3155824		net/minecraft/block/LoomBlock
 	m	(Lnet/minecraft/unmapped/C_3635204$C_6799794;)V	<init>		<init>
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_4360192;Lnet/minecraft/unmapped/C_3544601;FFF)Z	m_2543653		m_2543653
@@ -13610,13 +13619,13 @@ c	net/minecraft/unmapped/C_3564615		net/minecraft/unmapped/C_3564615
 		p	1			p_1
 		p	2			p_2
 	m	()Z	m_1706147		m_1706147
-c	net/minecraft/unmapped/C_3667978		net/minecraft/unmapped/C_3667978
+c	net/minecraft/unmapped/C_3667978		net/minecraft/block/BambooBlock
 	f	Lnet/minecraft/unmapped/C_7345216;	f_8694445		f_8694445
 	f	Lnet/minecraft/unmapped/C_7345216;	f_2581951		f_2581951
 	f	Lnet/minecraft/unmapped/C_7345216;	f_5639777		f_5639777
-	f	Lnet/minecraft/unmapped/C_7077852;	f_0427641		f_0427641
-	f	Lnet/minecraft/unmapped/C_2925148;	f_8917523		f_8917523
-	f	Lnet/minecraft/unmapped/C_7077852;	f_6357907		f_6357907
+	f	Lnet/minecraft/unmapped/C_7077852;	f_0427641		AGE
+	f	Lnet/minecraft/unmapped/C_2925148;	f_8917523		LEAVES
+	f	Lnet/minecraft/unmapped/C_7077852;	f_6357907		STAGE
 	m	(Lnet/minecraft/unmapped/C_3635204$C_6799794;)V	<init>		<init>
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_9264598$C_1068461;)V	m_3079613		m_3079613
@@ -13822,8 +13831,8 @@ c	net/minecraft/unmapped/C_4064999		net/minecraft/unmapped/C_4064999
 	m	(Ljava/util/Random;Lnet/minecraft/unmapped/C_6707278;)Lnet/minecraft/unmapped/C_2441996;	m_5436903		m_5436903
 		p	1			p_1
 		p	2			p_2
-c	net/minecraft/unmapped/C_4103991		net/minecraft/unmapped/C_4103991
-	f	Lnet/minecraft/unmapped/C_7345216;	f_0997449		f_0997449
+c	net/minecraft/unmapped/C_4103991		net/minecraft/block/BambooSaplingBlock
+	f	Lnet/minecraft/unmapped/C_7345216;	f_0997449		SHAPE
 	m	(Lnet/minecraft/unmapped/C_3635204$C_6799794;)V	<init>		<init>
 		p	1			p_1
 	m	()Lnet/minecraft/unmapped/C_3635204$C_5604282;	m_0622199		m_0622199
@@ -14956,9 +14965,9 @@ c	net/minecraft/unmapped/C_6218047$C_8537922		C_8537922
 		p	2			p_2
 	m	(Lnet/minecraft/unmapped/C_2800860;)Lnet/minecraft/unmapped/C_6218047;	m_0999998		m_0999998
 		p	1			p_1
-c	net/minecraft/unmapped/C_6332277		net/minecraft/unmapped/C_6332277
+c	net/minecraft/unmapped/C_6332277		net/minecraft/block/WitherFlowerBlock
 	m	(Lnet/minecraft/unmapped/C_0591668;Lnet/minecraft/unmapped/C_3635204$C_6799794;)V	<init>		<init>
-		p	1			p_1
+		p	1			effect
 		p	2			p_2
 	m	(Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_6707278;)Z	m_0351269		m_0351269
 		p	1			p_1
@@ -15240,11 +15249,11 @@ c	net/minecraft/unmapped/C_7530082		net/minecraft/unmapped/C_7530082
 	m	(Ljava/lang/Object;)Lcom/mojang/brigadier/Message;	m_8253704		m_8253704
 		p	0			p_0
 	m	()V	<clinit>		<clinit>
-c	net/minecraft/unmapped/C_7580854		net/minecraft/unmapped/C_7580854
+c	net/minecraft/unmapped/C_7580854		net/minecraft/block/state/property/BambooLeaves
 	f	Lnet/minecraft/unmapped/C_7580854;	f_0126596		f_0126596
 	f	Lnet/minecraft/unmapped/C_7580854;	f_3503324		f_3503324
 	f	Lnet/minecraft/unmapped/C_7580854;	f_6119958		f_6119958
-	f	Ljava/lang/String;	f_2648473		f_2648473
+	f	Ljava/lang/String;	f_2648473		name
 	f	[Lnet/minecraft/unmapped/C_7580854;	f_2334758		f_2334758
 	m	()[Lnet/minecraft/unmapped/C_7580854;	values		values
 	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_7580854;	valueOf		valueOf
@@ -15252,7 +15261,7 @@ c	net/minecraft/unmapped/C_7580854		net/minecraft/unmapped/C_7580854
 	m	(Ljava/lang/String;ILjava/lang/String;)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
-		p	3			p_3
+		p	3			name
 	m	()Ljava/lang/String;	toString		toString
 	m	()Ljava/lang/String;	m_7063224		m_7063224
 	m	()V	<clinit>		<clinit>
@@ -15797,18 +15806,18 @@ c	net/minecraft/unmapped/C_9452991$C_0519717		C_0519717
 	m	(Lnet/minecraft/unmapped/C_2800860;Lnet/minecraft/unmapped/C_6218047;)V	m_6059591		m_6059591
 		p	1			p_1
 		p	2			p_2
-c	net/minecraft/unmapped/C_9468840		net/minecraft/unmapped/C_9468840
-	f	Lnet/minecraft/unmapped/C_5746930;	f_7235448		f_7235448
+c	net/minecraft/unmapped/C_9468840		net/minecraft/item/BannerPatternItem
+	f	Lnet/minecraft/unmapped/C_5746930;	f_7235448		pattern
 	m	(Lnet/minecraft/unmapped/C_5746930;Lnet/minecraft/unmapped/C_4030632$C_7918174;)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-	m	()Lnet/minecraft/unmapped/C_5746930;	m_4416446		m_4416446
+		p	1			pattern
+		p	2			properties
+	m	()Lnet/minecraft/unmapped/C_5746930;	m_4416446		getPattern
 	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_3906126;Ljava/util/List;Lnet/minecraft/unmapped/C_2204683;)V	m_8399075		m_8399075
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
-	m	()Lnet/minecraft/unmapped/C_9550253;	m_0709060		m_0709060
+	m	()Lnet/minecraft/unmapped/C_9550253;	m_0709060		getDescription
 c	net/minecraft/unmapped/C_9605183		net/minecraft/unmapped/C_9605183
 	f	Lnet/minecraft/unmapped/C_4288772;	f_5582438		f_5582438
 	m	(Lnet/minecraft/unmapped/C_4288772;)V	<init>		<init>
@@ -16038,14 +16047,14 @@ c	net/minecraft/unmapped/C_9800569		net/minecraft/unmapped/C_9800569
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
-c	net/minecraft/unmapped/C_9822430		net/minecraft/unmapped/C_9822430
+c	net/minecraft/unmapped/C_9822430		net/minecraft/item/SuspiciousStewItem
 	m	(ILnet/minecraft/unmapped/C_4030632$C_7918174;)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
-	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_0591668;I)V	m_4150867		m_4150867
-		p	0			p_0
-		p	1			p_1
-		p	2			p_2
+	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_0591668;I)V	m_4150867		addEffectToItem
+		p	0			item
+		p	1			effect
+		p	2			duration
 	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_1013763;)Lnet/minecraft/unmapped/C_2750078;	m_2093079		m_2093079
 		p	1			p_1
 		p	2			p_2
