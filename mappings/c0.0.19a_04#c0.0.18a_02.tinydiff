@@ -4,7 +4,7 @@ c	net/minecraft/unmapped/C_0456473
 	m	(IIZ)V	<init>	<init>	
 		p	1		p_1	
 		p	2		p_2	
-		p	3		p_3	
+		p	3		culling	
 	m	(Lcom/mojang/minecraft/level/Level;IIIII)Z	m_8199947	m_8199947	
 		p	1		p_1	
 		p	2		p_2	
@@ -49,12 +49,12 @@ c	net/minecraft/unmapped/C_7450537	net/minecraft/block/SpongeBlock
 		p	3		p_3	
 		p	4		p_4	
 c	net/minecraft/unmapped/C_8443484	net/minecraft/block/TransparentBlock	
-	f	Z	f_1686264	f_1686264	
+	f	Z	f_1686264	culling	
 	m	()Z	m_1944525	m_1944525	
 	m	(IIZ)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
+		p	1		id	
+		p	2		sprite	
+		p	3		culling	
 	m	()Z	m_3237591	m_3237591	
 	m	(Lcom/mojang/minecraft/level/Level;IIIII)Z	m_8199947	m_8199947	
 		p	1		p_1	
@@ -88,13 +88,13 @@ c	net/minecraft/unmapped/C_3544790	net/minecraft/client/render/texture/DynamicTe
 c	net/minecraft/unmapped/C_3699792	net/minecraft/client/gui/GameGui	
 	f	Ljava/util/List;	f_9851646	chatMessages	
 	f	Lnet/minecraft/client/Minecraft;	f_5266056	minecraft	
-	f	I	f_0775750	f_0775750	
-	f	I	f_8519063	f_8519063	
+	f	I	f_0775750	width	
+	f	I	f_8519063	height	
 	m	(Lnet/minecraft/client/Minecraft;II)V	<init>	<init>	
 		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-	m	()V	m_1122306	m_1122306	
+		p	2		width	
+		p	3		height	
+	m	()V	m_1122306	render	
 	m	(IIIIII)V	m_6628097	m_6628097	
 		p	0		p_0	
 		p	1		p_1	
@@ -145,7 +145,7 @@ c	com/mojang/minecraft/level/Level
 c	com/mojang/minecraft/net/NetworkPlayer
 	f	I	tickCount	tickCount	
 c	net/minecraft/unmapped/C_3464647
-	f	Z	f_1094396	f_1094396	
+	f	Z	f_1094396	loaded	
 c	net/minecraft/unmapped/C_7898033
 	m	(FFFFF)V	m_2584069	m_2584069	
 		p	1		p_1	

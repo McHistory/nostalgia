@@ -1098,11 +1098,12 @@ c	net/minecraft/unmapped/C_0559439	net/minecraft/block/LeavesBlock
 		p	3		p_3
 		p	4		p_4
 		p	5		p_5
-c	net/minecraft/unmapped/C_0611937	net/minecraft/world/gen/noise/ImprovedNoiseGenerator
+c	net/minecraft/unmapped/C_0611937	net/minecraft/world/gen/noise/ImprovedNoise
 	f	[I	f_3721058	permutations
-	f	D	f_9098504	x
-	f	D	f_6604140	y
-	f	D	f_2617120	z
+		c	A randomly generated permutation table used to determine\nthe gradient vector for each grid intersection.
+	f	D	f_9098504	offsetX
+	f	D	f_6604140	offsetY
+	f	D	f_2617120	offsetZ
 	m	()V	<init>	<init>
 	m	(Ljava/util/Random;)V	<init>	<init>
 		p	1		random
@@ -1114,18 +1115,20 @@ c	net/minecraft/unmapped/C_0611937	net/minecraft/world/gen/noise/ImprovedNoiseGe
 		p	1		delta
 		p	3		min
 		p	5		max
-	m	(IDD)D	m_6343956	gradient
+	m	(IDD)D	m_6343956	gradientDot
+		c	Computes the dot product of the gradient vector at a grid point and the vector {@code x, 0, z}.\nThe gradient vector is identified by the given hash of the grid point.
 		p	1		hash
 		p	2		x
 		p	4		z
-	m	(IDDD)D	m_2595755	gradient
+	m	(IDDD)D	m_2595755	gradientDot
+		c	Computes the dot product of the gradient vector at a grid point and the vector {@code x, y, z}.\nThe gradient vector is identified by the given hash of the grid point.
 		p	1		hash
 		p	2		x
 		p	4		y
 		p	6		z
 	m	(DD)D	m_9636077	getValue
 		p	1		x
-		p	3		z
+		p	3		y
 	m	([DDDDIIIDDDD)V	m_8499841	add
 		p	1		values
 		p	2		x
@@ -1137,7 +1140,7 @@ c	net/minecraft/unmapped/C_0611937	net/minecraft/world/gen/noise/ImprovedNoiseGe
 		p	11		scaleX
 		p	13		scaleY
 		p	15		scaleZ
-		p	17		scaleExponent
+		p	17		noiseScale
 c	net/minecraft/unmapped/C_0619399	net/minecraft/client/gui/screen/inventory/menu/FurnaceScreen
 	f	Lnet/minecraft/unmapped/C_1196485;	f_0624650	furnace
 	m	(Lnet/minecraft/unmapped/C_4286596;Lnet/minecraft/unmapped/C_1196485;)V	<init>	<init>
@@ -4564,8 +4567,8 @@ c	net/minecraft/unmapped/C_3521779	net/minecraft/client/render/model/entity/Skel
 	m	()V	<init>	<init>
 c	net/minecraft/unmapped/C_3540933	net/minecraft/client/render/texture/HttpTexture
 	f	Ljava/awt/image/BufferedImage;	f_1163116	image
-	f	I	f_0283885	requestCount
-	f	I	f_3064849	removedCount
+	f	I	f_0283885	count
+	f	I	f_3064849	id
 	f	Z	f_6629647	uploaded
 	m	(Ljava/lang/String;Lnet/minecraft/unmapped/C_5556060;)V	<init>	<init>
 		p	1		url
@@ -6001,10 +6004,10 @@ c	net/minecraft/unmapped/C_3906126	net/minecraft/world/World
 		p	1		x
 		p	2		y
 		p	3		z
-	m	(Lnet/minecraft/unmapped/C_6385858;D)Lnet/minecraft/unmapped/C_5009044;	m_8874150	getClosestPlayer
+	m	(Lnet/minecraft/unmapped/C_6385858;D)Lnet/minecraft/unmapped/C_5009044;	m_8874150	getNearestPlayer
 		p	1		entity
 		p	2		range
-	m	(DDDD)Lnet/minecraft/unmapped/C_5009044;	m_3078835	getClosestPlayer
+	m	(DDDD)Lnet/minecraft/unmapped/C_5009044;	m_3078835	getNearestPlayer
 		p	1		x
 		p	3		y
 		p	5		z
@@ -6337,8 +6340,8 @@ c	net/minecraft/unmapped/C_4078372	net/minecraft/world/gen/chunk/OverworldChunkG
 	f	Lnet/minecraft/unmapped/C_6205974;	f_5435487	perlinNoise1
 	f	Lnet/minecraft/unmapped/C_6205974;	f_6330805	perlinNoise2
 	f	Lnet/minecraft/unmapped/C_6205974;	f_4543428	perlinNoise3
-	f	Lnet/minecraft/unmapped/C_6205974;	f_6725025	floatingIslandScale
-	f	Lnet/minecraft/unmapped/C_6205974;	f_2236408	floatingIslandNoise
+	f	Lnet/minecraft/unmapped/C_6205974;	f_6725025	scaleNoise
+	f	Lnet/minecraft/unmapped/C_6205974;	f_2236408	depthNoise
 	f	Lnet/minecraft/unmapped/C_6205974;	f_9290433	forestNoise
 	f	Lnet/minecraft/unmapped/C_3906126;	f_5278555	world
 	f	[D	f_5835085	heightMap
@@ -7020,7 +7023,7 @@ c	net/minecraft/unmapped/C_4560329	net/minecraft/client/sound/Sounds
 	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_0488196;	m_3102380	getRandom
 		p	1		path
 	m	()Lnet/minecraft/unmapped/C_0488196;	m_1653335	getRandom
-c	net/minecraft/unmapped/C_4561907	net/minecraft/world/gen/noise/NoiseGenerator
+c	net/minecraft/unmapped/C_4561907	net/minecraft/world/gen/noise/Noise
 	m	()V	<init>	<init>
 c	net/minecraft/unmapped/C_4561926	net/minecraft/network/packet/AddItemPacket
 	f	I	f_6746775	id
@@ -8303,7 +8306,7 @@ c	net/minecraft/unmapped/C_5586685$C_4814958	net/minecraft/isom/IsomPreviewCanva
 		p	1		p_1
 		p	2		p_2
 	m	()V	<clinit>	<clinit>
-c	net/minecraft/unmapped/C_5587398	net/minecraft/world/gen/noise/PerlinSimplexNoiseGenerator
+c	net/minecraft/unmapped/C_5587398	net/minecraft/world/gen/noise/PerlinSimplexNoise
 	f	[Lnet/minecraft/unmapped/C_6668603;	f_8552802	noiseLevels
 	f	I	f_3662090	levels
 	m	(Ljava/util/Random;I)V	<init>	<init>
@@ -8312,22 +8315,22 @@ c	net/minecraft/unmapped/C_5587398	net/minecraft/world/gen/noise/PerlinSimplexNo
 	m	([DDDIIDDD)[D	m_0409990	getRegion
 		p	1		values
 		p	2		x
-		p	4		z
+		p	4		y
 		p	6		sizeX
-		p	7		sizeZ
+		p	7		sizeY
 		p	8		scaleX
-		p	10		scaleZ
+		p	10		scaleY
 		p	12		scaleExponent
 	m	([DDDIIDDDD)[D	m_8911618	getRegion
 		p	1		values
 		p	2		x
-		p	4		z
+		p	4		y
 		p	6		sizeX
-		p	7		sizeZ
+		p	7		sizeY
 		p	8		scaleX
-		p	10		scaleZ
+		p	10		scaleY
 		p	12		scaleExponentX
-		p	14		scaleExponentZ
+		p	14		scaleExponentY
 c	net/minecraft/unmapped/C_5590212	net/minecraft/item/AxeItem
 	f	[Lnet/minecraft/unmapped/C_3635204;	f_2206537	EFFECTIVE_BLOCKS
 		c	The items that are broken more efficiently with an axe
@@ -8678,7 +8681,7 @@ c	net/minecraft/unmapped/C_6193699	net/minecraft/client/gui/screen/WorldSaveConf
 		p	1		p_1
 		p	2		p_2
 		p	3		p_3
-c	net/minecraft/unmapped/C_6205974	net/minecraft/world/gen/noise/PerlinNoiseGenerator
+c	net/minecraft/unmapped/C_6205974	net/minecraft/world/gen/noise/PerlinNoise
 	f	[Lnet/minecraft/unmapped/C_0611937;	f_4448671	noiseLevels
 	f	I	f_6571600	levels
 	m	(Ljava/util/Random;I)V	<init>	<init>
@@ -8686,7 +8689,7 @@ c	net/minecraft/unmapped/C_6205974	net/minecraft/world/gen/noise/PerlinNoiseGene
 		p	2		levels
 	m	(DD)D	m_1189144	getValue
 		p	1		x
-		p	3		z
+		p	3		y
 	m	([DDDDIIIDDD)[D	m_2945258	getRegion
 		p	1		values
 		p	2		x
@@ -8704,9 +8707,9 @@ c	net/minecraft/unmapped/C_6205974	net/minecraft/world/gen/noise/PerlinNoiseGene
 		p	3		z
 		p	4		sizeX
 		p	5		sizeZ
-		p	6		saleX
+		p	6		scaleX
 		p	8		scaleZ
-		p	10		scaleExponent
+		p	10		p_10
 c	net/minecraft/unmapped/C_6211737	net/minecraft/client/render/model/entity/CowModel
 	f	Lnet/minecraft/unmapped/C_0289174;	f_7245088	udder
 	f	Lnet/minecraft/unmapped/C_0289174;	f_6866443	leftHorn
@@ -9271,31 +9274,33 @@ c	net/minecraft/unmapped/C_6664676	net/minecraft/block/BlockWithBlockEntity
 		p	4		p_4
 	m	()Lnet/minecraft/unmapped/C_2074023;	m_0502820	createBlockEntity
 c	net/minecraft/unmapped/C_6668603	net/minecraft/world/gen/noise/SimplexNoise
-	f	[[I	f_8224262	f_8224262
+	f	[[I	f_8224262	GRADIENTS
 	f	[I	f_7243905	permutations
-	f	D	f_7649317	x
-	f	D	f_2647257	y
-	f	D	f_4945832	z
+		c	A randomly generated permutation table used to determine\nthe gradient vector for each grid intersection.
+	f	D	f_7649317	offsetX
+	f	D	f_2647257	offsetY
+	f	D	f_4945832	offsetZ
 	f	D	f_5088452	F2
 	f	D	f_4045714	G2
 	m	()V	<init>	<init>
 	m	(Ljava/util/Random;)V	<init>	<init>
 		p	1		random
-	m	(D)I	m_6635210	floor
+	m	(D)I	m_6635210	fastFloor
 		p	0		x
 	m	([IDD)D	m_1516795	dot
-		p	0		a
-		p	1		b1
-		p	3		b2
-	m	([DDDIIDDD)V	m_7268602	getValue
+		c	Computes the dot product of the given gradient vector and the vector {@code x, y}.
+		p	0		gradient
+		p	1		x
+		p	3		y
+	m	([DDDIIDDD)V	m_7268602	add
 		p	1		values
 		p	2		x
-		p	4		z
+		p	4		y
 		p	6		sizeX
-		p	7		sizeZ
+		p	7		sizeY
 		p	8		scaleX
-		p	10		scaleZ
-		p	12		scaleExponent
+		p	10		scaleY
+		p	12		noiseScale
 	m	()V	<clinit>	<clinit>
 c	net/minecraft/unmapped/C_6674892	net/minecraft/client/render/model/block/entity/SignModel
 	f	Lnet/minecraft/unmapped/C_0289174;	f_7663676	board
@@ -11803,7 +11808,7 @@ c	net/minecraft/unmapped/C_8905061	net/minecraft/client/entity/particle/Particle
 		p	5		dz
 		p	6		forwards
 		p	7		sideways
-	m	()I	m_5603541	getTextureAtlas
+	m	()I	m_5603541	getAtlasType
 	m	(Lnet/minecraft/unmapped/C_2800860;)V	m_4059289	m_4059289
 		p	1		p_1
 	m	(Lnet/minecraft/unmapped/C_2800860;)V	m_9618795	m_9618795

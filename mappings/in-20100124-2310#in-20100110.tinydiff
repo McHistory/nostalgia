@@ -480,8 +480,8 @@ c	net/minecraft/client/Minecraft
 	m	(II)V	m_2180115	resize	
 		p	1		width	
 		p	2		height	
-	m	(Ljava/lang/String;)V	m_0572353		m_0572353
-		p	0			p_0
+	m	(Ljava/lang/String;)V	m_0572353		logGlError
+		p	0			message
 c	net/minecraft/unmapped/C_0823197	net/minecraft/client/entity/particle/ExplosionParticle	
 	m	(Lnet/minecraft/unmapped/C_2334550;FFFFFF)V	m_7521183	m_7521183	
 		p	1		p_1	
@@ -521,16 +521,16 @@ c	net/minecraft/unmapped/C_3466301
 		p	2		y	
 		p	3		z	
 c	net/minecraft/unmapped/C_3699792
-	f	I	f_0775750		f_0775750
-	f	I	f_8519063		f_8519063
+	f	I	f_0775750		width
+	f	I	f_8519063		height
 	m	(Lnet/minecraft/client/Minecraft;)V	<init>	<init>	
 		p	1		minecraft	
 	m	(F)V	m_0276783	render	
 		p	1		tickDelta	
 	m	(Lnet/minecraft/client/Minecraft;II)V	<init>		<init>
 		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+		p	2			width
+		p	3			height
 	m	()V	m_0276783		render
 c	net/minecraft/unmapped/C_3911481	net/minecraft/client/entity/particle/SmokeParticle	
 	m	(Lnet/minecraft/unmapped/C_2334550;FFFFFF)V	m_7521183	m_7521183	
@@ -663,7 +663,7 @@ c	net/minecraft/unmapped/C_7542541$C_7192378
 		p	3			p_3
 		p	4			p_4
 c	net/minecraft/unmapped/C_8191584	net/minecraft/client/render/entity/MobRenderer	
-	f	[Lnet/minecraft/unmapped/C_6942422;	f_9288344	f_9288344	
+	f	[Lnet/minecraft/unmapped/C_6942422;	f_9288344	models	
 	m	(Lnet/minecraft/unmapped/C_6385858;FFFFF)V	m_5501825	m_5501825	
 		p	1		p_1	
 		p	2		p_2	
@@ -684,7 +684,7 @@ c	net/minecraft/unmapped/C_8905061
 		p	1		p_1	
 c	net/minecraft/unmapped/C_9302567
 	f	Lnet/minecraft/unmapped/C_9610577;	f_1797121	dispatcher	
-	f	[Lnet/minecraft/unmapped/C_6942422;	f_7707208		f_7707208
+	f	[Lnet/minecraft/unmapped/C_6942422;	f_7707208		models
 	f	Lnet/minecraft/unmapped/C_3906126;	f_1797121		dispatcher
 	f	Lnet/minecraft/unmapped/C_3466301;	f_0998767		f_0998767
 	m	(Ljava/lang/String;)V	m_8417273	bindTexture	

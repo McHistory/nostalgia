@@ -1131,21 +1131,21 @@ c	net/minecraft/unmapped/C_3779718
 		p	1			image
 c	net/minecraft/unmapped/C_6347954
 	f	Lcom/google/common/base/Splitter;	f_7681935	COMMA_SPLITTER	
-	f	I	f_0267147		width
-	f	I	f_7850929		height
-	f	I	f_8955552		time
+	f	I	f_0267147		frameWidth
+	f	I	f_7850929		frameHeight
+	f	I	f_8955552		defaultFrameTime
 	m	()V	<clinit>	<clinit>	
 	m	(Ljava/util/List;)V	<init>		<init>
 		p	1			frames
 	m	(Ljava/util/List;III)V	<init>		<init>
 		p	1			frames
-		p	2			width
-		p	3			height
-		p	4			time
-	m	()I	m_9358871		getHeight
-	m	()I	m_6319900		getWidth
-	m	()I	m_9823987		getTime
-	m	(I)Z	m_3220723		usesNonDefaultFrameTime
+		p	2			frameWidth
+		p	3			frameHeight
+		p	4			defaultFrameTime
+	m	()I	m_9358871		getFrameHeight
+	m	()I	m_6319900		getFrameWidth
+	m	()I	m_9823987		getDefaultFrameTime
+	m	(I)Z	m_3220723		hasFrameTime
 		p	1			i
 c	net/minecraft/unmapped/C_6347954$C_6173837	AnimationFrame	
 	f	I	f_2503006	index	
@@ -1500,7 +1500,7 @@ c	net/minecraft/unmapped/C_6173837		net/minecraft/client/resource/metadata/Anima
 	m	(II)V	<init>		<init>
 		p	1			index
 		p	2			time
-	m	()Z	m_9469599		usesDefaultFrameTime
+	m	()Z	m_9469599		isTimeUnknown
 	m	()I	m_9811046		getTime
 	m	()I	m_3940289		getIndex
 c	net/minecraft/unmapped/C_9155254		net/minecraft/client/resource/metadata/serializer/AnimationMetadataSerializer
@@ -1509,22 +1509,22 @@ c	net/minecraft/unmapped/C_9155254		net/minecraft/client/resource/metadata/seria
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
-	m	(ILcom/google/gson/JsonElement;)Lnet/minecraft/unmapped/C_6173837;	m_9053103		deserializeAnimationFrame
-		p	1			frameIndex
-		p	2			jsonElement
+	m	(ILcom/google/gson/JsonElement;)Lnet/minecraft/unmapped/C_6173837;	m_9053103		deserializeFrame
+		p	1			index
+		p	2			json
 	m	(Lnet/minecraft/unmapped/C_6347954;Ljava/lang/reflect/Type;Lcom/google/gson/JsonSerializationContext;)Lcom/google/gson/JsonElement;	m_3906162		m_3906162
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 	m	()Ljava/lang/String;	m_2384264		m_2384264
 	m	(Lcom/google/gson/JsonElement;Ljava/lang/reflect/Type;Lcom/google/gson/JsonDeserializationContext;)Ljava/lang/Object;	deserialize		deserialize
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+		p	1			json
+		p	2			type
+		p	3			context
 	m	(Ljava/lang/Object;Ljava/lang/reflect/Type;Lcom/google/gson/JsonSerializationContext;)Lcom/google/gson/JsonElement;	serialize		serialize
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+		p	1			metadata
+		p	2			type
+		p	3			context
 c	net/minecraft/unmapped/C_9427820		net/minecraft/client/resource/pack/DirectoryResourcePack
 	f	Ljava/io/FileFilter;	f_9934180		DIRECTORY_FILTER
 	m	(Ljava/io/File;)V	<init>		<init>

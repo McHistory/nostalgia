@@ -1,0 +1,26 @@
+v2
+
+flag setblock_flag net/ornithemc/feather/constants/SetBlockFlags NOTIFY_NEIGHBORS
+flag setblock_flag net/ornithemc/feather/constants/SetBlockFlags NOTIFY_LISTENERS
+flag setblock_flag net/ornithemc/feather/constants/SetBlockFlags NO_REDRAW
+flag setblock_flag net/ornithemc/feather/constants/SetBlockFlags REDRAW_ON_MAIN_THREAD
+flag setblock_flag net/ornithemc/feather/constants/SetBlockFlags SUPPRESS_OBSERVER_UPDATES
+flag setblock_flag net/ornithemc/feather/constants/SetBlockFlags SUPPRESS_DROPS
+flag setblock_flag net/ornithemc/feather/constants/SetBlockFlags MOVED_BY_PISTON
+
+# 13w01a-1.6.4
+target_method net/minecraft/world/World setBlockWithMetadata (IIIIII)Z
+	param 5 setblock_flag
+
+# 13w36a-1.7.10
+target_method net/minecraft/world/World setBlockWithMetadata (IIILnet/minecraft/block/Block;II)Z
+	param 5 setblock_flag
+
+# 14w02a-14w27b
+target_method net/minecraft/world/World setBlockWithMetadata (Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/Block;II)Z
+	param 3 setblock_flag
+
+# 14w25a-17w46a
+target_method net/minecraft/world/World setBlockWithMetadata (Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/state/BlockState;I)Z
+	param 2 setblock_flag
+

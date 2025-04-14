@@ -16,7 +16,7 @@ c	net/minecraft/client/Minecraft
 	f	Ljava/util/List;	f_8477173	defaultResourcePacks	
 	f	Lnet/minecraft/unmapped/C_1296613;	f_6159368	resourceMetadataSerializerRegistry	
 	f	Lnet/minecraft/unmapped/C_8858101;	f_1329796	defaultResourcePack	
-	f	Z	f_2765940	f_2765940	
+	f	Z	f_2765940	logGlErrors	
 	f	J	f_8416520	lastNanoTime	
 	f	Z	f_6681513	pendingDebugCrash	
 	f	Lnet/minecraft/unmapped/C_0488071$C_8968247;	f_7067018		display
@@ -442,16 +442,16 @@ c	net/minecraft/unmapped/C_1021050
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_7131921;IIII)V	m_9054370		doLegacyTransparencyHack
 		p	0			image
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
+		p	1			u1
+		p	2			v1
+		p	3			u2
+		p	4			v2
 	m	(Lnet/minecraft/unmapped/C_7131921;IIII)V	m_3893255		setOpaque
-		p	0			p_0
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
+		p	0			image
+		p	1			u1
+		p	2			v1
+		p	3			u2
+		p	4			v2
 c	net/minecraft/unmapped/C_1044273
 	f	[Lorg/lwjgl/util/vector/Vector4f;	f_8040398	frustumPoints	
 	f	[Lnet/minecraft/unmapped/C_2900924;	f_8040398		frustumPoints
@@ -3508,20 +3508,21 @@ c	net/minecraft/unmapped/C_3374628$3171912
 	m	(Lnet/minecraft/unmapped/C_3374628;)V	<init>		<init>
 		p	1			p_1
 c	net/minecraft/unmapped/C_6088271
-	f	Ljava/util/Map;	f_3873032	spritesToLoad	
+	f	Ljava/util/Map;	f_3873032	sourcedSprites	
+		c	All sprites added to this texture atlas by the sprite source.	
 	f	Lnet/minecraft/unmapped/C_0561170;	f_8742392	MISSING_TEXTURE_ID	
-	f	Lnet/minecraft/unmapped/C_6082933;	f_8321401	loadCallback	
+	f	Lnet/minecraft/unmapped/C_6082933;	f_8321401	spriteSource	
 	f	Ljava/util/Set;	f_8445468		spritesToLoad
 	m	()V	m_3134138	loadMissingTexture	
 	m	(Ljava/lang/String;Lnet/minecraft/unmapped/C_6082933;)V	<init>	<init>	
 		p	1		path	
-		p	2		loadCallback	
+		p	2		spriteSource	
 	m	(Lnet/minecraft/unmapped/C_6577431;Lnet/minecraft/unmapped/C_6082933;)V	m_9937140	load	
 		p	1		resourceManager	
-		p	2		callback	
-	m	(Lnet/minecraft/unmapped/C_0561170;)Lnet/minecraft/unmapped/C_3374628;	m_3135860	loadSprite	
-		p	1		id	
-	m	()Lnet/minecraft/unmapped/C_3374628;	m_9754427	getMissingTextureId	
+		p	2		spriteSource	
+	m	(Lnet/minecraft/unmapped/C_0561170;)Lnet/minecraft/unmapped/C_3374628;	m_3135860	registerSprite	
+		p	1		location	
+	m	()Lnet/minecraft/unmapped/C_3374628;	m_9754427	getMissingSprite	
 	m	(Lnet/minecraft/unmapped/C_3374628;)Lnet/minecraft/unmapped/C_0561170;	m_2280147	getResourceId	
 		p	1		sprite	
 	m	(Lnet/minecraft/unmapped/C_6577431;Ljava/lang/Iterable;)V	m_9937140		load
@@ -3529,7 +3530,7 @@ c	net/minecraft/unmapped/C_6088271
 		p	2			sprites
 	m	(Lnet/minecraft/unmapped/C_0561170;)Lnet/minecraft/unmapped/C_0561170;	m_2280147		getResourceId
 		p	1			location
-	m	(Lnet/minecraft/unmapped/C_6577431;Lnet/minecraft/unmapped/C_0561170;)V	m_3135860		loadSprite
+	m	(Lnet/minecraft/unmapped/C_6577431;Lnet/minecraft/unmapped/C_0561170;)V	m_3135860		registerSprite
 		p	1			resourceManager
 		p	2			location
 	m	()V	m_1972470		m_1972470
@@ -3737,7 +3738,7 @@ c	net/minecraft/unmapped/C_4882708
 	m	()V	m_3118452		bind
 c	net/minecraft/unmapped/C_6347954
 	f	Lnet/minecraft/unmapped/C_9155254;	f_8181816		SERIALIZER
-	m	(I)Z	m_3220723	usesNonDefaultFrameTime	
+	m	(I)Z	m_3220723	hasFrameTime	
 		p	1		i	
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_1676943	net/minecraft/client/resource/Resource	net/minecraft/resource/Resource
@@ -4079,13 +4080,13 @@ c	net/minecraft/unmapped/C_9155254
 		p	2		p_2	
 		p	3		p_3	
 	m	(Lcom/google/gson/JsonElement;Ljava/lang/reflect/Type;Lcom/google/gson/JsonDeserializationContext;)Ljava/lang/Object;	deserialize	deserialize	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
+		p	1		json	
+		p	2		type	
+		p	3		context	
 	m	(Ljava/lang/Object;Ljava/lang/reflect/Type;Lcom/google/gson/JsonSerializationContext;)Lcom/google/gson/JsonElement;	serialize	serialize	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
+		p	1		metadata	
+		p	2		type	
+		p	3		context	
 	m	(Lcom/google/gson/JsonObject;)Lnet/minecraft/unmapped/C_6347954;	m_0343490		m_0343490
 		p	1			p_1
 	m	(Lcom/google/gson/JsonObject;)Ljava/lang/Object;	m_7071825		m_7071825
@@ -4926,7 +4927,7 @@ c	net/minecraft/unmapped/C_2334768
 	m	()Lorg/lwjgl/util/vector/Matrix4f;	m_5573919	getRotationVector	
 	m	()Lnet/minecraft/unmapped/C_9214905;	m_5573919		getRotationVector
 c	net/minecraft/unmapped/C_3696583
-	f	Ljava/util/Map;	f_1544986	textures	
+	f	Ljava/util/Map;	f_1544986	sprites	
 	m	(Lnet/minecraft/unmapped/C_3696583;)Ljava/util/Map;	m_3491962	m_3491962	
 		p	0		p_0	
 c	net/minecraft/unmapped/C_3696583$6809251	6809251	
@@ -5578,8 +5579,8 @@ c	net/minecraft/unmapped/C_4159114$C_8478781
 		p	3			p_3
 c	net/minecraft/unmapped/C_5291991
 	f	I	f_3374858		textureDiffuseColorRGB
-c	net/minecraft/unmapped/C_6082933	net/minecraft/client/texture/LoadTextureCallback	
-	m	(Lnet/minecraft/unmapped/C_6088271;)V	m_4748118	onTextureLoaded	
+c	net/minecraft/unmapped/C_6082933	net/minecraft/client/texture/SpriteSource	
+	m	(Lnet/minecraft/unmapped/C_6088271;)V	m_4748118	registerSprites	
 		p	1		atlas	
 c	net/minecraft/unmapped/C_2291899
 	m	(I)V	m_0726457	mouseScrolled	

@@ -1748,11 +1748,11 @@ c	net/minecraft/unmapped/C_6088271
 	m	(ILjava/lang/String;)V	<init>	<init>	
 		p	1		type	
 		p	2		path	
-	m	()V	m_9064962	load	
+	m	()V	m_9064962	registerSprites	
 	m	(ILjava/lang/String;Lnet/minecraft/unmapped/C_6082933;)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+		p	1			type
+		p	2			path
+		p	3			spriteSource
 c	net/minecraft/unmapped/C_7465586
 	m	(Lnet/minecraft/unmapped/C_6707278;DLnet/minecraft/unmapped/C_3635204;I)V	m_0846998	m_0846998	
 		p	1		p_1	
@@ -3069,7 +3069,7 @@ c	net/minecraft/unmapped/C_4878653$C_4927384		Type
 	m	(Lnet/minecraft/unmapped/C_4878653$C_4927384;)I	m_2511303		m_2511303
 		p	0			p_0
 	m	()V	<clinit>		<clinit>
-c	net/minecraft/unmapped/C_5284643		net/minecraft/unmapped/C_5284643
+c	net/minecraft/unmapped/C_5284643		net/minecraft/client/texture/BlockSpriteSource
 	m	()V	<init>		<init>
 	m	(Lnet/minecraft/unmapped/C_6088271;)V	m_4748118		m_4748118
 		p	1			p_1
@@ -3120,8 +3120,8 @@ c	net/minecraft/unmapped/C_5291991		net/minecraft/item/DyeColor
 		p	0			id
 	m	()Ljava/lang/String;	toString		toString
 	m	()V	<clinit>		<clinit>
-c	net/minecraft/unmapped/C_6082933		net/minecraft/client/texture/LoadTextureCallback
-	m	(Lnet/minecraft/unmapped/C_6088271;)V	m_4748118		onTextureLoaded
+c	net/minecraft/unmapped/C_6082933		net/minecraft/client/texture/SpriteSource
+	m	(Lnet/minecraft/unmapped/C_6088271;)V	m_4748118		registerSprites
 		p	1			atlas
 c	net/minecraft/unmapped/C_6168258		net/minecraft/world/border/BorderStatus
 	f	Lnet/minecraft/unmapped/C_6168258;	f_3996018		GROWING
@@ -3332,7 +3332,7 @@ c	net/minecraft/unmapped/C_6324082$C_5858939		Serializer
 c	net/minecraft/unmapped/C_6422359		net/minecraft/block/YellowFlowerBlock
 	m	()V	<init>		<init>
 	m	()Lnet/minecraft/unmapped/C_4420677$C_3235410;	m_1913154		m_1913154
-c	net/minecraft/unmapped/C_6549357		net/minecraft/unmapped/C_6549357
+c	net/minecraft/unmapped/C_6549357		net/minecraft/client/texture/ItemSpriteSource
 	m	()V	<init>		<init>
 	m	(Lnet/minecraft/unmapped/C_6088271;)V	m_4748118		m_4748118
 		p	1			p_1

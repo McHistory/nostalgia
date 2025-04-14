@@ -1968,9 +1968,9 @@ c	net/minecraft/unmapped/C_6205974
 		p	3		z	
 		p	4		sizeX	
 		p	5		sizeZ	
-		p	6		saleX	
+		p	6		scaleX	
 		p	8		scaleZ	
-		p	10		scaleExponent	
+		p	10		p_10	
 	m	([DIIIIIIDDD)[D	m_2945258	getRegion	
 		p	1		values	
 		p	2		x	
@@ -1983,22 +1983,22 @@ c	net/minecraft/unmapped/C_6205974
 		p	10		scaleY	
 		p	12		scaleZ	
 	m	(IIIIIIDDD)[D	m_2945258		getRegion
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
-		p	6			p_6
-		p	7			p_7
-		p	9			p_9
-		p	11			p_11
+		p	1			x
+		p	2			y
+		p	3			z
+		p	4			sizeX
+		p	5			sizeY
+		p	6			sizeZ
+		p	7			scaleX
+		p	9			scaleY
+		p	11			scaleZ
 	m	(IIIIDDD)[D	m_0480685		getRegion
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
-		p	7			p_7
+		p	1			x
+		p	2			z
+		p	3			sizeX
+		p	4			sizeZ
+		p	5			scaleX
+		p	7			scaleZ
 		p	9			p_9
 c	net/minecraft/unmapped/C_6329603	net/minecraft/world/gen/Generator	
 	f	I	f_6869973	range	
@@ -7216,41 +7216,41 @@ c	net/minecraft/unmapped/C_9060047
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_9070784
 	m	([DDDIIDDD)[D	m_6472130	getRegion	
-		p	1		noise	
+		p	1		values	
 		p	2		x	
-		p	4		z	
+		p	4		y	
 		p	6		sizeX	
-		p	7		sizeZ	
+		p	7		sizeY	
 		p	8		scaleX	
-		p	10		scaleZ	
+		p	10		scaleY	
 		p	12		scaleExponent	
 	m	([DDDIIDDDD)[D	m_5581270	getRegion	
-		p	1		noise	
+		p	1		values	
 		p	2		x	
-		p	4		z	
+		p	4		y	
 		p	6		sizeX	
-		p	7		sizeZ	
+		p	7		sizeY	
 		p	8		scaleX	
-		p	10		scaleZ	
+		p	10		scaleY	
 		p	12		scaleExponentX	
-		p	14		scaleExponentZ	
+		p	14		scaleExponentY	
 	m	(DDIIDDD)[D	m_6472130		getRegion
-		p	1			p_1
-		p	3			p_3
-		p	5			p_5
-		p	6			p_6
-		p	7			p_7
-		p	9			p_9
-		p	11			p_11
+		p	1			x
+		p	3			y
+		p	5			sizeX
+		p	6			sizeY
+		p	7			scaleX
+		p	9			scaleY
+		p	11			scaleExponent
 	m	(DDIIDDDD)[D	m_5581270		getRegion
-		p	1			p_1
-		p	3			p_3
-		p	5			p_5
-		p	6			p_6
-		p	7			p_7
-		p	9			p_9
-		p	11			p_11
-		p	13			p_13
+		p	1			x
+		p	3			y
+		p	5			sizeX
+		p	6			sizeY
+		p	7			scaleX
+		p	9			scaleY
+		p	11			scaleExponentX
+		p	13			scaleExponentY
 c	net/minecraft/unmapped/C_9928623
 	f	I	f_3171797	size	
 	m	(I)V	<init>	<init>	
@@ -11874,7 +11874,7 @@ c	net/minecraft/unmapped/C_3369986		net/minecraft/world/gen/chunk/settings/Overw
 	m	()D	m_6591855		getStretchY
 	m	()D	m_0124054		getUpperLimitScale
 	m	()D	m_9069085		getLowerLimitScale
-c	net/minecraft/unmapped/C_3390067		net/minecraft/world/gen/feature/ConfiguredFlowerFeature
+c	net/minecraft/unmapped/C_3390067		net/minecraft/world/gen/feature/FlowerConfiguration
 	m	(Lnet/minecraft/unmapped/C_1033329;Lnet/minecraft/unmapped/C_9151514;Lnet/minecraft/unmapped/C_5701379;)V	<init>		<init>
 		p	1			feature
 		p	2			decorator
@@ -13866,8 +13866,8 @@ c	net/minecraft/unmapped/C_8679709		net/minecraft/world/chunk/AbstractChunkGener
 	f	J	f_0188568		seed
 	f	Lnet/minecraft/unmapped/C_9143244;	f_5463365		biomeSource
 	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_9143244;)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
+		p	1			world
+		p	2			biomeSource
 	m	(Lnet/minecraft/unmapped/C_3820473;)V	m_1530121		m_1530121
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_3906126;Ljava/lang/String;Lnet/minecraft/unmapped/C_6707278;Z)Lnet/minecraft/unmapped/C_6707278;	m_8216820		m_8216820

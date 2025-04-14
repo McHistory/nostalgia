@@ -4,7 +4,7 @@ import net.ornithemc.keratin.api.task.mapping.graph.ExtendGraphTask
 plugins {
 	id 'java'
 	id 'maven-publish'
-	id 'keratin' version '28.0'
+	id 'keratin' version '31.1'
 }
 
 def ENV = System.getenv()
@@ -17,7 +17,7 @@ keratin {
 	}
 	intermediaryGen = 2
 		
-	tasks TaskSelection.FEATHER
+	tasks TaskSelection.MAPPINGS
 }
 
 tasks.withType(ExtendGraphTask, {

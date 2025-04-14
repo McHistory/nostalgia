@@ -1416,7 +1416,7 @@ c	net/minecraft/unmapped/C_8885562
 		p	1			p_1
 		p	2			p_2
 c	net/minecraft/unmapped/C_1951451
-	f	Lnet/minecraft/unmapped/C_1951451;	f_2445670		f_2445670
+	f	Lnet/minecraft/unmapped/C_1951451;	f_2445670		STONECUTTER
 c	net/minecraft/unmapped/C_7204865
 	m	(Lnet/minecraft/unmapped/C_0561170;)Ljava/lang/IllegalArgumentException;	m_3495607		m_3495607
 		p	0			p_0
@@ -1780,7 +1780,7 @@ c	net/minecraft/unmapped/C_9989529$C_1918787
 		p	0			p_0
 c	net/minecraft/unmapped/C_1817720
 	f	Lnet/minecraft/unmapped/C_9900956;	f_9253391		f_9253391
-	f	Lnet/minecraft/unmapped/C_3858757;	f_5826107		f_5826107
+	f	Lnet/minecraft/unmapped/C_3858757;	f_5826107		FACING
 	m	(Lnet/minecraft/unmapped/C_7300213;)Lnet/minecraft/unmapped/C_2441996;	m_3586843		m_3586843
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_4360192;Lnet/minecraft/unmapped/C_9836145;)Z	m_2543653		m_2543653
@@ -1945,7 +1945,7 @@ c	net/minecraft/unmapped/C_1460858
 c	net/minecraft/unmapped/C_1533903
 	f	Lnet/minecraft/unmapped/C_1533903;	f_1157197		f_1157197
 c	net/minecraft/unmapped/C_0818993
-	f	Lnet/minecraft/unmapped/C_0818993;	f_2387625		f_2387625
+	f	Lnet/minecraft/unmapped/C_0818993;	f_2387625		STONECUTTER
 c	net/minecraft/unmapped/C_6287493
 	m	(Lnet/minecraft/unmapped/C_2441996;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_2441996;)V	m_0767742		m_0767742
 		p	1			p_1
@@ -2147,7 +2147,7 @@ c	net/minecraft/unmapped/C_3234215$C_1862588		C_1862588
 	m	()Lnet/minecraft/unmapped/C_1951451;	m_0270947		m_0270947
 	m	()Lcom/google/gson/JsonObject;	m_3561945		m_3561945
 	m	()Lnet/minecraft/unmapped/C_0561170;	m_6423619		m_6423619
-c	net/minecraft/unmapped/C_3380215		net/minecraft/unmapped/C_3380215
+c	net/minecraft/unmapped/C_3380215		net/minecraft/crafting/recipe/StonecutterRecipe
 	m	(Lnet/minecraft/unmapped/C_0561170;Ljava/lang/String;Lnet/minecraft/unmapped/C_0241772;Lnet/minecraft/unmapped/C_2750078;)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
@@ -2179,19 +2179,19 @@ c	net/minecraft/unmapped/C_6613945		net/minecraft/unmapped/C_6613945
 		p	1			p_1
 	m	()I	m_0220374		m_0220374
 c	net/minecraft/unmapped/C_7116259		net/minecraft/unmapped/C_7116259
-	f	Lnet/minecraft/unmapped/C_0241772;	f_6277559		f_6277559
-	f	Lnet/minecraft/unmapped/C_2750078;	f_1239081		f_1239081
-	f	Lnet/minecraft/unmapped/C_0818993;	f_3479711		f_3479711
-	f	Lnet/minecraft/unmapped/C_1951451;	f_6440743		f_6440743
-	f	Lnet/minecraft/unmapped/C_0561170;	f_7863347		f_7863347
-	f	Ljava/lang/String;	f_8038537		f_8038537
+	f	Lnet/minecraft/unmapped/C_0241772;	f_6277559		ingredient
+	f	Lnet/minecraft/unmapped/C_2750078;	f_1239081		result
+	f	Lnet/minecraft/unmapped/C_0818993;	f_3479711		recipeType
+	f	Lnet/minecraft/unmapped/C_1951451;	f_6440743		recipeSerializer
+	f	Lnet/minecraft/unmapped/C_0561170;	f_7863347		location
+	f	Ljava/lang/String;	f_8038537		group
 	m	(Lnet/minecraft/unmapped/C_0818993;Lnet/minecraft/unmapped/C_1951451;Lnet/minecraft/unmapped/C_0561170;Ljava/lang/String;Lnet/minecraft/unmapped/C_0241772;Lnet/minecraft/unmapped/C_2750078;)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
-		p	6			p_6
+		p	1			recipeType
+		p	2			recipeSerializer
+		p	3			location
+		p	4			group
+		p	5			ingredient
+		p	6			result
 	m	()Lnet/minecraft/unmapped/C_0818993;	m_3639368		m_3639368
 	m	()Lnet/minecraft/unmapped/C_1951451;	m_5933558		m_5933558
 	m	()Lnet/minecraft/unmapped/C_0561170;	m_7798854		m_7798854
@@ -2227,7 +2227,7 @@ c	net/minecraft/unmapped/C_7116259$C_3429756		C_3429756
 		p	2			p_2
 c	net/minecraft/unmapped/C_7116259$C_3429756$C_0659647		C_0659647
 	m	(Lnet/minecraft/unmapped/C_0561170;Ljava/lang/String;Lnet/minecraft/unmapped/C_0241772;Lnet/minecraft/unmapped/C_2750078;)Lnet/minecraft/unmapped/C_7116259;	m_3617175		m_3617175
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
+		p	1			location
+		p	2			group
+		p	3			ingredient
+		p	4			item

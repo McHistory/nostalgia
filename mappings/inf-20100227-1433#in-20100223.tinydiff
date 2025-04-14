@@ -80,17 +80,17 @@ c	net/minecraft/unmapped/C_0559439
 		p	4			p_4
 		p	5			p_5
 c	net/minecraft/unmapped/C_0611937
-	f	D	f_9098504	x	
-	f	D	f_6604140	y	
-	f	D	f_2617120	z	
-	m	(DDD)D	m_9172372	noise	
+	f	D	f_9098504	offsetX	
+	f	D	f_6604140	offsetY	
+	f	D	f_2617120	offsetZ	
+	m	(DDD)D	m_9172372	getValue	
 		p	1		x	
 		p	3		y	
 		p	5		z	
-	m	(DDD)D	m_0689792	m_0689792	
-		p	1		p_1	
-		p	3		p_3	
-		p	5		p_5	
+	m	(DDD)D	m_0689792	noise	
+		p	1		x	
+		p	3		y	
+		p	5		z	
 c	net/minecraft/unmapped/C_0823907
 	m	(Lnet/minecraft/unmapped/C_3906126;IIILjava/util/Random;)V	m_3941370		m_3941370
 		p	1			p_1
@@ -891,9 +891,9 @@ c	net/minecraft/unmapped/C_4558465
 		p	2			y
 		p	3			z
 c	net/minecraft/unmapped/C_4561907
-	m	(DD)D	m_7516921		m_7516921
-		p	1			p_1
-		p	3			p_3
+	m	(DD)D	m_7516921		getValue
+		p	1			x
+		p	3			y
 c	net/minecraft/unmapped/C_4718187
 	m	(Lnet/minecraft/unmapped/C_2800860;)V	m_0758434		m_0758434
 		p	1			p_1
@@ -931,11 +931,11 @@ c	net/minecraft/unmapped/C_5584362
 c	net/minecraft/unmapped/C_6205974
 	m	(DD)D	m_1189144	getValue	
 		p	1		x	
-		p	3		z	
-	m	(DDD)D	m_1502652	m_1502652	
-		p	1		p_1	
-		p	3		p_3	
-		p	5		p_5	
+		p	3		y	
+	m	(DDD)D	m_1502652	getValue	
+		p	1		x	
+		p	3		y	
+		p	5		z	
 	m	(I)V	<init>	<init>	
 		p	1		p_1	
 	m	(DD)D	m_7516921		m_7516921
@@ -1333,7 +1333,7 @@ c	net/minecraft/unmapped/C_1044273
 		p	3		tickDelta	
 	m	(Lnet/minecraft/unmapped/C_6516244;)V	m_4361284	cullChunks	
 		p	1		culler	
-	m	()V	m_8889498		m_8889498
+	m	()V	m_8889498		reload
 	m	(Lnet/minecraft/unmapped/C_0336319;Lnet/minecraft/unmapped/C_9265122;F)V	m_1380727		renderEntities
 		p	1			cameraPos
 		p	2			culler
@@ -1420,12 +1420,12 @@ c	net/minecraft/unmapped/C_3604011
 		p	8		p_8	
 		p	9		p_9	
 	m	(Lnet/minecraft/unmapped/C_5009044;FFFFF)V	m_9959532		m_9959532
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
-		p	6			p_6
+		p	1			player
+		p	2			x
+		p	3			y
+		p	4			z
+		p	5			yaw
+		p	6			tickDelta
 	m	(Lnet/minecraft/unmapped/C_1013763;FFFFF)V	m_9861626		m_9861626
 		p	1			p_1
 		p	2			p_2
@@ -1516,7 +1516,7 @@ c	net/minecraft/unmapped/C_4620696
 		p	3			y
 		p	4			z
 c	net/minecraft/unmapped/C_4824661
-	f	Ljava/text/DecimalFormat;	f_8054979		f_8054979
+	f	Ljava/text/DecimalFormat;	f_8054979		screenshotIdFormat
 	f	Ljava/nio/ByteBuffer;	f_1776972		screenshotBuffer
 	f	Ljava/nio/FloatBuffer;	f_7066741		f_7066741
 	m	()V	m_8540370		takeLargeScreenshot
@@ -1961,12 +1961,12 @@ c	net/minecraft/unmapped/C_1379168		net/minecraft/block/entity/ChestBlockEntity
 	m	(Lnet/minecraft/unmapped/C_2800860;)V	m_8325224		m_8325224
 		p	1			p_1
 	m	()I	m_6204563		m_6204563
-c	net/minecraft/unmapped/C_1405541		net/minecraft/unmapped/C_1405541
-	f	Lnet/minecraft/unmapped/C_4561907;	f_1343857		f_1343857
-	f	Lnet/minecraft/unmapped/C_4561907;	f_6356450		f_6356450
+c	net/minecraft/unmapped/C_1405541		net/minecraft/world/gen/noise/Distort
+	f	Lnet/minecraft/unmapped/C_4561907;	f_1343857		source
+	f	Lnet/minecraft/unmapped/C_4561907;	f_6356450		distort
 	m	(Lnet/minecraft/unmapped/C_4561907;Lnet/minecraft/unmapped/C_4561907;)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
+		p	1			source
+		p	2			distort
 	m	(DD)D	m_7516921		m_7516921
 		p	1			p_1
 		p	3			p_3
@@ -1980,8 +1980,8 @@ c	net/minecraft/unmapped/C_1702853		net/minecraft/nbt/NbtEnd
 	m	()Ljava/lang/String;	toString		toString
 c	net/minecraft/unmapped/C_1812290		net/minecraft/client/render/texture/HttpTexture
 	f	Ljava/awt/image/BufferedImage;	f_0926982		image
-	f	I	f_0708736		requestCount
-	f	I	f_7896602		removedCount
+	f	I	f_0708736		count
+	f	I	f_7896602		id
 	f	Z	f_1660532		uploaded
 	m	(Ljava/lang/String;Lnet/minecraft/unmapped/C_9087319;)V	<init>		<init>
 		p	1			url
