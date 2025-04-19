@@ -1249,19 +1249,19 @@ c	net/minecraft/unmapped/C_3466301
 	f	[D	f_5433632	textureV	
 	f	[D	f_3790791	vertices	
 	f	[Lnet/minecraft/unmapped/C_3466301$C_4837777;	f_2251521	faceRotations	
-	f	Z	f_4300519	f_4300519	
+	f	Z	f_4300519	disableAmbientOcclusion	
 	f	Z	f_5400730		colored
 	m	(Lnet/minecraft/unmapped/C_2627205;)V	<init>	<init>	
 		p	1		world	
 	m	()V	<clinit>	<clinit>	
-	m	()V	m_1084991	clearSprite	
+	m	()V	m_1084991	clearForcedSprite	
 	m	()V	m_4478805	clearInItemFrame	
-	m	(Lnet/minecraft/unmapped/C_5307437;)V	m_2819065	setSprite	
+	m	(Lnet/minecraft/unmapped/C_5307437;)V	m_2819065	setForcedSprite	
 		p	1		sprite	
-	m	()Z	m_6816439	hasSprite	
+	m	()Z	m_6816439	hasForcedSprite	
 	m	(Lnet/minecraft/unmapped/C_5307437;)Lnet/minecraft/unmapped/C_5307437;	m_4134222	getSpriteOrMissing	
 		p	1		sprite	
-	m	(Lnet/minecraft/unmapped/C_3635204;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6707278;I)V	m_9462584	render	
+	m	(Lnet/minecraft/unmapped/C_3635204;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6707278;I)V	m_9462584	tesselateFallingBlock	
 		p	1		block	
 		p	2		world	
 		p	3		pos	
@@ -9394,7 +9394,7 @@ c	net/minecraft/unmapped/C_7296673
 	f	Z	f_8060922	missingModel	
 	f	Lnet/minecraft/unmapped/C_8081088;	f_4208044	modelManager	
 	m	()V	<clinit>	<clinit>	
-	m	(Lnet/minecraft/unmapped/C_3635204;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_5307437;Lnet/minecraft/unmapped/C_2627205;)V	m_9022715	renderMiningOverlay	
+	m	(Lnet/minecraft/unmapped/C_3635204;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_5307437;Lnet/minecraft/unmapped/C_2627205;)V	m_9022715	renderMiningProgress	
 		p	1		block	
 		p	2		pos	
 		p	3		sprite	
@@ -9406,7 +9406,7 @@ c	net/minecraft/unmapped/C_7296673
 	m	(Lnet/minecraft/unmapped/C_3635204;Ljava/lang/String;)V	m_4928472	registerColoredBlockModels	
 		p	1		block	
 		p	2		id	
-	m	(Lnet/minecraft/unmapped/C_3635204;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_3374628;Lnet/minecraft/unmapped/C_2627205;)V	m_9022715		tesselateMining
+	m	(Lnet/minecraft/unmapped/C_3635204;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_3374628;Lnet/minecraft/unmapped/C_2627205;)V	m_9022715		renderMiningProgress
 		p	1			block
 		p	2			pos
 		p	3			miningSprite

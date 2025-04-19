@@ -1221,19 +1221,19 @@ c	net/minecraft/unmapped/C_7296673
 	m	(Lnet/minecraft/unmapped/C_2627205;)V	m_7890569	pushWorld	
 		p	1		world	
 	m	()V	m_3661947	popWorld	
-	m	(Lnet/minecraft/unmapped/C_3635204;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_5307437;)V	m_9022715	renderMiningOverlay	
+	m	(Lnet/minecraft/unmapped/C_3635204;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_5307437;)V	m_9022715	renderMiningProgress	
 		p	1		block	
 		p	2		pos	
 		p	3		sprite	
 	m	(Lnet/minecraft/unmapped/C_3635204;)Lnet/minecraft/unmapped/C_3466301;	m_8827037	getRenderer	
 		p	1		block	
-	m	(Lnet/minecraft/unmapped/C_3635204;Lnet/minecraft/unmapped/C_6707278;)V	m_9571707	render	
+	m	(Lnet/minecraft/unmapped/C_3635204;Lnet/minecraft/unmapped/C_6707278;)V	m_9571707	renderMovingBlock	
 		p	1		block	
 		p	2		pos	
 	m	(Lnet/minecraft/unmapped/C_3635204;Lnet/minecraft/unmapped/C_6707278;)Z	m_0332341	render	
 		p	1		block	
 		p	2		pos	
-	m	(I)Z	m_5854700	isGui3d	
+	m	(I)Z	m_5854700	isItem3d	
 		p	0		type	
 	m	()V	m_5842872		registerModels
 	m	(Lnet/minecraft/unmapped/C_3635204;Lnet/minecraft/unmapped/C_7184938;)V	m_4928472		registerColoredBlockModels
@@ -1243,12 +1243,12 @@ c	net/minecraft/unmapped/C_7296673
 		p	1			block
 		p	2			metadata
 		p	3			model
-	m	(Lnet/minecraft/unmapped/C_3635204;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_5307437;Lnet/minecraft/unmapped/C_2627205;)V	m_9022715		renderMiningOverlay
+	m	(Lnet/minecraft/unmapped/C_3635204;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_5307437;Lnet/minecraft/unmapped/C_2627205;)V	m_9022715		renderMiningProgress
 		p	1			block
 		p	2			pos
 		p	3			sprite
 		p	4			world
-	m	(Lnet/minecraft/unmapped/C_3635204;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_2627205;)V	m_9571707		render
+	m	(Lnet/minecraft/unmapped/C_3635204;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_2627205;)V	m_9571707		renderMovingBlock
 		p	1			block
 		p	2			pos
 		p	3			world
@@ -1259,14 +1259,14 @@ c	net/minecraft/unmapped/C_7296673
 	m	(Lnet/minecraft/unmapped/C_3635204;I)I	m_7919009		getReference
 		p	1			block
 		p	2			metadata
-	m	(Lnet/minecraft/unmapped/C_3635204;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_2627205;)Z	m_1848984		tesselate
+	m	(Lnet/minecraft/unmapped/C_3635204;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_2627205;)Z	m_1848984		render
 		p	1			block
 		p	2			pos
 		p	3			world
 	m	(Lnet/minecraft/unmapped/C_6577431;Ljava/lang/String;)Lnet/minecraft/unmapped/C_7184938;	m_1481432		loadModel
 		p	0			resourceManager
 		p	1			i
-	m	(Lnet/minecraft/unmapped/C_3635204;I)Z	m_5854700		isGui3d
+	m	(Lnet/minecraft/unmapped/C_3635204;I)Z	m_5854700		isItem3d
 		p	1			block
 		p	2			metadata
 c	net/minecraft/unmapped/C_8160609

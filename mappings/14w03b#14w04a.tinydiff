@@ -366,11 +366,11 @@ c	net/minecraft/unmapped/C_3466301
 		p	1		flipDepth	
 	m	(Z)V	m_3172791	setRenderFaceAlways	
 		p	1		renderFaceAlways	
-	m	(Lnet/minecraft/unmapped/C_3635204;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_5307437;)V	m_9940762	tesselateInWorld	
+	m	(Lnet/minecraft/unmapped/C_3635204;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_5307437;)V	m_9940762	renderMiningProgress	
 		p	1		block	
 		p	2		pos	
 		p	3		sprite	
-	m	(Lnet/minecraft/unmapped/C_3635204;Lnet/minecraft/unmapped/C_6707278;)V	m_3187906	renderBlock	
+	m	(Lnet/minecraft/unmapped/C_3635204;Lnet/minecraft/unmapped/C_6707278;)V	m_3187906	renderMovingBlock	
 		p	1		block	
 		p	2		pos	
 	m	(Lnet/minecraft/unmapped/C_4821901;Lnet/minecraft/unmapped/C_6707278;)Z	m_1099551	tesselateEndPortalFrame	
@@ -591,7 +591,7 @@ c	net/minecraft/unmapped/C_3466301
 	m	(Lnet/minecraft/unmapped/C_3635204;Lnet/minecraft/unmapped/C_6707278;)Z	m_4686013	tesselateDoor	
 		p	1		block	
 		p	2		pos	
-	m	(I)Z	m_8167613	isGui3D	
+	m	(I)Z	m_8167613	isItem3d	
 		p	0		type	
 	m	(Lnet/minecraft/unmapped/C_2627205;)V	m_3884632		setWorld
 		p	1			world
@@ -599,6 +599,7 @@ c	net/minecraft/unmapped/C_3466301
 		p	1			block
 		p	2			metadata
 		p	3			brightness
+	m	(Lnet/minecraft/unmapped/C_3635204;IF)V	m_6974549	renderAsItem	tesselateAsItem
 c	net/minecraft/unmapped/C_3466301$8365298	8365298	
 	f	[I	f_8100025	f_8100025	
 	m	()V	<clinit>	<clinit>	
@@ -1573,7 +1574,7 @@ c	net/minecraft/unmapped/C_3739995		net/minecraft/client/render/block/DiodeRende
 		p	1			diode
 		p	2			pos
 		p	3			facing
-c	net/minecraft/unmapped/C_4019527		net/minecraft/unmapped/C_4019527
+c	net/minecraft/unmapped/C_4019527		net/minecraft/client/render/block/NoneBlockRenderer
 	m	()V	<init>		<init>
 	m	(Lnet/minecraft/unmapped/C_3635204;Lnet/minecraft/unmapped/C_6707278;)Z	m_2563994		m_2563994
 		p	1			p_1
@@ -1842,23 +1843,23 @@ c	net/minecraft/unmapped/C_7296673		net/minecraft/client/render/block/BlockRende
 	m	(Lnet/minecraft/unmapped/C_2627205;)V	m_7890569		pushWorld
 		p	1			world
 	m	()V	m_3661947		popWorld
-	m	(Lnet/minecraft/unmapped/C_3635204;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_5307437;)V	m_9022715		renderMiningOverlay
+	m	(Lnet/minecraft/unmapped/C_3635204;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_5307437;)V	m_9022715		renderMiningProgress
 		p	1			block
 		p	2			pos
 		p	3			sprite
 	m	(Lnet/minecraft/unmapped/C_3635204;)Lnet/minecraft/unmapped/C_3466301;	m_8827037		getRenderer
 		p	1			block
-	m	(Lnet/minecraft/unmapped/C_3635204;Lnet/minecraft/unmapped/C_6707278;)V	m_9571707		render
+	m	(Lnet/minecraft/unmapped/C_3635204;Lnet/minecraft/unmapped/C_6707278;)V	m_9571707		renderMovingBlock
 		p	1			block
 		p	2			pos
 	m	(Lnet/minecraft/unmapped/C_3635204;Lnet/minecraft/unmapped/C_6707278;)Z	m_0332341		render
 		p	1			block
 		p	2			pos
-	m	(Lnet/minecraft/unmapped/C_3635204;IF)V	m_2370766		render
+	m	(Lnet/minecraft/unmapped/C_3635204;IF)V	m_2370766		renderAsItem
 		p	1			block
 		p	2			metadata
 		p	3			brightness
-	m	(I)Z	m_5854700		isGui3d
+	m	(I)Z	m_5854700		isItem3d
 		p	0			type
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_8160609		net/minecraft/client/render/entity/ZombiePigmanRenderer

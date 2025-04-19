@@ -4245,14 +4245,14 @@ c	net/minecraft/unmapped/C_3466301		net/minecraft/client/render/block/BlockRende
 	m	(Lnet/minecraft/unmapped/C_2627205;)V	<init>		<init>
 		p	1			world
 	m	()V	<init>		<init>
-	m	()V	m_1084991		clearSprite
-	m	(Lnet/minecraft/unmapped/C_3635204;IIII)V	m_9940762		tesselateInWorld
+	m	()V	m_1084991		clearForcedSprite
+	m	(Lnet/minecraft/unmapped/C_3635204;IIII)V	m_9940762		renderMiningProgress
 		p	1			block
 		p	2			x
 		p	3			y
 		p	4			z
 		p	5			sprite
-	m	(Lnet/minecraft/unmapped/C_3635204;III)V	m_3187906		renderBlock
+	m	(Lnet/minecraft/unmapped/C_3635204;III)V	m_3187906		renderMovingBlock
 		p	1			block
 		p	2			x
 		p	3			y
@@ -4451,7 +4451,7 @@ c	net/minecraft/unmapped/C_3466301		net/minecraft/client/render/block/BlockRende
 		p	2			y
 		p	3			z
 		p	4			liquid
-	m	(Lnet/minecraft/unmapped/C_3635204;Lnet/minecraft/unmapped/C_3906126;III)V	m_9462584		render
+	m	(Lnet/minecraft/unmapped/C_3635204;Lnet/minecraft/unmapped/C_3906126;III)V	m_9462584		tesselateFallingBlock
 		p	1			block
 		p	2			world
 		p	3			x
@@ -4557,11 +4557,11 @@ c	net/minecraft/unmapped/C_3466301		net/minecraft/client/render/block/BlockRende
 		p	4			y
 		p	6			z
 		p	8			sprite
-	m	(Lnet/minecraft/unmapped/C_3635204;IF)V	m_6974549		tesselateItem
+	m	(Lnet/minecraft/unmapped/C_3635204;IF)V	m_6974549		renderAsItem
 		p	1			block
 		p	2			metadata
 		p	3			brightness
-	m	(I)Z	m_8167613		isGui3D
+	m	(I)Z	m_8167613		isItem3d
 		p	0			type
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_3479538		argo/jdom/ChainedFunctor
