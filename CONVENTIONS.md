@@ -76,6 +76,12 @@ Use "location" for `Identifier`s that point to resources of the game (textures, 
 
 Use "tick" for updates done once per tick. Use "update" for other kind of updates.
 
+### Ticks, age, timers, and cooldowns
+
+Use "ticks" for ints that count up every tick, but are not saved across sessions. Use "age" for ints that count up every tick, and are saved across sessions.
+
+Use "timer" for ints that count down every tick, and that represent a delay before some action happens (e.g. fuse timer for primed TNT). User "cooldown" but ints that count down every tick, and that represent a delay before some behavior is enabled again (e.g. jump cooldown for players).
+
 ### Value last tick
 
 Use the word "last" for the value that something had last tick (`lastX`, `lastWidth`, etc.).
