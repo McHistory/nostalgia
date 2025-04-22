@@ -862,9 +862,11 @@ c	net/minecraft/unmapped/C_3891497		net/minecraft/block/BrewingStandBlock
 		p	1			p_1
 		p	2			p_2
 c	net/minecraft/unmapped/C_3910017		net/minecraft/block/entity/BrewingStandBlockEntity
-	f	[Lnet/minecraft/unmapped/C_2750078;	f_4024650		inputs
+	f	[Lnet/minecraft/unmapped/C_2750078;	f_4024650		inventory
+		c		Brewing stand inventory slots. 0-2 are potion slots, 3 is the ingredient slot.
 	f	I	f_6029713		timer
-	f	I	f_7946123		hasInput
+	f	I	f_7946123		hasPotion
+		c		For each potion slot, whether that slot has a potion in it.
 	m	()V	<init>		<init>
 	m	()Ljava/lang/String;	m_0700518		m_0700518
 	m	()I	m_5322905		m_5322905
@@ -894,7 +896,7 @@ c	net/minecraft/unmapped/C_3910017		net/minecraft/block/entity/BrewingStandBlock
 	m	()V	m_1388832		m_1388832
 	m	(I)V	m_7334550		setTimer
 		p	1			timer
-	m	()I	m_2166002		findHasInput
+	m	()I	m_2166002		findHasPotion
 c	net/minecraft/unmapped/C_4357260		net/minecraft/item/EnderEyeItem
 	m	(I)V	<init>		<init>
 		p	1			p_1
