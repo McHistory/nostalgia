@@ -249,31 +249,31 @@ c	net/minecraft/unmapped/C_7653691
 	f	Lnet/minecraft/unmapped/C_8775550;	f_6624860		lanServerDetector
 	f	I	f_3701270		ticks
 	f	Z	f_3069665		initialized
-	f	Ljava/util/List;	f_7284581		newServers
+	f	Ljava/util/List;	f_7284581		lanServers
 	m	()V	m_7135145		m_7135145
 	m	(Lnet/minecraft/unmapped/C_7653691;)Ljava/util/List;	m_0145269		m_0145269
 		p	0			p_0
 	m	(Lnet/minecraft/unmapped/C_7653691;)I	m_1012244		m_1012244
 		p	0			p_0
 c	net/minecraft/unmapped/C_7653691$C_9130685
-	m	(IIIILnet/minecraft/unmapped/C_2334550;)V	m_5219706		m_5219706
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
-	m	(IIIILnet/minecraft/unmapped/C_2334550;)V	m_8588280		m_8588280
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
-	m	(IIIILnet/minecraft/unmapped/C_2334550;)V	m_8728896		m_8728896
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
+	m	(IIIILnet/minecraft/unmapped/C_2334550;)V	m_5219706		renderLanServerEntry
+		p	1			index
+		p	2			x
+		p	3			y
+		p	4			height
+		p	5			tesselator
+	m	(IIIILnet/minecraft/unmapped/C_2334550;)V	m_8588280		renderLanServerScanningEntry
+		p	1			index
+		p	2			x
+		p	3			y
+		p	4			height
+		p	5			tesselator
+	m	(IIIILnet/minecraft/unmapped/C_2334550;)V	m_8728896		renderServerEntry
+		p	1			index
+		p	2			x
+		p	3			y
+		p	4			height
+		p	5			tesselator
 c	net/minecraft/unmapped/C_1168245
 	f	Z	f_6537657		levelUp
 	f	Lnet/minecraft/unmapped/C_4960738;	f_2554626		lastSuccessfulTradeOffer
@@ -365,9 +365,9 @@ c	net/minecraft/unmapped/C_4982441		net/minecraft/server/integrated/LanServerPin
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_7600583		net/minecraft/client/LanServerList
 	f	Ljava/util/ArrayList;	f_4182184		servers
-	f	Z	f_8191467		hasNewServers
+	f	Z	f_8191467		hasServers
 	m	()V	<init>		<init>
-	m	()Z	m_3962896		hasNewServers
+	m	()Z	m_3962896		hasServers
 	m	()V	m_2824018		refresh
 	m	()Ljava/util/List;	m_5168118		getServers
 	m	(Ljava/lang/String;Ljava/net/InetAddress;)V	m_3056181		add

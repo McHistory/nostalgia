@@ -2939,13 +2939,13 @@ c	net/minecraft/unmapped/C_7221329
 	m	()Lnet/minecraft/unmapped/C_3635204;	m_1487190		getBlock
 c	net/minecraft/unmapped/C_7256819
 	m	(IIIDDII)V	m_0846998	moveOnRail	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	6		p_6	
-		p	8		p_8	
-		p	9		p_9	
+		p	1		x	
+		p	2		y	
+		p	3		z	
+		p	4		velocityX	
+		p	6		velocityZ	
+		p	8		rail	
+		p	9		metadata	
 	m	(IIIDDLnet/minecraft/unmapped/C_3635204;I)V	m_0846998		moveOnRail
 		p	1			x
 		p	2			y
@@ -3448,10 +3448,10 @@ c	net/minecraft/unmapped/C_8906619
 		p	6		p_6	
 		p	7		p_7	
 	m	(IFLnet/minecraft/unmapped/C_4030632$C_5478196;[Lnet/minecraft/unmapped/C_3635204;)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
+		p	1		id	
+		p	2		attackDamage	
+		p	3		tier	
+		p	4		effectiveBlocks	
 	m	(FLnet/minecraft/unmapped/C_4030632$C_5478196;[Lnet/minecraft/unmapped/C_3635204;)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
@@ -3658,13 +3658,13 @@ c	net/minecraft/unmapped/C_9610577
 	f	Lnet/minecraft/unmapped/C_1013763;	f_8173247	targetEntity	
 	f	Lnet/minecraft/unmapped/C_6385858;	f_8173247		targetEntity
 	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_3385278;Lnet/minecraft/unmapped/C_4766485;Lnet/minecraft/unmapped/C_1013763;Lnet/minecraft/unmapped/C_1013763;Lnet/minecraft/unmapped/C_7688744;F)V	m_3414008	prepare	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-		p	6		p_6	
-		p	7		p_7	
+		p	1		world	
+		p	2		textureManager	
+		p	3		textRenderer	
+		p	4		camera	
+		p	5		targetEntity	
+		p	6		options	
+		p	7		tickDelta	
 	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_3385278;Lnet/minecraft/unmapped/C_4766485;Lnet/minecraft/unmapped/C_1013763;Lnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_7688744;F)V	m_3414008		prepare
 		p	1			world
 		p	2			textureManager
@@ -4117,7 +4117,7 @@ c	net/minecraft/unmapped/C_4179150
 		p	1		index	
 		p	2		x	
 		p	3		y	
-		p	4		entryHeight	
+		p	4		height	
 		p	5		tesselator	
 	m	(I)V	m_8686256		m_8686256
 		p	1			p_1
@@ -6185,9 +6185,9 @@ c	net/minecraft/unmapped/C_4384798
 		p	0			file
 		p	1			url
 		p	2			resourcePack
-		p	3			hashMap
+		p	3			data
 		p	4			maxFileSize
-		p	5			progressListener
+		p	5			listener
 		p	6			proxy
 c	net/minecraft/unmapped/C_4384798$3239097		3239097
 	f	Lnet/minecraft/unmapped/C_7918626;	f_3856915		progressListener
@@ -6718,7 +6718,7 @@ c	net/minecraft/unmapped/C_0002063
 	m	()V	<init>		<init>
 c	net/minecraft/unmapped/C_3601640
 	m	(I)Z	m_4693627	canStepOnto	
-		p	1		p_1	
+		p	1		block	
 	m	(Lnet/minecraft/unmapped/C_3635204;)Z	m_4693627		canStepOnto
 		p	1			block
 c	net/minecraft/unmapped/C_6705649

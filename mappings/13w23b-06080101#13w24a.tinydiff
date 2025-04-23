@@ -668,7 +668,7 @@ c	net/minecraft/unmapped/C_7829100
 c	net/minecraft/unmapped/C_7940645
 	f	Lnet/minecraft/unmapped/C_0561170;	f_5092438		BACKGROUND_LOCATION
 c	net/minecraft/unmapped/C_7178022
-	f	Ljava/lang/String;	f_6363574	f_6363574	
+	f	Ljava/lang/String;	f_6363574	texturePath	
 	f	Lnet/minecraft/unmapped/C_0561170;	f_8739660		MAP_ICONS_LOCATION
 	f	Lnet/minecraft/unmapped/C_0561170;	f_6363574		textureLocation
 	m	()V	<clinit>		<clinit>
@@ -830,7 +830,7 @@ c	net/minecraft/unmapped/C_0368523
 		p	2			p_2
 		p	3			p_3
 c	net/minecraft/unmapped/C_8428861
-	f	I	f_4352628	f_4352628	
+	f	I	f_4352628	reloadTimer	
 	m	()V	m_7135145	m_7135145	
 c	net/minecraft/unmapped/C_0380387
 	m	()Ljava/lang/String;	m_4351874	m_4351874	
@@ -845,7 +845,7 @@ c	net/minecraft/unmapped/C_1068012
 		p	1			p_1
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_3235984
-	f	Lnet/minecraft/unmapped/C_1013763;	f_9389601	f_9389601	
+	f	Lnet/minecraft/unmapped/C_1013763;	f_9389601	attacker	
 	m	()V	m_4528414	m_4528414	
 c	net/minecraft/unmapped/C_6769461
 	m	(Lnet/minecraft/unmapped/C_9549188;)V	m_9955335	m_9955335	
@@ -960,9 +960,9 @@ c	net/minecraft/unmapped/C_7994583	net/minecraft/client/gui/screen/ServerTexture
 		p	2		p_2	
 		p	3		p_3	
 c	net/minecraft/unmapped/C_8825356
-	m	(ILnet/minecraft/unmapped/C_5769145;)V	m_2327972	m_2327972	
-		p	1		p_1	
-		p	2		p_2	
+	m	(ILnet/minecraft/unmapped/C_5769145;)V	m_2327972	set	
+		p	1		index	
+		p	2		server	
 	m	(Lnet/minecraft/unmapped/C_5769145;)V	m_4823835	m_4823835	
 		p	0		p_0	
 c	net/minecraft/unmapped/C_9008510	net/minecraft/client/resource/pack/TexturePackDownloadCallback	
@@ -1101,8 +1101,8 @@ c	net/minecraft/unmapped/C_4412160
 	f	Lnet/minecraft/unmapped/C_0561170;	f_6049336		DONKEY_LOCATION
 	f	Lnet/minecraft/unmapped/C_0561170;	f_6187799		ZOMBIE_HORSE_LOCATION
 	f	Lnet/minecraft/unmapped/C_0561170;	f_3086855		SKELETON_HORSE_LOCATION
-	m	(Lnet/minecraft/unmapped/C_2340941;)V	m_6620072	m_6620072	
-		p	1		p_1	
+	m	(Lnet/minecraft/unmapped/C_2340941;)V	m_6620072	applyScaleForType	
+		p	1		horse	
 	m	(Lnet/minecraft/unmapped/C_2340941;)Lnet/minecraft/unmapped/C_0561170;	m_2404125		m_2404125
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_2340941;)Lnet/minecraft/unmapped/C_0561170;	m_1083304		getArmoredTextureLocation
@@ -1118,8 +1118,8 @@ c	net/minecraft/unmapped/C_8551060
 		p	1			p_1
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_0979881
-	m	(I)V	m_1616265	glDeleteTextures	
-		p	0		p_0	
+	m	(I)V	m_1616265	deleteTextures	
+		p	0		id	
 	m	(Lnet/minecraft/unmapped/C_6577431;Ljava/lang/String;)[I	m_0899679	getPixels	
 		p	0		manager	
 		p	1		path	

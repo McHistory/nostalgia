@@ -340,7 +340,7 @@ c	net/minecraft/unmapped/C_8546801
 	f	Lorg/apache/logging/log4j/Logger;	f_0035050		LOGGER
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_8592380
-	m	()V	m_3478385	m_3478385	
+	m	()V	m_3478385	deleteTextures	
 c	net/minecraft/unmapped/C_8752044
 	f	Lorg/apache/logging/log4j/Logger;	f_9903687		LOGGER
 c	net/minecraft/unmapped/C_8817873
@@ -446,13 +446,13 @@ c	net/minecraft/unmapped/C_4384798
 	m	(Lnet/minecraft/unmapped/C_6001689;Ljava/net/URL;Ljava/util/Map;Z)Ljava/lang/String;	m_8824104	postTo	
 		p	0		logger	
 		p	1		url	
-		p	2		p_2	
-		p	3		p_3	
+		p	2		data	
+		p	3		silent	
 	m	(Lnet/minecraft/unmapped/C_6001689;Ljava/net/URL;Ljava/lang/String;Z)Ljava/lang/String;	m_3809895	postTo	
 		p	0		logger	
 		p	1		url	
-		p	2		p_2	
-		p	3		p_3	
+		p	2		data	
+		p	3		silent	
 	m	(Ljava/net/URL;)Ljava/lang/String;	m_2413922	m_2413922	
 		p	0		p_0	
 	m	(Ljava/net/URL;Ljava/lang/String;Ljava/net/Proxy;Ljava/lang/String;Z)Ljava/lang/String;	m_2527458	m_2527458	
@@ -463,12 +463,12 @@ c	net/minecraft/unmapped/C_4384798
 		p	4		p_4	
 	m	(Ljava/net/URL;Ljava/util/Map;Z)Ljava/lang/String;	m_8824104		postTo
 		p	0			url
-		p	1			hasmap
-		p	2			quietly
+		p	1			data
+		p	2			silent
 	m	(Ljava/net/URL;Ljava/lang/String;Z)Ljava/lang/String;	m_3809895		postTo
 		p	0			url
-		p	1			contentLength
-		p	2			quietly
+		p	1			data
+		p	2			silent
 	m	()Lorg/apache/logging/log4j/Logger;	m_6547749		getLogger
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_3909374
@@ -578,9 +578,9 @@ c	net/minecraft/unmapped/C_4982441
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_7600583	net/minecraft/client/LanServerList	
 	f	Ljava/util/ArrayList;	f_4182184	servers	
-	f	Z	f_8191467	hasNewServers	
+	f	Z	f_8191467	hasServers	
 	m	()V	<init>	<init>	
-	m	()Z	m_3962896	hasNewServers	
+	m	()Z	m_3962896	hasServers	
 	m	()V	m_2824018	refresh	
 	m	()Ljava/util/List;	m_5168118	getServers	
 	m	(Ljava/lang/String;Ljava/net/InetAddress;)V	m_3056181	add	
@@ -828,7 +828,7 @@ c	net/minecraft/unmapped/C_3719935
 c	net/minecraft/unmapped/C_0979881
 	f	Lorg/apache/logging/log4j/Logger;	f_6453242		LOGGER
 	f	I	f_9969015		f_9969015
-	m	()I	m_9352345	glGenTextures	
+	m	()I	m_9352345	genTextures	
 	m	()I	m_6984163		m_6984163
 	m	(I)V	m_3765285		deleteTextures
 		p	0			id

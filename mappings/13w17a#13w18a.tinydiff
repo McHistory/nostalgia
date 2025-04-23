@@ -37,14 +37,14 @@ c	net/minecraft/unmapped/C_0806362
 		p	6			z
 		p	8			item
 	m	(Lnet/minecraft/unmapped/C_3906126;DDDDDDLnet/minecraft/unmapped/C_4030632;)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-		p	4			p_4
-		p	6			p_6
-		p	8			p_8
-		p	10			p_10
-		p	12			p_12
-		p	14			p_14
+		p	1			world
+		p	2			x
+		p	4			y
+		p	6			z
+		p	8			velocityX
+		p	10			velocityY
+		p	12			velocityZ
+		p	14			item
 c	net/minecraft/unmapped/C_1044273
 	m	(Lnet/minecraft/client/Minecraft;Lnet/minecraft/unmapped/C_3385278;)V	<init>	<init>	
 		p	1		minecraft	
@@ -350,7 +350,7 @@ c	net/minecraft/unmapped/C_7178022
 	f	I	f_1395761	texture	
 	f	Lnet/minecraft/unmapped/C_4766485;	f_0639800	textRenderer	
 	f	Lnet/minecraft/unmapped/C_3779718;	f_1395761		texture
-	f	Ljava/lang/String;	f_6363574		f_6363574
+	f	Ljava/lang/String;	f_6363574		texturePath
 	m	(Lnet/minecraft/unmapped/C_4766485;Lnet/minecraft/unmapped/C_7688744;Lnet/minecraft/unmapped/C_3385278;)V	<init>	<init>	
 		p	1		textRenderer	
 		p	2		options	
@@ -720,13 +720,13 @@ c	net/minecraft/unmapped/C_6088271
 	m	()V	m_9064962		registerSprites
 	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_3374628;	m_7238066		getSprite
 		p	1			name
-	m	(Lnet/minecraft/unmapped/C_3374628;Lnet/minecraft/unmapped/C_7378130;Ljava/lang/String;)Z	m_1818372		m_1818372
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-	m	(Ljava/lang/String;Lnet/minecraft/unmapped/C_7378130;)Z	m_0913187		m_0913187
-		p	0			p_0
-		p	1			p_1
+	m	(Lnet/minecraft/unmapped/C_3374628;Lnet/minecraft/unmapped/C_7378130;Ljava/lang/String;)Z	m_1818372		getFrames
+		p	1			sprite
+		p	2			pack
+		p	3			name
+	m	(Ljava/lang/String;Lnet/minecraft/unmapped/C_7378130;)Z	m_0913187		hasAnimation
+		p	0			name
+		p	1			pack
 c	net/minecraft/unmapped/C_9713437	net/minecraft/client/render/texture/SpriteHolder	
 	f	I	f_2413620	width	
 	f	I	f_6574157	height	
@@ -802,9 +802,9 @@ c	net/minecraft/unmapped/C_0979881		net/minecraft/client/render/texture/TextureU
 	f	Ljava/nio/IntBuffer;	f_7807755		BUFFER
 	f	Lnet/minecraft/unmapped/C_3779718;	f_7281272		MISSING_TEXTURE
 	f	[I	f_4397336		MISSING_DATA
-	m	()I	m_9352345		glGenTextures
-	m	(I)V	m_1616265		glDeleteTextures
-		p	0			p_0
+	m	()I	m_9352345		genTextures
+	m	(I)V	m_1616265		deleteTextures
+		p	0			id
 	m	(ILjava/awt/image/BufferedImage;)I	m_3862315		uploadTexture
 		p	0			id
 		p	1			image
@@ -846,7 +846,7 @@ c	net/minecraft/unmapped/C_0979881		net/minecraft/client/render/texture/TextureU
 	m	(Z)V	m_3243862		setTextureClamp
 		p	0			clamp
 	m	(Z)V	m_5213405		setTextureFilter
-		p	0			p_0
+		p	0			blur
 	m	([II)V	m_2687973		putInBuffer
 		p	0			texture
 		p	1			size
@@ -860,7 +860,7 @@ c	net/minecraft/unmapped/C_0979881		net/minecraft/client/render/texture/TextureU
 		p	0			pack
 		p	1			path
 	m	([I)V	m_0450555		getAnaglyphColors
-		p	0			p_0
+		p	0			colors
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_3779718		net/minecraft/client/render/texture/DynamicTexture
 	f	[I	f_2862021		pixels
@@ -887,8 +887,8 @@ c	net/minecraft/unmapped/C_6347954		net/minecraft/client/resource/metadata/Anima
 	f	Lcom/google/common/base/Splitter;	f_7681935		COMMA_SPLITTER
 	f	Ljava/util/List;	f_1530370		frames
 	m	()V	<init>		<init>
-	m	(Ljava/io/InputStream;)Lnet/minecraft/unmapped/C_6347954;	m_9346715		m_9346715
-		p	1			p_1
+	m	(Ljava/io/InputStream;)Lnet/minecraft/unmapped/C_6347954;	m_9346715		deserialize
+		p	1			is
 	m	()I	m_6558782		getFrameCount
 	m	(I)I	m_8655623		getFrameTime
 		p	1			i
@@ -900,8 +900,8 @@ c	net/minecraft/unmapped/C_6347954$C_6173837		AnimationFrame
 	f	I	f_2503006		index
 	f	I	f_5977028		time
 	m	(II)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
+		p	1			index
+		p	2			time
 	m	(IILnet/minecraft/unmapped/C_6347954$0257529;)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2

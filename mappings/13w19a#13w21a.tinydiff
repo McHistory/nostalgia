@@ -91,7 +91,7 @@ c	net/minecraft/unmapped/C_2488469
 c	net/minecraft/unmapped/C_2750078
 	f	Ljava/text/DecimalFormat;	f_5321093		MODIFIER_FORMAT
 	m	(Lnet/minecraft/unmapped/C_6385858;)F	m_8066283	getAttackDamage	
-		p	1		p_1	
+		p	1		target	
 	m	()Lcom/google/common/collect/Multimap;	m_1298752		getAttributeModifiers
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_3324249
@@ -125,13 +125,13 @@ c	net/minecraft/unmapped/C_3624347
 c	net/minecraft/unmapped/C_4030632
 	f	Ljava/util/UUID;	f_0006502		ATTACK_DAMAGE_MODIFIER_UUID
 	m	(Lnet/minecraft/unmapped/C_6385858;)F	m_1072215	getAttackDamage	
-		p	1		p_1	
+		p	1		target	
 	m	()Lcom/google/common/collect/Multimap;	m_3717489		getDefaultAttributeModifiers
 c	net/minecraft/unmapped/C_4237166
 	m	()Z	m_3923556		hasRidingInventory
 c	net/minecraft/unmapped/C_4286596
 	m	(Lnet/minecraft/unmapped/C_6385858;)F	m_0415661	getAttackDamage	
-		p	1		p_1	
+		p	1		target	
 c	net/minecraft/unmapped/C_4443804
 	m	(Lnet/minecraft/unmapped/C_5968220;)V	m_6975227		handleEntityAttributes
 		p	1			packet
@@ -350,21 +350,21 @@ c	net/minecraft/unmapped/C_6088271
 		p	1		p_1	
 	m	(Lnet/minecraft/unmapped/C_7378130;)V	m_8596643	loadAndStitch	
 		p	1		pack	
-	m	(Lnet/minecraft/unmapped/C_3374628;Lnet/minecraft/unmapped/C_7378130;Ljava/lang/String;)Z	m_1818372	m_1818372	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-	m	(Ljava/lang/String;Lnet/minecraft/unmapped/C_7378130;)Z	m_0913187	m_0913187	
-		p	0		p_0	
-		p	1		p_1	
+	m	(Lnet/minecraft/unmapped/C_3374628;Lnet/minecraft/unmapped/C_7378130;Ljava/lang/String;)Z	m_1818372	getFrames	
+		p	1		sprite	
+		p	2		pack	
+		p	3		name	
+	m	(Ljava/lang/String;Lnet/minecraft/unmapped/C_7378130;)Z	m_0913187	hasAnimation	
+		p	0		name	
+		p	1		pack	
 	m	(Lnet/minecraft/unmapped/C_6577431;)V	m_4115833		m_4115833
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_6577431;)V	m_8596643		loadAndStitch
 		p	1			resourceManager
-	m	(Lnet/minecraft/unmapped/C_3374628;Lnet/minecraft/unmapped/C_6577431;Ljava/lang/String;)Z	m_1818372		m_1818372
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+	m	(Lnet/minecraft/unmapped/C_3374628;Lnet/minecraft/unmapped/C_6577431;Ljava/lang/String;)Z	m_1818372		getFrames
+		p	1			sprite
+		p	2			resourceManager
+		p	3			name
 c	net/minecraft/unmapped/C_6954368
 	m	()Ljava/lang/String;	m_2950008	getDeathMessage	
 	m	()Lnet/minecraft/unmapped/C_9550253;	m_2950008		getDeathMessage
@@ -390,7 +390,7 @@ c	net/minecraft/unmapped/C_2237759
 c	net/minecraft/unmapped/C_2340941
 	f	Lnet/minecraft/unmapped/C_3731908;	f_1120751	SPEED_ATTRIBUTE	
 	f	Lnet/minecraft/unmapped/C_2750078;	f_9173372	f_9173372	
-	m	()D	m_4552632	getSpeed	
+	m	()D	m_4552632	getCustomSpeed	
 	m	()F	m_0161842	m_0161842	
 	m	(Lnet/minecraft/unmapped/C_2750078;)I	m_8693560		getArmorTier
 		c		horse armor tiers:\n<br>0: iron\n<br>1: gold\n<br>2: diamond
@@ -409,20 +409,20 @@ c	net/minecraft/unmapped/C_2420402
 		p	1			displayName
 	m	()Ljava/lang/String;	m_2939093		getDisplayName
 c	net/minecraft/unmapped/C_2587956
-	f	[Lnet/minecraft/unmapped/C_2750078;	f_4675046	f_4675046	
-	f	F	f_8576112	f_8576112	
-	m	()F	m_9991059	m_9991059	
+	f	[Lnet/minecraft/unmapped/C_2750078;	f_4675046	sentEquipment	
+	f	F	f_8576112	movementSpeed	
+	m	()F	m_9991059	getMovementSpeed	
 c	net/minecraft/unmapped/C_3719935
 	f	Lnet/minecraft/unmapped/C_3731908;	f_0311966		MOVEMENT_SPEED
 	f	Lnet/minecraft/unmapped/C_3731908;	f_1901461		ATTACK_DAMAGE
 	m	(Lnet/minecraft/unmapped/C_5801153;)Lnet/minecraft/unmapped/C_2800860;	m_0458554	toNbt	
-		p	0		p_0	
+		p	0		attribute	
 	m	(Lnet/minecraft/unmapped/C_5801153;Lnet/minecraft/unmapped/C_2800860;)V	m_3478044	readNbt	
-		p	0		p_0	
-		p	1		p_1	
+		p	0		attribute	
+		p	1		nbt	
 	m	(Lnet/minecraft/unmapped/C_5801153;Lnet/minecraft/unmapped/C_2800860;)V	m_6201835	fromNbt	
-		p	0		p_0	
-		p	1		p_1	
+		p	0		attribute	
+		p	1		nbt	
 	m	(Lnet/minecraft/unmapped/C_6232047;)Lnet/minecraft/unmapped/C_2800860;	m_0458554		toNbt
 		p	0			instance
 	m	(Lnet/minecraft/unmapped/C_6232047;Lnet/minecraft/unmapped/C_2800860;)V	m_3478044		readNbt
@@ -490,13 +490,13 @@ c	net/minecraft/unmapped/C_5209004
 		p	1			p_1
 c	net/minecraft/unmapped/C_6347954
 	m	()V	<init>	<init>	
-	m	(Ljava/io/InputStream;)Lnet/minecraft/unmapped/C_6347954;	m_9346715	m_9346715	
-		p	1		p_1	
+	m	(Ljava/io/InputStream;)Lnet/minecraft/unmapped/C_6347954;	m_9346715	deserialize	
+		p	1		is	
 c	net/minecraft/unmapped/C_6347954$0257529	0257529	
 c	net/minecraft/unmapped/C_6347954$C_6173837
 	m	(II)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
+		p	1		index	
+		p	2		time	
 	m	(IILnet/minecraft/unmapped/C_6347954$0257529;)V	<init>	<init>	
 		p	1		p_1	
 		p	2		p_2	
