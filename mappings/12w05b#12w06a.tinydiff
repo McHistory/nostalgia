@@ -115,8 +115,8 @@ c	net/minecraft/unmapped/C_4948697
 		p	1			p_1
 c	net/minecraft/unmapped/C_5102005
 	f	Ljava/util/Map;	f_8815193		KEY_TO_ID
-	m	(Ljava/lang/String;)I	m_4033000		m_4033000
-		p	0			p_0
+	m	(Ljava/lang/String;)I	m_4033000		getIdOrPig
+		p	0			key
 c	net/minecraft/unmapped/C_6108840
 	m	()Lnet/minecraft/unmapped/C_4844124;	m_1279143		m_1279143
 c	net/minecraft/unmapped/C_8345828
@@ -209,7 +209,7 @@ c	net/minecraft/unmapped/C_1812555
 	m	()Lnet/minecraft/unmapped/C_1013763;	m_2684580	m_2684580	
 	m	()V	m_0982704	m_0982704	
 	m	(Lnet/minecraft/unmapped/C_1013763;Ljava/lang/Class;FIZ)V	<init>		<init>
-		p	1			entity
+		p	1			mob
 		p	2			targetType
 		p	3			range
 		p	4			chanceToStartGoal
@@ -364,16 +364,16 @@ c	net/minecraft/unmapped/C_1554518		net/minecraft/network/packet/BlockEntityUpda
 	f	I	f_3258438		y
 	f	I	f_9481873		z
 	f	I	f_5697628		type
-	f	I	f_3439236		f_3439236
-	f	I	f_0493394		f_0493394
-	f	I	f_9718390		f_9718390
+	f	I	f_3439236		data1
+	f	I	f_0493394		data2
+	f	I	f_9718390		data3
 	m	()V	<init>		<init>
 	m	(IIIII)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
+		p	1			x
+		p	2			y
+		p	3			z
+		p	4			type
+		p	5			data
 	m	(Ljava/io/DataInputStream;)V	m_8784008		m_8784008
 		p	1			p_1
 	m	(Ljava/io/DataOutputStream;)V	m_4625396		m_4625396
@@ -417,8 +417,8 @@ c	net/minecraft/unmapped/C_8656811		net/minecraft/entity/ai/goal/LongDoorInterac
 	f	Z	f_4804658		shouldCloseDoor
 	f	I	f_9641760		ticksLeft
 	m	(Lnet/minecraft/unmapped/C_1013763;Z)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
+		p	1			mob
+		p	2			shouldCloseDoor
 	m	()Z	m_1332509		m_1332509
 	m	()V	m_5289183		m_5289183
 	m	()V	m_2223255		m_2223255

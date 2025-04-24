@@ -77,9 +77,9 @@ c	net/minecraft/unmapped/C_7185906
 	m	(F)I	m_3223986		ceil
 		p	0			x
 c	net/minecraft/unmapped/C_7662486
-	m	(Ljava/lang/String;I)I	m_0133631	m_0133631	
-		p	1		p_1	
-		p	2		p_2	
+	m	(Ljava/lang/String;I)I	m_0133631	parseInt	
+		p	1		s	
+		p	2		defaultValue	
 c	net/minecraft/unmapped/C_7688744
 	f	Z	f_0193228		snooperEnabled
 	f	Z	f_1066885		fullscreen
@@ -203,26 +203,26 @@ c	net/minecraft/unmapped/C_0731984
 	m	()V	<init>	<init>	
 c	net/minecraft/unmapped/C_2225350
 	m	()Z	m_0660733		isSnooperEnabled
-c	net/minecraft/unmapped/C_4718193	net/minecraft/unmapped/C_4718193	
-	f	Ljava/util/List;	f_1408965	f_1408965	
-	f	Ljava/lang/Process;	f_9409882	f_9409882	
-	m	()Z	m_4624220	m_4624220	
+c	net/minecraft/unmapped/C_4718193	net/minecraft/client/JavaProcess	
+	f	Ljava/util/List;	f_1408965	commands	
+	f	Ljava/lang/Process;	f_9409882	process	
+	m	()Z	m_4624220	isRunning	
 	m	()Ljava/lang/String;	toString	toString	
 c	net/minecraft/unmapped/C_6378766	net/minecraft/client/ServerDownloader	
 	f	Ljava/io/File;	f_9745096	serverPath	
-	f	Ljava/io/File;	f_4242131	f_4242131	
-	f	Lnet/minecraft/unmapped/C_4718193;	f_8535199	f_8535199	
+	f	Ljava/io/File;	f_4242131	serverDir	
+	f	Lnet/minecraft/unmapped/C_4718193;	f_8535199	process	
 	f	Ljava/lang/String;	f_2522029	serverEntry	
 	m	()V	<init>	<init>	
 	m	(Ljava/io/File;Ljava/io/File;)V	<init>	<init>	
 		p	1		serverPath	
-		p	2		p_2	
-	m	()Z	m_2265861	m_2265861	
+		p	2		serverDir	
+	m	()Z	m_2265861	isRunning	
 	m	(Ljava/io/File;)V	m_1193585	setServerPath	
 		p	1		path	
 	m	(Ljava/lang/String;)V	m_2498716	setServerEntry	
 		p	1		entry	
-	m	()I	m_7862166	m_7862166	
+	m	()I	m_7862166	getLocalPort	
 c	net/minecraft/unmapped/C_0330173
 	m	()V	<init>	<init>	
 c	net/minecraft/unmapped/C_5627326
