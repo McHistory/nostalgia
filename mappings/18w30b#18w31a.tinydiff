@@ -386,19 +386,19 @@ c	net/minecraft/unmapped/C_9614477
 		p	8			reduceDebugInfo
 	m	()Lnet/minecraft/unmapped/C_0013174;	m_1593935		getDimension
 c	net/minecraft/unmapped/C_4253713
-	m	(Lnet/minecraft/unmapped/C_0013174;Lnet/minecraft/unmapped/C_8407692;II)Lnet/minecraft/unmapped/C_2800860;	m_5927748	fixChunkNbt	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-	m	(Lnet/minecraft/unmapped/C_9386942;Lnet/minecraft/unmapped/C_0013174;Lnet/minecraft/unmapped/C_8407692;)Z	m_7624645	m_7624645	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
+	m	(Lnet/minecraft/unmapped/C_0013174;Lnet/minecraft/unmapped/C_8407692;II)Lnet/minecraft/unmapped/C_2800860;	m_5927748	upgradeChunkNbt	
+		p	1		dimension	
+		p	2		dataStorage	
+		p	3		chunkX	
+		p	4		chunkZ	
+	m	(Lnet/minecraft/unmapped/C_9386942;Lnet/minecraft/unmapped/C_0013174;Lnet/minecraft/unmapped/C_8407692;)Z	m_7624645	upgradeChunk	
+		p	1		pos	
+		p	2		dimension	
+		p	3		dataStorage	
 	m	(Lnet/minecraft/unmapped/C_0013174;Lnet/minecraft/unmapped/C_8407692;)V	m_1767995	getDataVersion	
 		p	1		p_1	
 		p	2		p_2	
-	m	(Lnet/minecraft/unmapped/C_0013174;Lnet/minecraft/unmapped/C_8054043;II)Lnet/minecraft/unmapped/C_2800860;	m_5927748		fixChunkNbt
+	m	(Lnet/minecraft/unmapped/C_0013174;Lnet/minecraft/unmapped/C_8054043;II)Lnet/minecraft/unmapped/C_2800860;	m_5927748		upgradeChunkNbt
 		p	1			dimension
 		p	2			dataStorage
 		p	3			chunkX
@@ -406,10 +406,10 @@ c	net/minecraft/unmapped/C_4253713
 	m	(Lnet/minecraft/unmapped/C_0013174;Lnet/minecraft/unmapped/C_8054043;)V	m_1767995		getDataVersion
 		p	1			dimension
 		p	2			dataStorage
-	m	(Lnet/minecraft/unmapped/C_9386942;Lnet/minecraft/unmapped/C_0013174;Lnet/minecraft/unmapped/C_8054043;)Z	m_7624645		m_7624645
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+	m	(Lnet/minecraft/unmapped/C_9386942;Lnet/minecraft/unmapped/C_0013174;Lnet/minecraft/unmapped/C_8054043;)Z	m_7624645		upgradeChunk
+		p	1			pos
+		p	2			dimension
+		p	3			dataStorage
 c	net/minecraft/unmapped/C_7255299
 	f	Ljava/io/File;	f_3184441	dataDir	
 	m	(Ljava/lang/String;)Ljava/io/File;	m_0652776	m_0652776	

@@ -3194,7 +3194,7 @@ c	net/minecraft/unmapped/C_4253713
 	m	(II)Lnet/minecraft/unmapped/C_2800860;	m_4748186		getChunkNbt
 		p	1			chunkX
 		p	2			chunkZ
-	m	(II)Lnet/minecraft/unmapped/C_2800860;	m_5927748		fixChunkNbt
+	m	(II)Lnet/minecraft/unmapped/C_2800860;	m_5927748		upgradeChunkNbt
 		p	1			chunkX
 		p	2			chunkZ
 	m	(Lnet/minecraft/unmapped/C_9844932;IILjava/util/function/Consumer;)Lnet/minecraft/unmapped/C_6755599;	m_1296329		m_1296329
@@ -10080,8 +10080,8 @@ c	net/minecraft/unmapped/C_1544625
 	f	Lnet/minecraft/unmapped/C_6095546;	f_6356755	resultInventory	
 	f	Lnet/minecraft/unmapped/C_2178068;	f_3101989	craftingInventory	
 	f	Ljava/util/List;	f_5189901	playerInventory	
-	f	Lnet/minecraft/unmapped/C_4286596;	f_2898022		f_2898022
-	f	Lnet/minecraft/unmapped/C_0460202;	f_3412149		f_3412149
+	f	Lnet/minecraft/unmapped/C_4286596;	f_2898022		inventory
+	f	Lnet/minecraft/unmapped/C_0460202;	f_3412149		recipeMenu
 	m	()V	m_1977315	takeBackIngredients	
 	m	()V	m_0962979	clickRecipe	
 	m	(IZ)I	m_5773480	getStackSize	
@@ -13618,28 +13618,28 @@ c	net/minecraft/unmapped/C_7567707		net/minecraft/server/world/chunk/ChunkMap
 		p	1			expected
 	m	(JLnet/minecraft/unmapped/C_6755599;)Lnet/minecraft/unmapped/C_6755599;	m_0547593		m_0547593
 		p	1			p_1
-		p	3			p_3
+		p	3			chunk
 	m	(Ljava/lang/Long;Lnet/minecraft/unmapped/C_6755599;)Lnet/minecraft/unmapped/C_6755599;	m_1413278		m_1413278
 		p	1			p_1
-		p	2			p_2
+		p	2			chunk
 	m	(J)Lnet/minecraft/unmapped/C_6755599;	m_5709069		m_5709069
 		p	1			p_1
 	m	(Ljava/lang/Object;)Lnet/minecraft/unmapped/C_6755599;	m_8218473		m_8218473
 		p	1			p_1
 	m	(Ljava/util/Map;)V	putAll		putAll
-		p	1			p_1
+		p	1			chunks
 	m	(Ljava/lang/Object;Ljava/lang/Object;)Z	remove		remove
-		p	1			p_1
-		p	2			p_2
+		p	1			pos
+		p	2			chunk
 	m	(Ljava/lang/Object;)Ljava/lang/Object;	remove		remove
-		p	1			p_1
+		p	1			chunk
 	m	(J)Ljava/lang/Object;	remove		remove
-		p	1			p_1
+		p	1			pos
 	m	(Ljava/lang/Long;Ljava/lang/Object;)Ljava/lang/Object;	put		put
-		p	1			p_1
+		p	1			pos
 		p	2			p_2
 	m	(JLjava/lang/Object;)Ljava/lang/Object;	put		put
-		p	1			p_1
+		p	1			pos
 		p	3			p_3
 	m	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;	put		put
 		p	1			p_1
