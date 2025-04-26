@@ -9,14 +9,14 @@ c	net/minecraft/server/MinecraftServer
 	m	(Z)V	m_7367811	saveWorlds	
 		p	1		silent	
 	m	(ZZ)V	m_7367811		saveWorlds
-		p	1			p_1
-		p	2			p_2
+		p	1			silent
+		p	2			flush
 c	net/minecraft/unmapped/C_0309511
 	f	[Lnet/minecraft/unmapped/C_5207848;	f_3849513	f_3849513	
 	f	I	f_5394150	f_5394150	
 c	net/minecraft/unmapped/C_0386427
-	f	Lcom/google/gson/JsonParser;	f_6381742		f_6381742
-	m	()Lcom/google/gson/JsonParser;	m_6703418		getLogger
+	f	Lcom/google/gson/JsonParser;	f_6381742		JSON_PARSER
+	m	()Lcom/google/gson/JsonParser;	m_6703418		m_6703418
 c	net/minecraft/unmapped/C_0786431
 	f	Ljava/util/List;	f_3292305		labels
 c	net/minecraft/unmapped/C_1011144
@@ -187,7 +187,7 @@ c	net/minecraft/unmapped/C_4939758
 	m	(Ljava/lang/String;)Ljava/lang/String;	m_9211724	encodeUTF8	
 		p	0		s	
 	m	(Ljava/lang/String;)Z	m_0809342		checkSession
-		p	1			p_1
+		p	1			serverId
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_5009044
 	m	(Lnet/minecraft/unmapped/C_2750078;)Lnet/minecraft/unmapped/C_3050136;	m_6898692	dropItem	
@@ -210,14 +210,14 @@ c	net/minecraft/unmapped/C_7185906
 		p	0			x
 c	net/minecraft/unmapped/C_7688744
 	f	Z	f_8981302		fboEnable
-	f	Z	f_1945697		f_1945697
+	f	Z	f_1945697		postProcessEnable
 	f	I	f_5593428		mipmapLevels
 	f	I	f_1730073		anisotropicFiltering
 	f	F	f_9418188		saturation
 c	net/minecraft/unmapped/C_7688744$C_0457152
 	f	Lnet/minecraft/unmapped/C_7688744$C_0457152;	f_1602545		SATURATION
 	f	Lnet/minecraft/unmapped/C_7688744$C_0457152;	f_5231418		FBO_ENABLE
-	f	Lnet/minecraft/unmapped/C_7688744$C_0457152;	f_3207737		f_3207737
+	f	Lnet/minecraft/unmapped/C_7688744$C_0457152;	f_3207737		POSTPROCESS_ENABLE
 	f	Lnet/minecraft/unmapped/C_7688744$C_0457152;	f_9448342		MAPMAP_LEVELS
 	f	Lnet/minecraft/unmapped/C_7688744$C_0457152;	f_9061839		ANISOTROPIC_FILTERING
 	f	F	f_9959609		step
@@ -298,7 +298,7 @@ c	net/minecraft/unmapped/C_9302567
 	f	Z	f_8164911		isStatic
 		c		Unused field.
 	m	()Z	m_8573198		isStatic
-	m	()Lnet/minecraft/unmapped/C_9302567;	m_3183395		m_3183395
+	m	()Lnet/minecraft/unmapped/C_9302567;	m_3183395		setStatic
 c	net/minecraft/unmapped/C_9432227
 	m	(Ljava/lang/String;)V	<init>	<init>	
 		p	1		p_1	
@@ -420,14 +420,14 @@ c	net/minecraft/unmapped/C_6769461
 	m	(I)Lnet/minecraft/unmapped/C_2750078;	m_3058689		m_3058689
 		p	1			p_1
 c	net/minecraft/unmapped/C_4384798
-	m	(Ljava/net/URL;)Ljava/lang/String;	m_2413922		m_2413922
-		p	0			p_0
-	m	(Ljava/net/URL;Ljava/lang/String;Ljava/net/Proxy;Ljava/lang/String;Z)Ljava/lang/String;	m_2527458		m_2527458
-		p	0			p_0
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
+	m	(Ljava/net/URL;)Ljava/lang/String;	m_2413922		get
+		p	0			url
+	m	(Ljava/net/URL;Ljava/lang/String;Ljava/net/Proxy;Ljava/lang/String;Z)Ljava/lang/String;	m_2527458		post
+		p	0			url
+		p	1			data
+		p	2			proxy
+		p	3			type
+		p	4			silent
 c	net/minecraft/unmapped/C_3507951
 	m	(Lnet/minecraft/unmapped/C_2182707;Ljava/lang/String;)Lnet/minecraft/unmapped/C_4030632;	m_6789028		parseItem
 		p	0			source
@@ -592,12 +592,12 @@ c	net/minecraft/unmapped/C_5698598
 		p	3			button
 c	net/minecraft/unmapped/C_5698598$C_9594377
 	m	(IIIIII)V	m_3563586	mouseClicked	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-		p	6		p_6	
+		p	1		index	
+		p	2		mouseX	
+		p	3		mouseY	
+		p	4		button	
+		p	5		entryMouseX	
+		p	6		entryMouseY	
 	m	(IIIIII)Z	m_3563586		mouseClicked
 		p	1			index
 		p	2			mouseX

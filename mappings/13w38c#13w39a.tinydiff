@@ -63,19 +63,19 @@ c	net/minecraft/unmapped/C_0324512
 		p	4			interactionManager
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_0386427
-	f	Lcom/google/gson/JsonParser;	f_6381742	f_6381742	
+	f	Lcom/google/gson/JsonParser;	f_6381742	JSON_PARSER	
 	f	Ljava/util/concurrent/atomic/AtomicInteger;	f_3844859		authenticatorThreadId
 	f	Lorg/apache/logging/log4j/Logger;	f_2215813		LOGGER
 	f	Lcom/mojang/authlib/GameProfile;	f_4489002		profile
 	m	(Lnet/minecraft/unmapped/C_0386427;)Ljavax/crypto/SecretKey;	m_0253215	m_0253215	
 		p	0		p_0	
-	m	()Lcom/google/gson/JsonParser;	m_6703418	getLogger	
+	m	()Lcom/google/gson/JsonParser;	m_6703418	m_6703418	
 	m	(Lnet/minecraft/unmapped/C_0386427;Lcom/mojang/authlib/GameProfile;)Lcom/mojang/authlib/GameProfile;	m_0423103		m_0423103
 		p	0			p_0
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_0386427;)Lcom/mojang/authlib/GameProfile;	m_0253215		m_0253215
 		p	0			p_0
-	m	()Lorg/apache/logging/log4j/Logger;	m_6703418		getLogger
+	m	()Lorg/apache/logging/log4j/Logger;	m_6703418		m_6703418
 c	net/minecraft/unmapped/C_0386427$6918176
 	m	(Lnet/minecraft/unmapped/C_0386427;)V	<init>	<init>	
 		p	1		p_1	
@@ -240,7 +240,7 @@ c	net/minecraft/unmapped/C_4939758
 	f	Lorg/apache/logging/log4j/Logger;	f_3529464		LOGGER
 	f	Lcom/mojang/authlib/minecraft/MinecraftSessionService;	f_2485294		sessionService
 	m	(Ljava/lang/String;)Z	m_0809342	checkSession	
-		p	1		p_1	
+		p	1		serverId	
 c	net/minecraft/unmapped/C_5009044
 	f	Ljava/lang/String;	f_5971582	name	
 	f	Lcom/mojang/authlib/GameProfile;	f_5971582		profile
@@ -443,29 +443,29 @@ c	net/minecraft/unmapped/C_6285024
 c	net/minecraft/unmapped/C_4384798
 	f	Ljava/util/concurrent/atomic/AtomicInteger;	f_4321894		downloadThreadCounter
 	f	Lorg/apache/logging/log4j/Logger;	f_6157803		LOGGER
-	m	(Lnet/minecraft/unmapped/C_6001689;Ljava/net/URL;Ljava/util/Map;Z)Ljava/lang/String;	m_8824104	postTo	
+	m	(Lnet/minecraft/unmapped/C_6001689;Ljava/net/URL;Ljava/util/Map;Z)Ljava/lang/String;	m_8824104	post	
 		p	0		logger	
 		p	1		url	
 		p	2		data	
 		p	3		silent	
-	m	(Lnet/minecraft/unmapped/C_6001689;Ljava/net/URL;Ljava/lang/String;Z)Ljava/lang/String;	m_3809895	postTo	
+	m	(Lnet/minecraft/unmapped/C_6001689;Ljava/net/URL;Ljava/lang/String;Z)Ljava/lang/String;	m_3809895	post	
 		p	0		logger	
 		p	1		url	
 		p	2		data	
 		p	3		silent	
-	m	(Ljava/net/URL;)Ljava/lang/String;	m_2413922	m_2413922	
-		p	0		p_0	
-	m	(Ljava/net/URL;Ljava/lang/String;Ljava/net/Proxy;Ljava/lang/String;Z)Ljava/lang/String;	m_2527458	m_2527458	
-		p	0		p_0	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-	m	(Ljava/net/URL;Ljava/util/Map;Z)Ljava/lang/String;	m_8824104		postTo
+	m	(Ljava/net/URL;)Ljava/lang/String;	m_2413922	get	
+		p	0		url	
+	m	(Ljava/net/URL;Ljava/lang/String;Ljava/net/Proxy;Ljava/lang/String;Z)Ljava/lang/String;	m_2527458	post	
+		p	0		url	
+		p	1		data	
+		p	2		proxy	
+		p	3		type	
+		p	4		silent	
+	m	(Ljava/net/URL;Ljava/util/Map;Z)Ljava/lang/String;	m_8824104		post
 		p	0			url
 		p	1			data
 		p	2			silent
-	m	(Ljava/net/URL;Ljava/lang/String;Z)Ljava/lang/String;	m_3809895		postTo
+	m	(Ljava/net/URL;Ljava/lang/String;Z)Ljava/lang/String;	m_3809895		post
 		p	0			url
 		p	1			data
 		p	2			silent

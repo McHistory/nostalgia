@@ -673,7 +673,7 @@ c	net/minecraft/unmapped/C_2584919
 	m	()Lnet/minecraft/unmapped/C_4030632;	m_2225185		m_2225185
 c	net/minecraft/unmapped/C_2621421
 	m	(Lnet/minecraft/unmapped/C_3624347;)V	m_7488412		playClickSound
-		p	1			p_1
+		p	1			soundEngine
 	m	()I	m_9998703		getWidth
 c	net/minecraft/unmapped/C_2624096
 	m	(Lnet/minecraft/unmapped/C_3906126;IIII)V	m_6252045	m_6252045	
@@ -839,33 +839,33 @@ c	net/minecraft/unmapped/C_2782822
 		p	2		x	
 		p	4		y	
 		p	6		z	
-		p	8		pitch	
-		p	9		volume	
+		p	8		volume	
+		p	9		pitch	
 	m	(Lnet/minecraft/unmapped/C_5009044;Ljava/lang/String;DDDFF)V	m_0315735	playSound	
 		p	1		source	
 		p	2		name	
 		p	3		x	
 		p	5		y	
 		p	7		z	
-		p	9		pitch	
-		p	10		volume	
+		p	9		volume	
+		p	10		pitch	
 	m	(Ljava/lang/String;DDDFFLnet/minecraft/unmapped/C_2787601;)V	m_2244237		playSound
-		p	1			p_1
-		p	2			p_2
-		p	4			p_4
-		p	6			p_6
-		p	8			p_8
-		p	9			p_9
-		p	10			p_10
+		p	1			sound
+		p	2			x
+		p	4			y
+		p	6			z
+		p	8			volume
+		p	9			pitch
+		p	10			category
 	m	(Lnet/minecraft/unmapped/C_5009044;Ljava/lang/String;DDDFFLnet/minecraft/unmapped/C_2787601;)V	m_0315735		playSound
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	5			p_5
-		p	7			p_7
-		p	9			p_9
-		p	10			p_10
-		p	11			p_11
+		p	1			source
+		p	2			sound
+		p	3			x
+		p	5			y
+		p	7			z
+		p	9			volume
+		p	10			pitch
+		p	11			category
 c	net/minecraft/unmapped/C_2783777
 	m	()J	m_8522930		m_8522930
 	m	()I	m_7441447		m_7441447
@@ -1596,22 +1596,22 @@ c	net/minecraft/unmapped/C_3906126
 		p	3			z
 		p	4			block
 	m	(DDDLjava/lang/String;FFLnet/minecraft/unmapped/C_2787601;)V	m_4172995		playSound
-		p	1			p_1
-		p	3			p_3
-		p	5			p_5
-		p	7			p_7
-		p	8			p_8
-		p	9			p_9
-		p	10			p_10
+		p	1			x
+		p	3			y
+		p	5			z
+		p	7			sound
+		p	8			volume
+		p	9			pitch
+		p	10			category
 	m	(DDDLjava/lang/String;FFZLnet/minecraft/unmapped/C_2787601;)V	m_2894003		playSound
-		p	1			p_1
-		p	3			p_3
-		p	5			p_5
-		p	7			p_7
-		p	8			p_8
-		p	9			p_9
-		p	10			p_10
-		p	11			p_11
+		p	1			x
+		p	3			y
+		p	5			z
+		p	7			sound
+		p	8			volume
+		p	9			pitch
+		p	10			delayed
+		p	11			category
 	m	(IIILnet/minecraft/unmapped/C_3635204;I)V	m_7641576		scheduleTick
 		p	1			x
 		p	2			y
@@ -3453,9 +3453,9 @@ c	net/minecraft/unmapped/C_8906619
 		p	3		tier	
 		p	4		effectiveBlocks	
 	m	(FLnet/minecraft/unmapped/C_4030632$C_5478196;[Lnet/minecraft/unmapped/C_3635204;)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+		p	1			attackDamage
+		p	2			tier
+		p	3			effectiveBlocks
 	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_3635204;IIILnet/minecraft/unmapped/C_1013763;)Z	m_5872189		m_5872189
 		p	1			p_1
 		p	2			p_2
@@ -4119,8 +4119,8 @@ c	net/minecraft/unmapped/C_4179150
 		p	3		y	
 		p	4		height	
 		p	5		tesselator	
-	m	(I)V	m_8686256		m_8686256
-		p	1			p_1
+	m	(I)V	m_8686256		selectEntry
+		p	1			index
 	m	(IZII)V	m_7921537		entryClicked
 		p	1			index
 		p	2			doubleClick
@@ -4664,8 +4664,8 @@ c	net/minecraft/unmapped/C_6786653
 	m	(I)V	<init>	<init>	
 		p	1		p_1	
 	m	()V	<init>		<init>
-	m	(Lnet/minecraft/unmapped/C_3635204;)I	m_8438518		m_8438518
-		p	1			p_1
+	m	(Lnet/minecraft/unmapped/C_3635204;)I	m_8438518		getBlockId
+		p	1			block
 c	net/minecraft/unmapped/C_6791672
 	f	I	f_4678774	plant	
 	f	Lnet/minecraft/unmapped/C_3635204;	f_4678774		plant
@@ -6482,15 +6482,15 @@ c	net/minecraft/unmapped/C_6557060
 		p	4			p_4
 		p	5			p_5
 	m	(Lnet/minecraft/unmapped/C_3906126;IIILnet/minecraft/unmapped/C_3635204;IZII)V	m_8267333		updateState
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
-		p	6			p_6
-		p	7			p_7
-		p	8			p_8
-		p	9			p_9
+		p	1			world
+		p	2			x
+		p	3			y
+		p	4			z
+		p	5			block
+		p	6			metadata
+		p	7			updateNeighbors
+		p	8			distanceToTripwire
+		p	9			tripwireMetadata
 	m	(Lnet/minecraft/unmapped/C_3906126;IIILnet/minecraft/unmapped/C_3635204;I)V	m_6138806		m_6138806
 		p	1			p_1
 		p	2			p_2
@@ -8430,21 +8430,21 @@ c	net/minecraft/unmapped/C_5698598		net/minecraft/client/gui/widget/EntryListWid
 		p	1			index
 c	net/minecraft/unmapped/C_5698598$C_9594377		Entry
 	m	(IIIILnet/minecraft/unmapped/C_2334550;IIZ)V	m_2037523		render
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
-		p	6			p_6
-		p	7			p_7
-		p	8			p_8
+		p	1			index
+		p	2			x
+		p	3			y
+		p	4			height
+		p	5			tesselator
+		p	6			mouseX
+		p	7			mouseY
+		p	8			hovered
 	m	(IIIIII)V	m_3563586		mouseClicked
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
-		p	6			p_6
+		p	1			index
+		p	2			mouseX
+		p	3			mouseY
+		p	4			button
+		p	5			entryMouseX
+		p	6			entryMouseY
 c	net/minecraft/unmapped/C_5888421		net/minecraft/client/gui/screen/resourcepack/AppliedResourcePackListWidget
 	m	(Lnet/minecraft/client/Minecraft;IILjava/util/List;)V	<init>		<init>
 		p	1			p_1
@@ -8705,7 +8705,7 @@ c	net/minecraft/unmapped/C_6923540		net/minecraft/util/CrudeIncrementalIntIdenti
 		p	1			value
 	m	(I)Ljava/lang/Object;	m_4640952		get
 		p	1			id
-	m	()Ljava/util/List;	m_9654273		m_9654273
+	m	()Ljava/util/List;	m_9654273		values
 c	net/minecraft/unmapped/C_6968605		net/minecraft/server/command/SummonCommand
 	m	()V	<init>		<init>
 	m	()Ljava/lang/String;	m_5375943		m_5375943
@@ -9232,7 +9232,7 @@ c	net/minecraft/unmapped/C_9241136		net/minecraft/util/registry/IdRegistry
 		p	1			value
 	m	(I)Ljava/lang/Object;	m_4368911		get
 		p	1			id
-	m	()Ljava/util/List;	m_0245355		m_0245355
+	m	()Ljava/util/List;	m_0245355		values
 c	net/minecraft/unmapped/C_9257227		net/minecraft/client/realms/RealmsClientProxyHandler
 	f	Ljava/net/Proxy;	f_9590054		proxy
 	m	()Ljava/net/Proxy;	m_9644287		getProxy

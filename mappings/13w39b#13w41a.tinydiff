@@ -32,8 +32,8 @@ c	net/minecraft/server/MinecraftServer
 		p	1		difficulty	
 	m	()I	m_1243578	getDefaultDifficulty	
 	m	(ZZ)V	m_7367811	saveWorlds	
-		p	1		p_1	
-		p	2		p_2	
+		p	1		silent	
+		p	2		flush	
 	m	()Lnet/minecraft/unmapped/C_9550096;	m_1243578		getDefaultDifficulty
 	m	(Z)V	m_7367811		saveWorlds
 		p	1			silent
@@ -713,7 +713,7 @@ c	net/minecraft/unmapped/C_4509280	net/minecraft/network/packet/BlockUpdatePacke
 	m	()Ljava/lang/String;	m_4149431		m_4149431
 c	net/minecraft/unmapped/C_4522670	net/minecraft/network/packet/PingHostPacket	
 	f	I	f_9185809	ID	
-	f	I	f_9118226	f_9118226	
+	f	I	f_9118226	protocol	
 	f	Ljava/lang/String;	f_5269526	address	
 	f	I	f_3197346	port	
 	m	()V	<init>	<init>	
@@ -725,7 +725,7 @@ c	net/minecraft/unmapped/C_4522670	net/minecraft/network/packet/PingHostPacket
 	m	(Ljava/io/DataOutput;)V	m_4625396	m_4625396	
 		p	1		p_1	
 	m	(ILjava/lang/String;I)V	<init>	<init>	
-		p	1		p_1	
+		p	1		protocol	
 		p	2		address	
 		p	3		port	
 	m	()Z	m_5597602	m_5597602	
@@ -904,8 +904,8 @@ c	net/minecraft/unmapped/C_4939758	net/minecraft/client/network/handler/ClientNe
 		p	2		address	
 		p	3		port	
 		p	4		callbackScreen	
-	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_9550253;	m_4425289	m_4425289	
-		p	1		p_1	
+	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_9550253;	m_4425289	deserializeChatMessage	
+		p	1		json	
 	m	(Lnet/minecraft/client/Minecraft;Lnet/minecraft/unmapped/C_0786431;Lnet/minecraft/unmapped/C_7051049;)V	<init>		<init>
 		p	1			minecraft
 		p	2			screen
@@ -1366,7 +1366,7 @@ c	net/minecraft/unmapped/C_9155522	net/minecraft/network/packet/EntityVelocityPa
 		p	1			p_1
 	m	()Ljava/lang/String;	m_4149431		m_4149431
 c	net/minecraft/unmapped/C_9302567
-	m	()Lnet/minecraft/unmapped/C_9302567;	m_3183395	m_3183395	
+	m	()Lnet/minecraft/unmapped/C_9302567;	m_3183395	setStatic	
 c	net/minecraft/unmapped/C_9381557	net/minecraft/network/packet/InventoryMenuSlotContentPacket	net/minecraft/network/packet/s2c/play/InventoryMenuSlotContentS2CPacket
 	m	()I	m_0079091	m_0079091	
 	m	(Ljava/io/DataInput;)V	m_8784008	m_8784008	
@@ -1597,8 +1597,8 @@ c	net/minecraft/unmapped/C_2077021	net/minecraft/block/AprilFoolsChestBlock
 		p	1		p_1	
 	m	()V	<init>	<init>	
 c	net/minecraft/unmapped/C_4179150
-	m	(I)V	m_8686256	m_8686256	
-		p	1		p_1	
+	m	(I)V	m_8686256	selectEntry	
+		p	1		index	
 c	net/minecraft/unmapped/C_6983897	net/minecraft/network/packet/GameEventPacket	net/minecraft/network/packet/s2c/play/GameEventS2CPacket
 	m	()I	m_0079091	m_0079091	
 	m	(Ljava/io/DataInput;)V	m_8784008	m_8784008	
@@ -2515,14 +2515,14 @@ c	net/minecraft/unmapped/C_5251467
 c	net/minecraft/unmapped/C_5698598
 c	net/minecraft/unmapped/C_5698598$C_9594377
 	m	(IIIILnet/minecraft/unmapped/C_2334550;IIZ)V	m_2037523	render	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-		p	6		p_6	
-		p	7		p_7	
-		p	8		p_8	
+		p	1		index	
+		p	2		x	
+		p	3		y	
+		p	4		height	
+		p	5		tesselator	
+		p	6		mouseX	
+		p	7		mouseY	
+		p	8		hovered	
 	m	(IIIIILnet/minecraft/unmapped/C_2334550;IIZ)V	m_2037523		render
 		p	1			index
 		p	2			x
