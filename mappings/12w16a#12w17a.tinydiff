@@ -461,40 +461,40 @@ c	net/minecraft/unmapped/C_9580631
 c	net/minecraft/unmapped/C_0731984		net/minecraft/network/encryption/EncryptionUtils
 	f	Ljava/nio/charset/Charset;	f_6592645		ISO_8859_1
 	m	()V	<init>		<init>
-	m	()Ljavax/crypto/SecretKey;	m_4270626		generateKey
+	m	()Ljavax/crypto/SecretKey;	m_4270626		generateSecretKey
 	m	()Ljava/security/KeyPair;	m_0601669		generateKeyPair
-	m	(Ljava/lang/String;Ljava/security/PublicKey;Ljavax/crypto/SecretKey;)[B	m_1774021		generateServerId
-		p	0			baseServerId
+	m	(Ljava/lang/String;Ljava/security/PublicKey;Ljavax/crypto/SecretKey;)[B	m_1774021		digest
+		p	0			data
 		p	1			publicKey
 		p	2			secretKey
-	m	(Ljava/lang/String;[[B)[B	m_2522451		hash
+	m	(Ljava/lang/String;[[B)[B	m_2522451		digest
 		p	0			algorithm
 		p	1			data
-	m	([B)Ljava/security/PublicKey;	m_6094455		reconstitutePublicKey
+	m	([B)Ljava/security/PublicKey;	m_6094455		generatePublicKey
 		p	0			data
 	m	(Ljava/security/PrivateKey;[B)Ljavax/crypto/SecretKey;	m_8138567		decryptSecretKey
 		p	0			privateKey
-		p	1			encryptedSecretKey
+		p	1			data
 	m	(Ljava/security/Key;[B)[B	m_3554189		encrypt
 		p	0			key
 		p	1			data
 	m	(Ljava/security/Key;[B)[B	m_0057073		decrypt
 		p	0			key
 		p	1			data
-	m	(ILjava/security/Key;[B)[B	m_3054541		crypt
-		p	0			opMode
+	m	(ILjava/security/Key;[B)[B	m_3054541		cipher
+		p	0			opmode
 		p	1			key
 		p	2			data
-	m	(ILjava/lang/String;Ljava/security/Key;)Ljavax/crypto/Cipher;	m_2055472		crypt
-		p	0			opMode
-		p	1			algorithm
+	m	(ILjava/lang/String;Ljava/security/Key;)Ljavax/crypto/Cipher;	m_2055472		setupCipher
+		p	0			opmode
+		p	1			transformation
 		p	2			key
 	m	(Ljavax/crypto/SecretKey;Ljava/io/OutputStream;)Ljava/io/OutputStream;	m_7284555		encrypt
 		p	0			secretKey
-		p	1			output
+		p	1			os
 	m	(Ljavax/crypto/SecretKey;Ljava/io/InputStream;)Ljava/io/InputStream;	m_5323662		decrypt
 		p	0			secretKey
-		p	1			input
+		p	1			is
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_1793890		net/minecraft/block/SlabBlock
 	f	Z	f_1687373		doubleSlab

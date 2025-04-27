@@ -2024,14 +2024,14 @@ c	net/minecraft/unmapped/C_8263475	net/minecraft/network/packet/ClientSettingsPa
 c	net/minecraft/unmapped/C_0731984
 	m	(Ljavax/crypto/SecretKey;Ljava/io/OutputStream;)Ljava/io/OutputStream;	m_7284555	encrypt	
 		p	0		secretKey	
-		p	1		output	
+		p	1		os	
 	m	(Ljavax/crypto/SecretKey;Ljava/io/InputStream;)Ljava/io/InputStream;	m_5323662	decrypt	
 		p	0		secretKey	
-		p	1		input	
+		p	1		is	
 	m	()V	<clinit>	<clinit>	
-	m	(ZLjava/security/Key;)Lorg/bouncycastle/crypto/BufferedBlockCipher;	m_5743768	m_5743768	
-		p	0		p_0	
-		p	1		p_1	
+	m	(ZLjava/security/Key;)Lorg/bouncycastle/crypto/BufferedBlockCipher;	m_5743768	setupCipher	
+		p	0		forEncryption	
+		p	1		key	
 	m	(ILjava/security/Key;)Ljavax/crypto/Cipher;	m_8163966		crypt
 		p	0			opMode
 		p	1			key
