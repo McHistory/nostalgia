@@ -555,9 +555,9 @@ c	net/minecraft/unmapped/C_3906126
 	m	(Lnet/minecraft/unmapped/C_2782822;)V	m_1985242	removeEventListener	
 		p	1		listener	
 	m	()V	m_2471566	tickEntities	
-	m	(Lnet/minecraft/unmapped/C_6385858;)V	m_6712451	updateEntity	
+	m	(Lnet/minecraft/unmapped/C_6385858;)V	m_6712451	tickEntity	
 		p	1		entity	
-	m	(Lnet/minecraft/unmapped/C_6385858;Z)V	m_3502009	updateEntity	
+	m	(Lnet/minecraft/unmapped/C_6385858;Z)V	m_3502009	tickEntity	
 		c	Attempts to tick the given entity and updates chunk management for this entity.\n\n<br>\nIf {@code requireLoaded} is {@code true}, then the entire area within a range of 32 blocks\nof the entity must be loaded, or the method will exit early. This effectively means an area\nof 5x5 chunks around the entity must be loaded.	
 		p	1		entity	
 		p	2		requireLoaded	
@@ -609,7 +609,7 @@ c	net/minecraft/unmapped/C_3906126
 	m	(Lnet/minecraft/unmapped/C_5102005;Ljava/util/function/Predicate;)Ljava/util/List;	m_8932502	m_8932502	
 		p	1		p_1	
 		p	2		p_2	
-	m	(Lnet/minecraft/unmapped/C_6385858;)V	m_3502009		updateEntity
+	m	(Lnet/minecraft/unmapped/C_6385858;)V	m_3502009		tickEntity
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_6385858;)V	m_2810843		m_2810843
 		p	1			p_1
