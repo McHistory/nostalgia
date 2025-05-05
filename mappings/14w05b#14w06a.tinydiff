@@ -800,10 +800,10 @@ c	net/minecraft/unmapped/C_1283912
 		p	5			particles
 	m	()Z	m_9646171		hasParticles
 c	net/minecraft/unmapped/C_1481722
-	f	I	f_0046203	teleportCountdown	
-		c	A 30 tick countdown that delays enderman teleportation after it becomes possible	
-	f	I	f_0609975	angryStareCooldown	
-		c	Cooldown that adds a delay before an enderman becomes angry.\nA player must stare at an enderman for 5 ticks before it becomes angry	
+	f	I	f_0046203	targetFarAwayTicks	
+		c	A counter that increments each tick where its target is more than 16 blocks away from this enderman.	
+	f	I	f_0609975	ticksSinceCreepySound	
+		c	The number of ticks that have elapsed since a creepy sound effect has been played\nwhile the enderman has a target.	
 	f	Lnet/minecraft/unmapped/C_6385858;	f_0606223	lastTarget	
 	m	()Lnet/minecraft/unmapped/C_6385858;	m_3715716	m_3715716	
 	m	()F	m_6131251		m_6131251
@@ -823,9 +823,11 @@ c	net/minecraft/unmapped/C_1481722$C_0819633		PlaceBlockGoal
 	m	()Z	m_5896190		m_5896190
 	m	()V	m_4528414		m_4528414
 c	net/minecraft/unmapped/C_1481722$C_3504752		LookAtPlayerGoal
-	f	Lnet/minecraft/unmapped/C_5009044;	f_7144667		target
-	f	I	f_3895227		lookAtPlayerWarmup
-	f	I	f_5329889		ticksSinceUnseenTeleport
+	f	Lnet/minecraft/unmapped/C_5009044;	f_7144667		pendingTarget
+	f	I	f_3895227		creepySoundTimer
+		c		A timer that counts down while the enderman has a target, after which a creepy sound will be played.
+	f	I	f_5329889		targetFarAwayTicks
+		c		A counter that increments each tick where its target is more than 16 blocks away from this enderman.
 	f	Lnet/minecraft/unmapped/C_1481722;	f_7292859		enderman
 	m	(Lnet/minecraft/unmapped/C_1481722;)V	<init>		<init>
 		p	1			enderman

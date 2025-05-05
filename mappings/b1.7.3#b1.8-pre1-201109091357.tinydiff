@@ -2444,10 +2444,10 @@ c	net/minecraft/unmapped/C_1481722		net/minecraft/entity/mob/monster/EndermanEnt
 	f	I	f_7406225		f_7406225
 	f	I	f_0727960		f_0727960
 	f	Z	f_8130184		angry
-	f	I	f_0046203		teleportCountdown
-		c		A 30 tick countdown that delays enderman teleportation after it becomes possible
-	f	I	f_0609975		angryStareCooldown
-		c		Cooldown that adds a delay before an enderman becomes angry.\nA player must stare at an enderman for 5 ticks before it becomes angry
+	f	I	f_0046203		targetFarAwayTicks
+		c		A counter that increments each tick where its target is more than 16 blocks away from this enderman.
+	f	I	f_0609975		ticksSinceCreepySound
+		c		The number of ticks that have elapsed since a creepy sound effect has been played\nwhile the enderman has a target.
 	m	(Lnet/minecraft/unmapped/C_3906126;)V	<init>		<init>
 		p	1			world
 	m	(Lnet/minecraft/unmapped/C_2800860;)V	m_4059289		m_4059289
@@ -2459,13 +2459,13 @@ c	net/minecraft/unmapped/C_1481722		net/minecraft/entity/mob/monster/EndermanEnt
 		p	1			p_1
 	m	(F)F	m_3581619		m_3581619
 		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_5009044;)Z	m_1620798		canGetAngryAt
-		p	1			target
+	m	(Lnet/minecraft/unmapped/C_5009044;)Z	m_1620798		isLookedAtBy
+		p	1			player
 	m	()V	m_5818797		m_5818797
-	m	()Z	m_2630343		tryRandomTeleport
-	m	(Lnet/minecraft/unmapped/C_6385858;)Z	m_2936399		tryTeleportTo
+	m	()Z	m_2630343		teleport
+	m	(Lnet/minecraft/unmapped/C_6385858;)Z	m_2936399		teleportTo
 		p	1			target
-	m	(DDD)Z	m_3942162		tryTeleport
+	m	(DDD)Z	m_3942162		teleportTo
 		p	1			x
 		p	3			y
 		p	5			z

@@ -148,23 +148,23 @@ c	net/minecraft/unmapped/C_1406783
 		p	0			random
 		p	1			entries
 c	net/minecraft/unmapped/C_1481722
-	f	Z	f_3419465	angry	
-	f	Lnet/minecraft/unmapped/C_2441996;	f_7568955	f_7568955	
-	f	Lnet/minecraft/unmapped/C_6101761;	f_8448941	angerTime	
-	f	I	f_8448941		angerTime
-	f	I	f_3419465		angry
+	f	Z	f_3419465	attackedByPlayer	
+	f	Lnet/minecraft/unmapped/C_2441996;	f_7568955	AIR	
+	f	Lnet/minecraft/unmapped/C_6101761;	f_8448941	CARRIED_BLOCK_METADATA	
+	f	I	f_8448941		creepySoundTime
+	f	I	f_3419465		targetChangeTime
 	m	(Z)V	m_7002826	setAngry	
 		p	1		angry	
 	m	(Lnet/minecraft/unmapped/C_1481722;Z)Z	m_8403643	m_8403643	
 		p	0		p_0	
 		p	1		p_1	
-	m	()Z	m_5405922	m_5405922	
+	m	()Z	m_5405922	isCarryingBlock	
 	m	(Lnet/minecraft/unmapped/C_1481722;)Z	m_1132968	m_1132968	
 		p	0		p_0	
 	m	()Lnet/minecraft/unmapped/C_2441996;	m_6146638	m_6146638	
 	m	(Lnet/minecraft/unmapped/C_1013763;)V	m_3729248		m_3729248
 		p	1			p_1
-	m	()V	m_8586658		playAngrySound
+	m	()V	m_8586658		playCreepySound
 	m	(Lnet/minecraft/unmapped/C_6101761;)V	m_8901560		m_8901560
 		p	1			p_1
 c	net/minecraft/unmapped/C_1481722$C_3504752
