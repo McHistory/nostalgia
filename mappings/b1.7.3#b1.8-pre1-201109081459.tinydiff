@@ -59,7 +59,7 @@ c	net/minecraft/server/MinecraftServer	net/minecraft/server/MinecraftServer
 	m	()V	<clinit>	<clinit>	
 	m	(Lnet/minecraft/unmapped/C_2942118;Ljava/lang/String;J)V	m_2695328	loadWorld	
 		p	1		storageSource	
-		p	2		worldDirName	
+		p	2		saveName	
 		p	3		seed	
 	m	(Ljava/lang/String;)V	m_7446076	warn	
 		p	1		message	
@@ -2992,12 +2992,12 @@ c	net/minecraft/unmapped/C_1140528
 		p	5		size	
 		p	7		sameVersion	
 	m	(Ljava/lang/String;Ljava/lang/String;JJIZ)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	5			p_5
-		p	7			p_7
-		p	8			p_8
+		p	1			saveName
+		p	2			name
+		p	3			lastPlayed
+		p	5			size
+		p	7			gameMode
+		p	8			sameVersion
 	m	()I	m_9442171		getGameMode
 c	net/minecraft/unmapped/C_2947053
 	f	Ljava/lang/String;	f_8414495		gameModeName
@@ -3900,9 +3900,9 @@ c	net/minecraft/unmapped/C_4413269		net/minecraft/world/WorldSettings
 	f	I	f_9389629		gameMode
 	f	Z	f_8312350		generateStructures
 	m	(JIZ)V	<init>		<init>
-		p	1			p_1
-		p	3			p_3
-		p	4			p_4
+		p	1			seed
+		p	3			gameMode
+		p	4			generateStructures
 	m	()J	m_3398293		getSeed
 	m	()I	m_6801252		getGameMode
 	m	()Z	m_4065677		allowStructures

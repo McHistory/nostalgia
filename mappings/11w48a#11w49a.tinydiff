@@ -3,7 +3,7 @@ c	net/minecraft/server/MinecraftServer
 	f	Z	f_8264391		spawnNpcs
 c	net/minecraft/unmapped/C_1013763
 	f	Z	f_2411485	interpolateOnly	
-	m	()Z	m_7583477		isInterpolateOnly
+	m	()Z	m_7583477		isLocallyControlled
 		c		@return Whether the entity is "locally controlled".\nA locally controlled entity will tick AI and movement.\nA non-locally controlled entity does not have collision and will not move.\nNo entities on the client are locally controlled, except for the local player entity.
 c	net/minecraft/unmapped/C_1203617
 	f	Ljava/util/TreeMap;	f_6853428		languageNames
@@ -81,16 +81,16 @@ c	net/minecraft/unmapped/C_5102005
 		p	1		key	
 		p	2		id	
 	m	(Ljava/lang/Class;Ljava/lang/String;IZ)V	m_3413972		register
-		p	0			p_0
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+		p	0			type
+		p	1			key
+		p	2			id
+		p	3			addSpawnEgg
 	m	(I)Ljava/lang/String;	m_8899916		getKey
 		p	0			id
 c	net/minecraft/unmapped/C_5367636
 	m	()Z	m_7583477		m_7583477
 c	net/minecraft/unmapped/C_7317606
-	f	F	f_8679620		tickdelta
+	f	F	f_8679620		headAngle
 	m	(Lnet/minecraft/unmapped/C_1013763;FFF)V	m_5265007		m_5265007
 		p	1			p_1
 		p	2			p_2

@@ -2,7 +2,7 @@ tiny	2	0
 c	net/minecraft/server/MinecraftServer
 	m	(Lnet/minecraft/unmapped/C_2942118;Ljava/lang/String;J)V	m_2695328	loadWorld	
 		p	1		storageSource	
-		p	2		worldDirName	
+		p	2		saveName	
 		p	3		seed	
 	m	(Lnet/minecraft/unmapped/C_2942118;Ljava/lang/String;JLnet/minecraft/unmapped/C_3997653;)V	m_2695328		loadWorld
 		p	1			storageSource
@@ -18,7 +18,6 @@ c	net/minecraft/unmapped/C_0914500
 		p	5			p_5
 c	net/minecraft/unmapped/C_1013763
 	f	Lnet/minecraft/unmapped/C_1013763;	f_7863798		attacker
-		c		The target that this entity is currently attacking.
 	f	Lnet/minecraft/unmapped/C_9418483;	f_8312914		lookControl
 	f	Lnet/minecraft/unmapped/C_5640967;	f_6730740		movementControl
 	f	Lnet/minecraft/unmapped/C_1279860;	f_4647937		navigation
@@ -52,15 +51,15 @@ c	net/minecraft/unmapped/C_4030632
 	m	()Z	m_6706480		shouldSyncNbt
 	m	(II)I	m_6327257		getDisplayColor
 		p	1			metadata
-		p	2			stage
+		p	2			layer
 	m	()Z	m_4645046		isLayered
 	m	(II)I	m_2843658		getSprite
 		p	1			metadata
-		p	2			stage
+		p	2			layer
 c	net/minecraft/unmapped/C_4177687
 	f	Lnet/minecraft/unmapped/C_3997653;	f_1099467		generatorType
 	m	(BBJII)V	<init>	<init>	
-		p	1		dimensionId	
+		p	1		dimension	
 		p	2		difficulty	
 		p	3		seed	
 		p	5		worldHeight	
@@ -82,10 +81,10 @@ c	net/minecraft/unmapped/C_5102005
 	f	Ljava/util/List;	f_3149854	SPAWN_EGG_DATA	
 	f	Ljava/util/HashMap;	f_3149854		SPAWN_EGG_DATA
 	m	(Ljava/lang/Class;Ljava/lang/String;IZ)V	m_3413972	register	
-		p	0		p_0	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
+		p	0		type	
+		p	1		key	
+		p	2		id	
+		p	3		addSpawnEgg	
 	m	(Ljava/lang/Class;Ljava/lang/String;I)V	m_3413972		register
 		p	0			type
 		p	1			key
@@ -119,14 +118,14 @@ c	net/minecraft/unmapped/C_9219192
 c	net/minecraft/unmapped/C_9614477
 	f	Lnet/minecraft/unmapped/C_3997653;	f_0935708		generatorType
 	m	(Ljava/lang/String;IJIBBBB)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	5		p_5	
-		p	6		p_6	
-		p	7		p_7	
-		p	8		p_8	
-		p	9		p_9	
+		p	1		username	
+		p	2		gameVersion	
+		p	3		seed	
+		p	5		gameMode	
+		p	6		dimension	
+		p	7		difficulty	
+		p	8		worldHeight	
+		p	9		maxPlayerCount	
 	m	(Ljava/lang/String;IJLnet/minecraft/unmapped/C_3997653;IBBBB)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
@@ -206,7 +205,7 @@ c	net/minecraft/unmapped/C_8428861
 	f	Lnet/minecraft/unmapped/C_1805909;	f_4868841		doneButton
 	m	(Lnet/minecraft/unmapped/C_8428861;)Lnet/minecraft/unmapped/C_1805909;	m_7240595		m_7240595
 		p	0			p_0
-c	net/minecraft/unmapped/C_0143040		net/minecraft/unmapped/C_0143040
+c	net/minecraft/unmapped/C_0143040		net/minecraft/entity/ai/control/MobControl
 c	net/minecraft/unmapped/C_1279860		net/minecraft/entity/ai/pathing/Navigation
 	m	(DDD)V	m_1193028		moveTo
 		p	1			p_1
@@ -261,10 +260,10 @@ c	net/minecraft/unmapped/C_3997653		net/minecraft/world/gen/WorldGeneratorType
 	m	(Ljava/lang/String;ILjava/lang/String;)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
-		p	3			p_3
+		p	3			key
 	m	()Ljava/lang/String;	m_8367058		getTranslationKey
-	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_3997653;	m_6111039		byId
-		p	0			id
+	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_3997653;	m_6111039		byKey
+		p	0			key
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_5640967		net/minecraft/entity/ai/control/MovementControl
 	f	Lnet/minecraft/unmapped/C_1013763;	f_6642560		mob
@@ -304,7 +303,7 @@ c	net/minecraft/unmapped/C_6019608		net/minecraft/entity/ai/goal/MeleeAttackGoal
 	m	()Z	m_3298012		m_3298012
 	m	()Z	m_1332509		m_1332509
 c	net/minecraft/unmapped/C_6273786		net/minecraft/entity/ai/goal/Goal
-	f	Ljava/util/ArrayList;	f_0998315		f_0998315
+	f	Ljava/util/ArrayList;	f_0998315		controls
 	m	()V	<init>		<init>
 	m	()Z	m_5896190		canStart
 	m	()Z	m_1332509		shouldContinue
@@ -312,8 +311,8 @@ c	net/minecraft/unmapped/C_6273786		net/minecraft/entity/ai/goal/Goal
 	m	()V	m_5289183		start
 	m	()V	m_2223255		stop
 	m	()V	m_4528414		tick
-	m	(Lnet/minecraft/unmapped/C_0143040;)V	m_3593036		setControls
-		p	1			p_1
+	m	(Lnet/minecraft/unmapped/C_0143040;)V	m_3593036		addControl
+		p	1			control
 	m	()Ljava/util/ArrayList;	m_8104401		getControls
 c	net/minecraft/unmapped/C_6285024		net/minecraft/entity/ai/goal/GoalSelector
 	f	Ljava/util/ArrayList;	f_3006626		goals
