@@ -3764,7 +3764,7 @@ c	net/minecraft/unmapped/C_4884298	net/minecraft/client/resource/SimpleResource	
 		p	4			metadata
 	m	(Lnet/minecraft/unmapped/C_1958650;)Ljava/lang/Object;	m_5396002		m_5396002
 		p	1			p_1
-c	net/minecraft/unmapped/C_6498111
+c	net/minecraft/unmapped/C_6498111	net/minecraft/client/resource/manager/FallbackResourceManager	net/minecraft/resource/manager/FallbackResourceManager
 	f	Lnet/minecraft/unmapped/C_1296613;	f_2104053	metadataSerializers	
 	f	Lnet/minecraft/unmapped/C_9955562;	f_2104053		type
 	m	(Lnet/minecraft/unmapped/C_1296613;)V	<init>	<init>	
@@ -3773,10 +3773,10 @@ c	net/minecraft/unmapped/C_6498111
 		p	1			type
 	m	(Ljava/lang/String;)Ljava/util/Collection;	m_4327771		m_4327771
 		p	1			p_1
-c	net/minecraft/unmapped/C_6577431
+c	net/minecraft/unmapped/C_6577431	net/minecraft/client/resource/manager/ResourceManager	net/minecraft/resource/manager/ResourceManager
 	m	(Ljava/lang/String;)Ljava/util/Collection;	m_4327771		listResources
-		p	1			p_1
-c	net/minecraft/unmapped/C_6642420
+		p	1			dir
+c	net/minecraft/unmapped/C_6642420	net/minecraft/client/resource/manager/SimpleReloadableResourceManager	net/minecraft/resource/manager/SimpleReloadableResourceManager
 	f	Lnet/minecraft/unmapped/C_1296613;	f_7230039	metadataSerializers	
 	f	Lnet/minecraft/unmapped/C_9955562;	f_7230039		type
 	m	(Lnet/minecraft/unmapped/C_1296613;)V	<init>	<init>	
@@ -7105,10 +7105,10 @@ c	net/minecraft/unmapped/C_2191309		net/minecraft/resource/pack/repository/Unope
 	f	Z	f_0254056		required
 	f	Z	f_9686661		fixed
 	m	(Ljava/lang/String;ZLjava/util/function/Supplier;Lnet/minecraft/unmapped/C_2191309$C_0933267;)Lnet/minecraft/unmapped/C_2191309;	m_2600140		create
-		p	0			p_0
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+		p	0			id
+		p	1			required
+		p	2			builder
+		p	3			factory
 	m	(Ljava/lang/String;ZLjava/util/function/Supplier;Lnet/minecraft/unmapped/C_9550253;Lnet/minecraft/unmapped/C_9550253;Lnet/minecraft/unmapped/C_4137995;Lnet/minecraft/unmapped/C_2191309$C_4728915;Z)V	<init>		<init>
 		p	1			id
 		p	2			required
@@ -7119,11 +7119,11 @@ c	net/minecraft/unmapped/C_2191309		net/minecraft/resource/pack/repository/Unope
 		p	7			position
 		p	8			fixed
 	m	(Ljava/lang/String;ZLjava/util/function/Supplier;Lnet/minecraft/unmapped/C_7532262;Lnet/minecraft/unmapped/C_9785240;)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
+		p	1			id
+		p	2			required
+		p	3			builder
+		p	4			delegate
+		p	5			delegateMetadata
 	m	()Lnet/minecraft/unmapped/C_9550253;	m_8794428		getTitle
 	m	()Lnet/minecraft/unmapped/C_9550253;	m_8668160		getDescription
 	m	()Lnet/minecraft/unmapped/C_4137995;	m_5273026		getCompatibility
@@ -8125,3 +8125,5 @@ c	net/minecraft/unmapped/C_9955562		net/minecraft/resource/pack/PackType
 	m	()Ljava/lang/String;	m_7839955		getDirectory
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_4180631	net/minecraft/client/resource/ResourceNotFoundException	net/minecraft/resource/ResourceNotFoundException
+c	net/minecraft/unmapped/C_2248454	net/minecraft/client/resource/manager/ResourceReloadListener	net/minecraft/resource/manager/ResourceReloadListener
+c	net/minecraft/unmapped/C_4729290	net/minecraft/client/resource/manager/ReloadableResourceManager	net/minecraft/resource/manager/ReloadableResourceManager
