@@ -1,0 +1,40 @@
+v2
+
+constant dimension net/ornithemc/feather/constants/Dimensions NETHER
+constant dimension net/ornithemc/feather/constants/Dimensions OVERWORLD
+constant dimension net/ornithemc/feather/constants/Dimensions THE_END
+
+target_method net/minecraft/world/dimension/Dimension getId ()I
+	return dimension
+
+target_method net/minecraft/world/dimension/Dimension fromId (I)Lnet/minecraft/world/dimension/Dimension;
+	param 0 dimension
+
+# enum constructor implicitly starts with (String, int
+target_method net/minecraft/world/dimension/DimensionType <init> (Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;Ljava/lang/Class;)V
+	param 2 dimension
+
+target_method net/minecraft/world/dimension/DimensionType getId ()I
+	return dimension
+
+target_method net/minecraft/world/dimension/DimensionType byId (I)Lnet/minecraft/world/dimension/DimensionType;
+	param 0 dimension
+
+target_method net/minecraft/client/world/ClientWorld <init> (Lnet/minecraft/client/network/handler/ClientPlayNetworkHandler;Lnet/minecraft/world/WorldSettings;ILnet/minecraft/world/Difficulty;Lnet/minecraft/util/profiler/Profiler;)V
+	param 2 dimension
+
+target_method net/minecraft/server/world/ServerWorld <init> (Lnet/minecraft/server/MinecraftServer;Lnet/minecraft/world/storage/WorldStorage;Lnet/minecraft/world/WorldData;ILnet/minecraft/util/profiler/Profiler;)V
+	param 3 dimension
+
+target_method net/minecraft/server/world/ReadOnlyServerWorld <init> (Lnet/minecraft/server/MinecraftServer;Lnet/minecraft/world/storage/WorldStorage;ILnet/minecraft/server/world/ServerWorld;Lnet/minecraft/util/profiler/Profiler;)V
+	param 3 dimension
+
+target_method net/minecraft/server/world/DemoServerWorld <init> (Lnet/minecraft/server/MinecraftServer;Lnet/minecraft/world/storage/WorldStorage;Lnet/minecraft/world/WorldData;ILnet/minecraft/util/profiler/Profiler;)V
+	param 3 dimension
+
+target_method net/minecraft/server/PlayerManager sendPacket (Lnet/minecraft/network/packet/Packet;I)V
+	param 1 dimension
+
+target_method net/minecraft/server/PlayerManager sendPacket (Lnet/minecraft/entity/living/player/PlayerEntity;DDDDILnet/minecraft/network/packet/Packet;)V
+	param 5 dimension
+
