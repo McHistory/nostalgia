@@ -684,118 +684,118 @@ c	net/minecraft/unmapped/C_4225189
 	m	(Z)V	m_6542542	m_6542542	
 		p	1		p_1	
 	m	()Z	m_6447487	m_6447487	
-c	net/minecraft/unmapped/C_2597265	net/minecraft/client/sound/system/LibraryJavaSound	
-	f	Ljava/nio/FloatBuffer;	f_1922512	f_1922512	
-	f	Ljava/nio/FloatBuffer;	f_6881498	f_6881498	
-	f	Ljava/nio/FloatBuffer;	f_0636020	f_0636020	
-	f	Ljava/util/Map;	f_7675847	f_7675847	
-	f	Z	f_1450461	f_1450461	
-	f	Ljava/lang/String;	f_1781260	f_1781260	
-	f	J	f_3538792	f_3538792	
-	f	J	f_5119988	f_5119988	
+c	net/minecraft/unmapped/C_2597265	paulscode/sound/libraries/LibraryLWJGL3	
+	f	Ljava/nio/FloatBuffer;	f_1922512	listenerPositionAL	
+	f	Ljava/nio/FloatBuffer;	f_6881498	listenerOrientation	
+	f	Ljava/nio/FloatBuffer;	f_0636020	listenerVelocity	
+	f	Ljava/util/Map;	f_7675847	ALBufferMap	
+	f	Z	f_1450461	alPitchSupported	
+	f	Ljava/lang/String;	f_1781260	stage	
+	f	J	f_3538792	deviceHandle	
+	f	J	f_5119988	context	
 	m	()V	<init>	<init>	
 	m	()V	init	init	
 	m	(I)Lpaulscode/sound/Channel;	createChannel	createChannel	
-		p	1		p_1	
+		p	1		type	
 	m	()V	cleanup	cleanup	
 	m	(Lpaulscode/sound/FilenameURL;)Z	loadSound	loadSound	
-		p	1		p_1	
+		p	1		filenameURL	
 	m	(Lpaulscode/sound/SoundBuffer;Ljava/lang/String;)Z	loadSound	loadSound	
-		p	1		p_1	
-		p	2		p_2	
+		p	1		buffer	
+		p	2		identifier	
 	m	(Ljava/lang/String;)V	unloadSound	unloadSound	
-		p	1		p_1	
+		p	1		filename	
 	m	(F)V	setMasterVolume	setMasterVolume	
-		p	1		p_1	
+		p	1		value	
 	m	(ZZZLjava/lang/String;Lpaulscode/sound/FilenameURL;FFFIF)V	newSource	newSource	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-		p	6		p_6	
-		p	7		p_7	
-		p	8		p_8	
-		p	9		p_9	
-		p	10		p_10	
+		p	1		priority	
+		p	2		toStream	
+		p	3		toLoop	
+		p	4		sourcename	
+		p	5		filenameURL	
+		p	6		x	
+		p	7		y	
+		p	8		z	
+		p	9		attModel	
+		p	10		distOrRoll	
 	m	(Ljavax/sound/sampled/AudioFormat;ZLjava/lang/String;FFFIF)V	rawDataStream	rawDataStream	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-		p	6		p_6	
-		p	7		p_7	
-		p	8		p_8	
+		p	1		audioFormat	
+		p	2		priority	
+		p	3		sourcename	
+		p	4		x	
+		p	5		y	
+		p	6		z	
+		p	7		attModel	
+		p	8		distOrRoll	
 	m	(ZZZLjava/lang/String;Lpaulscode/sound/FilenameURL;FFFIFZ)V	quickPlay	quickPlay	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-		p	6		p_6	
-		p	7		p_7	
-		p	8		p_8	
-		p	9		p_9	
-		p	10		p_10	
-		p	11		p_11	
+		p	1		priority	
+		p	2		toStream	
+		p	3		toLoop	
+		p	4		sourcename	
+		p	5		filenameURL	
+		p	6		x	
+		p	7		y	
+		p	8		z	
+		p	9		attModel	
+		p	10		distOrRoll	
+		p	11		temporary	
 	m	(Ljava/util/HashMap;)V	copySources	copySources	
-		p	1		p_1	
+		p	1		srcMap	
 	m	(FFF)V	setListenerPosition	setListenerPosition	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
+		p	1		x	
+		p	2		y	
+		p	3		z	
 	m	(F)V	setListenerAngle	setListenerAngle	
-		p	1		p_1	
+		p	1		angle	
 	m	(FFFFFF)V	setListenerOrientation	setListenerOrientation	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-		p	6		p_6	
+		p	1		lookX	
+		p	2		lookY	
+		p	3		lookZ	
+		p	4		upX	
+		p	5		upY	
+		p	6		upZ	
 	m	(Lpaulscode/sound/ListenerData;)V	setListenerData	setListenerData	
-		p	1		p_1	
+		p	1		l	
 	m	(FFF)V	setListenerVelocity	setListenerVelocity	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
+		p	1		x	
+		p	2		y	
+		p	3		z	
 	m	()V	dopplerChanged	dopplerChanged	
-	m	()Z	m_9332966	m_9332966	
-	m	()Z	m_5349499	m_5349499	
-	m	(ZZ)Z	m_7803580	m_7803580	
-		p	0		p_0	
-		p	1		p_1	
+	m	()Z	m_9332966	checkALError	
+	m	()Z	m_5349499	alPitchSupported	
+	m	(ZZ)Z	m_7803580	alPitchSupported	
+		p	0		action	
+		p	1		value	
 	m	()Ljava/lang/String;	getClassName	getClassName	
 	m	()V	<clinit>	<clinit>	
-c	net/minecraft/unmapped/C_2597265$C_5275629	C_5275629	
+c	net/minecraft/unmapped/C_2597265$C_5275629	Exception	
 	m	(Ljava/lang/String;I)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
-c	net/minecraft/unmapped/C_4034488	net/minecraft/unmapped/C_4034488	
-	f	Ljava/nio/IntBuffer;	f_9671776	f_9671776	
-	f	I	f_7182009	f_7182009	
-	f	I	f_1354296	f_1354296	
-	f	F	f_1414190	f_1414190	
+		p	1		message	
+		p	2		type	
+c	net/minecraft/unmapped/C_4034488	paulscode/sound/libraries/ChannelLWJGL3OpenAL	
+	f	Ljava/nio/IntBuffer;	f_9671776	ALSource	
+	f	I	f_7182009	ALFormat	
+	f	I	f_1354296	sampleRate	
+	f	F	f_1414190	millisPreviouslyPlayed	
 	m	(ILjava/nio/IntBuffer;)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
+		p	1		type	
+		p	2		src	
 	m	()V	cleanup	cleanup	
-	m	(Ljava/nio/IntBuffer;)Z	m_8809514	m_8809514	
-		p	1		p_1	
+	m	(Ljava/nio/IntBuffer;)Z	m_8809514	attachBuffer	
+		p	1		buf	
 	m	(Ljavax/sound/sampled/AudioFormat;)V	setAudioFormat	setAudioFormat	
-		p	1		p_1	
-	m	(II)V	m_9390830	m_9390830	
-		p	1		p_1	
-		p	2		p_2	
+		p	1		audioFormat	
+	m	(II)V	m_9390830	setFormat	
+		p	1		format	
+		p	2		rate	
 	m	(Ljava/util/LinkedList;)Z	preLoadBuffers	preLoadBuffers	
-		p	1		p_1	
+		p	1		bufferList	
 	m	([B)Z	queueBuffer	queueBuffer	
-		p	1		p_1	
+		p	1		buffer	
 	m	([B)I	feedRawAudioData	feedRawAudioData	
-		p	1		p_1	
-	m	(I)F	m_3863843	m_3863843	
-		p	1		p_1	
+		p	1		buffer	
+	m	(I)F	m_3863843	millisInBuffer	
+		p	1		alBufferi	
 	m	()F	millisecondsPlayed	millisecondsPlayed	
 	m	()I	buffersProcessed	buffersProcessed	
 	m	()V	flush	flush	
@@ -805,70 +805,70 @@ c	net/minecraft/unmapped/C_4034488	net/minecraft/unmapped/C_4034488
 	m	()V	stop	stop	
 	m	()V	rewind	rewind	
 	m	()Z	playing	playing	
-	m	()Z	m_7997584	m_7997584	
-c	net/minecraft/unmapped/C_7775554	net/minecraft/unmapped/C_7775554	
-	f	Lnet/minecraft/unmapped/C_4034488;	f_4619284	f_4619284	
-	f	Ljava/nio/IntBuffer;	f_1856005	f_1856005	
-	f	Ljava/nio/FloatBuffer;	f_0975100	f_0975100	
-	f	Ljava/nio/FloatBuffer;	f_5642990	f_5642990	
-	f	Ljava/nio/FloatBuffer;	f_9234419	f_9234419	
+	m	()Z	m_7997584	checkALError	
+c	net/minecraft/unmapped/C_7775554	paulscode/sound/libraries/SourceLWJGL3OpenAL	
+	f	Lnet/minecraft/unmapped/C_4034488;	f_4619284	channelOpenAL	
+	f	Ljava/nio/IntBuffer;	f_1856005	myBuffer	
+	f	Ljava/nio/FloatBuffer;	f_0975100	listenerPosition	
+	f	Ljava/nio/FloatBuffer;	f_5642990	sourcePosition	
+	f	Ljava/nio/FloatBuffer;	f_9234419	sourceVelocity	
 	m	(Ljava/nio/FloatBuffer;Ljava/nio/IntBuffer;ZZZLjava/lang/String;Lpaulscode/sound/FilenameURL;Lpaulscode/sound/SoundBuffer;FFFIFZ)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-		p	6		p_6	
-		p	7		p_7	
-		p	8		p_8	
-		p	9		p_9	
-		p	10		p_10	
-		p	11		p_11	
-		p	12		p_12	
-		p	13		p_13	
-		p	14		p_14	
+		p	1		listenerPosition	
+		p	2		myBuffer	
+		p	3		priority	
+		p	4		toStream	
+		p	5		toLoop	
+		p	6		sourcename	
+		p	7		filenameURL	
+		p	8		soundBuffer	
+		p	9		x	
+		p	10		y	
+		p	11		z	
+		p	12		attModel	
+		p	13		distOrRoll	
+		p	14		temporary	
 	m	(Ljava/nio/FloatBuffer;Ljava/nio/IntBuffer;Lpaulscode/sound/Source;Lpaulscode/sound/SoundBuffer;)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
+		p	1		listenerPosition	
+		p	2		myBuffer	
+		p	3		old	
+		p	4		soundBuffer	
 	m	(Ljava/nio/FloatBuffer;Ljavax/sound/sampled/AudioFormat;ZLjava/lang/String;FFFIF)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-		p	6		p_6	
-		p	7		p_7	
-		p	8		p_8	
-		p	9		p_9	
+		p	1		listenerPosition	
+		p	2		audioFormat	
+		p	3		priority	
+		p	4		sourcename	
+		p	5		x	
+		p	6		y	
+		p	7		z	
+		p	8		attModel	
+		p	9		distOrRoll	
 	m	()Z	incrementSoundSequence	incrementSoundSequence	
 	m	()V	listenerMoved	listenerMoved	
 	m	(FFF)V	setPosition	setPosition	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
+		p	1		x	
+		p	2		y	
+		p	3		z	
 	m	()V	positionChanged	positionChanged	
-	m	()V	m_8107823	m_8107823	
+	m	()V	m_8107823	checkPitch	
 	m	(Z)V	setLooping	setLooping	
-		p	1		p_1	
+		p	1		lp	
 	m	(I)V	setAttenuation	setAttenuation	
-		p	1		p_1	
+		p	1		model	
 	m	(F)V	setDistOrRoll	setDistOrRoll	
-		p	1		p_1	
+		p	1		dr	
 	m	(FFF)V	setVelocity	setVelocity	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
+		p	1		x	
+		p	2		y	
+		p	3		z	
 	m	(F)V	setPitch	setPitch	
-		p	1		p_1	
+		p	1		value	
 	m	(Lpaulscode/sound/Channel;)V	play	play	
-		p	1		p_1	
+		p	1		c	
 	m	()Z	preLoad	preLoad	
-	m	()V	m_3346717	m_3346717	
-	m	()V	m_5364341	m_5364341	
-	m	()V	m_5988730	m_5988730	
-	m	()Z	m_2166916	m_2166916	
+	m	()V	m_3346717	resetALInformation	
+	m	()V	m_5364341	calculateDistance	
+	m	()V	m_5988730	calculateGain	
+	m	()Z	m_2166916	checkALError	
 c	net/minecraft/unmapped/C_2877231	net/minecraft/unmapped/C_2877231	
 	f	Lnet/minecraft/realms/RealmsClickableScrolledSelectionList;	f_3030780	f_3030780	
 	m	(Lnet/minecraft/realms/RealmsClickableScrolledSelectionList;IIIII)V	<init>	<init>	
