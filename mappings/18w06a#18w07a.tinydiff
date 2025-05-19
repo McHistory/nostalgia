@@ -380,7 +380,7 @@ c	net/minecraft/unmapped/C_7118457
 	f	Lnet/minecraft/unmapped/C_5613525;	f_1026430		RIPTIDE
 	f	Lnet/minecraft/unmapped/C_5613525;	f_4346927		CHANNELING
 c	net/minecraft/unmapped/C_6124529
-	f	Lnet/minecraft/unmapped/C_6124529;	f_5117143		f_5117143
+	f	Lnet/minecraft/unmapped/C_6124529;	f_5117143		WATER_BORDER
 c	net/minecraft/unmapped/C_0705111
 	m	(Lnet/minecraft/unmapped/C_3906126;ZZ)I	m_2645757		tickSpawners
 		p	1			world
@@ -515,9 +515,9 @@ c	net/minecraft/unmapped/C_0164923		net/minecraft/client/render/model/entity/Tur
 		p	6			p_6
 		p	7			p_7
 	m	()I	m_3078071		m_3078071
-c	net/minecraft/unmapped/C_0292909		net/minecraft/unmapped/C_0292909
-	f	F	f_7766405		f_7766405
-	f	F	f_6939677		f_6939677
+c	net/minecraft/unmapped/C_0292909		net/minecraft/entity/ai/pathing/TurtleNodeEvaluator
+	f	F	f_7766405		oldWalkableWeight
+	f	F	f_6939677		oldWaterBorderWeight
 	m	()V	<init>		<init>
 	m	(Lnet/minecraft/unmapped/C_9071248;Lnet/minecraft/unmapped/C_2587956;)V	m_9094843		m_9094843
 		p	1			p_1
@@ -1533,7 +1533,7 @@ c	net/minecraft/unmapped/C_9378896$8591899		8591899
 c	net/minecraft/unmapped/C_9378896$C_0114503		TurtleSwimNavigation
 	m	(Lnet/minecraft/unmapped/C_9378896;Lnet/minecraft/unmapped/C_3906126;)V	<init>		<init>
 		p	1			owner
-		p	2			p_2
+		p	2			world
 	m	()Z	m_4963603		m_4963603
 	m	()Lnet/minecraft/unmapped/C_0459721;	m_5006874		m_5006874
 	m	(Lnet/minecraft/unmapped/C_6707278;)Z	m_0933464		m_0933464
