@@ -178,8 +178,8 @@ c	net/minecraft/unmapped/C_3635204
 		p	5			p_5
 	m	(III)Lnet/minecraft/unmapped/C_3499172;	m_5049680		getOutlineShape
 		p	0			p_0
-		p	1			p_1
-		p	2			p_2
+		p	1			x
+		p	2			y
 	m	(III)Lnet/minecraft/unmapped/C_3499172;	m_9650578		getCollisionShape
 		p	1			x
 		p	2			y
@@ -337,7 +337,7 @@ c	net/minecraft/client/Minecraft
 	f	[I	f_8115571	f_8115571	
 	f	Lnet/minecraft/unmapped/C_6495127;	f_5337597		world
 	f	Lnet/minecraft/unmapped/C_0693652;	f_5473933		player
-	f	Ljava/util/ArrayList;	f_6333965		mobs
+	f	Ljava/util/ArrayList;	f_6333965		entities
 	m	(I)V	m_6392526	createWorld	
 		p	1		size	
 	m	(Lcom/mojang/minecraft/level/Level;)V	m_6427459	setWorld	
@@ -385,8 +385,8 @@ c	net/minecraft/unmapped/C_1044273
 		p	1		p_1	
 		p	2		p_2	
 	m	(Lnet/minecraft/unmapped/C_6495127;Lnet/minecraft/unmapped/C_3385278;)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
+		p	1			world
+		p	2			textureManager
 	m	(Lnet/minecraft/unmapped/C_0693652;I)V	m_8682700		render
 		p	1			camera
 		p	2			layer
@@ -973,13 +973,13 @@ c	net/minecraft/unmapped/C_6501689		net/minecraft/entity/mob/MobEntity
 	f	F	f_4659285		timeScale
 	f	F	f_1524676		rotationSpeed
 	f	Lnet/minecraft/unmapped/C_7898033;	f_6031782		model
-	f	Lnet/minecraft/unmapped/C_3385278;	f_2431506		f_2431506
+	f	Lnet/minecraft/unmapped/C_3385278;	f_2431506		textureManager
 	m	(Lnet/minecraft/unmapped/C_6495127;Lnet/minecraft/unmapped/C_3385278;FFF)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
+		p	1			world
+		p	2			textureManager
+		p	3			x
+		p	4			y
+		p	5			z
 	m	()V	m_8155790		m_8155790
 	m	(F)V	m_1301804		render
 		p	1			tickDelta
@@ -1050,5 +1050,5 @@ c	net/minecraft/unmapped/C_8146558		net/minecraft/entity/Entity
 		p	2			forwards
 		p	3			scale
 	m	()Z	m_1220167		isLit
-	m	(F)V	m_1301804		m_1301804
-		p	1			p_1
+	m	(F)V	m_1301804		render
+		p	1			tickDelta

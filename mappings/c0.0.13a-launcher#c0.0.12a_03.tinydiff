@@ -87,9 +87,9 @@ c	net/minecraft/unmapped/C_4078372
 	m	()V	m_2322080	m_2322080	
 	m	()V	m_9596712	m_9596712	
 	m	(III)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+		p	1			sizeX
+		p	2			sizeZ
+		p	3			sizeY
 c	net/minecraft/unmapped/C_4558465
 	m	(Lnet/minecraft/unmapped/C_6495127;IIIII)Z	m_8199947	m_8199947	
 		p	1		p_1	
@@ -370,12 +370,12 @@ c	com/mojang/minecraft/MinecraftApplet
 	f	Ljava/awt/Canvas;	canvas	canvas	
 	f	Lnet/minecraft/client/Minecraft;	minecraft	minecraft	
 	f	Ljava/lang/Thread;	thread	thread	
-	f	Ljava/awt/Canvas;	f_4637653		f_4637653
-	f	Lnet/minecraft/client/Minecraft;	f_4072290		f_4072290
-	f	Ljava/lang/Thread;	f_4224164		f_4224164
+	f	Ljava/awt/Canvas;	f_4637653		canvas
+	f	Lnet/minecraft/client/Minecraft;	f_4072290		minecraft
+	f	Ljava/lang/Thread;	f_4224164		thread
 	m	()V	startGameThread	startGameThread	
 	m	()V	stopGameThread	stopGameThread	
-	m	()V	m_5584922		m_5584922
+	m	()V	m_5584922		stopGame
 c	com/mojang/minecraft/MinecraftApplet$1	1	
 	f	Lcom/mojang/minecraft/MinecraftApplet;	this$0	this$0	
 	m	(Lcom/mojang/minecraft/MinecraftApplet;)V	<init>	<init>	
@@ -479,8 +479,8 @@ c	net/minecraft/unmapped/C_6495127
 		p	3			p_3
 		p	4			p_4
 	m	()V	m_9770352		m_9770352
-	m	()Z	m_9026199		readLevelData
-	m	()V	m_9465106		writeLevelData
+	m	()Z	m_9026199		load
+	m	()V	m_9465106		save
 	m	(IIIII)J	m_2860597		m_2860597
 		p	1			p_1
 		p	2			p_2
