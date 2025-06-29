@@ -1,6 +1,8 @@
 import net.ornithemc.keratin.api.TaskSelection
 import net.ornithemc.keratin.api.task.mapping.graph.ExtendGraphTask
 
+import net.fabricmc.filament.task.MappingPoetTask
+
 plugins {
 	id 'java'
 	id 'maven-publish'
@@ -34,7 +36,7 @@ tasks.withType(Javadoc, {
 	// verbose = true // enable to debug
 	it.options {
 		// verbose() // enable to debug
-		source = "11"
+		source = "8"
 		encoding = 'UTF-8'
 		charSet = 'UTF-8'
 		memberLevel = JavadocMemberLevel.PRIVATE
@@ -44,10 +46,12 @@ tasks.withType(Javadoc, {
 				'implSpec:a:Implementation Requirements:',
 				'implNote:a:Implementation Note:'
 		)
-		taglets "net.fabricmc.mappingpoet.jd.MappingTaglet"
+		taglets "net.fabricmc.filament.mappingpoet.jd.MappingTaglet"
 		// taglet path, header, extra stylesheet settings deferred
+		it.use()
 
 		addBooleanOption "-allow-script-in-comments", true
+		addBooleanOption "-ignore-source-errors", true
 		links(
 				'https://guava.dev/releases/21.0/api/docs/',
 				'https://www.javadoc.io/doc/com.google.code.gson/gson/2.8.0/',
@@ -72,23 +76,14 @@ tasks.withType(Javadoc, {
 		addBooleanOption 'Xdoclint:reference', true
 		addBooleanOption 'Xdoclint:accessibility', true
 	}
+	
+	def filamentCodeSource = MappingPoetTask.class.getProtectionDomain().getCodeSource()
+	def filamentJarFile = new File(filamentCodeSource.getLocation().getFile())
 
-	it.doLast {
-		project.copy {
-			from mappingPoetJar
-			include "copy_on_click.js"
-			into javadoc.outputDirectory
-		}
-	}
-
-	it.doFirst {
-		// lazy setting
-		options {
-			tagletPath configurations.mappingPoet.files.toList()
-			header mappingPoetJar.get().filter { it.name == 'javadoc_header.txt' }.singleFile.text.trim()
-			// cannot include line breaks
-			addFileOption "-add-stylesheet", mappingPoetJar.get().filter { it.name == 'forms.css' }.singleFile
-		}
+	options {
+		tagletPath = [filamentJarFile]
+		header file("gradle/javadoc/header.txt").text.trim() // cannot include line breaks
+		addFileOption "-add-stylesheet", file("gradle/javadoc/forms.css")
 	}
 })
 
