@@ -31,8 +31,6 @@ tasks.withType(ExtendGraphTask, {
 tasks.withType(Javadoc, {
 	it.outputs.upToDateWhen { false }
 
-	def mappingPoetJar = project.provider { zipTree configurations.mappingPoetJar.singleFile }
-
 	// verbose = true // enable to debug
 	it.options {
 		// verbose() // enable to debug
@@ -82,8 +80,6 @@ tasks.withType(Javadoc, {
 
 	options {
 		tagletPath = [filamentJarFile]
-		header file("gradle/javadoc/header.txt").text.trim() // cannot include line breaks
-		addFileOption "-add-stylesheet", file("gradle/javadoc/forms.css")
 	}
 })
 
