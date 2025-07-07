@@ -11,17 +11,20 @@ CLASS net/minecraft/class_16 net/minecraft/world/level/tile/RailTile
 		ARG 4 z
 		ARG 5 data
 			COMMENT the rail shape meta data
+		ARG 6 hasSignal
 		ARG 7 power
 	METHOD method_1104 updateDir (Lnet/minecraft/class_18;IIIZ)V
 		ARG 1 level
 		ARG 2 x
 		ARG 3 y
 		ARG 4 z
+		ARG 5 forceUpdate
 	METHOD method_1105 isSameRailWithPower (Lnet/minecraft/class_18;IIIZII)Z
 		ARG 1 level
 		ARG 2 x
 		ARG 3 y
 		ARG 4 z
+		ARG 5 hasSignal
 		ARG 6 power
 		ARG 7 railShape
 	METHOD method_1107 isRail (I)Z
@@ -56,6 +59,7 @@ CLASS net/minecraft/class_16 net/minecraft/world/level/tile/RailTile
 			ARG 1 pos
 		METHOD method_1115 place (ZZ)V
 			ARG 1 hasSignal
+			ARG 2 forceUpdate
 		METHOD method_1116 countPotentialConnections ()I
 		METHOD method_1117 hasConnection (III)Z
 			ARG 1 x
