@@ -13,9 +13,15 @@ CLASS net/minecraft/class_223 net/minecraft/world/level/tile/piston/PistonBaseTi
 		ARG 4 z
 		ARG 5 destroy
 	METHOD method_760 getFacing (I)I
-		ARG 0 meta
+		ARG 0 data
+	METHOD method_761 getRotationData (Lnet/minecraft/class_18;IIILnet/minecraft/class_54;)I
+		ARG 0 level
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+		ARG 4 player
 	METHOD method_762 isExtended (I)Z
-		ARG 0 meta
+		ARG 0 data
 	METHOD method_763 getNeighborSignal (Lnet/minecraft/class_18;IIII)Z
 		ARG 1 level
 		ARG 2 x
@@ -27,7 +33,7 @@ CLASS net/minecraft/class_223 net/minecraft/world/level/tile/piston/PistonBaseTi
 		ARG 2 x
 		ARG 3 y
 		ARG 4 z
-	METHOD method_765 (Lnet/minecraft/class_18;IIII)Z
+	METHOD method_765 canMoveBlocks (Lnet/minecraft/class_18;IIII)Z
 		ARG 0 level
 		ARG 1 x
 		ARG 2 y
