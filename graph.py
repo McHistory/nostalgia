@@ -618,7 +618,7 @@ def main():
 
 def generate(root, mc_versions):
 	os.environ['MC_VERSION'] = root
-	subprocess.run("./gradlew resetGraph --stacktrace", shell = True, check = True)
+	subprocess.run("./gradlew resetGraph --no-parallel --stacktrace", shell = True, check = True)
 	
 	for versions in mc_versions:
 		for i in range(1, len(versions)):

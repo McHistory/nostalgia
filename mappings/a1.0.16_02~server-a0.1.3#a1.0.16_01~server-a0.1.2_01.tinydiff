@@ -1,26 +1,52 @@
 tiny	2	0
-c	net/minecraft/unmapped/C_1518064	net/minecraft/world/gen/carver/CaveWorldCarver	
+c	net/minecraft/server/MinecraftServer
+	m	(Ljava/lang/String;Lnet/minecraft/unmapped/C_2182707;)V	m_3813815	m_3813815	
+		p	1		p_1	
+		p	2		p_2	
+	m	(Ljava/lang/String;Ljava/lang/String;)V	m_2224501	m_2224501	
+		p	1		p_1	
+		p	2		p_2	
+	m	(Ljava/lang/String;)V	m_7400010	m_7400010	
+		p	1		p_1	
+	m	()Ljava/lang/String;	m_7291241	m_7291241	
+	m	(Ljava/lang/String;)V	m_3813815		m_3813815
+		p	1			p_1
+c	net/minecraft/unmapped/C_0019534
+	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_0324512;	m_9159784	m_9159784	
+		p	1		p_1	
+	m	(Ljava/lang/String;Ljava/lang/String;)V	m_7846091	m_7846091	
+		p	1		p_1	
+		p	2		p_2	
+	m	(Ljava/lang/String;)V	m_3616224	m_3616224	
+		p	1		p_1	
+c	net/minecraft/unmapped/C_0535659	net/minecraft/unmapped/C_0535659	
+	f	Ljava/lang/String;	f_5102708	f_5102708	
+	f	Lnet/minecraft/unmapped/C_2182707;	f_4647043	f_4647043	
+	m	(Ljava/lang/String;Lnet/minecraft/unmapped/C_2182707;)V	<init>	<init>	
+		p	1		p_1	
+		p	2		p_2	
+c	net/minecraft/unmapped/C_1518064	net/minecraft/unmapped/C_1518064	
 	m	()V	<init>	<init>	
-	m	(II[BDDD)V	m_1871596	carveRoom	
-		p	1		chunkX	
-		p	2		chunkZ	
-		p	3		blocks	
-		p	4		x	
-		p	6		y	
-		p	8		z	
-	m	(II[BDDDFFFIID)V	m_1959732	carveTunnel	
-		p	1		chunkX	
-		p	2		chunkZ	
-		p	3		blocks	
-		p	4		x	
-		p	6		y	
-		p	8		z	
-		p	10		baseWidth	
-		p	11		yaw	
-		p	12		pitch	
-		p	13		tunnel	
-		p	14		tunnelCount	
-		p	15		widthHeightRatio	
+	m	(II[BDDD)V	m_1871596	m_1871596	
+		p	1		p_1	
+		p	2		p_2	
+		p	3		p_3	
+		p	4		p_4	
+		p	6		p_6	
+		p	8		p_8	
+	m	(II[BDDDFFFIID)V	m_1959732	m_1959732	
+		p	1		p_1	
+		p	2		p_2	
+		p	3		p_3	
+		p	4		p_4	
+		p	6		p_6	
+		p	8		p_8	
+		p	10		p_10	
+		p	11		p_11	
+		p	12		p_12	
+		p	13		p_13	
+		p	14		p_14	
+		p	15		p_15	
 	m	(Lnet/minecraft/unmapped/C_3906126;IIII[B)V	m_6800431	m_6800431	
 		p	1		p_1	
 		p	2		p_2	
@@ -28,59 +54,33 @@ c	net/minecraft/unmapped/C_1518064	net/minecraft/world/gen/carver/CaveWorldCarve
 		p	4		p_4	
 		p	5		p_5	
 		p	6		p_6	
+c	net/minecraft/unmapped/C_2182707	net/minecraft/unmapped/C_2182707	
+	m	(Ljava/lang/String;)V	m_7400010	m_7400010	
+		p	1		p_1	
+	m	()Ljava/lang/String;	m_7291241	m_7291241	
 c	net/minecraft/unmapped/C_2426381
 	m	(F)V	m_8092679	m_8092679	
 		p	1		p_1	
 c	net/minecraft/unmapped/C_4078372
-	f	Lnet/minecraft/unmapped/C_6329603;	f_0546041	cave	
+	f	Lnet/minecraft/unmapped/C_6329603;	f_0546041	f_0546041	
 	f	Lnet/minecraft/unmapped/C_6329603;	f_3405040	f_3405040	
-c	net/minecraft/unmapped/C_6329603	net/minecraft/world/gen/Generator	
-	f	I	f_6869973	range	
-	f	Ljava/util/Random;	f_5059528	random	
+c	net/minecraft/unmapped/C_6329603	net/minecraft/unmapped/C_6329603	
+	f	I	f_6869973	f_6869973	
+	f	Ljava/util/Random;	f_5059528	f_5059528	
 	m	()V	<init>	<init>	
-	m	(Lnet/minecraft/unmapped/C_3906126;IIII[B)V	m_6800431	place	
-		p	1		world	
-		p	2		startChunkX	
-		p	3		startChunkZ	
-		p	4		chunkX	
-		p	5		chunkZ	
-		p	6		blocks	
-	m	(Lnet/minecraft/unmapped/C_4078372;Lnet/minecraft/unmapped/C_3906126;II[B)V	m_8752868	place	
-		p	1		generator	
-		p	2		world	
-		p	3		chunkX	
-		p	4		chunkZ	
-		p	5		blocks	
-c	net/minecraft/server/MinecraftServer
-	m	(Ljava/lang/String;Lnet/minecraft/unmapped/C_2182707;)V	m_3813815	queueCommand	
-		p	1		command	
-		p	2		source	
-	m	(Ljava/lang/String;Ljava/lang/String;)V	m_2224501	sendCommandFeedback	
-		p	1		player	
-		p	2		message	
-	m	(Ljava/lang/String;)V	m_7400010	m_7400010	
+	m	(Lnet/minecraft/unmapped/C_3906126;IIII[B)V	m_6800431	m_6800431	
 		p	1		p_1	
-	m	()Ljava/lang/String;	m_7291241	m_7291241	
-	m	(Ljava/lang/String;)V	m_3813815		queueCommand
-		p	1			command
-c	net/minecraft/unmapped/C_0019534
-	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_0324512;	m_9159784	get	
-		p	1		name	
-	m	(Ljava/lang/String;Ljava/lang/String;)V	m_7846091	sendMessageToPlayer	
-		p	1		name	
-		p	2		message	
-	m	(Ljava/lang/String;)V	m_3616224	sendMessage	
-		p	1		message	
-c	net/minecraft/unmapped/C_0535659	net/minecraft/server/PendingCommand	
-	f	Ljava/lang/String;	f_5102708	command	
-	f	Lnet/minecraft/unmapped/C_2182707;	f_4647043	source	
-	m	(Ljava/lang/String;Lnet/minecraft/unmapped/C_2182707;)V	<init>	<init>	
-		p	1		command	
-		p	2		source	
-c	net/minecraft/unmapped/C_2182707	net/minecraft/command/source/CommandSource	
-	m	(Ljava/lang/String;)V	m_7400010	sendMessage	
-		p	1		message	
-	m	()Ljava/lang/String;	m_7291241	getSourceName	
+		p	2		p_2	
+		p	3		p_3	
+		p	4		p_4	
+		p	5		p_5	
+		p	6		p_6	
+	m	(Lnet/minecraft/unmapped/C_4078372;Lnet/minecraft/unmapped/C_3906126;II[B)V	m_8752868	m_8752868	
+		p	1		p_1	
+		p	2		p_2	
+		p	3		p_3	
+		p	4		p_4	
+		p	5		p_5	
 c	net/minecraft/unmapped/C_7102748
 	m	(Ljava/lang/String;)V	m_7400010	m_7400010	
 		p	1		p_1	
