@@ -2,12 +2,12 @@ tiny	2	0
 c	net/minecraft/unmapped/C_0070166
 	m	()Z	m_0403320		m_0403320
 c	net/minecraft/unmapped/C_1013763
-	m	()V	m_6671400	m_6671400	
-	m	(DDD)Z	m_6814594	m_6814594	
+	m	()V	m_6671400	spawnAnim	
+	m	(DDD)Z	m_6814594	canSpawn	
 		p	1		p_1	
 		p	3		p_3	
 		p	5		p_5	
-	m	(FFF)Z	m_6814594		m_6814594
+	m	(FFF)Z	m_6814594		canSpawn
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -26,7 +26,7 @@ c	net/minecraft/unmapped/C_2286002
 		p	2			p_2
 	m	()V	m_8074618		m_8074618
 	m	()V	m_8069445		m_8069445
-c	net/minecraft/unmapped/C_2419714	net/minecraft/unmapped/C_2419714	
+c	net/minecraft/unmapped/C_2419714	net/minecraft/world/level/levelgen/feature/MonsterRoomFeature	
 	m	()V	<init>	<init>	
 	m	(Lnet/minecraft/unmapped/C_3906126;Ljava/util/Random;III)Z	m_2665009	m_2665009	
 		p	1		p_1	
@@ -34,10 +34,10 @@ c	net/minecraft/unmapped/C_2419714	net/minecraft/unmapped/C_2419714
 		p	3		p_3	
 		p	4		p_4	
 		p	5		p_5	
-c	net/minecraft/unmapped/C_2581946	net/minecraft/unmapped/C_2581946	
+c	net/minecraft/unmapped/C_2581946	net/minecraft/world/level/tile/MobSpawnerTile	
 	m	(II)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
+		p	1		id	
+		p	2		tex	
 	m	()Lnet/minecraft/unmapped/C_2074023;	m_0502820	m_0502820	
 	m	()Z	m_1944525	m_1944525	
 c	net/minecraft/unmapped/C_3006620
@@ -56,21 +56,21 @@ c	net/minecraft/unmapped/C_3419581
 		p	2			p_2
 		p	3			p_3
 c	net/minecraft/unmapped/C_3635204
-	f	Lnet/minecraft/unmapped/C_3635204;	f_8556674	f_8556674	
+	f	Lnet/minecraft/unmapped/C_3635204;	f_8556674	SPAWNER	
 c	net/minecraft/unmapped/C_3906126
-	m	(Ljava/lang/Class;Lnet/minecraft/unmapped/C_1414550;)Ljava/util/List;	m_9014160	m_9014160	
-		p	1		p_1	
-		p	2		p_2	
+	m	(Ljava/lang/Class;Lnet/minecraft/unmapped/C_1414550;)Ljava/util/List;	m_9014160	getEntitiesOfClass	
+		p	1		entityClass	
+		p	2		area	
 	m	()V	m_2289208		m_2289208
 c	net/minecraft/unmapped/C_4030632
-	f	Lnet/minecraft/unmapped/C_4030632;	f_2983789	f_2983789	
-	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_1013763;)V	m_9532015	m_9532015	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_2983789	SADDLE	
+	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_1013763;)V	m_9532015	hurtEnemy	
 		p	1		p_1	
 		p	2		p_2	
-	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_1013763;)V	m_3129782	m_3129782	
-		p	1		p_1	
-		p	2		p_2	
-	m	(Lnet/minecraft/unmapped/C_2750078;)V	m_9532015		m_9532015
+	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_1013763;)V	m_3129782	interactEnemy	
+		p	1		item	
+		p	2		entity	
+	m	(Lnet/minecraft/unmapped/C_2750078;)V	m_9532015		hurtEnemy
 		p	1			p_1
 c	net/minecraft/unmapped/C_4078372
 	m	()Z	m_0403320		m_0403320
@@ -83,7 +83,7 @@ c	net/minecraft/unmapped/C_4718187
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
-c	net/minecraft/unmapped/C_4937211	net/minecraft/unmapped/C_4937211	
+c	net/minecraft/unmapped/C_4937211	net/minecraft/world/item/SaddleItem	
 	m	(I)V	<init>	<init>	
 		p	1		p_1	
 	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_1013763;)V	m_3129782	m_3129782	
@@ -93,47 +93,47 @@ c	net/minecraft/unmapped/C_4937211	net/minecraft/unmapped/C_4937211
 		p	1		p_1	
 		p	2		p_2	
 c	net/minecraft/unmapped/C_5102005
-	m	(Ljava/lang/String;Lnet/minecraft/unmapped/C_3906126;)Lnet/minecraft/unmapped/C_6385858;	m_3397983	m_3397983	
-		p	0		p_0	
-		p	1		p_1	
+	m	(Ljava/lang/String;Lnet/minecraft/unmapped/C_3906126;)Lnet/minecraft/unmapped/C_6385858;	m_3397983	newEntity	
+		p	0		id	
+		p	1		level	
 c	net/minecraft/unmapped/C_5434245
 	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_1013763;)V	m_9532015	m_9532015	
 		p	1		p_1	
 		p	2		p_2	
 	m	(Lnet/minecraft/unmapped/C_2750078;)V	m_9532015		m_9532015
 		p	1			p_1
-c	net/minecraft/unmapped/C_6108840	net/minecraft/unmapped/C_6108840	
-	f	I	f_0012020	f_0012020	
-	f	Ljava/lang/String;	f_6675972	f_6675972	
-	f	D	f_3914055	f_3914055	
-	f	D	f_9967056	f_9967056	
+c	net/minecraft/unmapped/C_6108840	net/minecraft/world/level/tile/entity/MobSpawnerTileEntity	
+	f	I	f_0012020	spawnDelay	
+	f	Ljava/lang/String;	f_6675972	entityId	
+	f	D	f_3914055	spin	
+	f	D	f_9967056	oSpin	
 	m	()V	<init>	<init>	
 	m	()V	m_1420044	m_1420044	
-	m	()V	m_6124646	m_6124646	
+	m	()V	m_6124646	delay	
 	m	(Lnet/minecraft/unmapped/C_2800860;)V	m_0576365	m_0576365	
 		p	1		p_1	
 	m	(Lnet/minecraft/unmapped/C_2800860;)V	m_4175205	m_4175205	
 		p	1		p_1	
 c	net/minecraft/unmapped/C_6385858
-	f	D	f_2776092	f_2776092	
-	f	D	f_7705907	f_7705907	
+	f	D	f_2776092	xRideRotA	
+	f	D	f_7705907	yRideRotA	
 	f	D	f_7807987	f_7807987	
-	m	(Lnet/minecraft/unmapped/C_6385858;)V	m_5966517	m_5966517	
-		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_3906126;)V	m_6683300	m_6683300	
-		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_5009044;)Z	m_7287105	m_7287105	
-		p	1		p_1	
+	m	(Lnet/minecraft/unmapped/C_6385858;)V	m_5966517	ride	
+		p	1		entity	
+	m	(Lnet/minecraft/unmapped/C_3906126;)V	m_6683300	setLevel	
+		p	1		level	
+	m	(Lnet/minecraft/unmapped/C_5009044;)Z	m_7287105	interact	
+		p	1		player	
 c	net/minecraft/unmapped/C_6664676
 	m	(IILnet/minecraft/unmapped/C_8554894;)V	<init>	<init>	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
 c	net/minecraft/unmapped/C_6755599
-	m	(Ljava/lang/Class;Lnet/minecraft/unmapped/C_1414550;Ljava/util/List;)V	m_3867210	m_3867210	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
+	m	(Ljava/lang/Class;Lnet/minecraft/unmapped/C_1414550;Ljava/util/List;)V	m_3867210	getEntitiesOfClass	
+		p	1		type	
+		p	2		area	
+		p	3		entities	
 	m	(Lnet/minecraft/unmapped/C_2074023;)V	m_0612835		m_0612835
 		p	1			p_1
 c	net/minecraft/unmapped/C_7256819
@@ -155,7 +155,7 @@ c	net/minecraft/unmapped/C_9484672
 	m	()Z	m_0403320		m_0403320
 c	net/minecraft/unmapped/C_2280850
 	m	(F)V	<init>	<init>	
-		p	1		p_1	
+		p	1		babyScale	
 c	net/minecraft/unmapped/C_5269767
 	m	([B)Lnet/minecraft/unmapped/C_2800860;	m_8871842		m_8871842
 		p	0			p_0
@@ -179,7 +179,7 @@ c	net/minecraft/unmapped/C_7966473
 		p	6			p_6
 c	net/minecraft/unmapped/C_8593406
 	m	()Z	m_0403320		m_0403320
-c	net/minecraft/unmapped/C_8635993	net/minecraft/unmapped/C_8635993	
+c	net/minecraft/unmapped/C_8635993	net/minecraft/client/renderer/entity/PigRenderer	
 	m	(Lnet/minecraft/unmapped/C_3239917;Lnet/minecraft/unmapped/C_3239917;F)V	<init>	<init>	
 		p	1		p_1	
 		p	2		p_2	
@@ -187,8 +187,8 @@ c	net/minecraft/unmapped/C_8635993	net/minecraft/unmapped/C_8635993
 	m	(Lnet/minecraft/unmapped/C_1013763;I)Z	m_5098475	m_5098475	
 		p	1		p_1	
 		p	2		p_2	
-c	net/minecraft/unmapped/C_8978226	net/minecraft/unmapped/C_8978226	
-	f	Ljava/util/Map;	f_8112620	f_8112620	
+c	net/minecraft/unmapped/C_8978226	net/minecraft/client/renderer/tileentity/SpawnerRenderer	
+	f	Ljava/util/Map;	f_8112620	entities	
 	m	()V	<init>	<init>	
 	m	(Lnet/minecraft/unmapped/C_2074023;DDDF)V	m_7825810	m_7825810	
 		p	1		p_1	

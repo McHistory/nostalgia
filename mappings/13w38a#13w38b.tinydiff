@@ -6,27 +6,27 @@ c	net/minecraft/unmapped/C_1236108
 c	net/minecraft/unmapped/C_1893016
 	m	()Z	m_1944525	m_1944525	
 c	net/minecraft/unmapped/C_2627205
-	m	(III)F	m_6019688	m_6019688	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-	m	(III)Lnet/minecraft/unmapped/C_8554894;	m_7904701	m_7904701	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-	m	(III)Z	m_3624759	m_3624759	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-	m	(IIII)F	m_2125740	m_2125740	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-	m	(III)Z	m_2070585	m_2070585	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
+	m	(III)F	m_6019688	getBrightness	
+		p	1		x	
+		p	2		y	
+		p	3		z	
+	m	(III)Lnet/minecraft/unmapped/C_8554894;	m_7904701	getMaterial	
+		p	1		x	
+		p	2		y	
+		p	3		z	
+	m	(III)Z	m_3624759	isSolidBlockingTile	
+		p	1		x	
+		p	2		y	
+		p	3		z	
+	m	(IIII)F	m_2125740	getBrightness	
+		p	1		x	
+		p	2		y	
+		p	3		z	
+		p	4		max	
+	m	(III)Z	m_2070585	isSolidTile	
+		p	1		x	
+		p	2		y	
+		p	3		z	
 	m	(III)Z	m_1611549	m_1611549	
 		p	1		p_1	
 		p	2		p_2	
@@ -38,16 +38,16 @@ c	net/minecraft/unmapped/C_2682589
 		p	3		p_3	
 		p	4		p_4	
 c	net/minecraft/unmapped/C_2751481
-	f	Lnet/minecraft/unmapped/C_7178022;	f_5143719	f_5143719	
+	f	Lnet/minecraft/unmapped/C_7178022;	f_5143719	mapRenderer	
 c	net/minecraft/unmapped/C_3134254
 	m	(III)F	m_6019688	m_6019688	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
-	m	(III)I	m_3711658	m_3711658	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
+	m	(III)I	m_3711658	getRawBrightness	
+		p	1		x	
+		p	2		y	
+		p	3		z	
 	m	(III)Lnet/minecraft/unmapped/C_8554894;	m_7904701	m_7904701	
 		p	1		p_1	
 		p	2		p_2	
@@ -75,11 +75,11 @@ c	net/minecraft/unmapped/C_3134254
 		p	3		p_3	
 		p	4		p_4	
 c	net/minecraft/unmapped/C_3635204
-	m	(Lnet/minecraft/unmapped/C_2627205;III)F	m_1598263	m_1598263	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
+	m	(Lnet/minecraft/unmapped/C_2627205;III)F	m_1598263	getBrightness	
+		p	1		level	
+		p	2		x	
+		p	3		y	
+		p	4		z	
 	m	(Lnet/minecraft/unmapped/C_2627205;III)F	m_2010082	m_2010082	
 		p	1		p_1	
 		p	2		p_2	
@@ -119,10 +119,10 @@ c	net/minecraft/unmapped/C_3906126
 		p	2		p_2	
 		p	3		p_3	
 		p	4		p_4	
-	m	(III)Z	m_2070585	m_2070585	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
+	m	(III)Z	m_2070585	isSolidTile	
+		p	1		x	
+		p	2		y	
+		p	3		z	
 	m	(III)Z	m_6138492	m_6138492	
 		p	1		p_1	
 		p	2		p_2	
@@ -174,16 +174,16 @@ c	net/minecraft/unmapped/C_7693268
 		p	3		p_3	
 		p	4		p_4	
 c	net/minecraft/unmapped/C_7178022
-	f	[I	f_1288998	f_1288998	
-	f	Lnet/minecraft/unmapped/C_7688744;	f_0322582	f_0322582	
-	f	Lnet/minecraft/unmapped/C_3779718;	f_1395761	f_1395761	
+	f	[I	f_1288998	pixels	
+	f	Lnet/minecraft/unmapped/C_7688744;	f_0322582	config	
+	f	Lnet/minecraft/unmapped/C_3779718;	f_1395761	texture	
 	f	Lnet/minecraft/unmapped/C_0561170;	f_6363574	f_6363574	
 	f	Lnet/minecraft/unmapped/C_3385278;	f_3145134		f_3145134
 	f	Ljava/util/Map;	f_5650250		f_5650250
-	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_3385278;Lnet/minecraft/unmapped/C_6285226;)V	m_5067904	m_5067904	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
+	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_3385278;Lnet/minecraft/unmapped/C_6285226;)V	m_5067904	render	
+		p	1		player	
+		p	2		textureManager	
+		p	3		map	
 	m	(Lnet/minecraft/unmapped/C_7688744;Lnet/minecraft/unmapped/C_3385278;)V	<init>	<init>	
 		p	1		p_1	
 		p	2		p_2	

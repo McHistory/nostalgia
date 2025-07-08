@@ -76,12 +76,12 @@ c	net/minecraft/unmapped/C_1388208
 c	net/minecraft/unmapped/C_1826831
 	m	()V	m_1987632		m_1987632
 c	net/minecraft/unmapped/C_2182707
-	m	(Ljava/lang/String;)V	m_7400010	m_7400010	
-		p	1		p_1	
+	m	(Ljava/lang/String;)V	m_7400010	sendMessage	
+		p	1		msg	
 	m	(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;	m_9893071	m_9893071	
 		p	1		p_1	
 		p	2		p_2	
-	m	(Lnet/minecraft/unmapped/C_9550253;)V	m_7400010		m_7400010
+	m	(Lnet/minecraft/unmapped/C_9550253;)V	m_7400010		sendMessage
 		p	1			p_1
 c	net/minecraft/unmapped/C_2488469
 	m	(Lnet/minecraft/unmapped/C_4757533;)V	m_3153358		m_3153358
@@ -90,7 +90,7 @@ c	net/minecraft/unmapped/C_2488469
 		p	1			p_1
 c	net/minecraft/unmapped/C_2750078
 	f	Ljava/text/DecimalFormat;	f_5321093		f_5321093
-	m	(Lnet/minecraft/unmapped/C_6385858;)F	m_8066283	m_8066283	
+	m	(Lnet/minecraft/unmapped/C_6385858;)F	m_8066283	getAttackDamage	
 		p	1		p_1	
 	m	()Lcom/google/common/collect/Multimap;	m_1298752		m_1298752
 	m	()V	<clinit>		<clinit>
@@ -102,11 +102,11 @@ c	net/minecraft/unmapped/C_3385278
 	f	Lnet/minecraft/unmapped/C_6577431;	f_2348192		f_2348192
 	m	(Lnet/minecraft/unmapped/C_7378130;)V	<init>	<init>	
 		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_7378130;)V	m_6705429	m_6705429	
+	m	(Lnet/minecraft/unmapped/C_7378130;)V	m_6705429	reloadAll	
 		p	1		p_1	
 	m	(Lnet/minecraft/unmapped/C_6577431;)V	<init>		<init>
 		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_6577431;)V	m_6705429		m_6705429
+	m	(Lnet/minecraft/unmapped/C_6577431;)V	m_6705429		reloadAll
 		p	1			p_1
 c	net/minecraft/unmapped/C_3419581
 	f	Ljava/util/UUID;	f_4056077		f_4056077
@@ -124,31 +124,31 @@ c	net/minecraft/unmapped/C_3624347
 		p	1			p_1
 c	net/minecraft/unmapped/C_4030632
 	f	Ljava/util/UUID;	f_0006502		f_0006502
-	m	(Lnet/minecraft/unmapped/C_6385858;)F	m_1072215	m_1072215	
+	m	(Lnet/minecraft/unmapped/C_6385858;)F	m_1072215	getAttackDamage	
 		p	1		p_1	
 	m	()Lcom/google/common/collect/Multimap;	m_3717489		m_3717489
 c	net/minecraft/unmapped/C_4237166
 	m	()Z	m_3923556		m_3923556
 c	net/minecraft/unmapped/C_4286596
-	m	(Lnet/minecraft/unmapped/C_6385858;)F	m_0415661	m_0415661	
+	m	(Lnet/minecraft/unmapped/C_6385858;)F	m_0415661	getAttackDamage	
 		p	1		p_1	
 c	net/minecraft/unmapped/C_4443804
 	m	(Lnet/minecraft/unmapped/C_5968220;)V	m_6975227		m_6975227
 		p	1			p_1
 c	net/minecraft/unmapped/C_4560329
-	f	Ljava/util/List;	f_7248081	f_7248081	
-	f	I	f_1061560	f_1061560	
+	f	Ljava/util/List;	f_7248081	all	
+	f	I	f_1061560	count	
 	f	Lnet/minecraft/unmapped/C_6577431;	f_0574836		f_0574836
 	m	()V	<init>	<init>	
-	m	(Ljava/lang/String;Ljava/io/File;)Lnet/minecraft/unmapped/C_0488196;	m_4373192	m_4373192	
-		p	1		p_1	
-		p	2		p_2	
+	m	(Ljava/lang/String;Ljava/io/File;)Lnet/minecraft/unmapped/C_0488196;	m_4373192	add	
+		p	1		source	
+		p	2		soundFile	
 	m	(Lnet/minecraft/unmapped/C_6577431;)V	<init>		<init>
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_6577431;Z)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
-	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_0488196;	m_4373192		m_4373192
+	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_0488196;	m_4373192		add
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_4560329;)Lnet/minecraft/unmapped/C_6577431;	m_3516925		m_3516925
 		p	0			p_0

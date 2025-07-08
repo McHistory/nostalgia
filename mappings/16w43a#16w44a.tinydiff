@@ -36,8 +36,8 @@ c	net/minecraft/unmapped/C_0559439
 	m	(Lnet/minecraft/unmapped/C_2441996;)Z	m_8740684		m_8740684
 		p	1			p_1
 c	net/minecraft/unmapped/C_0820158
-	f	Lnet/minecraft/unmapped/C_5009044;	f_7387845	f_7387845	
-	f	Lnet/minecraft/unmapped/C_3635204;	f_3268047	f_3268047	
+	f	Lnet/minecraft/unmapped/C_5009044;	f_7387845	owner	
+	f	Lnet/minecraft/unmapped/C_3635204;	f_3268047	inTile	
 	f	Lnet/minecraft/unmapped/C_6707278;	f_0652926	f_0652926	
 	f	I	f_0160167		f_0160167
 	f	Lnet/minecraft/unmapped/C_5009044;	f_0870172		f_0870172
@@ -70,20 +70,20 @@ c	net/minecraft/unmapped/C_3688914
 		p	4			p_4
 		p	6			p_6
 c	net/minecraft/unmapped/C_3906126
-	m	(Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_3635204;)V	m_5713760	m_5713760	
+	m	(Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_3635204;)V	m_5713760	tileUpdated	
 		p	1		p_1	
 		p	2		p_2	
-	m	(Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_3635204;)V	m_9602010	m_9602010	
+	m	(Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_3635204;)V	m_9602010	updateNeighborsAt	
 		p	1		p_1	
 		p	2		p_2	
-	m	(Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_3635204;Z)V	m_5713760		m_5713760
+	m	(Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_3635204;Z)V	m_5713760		tileUpdated
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 	m	(Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_3635204;)V	m_5867195		m_5867195
 		p	1			p_1
 		p	2			p_2
-	m	(Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_3635204;Z)V	m_9602010		m_9602010
+	m	(Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_3635204;Z)V	m_9602010		updateNeighborsAt
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -131,11 +131,11 @@ c	net/minecraft/unmapped/C_5687818
 	m	(B)V	m_9129586		m_9129586
 		p	1			p_1
 c	net/minecraft/unmapped/C_6385858
-	m	(DDD)V	m_2801634	m_2801634	
-		p	1		p_1	
-		p	3		p_3	
-		p	5		p_5	
-	m	(Lnet/minecraft/unmapped/C_3988780;DDD)V	m_2801634		m_2801634
+	m	(DDD)V	m_2801634	move	
+		p	1		x	
+		p	3		y	
+		p	5		z	
+	m	(Lnet/minecraft/unmapped/C_3988780;DDD)V	m_2801634		move
 		p	1			p_1
 		p	2			p_2
 		p	4			p_4

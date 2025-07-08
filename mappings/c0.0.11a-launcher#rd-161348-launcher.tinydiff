@@ -1,5 +1,5 @@
 tiny	2	0
-c	net/minecraft/unmapped/C_4078372	net/minecraft/unmapped/C_4078372	
+c	net/minecraft/unmapped/C_4078372	net/minecraft/world/level/levelgen/RandomLevelSource	
 	f	Ljava/util/Random;	f_3952515	f_3952515	
 	f	I	f_7275613	f_7275613	
 	f	I	f_8175346	f_8175346	
@@ -10,22 +10,22 @@ c	net/minecraft/unmapped/C_4078372	net/minecraft/unmapped/C_4078372
 		p	3		p_3	
 	m	()[B	m_5710106	m_5710106	
 c	net/minecraft/client/Minecraft
-	f	Z	f_9483415	f_9483415	
-	f	Ljava/awt/Canvas;	f_2875400	f_2875400	
-	f	Z	f_1866091	f_1866091	
-	f	Lnet/minecraft/unmapped/C_3385278;	f_1050021	f_1050021	
-	f	Lnet/minecraft/unmapped/C_4766485;	f_0935328	f_0935328	
-	f	Z	f_5170474	f_5170474	
-	f	Ljava/lang/String;	f_8891450	f_8891450	
-	f	Z	f_0682520	f_0682520	
+	f	Z	f_9483415	fullscreen	
+	f	Ljava/awt/Canvas;	f_2875400	parent	
+	f	Z	f_1866091	pause	
+	f	Lnet/minecraft/unmapped/C_3385278;	f_1050021	textures	
+	f	Lnet/minecraft/unmapped/C_4766485;	f_0935328	font	
+	f	Z	f_5170474	running	
+	f	Ljava/lang/String;	f_8891450	fpsString	
+	f	Z	f_0682520	mouseGrabbed	
 	f	Z	f_7579809	f_7579809	
 	f	Lorg/lwjgl/input/Cursor;	f_5333905	f_5333905	
 	f	I	f_0440810	f_0440810	
 	f	I	f_6184923	f_6184923	
 	f	Ljava/lang/String;	f_8370076	f_8370076	
 	f	Z	f_7113536		f_7113536
-	m	()V	m_7502890	m_7502890	
-	m	()V	m_7834074	m_7834074	
+	m	()V	m_7502890	grabMouse	
+	m	()V	m_7834074	pauseGame	
 	m	(Ljava/lang/String;)V	m_0572353	m_0572353	
 		p	1		p_1	
 	m	(Ljava/awt/Canvas;IIZ)V	<init>	<init>	
@@ -39,7 +39,7 @@ c	net/minecraft/client/Minecraft
 		p	1		p_1	
 	m	()V	<init>		<init>
 c	net/minecraft/unmapped/C_1044273
-	f	Lnet/minecraft/unmapped/C_3385278;	f_9220461	f_9220461	
+	f	Lnet/minecraft/unmapped/C_3385278;	f_9220461	textures	
 	m	(Lnet/minecraft/unmapped/C_6495127;Lnet/minecraft/unmapped/C_3385278;)V	<init>	<init>	
 		p	1		p_1	
 		p	2		p_2	
@@ -52,12 +52,12 @@ c	net/minecraft/unmapped/C_1044273
 	m	(Lnet/minecraft/unmapped/C_5853518;)V	m_3006844		m_3006844
 		p	1			p_1
 c	net/minecraft/unmapped/C_2334550
-	f	Z	f_5362588	f_5362588	
-	m	(I)V	m_2290737	m_2290737	
-		p	1		p_1	
-	m	()V	m_6994600	m_6994600	
+	f	Z	f_5362588	noColor	
+	m	(I)V	m_2290737	color	
+		p	1		rgb	
+	m	()V	m_6994600	noColor	
 c	net/minecraft/unmapped/C_2454294
-	f	Lnet/minecraft/unmapped/C_3385278;	f_6053780	f_6053780	
+	f	Lnet/minecraft/unmapped/C_3385278;	f_6053780	textureManager	
 	m	(Lnet/minecraft/unmapped/C_6495127;Lnet/minecraft/unmapped/C_3385278;)V	<init>	<init>	
 		p	1		p_1	
 		p	2		p_2	
@@ -68,17 +68,17 @@ c	net/minecraft/unmapped/C_3385278
 		p	2		p_2	
 		p	0			p_0
 	m	()V	<clinit>		<clinit>
-c	net/minecraft/unmapped/C_4766485	net/minecraft/unmapped/C_4766485	
-	f	[I	f_4822011	f_4822011	
-	f	I	f_6728583	f_6728583	
-	m	(Ljava/lang/String;IIIZ)V	m_3272628	m_3272628	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-	m	(Ljava/lang/String;)I	m_3908105	m_3908105	
-		p	1		p_1	
+c	net/minecraft/unmapped/C_4766485	net/minecraft/client/gui/Font	
+	f	[I	f_4822011	charWidths	
+	f	I	f_6728583	fontTexture	
+	m	(Ljava/lang/String;IIIZ)V	m_3272628	draw	
+		p	1		text	
+		p	2		x	
+		p	3		y	
+		p	4		color	
+		p	5		shadow	
+	m	(Ljava/lang/String;)I	m_3908105	width	
+		p	1		text	
 	m	(Ljava/lang/String;III)V	m_4507504	m_4507504	
 		p	1		p_1	
 		p	2		p_2	

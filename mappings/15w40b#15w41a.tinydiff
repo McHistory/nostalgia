@@ -12,34 +12,34 @@ c	net/minecraft/unmapped/C_0336319
 	m	()D	m_5196944		m_5196944
 c	net/minecraft/unmapped/C_0459721
 	f	Ljava/util/Set;	f_7839006		f_7839006
-	m	(Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_6385858;F)Lnet/minecraft/unmapped/C_7641996;	m_7371055	m_7371055	
+	m	(Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_6385858;F)Lnet/minecraft/unmapped/C_7641996;	m_7371055	findPath	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
 		p	4		p_4	
-	m	(Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_6707278;F)Lnet/minecraft/unmapped/C_7641996;	m_4597249	m_4597249	
+	m	(Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_6707278;F)Lnet/minecraft/unmapped/C_7641996;	m_4597249	findPath	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
 		p	4		p_4	
-	m	(Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_6385858;DDDF)Lnet/minecraft/unmapped/C_7641996;	m_5195779	m_5195779	
+	m	(Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_6385858;DDDF)Lnet/minecraft/unmapped/C_7641996;	m_5195779	findPath	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
 		p	5		p_5	
 		p	7		p_7	
 		p	9		p_9	
-	m	(Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_2587956;Lnet/minecraft/unmapped/C_6385858;F)Lnet/minecraft/unmapped/C_7641996;	m_7371055		m_7371055
+	m	(Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_2587956;Lnet/minecraft/unmapped/C_6385858;F)Lnet/minecraft/unmapped/C_7641996;	m_7371055		findPath
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
-	m	(Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_2587956;Lnet/minecraft/unmapped/C_6707278;F)Lnet/minecraft/unmapped/C_7641996;	m_4597249		m_4597249
+	m	(Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_2587956;Lnet/minecraft/unmapped/C_6707278;F)Lnet/minecraft/unmapped/C_7641996;	m_4597249		findPath
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
-	m	(Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_2587956;DDDF)Lnet/minecraft/unmapped/C_7641996;	m_5195779		m_5195779
+	m	(Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_2587956;DDDF)Lnet/minecraft/unmapped/C_7641996;	m_5195779		findPath
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -137,19 +137,19 @@ c	net/minecraft/unmapped/C_6154159
 	m	(Lnet/minecraft/unmapped/C_9958683$C_7204670;)V	<init>		<init>
 		p	1			p_1
 c	net/minecraft/unmapped/C_6385858
-	f	Lnet/minecraft/unmapped/C_6385858;	f_5736304	f_5736304	
-	f	Lnet/minecraft/unmapped/C_6385858;	f_4481416	f_4481416	
+	f	Lnet/minecraft/unmapped/C_6385858;	f_5736304	rider	
+	f	Lnet/minecraft/unmapped/C_6385858;	f_4481416	riding	
 	f	Lorg/apache/logging/log4j/Logger;	f_9774555		f_9774555
 	f	Ljava/util/List;	f_3700251		f_3700251
 	f	Lnet/minecraft/unmapped/C_6385858;	f_7459256		f_7459256
-	m	()V	m_7333701	m_7333701	
-	m	(Lnet/minecraft/unmapped/C_6385858;)V	m_5966517	m_5966517	
-		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_6385858;)V	m_7333701		m_7333701
+	m	()V	m_7333701	positionRider	
+	m	(Lnet/minecraft/unmapped/C_6385858;)V	m_5966517	ride	
+		p	1		entity	
+	m	(Lnet/minecraft/unmapped/C_6385858;)V	m_7333701		positionRider
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_6385858;)V	m_0179241		m_0179241
 		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_6385858;)Z	m_5966517		m_5966517
+	m	(Lnet/minecraft/unmapped/C_6385858;)Z	m_5966517		ride
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_6385858;Z)Z	m_7212753		m_7212753
 		p	1			p_1
@@ -208,12 +208,12 @@ c	net/minecraft/unmapped/C_8321936
 		p	1			p_1
 		p	2			p_2
 c	net/minecraft/unmapped/C_8752044
-	f	D	f_2330234	f_2330234	
-	f	D	f_7342191	f_7342191	
-	f	D	f_5569700	f_5569700	
-	f	Z	f_9678880	f_9678880	
+	f	D	f_2330234	lastGoodX	
+	f	D	f_7342191	lastGoodY	
+	f	D	f_5569700	lastGoodZ	
+	f	Z	f_9678880	awaitingPositionFromClient	
 	f	Z	f_3629540	f_3629540	
-	f	I	f_3888608	f_3888608	
+	f	I	f_3888608	aboveGroundTickCount	
 	f	D	f_3036220		f_3036220
 	f	D	f_6427082		f_6427082
 	f	D	f_0991815		f_0991815
@@ -268,9 +268,9 @@ c	net/minecraft/unmapped/C_9610577
 		p	1		p_1	
 		p	2		p_2	
 c	net/minecraft/unmapped/C_9958683
-	f	D	f_3111847	f_3111847	
-	f	D	f_3916873	f_3916873	
-	f	D	f_7104122	f_7104122	
+	f	D	f_3111847	lxd	
+	f	D	f_3916873	lyd	
+	f	D	f_7104122	lzd	
 	f	Z	f_2102218	f_2102218	
 	f	D	f_0980085	f_0980085	
 	f	Lnet/minecraft/unmapped/C_6101761;	f_8921641		f_8921641

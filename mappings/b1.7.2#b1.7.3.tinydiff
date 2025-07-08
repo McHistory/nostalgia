@@ -3,30 +3,30 @@ c	net/minecraft/client/Minecraft
 	m	(Lnet/minecraft/unmapped/C_3906126;Ljava/lang/String;)V	m_5784106	m_5784106	
 		p	1		p_1	
 		p	2		p_2	
-	m	(Lnet/minecraft/unmapped/C_3906126;Ljava/lang/String;Lnet/minecraft/unmapped/C_5009044;)V	m_5733981	m_5733981	
+	m	(Lnet/minecraft/unmapped/C_3906126;Ljava/lang/String;Lnet/minecraft/unmapped/C_5009044;)V	m_5733981	setLevel	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
 	m	(ZI)V	m_6862388	m_6862388	
 		p	1		p_1	
 		p	2		p_2	
-	m	(Lnet/minecraft/unmapped/C_3906126;Ljava/lang/String;)V	m_5733981		m_5733981
-		p	1			p_1
-		p	2			p_2
-	m	(Lnet/minecraft/unmapped/C_3906126;Ljava/lang/String;Lnet/minecraft/unmapped/C_5009044;)V	m_2859299		m_2859299
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-	m	(ZI)V	m_8218202		m_8218202
+	m	(Lnet/minecraft/unmapped/C_3906126;Ljava/lang/String;)V	m_5733981		setLevel
+		p	1			level
+		p	2			stage
+	m	(Lnet/minecraft/unmapped/C_3906126;Ljava/lang/String;Lnet/minecraft/unmapped/C_5009044;)V	m_2859299		setLevel
+		p	1			level
+		p	2			stage
+		p	3			newPlayer
+	m	(ZI)V	m_8218202		respawnPlayer
 		p	1			p_1
 		p	2			p_2
 c	net/minecraft/unmapped/C_0019534
 	m	(Lnet/minecraft/unmapped/C_0386427;Ljava/lang/String;)Lnet/minecraft/unmapped/C_0324512;	m_1007200	m_1007200	
 		p	1		p_1	
 		p	2		p_2	
-	m	(Lnet/minecraft/unmapped/C_0386427;Ljava/lang/String;)Lnet/minecraft/unmapped/C_0324512;	m_7298898		m_7298898
-		p	1			p_1
-		p	2			p_2
+	m	(Lnet/minecraft/unmapped/C_0386427;Ljava/lang/String;)Lnet/minecraft/unmapped/C_0324512;	m_7298898		canPlayerLogin
+		p	1			listener
+		p	2			username
 c	net/minecraft/unmapped/C_0914500
 	m	(II)D	m_8849857	m_8849857	
 		p	1		p_1	
@@ -60,10 +60,10 @@ c	net/minecraft/unmapped/C_3187085
 		p	0		p_0	
 		p	1		p_1	
 		p	2		p_2	
-	m	(Ljava/io/File;II)Ljava/lang/String;	m_2520735		m_2520735
-		p	0			p_0
-		p	1			p_1
-		p	2			p_2
+	m	(Ljava/io/File;II)Ljava/lang/String;	m_2520735		grab
+		p	0			name
+		p	1			width
+		p	2			height
 c	net/minecraft/unmapped/C_3271339
 	m	(IIII)V	m_5386984	m_5386984	
 		p	1		p_1	
@@ -79,17 +79,17 @@ c	net/minecraft/unmapped/C_3484604
 	m	()I	m_4839406		m_4839406
 c	net/minecraft/unmapped/C_3699792
 	m	()V	m_6434029	m_6434029	
-	m	()V	m_0073818		m_0073818
+	m	()V	m_0073818		tick
 c	net/minecraft/unmapped/C_3794155
-	f	I	f_1860327		f_1860327
+	f	I	f_1860327		face
 c	net/minecraft/unmapped/C_3906126
 	m	()V	m_3566975	m_3566975	
-	m	()V	m_3766127		m_3766127
+	m	()V	m_3766127		validateSpawn
 	m	(J)V	m_1779740		m_1779740
 		p	1			p_1
 c	net/minecraft/unmapped/C_4078372
 	f	[D	f_9365664	f_9365664	
-	f	[D	f_4647454		f_4647454
+	f	[D	f_4647454		depthBuffer
 c	net/minecraft/unmapped/C_4237166
 	m	(IIII)V	m_5386984	m_5386984	
 		p	1		p_1	
@@ -98,13 +98,13 @@ c	net/minecraft/unmapped/C_4237166
 		p	4		p_4	
 	m	(Lnet/minecraft/unmapped/C_5009044;)V	m_9683549	m_9683549	
 		p	1		p_1	
-	m	(IIII)V	m_1681170		m_1681170
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-	m	(Lnet/minecraft/unmapped/C_5009044;)V	m_5484011		m_5484011
-		p	1			p_1
+	m	(IIII)V	m_1681170		startDestroyBlock
+		p	1			x
+		p	2			y
+		p	3			z
+		p	4			face
+	m	(Lnet/minecraft/unmapped/C_5009044;)V	m_5484011		adjustPlayer
+		p	1			player
 c	net/minecraft/unmapped/C_6692735
 	m	(Lnet/minecraft/unmapped/C_3906126;III)V	m_6138806	m_6138806	
 		p	1		p_1	
@@ -134,7 +134,7 @@ c	net/minecraft/unmapped/C_7006834
 	m	(Ljava/awt/Graphics;)V	m_4715079	m_4715079	
 		p	1		p_1	
 	m	(Ljava/awt/Graphics;)V	paint		paint
-		p	1			p_1
+		p	1			graphics
 c	net/minecraft/unmapped/C_7564962
 	m	(Lnet/minecraft/unmapped/C_5009044;)V	m_9683549	m_9683549	
 		p	1		p_1	
@@ -156,26 +156,26 @@ c	net/minecraft/unmapped/C_9143244
 		p	3		p_3	
 		p	4		p_4	
 		p	5		p_5	
-	m	(II)D	m_1491596		m_1491596
-		p	1			p_1
-		p	2			p_2
-	m	([DIIII)[D	m_2266722		m_2266722
+	m	(II)D	m_1491596		getTemperature
+		p	1			x
+		p	2			z
+	m	([DIIII)[D	m_2266722		getTemperatureBlock
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
 		p	5			p_5
 c	net/minecraft/unmapped/C_0956869
-	m	(ILnet/minecraft/unmapped/C_3906126;III)Z	m_8857890	m_8857890	
+	m	(ILnet/minecraft/unmapped/C_3906126;III)Z	m_8857890	isPushable	
 		p	0		p_0	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
 		p	4		p_4	
-	m	(ILnet/minecraft/unmapped/C_3906126;IIIZ)Z	m_8857890		m_8857890
-		p	0			p_0
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
+	m	(ILnet/minecraft/unmapped/C_3906126;IIIZ)Z	m_8857890		isPushable
+		p	0			tile
+		p	1			level
+		p	2			x
+		p	3			y
+		p	4			z
+		p	5			destroy

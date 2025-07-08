@@ -1,12 +1,12 @@
 tiny	2	0
 c	net/minecraft/unmapped/C_0336319
-	f	Ljava/lang/ThreadLocal;	f_6042173	f_6042173	
+	f	Ljava/lang/ThreadLocal;	f_6042173	pool	
 	f	Lnet/minecraft/unmapped/C_9562417;	f_5999371		f_5999371
 	f	Lnet/minecraft/unmapped/C_9562417;	f_6858132		f_6858132
 	m	(DDD)V	<init>	<init>	
-		p	1		p_1	
-		p	3		p_3	
-		p	5		p_5	
+		p	1		x	
+		p	3		y	
+		p	5		z	
 	m	()Lnet/minecraft/unmapped/C_9562417;	m_2165014	m_2165014	
 	m	(Lnet/minecraft/unmapped/C_9562417;DDD)V	<init>		<init>
 		p	1			p_1
@@ -81,17 +81,17 @@ c	net/minecraft/unmapped/C_4286596
 	m	()I	m_7649378		m_7649378
 c	net/minecraft/unmapped/C_5009044
 	f	Z	f_9567581		f_9567581
-	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6707278;)Lnet/minecraft/unmapped/C_6707278;	m_5914761	m_5914761	
-		p	0		p_0	
-		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_6707278;)V	m_8883256	m_8883256	
-		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6707278;Z)Lnet/minecraft/unmapped/C_6707278;	m_5914761		m_5914761
+	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6707278;)Lnet/minecraft/unmapped/C_6707278;	m_5914761	checkBedValidRespawnPosition	
+		p	0		level	
+		p	1		pos	
+	m	(Lnet/minecraft/unmapped/C_6707278;)V	m_8883256	setRespawnPosition	
+		p	1		pos	
+	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6707278;Z)Lnet/minecraft/unmapped/C_6707278;	m_5914761		checkBedValidRespawnPosition
 		p	0			p_0
 		p	1			p_1
 		p	2			p_2
 	m	()Z	m_6096942		m_6096942
-	m	(Lnet/minecraft/unmapped/C_6707278;Z)V	m_8883256		m_8883256
+	m	(Lnet/minecraft/unmapped/C_6707278;Z)V	m_8883256		setRespawnPosition
 		p	1			p_1
 		p	2			p_2
 c	net/minecraft/unmapped/C_5196988
@@ -139,9 +139,9 @@ c	net/minecraft/unmapped/C_9484672
 c	net/minecraft/unmapped/C_9746149
 	m	()F	m_2716487		m_2716487
 c	net/minecraft/unmapped/C_2942118
-	m	(Ljava/lang/String;)V	m_0867803	m_0867803	
-		p	1		p_1	
-	m	(Ljava/lang/String;)Z	m_0867803		m_0867803
+	m	(Ljava/lang/String;)V	m_0867803	method_1006	
+		p	1		name	
+	m	(Ljava/lang/String;)Z	m_0867803		method_1006
 		p	1			p_1
 c	net/minecraft/unmapped/C_2947053
 	f	Lnet/minecraft/unmapped/C_2621421;	f_6924190		f_6924190

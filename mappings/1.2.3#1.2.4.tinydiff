@@ -1,12 +1,12 @@
 tiny	2	0
 c	net/minecraft/unmapped/C_0043270
 	m	(IIIII)V	m_0538379
-		p	5		p_5	
+		p	5		color	
 		p	0			p_0
 c	net/minecraft/unmapped/C_0324512
 	m	()V	m_4242515		m_4242515
 c	net/minecraft/unmapped/C_0786431
-	m	()V	m_9927190	m_9927190	
+	m	()V	m_9927190	tab	
 	m	(Ljava/lang/String;)V	m_4587790		m_4587790
 		p	0			p_0
 	m	()Z	m_1005153		m_1005153
@@ -57,17 +57,17 @@ c	net/minecraft/unmapped/C_4766485
 	f	F	f_2755576		f_2755576
 	f	F	f_4415467		f_4415467
 	f	F	f_2494809		f_2494809
-	m	(Ljava/lang/String;III)V	m_7732698	m_7732698	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-	m	(Ljava/lang/String;IIIZ)V	m_3272628	m_3272628	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
+	m	(Ljava/lang/String;III)V	m_7732698	drawShadow	
+		p	1		text	
+		p	2		x	
+		p	3		y	
+		p	4		color	
+	m	(Ljava/lang/String;IIIZ)V	m_3272628	draw	
+		p	1		text	
+		p	2		x	
+		p	3		y	
+		p	4		color	
+		p	5		shadow	
 	m	(I)V	m_7400423	m_7400423	
 		p	1		p_1	
 	m	(C)V	m_3726128	m_3726128	
@@ -90,12 +90,12 @@ c	net/minecraft/unmapped/C_4766485
 	m	(CZ)F	m_3726128		m_3726128
 		p	1			p_1
 		p	2			p_2
-	m	(Ljava/lang/String;III)I	m_7732698		m_7732698
+	m	(Ljava/lang/String;III)I	m_7732698		drawShadow
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
-	m	(Ljava/lang/String;IIIZ)I	m_3272628		m_3272628
+	m	(Ljava/lang/String;IIIZ)I	m_3272628		draw
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -133,7 +133,7 @@ c	net/minecraft/unmapped/C_4939758
 c	net/minecraft/unmapped/C_5009044
 	m	()V	m_4242515		m_4242515
 c	net/minecraft/unmapped/C_5324911
-	f	I	f_1449132	f_1449132	
+	f	I	f_1449132	frame	
 	f	I	f_3331799		f_3331799
 	f	Z	f_6331129		f_6331129
 	f	Ljava/lang/String;	f_5221788		f_5221788
@@ -237,7 +237,7 @@ c	net/minecraft/unmapped/C_7210749
 		p	2		p_2	
 		p	3		p_3	
 c	net/minecraft/unmapped/C_8078594
-	f	Lnet/minecraft/unmapped/C_0786431;	f_6986579	f_6986579	
+	f	Lnet/minecraft/unmapped/C_0786431;	f_6986579	parent	
 	f	Z	f_2878522		f_2878522
 	f	Z	f_5714352		f_5714352
 	f	I	f_0228413		f_0228413
@@ -245,9 +245,9 @@ c	net/minecraft/unmapped/C_8078594
 	f	I	f_0019971		f_0019971
 	f	I	f_0484040		f_0484040
 	f	I	f_9223947		f_9223947
-	m	(CI)V	m_2917317	m_2917317	
-		p	1		p_1	
-		p	2		p_2	
+	m	(CI)V	m_2917317	charTyped	
+		p	1		codePoint	
+		p	2		modifiers	
 	m	(Lnet/minecraft/unmapped/C_0786431;Lnet/minecraft/unmapped/C_4766485;IIIILjava/lang/String;)V	<init>	<init>	
 		p	1		p_1	
 		p	2		p_2	
@@ -280,7 +280,7 @@ c	net/minecraft/unmapped/C_8078594
 		p	1			p_1
 	m	()V	m_3105689		m_3105689
 	m	()V	m_2377907		m_2377907
-	m	(CI)Z	m_2917317		m_2917317
+	m	(CI)Z	m_2917317		charTyped
 		p	1			p_1
 		p	2			p_2
 	m	(IIII)V	m_5926646		m_5926646

@@ -1,45 +1,45 @@
 tiny	2	0
 c	net/minecraft/unmapped/C_0336319
 	m	()Ljava/lang/String;	toString	toString	
-	m	(Lnet/minecraft/unmapped/C_0336319;)F	m_0462993	m_0462993	
+	m	(Lnet/minecraft/unmapped/C_0336319;)F	m_0462993	distanceTo	
 		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_0336319;F)Lnet/minecraft/unmapped/C_0336319;	m_6352418	m_6352418	
-		p	1		p_1	
-		p	2		p_2	
-	m	(Lnet/minecraft/unmapped/C_0336319;F)Lnet/minecraft/unmapped/C_0336319;	m_7174784	m_7174784	
+	m	(Lnet/minecraft/unmapped/C_0336319;F)Lnet/minecraft/unmapped/C_0336319;	m_6352418	clipX	
 		p	1		p_1	
 		p	2		p_2	
-	m	(Lnet/minecraft/unmapped/C_0336319;F)Lnet/minecraft/unmapped/C_0336319;	m_2538535	m_2538535	
+	m	(Lnet/minecraft/unmapped/C_0336319;F)Lnet/minecraft/unmapped/C_0336319;	m_7174784	clipY	
 		p	1		p_1	
 		p	2		p_2	
-c	net/minecraft/unmapped/C_3414480	net/minecraft/unmapped/C_3414480	
+	m	(Lnet/minecraft/unmapped/C_0336319;F)Lnet/minecraft/unmapped/C_0336319;	m_2538535	clipZ	
+		p	1		p_1	
+		p	2		p_2	
+c	net/minecraft/unmapped/C_3414480	net/minecraft/world/level/tile/MetalTile	
 	m	(II)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
+		p	1		id	
+		p	2		tex	
 	m	(I)I	m_9597800	m_9597800	
 		p	1		p_1	
 c	net/minecraft/unmapped/C_3635204
-	f	Lnet/minecraft/unmapped/C_3635204;	f_0269729	f_0269729	
-	f	Lnet/minecraft/unmapped/C_3635204;	f_0081657	f_0081657	
-	f	Lnet/minecraft/unmapped/C_3635204;	f_8596290	f_8596290	
-	f	Lnet/minecraft/unmapped/C_3635204;	f_2379017	f_2379017	
-	f	Lnet/minecraft/unmapped/C_3635204;	f_4783636	f_4783636	
+	f	Lnet/minecraft/unmapped/C_3635204;	f_0269729	DOUBLE_SLAB	
+	f	Lnet/minecraft/unmapped/C_3635204;	f_0081657	SLAB	
+	f	Lnet/minecraft/unmapped/C_3635204;	f_8596290	BRICK	
+	f	Lnet/minecraft/unmapped/C_3635204;	f_2379017	BOOKSHELF	
+	f	Lnet/minecraft/unmapped/C_3635204;	f_4783636	MOSS_STONE	
 	f	Lnet/minecraft/unmapped/C_3635204;	f_1899131	f_1899131	
 	f	Lnet/minecraft/unmapped/C_3635204;	f_3811921	f_3811921	
 	f	Z	f_7253534	f_7253534	
-	m	(Lnet/minecraft/unmapped/C_0336319;)Z	m_0588089	m_0588089	
-		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_0336319;)Z	m_0056167	m_0056167	
-		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_0336319;)Z	m_8050342	m_8050342	
-		p	1		p_1	
-	m	(IIILnet/minecraft/unmapped/C_0336319;Lnet/minecraft/unmapped/C_0336319;)Lnet/minecraft/unmapped/C_5853518;	m_8972764	m_8972764	
+	m	(Lnet/minecraft/unmapped/C_0336319;)Z	m_0588089	containsX	
+		p	1		vec	
+	m	(Lnet/minecraft/unmapped/C_0336319;)Z	m_0056167	containsY	
+		p	1		vec	
+	m	(Lnet/minecraft/unmapped/C_0336319;)Z	m_8050342	containsZ	
+		p	1		vec	
+	m	(IIILnet/minecraft/unmapped/C_0336319;Lnet/minecraft/unmapped/C_0336319;)Lnet/minecraft/unmapped/C_5853518;	m_8972764	clip	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
 		p	4		p_4	
 		p	5		p_5	
-	m	(III)Lcom/mojang/minecraft/phys/AABB;	m_5529828	m_5529828	
+	m	(III)Lcom/mojang/minecraft/phys/AABB;	m_5529828	getTileAABB	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
@@ -49,20 +49,20 @@ c	net/minecraft/unmapped/C_3635204
 		p	2		p_2	
 		p	3		p_3	
 		p	4		p_4	
-c	net/minecraft/unmapped/C_4556822	net/minecraft/unmapped/C_4556822	
+c	net/minecraft/unmapped/C_4556822	net/minecraft/world/level/tile/BookshelfTile	
 	m	(I)I	m_9597800	m_9597800	
 		p	1		p_1	
 	m	(II)V	<init>	<init>	
 		p	1		p_1	
 		p	2		p_2	
 	m	()I	m_6534436	m_6534436	
-c	net/minecraft/unmapped/C_6151866	net/minecraft/unmapped/C_6151866	
+c	net/minecraft/unmapped/C_6151866	net/minecraft/world/level/tile/OreTile	
 	m	(II)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
+		p	1		id	
+		p	2		texture	
 	m	()I	m_6534436	m_6534436	
 	m	()I	m_3282602	m_3282602	
-c	net/minecraft/unmapped/C_7318150	net/minecraft/unmapped/C_7318150	
+c	net/minecraft/unmapped/C_7318150	net/minecraft/world/level/tile/TntTile	
 	m	(I)I	m_9597800	m_9597800	
 		p	1		p_1	
 	m	(II)V	<init>	<init>	
@@ -80,11 +80,11 @@ c	net/minecraft/unmapped/C_7318150	net/minecraft/unmapped/C_7318150
 		p	2		p_2	
 		p	3		p_3	
 		p	4		p_4	
-c	net/minecraft/unmapped/C_9331929	net/minecraft/unmapped/C_9331929	
-	f	Z	f_3052589	f_3052589	
+c	net/minecraft/unmapped/C_9331929	net/minecraft/world/level/tile/SlabTile	
+	f	Z	f_3052589	doubleSlab	
 	m	(IZ)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
+		p	1		id	
+		p	2		doubleSlab	
 	m	(I)I	m_9597800	m_9597800	
 		p	1		p_1	
 	m	()Z	m_1944525	m_1944525	
@@ -97,11 +97,11 @@ c	net/minecraft/unmapped/C_9331929	net/minecraft/unmapped/C_9331929
 		p	5		p_5	
 	m	()I	m_3282602	m_3282602	
 c	net/minecraft/client/Minecraft
-	f	I	f_8046155	f_8046155	
-	f	Z	f_7696449	f_7696449	
+	f	I	f_8046155	missTime	
+	f	Z	f_7696449	isRaining	
 	f	Lcom/mojang/minecraft/MinecraftApplet;	f_3801925		f_3801925
 c	net/minecraft/unmapped/C_2454294
-	f	[Ljava/util/List;	f_7065352	f_7065352	
+	f	[Ljava/util/List;	f_7065352	particles	
 	f	Ljava/util/List;	f_5543693		f_5543693
 c	net/minecraft/unmapped/C_4766485
 	f	Lnet/minecraft/unmapped/C_7688744;	f_9105384	f_9105384	
@@ -113,8 +113,8 @@ c	net/minecraft/unmapped/C_4766485
 		p	1			p_1
 		p	2			p_2
 c	net/minecraft/unmapped/C_4824661
-	f	I	f_5619257	f_5619257	
-	f	Ljava/util/Random;	f_8687356	f_8687356	
+	f	I	f_5619257	tick	
+	f	Ljava/util/Random;	f_8687356	random	
 	m	(F)Lnet/minecraft/unmapped/C_0336319;	m_2834627	m_2834627	
 		p	1		p_1	
 	m	(F)V	m_6289901	m_6289901	
@@ -122,7 +122,7 @@ c	net/minecraft/unmapped/C_4824661
 c	net/minecraft/unmapped/C_5283200
 	f	Z	f_7818563	f_7818563	
 c	net/minecraft/unmapped/C_7688744
-	f	Z	f_0688841	f_0688841	
+	f	Z	f_0688841	fpsLimit	
 	f	I	f_7629722	f_7629722	
 c	com/mojang/minecraft/Entity
 	f	I	textureId	textureId	

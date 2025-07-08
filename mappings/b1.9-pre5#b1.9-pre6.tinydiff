@@ -88,7 +88,7 @@ c	net/minecraft/unmapped/C_4766485
 	f	Ljava/util/Random;	f_6596982		f_6596982
 c	net/minecraft/unmapped/C_4844124
 	f	I	f_4845000	f_4845000	
-	f	Lnet/minecraft/unmapped/C_3837238;	f_7666900	f_7666900	
+	f	Lnet/minecraft/unmapped/C_3837238;	f_7666900	incoming	
 c	net/minecraft/unmapped/C_5009044
 c	net/minecraft/unmapped/C_5009044$C_3264767
 	f	Lnet/minecraft/unmapped/C_5009044$C_3264767;	f_6314443		f_6314443
@@ -109,8 +109,8 @@ c	net/minecraft/unmapped/C_6160704
 	m	(Z)V	<init>		<init>
 		p	1			p_1
 c	net/minecraft/unmapped/C_6385858
-	f	I	f_2474245	f_2474245	
-	f	I	f_1258318	f_1258318	
+	f	I	f_2474245	maxAirSupply	
+	f	I	f_1258318	airSupply	
 	m	()I	m_2064128		m_2064128
 	m	(I)V	m_8246185		m_8246185
 		p	1			p_1
@@ -136,9 +136,9 @@ c	net/minecraft/unmapped/C_7185906
 		p	1			p_1
 		p	2			p_2
 c	net/minecraft/unmapped/C_7256819
-	f	I	f_7374961	f_7374961	
-	f	I	f_0909332	f_0909332	
-	f	I	f_4325208	f_4325208	
+	f	I	f_7374961	damage	
+	f	I	f_0909332	hurtTime	
+	f	I	f_4325208	hurtDir	
 	m	()Z	m_5067021		m_5067021
 	m	(Z)V	m_8632231		m_8632231
 		p	1			p_1
@@ -170,7 +170,7 @@ c	net/minecraft/unmapped/C_7318150
 	m	(I)Lnet/minecraft/unmapped/C_2750078;	m_3058689		m_3058689
 		p	1			p_1
 c	net/minecraft/unmapped/C_7641996
-	m	()Lnet/minecraft/unmapped/C_7694617;	m_4521763	m_4521763	
+	m	()Lnet/minecraft/unmapped/C_7694617;	m_4521763	getLastNode	
 c	net/minecraft/unmapped/C_7688744
 	f	[Ljava/lang/String;	f_5616977		f_5616977
 	f	I	f_7699321		f_7699321
@@ -184,15 +184,16 @@ c	net/minecraft/unmapped/C_9331929
 	m	(I)Lnet/minecraft/unmapped/C_2750078;	m_3058689		m_3058689
 		p	1			p_1
 c	net/minecraft/unmapped/C_9377562
-	f	Ljava/util/Set;	f_1000049	f_1000049	
-	f	Ljava/util/HashMap;	f_1000049		f_1000049
-	m	(Lnet/minecraft/unmapped/C_3906126;Ljava/util/List;)Z	m_7840120	m_7840120	
-		p	0		p_0	
-		p	1		p_1	
+	f	Ljava/util/Set;	f_1000049	chunksToPoll	
+	f	Ljava/util/HashMap;	f_1000049		chunksToPoll
+	m	(Lnet/minecraft/unmapped/C_3906126;Ljava/util/List;)Z	m_7840120	tickNightmare	
+		c	Spawns a mob next to the player and wakes them up if the sleeping location is not safe\n@return Returns true if any players had a nightmare	
+		p	0		level	
+		p	1		players	
 c	net/minecraft/unmapped/C_9958683
-	f	I	f_3318676	f_3318676	
-	f	I	f_4105400	f_4105400	
-	f	I	f_6372840	f_6372840	
+	f	I	f_3318676	damage	
+	f	I	f_4105400	hurtTime	
+	f	I	f_6372840	hurtDirection	
 	m	(I)V	m_7512687		m_7512687
 		p	1			p_1
 	m	()I	m_2203772		m_2203772
@@ -214,7 +215,7 @@ c	net/minecraft/unmapped/C_7949756
 	m	(Z)V	<init>		<init>
 		p	1			p_1
 c	net/minecraft/unmapped/C_1140528
-	m	()J	m_5008919	m_5008919	
+	m	()J	m_5008919	getSizeOnDisk	
 c	net/minecraft/unmapped/C_2371258
 	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_3906126;IIII)Z	m_9844872		m_9844872
 		p	1			p_1

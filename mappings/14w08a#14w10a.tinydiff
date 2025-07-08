@@ -19,31 +19,31 @@ c	net/minecraft/server/MinecraftServer
 	m	()Lcom/mojang/authlib/GameProfileRepository;	m_1431078		m_1431078
 	m	()Lnet/minecraft/unmapped/C_7143605;	m_6495676		m_6495676
 c	net/minecraft/unmapped/C_0019534
-	f	Ljava/util/Set;	f_5642762	f_5642762	
-	f	Ljava/util/Set;	f_6213763	f_6213763	
-	f	Lnet/minecraft/unmapped/C_0097022;	f_0083016	f_0083016	
-	f	Lnet/minecraft/unmapped/C_0097022;	f_1912288	f_1912288	
+	f	Ljava/util/Set;	f_5642762	ops	
+	f	Ljava/util/Set;	f_6213763	whitelist	
+	f	Lnet/minecraft/unmapped/C_0097022;	f_0083016	bans	
+	f	Lnet/minecraft/unmapped/C_0097022;	f_1912288	ipBans	
 	f	Ljava/io/File;	f_2989274		f_2989274
 	f	Ljava/io/File;	f_7793592		f_7793592
 	f	Ljava/io/File;	f_5167088		f_5167088
 	f	Ljava/io/File;	f_7927770		f_7927770
-	f	Lnet/minecraft/unmapped/C_4340063;	f_0083016		f_0083016
-	f	Lnet/minecraft/unmapped/C_6229630;	f_1912288		f_1912288
-	f	Lnet/minecraft/unmapped/C_0411092;	f_5642762		f_5642762
-	f	Lnet/minecraft/unmapped/C_8127368;	f_6213763		f_6213763
-	m	(Ljava/lang/String;)V	m_6067407	m_6067407	
-		p	1		p_1	
-	m	(Ljava/lang/String;)V	m_4026131	m_4026131	
-		p	1		p_1	
-	m	(Ljava/lang/String;)Z	m_5952679	m_5952679	
-		p	1		p_1	
-	m	(Ljava/lang/String;)Z	m_6216287	m_6216287	
-		p	1		p_1	
+	f	Lnet/minecraft/unmapped/C_4340063;	f_0083016		bans
+	f	Lnet/minecraft/unmapped/C_6229630;	f_1912288		ipBans
+	f	Lnet/minecraft/unmapped/C_0411092;	f_5642762		ops
+	f	Lnet/minecraft/unmapped/C_8127368;	f_6213763		whitelist
+	m	(Ljava/lang/String;)V	m_6067407	op	
+		p	1		username	
+	m	(Ljava/lang/String;)V	m_4026131	deop	
+		p	1		username	
+	m	(Ljava/lang/String;)Z	m_5952679	isOp	
+		p	1		name	
+	m	(Ljava/lang/String;)Z	m_6216287	isWhiteListed	
+		p	1		username	
 	m	(Ljava/lang/String;)V	m_4123342	m_4123342	
 		p	1		p_1	
 	m	(Ljava/lang/String;)V	m_9881331	m_9881331	
 		p	1		p_1	
-	m	()Ljava/util/Set;	m_4387584	m_4387584	
+	m	()Ljava/util/Set;	m_4387584	getWhiteList	
 	m	()Ljava/util/Set;	m_8935814	m_8935814	
 	m	()Lnet/minecraft/unmapped/C_0097022;	m_5059379	m_5059379	
 	m	()Lnet/minecraft/unmapped/C_0097022;	m_3963539	m_3963539	
@@ -58,19 +58,19 @@ c	net/minecraft/unmapped/C_0019534
 	m	()[Lcom/mojang/authlib/GameProfile;	m_8124556		m_8124556
 	m	()Lnet/minecraft/unmapped/C_4340063;	m_5059379		m_5059379
 	m	()Lnet/minecraft/unmapped/C_6229630;	m_3963539		m_3963539
-	m	(Lcom/mojang/authlib/GameProfile;)V	m_6067407		m_6067407
+	m	(Lcom/mojang/authlib/GameProfile;)V	m_6067407		op
 		p	1			p_1
-	m	(Lcom/mojang/authlib/GameProfile;)V	m_4026131		m_4026131
+	m	(Lcom/mojang/authlib/GameProfile;)V	m_4026131		deop
 		p	1			p_1
-	m	(Lcom/mojang/authlib/GameProfile;)Z	m_6216287		m_6216287
+	m	(Lcom/mojang/authlib/GameProfile;)Z	m_6216287		isWhiteListed
 		p	1			p_1
-	m	(Lcom/mojang/authlib/GameProfile;)Z	m_5952679		m_5952679
+	m	(Lcom/mojang/authlib/GameProfile;)Z	m_5952679		isOp
 		p	1			p_1
 	m	(Lcom/mojang/authlib/GameProfile;)V	m_4123342		m_4123342
 		p	1			p_1
 	m	(Lcom/mojang/authlib/GameProfile;)V	m_9881331		m_9881331
 		p	1			p_1
-	m	()Lnet/minecraft/unmapped/C_8127368;	m_4387584		m_4387584
+	m	()Lnet/minecraft/unmapped/C_8127368;	m_4387584		getWhiteList
 	m	()[Ljava/lang/String;	m_1027282		m_1027282
 	m	()Lnet/minecraft/unmapped/C_0411092;	m_8935814		m_8935814
 	m	()[Ljava/lang/String;	m_0047494		m_0047494
@@ -110,7 +110,7 @@ c	net/minecraft/unmapped/C_3134254
 	m	(Lnet/minecraft/unmapped/C_6707278;)Z	m_6808962	m_6808962	
 		p	1		p_1	
 c	net/minecraft/unmapped/C_3466301
-	m	(Lnet/minecraft/unmapped/C_3635204;DDDDDI)V	m_7578150	m_7578150	
+	m	(Lnet/minecraft/unmapped/C_3635204;DDDDDI)V	m_7578150	tesselateTorch	
 		p	1		p_1	
 		p	2		p_2	
 		p	4		p_4	
@@ -165,8 +165,8 @@ c	net/minecraft/unmapped/C_5422301
 	f	Ljava/util/List;	f_8429081		f_8429081
 	m	()Ljava/util/List;	m_8746735		m_8746735
 c	net/minecraft/unmapped/C_5441464
-	f	Lnet/minecraft/unmapped/C_0786431;	f_1969779	f_1969779	
-	f	Lnet/minecraft/unmapped/C_3268052;	f_1969779		f_1969779
+	f	Lnet/minecraft/unmapped/C_0786431;	f_1969779	parent	
+	f	Lnet/minecraft/unmapped/C_3268052;	f_1969779		parent
 	m	(Lnet/minecraft/unmapped/C_0786431;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V	<init>	<init>	
 		p	1		p_1	
 		p	2		p_2	

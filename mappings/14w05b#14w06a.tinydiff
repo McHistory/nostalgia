@@ -16,10 +16,10 @@ c	net/minecraft/unmapped/C_0324512
 	m	(Lnet/minecraft/unmapped/C_7345223;)V	m_6291435	m_6291435	
 		p	1		p_1	
 c	net/minecraft/unmapped/C_0336319
-	m	(DDD)D	m_0762483	m_0762483	
-		p	1		p_1	
-		p	3		p_3	
-		p	5		p_5	
+	m	(DDD)D	m_0762483	distanceToSqr	
+		p	1		x	
+		p	3		y	
+		p	5		z	
 c	net/minecraft/unmapped/C_0351020
 	m	()I	m_0839636		m_0839636
 c	net/minecraft/unmapped/C_0559439
@@ -29,9 +29,9 @@ c	net/minecraft/unmapped/C_0820158
 c	net/minecraft/unmapped/C_0823907
 	m	()I	m_0839636		m_0839636
 c	net/minecraft/unmapped/C_1013763
-	f	I	f_9268217	f_9268217	
+	f	I	f_9268217	attackTime	
 	m	()F	m_9119163	m_9119163	
-	m	()V	m_6773208	m_6773208	
+	m	()V	m_6773208	serverAiStep	
 	m	()Z	m_4680808	m_4680808	
 	m	()V	m_0992030		m_0992030
 	m	()V	m_3525047		m_3525047
@@ -141,20 +141,20 @@ c	net/minecraft/unmapped/C_2923961$C_6908992		C_6908992
 	m	(Lnet/minecraft/unmapped/C_1013763;)D	m_3448051		m_3448051
 		p	1			p_1
 c	net/minecraft/unmapped/C_2984832
-	f	I	f_6172306	f_6172306	
-	f	D	f_3368863	f_3368863	
-	f	D	f_1530599	f_1530599	
-	f	D	f_6127400	f_6127400	
-	f	Lnet/minecraft/unmapped/C_6385858;	f_4129132	f_4129132	
-	f	I	f_5618038	f_5618038	
-	f	I	f_5498320	f_5498320	
-	f	I	f_2663354	f_2663354	
+	f	I	f_6172306	floatDuration	
+	f	D	f_3368863	xTarget	
+	f	D	f_1530599	yTarget	
+	f	D	f_6127400	zTarget	
+	f	Lnet/minecraft/unmapped/C_6385858;	f_4129132	target	
+	f	I	f_5618038	retargetTime	
+	f	I	f_5498320	oCharge	
+	f	I	f_2663354	charge	
 	m	()V	m_6773208	m_6773208	
-	m	(DDDD)Z	m_5848632	m_5848632	
-		p	1		p_1	
-		p	3		p_3	
-		p	5		p_5	
-		p	7		p_7	
+	m	(DDDD)Z	m_5848632	canReach	
+		p	1		x	
+		p	3		y	
+		p	5		z	
+		p	7		distance	
 	m	(Z)V	m_1502889		m_1502889
 		p	1			p_1
 	m	()I	m_2353420		m_2353420
@@ -202,18 +202,18 @@ c	net/minecraft/unmapped/C_3324249
 c	net/minecraft/unmapped/C_3414480
 	m	()I	m_0839636		m_0839636
 c	net/minecraft/unmapped/C_3419581
-	f	Lnet/minecraft/unmapped/C_6385858;	f_8101227	f_8101227	
-	f	Z	f_3611045	f_3611045	
+	f	Lnet/minecraft/unmapped/C_6385858;	f_8101227	attackTarget	
+	f	Z	f_3611045	holdGround	
 	f	I	f_0864517	f_0864517	
 	m	()V	m_6773208	m_6773208	
-	m	(Lnet/minecraft/unmapped/C_6385858;F)V	m_4604691	m_4604691	
-		p	1		p_1	
-		p	2		p_2	
-	m	()Lnet/minecraft/unmapped/C_6385858;	m_3715716	m_3715716	
-	m	()Z	m_9931077	m_9931077	
-	m	()Lnet/minecraft/unmapped/C_6385858;	m_1767552	m_1767552	
-	m	(Lnet/minecraft/unmapped/C_6385858;)V	m_3711704	m_3711704	
-		p	1		p_1	
+	m	(Lnet/minecraft/unmapped/C_6385858;F)V	m_4604691	checkHurtTarget	
+		p	1		target	
+		p	2		distance	
+	m	()Lnet/minecraft/unmapped/C_6385858;	m_3715716	findAttackTarget	
+	m	()Z	m_9931077	shouldHoldGround	
+	m	()Lnet/minecraft/unmapped/C_6385858;	m_1767552	getTarget	
+	m	(Lnet/minecraft/unmapped/C_6385858;)V	m_3711704	setTarget	
+		p	1		target	
 	m	()V	m_5345939	m_5345939	
 c	net/minecraft/unmapped/C_3447974
 	m	()I	m_0839636		m_0839636
@@ -351,9 +351,9 @@ c	net/minecraft/unmapped/C_3521779
 		p	1			p_1
 		p	2			p_2
 c	net/minecraft/unmapped/C_3604011
-	m	(Lnet/minecraft/unmapped/C_5009044;)V	m_8078064	m_8078064	
+	m	(Lnet/minecraft/unmapped/C_5009044;)V	m_8078064	renderHand	
 		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_7106153;)V	m_8078064		m_8078064
+	m	(Lnet/minecraft/unmapped/C_7106153;)V	m_8078064		renderHand
 		p	1			p_1
 c	net/minecraft/unmapped/C_3635204
 	m	()I	m_1863884		m_1863884
@@ -422,7 +422,7 @@ c	net/minecraft/unmapped/C_4948697$C_8181996		C_8181996
 c	net/minecraft/unmapped/C_5009044
 	m	()V	m_6773208	m_6773208	
 	m	()F	m_9119163	m_9119163	
-	m	()V	m_9844463	m_9844463	
+	m	()V	m_9844463	clearSleepingPos	
 	m	(Lnet/minecraft/unmapped/C_7345223;)V	m_6291435	m_6291435	
 		p	1		p_1	
 	m	()V	m_4958068		m_4958068
@@ -451,7 +451,7 @@ c	net/minecraft/unmapped/C_5367636
 		p	1		p_1	
 	m	()V	m_4958068		m_4958068
 c	net/minecraft/unmapped/C_5371184
-	f	I	f_1856136	f_1856136	
+	f	I	f_1856136	jumpDelay	
 	m	()V	m_6773208	m_6773208	
 	m	(I)V	m_8901560		m_8901560
 		p	1			p_1
@@ -513,11 +513,11 @@ c	net/minecraft/unmapped/C_6151866
 c	net/minecraft/unmapped/C_6295037
 	m	()I	m_0839636		m_0839636
 c	net/minecraft/unmapped/C_6385858
-	f	F	f_9213323	f_9213323	
-	f	F	f_6392472	f_6392472	
+	f	F	f_9213323	heightOffset	
+	f	F	f_6392472	ySlideOffset	
 	f	Lnet/minecraft/unmapped/C_6385858$C_6577014;	f_1248714	f_1248714	
-	m	()F	m_9119163	m_9119163	
-	m	()F	m_3413954	m_3413954	
+	m	()F	m_9119163	getHeadHeight	
+	m	()F	m_3413954	getShadowHeightOffs	
 	m	()V	m_5135469		m_5135469
 	m	()Lnet/minecraft/unmapped/C_1414550;	m_8022439		m_8022439
 	m	(Lnet/minecraft/unmapped/C_1414550;)V	m_9162011		m_9162011
@@ -563,7 +563,7 @@ c	net/minecraft/unmapped/C_7318150
 c	net/minecraft/unmapped/C_7450537
 	m	()I	m_0839636		m_0839636
 c	net/minecraft/unmapped/C_7641996
-	m	()V	m_2368561	m_2368561	
+	m	()V	m_2368561	next	
 c	net/minecraft/unmapped/C_7688744
 	f	Lnet/minecraft/unmapped/C_5027199;	f_5271502		f_5271502
 c	net/minecraft/unmapped/C_8079712
@@ -650,7 +650,7 @@ c	net/minecraft/unmapped/C_8345828
 		p	1			p_1
 		p	2			p_2
 c	net/minecraft/unmapped/C_8837730
-	f	D	f_3672987	f_3672987	
+	f	D	f_3672987	yView	
 	m	()D	m_0246351	m_0246351	
 c	net/minecraft/unmapped/C_8837730$C_4004004
 	m	(DDDDZ)V	<init>	<init>	
@@ -683,9 +683,9 @@ c	net/minecraft/unmapped/C_8837730$C_8094787
 c	net/minecraft/unmapped/C_8958653
 	m	()Z	m_4680808	m_4680808	
 c	net/minecraft/unmapped/C_9377562
-	f	Ljava/util/Map;	f_1000049	f_1000049	
+	f	Ljava/util/Map;	f_1000049	chunksToPoll	
 	f	I	f_8871139		f_8871139
-	f	Ljava/util/Set;	f_1000049		f_1000049
+	f	Ljava/util/Set;	f_1000049		chunksToPoll
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_9610577
 	f	Z	f_7868353		f_7868353

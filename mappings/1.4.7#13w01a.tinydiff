@@ -69,12 +69,12 @@ c	net/minecraft/unmapped/C_3134254
 		p	3			p_3
 		p	4			p_4
 c	net/minecraft/unmapped/C_3466301
-	m	(Lnet/minecraft/unmapped/C_3635204;III)Z	m_5156521	m_5156521	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-	m	(Lnet/minecraft/unmapped/C_7000411;III)Z	m_5156521		m_5156521
+	m	(Lnet/minecraft/unmapped/C_3635204;III)Z	m_5156521	tesselateRepeaterInWorld	
+		p	1		tile	
+		p	2		x	
+		p	3		y	
+		p	4		z	
+	m	(Lnet/minecraft/unmapped/C_7000411;III)Z	m_5156521		tesselateRepeaterInWorld
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -101,11 +101,11 @@ c	net/minecraft/unmapped/C_3466301
 		p	3			p_3
 		p	4			p_4
 c	net/minecraft/unmapped/C_3635204
-	f	Lnet/minecraft/unmapped/C_3635204;	f_5372337	f_5372337	
-	f	Lnet/minecraft/unmapped/C_3635204;	f_9950365	f_9950365	
-	f	[Z	f_4251593	f_4251593	
-	f	Lnet/minecraft/unmapped/C_7000411;	f_5372337		f_5372337
-	f	Lnet/minecraft/unmapped/C_7000411;	f_9950365		f_9950365
+	f	Lnet/minecraft/unmapped/C_3635204;	f_5372337	REPEATER_OFF	
+	f	Lnet/minecraft/unmapped/C_3635204;	f_9950365	REPEATER_ON	
+	f	[Z	f_4251593	blockUpdate	
+	f	Lnet/minecraft/unmapped/C_7000411;	f_5372337		REPEATER_OFF
+	f	Lnet/minecraft/unmapped/C_7000411;	f_9950365		REPEATER_ON
 	f	Lnet/minecraft/unmapped/C_3635204;	f_9359001		f_9359001
 	f	Lnet/minecraft/unmapped/C_3635204;	f_2259697		f_2259697
 	f	Lnet/minecraft/unmapped/C_3635204;	f_9737996		f_9737996
@@ -115,26 +115,26 @@ c	net/minecraft/unmapped/C_3635204
 	f	Lnet/minecraft/unmapped/C_3635204;	f_4876898		f_4876898
 	f	Lnet/minecraft/unmapped/C_3635204;	f_8688468		f_8688468
 	f	Lnet/minecraft/unmapped/C_3635204;	f_4245728		f_4245728
-	m	(Lnet/minecraft/unmapped/C_2627205;IIII)Z	m_1482273	m_1482273	
+	m	(Lnet/minecraft/unmapped/C_2627205;IIII)Z	m_1482273	getSignal	
+		p	1		levelReader	
+		p	2		x	
+		p	3		y	
+		p	4		z	
+		p	5		direction	
+	m	()Lnet/minecraft/unmapped/C_3635204;	m_1716214	setBlockUpdate	
+	m	(Lnet/minecraft/unmapped/C_2627205;IIII)Z	m_8933285	getDirectSignal	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
 		p	4		p_4	
 		p	5		p_5	
-	m	()Lnet/minecraft/unmapped/C_3635204;	m_1716214	m_1716214	
-	m	(Lnet/minecraft/unmapped/C_2627205;IIII)Z	m_8933285	m_8933285	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-	m	(Lnet/minecraft/unmapped/C_2627205;IIII)I	m_1482273		m_1482273
+	m	(Lnet/minecraft/unmapped/C_2627205;IIII)I	m_1482273		getSignal
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
 		p	5			p_5
-	m	(Lnet/minecraft/unmapped/C_2627205;IIII)I	m_8933285		m_8933285
+	m	(Lnet/minecraft/unmapped/C_2627205;IIII)I	m_8933285		getDirectSignal
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -146,47 +146,47 @@ c	net/minecraft/unmapped/C_3635204
 		p	0			p_0
 		p	1			p_1
 c	net/minecraft/unmapped/C_3906126
-	f	Z	f_3261245	f_3261245	
-	m	(IIIII)Z	m_3304116	m_3304116	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-	m	(IIII)Z	m_4644614	m_4644614	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-	m	(IIII)V	m_7778811	m_7778811	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-	m	(IIII)Z	m_6841872	m_6841872	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-	m	(IIIII)Z	m_2111420	m_2111420	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-	m	(IIII)Z	m_1164560	m_1164560	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-	m	(III)Z	m_5003743	m_5003743	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-	m	(III)V	m_0318010	m_0318010	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
+	f	Z	f_3261245	noNeighborUpdate	
+	m	(IIIII)Z	m_3304116	setTileAndDataNoUpdate	
+		p	1		x	
+		p	2		y	
+		p	3		z	
+		p	4		tile	
+		p	5		meta	
+	m	(IIII)Z	m_4644614	setTileNoUpdate	
+		p	1		x	
+		p	2		y	
+		p	3		z	
+		p	4		tile	
+	m	(IIII)V	m_7778811	setData	
+		p	1		x	
+		p	2		y	
+		p	3		z	
+		p	4		meta	
+	m	(IIII)Z	m_6841872	setDataNoUpdate	
+		p	1		x	
+		p	2		y	
+		p	3		z	
+		p	4		meta	
+	m	(IIIII)Z	m_2111420	setTileAndData	
+		p	1		x	
+		p	2		y	
+		p	3		z	
+		p	4		id	
+		p	5		meta	
+	m	(IIII)Z	m_1164560	getDirectSignal	
+		p	1		x	
+		p	2		y	
+		p	3		z	
+		p	4		direction	
+	m	(III)Z	m_5003743	hasDirectSignal	
+		p	1		x	
+		p	2		y	
+		p	3		z	
+	m	(III)V	m_0318010	setTileDirty	
+		p	1		x	
+		p	2		y	
+		p	3		z	
 	m	(IIIIIZ)Z	m_3759788	m_3759788	
 		p	1		p_1	
 		p	2		p_2	
@@ -194,14 +194,14 @@ c	net/minecraft/unmapped/C_3906126
 		p	4		p_4	
 		p	5		p_5	
 		p	6		p_6	
-	m	(IIIIII)Z	m_2111420		m_2111420
+	m	(IIIIII)Z	m_2111420		setTileAndData
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
 		p	5			p_5
 		p	6			p_6
-	m	(IIIII)Z	m_7778811		m_7778811
+	m	(IIIII)Z	m_7778811		setData
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -225,7 +225,7 @@ c	net/minecraft/unmapped/C_3906126
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
-	m	(IIII)I	m_1164560		m_1164560
+	m	(IIII)I	m_1164560		getDirectSignal
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -301,11 +301,11 @@ c	net/minecraft/unmapped/C_5602753
 		p	3		p_3	
 		p	4		p_4	
 		p	5		p_5	
-	m	(Lnet/minecraft/unmapped/C_3906126;III)V	m_4201484	m_4201484	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
+	m	(Lnet/minecraft/unmapped/C_3906126;III)V	m_4201484	checkPressed	
+		p	1		level	
+		p	2		x	
+		p	3		y	
+		p	4		z	
 	m	(Lnet/minecraft/unmapped/C_2627205;III)V	m_5728949	m_5728949	
 		p	1		p_1	
 		p	2		p_2	
@@ -362,16 +362,16 @@ c	net/minecraft/unmapped/C_6605607
 c	net/minecraft/unmapped/C_6618366
 	f	I	f_2421702	f_2421702	
 c	net/minecraft/unmapped/C_6755599
-	m	(IIII)Z	m_1169876	m_1169876	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-	m	(Lnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_1414550;Ljava/util/List;)V	m_4383092	m_4383092	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-	m	(Lnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_1414550;Ljava/util/List;Lnet/minecraft/unmapped/C_8878495;)V	m_4383092		m_4383092
+	m	(IIII)Z	m_1169876	setTile	
+		p	1		x	
+		p	2		y	
+		p	3		z	
+		p	4		id	
+	m	(Lnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_1414550;Ljava/util/List;)V	m_4383092	getEntities	
+		p	1		ignore	
+		p	2		area	
+		p	3		entities	
+	m	(Lnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_1414550;Ljava/util/List;Lnet/minecraft/unmapped/C_8878495;)V	m_4383092		getEntities
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -490,7 +490,7 @@ c	net/minecraft/unmapped/C_7699185
 c	net/minecraft/unmapped/C_9072802
 	f	I	f_1817236		f_1817236
 	m	(I)V	<init>	<init>	
-		p	1		p_1	
+		p	1		id	
 	m	(II)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
@@ -554,7 +554,7 @@ c	net/minecraft/unmapped/C_9462692
 		p	3			p_3
 		p	4			p_4
 c	net/minecraft/unmapped/C_7000411
-	f	Z	f_0208677	f_0208677	
+	f	Z	f_0208677	isOn	
 	m	()Z	m_1538589	m_1538589	
 	m	(Lnet/minecraft/unmapped/C_3906126;III)Z	m_0351269	m_0351269	
 		p	1		p_1	
@@ -595,12 +595,12 @@ c	net/minecraft/unmapped/C_7000411
 		p	3		p_3	
 		p	4		p_4	
 		p	5		p_5	
-	m	(Lnet/minecraft/unmapped/C_3906126;IIII)Z	m_2873519	m_2873519	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
+	m	(Lnet/minecraft/unmapped/C_3906126;IIII)Z	m_2873519	shouldTurnOn	
+		p	1		level	
+		p	2		x	
+		p	3		y	
+		p	4		z	
+		p	5		data	
 	m	()Z	m_0248204	m_0248204	
 	m	(Lnet/minecraft/unmapped/C_3906126;IIILnet/minecraft/unmapped/C_1013763;)V	m_0797987	m_0797987	
 		p	1		p_1	

@@ -72,13 +72,13 @@ c	net/minecraft/unmapped/C_1044273$3495764		3495764
 	m	()Ljava/lang/String;	m_5209634		m_5209634
 	m	()Ljava/lang/Object;	call		call
 c	net/minecraft/unmapped/C_1851525
-	m	(Lnet/minecraft/unmapped/C_3906126;IIII)V	m_2394048	m_2394048	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-	m	(Lnet/minecraft/unmapped/C_3906126;IIILnet/minecraft/unmapped/C_2750078;)V	m_2394048		m_2394048
+	m	(Lnet/minecraft/unmapped/C_3906126;IIII)V	m_2394048	setRecord	
+		p	1		level	
+		p	2		x	
+		p	3		y	
+		p	4		z	
+		p	5		recordId	
+	m	(Lnet/minecraft/unmapped/C_3906126;IIILnet/minecraft/unmapped/C_2750078;)V	m_2394048		setRecord
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -148,7 +148,7 @@ c	net/minecraft/unmapped/C_3604011
 		p	6		p_6	
 		p	7		p_7	
 c	net/minecraft/unmapped/C_3635204
-	m	(Lnet/minecraft/unmapped/C_3906126;IIIIFFF)V	m_3586843	m_3586843	
+	m	(Lnet/minecraft/unmapped/C_3906126;IIIIFFF)V	m_3586843	setPlacedOnFace	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
@@ -157,7 +157,7 @@ c	net/minecraft/unmapped/C_3635204
 		p	6		p_6	
 		p	7		p_7	
 		p	8		p_8	
-	m	(Lnet/minecraft/unmapped/C_3906126;IIIIFFFI)I	m_3586843		m_3586843
+	m	(Lnet/minecraft/unmapped/C_3906126;IIIIFFFI)I	m_3586843		setPlacedOnFace
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -216,11 +216,11 @@ c	net/minecraft/unmapped/C_4237166
 		p	2			p_2
 		p	3			p_3
 c	net/minecraft/unmapped/C_4766485
-	m	(Ljava/lang/String;III)V	m_8070213	m_8070213	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
+	m	(Ljava/lang/String;III)V	m_8070213	draw	
+		p	1		text	
+		p	2		x	
+		p	3		y	
+		p	4		color	
 	m	(Ljava/lang/String;IIII)V	m_4319329	m_4319329	
 		p	1		p_1	
 		p	2		p_2	
@@ -233,7 +233,7 @@ c	net/minecraft/unmapped/C_4766485
 		p	3		p_3	
 		p	4		p_4	
 		p	5		p_5	
-	m	(Ljava/lang/String;III)I	m_8070213		m_8070213
+	m	(Ljava/lang/String;III)I	m_8070213		draw
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -251,7 +251,7 @@ c	net/minecraft/unmapped/C_4766485
 		p	4			p_4
 		p	5			p_5
 c	net/minecraft/unmapped/C_5009044
-	f	I	f_0696867	f_0696867	
+	f	I	f_0696867	score	
 	m	(Ljava/lang/String;FF)V	m_6294842		m_6294842
 		p	1			p_1
 		p	2			p_2
@@ -463,17 +463,17 @@ c	net/minecraft/unmapped/C_8361473
 	f	Lnet/minecraft/unmapped/C_1264342;	f_4084653		f_4084653
 	f	Ljava/util/List;	f_9947381		f_9947381
 	m	()V	<init>	<init>	
-	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6385858;)Z	m_2870621	m_2870621	
-		p	1		p_1	
-		p	2		p_2	
-	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6385858;DDDF)V	m_8013381	m_8013381	
+	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6385858;)Z	m_2870621	createPortal	
+		p	1		level	
+		p	2		entity	
+	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6385858;DDDF)V	m_8013381	force	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
 		p	5		p_5	
 		p	7		p_7	
 		p	9		p_9	
-	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6385858;DDDF)Z	m_6851795	m_6851795	
+	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_6385858;DDDF)Z	m_6851795	findPortal	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
@@ -482,19 +482,19 @@ c	net/minecraft/unmapped/C_8361473
 		p	9		p_9	
 	m	(Lnet/minecraft/unmapped/C_7366354;)V	<init>		<init>
 		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_6385858;DDDF)V	m_8013381		m_8013381
+	m	(Lnet/minecraft/unmapped/C_6385858;DDDF)V	m_8013381		force
 		p	1			p_1
 		p	2			p_2
 		p	4			p_4
 		p	6			p_6
 		p	8			p_8
-	m	(Lnet/minecraft/unmapped/C_6385858;DDDF)Z	m_6851795		m_6851795
+	m	(Lnet/minecraft/unmapped/C_6385858;DDDF)Z	m_6851795		findPortal
 		p	1			p_1
 		p	2			p_2
 		p	4			p_4
 		p	6			p_6
 		p	8			p_8
-	m	(Lnet/minecraft/unmapped/C_6385858;)Z	m_2870621		m_2870621
+	m	(Lnet/minecraft/unmapped/C_6385858;)Z	m_2870621		createPortal
 		p	1			p_1
 	m	(J)V	m_5702032		m_5702032
 		p	1			p_1
@@ -567,7 +567,7 @@ c	net/minecraft/unmapped/C_9610577
 c	net/minecraft/unmapped/C_9846877
 	f	Lnet/minecraft/unmapped/C_7688744;	f_2802724		f_2802724
 	m	(Ljava/awt/Component;)V	<init>	<init>	
-		p	1		p_1	
+		p	1		parent	
 	m	(Ljava/awt/Component;Lnet/minecraft/unmapped/C_7688744;)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2

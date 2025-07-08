@@ -1,8 +1,8 @@
 tiny	2	0
-c	net/minecraft/unmapped/C_0336319	net/minecraft/unmapped/C_0336319	
-	f	F	f_1625353	f_1625353	
-	f	F	f_4544943	f_4544943	
-	f	F	f_9811199	f_9811199	
+c	net/minecraft/unmapped/C_0336319	net/minecraft/world/phys/Vec3	
+	f	F	f_1625353	x	
+	f	F	f_4544943	y	
+	f	F	f_9811199	z	
 	m	(FFF)V	<init>	<init>	
 		p	1		p_1	
 		p	2		p_2	
@@ -14,9 +14,9 @@ c	net/minecraft/unmapped/C_0336319	net/minecraft/unmapped/C_0336319
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
-c	net/minecraft/unmapped/C_0289174	net/minecraft/unmapped/C_0289174	
-	f	I	f_3780787	f_3780787	
-	f	I	f_4434142	f_4434142	
+c	net/minecraft/unmapped/C_0289174	net/minecraft/client/model/geom/ModelPart	
+	f	I	f_3780787	xTexOffs	
+	f	I	f_4434142	yTexOffs	
 	f	[Lnet/minecraft/unmapped/C_9856888;	f_4964947	f_4964947	
 	f	[Lnet/minecraft/unmapped/C_3589148;	f_0337920	f_0337920	
 	f	F	f_8501929	f_8501929	
@@ -26,13 +26,13 @@ c	net/minecraft/unmapped/C_0289174	net/minecraft/unmapped/C_0289174
 	f	F	f_5432517	f_5432517	
 	f	F	f_0768495	f_0768495	
 	m	(II)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
+		p	1		xTexOffs	
+		p	2		yTexOffs	
 	m	(FFF)V	m_4478491	m_4478491	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
-	m	(FFFIII)V	m_7902911	m_7902911	
+	m	(FFFIII)V	m_7902911	addBox	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
@@ -46,8 +46,8 @@ c	net/minecraft/unmapped/C_0289174	net/minecraft/unmapped/C_0289174
 c	net/minecraft/unmapped/C_3385278
 	m	(I)V	m_1818598		m_1818598
 		p	0			p_0
-c	net/minecraft/unmapped/C_3589148	net/minecraft/unmapped/C_3589148	
-	f	[Lnet/minecraft/unmapped/C_9856888;	f_2471300	f_2471300	
+c	net/minecraft/unmapped/C_3589148	net/minecraft/client/model/Polygon	
+	f	[Lnet/minecraft/unmapped/C_9856888;	f_2471300	vertices	
 	f	I	f_3494774	f_3494774	
 	m	([Lnet/minecraft/unmapped/C_9856888;)V	<init>	<init>	
 		p	1		p_1	
@@ -60,19 +60,19 @@ c	net/minecraft/unmapped/C_3589148	net/minecraft/unmapped/C_3589148
 	m	()V	m_4430908	m_4430908	
 c	net/minecraft/unmapped/C_5283200
 	f	I	f_7665448		f_7665448
-c	net/minecraft/unmapped/C_9856888	net/minecraft/unmapped/C_9856888	
-	f	Lnet/minecraft/unmapped/C_0336319;	f_4350793	f_4350793	
+c	net/minecraft/unmapped/C_9856888	net/minecraft/client/model/Vertex	
+	f	Lnet/minecraft/unmapped/C_0336319;	f_4350793	pos	
 	f	F	f_5311158	f_5311158	
 	f	F	f_9595578	f_9595578	
 	m	(FFFFF)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-	m	(FF)Lnet/minecraft/unmapped/C_9856888;	m_7441866	m_7441866	
-		p	1		p_1	
-		p	2		p_2	
+		p	1		x	
+		p	2		y	
+		p	3		z	
+		p	4		u	
+		p	5		v	
+	m	(FF)Lnet/minecraft/unmapped/C_9856888;	m_7441866	remap	
+		p	1		u	
+		p	2		v	
 	m	(Lnet/minecraft/unmapped/C_9856888;FF)V	<init>	<init>	
 		p	1		p_1	
 		p	2		p_2	

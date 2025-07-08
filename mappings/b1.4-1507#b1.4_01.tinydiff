@@ -4,10 +4,10 @@ c	net/minecraft/unmapped/C_3466301
 		p	1		p_1	
 		p	2		p_2	
 c	net/minecraft/unmapped/C_3635204
-	m	(Z)V	m_3405751	m_3405751	
+	m	(Z)V	m_3405751	setTicking	
 		p	1		p_1	
-	m	(Z)Lnet/minecraft/unmapped/C_3635204;	m_3405751		m_3405751
-		p	1			p_1
+	m	(Z)Lnet/minecraft/unmapped/C_3635204;	m_3405751		setTicking
+		p	1			ticksRandomly
 c	net/minecraft/unmapped/C_4766485
 	m	(Ljava/lang/String;IIII)V	m_9605624	m_9605624	
 		p	1		p_1	
@@ -53,9 +53,10 @@ c	net/minecraft/unmapped/C_3296923	net/minecraft/unmapped/C_3296923
 	m	(F)V	m_8288828	m_8288828	
 		p	1		p_1	
 	m	()Z	m_6957805	m_6957805	
-c	net/minecraft/unmapped/C_3290276		net/minecraft/unmapped/C_3290276
-	f	[B	f_4145846		f_4145846
+c	net/minecraft/unmapped/C_3290276		net/minecraft/util/NoneNullTiles
+	c		A class used in chunk loading to prevent null entries in block data
+	f	[B	f_4145846		tiles
 	m	()V	<init>		<init>
-	m	([B)V	m_3037404		m_3037404
-		p	0			p_0
+	m	([B)V	m_3037404		replace
+		p	0			blocks
 	m	()V	<clinit>		<clinit>

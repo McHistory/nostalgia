@@ -26,12 +26,12 @@ c	net/minecraft/unmapped/C_0974371
 	m	(I)I	m_6894859		m_6894859
 		p	1			p_1
 c	net/minecraft/unmapped/C_1013763
-	m	()I	m_4601038	m_4601038	
-c	net/minecraft/unmapped/C_1196485	net/minecraft/unmapped/C_1196485	
-	f	[Lnet/minecraft/unmapped/C_2750078;	f_6183045	f_6183045	
-	f	I	f_0938009	f_0938009	
-	f	I	f_9569100	f_9569100	
-	f	I	f_4876613	f_4876613	
+	m	()I	m_4601038	getDeathLoot	
+c	net/minecraft/unmapped/C_1196485	net/minecraft/world/level/tile/entity/FurnaceTileEntity	
+	f	[Lnet/minecraft/unmapped/C_2750078;	f_6183045	items	
+	f	I	f_0938009	litTime	
+	f	I	f_9569100	litDuration	
+	f	I	f_4876613	tickCount	
 	m	()V	<init>	<init>	
 	m	()I	m_5322905	m_5322905	
 	m	(I)Lnet/minecraft/unmapped/C_2750078;	m_8258340	m_8258340	
@@ -69,7 +69,7 @@ c	net/minecraft/unmapped/C_2074023
 	m	()V	m_0895893	m_0895893	
 c	net/minecraft/unmapped/C_2923961
 	m	()I	m_4601038	m_4601038	
-c	net/minecraft/unmapped/C_3080471	net/minecraft/unmapped/C_3080471	
+c	net/minecraft/unmapped/C_3080471	net/minecraft/world/level/tile/GravelTile	
 	m	(II)V	<init>	<init>	
 		p	1		p_1	
 		p	2		p_2	
@@ -77,12 +77,12 @@ c	net/minecraft/unmapped/C_3080471	net/minecraft/unmapped/C_3080471
 		p	1		p_1	
 		p	2		p_2	
 c	net/minecraft/unmapped/C_3635204
-	f	Lnet/minecraft/unmapped/C_3635204;	f_1809312	f_1809312	
+	f	Lnet/minecraft/unmapped/C_3635204;	f_1809312	FURNACE	
 	f	Lnet/minecraft/unmapped/C_3635204;	f_6179977	f_6179977	
-	m	(ILjava/util/Random;)I	m_6894859	m_6894859	
-		p	1		p_1	
-		p	2		p_2	
-	m	(I)I	m_6894859		m_6894859
+	m	(ILjava/util/Random;)I	m_6894859	getResource	
+		p	1		meta	
+		p	2		random	
+	m	(I)I	m_6894859		getResource
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_3906126;FFF)Z	m_0371742		m_0371742
 		p	1			p_1
@@ -105,8 +105,8 @@ c	net/minecraft/unmapped/C_3724278
 c	net/minecraft/unmapped/C_3906126
 	f	Ljava/util/List;	f_4235072	f_4235072	
 c	net/minecraft/unmapped/C_4030632
-	f	Lnet/minecraft/unmapped/C_4030632;	f_2523624	f_2523624	
-	f	Lnet/minecraft/unmapped/C_4030632;	f_4183746	f_4183746	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_2523624	FLINT_AND_STEEL	
+	f	Lnet/minecraft/unmapped/C_4030632;	f_4183746	FLINT	
 	f	Lnet/minecraft/unmapped/C_4030632;	f_6618759	f_6618759	
 	m	(Lnet/minecraft/unmapped/C_3906126;FFF)Z	m_7988639		m_7988639
 		p	1			p_1
@@ -114,10 +114,10 @@ c	net/minecraft/unmapped/C_4030632
 		p	3			p_3
 		p	4			p_4
 c	net/minecraft/unmapped/C_5009044
-	m	(Lnet/minecraft/unmapped/C_3635204;)Z	m_8092094	m_8092094	
-		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_1196485;)V	m_4396911	m_4396911	
-		p	1		p_1	
+	m	(Lnet/minecraft/unmapped/C_3635204;)Z	m_8092094	canDestroy	
+		p	1		tile	
+	m	(Lnet/minecraft/unmapped/C_1196485;)V	m_4396911	openFurnace	
+		p	1		furnace	
 c	net/minecraft/unmapped/C_6151866
 	m	(ILjava/util/Random;)I	m_6894859	m_6894859	
 		p	1		p_1	
@@ -129,11 +129,11 @@ c	net/minecraft/unmapped/C_6151866
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
-c	net/minecraft/unmapped/C_8125832	net/minecraft/unmapped/C_8125832	
-	f	Z	f_1480746	f_1480746	
+c	net/minecraft/unmapped/C_8125832	net/minecraft/world/level/tile/FurnaceTile	
+	f	Z	f_1480746	isLit	
 	m	(IZ)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
+		p	1		id	
+		p	2		lit	
 	m	(I)I	m_9597800	m_9597800	
 		p	1		p_1	
 	m	(Lnet/minecraft/unmapped/C_3906126;IIILnet/minecraft/unmapped/C_5009044;)Z	m_2543653	m_2543653	
@@ -187,8 +187,8 @@ c	net/minecraft/unmapped/C_9331929
 		p	2		p_2	
 	m	(I)I	m_6894859		m_6894859
 		p	1			p_1
-c	net/minecraft/unmapped/C_0619399	net/minecraft/unmapped/C_0619399	
-	f	Lnet/minecraft/unmapped/C_1196485;	f_0624650	f_0624650	
+c	net/minecraft/unmapped/C_0619399	net/minecraft/client/gui/screens/inventory/FurnaceScreen	
+	f	Lnet/minecraft/unmapped/C_1196485;	f_0624650	furnace	
 	m	(Lnet/minecraft/unmapped/C_4286596;Lnet/minecraft/unmapped/C_1196485;)V	<init>	<init>	
 		p	1		p_1	
 		p	2		p_2	

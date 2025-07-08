@@ -2,7 +2,7 @@ tiny	2	0
 c	net/minecraft/unmapped/C_0070166
 	m	()Z	m_2288809	m_2288809	
 c	net/minecraft/unmapped/C_3906126
-	m	(Ljava/io/File;)Lnet/minecraft/unmapped/C_9484672;	m_7447312	m_7447312	
+	m	(Ljava/io/File;)Lnet/minecraft/unmapped/C_9484672;	m_7447312	createLevelSource	
 		p	1		p_1	
 	m	(Ljava/io/File;Ljava/lang/String;JZ)V	<init>		<init>
 		p	1			p_1
@@ -13,13 +13,13 @@ c	net/minecraft/unmapped/C_4078372
 	m	()Z	m_2288809	m_2288809	
 c	net/minecraft/unmapped/C_6755599
 	f	Z	f_6954152	f_6954152	
-	m	(II)Z	m_2487825	m_2487825	
-		p	1		p_1	
-		p	2		p_2	
+	m	(II)Z	m_2487825	isAt	
+		p	1		x	
+		p	2		z	
 c	net/minecraft/unmapped/C_9484672
-	m	()Z	m_2288809	m_2288809	
+	m	()Z	m_2288809	shouldSave	
 c	net/minecraft/isom/IsomPreviewApplet	net/minecraft/isom/IsomPreviewApplet	
-	f	Lnet/minecraft/unmapped/C_5586685;	f_0917068	f_0917068	
+	f	Lnet/minecraft/unmapped/C_5586685;	f_0917068	canvas	
 	m	()V	<init>	<init>	
 	m	()V	start	start	
 	m	()V	stop	stop	
@@ -28,72 +28,72 @@ c	net/minecraft/isom/IsomPreviewApplet$5794965	5794965
 	m	(Lnet/minecraft/unmapped/C_5586685;)V	<init>	<init>	
 		p	1		p_1	
 	m	()V	run	run	
-c	net/minecraft/unmapped/C_2941751	net/minecraft/unmapped/C_2941751	
-	f	Ljava/awt/image/BufferedImage;	f_3349358	f_3349358	
-	f	Lnet/minecraft/unmapped/C_3906126;	f_4671375	f_4671375	
-	f	I	f_2691840	f_2691840	
-	f	I	f_0783700	f_0783700	
-	f	Z	f_8781079	f_8781079	
-	f	Z	f_8388581	f_8388581	
-	f	I	f_3297939	f_3297939	
-	f	Z	f_6255679	f_6255679	
+c	net/minecraft/unmapped/C_2941751	net/minecraft/isom/Zone	
+	f	Ljava/awt/image/BufferedImage;	f_3349358	image	
+	f	Lnet/minecraft/unmapped/C_3906126;	f_4671375	level	
+	f	I	f_2691840	x	
+	f	I	f_0783700	z	
+	f	Z	f_8781079	rendered	
+	f	Z	f_8388581	noContent	
+	f	I	f_3297939	lastVisible	
+	f	Z	f_6255679	addedToRenderQueue	
 	m	(Lnet/minecraft/unmapped/C_3906126;II)V	<init>	<init>	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
-	m	(II)V	m_5903322	m_5903322	
-		p	1		p_1	
-		p	2		p_2	
-	m	(Lnet/minecraft/unmapped/C_3906126;II)V	m_2315191	m_2315191	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-c	net/minecraft/unmapped/C_5586685	net/minecraft/unmapped/C_5586685	
-	f	I	f_5260949	f_5260949	
-	f	I	f_2667138	f_2667138	
-	f	Z	f_8920088	f_8920088	
-	f	Lnet/minecraft/unmapped/C_3906126;	f_5862609	f_5862609	
-	f	Ljava/io/File;	f_5103971	f_5103971	
-	f	Z	f_7243712	f_7243712	
-	f	Ljava/util/List;	f_7806128	f_7806128	
-	f	[[Lnet/minecraft/unmapped/C_2941751;	f_3079561	f_3079561	
-	f	I	f_0474735	f_0474735	
-	f	I	f_9058831	f_9058831	
-	f	I	f_5216979	f_5216979	
-	f	I	f_7667496	f_7667496	
+	m	(II)V	m_5903322	init	
+		p	1		x	
+		p	2		z	
+	m	(Lnet/minecraft/unmapped/C_3906126;II)V	m_2315191	init	
+		p	1		level	
+		p	2		x	
+		p	3		z	
+c	net/minecraft/unmapped/C_5586685	net/minecraft/isom/IsomPreview	
+	f	I	f_5260949	currentRender	
+	f	I	f_2667138	zoom	
+	f	Z	f_8920088	showHelp	
+	f	Lnet/minecraft/unmapped/C_3906126;	f_5862609	level	
+	f	Ljava/io/File;	f_5103971	workDir	
+	f	Z	f_7243712	running	
+	f	Ljava/util/List;	f_7806128	zonesToRender	
+	f	[[Lnet/minecraft/unmapped/C_2941751;	f_3079561	zoneMap	
+	f	I	f_0474735	xCam	
+	f	I	f_9058831	yCam	
+	f	I	f_5216979	xDrag	
+	f	I	f_7667496	yDrag	
 	m	()V	<init>	<init>	
-	m	(Ljava/lang/String;)V	m_1343311	m_1343311	
-		p	1		p_1	
-	m	(I)V	m_1021743	m_1021743	
-		p	1		p_1	
-	m	(II)Lnet/minecraft/unmapped/C_2941751;	m_5520251	m_5520251	
-		p	1		p_1	
-		p	2		p_2	
+	m	(Ljava/lang/String;)V	m_1343311	loadLevel	
+		p	1		levelName	
+	m	(I)V	m_1021743	setBrightness	
+		p	1		time	
+	m	(II)Lnet/minecraft/unmapped/C_2941751;	m_5520251	getZone	
+		p	1		x	
+		p	2		y	
 	m	()V	run	run	
 	m	(Ljava/awt/Graphics;)V	update	update	
 		p	1		p_1	
 	m	(Ljava/awt/Graphics;)V	paint	paint	
 		p	1		p_1	
 	m	(Ljava/awt/event/MouseEvent;)V	mouseDragged	mouseDragged	
-		p	1		p_1	
+		p	1		event	
 	m	(Ljava/awt/event/MouseEvent;)V	mouseMoved	mouseMoved	
-		p	1		p_1	
+		p	1		event	
 	m	(Ljava/awt/event/MouseEvent;)V	mouseClicked	mouseClicked	
-		p	1		p_1	
+		p	1		event	
 	m	(Ljava/awt/event/MouseEvent;)V	mouseEntered	mouseEntered	
-		p	1		p_1	
+		p	1		event	
 	m	(Ljava/awt/event/MouseEvent;)V	mouseExited	mouseExited	
-		p	1		p_1	
+		p	1		event	
 	m	(Ljava/awt/event/MouseEvent;)V	mousePressed	mousePressed	
-		p	1		p_1	
+		p	1		event	
 	m	(Ljava/awt/event/MouseEvent;)V	mouseReleased	mouseReleased	
-		p	1		p_1	
+		p	1		event	
 	m	(Ljava/awt/event/KeyEvent;)V	keyPressed	keyPressed	
-		p	1		p_1	
+		p	1		ke	
 	m	(Ljava/awt/event/KeyEvent;)V	keyReleased	keyReleased	
-		p	1		p_1	
+		p	1		event	
 	m	(Ljava/awt/event/KeyEvent;)V	keyTyped	keyTyped	
-		p	1		p_1	
+		p	1		event	
 	m	()V	m_8414576	m_8414576	
 	m	()V	m_0326037	m_0326037	
 	m	(Lnet/minecraft/unmapped/C_5586685;)Z	m_9173474	m_9173474	
@@ -122,14 +122,14 @@ c	net/minecraft/unmapped/C_5586685$C_4814958	C_4814958
 		p	1		p_1	
 		p	2		p_2	
 	m	()V	<clinit>	<clinit>	
-c	net/minecraft/unmapped/C_6726911	net/minecraft/unmapped/C_6726911	
-	f	[F	f_8948415	f_8948415	
-	f	[I	f_8082555	f_8082555	
-	f	[I	f_5319275	f_5319275	
-	f	[I	f_8747005	f_8747005	
-	f	[I	f_0174030	f_0174030	
-	f	[I	f_4034772	f_4034772	
-	f	[I	f_4809244	f_4809244	
+c	net/minecraft/unmapped/C_6726911	net/minecraft/isom/ZoneRenderer	
+	f	[F	f_8948415	texCols	
+	f	[I	f_8082555	pixels	
+	f	[I	f_5319275	zBuf	
+	f	[I	f_8747005	waterBuf	
+	f	[I	f_0174030	waterBr	
+	f	[I	f_4034772	yBuf	
+	f	[I	f_4809244	textures	
 	m	()V	<init>	<init>	
 	m	(Lnet/minecraft/unmapped/C_2941751;)V	m_4513531	m_4513531	
 		p	1		p_1	

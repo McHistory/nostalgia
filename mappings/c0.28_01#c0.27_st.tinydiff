@@ -38,10 +38,10 @@ c	net/minecraft/unmapped/C_1124552
 c	net/minecraft/unmapped/C_3635204
 	f	Lnet/minecraft/unmapped/C_3635204;	f_9027845	f_9027845	
 	f	Z	f_8002233		f_8002233
-	m	()I	m_5117733	m_5117733	
+	m	()I	m_5117733	getRenderLayer	
 	m	(Lnet/minecraft/unmapped/C_2334550;)V	m_5198489	m_5198489	
 		p	1		p_1	
-	m	(Lcom/mojang/minecraft/level/Level;IIII)Z	m_8199947	m_8199947	
+	m	(Lcom/mojang/minecraft/level/Level;IIII)Z	m_8199947	shouldRenderFace	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
@@ -62,7 +62,7 @@ c	net/minecraft/unmapped/C_3635204
 		p	4			p_4
 		p	5			p_5
 		p	6			p_6
-	m	(Lcom/mojang/minecraft/level/Level;IIIII)Z	m_8199947		m_8199947
+	m	(Lcom/mojang/minecraft/level/Level;IIIII)Z	m_8199947		shouldRenderFace
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -124,15 +124,15 @@ c	net/minecraft/unmapped/C_4558465
 		p	5			p_5
 c	net/minecraft/unmapped/C_6151866
 	m	()I	m_3282602		m_3282602
-c	net/minecraft/unmapped/C_7185906	net/minecraft/unmapped/C_7185906	
-	f	[F	f_1103932	f_1103932	
+c	net/minecraft/unmapped/C_7185906	net/minecraft/util/Mth	
+	f	[F	f_1103932	SIN	
 	m	()V	<init>	<init>	
-	m	(F)F	m_1654586	m_1654586	
-		p	0		p_0	
-	m	(F)F	m_7301336	m_7301336	
-		p	0		p_0	
-	m	(F)F	m_0270358	m_0270358	
-		p	0		p_0	
+	m	(F)F	m_1654586	sin	
+		p	0		value	
+	m	(F)F	m_7301336	cos	
+		p	0		vlaue	
+	m	(F)F	m_0270358	sqrt	
+		p	0		value	
 	m	()V	<clinit>	<clinit>	
 c	net/minecraft/unmapped/C_7318150
 	m	(Lcom/mojang/minecraft/level/Level;III)V	m_4860267		m_4860267
@@ -168,8 +168,8 @@ c	net/minecraft/unmapped/C_9331929
 		p	5		p_5	
 	m	()I	m_3282602		m_3282602
 c	net/minecraft/unmapped/C_1044273
-	f	Ljava/util/List;	f_5607847	f_5607847	
-	f	Ljava/util/Set;	f_5607847		f_5607847
+	f	Ljava/util/List;	f_5607847	dirtyChunks	
+	f	Ljava/util/Set;	f_5607847		dirtyChunks
 	m	(F)V	m_3907130		m_3907130
 		p	1			p_1
 	m	(III)V	m_1486881		m_1486881
@@ -192,16 +192,16 @@ c	net/minecraft/unmapped/C_4824661
 	m	(F)V	m_6289901		m_6289901
 		p	1			p_1
 c	net/minecraft/unmapped/C_5283200
-	f	Z	f_9266175	f_9266175	
+	f	Z	f_9266175	dirty	
 	f	Z	f_7818563		f_7818563
-	m	()V	m_0330444	m_0330444	
+	m	()V	m_0330444	rebuild	
 	m	([III)I	m_8783499	m_8783499	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
-	m	(Lnet/minecraft/unmapped/C_0669153;)V	m_5092852	m_5092852	
+	m	(Lnet/minecraft/unmapped/C_0669153;)V	m_5092852	cull	
 		p	1		p_1	
-	m	(Z)V	m_0330444		m_0330444
+	m	(Z)V	m_0330444		rebuild
 		p	1			p_1
 	m	([IIIFFF)I	m_8783499		m_8783499
 		p	1			p_1
@@ -210,9 +210,9 @@ c	net/minecraft/unmapped/C_5283200
 		p	4			p_4
 		p	5			p_5
 		p	6			p_6
-	m	(Lnet/minecraft/unmapped/C_8199124;)V	m_5092852		m_5092852
+	m	(Lnet/minecraft/unmapped/C_8199124;)V	m_5092852		cull
 		p	1			p_1
-c	net/minecraft/unmapped/C_7542541	net/minecraft/unmapped/C_7542541	
+c	net/minecraft/unmapped/C_7542541	net/minecraft/client/gui/screens/inventory/AbstractContainerScreen	
 	m	()V	<init>	<init>	
 	m	(III)V	m_9746540	m_9746540	
 		p	1		p_1	
@@ -224,7 +224,7 @@ c	net/minecraft/unmapped/C_7542541	net/minecraft/unmapped/C_7542541
 	m	(II)I	m_8154932	m_8154932	
 		p	1		p_1	
 		p	2		p_2	
-c	net/minecraft/unmapped/C_7564962	net/minecraft/unmapped/C_7564962	
+c	net/minecraft/unmapped/C_7564962	net/minecraft/client/gamemode/CreativeMode	
 	m	()Z	m_4103218	m_4103218	
 	m	()V	m_1894352	m_1894352	
 	m	(Lcom/mojang/minecraft/level/Level;)V	m_9151419	m_9151419	

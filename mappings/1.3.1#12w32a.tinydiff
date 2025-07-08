@@ -13,7 +13,7 @@ c	net/minecraft/unmapped/C_0019534
 		p	1			p_1
 	m	()Lnet/minecraft/unmapped/C_0324512;	m_6649474		m_6649474
 c	net/minecraft/unmapped/C_0258789
-	f	Lnet/minecraft/unmapped/C_2750078;	f_0795879	f_0795879	
+	f	Lnet/minecraft/unmapped/C_2750078;	f_0795879	bow	
 	m	()Lnet/minecraft/unmapped/C_2750078;	m_2674028	m_2674028	
 	m	()V	<clinit>	<clinit>	
 	m	(I)V	m_2306221	m_2306221	
@@ -111,7 +111,7 @@ c	net/minecraft/unmapped/C_2923961
 c	net/minecraft/unmapped/C_3157620
 	f	J	f_5724520		f_5724520
 	m	(J)V	<init>	<init>	
-		p	1		p_1	
+		p	1		time	
 	m	(JJ)V	<init>		<init>
 		p	1			p_1
 		p	3			p_3
@@ -131,27 +131,27 @@ c	net/minecraft/unmapped/C_3635204
 		p	2		p_2	
 		p	4		p_4	
 c	net/minecraft/unmapped/C_3906126
-	m	(Lnet/minecraft/unmapped/C_6385858;DDDF)Lnet/minecraft/unmapped/C_3632207;	m_0566124	m_0566124	
-		p	1		p_1	
-		p	2		p_2	
-		p	4		p_4	
-		p	6		p_6	
-		p	8		p_8	
-	m	(Lnet/minecraft/unmapped/C_6385858;DDDFZ)Lnet/minecraft/unmapped/C_3632207;	m_3296431	m_3296431	
-		p	1		p_1	
-		p	2		p_2	
-		p	4		p_4	
-		p	6		p_6	
-		p	8		p_8	
-		p	9		p_9	
-	m	(Lnet/minecraft/unmapped/C_6385858;DDDFZ)Lnet/minecraft/unmapped/C_3632207;	m_0566124		m_0566124
+	m	(Lnet/minecraft/unmapped/C_6385858;DDDF)Lnet/minecraft/unmapped/C_3632207;	m_0566124	explode	
+		p	1		entity	
+		p	2		x	
+		p	4		y	
+		p	6		z	
+		p	8		radius	
+	m	(Lnet/minecraft/unmapped/C_6385858;DDDFZ)Lnet/minecraft/unmapped/C_3632207;	m_3296431	explode	
+		p	1		entity	
+		p	2		x	
+		p	4		y	
+		p	6		z	
+		p	8		radius	
+		p	9		fire	
+	m	(Lnet/minecraft/unmapped/C_6385858;DDDFZ)Lnet/minecraft/unmapped/C_3632207;	m_0566124		explode
 		p	1			p_1
 		p	2			p_2
 		p	4			p_4
 		p	6			p_6
 		p	8			p_8
 		p	9			p_9
-	m	(Lnet/minecraft/unmapped/C_6385858;DDDFZZ)Lnet/minecraft/unmapped/C_3632207;	m_3296431		m_3296431
+	m	(Lnet/minecraft/unmapped/C_6385858;DDDFZZ)Lnet/minecraft/unmapped/C_3632207;	m_3296431		explode
 		p	1			p_1
 		p	2			p_2
 		p	4			p_4
@@ -176,15 +176,15 @@ c	net/minecraft/unmapped/C_4064923
 		p	2			p_2
 c	net/minecraft/unmapped/C_4590573
 	m	(FF)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
+		p	1		g	
+		p	2		yOffset	
 	m	(FFII)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
 c	net/minecraft/unmapped/C_4718187
-	f	I	f_2338118	f_2338118	
+	f	I	f_2338118	damage	
 	m	(Lnet/minecraft/unmapped/C_6385858;)I	m_5253734		m_5253734
 		p	1			p_1
 c	net/minecraft/unmapped/C_4824661
@@ -201,11 +201,11 @@ c	net/minecraft/unmapped/C_4948697
 	m	(Lnet/minecraft/unmapped/C_6385858;)I	m_5253734		m_5253734
 		p	1			p_1
 c	net/minecraft/unmapped/C_5009044
-	f	Z	f_7373843	f_7373843	
-	f	I	f_3906653	f_3906653	
-	m	(Lnet/minecraft/unmapped/C_8215726;)V	m_7291476	m_7291476	
-		p	1		p_1	
-	m	()V	m_2752266	m_2752266	
+	f	Z	f_7373843	swinging	
+	f	I	f_3906653	swingTime	
+	m	(Lnet/minecraft/unmapped/C_8215726;)V	m_7291476	openSign	
+		p	1		sign	
+	m	()V	m_2752266	swing	
 	m	()I	m_7499523	m_7499523	
 	m	(III)Z	m_0733834	m_0733834	
 		p	1		p_1	
@@ -213,7 +213,7 @@ c	net/minecraft/unmapped/C_5009044
 		p	3		p_3	
 	m	(I)I	m_0070787	m_0070787	
 		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_2074023;)V	m_7291476		m_7291476
+	m	(Lnet/minecraft/unmapped/C_2074023;)V	m_7291476		openSign
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_6989019;)V	m_5922122		m_5922122
 		p	1			p_1
@@ -281,8 +281,8 @@ c	net/minecraft/unmapped/C_7366354
 		p	9			p_9
 		p	10			p_10
 c	net/minecraft/unmapped/C_7542541
-	m	()V	m_5630231	m_5630231	
-	m	(II)V	m_5630231		m_5630231
+	m	()V	m_5630231	renderLabels	
+	m	(II)V	m_5630231		renderLabels
 		p	1			p_1
 		p	2			p_2
 c	net/minecraft/unmapped/C_7688744

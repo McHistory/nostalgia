@@ -1,24 +1,24 @@
 tiny	2	0
 c	net/minecraft/client/Minecraft
-	m	()V	m_3000141	m_3000141	
+	m	()V	m_3000141	reloadSound	
 	m	([Ljava/io/File;)V	m_8257492	m_8257492	
 		p	1		p_1	
 c	net/minecraft/server/MinecraftServer
 	m	()J	m_7012193		m_7012193
 c	net/minecraft/unmapped/C_1044273
-	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_5853518;ILnet/minecraft/unmapped/C_2750078;F)V	m_6067428	m_6067428	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_5853518;ILnet/minecraft/unmapped/C_2750078;F)V	m_4049049	m_4049049	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_5853518;IF)V	m_4049049		m_4049049
+	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_5853518;ILnet/minecraft/unmapped/C_2750078;F)V	m_6067428	renderHit	
+		p	1		player	
+		p	2		result	
+		p	3		mode	
+		p	4		item	
+		p	5		a	
+	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_5853518;ILnet/minecraft/unmapped/C_2750078;F)V	m_4049049	renderHitOutline	
+		p	1		player	
+		p	2		result	
+		p	3		mode	
+		p	4		inventoryItem	
+		p	5		a	
+	m	(Lnet/minecraft/unmapped/C_5009044;Lnet/minecraft/unmapped/C_5853518;IF)V	m_4049049		renderHitOutline
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -28,7 +28,7 @@ c	net/minecraft/unmapped/C_3385278
 	m	(Lnet/minecraft/unmapped/C_0561170;Lnet/minecraft/unmapped/C_6618055;)V	m_9577918	m_9577918	
 		p	1		p_1	
 		p	2		p_2	
-	m	(Lnet/minecraft/unmapped/C_0561170;Lnet/minecraft/unmapped/C_4882708;)V	m_6177175	m_6177175	
+	m	(Lnet/minecraft/unmapped/C_0561170;Lnet/minecraft/unmapped/C_4882708;)V	m_6177175	loadTexture	
 		p	1		p_1	
 		p	2		p_2	
 	m	(Lnet/minecraft/unmapped/C_3779718;Ljava/lang/String;)Lnet/minecraft/unmapped/C_0561170;	m_1120529	m_1120529	
@@ -42,7 +42,7 @@ c	net/minecraft/unmapped/C_3385278
 	m	(Lnet/minecraft/unmapped/C_0561170;Lnet/minecraft/unmapped/C_6618055;)Z	m_9577918		m_9577918
 		p	1			p_1
 		p	2			p_2
-	m	(Lnet/minecraft/unmapped/C_0561170;Lnet/minecraft/unmapped/C_4882708;)Z	m_6177175		m_6177175
+	m	(Lnet/minecraft/unmapped/C_0561170;Lnet/minecraft/unmapped/C_4882708;)Z	m_6177175		loadTexture
 		p	1			p_1
 		p	2			p_2
 	m	(Ljava/lang/String;Lnet/minecraft/unmapped/C_3779718;)Lnet/minecraft/unmapped/C_0561170;	m_1120529		m_1120529
@@ -51,8 +51,8 @@ c	net/minecraft/unmapped/C_3385278
 c	net/minecraft/unmapped/C_3624347
 	f	[Ljava/lang/String;	f_4840163		f_4840163
 	f	Ljava/io/File;	f_3233898		f_3233898
-	m	(Lnet/minecraft/unmapped/C_7688744;)V	m_5681459	m_5681459	
-		p	1		p_1	
+	m	(Lnet/minecraft/unmapped/C_7688744;)V	m_5681459	init	
+		p	1		options	
 	m	(Lnet/minecraft/unmapped/C_6577431;)V	<init>	<init>	
 		p	1		p_1	
 	m	(Lnet/minecraft/unmapped/C_6577431;Lnet/minecraft/unmapped/C_7688744;Ljava/io/File;)V	<init>		<init>
@@ -66,9 +66,9 @@ c	net/minecraft/unmapped/C_3624347
 		p	1			p_1
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_4560329
-	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_0488196;	m_4373192	m_4373192	
+	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_0488196;	m_4373192	add	
 		p	1		p_1	
-	m	(Ljava/lang/String;)V	m_4373192		m_4373192
+	m	(Ljava/lang/String;)V	m_4373192		add
 		p	1			p_1
 c	net/minecraft/unmapped/C_3133904
 	m	(Ljava/lang/String;Lnet/minecraft/unmapped/C_2225350;)V	<init>	<init>	

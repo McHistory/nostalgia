@@ -86,14 +86,14 @@ c	net/minecraft/unmapped/C_3624347
 		p	1			p_1
 c	net/minecraft/unmapped/C_3635204
 	m	()I	m_8742290	m_8742290	
-	m	(Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_6707278;)I	m_4387507	m_4387507	
+	m	(Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_6707278;)I	m_4387507	getFoliageColor	
 		p	1		p_1	
 		p	2		p_2	
 	m	(Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_6707278;I)I	m_7968533	m_7968533	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
-	m	(Lnet/minecraft/unmapped/C_2441996;)I	m_8501302	m_8501302	
+	m	(Lnet/minecraft/unmapped/C_2441996;)I	m_8501302	getColor	
 		p	1		p_1	
 c	net/minecraft/unmapped/C_3655018
 	m	(I)V	<init>	<init>	
@@ -118,7 +118,7 @@ c	net/minecraft/unmapped/C_3906126
 		p	3		p_3	
 		p	4		p_4	
 		p	5		p_5	
-	m	(Lnet/minecraft/unmapped/C_5009044;DDDLnet/minecraft/unmapped/C_7721249;FF)V	m_4172995	m_4172995	
+	m	(Lnet/minecraft/unmapped/C_5009044;DDDLnet/minecraft/unmapped/C_7721249;FF)V	m_4172995	playSound	
 		p	1		p_1	
 		p	2		p_2	
 		p	4		p_4	
@@ -133,7 +133,7 @@ c	net/minecraft/unmapped/C_3906126
 		p	4			p_4
 		p	5			p_5
 		p	6			p_6
-	m	(Lnet/minecraft/unmapped/C_5009044;DDDLnet/minecraft/unmapped/C_7721249;Lnet/minecraft/unmapped/C_2787601;FF)V	m_4172995		m_4172995
+	m	(Lnet/minecraft/unmapped/C_5009044;DDDLnet/minecraft/unmapped/C_7721249;Lnet/minecraft/unmapped/C_2787601;FF)V	m_4172995		playSound
 		p	1			p_1
 		p	2			p_2
 		p	4			p_4
@@ -152,7 +152,7 @@ c	net/minecraft/unmapped/C_3906126
 		p	10			p_10
 		p	11			p_11
 c	net/minecraft/unmapped/C_4030632
-	m	(Lnet/minecraft/unmapped/C_2750078;I)I	m_6327257	m_6327257	
+	m	(Lnet/minecraft/unmapped/C_2750078;I)I	m_6327257	getItemColor	
 		p	1		p_1	
 		p	2		p_2	
 c	net/minecraft/unmapped/C_4558465
@@ -161,15 +161,15 @@ c	net/minecraft/unmapped/C_4558465
 		p	2		p_2	
 		p	3		p_3	
 c	net/minecraft/unmapped/C_4636105
-	f	Lnet/minecraft/unmapped/C_4636105;	f_5381638	f_5381638	
-	f	Lnet/minecraft/unmapped/C_4636105;	f_5842443	f_5842443	
-	f	Lnet/minecraft/unmapped/C_4636105;	f_2236173	f_2236173	
-	f	Lnet/minecraft/unmapped/C_4636105;	f_0359476	f_0359476	
-	f	Lnet/minecraft/unmapped/C_4636105;	f_8243635	f_8243635	
-	f	Lnet/minecraft/unmapped/C_4636105;	f_0467620	f_0467620	
-	f	I	f_1895912	f_1895912	
-	f	I	f_3675268	f_3675268	
-	f	Lnet/minecraft/unmapped/C_4636105;	f_6847613	f_6847613	
+	f	Lnet/minecraft/unmapped/C_4636105;	f_5381638	SWAPLAND	
+	f	Lnet/minecraft/unmapped/C_4636105;	f_5842443	FOREST	
+	f	Lnet/minecraft/unmapped/C_4636105;	f_2236173	TAIGA	
+	f	Lnet/minecraft/unmapped/C_4636105;	f_0359476	DESERT	
+	f	Lnet/minecraft/unmapped/C_4636105;	f_8243635	PLAINS	
+	f	Lnet/minecraft/unmapped/C_4636105;	f_0467620	HELL	
+	f	I	f_1895912	color	
+	f	I	f_3675268	leafColor	
+	f	Lnet/minecraft/unmapped/C_4636105;	f_6847613	SKY	
 	f	[Lnet/minecraft/unmapped/C_4636105;	f_7328142	f_7328142	
 	f	Lnet/minecraft/unmapped/C_4636105;	f_7062400	f_7062400	
 	f	Lnet/minecraft/unmapped/C_4636105;	f_0504497	f_0504497	
@@ -229,13 +229,13 @@ c	net/minecraft/unmapped/C_4636105
 	f	F	f_0908540		f_0908540
 	f	F	f_2149042		f_2149042
 	f	Ljava/lang/String;	f_7626140		f_7626140
-	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_4636105;	m_7713250	m_7713250	
-		p	1		p_1	
-	m	(I)Lnet/minecraft/unmapped/C_4636105;	m_6305092	m_6305092	
-		p	1		p_1	
-	m	(I)Lnet/minecraft/unmapped/C_4636105;	m_1454200	m_1454200	
-		p	1		p_1	
-	m	()Lnet/minecraft/unmapped/C_4636105;	m_6267136	m_6267136	
+	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_4636105;	m_7713250	setName	
+		p	1		name	
+	m	(I)Lnet/minecraft/unmapped/C_4636105;	m_6305092	setLeafColor	
+		p	1		leafColor	
+	m	(I)Lnet/minecraft/unmapped/C_4636105;	m_1454200	setColor	
+		p	1		color	
+	m	()Lnet/minecraft/unmapped/C_4636105;	m_6267136	setNoRain	
 	m	(I)V	<init>	<init>	
 		p	1		p_1	
 	m	(FF)Lnet/minecraft/unmapped/C_4636105;	m_0678750	m_0678750	

@@ -11,7 +11,7 @@ c	net/minecraft/unmapped/C_0559439
 		p	4			p_4
 		p	5			p_5
 c	net/minecraft/unmapped/C_1013763
-	m	(FFF)Z	m_6814594	m_6814594	
+	m	(FFF)Z	m_6814594	canSpawn	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
@@ -47,35 +47,35 @@ c	net/minecraft/unmapped/C_3419581
 c	net/minecraft/unmapped/C_3688914
 	m	()Ljava/lang/String;	m_1061793		m_1061793
 c	net/minecraft/unmapped/C_3906126
-	f	Z	f_4655699	f_4655699	
-	m	(III)I	m_0091796	m_0091796	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-	m	(IIIZ)I	m_0113274	m_0113274	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-	m	(III)Z	m_5196840	m_5196840	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-	m	(Lnet/minecraft/unmapped/C_1414550;)Z	m_2023409	m_2023409	
-		p	1		p_1	
-	m	()Z	m_7835334	m_7835334	
-	m	(Ljava/lang/Class;)I	m_2641441	m_2641441	
-		p	1		p_1	
+	f	Z	f_4655699	isNew	
+	m	(III)I	m_0091796	getLightLevel	
+		p	1		x	
+		p	2		y	
+		p	3		z	
+	m	(IIIZ)I	m_0113274	getRawBrightness	
+		p	1		x	
+		p	2		y	
+		p	3		z	
+		p	4		combineNeighbours	
+	m	(III)Z	m_5196840	isSkyLit	
+		p	1		x	
+		p	2		y	
+		p	3		z	
+	m	(Lnet/minecraft/unmapped/C_1414550;)Z	m_2023409	isUnobstructed	
+		p	1		aabb	
+	m	()Z	m_7835334	updateLights	
+	m	(Ljava/lang/Class;)I	m_2641441	countInstanceOf	
+		p	1		entityClass	
 	m	()I	m_3113518	m_3113518	
 	m	()I	m_5227310	m_5227310	
-	m	(III)I	m_0113274		m_0113274
+	m	(III)I	m_0113274		getRawBrightness
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
-	m	()V	m_7835334		m_7835334
+	m	()V	m_7835334		updateLights
 c	net/minecraft/unmapped/C_4078372
-	f	Lnet/minecraft/unmapped/C_6205974;	f_6330805	f_6330805	
-	f	Lnet/minecraft/unmapped/C_6205974;	f_4543428	f_4543428	
+	f	Lnet/minecraft/unmapped/C_6205974;	f_6330805	perlinNoise2	
+	f	Lnet/minecraft/unmapped/C_6205974;	f_4543428	perlinNoise3	
 c	net/minecraft/unmapped/C_4718187
 	m	(FFF)Z	m_6814594	m_6814594	
 		p	1		p_1	
@@ -85,25 +85,25 @@ c	net/minecraft/unmapped/C_4718187
 c	net/minecraft/unmapped/C_5009044
 	m	()V	m_8944389		m_8944389
 	m	()Ljava/lang/String;	m_1061793		m_1061793
-c	net/minecraft/unmapped/C_5102005	net/minecraft/unmapped/C_5102005	
-	f	Ljava/util/Map;	f_6328043	f_6328043	
-	f	Ljava/util/Map;	f_2987921	f_2987921	
+c	net/minecraft/unmapped/C_5102005	net/minecraft/world/entity/EntityIO	
+	f	Ljava/util/Map;	f_6328043	idClassMap	
+	f	Ljava/util/Map;	f_2987921	classIdMap	
 	m	()V	<init>	<init>	
-	m	(Lnet/minecraft/unmapped/C_2800860;Lnet/minecraft/unmapped/C_3906126;)Lnet/minecraft/unmapped/C_6385858;	m_0148320	m_0148320	
-		p	0		p_0	
-		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_6385858;)Ljava/lang/String;	m_6037797	m_6037797	
-		p	0		p_0	
+	m	(Lnet/minecraft/unmapped/C_2800860;Lnet/minecraft/unmapped/C_3906126;)Lnet/minecraft/unmapped/C_6385858;	m_0148320	loadStatic	
+		p	0		tag	
+		p	1		level	
+	m	(Lnet/minecraft/unmapped/C_6385858;)Ljava/lang/String;	m_6037797	getEncodeId	
+		p	0		entity	
 	m	()V	<clinit>	<clinit>	
-	m	(Ljava/lang/Class;Ljava/lang/String;)V	m_3413972	m_3413972	
+	m	(Ljava/lang/Class;Ljava/lang/String;)V	m_3413972	setId	
 		p	0		p_0	
 		p	1		p_1	
 c	net/minecraft/unmapped/C_5584362
 	m	()Ljava/lang/String;	m_1061793		m_1061793
 c	net/minecraft/unmapped/C_6385858
-	f	Z	f_4441447	f_4441447	
-	m	(Lnet/minecraft/unmapped/C_2800860;)Z	m_6188111	m_6188111	
-		p	1		p_1	
+	f	Z	f_4441447	blocksBuilding	
+	m	(Lnet/minecraft/unmapped/C_2800860;)Z	m_6188111	save	
+		p	1		tag	
 	m	()V	m_8944389		m_8944389
 	m	()Ljava/lang/String;	m_1061793		m_1061793
 c	net/minecraft/unmapped/C_6618366
@@ -112,13 +112,13 @@ c	net/minecraft/unmapped/C_6618366
 		p	3		p_3	
 		p	5		p_5	
 c	net/minecraft/unmapped/C_6755599
-	f	[Ljava/util/List;	f_9897581	f_9897581	
+	f	[Ljava/util/List;	f_9897581	entityBlocks	
 	f	Z	f_4980706	f_4980706	
-	m	(Lnet/minecraft/unmapped/C_6385858;)V	m_4542745	m_4542745	
-		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_6385858;I)V	m_3851565	m_3851565	
-		p	1		p_1	
-		p	2		p_2	
+	m	(Lnet/minecraft/unmapped/C_6385858;)V	m_4542745	addEntity	
+		p	1		entity	
+	m	(Lnet/minecraft/unmapped/C_6385858;I)V	m_3851565	removeEntity	
+		p	1		entity	
+		p	2		section	
 	m	(Lnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_1414550;Ljava/util/List;)V	m_8657161	m_8657161	
 		p	1		p_1	
 		p	2		p_2	
@@ -134,7 +134,7 @@ c	net/minecraft/unmapped/C_8958653
 	m	(Lnet/minecraft/unmapped/C_3906126;)V	<init>		<init>
 		p	1			p_1
 	m	()Ljava/lang/String;	m_1061793		m_1061793
-c	net/minecraft/unmapped/C_9377562	net/minecraft/unmapped/C_9377562	
+c	net/minecraft/unmapped/C_9377562	net/minecraft/world/level/MobSpawner	
 	f	I	f_6447542	f_6447542	
 	f	Ljava/lang/Class;	f_6388320	f_6388320	
 	f	[Ljava/lang/Class;	f_6683694	f_6683694	
@@ -142,7 +142,7 @@ c	net/minecraft/unmapped/C_9377562	net/minecraft/unmapped/C_9377562
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
-	m	(Lnet/minecraft/unmapped/C_3906126;)V	m_2453784	m_2453784	
+	m	(Lnet/minecraft/unmapped/C_3906126;)V	m_2453784	tick	
 		p	1		p_1	
 	m	(Lnet/minecraft/unmapped/C_3906126;ILnet/minecraft/unmapped/C_6385858;Lnet/minecraft/unmapped/C_5902900;)I	m_1854971	m_1854971	
 		p	1		p_1	
@@ -150,13 +150,13 @@ c	net/minecraft/unmapped/C_9377562	net/minecraft/unmapped/C_9377562
 		p	3		p_3	
 		p	4		p_4	
 c	net/minecraft/client/Minecraft
-	f	J	f_1285575	f_1285575	
-	m	(Lnet/minecraft/unmapped/C_3906126;)V	m_3501995	m_3501995	
-		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_3906126;Ljava/lang/String;)V	m_5733981	m_5733981	
+	f	J	f_1285575	lastTickTime	
+	m	(Lnet/minecraft/unmapped/C_3906126;)V	m_3501995	setLevel	
+		p	1		level	
+	m	(Lnet/minecraft/unmapped/C_3906126;Ljava/lang/String;)V	m_5733981	setLevel	
 		p	1		p_1	
 		p	2		p_2	
-	m	(Lnet/minecraft/unmapped/C_3906126;)V	m_5733981		m_5733981
+	m	(Lnet/minecraft/unmapped/C_3906126;)V	m_5733981		setLevel
 		p	1			p_1
 c	net/minecraft/unmapped/C_3271339
 	f	Lnet/minecraft/unmapped/C_9377562;	f_9074778	f_9074778	
@@ -164,7 +164,7 @@ c	net/minecraft/unmapped/C_3271339
 c	net/minecraft/unmapped/C_5367636
 	m	()Ljava/lang/String;	m_1061793		m_1061793
 c	net/minecraft/unmapped/C_6698663
-	f	Z	f_3795372	f_3795372	
+	f	Z	f_3795372	done	
 c	net/minecraft/unmapped/C_8905061
 	m	()Ljava/lang/String;	m_1061793		m_1061793
 c	net/minecraft/unmapped/C_5902900	net/minecraft/unmapped/C_5902900	

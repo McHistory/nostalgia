@@ -19,18 +19,18 @@ c	net/minecraft/unmapped/C_0386427
 	m	(Lnet/minecraft/unmapped/C_6544623;)V	m_4774108		m_4774108
 		p	1			p_1
 c	net/minecraft/unmapped/C_1591456
-	f	Ljava/util/ArrayList;	f_2574916	f_2574916	
-	f	Ljava/util/List;	f_2574916		f_2574916
+	f	Ljava/util/ArrayList;	f_2574916	connections	
+	f	Ljava/util/List;	f_2574916		connections
 	m	()V	m_0702903		m_0702903
 c	net/minecraft/unmapped/C_2750078
-	m	(Lnet/minecraft/unmapped/C_1013763;)V	m_8234787	m_8234787	
-		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_1013763;)Z	m_8234787		m_8234787
+	m	(Lnet/minecraft/unmapped/C_1013763;)V	m_8234787	interactEnemy	
+		p	1		enemy	
+	m	(Lnet/minecraft/unmapped/C_1013763;)Z	m_8234787		interactEnemy
 		p	1			p_1
 c	net/minecraft/unmapped/C_3187085
-	f	Ljava/nio/ByteBuffer;	f_5459073	f_5459073	
-	f	[B	f_1076717	f_1076717	
-	f	Ljava/nio/IntBuffer;	f_5459073		f_5459073
+	f	Ljava/nio/ByteBuffer;	f_5459073	pixelsBuffer	
+	f	[B	f_1076717	pixels	
+	f	Ljava/nio/IntBuffer;	f_5459073		pixelsBuffer
 	m	(Ljava/io/File;)Ljava/io/File;	m_3263965		m_3263965
 		p	0			p_0
 	m	([III)V	m_6504393		m_6504393
@@ -50,10 +50,10 @@ c	net/minecraft/unmapped/C_3906126
 		p	8			p_8
 		p	9			p_9
 c	net/minecraft/unmapped/C_4030632
-	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_1013763;)V	m_3129782	m_3129782	
-		p	1		p_1	
-		p	2		p_2	
-	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_1013763;)Z	m_3129782		m_3129782
+	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_1013763;)V	m_3129782	interactEnemy	
+		p	1		item	
+		p	2		entity	
+	m	(Lnet/minecraft/unmapped/C_2750078;Lnet/minecraft/unmapped/C_1013763;)Z	m_3129782		interactEnemy
 		p	1			p_1
 		p	2			p_2
 c	net/minecraft/unmapped/C_4443804
@@ -81,11 +81,11 @@ c	net/minecraft/unmapped/C_7389876
 	f	F	f_4373074		f_4373074
 	f	F	f_3846031		f_3846031
 	m	(DDDFLjava/util/Set;)V	<init>	<init>	
-		p	1		p_1	
-		p	3		p_3	
-		p	5		p_5	
-		p	7		p_7	
-		p	8		p_8	
+		p	1		x	
+		p	3		y	
+		p	5		z	
+		p	7		r	
+		p	8		toBlow	
 	m	(DDDFLjava/util/Set;Lnet/minecraft/unmapped/C_0336319;)V	<init>		<init>
 		p	1			p_1
 		p	3			p_3
@@ -100,7 +100,7 @@ c	net/minecraft/unmapped/C_8752044
 	m	(Lnet/minecraft/unmapped/C_6544623;)V	m_4774108		m_4774108
 		p	1			p_1
 c	net/minecraft/unmapped/C_8817873
-	f	Ljava/util/LinkedList;	f_2418469	f_2418469	
+	f	Ljava/util/LinkedList;	f_2418469	updatesToReset	
 c	net/minecraft/unmapped/C_8817873$C_9768735	C_9768735	
 	f	I	f_8733659	f_8733659	
 	f	I	f_5779150	f_5779150	

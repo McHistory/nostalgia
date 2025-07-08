@@ -5,29 +5,29 @@ c	net/minecraft/client/Minecraft
 	f	J	f_0577313		f_0577313
 	f	I	f_4107669		f_4107669
 	f	Ljava/lang/String;	f_9359828		f_9359828
-	m	()V	m_6182440	m_6182440	
+	m	()V	m_6182440	toggleDimension	
 	m	()V	m_9355110		m_9355110
 	m	(I)V	m_9285267		m_9285267
 		p	1			p_1
-	m	(I)V	m_6182440		m_6182440
+	m	(I)V	m_6182440		toggleDimension
 		p	1			p_1
 c	net/minecraft/unmapped/C_0019534
-	m	(Lnet/minecraft/unmapped/C_0324512;)V	m_7438796	m_7438796	
-		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_0324512;I)V	m_7438796		m_7438796
+	m	(Lnet/minecraft/unmapped/C_0324512;)V	m_7438796	changeDimension	
+		p	1		player	
+	m	(Lnet/minecraft/unmapped/C_0324512;I)V	m_7438796		changeDimension
 		p	1			p_1
 		p	2			p_2
 c	net/minecraft/unmapped/C_0289174
-	m	(FFFIII)V	m_6806243	m_6806243	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-		p	6		p_6	
+	m	(FFFIII)V	m_6806243	addBox	
+		p	1		x0	
+		p	2		y0	
+		p	3		z0	
+		p	4		w	
+		p	5		h	
+		p	6		d	
 	m	(Lnet/minecraft/unmapped/C_0289174;)V	m_3460494	m_3460494	
 		p	1		p_1	
-	m	(FFFIII)Lnet/minecraft/unmapped/C_0289174;	m_6806243		m_6806243
+	m	(FFFIII)Lnet/minecraft/unmapped/C_0289174;	m_6806243		addBox
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -72,7 +72,7 @@ c	net/minecraft/unmapped/C_1207477
 c	net/minecraft/unmapped/C_1415320
 	m	()Z	m_4250795		m_4250795
 c	net/minecraft/unmapped/C_1893966
-	m	(Lnet/minecraft/unmapped/C_2339776;IF)Z	m_5415337	m_5415337	
+	m	(Lnet/minecraft/unmapped/C_2339776;IF)Z	m_5415337	prepareArmor	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
@@ -80,7 +80,7 @@ c	net/minecraft/unmapped/C_1893966
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
-	m	(Lnet/minecraft/unmapped/C_2339776;IF)I	m_5415337		m_5415337
+	m	(Lnet/minecraft/unmapped/C_2339776;IF)I	m_5415337		prepareArmor
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -147,7 +147,7 @@ c	net/minecraft/unmapped/C_2800860
 	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_3984704;	m_9198727		m_9198727
 		p	1			p_1
 c	net/minecraft/unmapped/C_3215913
-	m	(Lnet/minecraft/unmapped/C_5371184;IF)Z	m_0156125	m_0156125	
+	m	(Lnet/minecraft/unmapped/C_5371184;IF)Z	m_0156125	prepareArmor	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
@@ -155,7 +155,7 @@ c	net/minecraft/unmapped/C_3215913
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
-	m	(Lnet/minecraft/unmapped/C_5371184;IF)I	m_0156125		m_0156125
+	m	(Lnet/minecraft/unmapped/C_5371184;IF)I	m_0156125		prepareArmor
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -166,11 +166,11 @@ c	net/minecraft/unmapped/C_3215913
 c	net/minecraft/unmapped/C_3239917
 	f	Z	f_5353142		f_5353142
 c	net/minecraft/unmapped/C_3385278
-	m	(II)I	m_5960611	m_5960611	
-		p	1		p_1	
-		p	2		p_2	
+	m	(II)I	m_5960611	smoothBlend	
+		p	1		c0	
+		p	2		c1	
 c	net/minecraft/unmapped/C_3454805
-	m	(Lnet/minecraft/unmapped/C_2923961;IF)Z	m_4505335	m_4505335	
+	m	(Lnet/minecraft/unmapped/C_2923961;IF)Z	m_4505335	prepareArmor	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
@@ -178,7 +178,7 @@ c	net/minecraft/unmapped/C_3454805
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
-	m	(Lnet/minecraft/unmapped/C_2923961;IF)I	m_4505335		m_4505335
+	m	(Lnet/minecraft/unmapped/C_2923961;IF)I	m_4505335		prepareArmor
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -199,7 +199,7 @@ c	net/minecraft/unmapped/C_3466301
 		p	3			p_3
 		p	4			p_4
 c	net/minecraft/unmapped/C_3604011
-	m	(Lnet/minecraft/unmapped/C_5009044;IF)Z	m_4566032	m_4566032	
+	m	(Lnet/minecraft/unmapped/C_5009044;IF)Z	m_4566032	prepareArmor	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
@@ -207,7 +207,7 @@ c	net/minecraft/unmapped/C_3604011
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
-	m	(Lnet/minecraft/unmapped/C_5009044;IF)I	m_4566032		m_4566032
+	m	(Lnet/minecraft/unmapped/C_5009044;IF)I	m_4566032		prepareArmor
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -286,9 +286,9 @@ c	net/minecraft/unmapped/C_5752680
 		p	2			p_2
 		p	3			p_3
 c	net/minecraft/unmapped/C_6211737
-	f	Lnet/minecraft/unmapped/C_0289174;	f_7245088	f_7245088	
-	f	Lnet/minecraft/unmapped/C_0289174;	f_6866443	f_6866443	
-	f	Lnet/minecraft/unmapped/C_0289174;	f_5826972	f_5826972	
+	f	Lnet/minecraft/unmapped/C_0289174;	f_7245088	udder	
+	f	Lnet/minecraft/unmapped/C_0289174;	f_6866443	horn1	
+	f	Lnet/minecraft/unmapped/C_0289174;	f_5826972	horn2	
 	m	(FFFFFF)V	m_5805395	m_5805395	
 		p	1		p_1	
 		p	2		p_2	
@@ -330,24 +330,24 @@ c	net/minecraft/unmapped/C_7185906
 	m	(D)I	m_6743592		m_6743592
 		p	0			p_0
 c	net/minecraft/unmapped/C_7542541
-	m	(F)V	m_3483387	m_3483387	
-		p	1		p_1	
+	m	(F)V	m_3483387	render	
+		p	1		a	
 	m	(IIIII)V	m_1367266	m_1367266	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
 		p	4		p_4	
 		p	5		p_5	
-	m	(FII)V	m_3483387		m_3483387
+	m	(FII)V	m_3483387		render
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 c	net/minecraft/unmapped/C_8075208
-	m	(Lnet/minecraft/unmapped/C_1826831;IF)Z	m_9380779	m_9380779	
+	m	(Lnet/minecraft/unmapped/C_1826831;IF)Z	m_9380779	prepareArmor	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
-	m	(Lnet/minecraft/unmapped/C_1826831;IF)Z	m_3251133	m_3251133	
+	m	(Lnet/minecraft/unmapped/C_1826831;IF)Z	m_3251133	setupColor	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
@@ -359,11 +359,11 @@ c	net/minecraft/unmapped/C_8075208
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
-	m	(Lnet/minecraft/unmapped/C_1826831;IF)I	m_9380779		m_9380779
+	m	(Lnet/minecraft/unmapped/C_1826831;IF)I	m_9380779		prepareArmor
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
-	m	(Lnet/minecraft/unmapped/C_1826831;IF)I	m_3251133		m_3251133
+	m	(Lnet/minecraft/unmapped/C_1826831;IF)I	m_3251133		setupColor
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -376,24 +376,24 @@ c	net/minecraft/unmapped/C_8075208
 		p	2			p_2
 		p	3			p_3
 c	net/minecraft/unmapped/C_8191584
-	m	(Lnet/minecraft/unmapped/C_1013763;IF)Z	m_5098475	m_5098475	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-	m	(Lnet/minecraft/unmapped/C_1013763;IF)Z	m_4491331	m_4491331	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-	m	(Lnet/minecraft/unmapped/C_1013763;IF)I	m_4491331		m_4491331
+	m	(Lnet/minecraft/unmapped/C_1013763;IF)Z	m_5098475	prepareArmor	
+		p	1		entity	
+		p	2		layer	
+		p	3		a	
+	m	(Lnet/minecraft/unmapped/C_1013763;IF)Z	m_4491331	setupColor	
+		p	1		entity	
+		p	2		model	
+		p	3		partialTick	
+	m	(Lnet/minecraft/unmapped/C_1013763;IF)I	m_4491331		setupColor
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
-	m	(Lnet/minecraft/unmapped/C_1013763;IF)I	m_5098475		m_5098475
+	m	(Lnet/minecraft/unmapped/C_1013763;IF)I	m_5098475		prepareArmor
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 c	net/minecraft/unmapped/C_8635993
-	m	(Lnet/minecraft/unmapped/C_8958653;IF)Z	m_4660373	m_4660373	
+	m	(Lnet/minecraft/unmapped/C_8958653;IF)Z	m_4660373	prepareArmor	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
@@ -401,7 +401,7 @@ c	net/minecraft/unmapped/C_8635993
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
-	m	(Lnet/minecraft/unmapped/C_8958653;IF)I	m_4660373		m_4660373
+	m	(Lnet/minecraft/unmapped/C_8958653;IF)I	m_4660373		prepareArmor
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3

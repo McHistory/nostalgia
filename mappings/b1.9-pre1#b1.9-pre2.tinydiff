@@ -1,7 +1,7 @@
 tiny	2	0
 c	net/minecraft/client/Minecraft
 	f	Lnet/minecraft/unmapped/C_0733985;	f_3375048		f_3375048
-	m	()Lnet/minecraft/unmapped/C_4076851;	m_9264421	m_9264421	
+	m	()Lnet/minecraft/unmapped/C_4076851;	m_9264421	getOpenGLCapabilities	
 	m	(Ljava/lang/String;)V	m_0663491		m_0663491
 		p	1			p_1
 c	net/minecraft/unmapped/C_0258789
@@ -11,8 +11,8 @@ c	net/minecraft/unmapped/C_1011144
 c	net/minecraft/unmapped/C_1013763
 	f	Z	f_7709980	f_7709980	
 	f	I	f_7073905		f_7073905
-	m	(Lnet/minecraft/unmapped/C_2750078;)I	m_3422399	m_3422399	
-		p	1		p_1	
+	m	(Lnet/minecraft/unmapped/C_2750078;)I	m_3422399	getItemTexture	
+		p	1		item	
 	m	()I	m_8512153		m_8512153
 	m	()I	m_4971784		m_4971784
 	m	(I)V	m_8195933		m_8195933
@@ -20,7 +20,7 @@ c	net/minecraft/unmapped/C_1013763
 	m	(Lnet/minecraft/unmapped/C_6907923;I)I	m_8106508		m_8106508
 		p	1			p_1
 		p	2			p_2
-	m	(Lnet/minecraft/unmapped/C_2750078;I)I	m_3422399		m_3422399
+	m	(Lnet/minecraft/unmapped/C_2750078;I)I	m_3422399		getItemTexture
 		p	1			p_1
 		p	2			p_2
 	m	()V	m_2499577		m_2499577
@@ -69,10 +69,10 @@ c	net/minecraft/unmapped/C_2750078
 	m	()Ljava/util/List;	m_0351265		m_0351265
 	m	()Z	m_0637442		m_0637442
 c	net/minecraft/unmapped/C_2751481
-	m	(Lnet/minecraft/unmapped/C_1013763;Lnet/minecraft/unmapped/C_2750078;)V	m_7986777	m_7986777	
-		p	1		p_1	
-		p	2		p_2	
-	m	(Lnet/minecraft/unmapped/C_1013763;Lnet/minecraft/unmapped/C_2750078;I)V	m_7986777		m_7986777
+	m	(Lnet/minecraft/unmapped/C_1013763;Lnet/minecraft/unmapped/C_2750078;)V	m_7986777	renderItem	
+		p	1		entity	
+		p	2		item	
+	m	(Lnet/minecraft/unmapped/C_1013763;Lnet/minecraft/unmapped/C_2750078;I)V	m_7986777		renderItem
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -174,12 +174,12 @@ c	net/minecraft/unmapped/C_6385858
 c	net/minecraft/unmapped/C_6481566
 	m	()Lnet/minecraft/unmapped/C_3984704;	m_9394961		m_9394961
 c	net/minecraft/unmapped/C_6755599
-	m	(IIII)V	m_5921093	m_5921093	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-	m	(IIII)Z	m_5921093		m_5921093
+	m	(IIII)V	m_5921093	setData	
+		p	1		x	
+		p	2		y	
+		p	3		z	
+		p	4		meta	
+	m	(IIII)Z	m_5921093		setData
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -196,8 +196,8 @@ c	net/minecraft/unmapped/C_7542541
 		p	4			p_4
 		p	5			p_5
 c	net/minecraft/unmapped/C_7688744
-	f	Z	f_9500478	f_9500478	
-	f	I	f_9500478		f_9500478
+	f	Z	f_9500478	thirdPersonView	
+	f	I	f_9500478		thirdPersonView
 c	net/minecraft/unmapped/C_8135468
 	m	([B)Lnet/minecraft/unmapped/C_2800860;	m_6426323		m_6426323
 		p	0			p_0

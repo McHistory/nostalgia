@@ -1,11 +1,11 @@
 tiny	2	0
 c	net/minecraft/client/Minecraft
-	f	Lnet/minecraft/unmapped/C_3624347;	f_7545235	f_7545235	
-	f	Lnet/minecraft/unmapped/C_5819357;	f_7545235		f_7545235
+	f	Lnet/minecraft/unmapped/C_3624347;	f_7545235	soundEngine	
+	f	Lnet/minecraft/unmapped/C_5819357;	f_7545235		soundEngine
 	m	()Lnet/minecraft/unmapped/C_5819357;	m_7555106		m_7555106
-c	net/minecraft/unmapped/C_0488196	net/minecraft/unmapped/C_0488196	
-	f	Ljava/lang/String;	f_6483398	f_6483398	
-	f	Ljava/net/URL;	f_4253640	f_4253640	
+c	net/minecraft/unmapped/C_0488196	net/minecraft/client/sounds/Sound	
+	f	Ljava/lang/String;	f_6483398	name	
+	f	Ljava/net/URL;	f_4253640	url	
 	f	Ljava/lang/String;	f_2934859	f_2934859	
 	m	()Ljava/lang/String;	m_1157052	m_1157052	
 	m	()Ljava/net/URL;	m_8930599	m_8930599	
@@ -64,7 +64,7 @@ c	net/minecraft/unmapped/C_2621421
 	m	(Lnet/minecraft/unmapped/C_5819357;)V	m_7488412		m_7488412
 		p	1			p_1
 c	net/minecraft/unmapped/C_2782822
-	m	(Ljava/lang/String;DDDFFLnet/minecraft/unmapped/C_2787601;)V	m_2244237	m_2244237	
+	m	(Ljava/lang/String;DDDFFLnet/minecraft/unmapped/C_2787601;)V	m_2244237	playSound	
 		p	1		p_1	
 		p	2		p_2	
 		p	4		p_4	
@@ -81,7 +81,7 @@ c	net/minecraft/unmapped/C_2782822
 		p	9		p_9	
 		p	10		p_10	
 		p	11		p_11	
-	m	(Ljava/lang/String;DDDFF)V	m_2244237		m_2244237
+	m	(Ljava/lang/String;DDDFF)V	m_2244237		playSound
 		p	1			p_1
 		p	2			p_2
 		p	4			p_4
@@ -106,19 +106,19 @@ c	net/minecraft/unmapped/C_3414480
 c	net/minecraft/unmapped/C_3419581
 	m	()Lnet/minecraft/unmapped/C_2787601;	m_9806392	m_9806392	
 c	net/minecraft/unmapped/C_3624347
-	f	Lpaulscode/sound/SoundSystem;	f_2233981	f_2233981	
-	f	Lnet/minecraft/unmapped/C_4560329;	f_0802089	f_0802089	
-	f	Lnet/minecraft/unmapped/C_4560329;	f_9972724	f_9972724	
-	f	Lnet/minecraft/unmapped/C_4560329;	f_5771601	f_5771601	
-	f	I	f_3245940	f_3245940	
-	f	Ljava/util/Random;	f_8579875	f_8579875	
-	f	I	f_8357654	f_8357654	
+	f	Lpaulscode/sound/SoundSystem;	f_2233981	soundSystem	
+	f	Lnet/minecraft/unmapped/C_4560329;	f_0802089	sounds	
+	f	Lnet/minecraft/unmapped/C_4560329;	f_9972724	streamingSounds	
+	f	Lnet/minecraft/unmapped/C_4560329;	f_5771601	songs	
+	f	I	f_3245940	idCounter	
+	f	Ljava/util/Random;	f_8579875	random	
+	f	I	f_8357654	noMusicDelay	
 	f	Ljava/util/Set;	f_9244962	f_9244962	
 	f	Ljava/util/List;	f_9830992	f_9830992	
 	f	[Ljava/lang/String;	f_4840163	f_4840163	
 	f	Ljava/io/File;	f_3233898	f_3233898	
 	f	Lnet/minecraft/unmapped/C_5819357;	f_9616537		f_9616537
-	f	Lnet/minecraft/unmapped/C_3624347$C_8871607;	f_2233981		f_2233981
+	f	Lnet/minecraft/unmapped/C_3624347$C_8871607;	f_2233981		soundSystem
 	f	I	f_7765822		f_7765822
 	f	Ljava/util/Map;	f_2619520		f_2619520
 	f	Ljava/util/Map;	f_5137455		f_5137455
@@ -126,16 +126,16 @@ c	net/minecraft/unmapped/C_3624347
 	f	Lcom/google/common/collect/Multimap;	f_7358116		f_7358116
 	f	Ljava/util/List;	f_5702267		f_5702267
 	f	Ljava/util/Map;	f_9830992		f_9830992
-	m	()V	m_4199622	m_4199622	
-	m	()V	m_5010408	m_5010408	
-	m	(Lnet/minecraft/unmapped/C_1013763;F)V	m_8245980	m_8245980	
-		p	1		p_1	
-		p	2		p_2	
-	m	(Ljava/lang/String;FF)V	m_2080717	m_2080717	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-	m	(Ljava/lang/String;FFF)V	m_5636679	m_5636679	
+	m	()V	m_4199622	updateOptions	
+	m	()V	m_5010408	playMusicTick	
+	m	(Lnet/minecraft/unmapped/C_1013763;F)V	m_8245980	update	
+		p	1		player	
+		p	2		a	
+	m	(Ljava/lang/String;FF)V	m_2080717	playUI	
+		p	1		name	
+		p	2		volume	
+		p	3		pitch	
+	m	(Ljava/lang/String;FFF)V	m_5636679	playStreaming	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
@@ -162,11 +162,11 @@ c	net/minecraft/unmapped/C_3624347
 		p	4		p_4	
 		p	5		p_5	
 	m	()V	m_0535471	m_0535471	
-	m	(Ljava/lang/String;)V	m_9117328	m_9117328	
+	m	(Ljava/lang/String;)V	m_9117328	add	
 		p	1		p_1	
-	m	(Ljava/lang/String;)V	m_2550709	m_2550709	
+	m	(Ljava/lang/String;)V	m_2550709	addStreaming	
 		p	1		p_1	
-	m	(Ljava/lang/String;)V	m_0128226	m_0128226	
+	m	(Ljava/lang/String;)V	m_0128226	addMusic	
 		p	1		p_1	
 	m	(Lnet/minecraft/unmapped/C_6577431;Lnet/minecraft/unmapped/C_7688744;Ljava/io/File;)V	<init>	<init>	
 		p	1		p_1	
@@ -180,7 +180,7 @@ c	net/minecraft/unmapped/C_3624347
 	m	(Lnet/minecraft/unmapped/C_3624347;Lpaulscode/sound/SoundSystem;)Lpaulscode/sound/SoundSystem;	m_6695760	m_6695760	
 		p	0		p_0	
 		p	1		p_1	
-	m	(Ljava/lang/String;FFFFFLnet/minecraft/unmapped/C_2787601;)V	m_6358286	m_6358286	
+	m	(Ljava/lang/String;FFFFFLnet/minecraft/unmapped/C_2787601;)V	m_6358286	play	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
@@ -222,7 +222,7 @@ c	net/minecraft/unmapped/C_3624347
 		p	2			p_2
 	m	(Lnet/minecraft/unmapped/C_0561170;)Ljava/net/URL;	m_8769709		m_8769709
 		p	0			p_0
-	m	(Lnet/minecraft/unmapped/C_5009044;F)V	m_8245980		m_8245980
+	m	(Lnet/minecraft/unmapped/C_5009044;F)V	m_8245980		update
 		p	1			p_1
 		p	2			p_2
 	m	(Lnet/minecraft/unmapped/C_3624347;Lnet/minecraft/unmapped/C_3624347$C_8871607;)Lnet/minecraft/unmapped/C_3624347$C_8871607;	m_4360244		m_4360244
@@ -281,7 +281,7 @@ c	net/minecraft/unmapped/C_3906126
 	m	()V	m_6963936	m_6963936	
 	m	(Lnet/minecraft/unmapped/C_7256819;)Lnet/minecraft/unmapped/C_4753572;	m_7771911	m_7771911	
 		p	1		p_1	
-	m	(DDDLjava/lang/String;FFLnet/minecraft/unmapped/C_2787601;)V	m_4172995	m_4172995	
+	m	(DDDLjava/lang/String;FFLnet/minecraft/unmapped/C_2787601;)V	m_4172995	playSound	
 		p	1		p_1	
 		p	3		p_3	
 		p	5		p_5	
@@ -298,7 +298,7 @@ c	net/minecraft/unmapped/C_3906126
 		p	9		p_9	
 		p	10		p_10	
 		p	11		p_11	
-	m	(DDDLjava/lang/String;FF)V	m_4172995		m_4172995
+	m	(DDDLjava/lang/String;FF)V	m_4172995		playSound
 		p	1			p_1
 		p	3			p_3
 		p	5			p_5
@@ -325,15 +325,15 @@ c	net/minecraft/unmapped/C_4177687
 		p	3			p_3
 		p	4			p_4
 	m	()Lnet/minecraft/unmapped/C_3997653;	m_3345593		m_3345593
-c	net/minecraft/unmapped/C_4560329	net/minecraft/unmapped/C_4560329	
-	f	Ljava/util/Random;	f_5028637	f_5028637	
-	f	Ljava/util/Map;	f_4841160	f_4841160	
-	f	Z	f_9349007	f_9349007	
+c	net/minecraft/unmapped/C_4560329	net/minecraft/client/sounds/SoundRepository	
+	f	Ljava/util/Random;	f_5028637	random	
+	f	Ljava/util/Map;	f_4841160	urls	
+	f	Z	f_9349007	trimDigits	
 	f	Lnet/minecraft/unmapped/C_6577431;	f_0574836	f_0574836	
 	f	Ljava/lang/String;	f_8794285	f_8794285	
-	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_0488196;	m_3102380	m_3102380	
-		p	1		p_1	
-	m	()Lnet/minecraft/unmapped/C_0488196;	m_1653335	m_1653335	
+	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_0488196;	m_3102380	get	
+		p	1		source	
+	m	()Lnet/minecraft/unmapped/C_0488196;	m_1653335	any	
 	m	(Lnet/minecraft/unmapped/C_4560329;)Lnet/minecraft/unmapped/C_6577431;	m_3516925	m_3516925	
 		p	0		p_0	
 	m	(Lnet/minecraft/unmapped/C_6577431;Ljava/lang/String;Z)V	<init>	<init>	
@@ -342,7 +342,7 @@ c	net/minecraft/unmapped/C_4560329	net/minecraft/unmapped/C_4560329
 		p	3		p_3	
 	m	(Ljava/lang/String;)Ljava/net/URL;	m_0175109	m_0175109	
 		p	1		p_1	
-	m	(Ljava/lang/String;)V	m_4373192	m_4373192	
+	m	(Ljava/lang/String;)V	m_4373192	add	
 		p	1		p_1	
 c	net/minecraft/unmapped/C_4560329$5160525	5160525	
 	f	Lnet/minecraft/unmapped/C_4560329;	f_6857229	f_6857229	
@@ -479,7 +479,7 @@ c	net/minecraft/unmapped/C_8817873
 		p	9			p_9
 		p	10			p_10
 c	net/minecraft/unmapped/C_9315908
-	f	Ljava/lang/String;	f_5120209	f_5120209	
+	f	Ljava/lang/String;	f_5120209	allowedChars	
 	m	()V	<clinit>	<clinit>	
 c	net/minecraft/unmapped/C_9614477
 	f	Lnet/minecraft/unmapped/C_3997653;	f_8244878		f_8244878
@@ -506,9 +506,9 @@ c	net/minecraft/unmapped/C_9839783
 	m	(I)Lnet/minecraft/unmapped/C_1160655;	m_3247759		m_3247759
 		p	1			p_1
 c	net/minecraft/unmapped/C_6214100
-	f	Ljava/lang/String;	f_3708498	f_3708498	
+	f	Ljava/lang/String;	f_3708498	acceptableLetters	
 	m	()V	<init>	<init>	
-	m	()Ljava/lang/String;	m_5485211	m_5485211	
+	m	()Ljava/lang/String;	m_5485211	readAcceptableChars	
 c	net/minecraft/unmapped/C_0872029
 	m	(I)Lnet/minecraft/unmapped/C_1160655;	m_3247759		m_3247759
 		p	1			p_1

@@ -4,28 +4,28 @@ c	net/minecraft/unmapped/C_0559439
 c	net/minecraft/unmapped/C_0823907
 	m	()Lnet/minecraft/unmapped/C_3333682;	m_5117733		m_5117733
 c	net/minecraft/unmapped/C_1044273
-	m	(IIID)I	m_9251865	m_9251865	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-	m	(ID)V	m_6291103	m_6291103	
-		p	1		p_1	
-		p	2		p_2	
-	m	(Lnet/minecraft/unmapped/C_1013763;ID)I	m_8682700	m_8682700	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-	m	(Lnet/minecraft/unmapped/C_1013763;Lnet/minecraft/unmapped/C_3333682;D)I	m_8682700		m_8682700
+	m	(IIID)I	m_9251865	renderChunks	
+		p	1		from	
+		p	2		to	
+		p	3		layer	
+		p	4		alpha	
+	m	(ID)V	m_6291103	renderSameAsLast	
+		p	1		layer	
+		p	2		alpha	
+	m	(Lnet/minecraft/unmapped/C_1013763;ID)I	m_8682700	render	
+		p	1		camera	
+		p	2		layer	
+		p	3		alpha	
+	m	(Lnet/minecraft/unmapped/C_1013763;Lnet/minecraft/unmapped/C_3333682;D)I	m_8682700		render
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
-	m	(IILnet/minecraft/unmapped/C_3333682;D)I	m_9251865		m_9251865
+	m	(IILnet/minecraft/unmapped/C_3333682;D)I	m_9251865		renderChunks
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
-	m	(D)V	m_6291103		m_6291103
+	m	(D)V	m_6291103		renderSameAsLast
 		p	1			p_1
 c	net/minecraft/unmapped/C_1124552
 	m	()Lnet/minecraft/unmapped/C_3333682;	m_5117733		m_5117733
@@ -88,7 +88,7 @@ c	net/minecraft/unmapped/C_2581946
 c	net/minecraft/unmapped/C_2624096
 	m	()Lnet/minecraft/unmapped/C_3333682;	m_5117733		m_5117733
 c	net/minecraft/unmapped/C_2689622
-	m	(Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_6707278;I)Z	m_1956077	m_1956077	
+	m	(Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_6707278;I)Z	m_1956077	isPowerSourceAt	
 		p	0		p_0	
 		p	1		p_1	
 		p	2		p_2	
@@ -99,7 +99,7 @@ c	net/minecraft/unmapped/C_2689622
 	m	(Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_6707278;)Z	m_4758098		m_4758098
 		p	0			p_0
 		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_3544601;)Z	m_1956077		m_1956077
+	m	(Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_6707278;Lnet/minecraft/unmapped/C_3544601;)Z	m_1956077		isPowerSourceAt
 		p	0			p_0
 		p	1			p_1
 		p	2			p_2
@@ -127,11 +127,11 @@ c	net/minecraft/unmapped/C_3466301
 c	net/minecraft/unmapped/C_3484604
 	m	()Lnet/minecraft/unmapped/C_3333682;	m_5117733		m_5117733
 c	net/minecraft/unmapped/C_3604011
-	f	Lnet/minecraft/unmapped/C_4590573;	f_4767822	f_4767822	
-	f	Lnet/minecraft/unmapped/C_0946921;	f_4767822		f_4767822
+	f	Lnet/minecraft/unmapped/C_4590573;	f_4767822	humanoidModel	
+	f	Lnet/minecraft/unmapped/C_0946921;	f_4767822		humanoidModel
 c	net/minecraft/unmapped/C_3635204
-	m	()I	m_5117733	m_5117733	
-	m	()Lnet/minecraft/unmapped/C_3333682;	m_5117733		m_5117733
+	m	()I	m_5117733	getRenderLayer	
+	m	()Lnet/minecraft/unmapped/C_3333682;	m_5117733		getRenderLayer
 c	net/minecraft/unmapped/C_3874327
 	m	()Lnet/minecraft/unmapped/C_3333682;	m_5117733		m_5117733
 c	net/minecraft/unmapped/C_3906126
@@ -159,12 +159,12 @@ c	net/minecraft/unmapped/C_4558465
 	m	()I	m_5117733	m_5117733	
 	m	()Lnet/minecraft/unmapped/C_3333682;	m_5117733		m_5117733
 c	net/minecraft/unmapped/C_4590573
-	f	Lnet/minecraft/unmapped/C_0289174;	f_4672960	f_4672960	
-	f	Lnet/minecraft/unmapped/C_0289174;	f_5544243	f_5544243	
-	m	(F)V	m_7349400	m_7349400	
-		p	1		p_1	
-	m	(F)V	m_1503779	m_1503779	
-		p	1		p_1	
+	f	Lnet/minecraft/unmapped/C_0289174;	f_4672960	ear	
+	f	Lnet/minecraft/unmapped/C_0289174;	f_5544243	cloak	
+	m	(F)V	m_7349400	renderEars	
+		p	1		scale	
+	m	(F)V	m_1503779	renderCloak	
+		p	1		scale	
 c	net/minecraft/unmapped/C_5009044
 	m	(I)V	m_4762888	m_4762888	
 		p	1		p_1	
@@ -263,10 +263,10 @@ c	net/minecraft/unmapped/C_7000411
 c	net/minecraft/unmapped/C_7000411$7466132		7466132
 	f	[I	f_7354682		f_7354682
 	m	()V	<clinit>		<clinit>
-c	net/minecraft/unmapped/C_8200820	net/minecraft/unmapped/C_8200820	
+c	net/minecraft/unmapped/C_8200820	net/minecraft/util/Directions	
 	f	[I	f_4654326	f_4654326	
 	f	[I	f_8008394	f_8008394	
-	f	[[I	f_0270044	f_0270044	
+	f	[[I	f_0270044	RELATIVE_DIRECTION_FACING	
 	f	[I	f_9945511	f_9945511	
 	f	[I	f_9413673	f_9413673	
 	f	[I	f_0113083	f_0113083	
@@ -277,7 +277,7 @@ c	net/minecraft/unmapped/C_8200820	net/minecraft/unmapped/C_8200820
 		p	0		p_0	
 		p	2		p_2	
 c	net/minecraft/unmapped/C_8446326
-	f	[[I	f_3336970	f_3336970	
+	f	[[I	f_3336970	HEAD_DIRECTION_OFFSETS	
 	m	()V	<clinit>	<clinit>	
 	m	()Lnet/minecraft/unmapped/C_3333682;	m_5117733		m_5117733
 c	net/minecraft/unmapped/C_4339477

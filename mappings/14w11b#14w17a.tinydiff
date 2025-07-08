@@ -31,8 +31,8 @@ c	net/minecraft/unmapped/C_0351020
 		p	1			p_1
 	m	()Lnet/minecraft/unmapped/C_9264598;	m_3079613		m_3079613
 c	net/minecraft/unmapped/C_0400468
-	f	Ljava/lang/Class;	f_4130956	f_4130956	
-	f	Z	f_3075870	f_3075870	
+	f	Ljava/lang/Class;	f_4130956	tileEntityClass	
+	f	Z	f_3075870	isStanding	
 	m	(Ljava/lang/Class;Z)V	<init>	<init>	
 		p	1		p_1	
 		p	2		p_2	
@@ -117,18 +117,18 @@ c	net/minecraft/unmapped/C_1851525
 	m	()Lnet/minecraft/unmapped/C_9264598;	m_3079613		m_3079613
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_2334550
-	m	(FFF)V	m_9861873	m_9861873	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
+	m	(FFF)V	m_9861873	addOffset	
+		p	1		xo	
+		p	2		yo	
+		p	3		zo	
 c	net/minecraft/unmapped/C_2339776
-	f	[[F	f_5557134	f_5557134	
-	f	Ljava/util/Map;	f_5557134		f_5557134
-	m	()I	m_5883343	m_5883343	
-	m	(I)V	m_5597943	m_5597943	
-		p	1		p_1	
-	m	(Ljava/util/Random;)I	m_9834449	m_9834449	
-		p	0		p_0	
+	f	[[F	f_5557134	COLOR	
+	f	Ljava/util/Map;	f_5557134		COLOR
+	m	()I	m_5883343	getColor	
+	m	(I)V	m_5597943	setColor	
+		p	1		color	
+	m	(Ljava/util/Random;)I	m_9834449	getSheepColor	
+		p	0		random	
 	m	(Lnet/minecraft/unmapped/C_1415320;Lnet/minecraft/unmapped/C_1415320;)I	m_5888654	m_5888654	
 		p	1		p_1	
 		p	2		p_2	
@@ -136,10 +136,10 @@ c	net/minecraft/unmapped/C_2339776
 		p	1		p_1	
 	m	(Lnet/minecraft/unmapped/C_5291991;)[F	m_2262525		m_2262525
 		p	0			p_0
-	m	()Lnet/minecraft/unmapped/C_5291991;	m_5883343		m_5883343
-	m	(Lnet/minecraft/unmapped/C_5291991;)V	m_5597943		m_5597943
+	m	()Lnet/minecraft/unmapped/C_5291991;	m_5883343		getColor
+	m	(Lnet/minecraft/unmapped/C_5291991;)V	m_5597943		setColor
 		p	1			p_1
-	m	(Ljava/util/Random;)Lnet/minecraft/unmapped/C_5291991;	m_9834449		m_9834449
+	m	(Ljava/util/Random;)Lnet/minecraft/unmapped/C_5291991;	m_9834449		getSheepColor
 		p	0			p_0
 	m	(Lnet/minecraft/unmapped/C_1415320;Lnet/minecraft/unmapped/C_1415320;)Lnet/minecraft/unmapped/C_5291991;	m_5888654		m_5888654
 		p	1			p_1
@@ -204,7 +204,7 @@ c	net/minecraft/unmapped/C_3466301
 		p	11		p_11	
 	m	(Lnet/minecraft/unmapped/C_3635204;)Lnet/minecraft/unmapped/C_5307437;	m_4478309	m_4478309	
 		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_5307437;DDDF)V	m_8990384	m_8990384	
+	m	(Lnet/minecraft/unmapped/C_5307437;DDDF)V	m_8990384	tesselateCrossTexture	
 		p	1		p_1	
 		p	2		p_2	
 		p	4		p_4	
@@ -460,7 +460,7 @@ c	net/minecraft/unmapped/C_6368853$0835395		0835395
 	m	(Ljava/lang/Object;)Z	apply		apply
 		p	1			p_1
 c	net/minecraft/unmapped/C_6385858
-	f	Z	f_4811161	f_4811161	
+	f	Z	f_4811161	slide	
 c	net/minecraft/unmapped/C_6391166
 	f	Lnet/minecraft/unmapped/C_7077852;	f_5365766		f_5365766
 	m	(Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_6707278;I)Lnet/minecraft/unmapped/C_2441996;	m_7685061		m_7685061
@@ -667,7 +667,7 @@ c	net/minecraft/unmapped/C_9143244
 c	net/minecraft/unmapped/C_9219192
 	m	()Lnet/minecraft/unmapped/C_7549223;	m_5161398		m_5161398
 c	net/minecraft/unmapped/C_9331929
-	f	[Ljava/lang/String;	f_8326671	f_8326671	
+	f	[Ljava/lang/String;	f_8326671	VARIANTS	
 	f	Lnet/minecraft/unmapped/C_7674520;	f_9774437		f_9774437
 	f	Lnet/minecraft/unmapped/C_2925148;	f_3875311		f_3875311
 	m	(Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_6707278;I)Lnet/minecraft/unmapped/C_2441996;	m_7685061		m_7685061
@@ -775,10 +775,10 @@ c	net/minecraft/unmapped/C_9764049
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_0872029
 	f	Lnet/minecraft/unmapped/C_2925148;	f_9241378		f_9241378
-	m	(I)I	m_9533312	m_9533312	
-		p	0		p_0	
-	m	(I)I	m_9871292	m_9871292	
-		p	0		p_0	
+	m	(I)I	m_9533312	getTileDataForItemAuxValue	
+		p	0		aux	
+	m	(I)I	m_9871292	getItemAuxValueForTileData	
+		p	0		data	
 	m	(Lnet/minecraft/unmapped/C_2627205;Lnet/minecraft/unmapped/C_6707278;I)Lnet/minecraft/unmapped/C_2441996;	m_7685061		m_7685061
 		p	1			p_1
 		p	2			p_2
@@ -787,7 +787,7 @@ c	net/minecraft/unmapped/C_0872029
 		p	1			p_1
 	m	()Lnet/minecraft/unmapped/C_9264598;	m_3079613		m_3079613
 c	net/minecraft/unmapped/C_1176458
-	f	[Ljava/lang/String;	f_3732636	f_3732636	
+	f	[Ljava/lang/String;	f_3732636	COLOR_DESCS	
 	f	[Ljava/lang/String;	f_7143852	f_7143852	
 c	net/minecraft/unmapped/C_1331878
 	f	[Ljava/lang/String;	f_1533733	f_1533733	

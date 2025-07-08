@@ -1,10 +1,10 @@
 tiny	2	0
 c	net/minecraft/server/MinecraftServer
-	m	(Lnet/minecraft/unmapped/C_2942118;Ljava/lang/String;J)V	m_2695328	m_2695328	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-	m	(Lnet/minecraft/unmapped/C_2942118;Ljava/lang/String;JLnet/minecraft/unmapped/C_3997653;)V	m_2695328		m_2695328
+	m	(Lnet/minecraft/unmapped/C_2942118;Ljava/lang/String;J)V	m_2695328	ensureLevelConversion	
+		p	1		levelSource	
+		p	2		levelName	
+		p	3		seed	
+	m	(Lnet/minecraft/unmapped/C_2942118;Ljava/lang/String;JLnet/minecraft/unmapped/C_3997653;)V	m_2695328		ensureLevelConversion
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -44,12 +44,12 @@ c	net/minecraft/unmapped/C_2750078
 c	net/minecraft/unmapped/C_3906126
 	m	()D	m_6184495		m_6184495
 c	net/minecraft/unmapped/C_4030632
-	m	(I)I	m_6327257	m_6327257	
-		p	1		p_1	
+	m	(I)I	m_6327257	getItemColor	
+		p	1		aux	
 	m	(Lnet/minecraft/unmapped/C_2750078;)Z	m_7629941		m_7629941
 		p	1			p_1
 	m	()Z	m_6706480		m_6706480
-	m	(II)I	m_6327257		m_6327257
+	m	(II)I	m_6327257		getItemColor
 		p	1			p_1
 		p	2			p_2
 	m	()Z	m_4645046		m_4645046
@@ -80,12 +80,12 @@ c	net/minecraft/unmapped/C_4636105
 c	net/minecraft/unmapped/C_5102005
 	f	Ljava/util/List;	f_3149854	f_3149854	
 	f	Ljava/util/HashMap;	f_3149854		f_3149854
-	m	(Ljava/lang/Class;Ljava/lang/String;IZ)V	m_3413972	m_3413972	
+	m	(Ljava/lang/Class;Ljava/lang/String;IZ)V	m_3413972	setId	
 		p	0		p_0	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
-	m	(Ljava/lang/Class;Ljava/lang/String;I)V	m_3413972		m_3413972
+	m	(Ljava/lang/Class;Ljava/lang/String;I)V	m_3413972		setId
 		p	0			p_0
 		p	1			p_1
 		p	2			p_2

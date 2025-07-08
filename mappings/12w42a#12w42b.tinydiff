@@ -37,10 +37,10 @@ c	net/minecraft/unmapped/C_3906126
 c	net/minecraft/unmapped/C_4522670
 	f	I	f_5508129		f_5508129
 c	net/minecraft/unmapped/C_4844124
-	m	(Ljava/io/DataInputStream;Z)Lnet/minecraft/unmapped/C_4844124;	m_1333463	m_1333463	
-		p	0		p_0	
-		p	1		p_1	
-	m	(Ljava/io/DataInputStream;ZLjava/net/Socket;)Lnet/minecraft/unmapped/C_4844124;	m_1333463		m_1333463
+	m	(Ljava/io/DataInputStream;Z)Lnet/minecraft/unmapped/C_4844124;	m_1333463	readPacket	
+		p	0		data	
+		p	1		serverbound	
+	m	(Ljava/io/DataInputStream;ZLjava/net/Socket;)Lnet/minecraft/unmapped/C_4844124;	m_1333463		readPacket
 		p	0			p_0
 		p	1			p_1
 		p	2			p_2
@@ -73,11 +73,11 @@ c	net/minecraft/unmapped/C_8479751
 c	net/minecraft/unmapped/C_9055414
 	f	Z	f_3715410		f_3715410
 	m	(IIIII)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
+		p	1		type	
+		p	2		x	
+		p	3		y	
+		p	4		z	
+		p	5		data	
 	m	(IIIIIZ)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2

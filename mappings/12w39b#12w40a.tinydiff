@@ -130,7 +130,7 @@ c	net/minecraft/unmapped/C_3635204
 		p	5		p_5	
 		p	6		p_6	
 c	net/minecraft/unmapped/C_3688914
-	m	(DDDFF)V	m_8813677	m_8813677	
+	m	(DDDFF)V	m_8813677	shoot	
 		p	1		p_1	
 		p	3		p_3	
 		p	5		p_5	
@@ -144,7 +144,7 @@ c	net/minecraft/unmapped/C_3688914
 		p	8			p_8
 c	net/minecraft/unmapped/C_3906126
 	f	Ljava/util/Set;	f_5782324	f_5782324	
-	m	()Z	m_7835334	m_7835334	
+	m	()Z	m_7835334	updateLights	
 	m	(III)Lnet/minecraft/unmapped/C_3635204;	m_3330537	m_3330537	
 		p	1		p_1	
 		p	2		p_2	
@@ -221,20 +221,20 @@ c	net/minecraft/unmapped/C_3906126
 		p	5			p_5
 		p	6			p_6
 c	net/minecraft/unmapped/C_4237166
-	m	(IIIZLnet/minecraft/unmapped/C_5009044;)Lnet/minecraft/unmapped/C_2750078;	m_5196022	m_5196022	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-	m	(IIIILnet/minecraft/unmapped/C_5009044;)Lnet/minecraft/unmapped/C_2750078;	m_5196022		m_5196022
+	m	(IIIZLnet/minecraft/unmapped/C_5009044;)Lnet/minecraft/unmapped/C_2750078;	m_5196022	handleInventoryMouseClick	
+		p	1		containerId	
+		p	2		slotId	
+		p	3		button	
+		p	4		holdingShift	
+		p	5		player	
+	m	(IIIILnet/minecraft/unmapped/C_5009044;)Lnet/minecraft/unmapped/C_2750078;	m_5196022		handleInventoryMouseClick
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
 		p	5			p_5
 c	net/minecraft/unmapped/C_4883920
-	f	Z	f_0122511	f_0122511	
+	f	Z	f_0122511	quickMove	
 	f	I	f_4933950		f_4933950
 	m	(IIIZLnet/minecraft/unmapped/C_2750078;S)V	<init>	<init>	
 		p	1		p_1	
@@ -366,14 +366,14 @@ c	net/minecraft/unmapped/C_7542541
 	m	(I)Z	m_4198250		m_4198250
 		p	1			p_1
 c	net/minecraft/unmapped/C_7699185
-	m	(IIZLnet/minecraft/unmapped/C_5009044;)Lnet/minecraft/unmapped/C_2750078;	m_0676143	m_0676143	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
+	m	(IIZLnet/minecraft/unmapped/C_5009044;)Lnet/minecraft/unmapped/C_2750078;	m_0676143	clicked	
+		p	1		slotId	
+		p	2		button	
+		p	3		quickMove	
+		p	4		player	
 	m	(Lnet/minecraft/unmapped/C_2786920;)V	m_3101120		m_3101120
 		p	1			p_1
-	m	(IIILnet/minecraft/unmapped/C_5009044;)Lnet/minecraft/unmapped/C_2750078;	m_0676143		m_0676143
+	m	(IIILnet/minecraft/unmapped/C_5009044;)Lnet/minecraft/unmapped/C_2750078;	m_0676143		clicked
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -408,12 +408,12 @@ c	net/minecraft/unmapped/C_9072802
 		p	6		p_6	
 c	net/minecraft/unmapped/C_2289462
 	f	Lnet/minecraft/unmapped/C_8295645;	f_7660365		f_7660365
-	m	(Lnet/minecraft/unmapped/C_3906126;IIILjava/util/Random;)V	m_4344239	m_4344239	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
+	m	(Lnet/minecraft/unmapped/C_3906126;IIILjava/util/Random;)V	m_4344239	dispenseFrom	
+		p	1		level	
+		p	2		x	
+		p	3		y	
+		p	4		z	
+		p	5		random	
 	m	(Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_2750078;Ljava/util/Random;IIIDDD)V	m_8603701	m_8603701	
 		p	0		p_0	
 		p	1		p_1	
@@ -437,7 +437,7 @@ c	net/minecraft/unmapped/C_2289462
 		p	9		p_9	
 		p	11		p_11	
 		p	13		p_13	
-	m	(Lnet/minecraft/unmapped/C_3906126;III)V	m_4344239		m_4344239
+	m	(Lnet/minecraft/unmapped/C_3906126;III)V	m_4344239		dispenseFrom
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3

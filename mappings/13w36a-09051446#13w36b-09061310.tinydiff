@@ -2,8 +2,8 @@ tiny	2	0
 c	net/minecraft/unmapped/C_0488196
 	f	Ljava/lang/String;	f_2934859		f_2934859
 	m	(Ljava/lang/String;Ljava/net/URL;)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
+		p	1		name	
+		p	2		url	
 	m	(Ljava/lang/String;Ljava/net/URL;Ljava/lang/String;)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
@@ -34,7 +34,7 @@ c	net/minecraft/unmapped/C_1518064
 		p	4		p_4	
 		p	5		p_5	
 		p	6		p_6	
-	m	(JII[BDDD)V	m_1871596	m_1871596	
+	m	(JII[BDDD)V	m_1871596	addRoom	
 		p	1		p_1	
 		p	3		p_3	
 		p	4		p_4	
@@ -42,7 +42,7 @@ c	net/minecraft/unmapped/C_1518064
 		p	6		p_6	
 		p	8		p_8	
 		p	10		p_10	
-	m	(JII[BDDDFFFIID)V	m_1959732	m_1959732	
+	m	(JII[BDDDFFFIID)V	m_1959732	addTunnel	
 		p	1		p_1	
 		p	3		p_3	
 		p	4		p_4	
@@ -56,7 +56,7 @@ c	net/minecraft/unmapped/C_1518064
 		p	15		p_15	
 		p	16		p_16	
 		p	17		p_17	
-	m	(JII[Lnet/minecraft/unmapped/C_3635204;DDD)V	m_1871596		m_1871596
+	m	(JII[Lnet/minecraft/unmapped/C_3635204;DDD)V	m_1871596		addRoom
 		p	1			p_1
 		p	3			p_3
 		p	4			p_4
@@ -64,7 +64,7 @@ c	net/minecraft/unmapped/C_1518064
 		p	6			p_6
 		p	8			p_8
 		p	10			p_10
-	m	(JII[Lnet/minecraft/unmapped/C_3635204;DDDFFFIID)V	m_1959732		m_1959732
+	m	(JII[Lnet/minecraft/unmapped/C_3635204;DDDFFFIID)V	m_1959732		addTunnel
 		p	1			p_1
 		p	3			p_3
 		p	4			p_4
@@ -112,11 +112,11 @@ c	net/minecraft/unmapped/C_3906126$0612683		0612683
 	m	()Ljava/lang/String;	m_5758841		m_5758841
 	m	()Ljava/lang/Object;	call		call
 c	net/minecraft/unmapped/C_4078372
-	m	(II[B)V	m_8884370	m_8884370	
+	m	(II[B)V	m_8884370	prepareHeights	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
-	m	(II[B[B[Lnet/minecraft/unmapped/C_4636105;)V	m_0713473	m_0713473	
+	m	(II[B[B[Lnet/minecraft/unmapped/C_4636105;)V	m_0713473	buildSurfaces	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
@@ -124,30 +124,30 @@ c	net/minecraft/unmapped/C_4078372
 		p	5		p_5	
 	m	(Lnet/minecraft/unmapped/C_3635204;)B	m_0969295	m_0969295	
 		p	0		p_0	
-	m	(II[Lnet/minecraft/unmapped/C_3635204;)V	m_8884370		m_8884370
+	m	(II[Lnet/minecraft/unmapped/C_3635204;)V	m_8884370		prepareHeights
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
-	m	(II[Lnet/minecraft/unmapped/C_3635204;[B[Lnet/minecraft/unmapped/C_4636105;)V	m_0713473		m_0713473
+	m	(II[Lnet/minecraft/unmapped/C_3635204;[B[Lnet/minecraft/unmapped/C_4636105;)V	m_0713473		buildSurfaces
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
 		p	5			p_5
 c	net/minecraft/unmapped/C_4188659
-	m	(II[B)V	m_0874705	m_0874705	
+	m	(II[B)V	m_0874705	prepareHeights	
+		p	1		x	
+		p	2		z	
+		p	3		tiles	
+	m	(II[B)V	m_0862933	buildSurfaces	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
-	m	(II[B)V	m_0862933	m_0862933	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-	m	(II[Lnet/minecraft/unmapped/C_3635204;)V	m_0874705		m_0874705
+	m	(II[Lnet/minecraft/unmapped/C_3635204;)V	m_0874705		prepareHeights
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
-	m	(II[Lnet/minecraft/unmapped/C_3635204;)V	m_0862933		m_0862933
+	m	(II[Lnet/minecraft/unmapped/C_3635204;)V	m_0862933		buildSurfaces
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -159,7 +159,7 @@ c	net/minecraft/unmapped/C_4629588
 		p	4		p_4	
 		p	5		p_5	
 		p	6		p_6	
-	m	(JII[BDDD)V	m_5956376	m_5956376	
+	m	(JII[BDDD)V	m_5956376	addRoom	
 		p	1		p_1	
 		p	3		p_3	
 		p	4		p_4	
@@ -167,7 +167,7 @@ c	net/minecraft/unmapped/C_4629588
 		p	6		p_6	
 		p	8		p_8	
 		p	10		p_10	
-	m	(JII[BDDDFFFIID)V	m_7639184	m_7639184	
+	m	(JII[BDDDFFFIID)V	m_7639184	addTunnel	
 		p	1		p_1	
 		p	3		p_3	
 		p	4		p_4	
@@ -181,7 +181,7 @@ c	net/minecraft/unmapped/C_4629588
 		p	15		p_15	
 		p	16		p_16	
 		p	17		p_17	
-	m	(JII[Lnet/minecraft/unmapped/C_3635204;DDD)V	m_5956376		m_5956376
+	m	(JII[Lnet/minecraft/unmapped/C_3635204;DDD)V	m_5956376		addRoom
 		p	1			p_1
 		p	3			p_3
 		p	4			p_4
@@ -189,7 +189,7 @@ c	net/minecraft/unmapped/C_4629588
 		p	6			p_6
 		p	8			p_8
 		p	10			p_10
-	m	(JII[Lnet/minecraft/unmapped/C_3635204;DDDFFFIID)V	m_7639184		m_7639184
+	m	(JII[Lnet/minecraft/unmapped/C_3635204;DDDFFFIID)V	m_7639184		addTunnel
 		p	1			p_1
 		p	3			p_3
 		p	4			p_4
@@ -280,26 +280,26 @@ c	net/minecraft/unmapped/C_5269767$8203174$8741234	8741234
 		p	1		p_1	
 		p	2		p_2	
 c	net/minecraft/unmapped/C_6329603
-	m	(Lnet/minecraft/unmapped/C_9484672;Lnet/minecraft/unmapped/C_3906126;II[B)V	m_8752868	m_8752868	
-		p	1		p_1	
+	m	(Lnet/minecraft/unmapped/C_9484672;Lnet/minecraft/unmapped/C_3906126;II[B)V	m_8752868	apply	
+		p	1		source	
+		p	2		level	
+		p	3		x	
+		p	4		z	
+		p	5		tiles	
+	m	(Lnet/minecraft/unmapped/C_3906126;IIII[B)V	m_6800431	addFeature	
+		p	1		level	
 		p	2		p_2	
 		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-	m	(Lnet/minecraft/unmapped/C_3906126;IIII[B)V	m_6800431	m_6800431	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-		p	6		p_6	
-	m	(Lnet/minecraft/unmapped/C_9484672;Lnet/minecraft/unmapped/C_3906126;II[Lnet/minecraft/unmapped/C_3635204;)V	m_8752868		m_8752868
+		p	4		x	
+		p	5		z	
+		p	6		tiles	
+	m	(Lnet/minecraft/unmapped/C_9484672;Lnet/minecraft/unmapped/C_3906126;II[Lnet/minecraft/unmapped/C_3635204;)V	m_8752868		apply
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
 		p	5			p_5
-	m	(Lnet/minecraft/unmapped/C_3906126;IIII[Lnet/minecraft/unmapped/C_3635204;)V	m_6800431		m_6800431
+	m	(Lnet/minecraft/unmapped/C_3906126;IIII[Lnet/minecraft/unmapped/C_3635204;)V	m_6800431		addFeature
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -347,22 +347,22 @@ c	net/minecraft/unmapped/C_2051228
 		p	6			p_6
 		p	7			p_7
 c	net/minecraft/unmapped/C_8839702
-	m	(II[B[Lnet/minecraft/unmapped/C_4636105;)V	m_0940566	m_0940566	
+	m	(II[B[Lnet/minecraft/unmapped/C_4636105;)V	m_0940566	buildSurfaces	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
 		p	4		p_4	
-	m	(II[B[Lnet/minecraft/unmapped/C_4636105;)V	m_8431915	m_8431915	
+	m	(II[B[Lnet/minecraft/unmapped/C_4636105;)V	m_8431915	prepareHeights	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
 		p	4		p_4	
-	m	(II[Lnet/minecraft/unmapped/C_3635204;[Lnet/minecraft/unmapped/C_4636105;)V	m_8431915		m_8431915
+	m	(II[Lnet/minecraft/unmapped/C_3635204;[Lnet/minecraft/unmapped/C_4636105;)V	m_8431915		prepareHeights
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
-	m	(II[Lnet/minecraft/unmapped/C_3635204;[Lnet/minecraft/unmapped/C_4636105;)V	m_0940566		m_0940566
+	m	(II[Lnet/minecraft/unmapped/C_3635204;[Lnet/minecraft/unmapped/C_4636105;)V	m_0940566		buildSurfaces
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3

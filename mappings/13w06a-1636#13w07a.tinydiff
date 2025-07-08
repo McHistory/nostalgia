@@ -5,16 +5,16 @@ c	net/minecraft/client/Minecraft
 	m	()Ljava/util/logging/Logger;	m_0848064	m_0848064	
 	m	()Lnet/minecraft/unmapped/C_6001689;	m_0623619		m_0623619
 c	net/minecraft/server/MinecraftServer
-	f	Ljava/util/logging/Logger;	f_7446175	f_7446175	
+	f	Ljava/util/logging/Logger;	f_7446175	LOGGER	
 	m	()Lnet/minecraft/unmapped/C_6001689;	m_0623619		m_0623619
 c	net/minecraft/unmapped/C_0019534
-	f	Ljava/util/logging/Logger;	f_0534018	f_0534018	
+	f	Ljava/util/logging/Logger;	f_0534018	LOGGER	
 c	net/minecraft/unmapped/C_0182523
 	f	Lnet/minecraft/unmapped/C_0786431;	f_0853075		f_0853075
 	m	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
+		p	1		title	
+		p	2		reason	
+		p	3		reasonObjects	
 	m	(Lnet/minecraft/unmapped/C_0786431;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
@@ -46,18 +46,18 @@ c	net/minecraft/unmapped/C_0309511$0889284		0889284
 		p	4			p_4
 	m	()V	run		run
 c	net/minecraft/unmapped/C_0386427
-	f	Ljava/util/logging/Logger;	f_7882156	f_7882156	
+	f	Ljava/util/logging/Logger;	f_7882156	LOGGER	
 c	net/minecraft/unmapped/C_0894181
-	f	Ljava/util/logging/Logger;	f_3492944	f_3492944	
+	f	Ljava/util/logging/Logger;	f_3492944	LOGGER	
 	f	Lnet/minecraft/unmapped/C_6001689;	f_2568043		f_2568043
 	m	(Ljava/io/File;)V	<init>	<init>	
-		p	1		p_1	
+		p	1		file	
 	m	()V	<clinit>	<clinit>	
 	m	(Ljava/io/File;Lnet/minecraft/unmapped/C_6001689;)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
 c	net/minecraft/unmapped/C_1591456
-	f	Ljava/util/logging/Logger;	f_4712395	f_4712395	
+	f	Ljava/util/logging/Logger;	f_4712395	LOGGER	
 	m	()V	<clinit>	<clinit>	
 c	net/minecraft/unmapped/C_2354122
 	f	Lnet/minecraft/unmapped/C_6001689;	f_7061977		f_7061977
@@ -82,7 +82,7 @@ c	net/minecraft/unmapped/C_2354122
 		p	4			p_4
 		p	5			p_5
 c	net/minecraft/unmapped/C_3906126
-	f	Ljava/util/List;	f_1449524	f_1449524	
+	f	Ljava/util/List;	f_1449524	es	
 	f	Lnet/minecraft/unmapped/C_6001689;	f_9636423		f_9636423
 	m	(Lnet/minecraft/unmapped/C_9147018;Ljava/lang/String;Lnet/minecraft/unmapped/C_9219192;Lnet/minecraft/unmapped/C_4413269;Lnet/minecraft/unmapped/C_1392594;)V	<init>	<init>	
 		p	1		p_1	
@@ -113,16 +113,16 @@ c	net/minecraft/unmapped/C_3906126
 	m	()Lnet/minecraft/unmapped/C_6001689;	m_8582136		m_8582136
 c	net/minecraft/unmapped/C_4844124
 	f	Lnet/minecraft/unmapped/C_6001689;	f_2144617		f_2144617
-	m	(I)Lnet/minecraft/unmapped/C_4844124;	m_9610935	m_9610935	
-		p	0		p_0	
-	m	(Ljava/io/DataInputStream;ZLjava/net/Socket;)Lnet/minecraft/unmapped/C_4844124;	m_1333463	m_1333463	
+	m	(I)Lnet/minecraft/unmapped/C_4844124;	m_9610935	getPacket	
+		p	0		id	
+	m	(Ljava/io/DataInputStream;ZLjava/net/Socket;)Lnet/minecraft/unmapped/C_4844124;	m_1333463	readPacket	
 		p	0		p_0	
 		p	1		p_1	
 		p	2		p_2	
-	m	(Lnet/minecraft/unmapped/C_6001689;I)Lnet/minecraft/unmapped/C_4844124;	m_9610935		m_9610935
+	m	(Lnet/minecraft/unmapped/C_6001689;I)Lnet/minecraft/unmapped/C_4844124;	m_9610935		getPacket
 		p	0			p_0
 		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_6001689;Ljava/io/DataInputStream;ZLjava/net/Socket;)Lnet/minecraft/unmapped/C_4844124;	m_1333463		m_1333463
+	m	(Lnet/minecraft/unmapped/C_6001689;Ljava/io/DataInputStream;ZLjava/net/Socket;)Lnet/minecraft/unmapped/C_4844124;	m_1333463		readPacket
 		p	0			p_0
 		p	1			p_1
 		p	2			p_2
@@ -134,7 +134,7 @@ c	net/minecraft/unmapped/C_5269767
 		p	1			p_1
 		p	2			p_2
 c	net/minecraft/unmapped/C_7102748
-	f	Ljava/util/logging/Logger;	f_9711239	f_9711239	
+	f	Ljava/util/logging/Logger;	f_9711239	LOGGER	
 c	net/minecraft/unmapped/C_7221329
 	f	Lnet/minecraft/unmapped/C_2800860;	f_4621012		f_4621012
 c	net/minecraft/unmapped/C_7366354
@@ -174,7 +174,7 @@ c	net/minecraft/unmapped/C_7662486
 	m	(Lnet/minecraft/unmapped/C_7662486;)Lnet/minecraft/unmapped/C_0786431;	m_1715090		m_1715090
 		p	0			p_0
 c	net/minecraft/unmapped/C_8752044
-	f	Ljava/util/logging/Logger;	f_2099216	f_2099216	
+	f	Ljava/util/logging/Logger;	f_2099216	LOGGER	
 c	net/minecraft/unmapped/C_8817873
 	m	(Lnet/minecraft/unmapped/C_4939758;Lnet/minecraft/unmapped/C_4413269;IILnet/minecraft/unmapped/C_1392594;)V	<init>	<init>	
 		p	1		p_1	
@@ -189,9 +189,9 @@ c	net/minecraft/unmapped/C_8817873
 		p	4			p_4
 		p	5			p_5
 		p	6			p_6
-c	net/minecraft/unmapped/C_9048725	net/minecraft/unmapped/C_9048725	
-	f	Ljava/util/logging/Logger;	f_0211931	f_0211931	
-	m	()V	m_2416286	m_2416286	
+c	net/minecraft/unmapped/C_9048725	net/minecraft/server/ServerLogTracker	
+	f	Ljava/util/logging/Logger;	f_0211931	LOGGER	
+	m	()V	m_2416286	init	
 	m	()V	<clinit>	<clinit>	
 c	net/minecraft/unmapped/C_9048725$C_5237390	C_5237390	
 	f	Ljava/text/SimpleDateFormat;	f_5987591	f_5987591	
@@ -199,7 +199,7 @@ c	net/minecraft/unmapped/C_9048725$C_5237390	C_5237390
 	m	(Ljava/util/logging/LogRecord;)Ljava/lang/String;	format	format	
 		p	1		p_1	
 c	net/minecraft/unmapped/C_7255299
-	f	Ljava/util/logging/Logger;	f_1302269	f_1302269	
+	f	Ljava/util/logging/Logger;	f_1302269	LOGGER	
 	m	()V	<clinit>	<clinit>	
 c	net/minecraft/unmapped/C_7451756
 c	net/minecraft/unmapped/C_7451756$C_1602519

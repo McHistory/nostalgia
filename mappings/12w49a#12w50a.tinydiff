@@ -33,7 +33,7 @@ c	net/minecraft/unmapped/C_2751481
 		p	4			p_4
 		p	5			p_5
 c	net/minecraft/unmapped/C_3050136
-	f	Lnet/minecraft/unmapped/C_2750078;	f_2557598	f_2557598	
+	f	Lnet/minecraft/unmapped/C_2750078;	f_2557598	item	
 	m	(Lnet/minecraft/unmapped/C_3906126;DDD)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
@@ -46,18 +46,18 @@ c	net/minecraft/unmapped/C_3699792
 	f	I	f_0154280		f_0154280
 	f	Lnet/minecraft/unmapped/C_2750078;	f_5880267		f_5880267
 c	net/minecraft/unmapped/C_3906126
-	f	I	f_6800668	f_6800668	
+	f	I	f_6800668	lightingCooldown	
 c	net/minecraft/unmapped/C_4443804
-	m	(Lnet/minecraft/unmapped/C_4561926;)V	m_6688635	m_6688635	
-		p	1		p_1	
-c	net/minecraft/unmapped/C_4561926	net/minecraft/unmapped/C_4561926	
-	f	I	f_6746775	f_6746775	
-	f	I	f_9929693	f_9929693	
-	f	I	f_1329864	f_1329864	
-	f	I	f_0647642	f_0647642	
-	f	B	f_2441967	f_2441967	
-	f	B	f_4783345	f_4783345	
-	f	B	f_8541085	f_8541085	
+	m	(Lnet/minecraft/unmapped/C_4561926;)V	m_6688635	handleAddItemEntity	
+		p	1		packet	
+c	net/minecraft/unmapped/C_4561926	net/minecraft/network/packets/AddItemEntityPacket	
+	f	I	f_6746775	entity	
+	f	I	f_9929693	x	
+	f	I	f_1329864	y	
+	f	I	f_0647642	z	
+	f	B	f_2441967	xa	
+	f	B	f_4783345	ya	
+	f	B	f_8541085	za	
 	f	Lnet/minecraft/unmapped/C_2750078;	f_5232998	f_5232998	
 	m	()V	<init>	<init>	
 	m	(Lnet/minecraft/unmapped/C_3050136;)V	<init>	<init>	
@@ -82,8 +82,8 @@ c	net/minecraft/unmapped/C_4939758
 	m	(Lnet/minecraft/unmapped/C_4561926;)V	m_6688635	m_6688635	
 		p	1		p_1	
 c	net/minecraft/unmapped/C_5009044
-	m	()Lnet/minecraft/unmapped/C_3050136;	m_7604701	m_7604701	
-	m	(Z)Lnet/minecraft/unmapped/C_3050136;	m_7604701		m_7604701
+	m	()Lnet/minecraft/unmapped/C_3050136;	m_7604701	drop	
+	m	(Z)Lnet/minecraft/unmapped/C_3050136;	m_7604701		drop
 		p	1			p_1
 c	net/minecraft/unmapped/C_5324911
 c	net/minecraft/unmapped/C_5324911$7913529	7913529	

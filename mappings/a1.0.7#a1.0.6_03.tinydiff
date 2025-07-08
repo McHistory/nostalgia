@@ -22,9 +22,9 @@ c	net/minecraft/unmapped/C_4796873$C_4614408
 c	net/minecraft/unmapped/C_4796873$C_4858115
 	m	()I	m_3019759		m_3019759
 c	net/minecraft/unmapped/C_4844124
-	f	Ljava/util/Map;	f_8724546	f_8724546	
-	f	Ljava/util/Map;	f_2386161	f_2386161	
-	m	(ILjava/lang/Class;)V	m_8319107	m_8319107	
+	f	Ljava/util/Map;	f_8724546	idToClassMap	
+	f	Ljava/util/Map;	f_2386161	classToIdMap	
+	m	(ILjava/lang/Class;)V	m_8319107	registerPacket	
 		p	0		p_0	
 		p	1		p_1	
 	m	()V	<clinit>	<clinit>	
@@ -33,17 +33,17 @@ c	net/minecraft/unmapped/C_5314135
 c	net/minecraft/unmapped/C_5515943
 	m	()I	m_3019759		m_3019759
 c	net/minecraft/unmapped/C_6385858
-	f	Z	f_7412338	f_7412338	
-	f	I	f_6605905	f_6605905	
-	f	I	f_0413263	f_0413263	
-	f	I	f_3964471	f_3964471	
+	f	Z	f_7412338	inChunk	
+	f	I	f_6605905	xChunk	
+	f	I	f_0413263	yChunk	
+	f	I	f_3964471	zChunk	
 c	net/minecraft/unmapped/C_7790186
 	m	()I	m_3019759		m_3019759
 c	net/minecraft/unmapped/C_8837730
-	f	Z	f_7075376	f_7075376	
-	f	Z	f_1797803	f_1797803	
+	f	Z	f_7075376	hasPos	
+	f	Z	f_1797803	hasRot	
 	m	(Z)V	<init>	<init>	
-		p	1		p_1	
+		p	1		onGround	
 	m	(DDDFFZ)V	<init>		<init>
 		p	1			p_1
 		p	3			p_3
@@ -89,13 +89,13 @@ c	net/minecraft/unmapped/C_9814383
 	m	()I	m_3019759		m_3019759
 c	net/minecraft/unmapped/C_9200019
 	m	()I	m_3019759		m_3019759
-c	net/minecraft/unmapped/C_1388208	net/minecraft/unmapped/C_1388208	
-	f	Lnet/minecraft/unmapped/C_4939758;	f_3595738	f_3595738	
-	f	D	f_2013067	f_2013067	
-	f	D	f_3268934	f_3268934	
-	f	D	f_0402895	f_0402895	
-	f	F	f_8615502	f_8615502	
-	f	F	f_3188362	f_3188362	
+c	net/minecraft/unmapped/C_1388208	net/minecraft/client/multiplayer/MultiplayerLocalPlayer	
+	f	Lnet/minecraft/unmapped/C_4939758;	f_3595738	connection	
+	f	D	f_2013067	xLast	
+	f	D	f_3268934	yLast1	
+	f	D	f_0402895	yLast2	
+	f	F	f_8615502	yRotLast	
+	f	F	f_3188362	xRotLast	
 	m	(Lnet/minecraft/client/Minecraft;Lnet/minecraft/unmapped/C_3906126;Lnet/minecraft/unmapped/C_3172064;Lnet/minecraft/unmapped/C_4939758;)V	<init>	<init>	
 		p	1		p_1	
 		p	2		p_2	
@@ -103,20 +103,20 @@ c	net/minecraft/unmapped/C_1388208	net/minecraft/unmapped/C_1388208
 		p	4		p_4	
 	m	()V	m_0718337	m_0718337	
 c	net/minecraft/unmapped/C_4237166
-	m	(Lnet/minecraft/unmapped/C_3906126;)Lnet/minecraft/unmapped/C_5009044;	m_8774636	m_8774636	
-		p	1		p_1	
+	m	(Lnet/minecraft/unmapped/C_3906126;)Lnet/minecraft/unmapped/C_5009044;	m_8774636	createPlayer	
+		p	1		level	
 c	net/minecraft/unmapped/C_6794191
 	m	(Lnet/minecraft/unmapped/C_3906126;)Lnet/minecraft/unmapped/C_5009044;	m_8774636	m_8774636	
 		p	1		p_1	
 c	net/minecraft/unmapped/C_8817873
-	f	Ljava/util/LinkedList;	f_2418469	f_2418469	
-	m	(IIIIII)V	m_5292089	m_5292089	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-		p	6		p_6	
+	f	Ljava/util/LinkedList;	f_2418469	updatesToReset	
+	m	(IIIIII)V	m_5292089	clearResetRegion	
+		p	1		x0	
+		p	2		y0	
+		p	3		z0	
+		p	4		x1	
+		p	5		y1	
+		p	6		z1	
 	m	(IIII)Z	m_6841872	m_6841872	
 		p	1		p_1	
 		p	2		p_2	
@@ -133,12 +133,12 @@ c	net/minecraft/unmapped/C_8817873
 		p	2		p_2	
 		p	3		p_3	
 		p	4		p_4	
-	m	(IIIII)Z	m_3374558	m_3374558	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
+	m	(IIIII)Z	m_3374558	doSetTileAndData	
+		p	1		x	
+		p	2		y	
+		p	3		z	
+		p	4		tile	
+		p	5		data	
 c	net/minecraft/unmapped/C_8817873$C_9768735	C_9768735	
 	f	I	f_8733659	f_8733659	
 	f	I	f_5779150	f_5779150	
