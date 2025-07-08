@@ -32,8 +32,8 @@ jobs:
         run: chmod +x ./gradlew
 
       - name: run publish script
-        run: python3 feather.py publish ${{ matrix.version }}
+        run: python3 nostalgia.py publish ${{ matrix.version }}
         env:
-          MAVEN_URL: ${{ secrets.NEW_MAVEN_URL }}
-          MAVEN_USERNAME: ${{ secrets.NEW_MAVEN_USERNAME }}
-          MAVEN_PASSWORD: ${{ secrets.NEW_MAVEN_PASSWORD }}
+          MAVEN_URL: ${{ secrets.ALPHA_MAVEN_URL }}
+          MAVEN_USERNAME: ${{ secrets.ALPHA_MAVEN_USERNAME }}
+          MAVEN_PASSWORD: ${{ secrets.ALPHA_MAVEN_PASSWORD }}
