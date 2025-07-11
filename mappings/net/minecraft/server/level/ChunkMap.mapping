@@ -1,4 +1,5 @@
 CLASS net/minecraft/class_167 net/minecraft/server/level/ChunkMap
+	FIELD field_2129 players Ljava/util/List;
 	FIELD field_2130 chunkMap Lnet/minecraft/class_101;
 	FIELD field_2131 chunks Ljava/util/List;
 	FIELD field_2132 server Lnet/minecraft/server/MinecraftServer;
@@ -18,11 +19,16 @@ CLASS net/minecraft/class_167 net/minecraft/server/level/ChunkMap
 		ARG 2 z0
 		ARG 3 x1
 		ARG 4 z1
+	METHOD method_1744 getChunk (IIZ)Lnet/minecraft/class_167$class_514;
+		ARG 1 x
+		ARG 2 z
+		ARG 3 force
 	METHOD method_1745 addPlayer (Lnet/minecraft/class_69;)V
 		ARG 1 player
 	METHOD method_1747 tick ()V
 	METHOD method_1748 removePlayer (Lnet/minecraft/class_69;)V
 		ARG 1 player
+	METHOD method_1750 getChunkRange ()I
 	METHOD method_1751 move (Lnet/minecraft/class_69;)V
 		ARG 1 player
 	CLASS class_514 ServerChunk
@@ -32,6 +38,12 @@ CLASS net/minecraft/class_167 net/minecraft/server/level/ChunkMap
 		FIELD field_2140 pos Lnet/minecraft/class_515;
 		FIELD field_2141 changedBlocks [S
 		FIELD field_2142 changes I
+		FIELD field_2143 x1 I
+		FIELD field_2144 x0 I
+		FIELD field_2145 y1 I
+		FIELD field_2146 y0 I
+		FIELD field_2147 z1 I
+		FIELD field_2148 z0 I
 		METHOD <init> (Lnet/minecraft/class_167;II)V
 			ARG 2 x
 			ARG 3 z

@@ -12,6 +12,10 @@ CLASS net/minecraft/class_174 net/minecraft/server/level/ServerEntity
 	FIELD field_607 aZ D
 	FIELD field_608 tickCount I
 	FIELD field_610 seenBy Ljava/util/Set;
+	FIELD field_611 x D
+	FIELD field_612 y D
+	FIELD field_613 z D
+	FIELD field_614 forcedLoading Z
 	FIELD field_615 trackDelta Z
 	FIELD field_616 teleportDelay I
 	METHOD <init> (Lnet/minecraft/class_57;IIZ)V
@@ -22,7 +26,7 @@ CLASS net/minecraft/class_174 net/minecraft/server/level/ServerEntity
 	METHOD equals (Ljava/lang/Object;)Z
 		ARG 1 obj
 	METHOD method_596 broadcastRemoved ()V
-	METHOD method_597 removePlayer (Lnet/minecraft/class_69;)V
+	METHOD method_597 untrackEntity (Lnet/minecraft/class_69;)V
 		ARG 1 player
 	METHOD method_598 broadcast (Lnet/minecraft/class_169;)V
 		ARG 1 packet
@@ -35,3 +39,5 @@ CLASS net/minecraft/class_174 net/minecraft/server/level/ServerEntity
 		ARG 1 packet
 	METHOD method_603 updatePlayers (Ljava/util/List;)V
 		ARG 1 players
+	METHOD method_604 removePairing (Lnet/minecraft/class_69;)V
+		ARG 1 player

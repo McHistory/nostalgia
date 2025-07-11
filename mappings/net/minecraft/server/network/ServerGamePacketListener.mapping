@@ -1,13 +1,18 @@
 CLASS net/minecraft/class_11 net/minecraft/server/network/ServerGamePacketListener
 	FIELD field_916 LOGGER Ljava/util/logging/Logger;
 	FIELD field_917 connection Lnet/minecraft/class_117;
+	FIELD field_918 disconnected Z
 	FIELD field_919 server Lnet/minecraft/server/MinecraftServer;
 	FIELD field_920 player Lnet/minecraft/class_69;
+	FIELD field_921 keepAliveTime I
+	FIELD field_922 lastKeepAliveTime I
 	FIELD field_923 aboveGroundTickCount I
+	FIELD field_924 clientIsFloating Z
 	FIELD field_925 lastGoodX D
 	FIELD field_926 lastGoodY D
 	FIELD field_927 lastGoodZ D
 	FIELD field_928 awaitingPositionFromClient Z
+	FIELD field_929 expectedAcks Ljava/util/Map;
 	METHOD <init> (Lnet/minecraft/server/MinecraftServer;Lnet/minecraft/class_117;Lnet/minecraft/class_69;)V
 		ARG 1 server
 		ARG 2 connection
@@ -21,5 +26,6 @@ CLASS net/minecraft/class_11 net/minecraft/server/network/ServerGamePacketListen
 		ARG 8 xRot
 	METHOD method_833 disconnect (Ljava/lang/String;)V
 		ARG 1 reason
+	METHOD method_834 countDelayedPackets ()I
 	METHOD method_835 send (Lnet/minecraft/class_169;)V
 		ARG 1 packet
