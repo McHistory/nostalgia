@@ -7,13 +7,13 @@ To see the current version being targeted, check the branch name!
 
 ## Build Setup
 ```properties
-# https://maven.alphasmoddingserver.com/#/releases/me/alphamode/nostalgia
+# https://maven.wispforest.io/me/alphamode/nostalgia/
 nostalgia_mappings=...
 ```
 
 ```groovy
 repositories {
-    maven { url 'https://maven.alphasmoddingserver.com/' }
+    maven { url 'https://maven.wispforest.io' }
 }
 
 <...>
