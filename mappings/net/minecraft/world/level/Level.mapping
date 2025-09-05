@@ -101,6 +101,7 @@ CLASS net/minecraft/class_18 net/minecraft/world/level/Level
 		ARG 2 x
 		ARG 3 y
 		ARG 4 z
+		ARG 5 ignoreObstructed
 		ARG 6 face
 	METHOD method_157 setTileEntity (IIILnet/minecraft/class_55;)V
 		ARG 1 x
@@ -340,7 +341,13 @@ CLASS net/minecraft/class_18 net/minecraft/world/level/Level
 		ARG 3 z
 		ARG 4 tileId
 		ARG 5 delay
-	METHOD method_217 setBlocksAndData (IIIIII)[B
+	METHOD method_217 getBlocksAndData (IIIIII)[B
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+		ARG 4 xs
+		ARG 5 yz
+		ARG 6 zs
 	METHOD method_218 containsAnyLiquid (Lnet/minecraft/class_25;)Z
 		ARG 1 area
 	METHOD method_219 entityAdded (Lnet/minecraft/class_57;)V
@@ -409,7 +416,8 @@ CLASS net/minecraft/class_18 net/minecraft/world/level/Level
 	METHOD method_240 lightColumnChanged (IIII)V
 		ARG 1 x
 		ARG 2 z
-		ARG 3 y
+		ARG 3 minY
+		ARG 4 maxY
 	METHOD method_241 tick (Lnet/minecraft/class_57;)V
 		ARG 1 entity
 	METHOD method_242 tick ()V
@@ -492,7 +500,15 @@ CLASS net/minecraft/class_18 net/minecraft/world/level/Level
 	METHOD method_272 prepareWeather ()V
 	METHOD method_273 stopWeather ()V
 	METHOD method_274 pauseSave (I)Z
-	METHOD method_275 getBlocksAndData (IIIIII[B)V
+		ARG 1 saveTicks
+	METHOD method_275 setBlocksAndData (IIIIII[B)V
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+		ARG 4 xs
+		ARG 5 ys
+		ARG 6 zs
+		ARG 7 buffer
 	METHOD method_276 setSpawnPos (Lnet/minecraft/class_63;)V
 		ARG 1 spawnPos
 	METHOD method_277 loadPlayer (Lnet/minecraft/class_54;)V
