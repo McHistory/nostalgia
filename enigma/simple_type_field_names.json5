@@ -1,0 +1,137 @@
+{
+  // DFU
+  "com/mojang/datafixers/schemas/Schema": "schema",
+  "com/mojang/datafixers/DataFixer": "dataFixer",
+
+  // Registries
+  "net/minecraft/unmapped/C_8295645": "registry",
+
+  // Client
+  "net/minecraft/client/Minecraft": "minecraft",
+
+  // rendering
+  "net/minecraft/unmapped/C_2334550": "t",
+  "net/minecraft/unmapped/C_8373595": "bufferBuilder",
+
+  // Server
+  "net/minecraft/server/MinecraftServer": "server",
+
+  // Crash reports
+  "net/minecraft/unmapped/C_5269767": "report", // CrashReport
+  "net/minecraft/unmapped/C_4519256": "category", // CrashReportCategory
+
+  // Pos
+  "net/minecraft/unmapped/C_6707278": "pos",
+  "net/minecraft/unmapped/C_6707278$C_2165440": { // BlockPos.Mutable
+    "local_name": "pos",
+    "fallback": [
+      "mutablePos"
+    ]
+  },
+
+  // States
+  "net/minecraft/unmapped/C_2441996": { // BlockState
+    "local_name": "state",
+    "exclusive": true,
+    "fallback": [
+      "blockState"
+    ]
+  },
+  "net/minecraft/unmapped/C_1534020": { // FluidState (18w16a-)
+    "local_name": "state",
+    "exclusive": true,
+    "fallback": [
+      "fluidState"
+    ]
+  },
+  "net/minecraft/unmapped/C_6075177": { // FluidState (18w19a+)
+    "local_name": "state",
+    "exclusive": true,
+    "fallback": [
+      "fluidState"
+    ]
+  },
+
+  // Block
+  "net/minecraft/unmapped/C_3635204": "block",
+
+  // Fluid
+  "net/minecraft/unmapped/C_8052515": "fluid", // 18w16a-
+  "net/minecraft/unmapped/C_3469856": "fluid", // 18w19a+
+
+  // Item
+  "net/minecraft/unmapped/C_4030632": "item", // Item
+  "net/minecraft/unmapped/C_2750078": { // ItemStack
+    "local_name" : "item",
+    "fallback": [
+      "stack"
+    ]
+  },
+  "net/minecraft/unmapped/C_1511890": { // ItemLike
+    "local_name": "item",
+    "fallback": [
+      "itemLike"
+    ]
+  },
+
+  // Network
+  "net/minecraft/unmapped/C_7240405": "buffer", // PacketByteBuf
+
+  // Level
+  "net/minecraft/unmapped/C_3906126": "level",
+  "net/minecraft/unmapped/C_7366354": { // ServerLevel
+    "local_name": "level",
+    "exclusive": true,
+    "fallback": [
+      "serverLevel"
+    ]
+  },
+  "net/minecraft/unmapped/C_8817873": { // ClientLevel
+    "local_name": "level",
+    "exclusive": true,
+    "fallback": [
+      "clientLevel"
+    ]
+  },
+  "net/minecraft/unmapped/C_9844932": { // WorldAccess
+    "local_name": "level",
+    "exclusive": true,
+    "fallback": [
+      "levelAccess"
+    ]
+  },
+  "net/minecraft/unmapped/C_2627205": { // WorldView
+    "local_name": "level",
+    "exclusive": true,
+    "fallback": [
+      "levelView"
+    ]
+  },
+  "net/minecraft/unmapped/C_5250955": { // LevelReader
+    "local_name": "level",
+    "exclusive": true,
+    "fallback": [
+      "levelReader"
+    ]
+  },
+  "net/minecraft/unmapped/C_8030141": { // BlockLightView
+    "local_name": "level",
+    "exclusive": true,
+    "fallback": [
+      "blockLightView"
+    ]
+  },
+
+  // Chunk
+  "net/minecraft/unmapped/C_6755599": "chunk", // LevelChunk
+  "net/minecraft/unmapped/C_0636026": { // ChunkAccess
+    "local_name": "chunk",
+    "exclusive": true,
+    "fallback": [
+      "chunkAccess"
+    ]
+  },
+
+  // Inventory
+  "net/minecraft/unmapped/C_4390289": "inventory"
+}
