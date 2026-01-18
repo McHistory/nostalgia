@@ -395,7 +395,7 @@ c	net/minecraft/unmapped/C_00535600	net/minecraft/stats/StatsCounter
 		p	1		p_1
 	m	(Ljava/lang/String;)Ljava/util/Map;	m_18337421	m_18337421
 		p	0		p_0
-	m	(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)Ljava/lang/String;	m_10106213	method_1985
+	m	(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)Ljava/lang/String;	m_10106213	m_10106213
 		p	0		name
 		p	1		sessionid
 		p	2		p_2
@@ -915,7 +915,7 @@ c	net/minecraft/unmapped/C_03562565$C_71454160	net/minecraft/network/packets/Pac
 	f	I	f_69346024	f_69346024
 	f	J	f_69493600	f_69493600
 	m	()V	<init>	<init>
-	m	(I)V	m_45128258	method_1036
+	m	(I)V	m_45128258	m_45128258
 		p	1		size
 	m	(Lnet/minecraft/unmapped/C_03562565$88697224;)V	<init>	<init>
 		p	1		p_1
@@ -1161,12 +1161,12 @@ c	net/minecraft/unmapped/C_03670941	net/minecraft/client/renderer/TileRenderer
 		p	6		g
 		p	7		b
 	m	(Lnet/minecraft/unmapped/C_81592558;III)Z	m_74048708	tesselateCactusInWorld
-		p	1		tile
+		p	1		tt
 		p	2		x
 		p	3		y
 		p	4		z
-	m	(Lnet/minecraft/unmapped/C_81592558;IIIFFF)Z	m_78492577	method_63
-		p	1		tile
+	m	(Lnet/minecraft/unmapped/C_81592558;IIIFFF)Z	m_78492577	tesselateCactusInWorld
+		p	1		tt
 		p	2		x
 		p	3		y
 		p	4		z
@@ -2647,11 +2647,11 @@ c	net/minecraft/unmapped/C_14230742	net/minecraft/server/level/ServerPlayerGameM
 		p	1		x
 		p	2		y
 		p	3		z
-	m	(III)Z	m_14930303	method_1833
+	m	(III)Z	m_14930303	destroyTile
 		p	1		x
 		p	2		y
 		p	3		z
-	m	(III)Z	m_23648993	destroyTile
+	m	(III)Z	m_23648993	destroyAndAck
 		p	1		x
 		p	2		y
 		p	3		z
@@ -2921,12 +2921,12 @@ c	net/minecraft/unmapped/C_15723796	net/minecraft/client/gui/AchievementGetCompo
 	f	Lnet/minecraft/unmapped/C_90931970;	f_27833743	achievement
 	f	J	f_17551467	f_17551467
 	f	Lnet/minecraft/unmapped/C_84615110;	f_63265686	itemRenderer
-	f	Z	f_17556050	f_17556050
+	f	Z	f_17556050	isTask
 	m	(Lnet/minecraft/client/Minecraft;)V	<init>	<init>
 		p	1		minecraft
-	m	(Lnet/minecraft/unmapped/C_90931970;)V	m_25745051	method_1964
+	m	(Lnet/minecraft/unmapped/C_90931970;)V	m_25745051	setAchievement
 		p	1		achievement
-	m	(Lnet/minecraft/unmapped/C_90931970;)V	m_24905263	method_1966
+	m	(Lnet/minecraft/unmapped/C_90931970;)V	m_24905263	setTask
 		p	1		achievement
 	m	()V	m_55578544	m_55578544
 	m	()V	m_01993877	render
@@ -4910,7 +4910,7 @@ c	net/minecraft/unmapped/C_29639016	net/minecraft/server/PlayerList
 		p	1		server
 	m	([Lnet/minecraft/unmapped/C_70668269;)V	m_51565958	setLevel
 		p	1		levels
-	m	(Lnet/minecraft/unmapped/C_49202226;)V	m_31698239	method_554
+	m	(Lnet/minecraft/unmapped/C_49202226;)V	m_31698239	m_31698239
 		p	1		player
 	m	()I	m_46770073	getChunkRange
 	m	(I)Lnet/minecraft/unmapped/C_17889813;	m_97161791	getChunkMap
@@ -10666,7 +10666,7 @@ c	net/minecraft/unmapped/C_64041439	net/minecraft/world/level/Level
 	m	()V	m_75538572	checkSession
 	m	(J)V	m_66891909	setTime
 		p	1		time
-	m	(J)V	m_70162670	method_204
+	m	(J)V	m_70162670	m_70162670
 		p	1		time
 	m	()J	m_92966154	getSeed
 	m	()J	m_13949261	getTime
@@ -11317,7 +11317,7 @@ c	net/minecraft/unmapped/C_66796240	net/minecraft/client/gui/screens/StatsScreen
 		p	1		p_1
 		p	2		p_2
 		p	3		p_3
-	m	(III)V	m_24987233	method_360
+	m	(III)V	m_24987233	m_24987233
 		p	1		p_1
 		p	2		p_2
 		p	3		item
@@ -11387,7 +11387,7 @@ c	net/minecraft/unmapped/C_66796240	net/minecraft/client/gui/screens/StatsScreen
 		p	2		p_2
 		p	3		p_3
 	m	()V	<clinit>	<clinit>
-c	net/minecraft/unmapped/C_66796240$C_03318703	net/minecraft/client/gui/screens/StatsScreen$class_99
+c	net/minecraft/unmapped/C_66796240$C_03318703	net/minecraft/client/gui/screens/StatsScreen$C_03318703
 	f	I	f_42455709	headerPressed
 	f	Ljava/util/List;	f_35759436	statItemList
 	f	Ljava/util/Comparator;	f_19337623	itemStatSorter
@@ -16004,7 +16004,7 @@ c	net/minecraft/unmapped/C_89060550$C_33454154	net/minecraft/world/level/chunk/s
 		p	2		p_2
 		p	3		p_3
 	m	()V	close	close
-c	net/minecraft/unmapped/C_89105241	net/minecraft/stats/class_627
+c	net/minecraft/unmapped/C_89105241	net/minecraft/unmapped/C_89105241
 	f	I	f_10255465	f_10255465
 	m	(ILjava/lang/String;I)V	<init>	<init>
 		p	1		p_1
@@ -17575,7 +17575,7 @@ c	net/minecraft/unmapped/C_97929192	net/minecraft/client/multiplayer/Multiplayer
 	m	(Lnet/minecraft/unmapped/C_62649600;I)V	m_04336590	m_04336590
 		p	1		p_1
 		p	2		p_2
-	m	(Lnet/minecraft/unmapped/C_62649600;I)V	m_09818795	method_1924
+	m	(Lnet/minecraft/unmapped/C_62649600;I)V	m_09818795	updateStat
 		p	1		stat
 		p	2		increment
 c	net/minecraft/unmapped/C_98403025	net/minecraft/world/level/tile/piston/PistonMovingTileEntity
@@ -17648,7 +17648,7 @@ c	net/minecraft/unmapped/C_98861173	net/minecraft/world/level/storage/LevelForma
 	m	()V	m_05162239	m_05162239
 	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_64676926;	m_18055305	m_18055305
 		p	1		p_1
-	m	(Ljava/lang/String;)V	m_45678673	method_1006
+	m	(Ljava/lang/String;)V	m_45678673	m_45678673
 		p	1		name
 	m	(Ljava/lang/String;Ljava/lang/String;)V	m_84108631	setLevelName
 		p	1		name
