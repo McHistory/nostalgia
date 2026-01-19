@@ -416,9 +416,9 @@ c	net/minecraft/unmapped/C_01412318	net/minecraft/world/level/levelgen/feature/S
 		p	3		p_3
 		p	4		p_4
 		p	5		p_5
-c	net/minecraft/unmapped/C_01635068	net/minecraft/unmapped/C_01635068
-	f	Lnet/minecraft/unmapped/C_96191056;	f_69000899	f_69000899
-	m	(Lnet/minecraft/unmapped/C_32029965;[Ljava/lang/Object;Lnet/minecraft/unmapped/C_35971787;)Lnet/minecraft/unmapped/C_01635068;	m_01390142	m_01390142
+c	net/minecraft/unmapped/C_01635068	argo/jdom/JsonNodeDoesNotMatchPathElementsException
+	f	Lnet/minecraft/unmapped/C_96191056;	f_69000899	JSON_FORMATTER
+	m	(Lnet/minecraft/unmapped/C_32029965;[Ljava/lang/Object;Lnet/minecraft/unmapped/C_35971787;)Lnet/minecraft/unmapped/C_01635068;	m_01390142	jsonNodeDoesNotMatchPathElementsException
 		p	0		p_0
 		p	1		p_1
 		p	2		p_2
@@ -426,11 +426,11 @@ c	net/minecraft/unmapped/C_01635068	net/minecraft/unmapped/C_01635068
 		p	1		p_1
 		p	2		p_2
 		p	3		p_3
-	m	(Lnet/minecraft/unmapped/C_32029965;[Ljava/lang/Object;Lnet/minecraft/unmapped/C_35971787;)Ljava/lang/String;	m_22650658	m_22650658
+	m	(Lnet/minecraft/unmapped/C_32029965;[Ljava/lang/Object;Lnet/minecraft/unmapped/C_35971787;)Ljava/lang/String;	m_22650658	formatMessage
 		p	0		p_0
 		p	1		p_1
 		p	2		p_2
-	m	([Ljava/lang/Object;)Ljava/lang/String;	m_82955097	m_82955097
+	m	([Ljava/lang/Object;)Ljava/lang/String;	m_82955097	commaSeparate
 		p	0		p_0
 	m	()V	<clinit>	<clinit>
 c	net/minecraft/unmapped/C_01720994	net/minecraft/world/item/crafting/ArmorRecipes
@@ -796,17 +796,17 @@ c	net/minecraft/unmapped/C_03140863	net/minecraft/client/renderer/GameRenderer
 		p	3		b
 		p	4		a
 	m	()V	<clinit>	<clinit>
-c	net/minecraft/unmapped/C_03367835	net/minecraft/unmapped/C_03367835
-	f	Lnet/minecraft/unmapped/C_18530764;	f_63875581	f_63875581
+c	net/minecraft/unmapped/C_03367835	argo/jdom/JsonNodeSelector
+	f	Lnet/minecraft/unmapped/C_18530764;	f_63875581	valueGetter
 	m	(Lnet/minecraft/unmapped/C_18530764;)V	<init>	<init>
 		p	1		p_1
-	m	(Ljava/lang/Object;)Z	m_11719756	m_11719756
+	m	(Ljava/lang/Object;)Z	m_11719756	matches
 		p	1		p_1
-	m	(Ljava/lang/Object;)Ljava/lang/Object;	m_64636145	m_64636145
+	m	(Ljava/lang/Object;)Ljava/lang/Object;	m_64636145	getValue
 		p	1		p_1
-	m	(Lnet/minecraft/unmapped/C_03367835;)Lnet/minecraft/unmapped/C_03367835;	m_22593311	m_22593311
+	m	(Lnet/minecraft/unmapped/C_03367835;)Lnet/minecraft/unmapped/C_03367835;	m_22593311	with
 		p	1		p_1
-	m	()Ljava/lang/String;	m_66865894	m_66865894
+	m	()Ljava/lang/String;	m_66865894	shortForm
 	m	()Ljava/lang/String;	toString	toString
 c	net/minecraft/unmapped/C_03408293	net/minecraft/network/packets/AddEntityPacket
 	f	I	f_14056548	id
@@ -1505,8 +1505,8 @@ c	net/minecraft/unmapped/C_05323973	net/minecraft/client/OpenGLCapabilities
 	m	()V	<init>	<init>
 	m	()Z	m_40158276	hasOcclusionChecks
 	m	()V	<clinit>	<clinit>
-c	net/minecraft/unmapped/C_05749010	net/minecraft/unmapped/C_05749010
-	f	Ljava/util/Map;	f_59067103	f_59067103
+c	net/minecraft/unmapped/C_05749010	argo/jdom/JsonObject
+	f	Ljava/util/Map;	f_59067103	fields
 	m	(Ljava/util/Map;)V	<init>	<init>
 		p	1		p_1
 	m	()Ljava/util/Map;	m_13397220	m_13397220
@@ -3297,14 +3297,14 @@ c	net/minecraft/unmapped/C_18072592	net/minecraft/world/CompoundContainer
 	m	()V	m_38999452	m_38999452
 	m	(Lnet/minecraft/unmapped/C_40996800;)Z	m_93421545	m_93421545
 		p	1		p_1
-c	net/minecraft/unmapped/C_18368714	net/minecraft/unmapped/C_18368714
-	m	()Lnet/minecraft/unmapped/C_49105368;	m_34449997	m_34449997
-c	net/minecraft/unmapped/C_18530764	net/minecraft/unmapped/C_18530764
-	m	(Ljava/lang/Object;)Z	m_61732648	m_61732648
+c	net/minecraft/unmapped/C_18368714	argo/jdom/JsonNodeBuilder
+	m	()Lnet/minecraft/unmapped/C_49105368;	m_34449997	build
+c	net/minecraft/unmapped/C_18530764	argo/jdom/Functor
+	m	(Ljava/lang/Object;)Z	m_61732648	matchesNode
 		p	1		p_1
-	m	(Ljava/lang/Object;)Ljava/lang/Object;	m_46367965	m_46367965
+	m	(Ljava/lang/Object;)Ljava/lang/Object;	m_46367965	applyTo
 		p	1		p_1
-	m	()Ljava/lang/String;	m_63966095	m_63966095
+	m	()Ljava/lang/String;	m_63966095	shortForm
 c	net/minecraft/unmapped/C_18608044	net/minecraft/network/packets/AddPlayerPacket
 	f	I	f_19015032	id
 	f	Ljava/lang/String;	f_56203836	name
@@ -4080,23 +4080,23 @@ c	net/minecraft/unmapped/C_23459903	net/minecraft/network/packets/SetTimePacket
 	m	(Lnet/minecraft/unmapped/C_10918870;)V	m_04853589	m_04853589
 		p	1		p_1
 	m	()I	m_85604015	m_85604015
-c	net/minecraft/unmapped/C_23604545	net/minecraft/unmapped/C_23604545
-	m	()V	m_18704744	m_18704744
-	m	()V	m_73526379	m_73526379
-	m	()V	m_86590686	m_86590686
-	m	()V	m_81404899	m_81404899
-	m	()V	m_55922973	m_55922973
-	m	()V	m_66303467	m_66303467
-	m	(Ljava/lang/String;)V	m_87718619	m_87718619
+c	net/minecraft/unmapped/C_23604545	argo/saj/JsonListener
+	m	()V	m_18704744	startDocument
+	m	()V	m_73526379	endDocument
+	m	()V	m_86590686	startArray
+	m	()V	m_81404899	endArray
+	m	()V	m_55922973	startObject
+	m	()V	m_66303467	endObject
+	m	(Ljava/lang/String;)V	m_87718619	startField
 		p	1		p_1
-	m	()V	m_55509072	m_55509072
-	m	(Ljava/lang/String;)V	m_11774374	m_11774374
+	m	()V	m_55509072	endField
+	m	(Ljava/lang/String;)V	m_11774374	stringValue
 		p	1		p_1
-	m	(Ljava/lang/String;)V	m_05415830	m_05415830
+	m	(Ljava/lang/String;)V	m_05415830	numberValue
 		p	1		p_1
-	m	()V	m_98574485	m_98574485
-	m	()V	m_60435350	m_60435350
-	m	()V	m_96439410	m_96439410
+	m	()V	m_98574485	trueValue
+	m	()V	m_60435350	falseValue
+	m	()V	m_96439410	nullValue
 c	net/minecraft/unmapped/C_23619234	net/minecraft/world/item/CoalItem
 	m	(I)V	<init>	<init>
 		p	1		p_1
@@ -4179,8 +4179,8 @@ c	net/minecraft/unmapped/C_23969718	net/minecraft/world/level/tile/DoorTile
 	m	(I)Z	m_81352515	isClosed
 		p	0		data
 	m	()I	m_11009977	m_11009977
-c	net/minecraft/unmapped/C_24101837	net/minecraft/unmapped/C_24101837
-	f	Lnet/minecraft/unmapped/C_49105368;	f_87303796	f_87303796
+c	net/minecraft/unmapped/C_24101837	argo/jdom/JsonNumberNodeBuilder
+	f	Lnet/minecraft/unmapped/C_49105368;	f_87303796	value
 	m	(Ljava/lang/String;)V	<init>	<init>
 		p	1		p_1
 	m	()Lnet/minecraft/unmapped/C_49105368;	m_34449997	m_34449997
@@ -5068,10 +5068,10 @@ c	net/minecraft/unmapped/C_30731159	net/minecraft/client/multiplayer/Multiplayer
 		p	2		p_2
 		p	3		p_3
 	m	()Ljava/lang/String;	m_76774170	m_76774170
-c	net/minecraft/unmapped/C_30782412	net/minecraft/unmapped/C_30782412
-	m	(Lnet/minecraft/unmapped/C_18368714;)V	m_41055182	m_41055182
+c	net/minecraft/unmapped/C_30782412	argo/jdom/JsonListenerToJdomAdapter__NodeContainer
+	m	(Lnet/minecraft/unmapped/C_18368714;)V	m_41055182	addNode
 		p	1		p_1
-	m	(Lnet/minecraft/unmapped/C_52414917;)V	m_38221469	m_38221469
+	m	(Lnet/minecraft/unmapped/C_52414917;)V	m_38221469	addField
 		p	1		p_1
 c	net/minecraft/unmapped/C_30892219	net/minecraft/world/item/crafting/Recipe
 	m	(Lnet/minecraft/unmapped/C_11727459;)Z	m_52363298	matches
@@ -5246,21 +5246,21 @@ c	net/minecraft/unmapped/C_31847740	net/minecraft/network/packets/ContainerAckPa
 	m	(Ljava/io/DataOutputStream;)V	m_17566769	m_17566769
 		p	1		p_1
 	m	()I	m_85604015	m_85604015
-c	net/minecraft/unmapped/C_32029965	net/minecraft/unmapped/C_32029965
-	f	Lnet/minecraft/unmapped/C_18530764;	f_51795719	f_51795719
-	f	Ljava/util/List;	f_02350356	f_02350356
-	m	(Lnet/minecraft/unmapped/C_18530764;)Lnet/minecraft/unmapped/C_75444724;	m_62137913	m_62137913
+c	net/minecraft/unmapped/C_32029965	argo/jdom/JsonNodeDoesNotMatchChainedJsonNodeSelectorException
+	f	Lnet/minecraft/unmapped/C_18530764;	f_51795719	failedNode
+	f	Ljava/util/List;	f_02350356	failPath
+	m	(Lnet/minecraft/unmapped/C_18530764;)Lnet/minecraft/unmapped/C_75444724;	m_62137913	createJsonNodeDoesNotMatchJsonNodeSelectorException
 		p	0		p_0
-	m	(Lnet/minecraft/unmapped/C_32029965;Lnet/minecraft/unmapped/C_03367835;)Lnet/minecraft/unmapped/C_75444724;	m_87870469	m_87870469
+	m	(Lnet/minecraft/unmapped/C_32029965;Lnet/minecraft/unmapped/C_03367835;)Lnet/minecraft/unmapped/C_75444724;	m_87870469	createChainedJsonNodeDoesNotMatchJsonNodeSelectorException
 		p	0		p_0
 		p	1		p_1
-	m	(Lnet/minecraft/unmapped/C_32029965;Lnet/minecraft/unmapped/C_03367835;)Lnet/minecraft/unmapped/C_75444724;	m_35943497	m_35943497
+	m	(Lnet/minecraft/unmapped/C_32029965;Lnet/minecraft/unmapped/C_03367835;)Lnet/minecraft/unmapped/C_75444724;	m_35943497	createUnchainedJsonNodeDoesNotMatchJsonNodeSelectorException
 		p	0		p_0
 		p	1		p_1
 	m	(Lnet/minecraft/unmapped/C_18530764;Ljava/util/List;)V	<init>	<init>
 		p	1		p_1
 		p	2		p_2
-	m	(Ljava/util/List;)Ljava/lang/String;	m_12807004	m_12807004
+	m	(Ljava/util/List;)Ljava/lang/String;	m_12807004	getShortFormFailPath
 		p	0		p_0
 	m	()Ljava/lang/String;	toString	toString
 c	net/minecraft/unmapped/C_32232284	net/minecraft/client/renderer/entity/EntityRenderDispatcher
@@ -5424,9 +5424,9 @@ c	net/minecraft/unmapped/C_32510114	net/minecraft/world/item/ComplexItem
 		p	2		level
 		p	3		player
 c	net/minecraft/unmapped/C_32542459	argo/jdom/JsonObjectNodeBuilder
-	f	Ljava/util/List;	f_87140464	f_87140464
+	f	Ljava/util/List;	f_87140464	fieldBuilders
 	m	()V	<init>	<init>
-	m	(Lnet/minecraft/unmapped/C_52414917;)Lnet/minecraft/unmapped/C_32542459;	m_60327209	m_60327209
+	m	(Lnet/minecraft/unmapped/C_52414917;)Lnet/minecraft/unmapped/C_32542459;	m_60327209	withFieldBuilder
 		p	1		p_1
 	m	()Lnet/minecraft/unmapped/C_35971787;	m_78149366	m_78149366
 	m	()Lnet/minecraft/unmapped/C_49105368;	m_34449997	m_34449997
@@ -5502,11 +5502,11 @@ c	net/minecraft/unmapped/C_34225397	net/minecraft/world/level/tile/SaplingTile
 		p	5		random
 	m	(I)I	m_40479460	m_40479460
 		p	1		p_1
-c	net/minecraft/unmapped/C_34240353	net/minecraft/unmapped/C_34240353
-	f	Lnet/minecraft/unmapped/C_34240353;	f_18247338	f_18247338
-	f	Lnet/minecraft/unmapped/C_34240353;	f_08871349	f_08871349
-	f	Lnet/minecraft/unmapped/C_34240353;	f_86709380	f_86709380
-	f	Lnet/minecraft/unmapped/C_74834866;	f_97197994	f_97197994
+c	net/minecraft/unmapped/C_34240353	argo/jdom/JsonConstants
+	f	Lnet/minecraft/unmapped/C_34240353;	f_18247338	NULL
+	f	Lnet/minecraft/unmapped/C_34240353;	f_08871349	TRUE
+	f	Lnet/minecraft/unmapped/C_34240353;	f_86709380	FALSE
+	f	Lnet/minecraft/unmapped/C_74834866;	f_97197994	jsonNodeType
 	m	(Lnet/minecraft/unmapped/C_74834866;)V	<init>	<init>
 		p	1		p_1
 	m	()Lnet/minecraft/unmapped/C_74834866;	m_38158158	m_38158158
@@ -5802,9 +5802,9 @@ c	net/minecraft/unmapped/C_34599799	net/minecraft/client/renderer/entity/Falling
 		p	6		p_6
 		p	8		p_8
 		p	9		p_9
-c	net/minecraft/unmapped/C_34685111	net/minecraft/unmapped/C_34685111
-	m	()I	m_04435986	m_04435986
-	m	()I	m_40006008	m_40006008
+c	net/minecraft/unmapped/C_34685111	argo/saj/ThingWithPosition
+	m	()I	m_04435986	getColumn
+	m	()I	m_40006008	getRow
 c	net/minecraft/unmapped/C_34786702	net/minecraft/client/renderer/entity/GiantMobRenderer
 	f	F	f_07475373	scale
 	m	(Lnet/minecraft/unmapped/C_36076665;FF)V	<init>	<init>
@@ -5984,7 +5984,7 @@ c	net/minecraft/unmapped/C_35928469	net/minecraft/client/renderer/DirtyChunkSort
 	m	(Ljava/lang/Object;Ljava/lang/Object;)I	compare	compare
 		p	1		c0
 		p	2		c1
-c	net/minecraft/unmapped/C_35971787	net/minecraft/unmapped/C_35971787
+c	net/minecraft/unmapped/C_35971787	argo/jdom/JsonRootNode
 	m	()V	<init>	<init>
 c	net/minecraft/unmapped/C_36076665	net/minecraft/client/model/Model
 	f	F	f_48140049	attackTime
@@ -6583,26 +6583,26 @@ c	net/minecraft/unmapped/C_41722834	net/minecraft/stats/AchievementMap
 	m	()V	<clinit>	<clinit>
 c	net/minecraft/unmapped/C_41874688	argo/jdom/JsonNodeSelectors
 	m	()V	<init>	<init>
-	m	([Ljava/lang/Object;)Lnet/minecraft/unmapped/C_03367835;	m_62538744	m_62538744
+	m	([Ljava/lang/Object;)Lnet/minecraft/unmapped/C_03367835;	m_62538744	aStringNode
 		p	0		p_0
-	m	([Ljava/lang/Object;)Lnet/minecraft/unmapped/C_03367835;	m_34920490	m_34920490
+	m	([Ljava/lang/Object;)Lnet/minecraft/unmapped/C_03367835;	m_34920490	anArrayNode
 		p	0		p_0
-	m	([Ljava/lang/Object;)Lnet/minecraft/unmapped/C_03367835;	m_79406130	m_79406130
+	m	([Ljava/lang/Object;)Lnet/minecraft/unmapped/C_03367835;	m_79406130	anObjectNode
 		p	0		p_0
-	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_03367835;	m_92296017	m_92296017
+	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_03367835;	m_92296017	aField
 		p	0		p_0
-	m	(Lnet/minecraft/unmapped/C_65175111;)Lnet/minecraft/unmapped/C_03367835;	m_81016084	m_81016084
+	m	(Lnet/minecraft/unmapped/C_65175111;)Lnet/minecraft/unmapped/C_03367835;	m_81016084	aField
 		p	0		p_0
-	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_03367835;	m_30864974	m_30864974
+	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_03367835;	m_30864974	anObjectNodeWithField
 		p	0		p_0
-	m	(I)Lnet/minecraft/unmapped/C_03367835;	m_68986990	m_68986990
+	m	(I)Lnet/minecraft/unmapped/C_03367835;	m_68986990	anElement
 		p	0		p_0
-	m	(I)Lnet/minecraft/unmapped/C_03367835;	m_32712252	m_32712252
+	m	(I)Lnet/minecraft/unmapped/C_03367835;	m_32712252	anArrayNodeWithElement
 		p	0		p_0
-	m	([Ljava/lang/Object;Lnet/minecraft/unmapped/C_03367835;)Lnet/minecraft/unmapped/C_03367835;	m_45667308	m_45667308
+	m	([Ljava/lang/Object;Lnet/minecraft/unmapped/C_03367835;)Lnet/minecraft/unmapped/C_03367835;	m_45667308	chainOn
 		p	0		p_0
 		p	1		p_1
-	m	(Lnet/minecraft/unmapped/C_03367835;Lnet/minecraft/unmapped/C_03367835;)Lnet/minecraft/unmapped/C_03367835;	m_29397404	m_29397404
+	m	(Lnet/minecraft/unmapped/C_03367835;Lnet/minecraft/unmapped/C_03367835;)Lnet/minecraft/unmapped/C_03367835;	m_29397404	chainedJsonNodeSelector
 		p	0		p_0
 		p	1		p_1
 c	net/minecraft/unmapped/C_41874688$00522450	argo/jdom/JsonNodeSelectors$00522450
@@ -6952,9 +6952,9 @@ c	net/minecraft/unmapped/C_42232651	net/minecraft/world/entity/Entity
 		p	3		y
 		p	5		z
 	m	()V	<clinit>	<clinit>
-c	net/minecraft/unmapped/C_42620053	net/minecraft/unmapped/C_42620053
-	f	Lnet/minecraft/unmapped/C_03367835;	f_30753803	f_30753803
-	f	Lnet/minecraft/unmapped/C_03367835;	f_02620944	f_02620944
+c	net/minecraft/unmapped/C_42620053	argo/jdom/ChainedFunctor
+	f	Lnet/minecraft/unmapped/C_03367835;	f_30753803	parentJsonNodeSelector
+	f	Lnet/minecraft/unmapped/C_03367835;	f_02620944	childJsonNodeSelector
 	m	(Lnet/minecraft/unmapped/C_03367835;Lnet/minecraft/unmapped/C_03367835;)V	<init>	<init>
 		p	1		p_1
 		p	2		p_2
@@ -7536,11 +7536,11 @@ c	net/minecraft/unmapped/C_45898477	net/minecraft/client/particle/SplashParticle
 		p	8		p_8
 		p	10		p_10
 		p	12		p_12
-c	net/minecraft/unmapped/C_45909191	net/minecraft/unmapped/C_45909191
+c	net/minecraft/unmapped/C_45909191	argo/jdom/JdomParser
 	m	()V	<init>	<init>
-	m	(Ljava/io/Reader;)Lnet/minecraft/unmapped/C_35971787;	m_45083880	m_45083880
+	m	(Ljava/io/Reader;)Lnet/minecraft/unmapped/C_35971787;	m_45083880	parse
 		p	1		p_1
-	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_35971787;	m_31220762	m_31220762
+	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_35971787;	m_31220762	parse
 		p	1		p_1
 c	net/minecraft/unmapped/C_45915938	net/minecraft/world/entity/PathfinderMob
 	f	Lnet/minecraft/unmapped/C_85604771;	f_28200707	path
@@ -7709,11 +7709,11 @@ c	net/minecraft/unmapped/C_46870714	net/minecraft/world/item/crafting/ClothDyeRe
 	m	()V	<init>	<init>
 	m	(Lnet/minecraft/unmapped/C_70737137;)V	m_32616755	addRecipes
 		p	1		recipes
-c	net/minecraft/unmapped/C_46912152	net/minecraft/unmapped/C_46912152
+c	net/minecraft/unmapped/C_46912152	argo/jdom/LeafFunctor
 	m	()V	<init>	<init>
 	m	(Ljava/lang/Object;)Ljava/lang/Object;	m_46367965	m_46367965
 		p	1		p_1
-	m	(Ljava/lang/Object;)Ljava/lang/Object;	m_96593352	m_96593352
+	m	(Ljava/lang/Object;)Ljava/lang/Object;	m_96593352	typeSafeApplyTo
 		p	1		p_1
 c	net/minecraft/unmapped/C_46938080	net/minecraft/world/level/levelgen/synth/SimplexNoise
 	f	[[I	f_77417482	GRADIENT
@@ -8059,17 +8059,17 @@ c	net/minecraft/unmapped/C_49004282	net/minecraft/world/level/levelgen/RandomLev
 	m	()Z	m_06909447	m_06909447
 	m	()Z	m_97106010	m_97106010
 	m	()Ljava/lang/String;	m_76774170	m_76774170
-c	net/minecraft/unmapped/C_49105368	net/minecraft/unmapped/C_49105368
+c	net/minecraft/unmapped/C_49105368	argo/jdom/JsonNode
 	m	()V	<init>	<init>
-	m	()Lnet/minecraft/unmapped/C_74834866;	m_38158158	m_38158158
-	m	()Ljava/lang/String;	m_87380439	m_87380439
-	m	()Ljava/util/Map;	m_13397220	m_13397220
-	m	()Ljava/util/List;	m_08131367	m_08131367
-	m	([Ljava/lang/Object;)Ljava/lang/String;	m_80249541	m_80249541
+	m	()Lnet/minecraft/unmapped/C_74834866;	m_38158158	getType
+	m	()Ljava/lang/String;	m_87380439	getText
+	m	()Ljava/util/Map;	m_13397220	getFields
+	m	()Ljava/util/List;	m_08131367	getElements
+	m	([Ljava/lang/Object;)Ljava/lang/String;	m_80249541	getStringValue
 		p	1		p_1
-	m	([Ljava/lang/Object;)Ljava/util/List;	m_10011587	m_10011587
+	m	([Ljava/lang/Object;)Ljava/util/List;	m_10011587	getArrayNode
 		p	1		p_1
-	m	(Lnet/minecraft/unmapped/C_03367835;Lnet/minecraft/unmapped/C_49105368;[Ljava/lang/Object;)Ljava/lang/Object;	m_12410914	m_12410914
+	m	(Lnet/minecraft/unmapped/C_03367835;Lnet/minecraft/unmapped/C_49105368;[Ljava/lang/Object;)Ljava/lang/Object;	m_12410914	wrapExceptionsFor
 		p	1		p_1
 		p	2		p_2
 		p	3		p_3
@@ -8660,9 +8660,9 @@ c	net/minecraft/unmapped/C_51413985	net/minecraft/client/Screenshot
 		p	1		width
 		p	2		height
 	m	()V	<clinit>	<clinit>
-c	net/minecraft/unmapped/C_51673989	net/minecraft/unmapped/C_51673989
-	f	Ljava/util/regex/Pattern;	f_72504460	f_72504460
-	f	Ljava/lang/String;	f_26657616	f_26657616
+c	net/minecraft/unmapped/C_51673989	argo/jdom/JsonNumberNode
+	f	Ljava/util/regex/Pattern;	f_72504460	PATTERN
+	f	Ljava/lang/String;	f_26657616	value
 	m	(Ljava/lang/String;)V	<init>	<init>
 		p	1		p_1
 	m	()Lnet/minecraft/unmapped/C_74834866;	m_38158158	m_38158158
@@ -8674,17 +8674,17 @@ c	net/minecraft/unmapped/C_51673989	net/minecraft/unmapped/C_51673989
 	m	()I	hashCode	hashCode
 	m	()Ljava/lang/String;	toString	toString
 	m	()V	<clinit>	<clinit>
-c	net/minecraft/unmapped/C_52414917	net/minecraft/unmapped/C_52414917
-	f	Lnet/minecraft/unmapped/C_18368714;	f_71669402	f_71669402
-	f	Lnet/minecraft/unmapped/C_18368714;	f_60405174	f_60405174
+c	net/minecraft/unmapped/C_52414917	argo/jdom/JsonFieldBuilder
+	f	Lnet/minecraft/unmapped/C_18368714;	f_71669402	keyBuilder
+	f	Lnet/minecraft/unmapped/C_18368714;	f_60405174	valueBuilder
 	m	()V	<init>	<init>
-	m	()Lnet/minecraft/unmapped/C_52414917;	m_86598316	m_86598316
-	m	(Lnet/minecraft/unmapped/C_18368714;)Lnet/minecraft/unmapped/C_52414917;	m_84817652	m_84817652
+	m	()Lnet/minecraft/unmapped/C_52414917;	m_86598316	aJsonFieldBuilder
+	m	(Lnet/minecraft/unmapped/C_18368714;)Lnet/minecraft/unmapped/C_52414917;	m_84817652	withKey
 		p	1		p_1
-	m	(Lnet/minecraft/unmapped/C_18368714;)Lnet/minecraft/unmapped/C_52414917;	m_18982334	m_18982334
+	m	(Lnet/minecraft/unmapped/C_18368714;)Lnet/minecraft/unmapped/C_52414917;	m_18982334	withValue
 		p	1		p_1
-	m	()Lnet/minecraft/unmapped/C_65175111;	m_18316919	m_18316919
-	m	()Lnet/minecraft/unmapped/C_49105368;	m_84510030	m_84510030
+	m	()Lnet/minecraft/unmapped/C_65175111;	m_18316919	buildKey
+	m	()Lnet/minecraft/unmapped/C_49105368;	m_84510030	buildValue
 c	net/minecraft/unmapped/C_52610529	net/minecraft/world/item/LeavesItem
 	m	(I)V	<init>	<init>
 		p	1		p_1
@@ -9803,9 +9803,9 @@ c	net/minecraft/unmapped/C_61027059$C_95179189	net/minecraft/world/entity/Synche
 	m	(Z)V	m_13402556	setDirty
 		p	1		dirty
 c	net/minecraft/unmapped/C_62054333	argo/jdom/JsonArrayNodeBuilder
-	f	Ljava/util/List;	f_30867381	f_30867381
+	f	Ljava/util/List;	f_30867381	elementBuilders
 	m	()V	<init>	<init>
-	m	(Lnet/minecraft/unmapped/C_18368714;)Lnet/minecraft/unmapped/C_62054333;	m_32196061	m_32196061
+	m	(Lnet/minecraft/unmapped/C_18368714;)Lnet/minecraft/unmapped/C_62054333;	m_32196061	withElement
 		p	1		p_1
 	m	()Lnet/minecraft/unmapped/C_35971787;	m_45273778	m_45273778
 	m	()Lnet/minecraft/unmapped/C_49105368;	m_34449997	m_34449997
@@ -9914,11 +9914,11 @@ c	net/minecraft/unmapped/C_62418920	net/minecraft/world/level/tile/MusicTile
 		p	4		p_4
 		p	5		p_5
 		p	6		p_6
-c	net/minecraft/unmapped/C_62514435	net/minecraft/unmapped/C_62514435
-	f	Ljava/util/Stack;	f_90532216	f_90532216
-	f	Lnet/minecraft/unmapped/C_18368714;	f_73308543	f_73308543
+c	net/minecraft/unmapped/C_62514435	argo/jdom/JsonListenerToJdomAdapter
+	f	Ljava/util/Stack;	f_90532216	stack
+	f	Lnet/minecraft/unmapped/C_18368714;	f_73308543	root
 	m	()V	<init>	<init>
-	m	()Lnet/minecraft/unmapped/C_35971787;	m_00597682	m_00597682
+	m	()Lnet/minecraft/unmapped/C_35971787;	m_00597682	getDocument
 	m	()V	m_18704744	m_18704744
 	m	()V	m_73526379	m_73526379
 	m	()V	m_86590686	m_86590686
@@ -9935,11 +9935,11 @@ c	net/minecraft/unmapped/C_62514435	net/minecraft/unmapped/C_62514435
 		p	1		p_1
 	m	()V	m_60435350	m_60435350
 	m	()V	m_96439410	m_96439410
-	m	(Lnet/minecraft/unmapped/C_18368714;)V	m_50874386	m_50874386
+	m	(Lnet/minecraft/unmapped/C_18368714;)V	m_50874386	addRootNode
 		p	1		p_1
-	m	(Lnet/minecraft/unmapped/C_18368714;)V	m_79107370	m_79107370
+	m	(Lnet/minecraft/unmapped/C_18368714;)V	m_79107370	addValue
 		p	1		p_1
-c	net/minecraft/unmapped/C_62514435$35499707	net/minecraft/unmapped/C_62514435$35499707
+c	net/minecraft/unmapped/C_62514435$35499707	argo/jdom/JsonListenerToJdomAdapter$35499707
 	f	Lnet/minecraft/unmapped/C_52414917;	f_94718449	f_94718449
 	f	Lnet/minecraft/unmapped/C_62514435;	f_35350557	f_35350557
 	m	(Lnet/minecraft/unmapped/C_62514435;Lnet/minecraft/unmapped/C_52414917;)V	<init>	<init>
@@ -9949,7 +9949,7 @@ c	net/minecraft/unmapped/C_62514435$35499707	net/minecraft/unmapped/C_62514435$3
 		p	1		p_1
 	m	(Lnet/minecraft/unmapped/C_52414917;)V	m_38221469	m_38221469
 		p	1		p_1
-c	net/minecraft/unmapped/C_62514435$46316363	net/minecraft/unmapped/C_62514435$46316363
+c	net/minecraft/unmapped/C_62514435$46316363	argo/jdom/JsonListenerToJdomAdapter$46316363
 	f	Lnet/minecraft/unmapped/C_32542459;	f_76978874	f_76978874
 	f	Lnet/minecraft/unmapped/C_62514435;	f_72711982	f_72711982
 	m	(Lnet/minecraft/unmapped/C_62514435;Lnet/minecraft/unmapped/C_32542459;)V	<init>	<init>
@@ -9959,7 +9959,7 @@ c	net/minecraft/unmapped/C_62514435$46316363	net/minecraft/unmapped/C_62514435$4
 		p	1		p_1
 	m	(Lnet/minecraft/unmapped/C_52414917;)V	m_38221469	m_38221469
 		p	1		p_1
-c	net/minecraft/unmapped/C_62514435$93410249	net/minecraft/unmapped/C_62514435$93410249
+c	net/minecraft/unmapped/C_62514435$93410249	argo/jdom/JsonListenerToJdomAdapter$93410249
 	f	Lnet/minecraft/unmapped/C_62054333;	f_92854930	f_92854930
 	f	Lnet/minecraft/unmapped/C_62514435;	f_72741273	f_72741273
 	m	(Lnet/minecraft/unmapped/C_62514435;Lnet/minecraft/unmapped/C_62054333;)V	<init>	<init>
@@ -12563,21 +12563,21 @@ c	net/minecraft/unmapped/C_72739095	net/minecraft/world/level/chunk/storage/OldC
 	m	(Lnet/minecraft/unmapped/C_64041439;Lnet/minecraft/unmapped/C_14917579;)V	m_82632767	m_82632767
 		p	1		p_1
 		p	2		p_2
-c	net/minecraft/unmapped/C_72876972	net/minecraft/unmapped/C_72876972
-	f	Ljava/io/PushbackReader;	f_63249157	f_63249157
-	f	I	f_24522302	f_24522302
-	f	I	f_44886268	f_44886268
-	f	Z	f_10793909	f_10793909
+c	net/minecraft/unmapped/C_72876972	argo/saj/PositionTrackingPushbackReader
+	f	Ljava/io/PushbackReader;	f_63249157	pushbackReader
+	f	I	f_24522302	characterCount
+	f	I	f_44886268	lineCount
+	f	Z	f_10793909	lastCharacterWasCarriageReturn
 	m	(Ljava/io/Reader;)V	<init>	<init>
 		p	1		p_1
-	m	(C)V	m_92865456	m_92865456
+	m	(C)V	m_92865456	unread
 		p	1		p_1
-	m	([C)V	m_57101731	m_57101731
+	m	([C)V	m_57101731	uncount
 		p	1		p_1
-	m	()I	m_38090970	m_38090970
-	m	([C)I	m_02723583	m_02723583
+	m	()I	m_38090970	read
+	m	([C)I	m_02723583	read
 		p	1		p_1
-	m	(I)V	m_10068667	m_10068667
+	m	(I)V	m_10068667	updateCharacterAndLineCounts
 		p	1		p_1
 	m	()I	m_04435986	m_04435986
 	m	()I	m_40006008	m_40006008
@@ -12984,20 +12984,20 @@ c	net/minecraft/unmapped/C_74425583	net/minecraft/world/entity/Mob
 	m	()Z	m_18110524	isSleeping
 	m	(Lnet/minecraft/unmapped/C_88708284;)I	m_75043345	getItemTexture
 		p	1		item
-c	net/minecraft/unmapped/C_74529266	net/minecraft/unmapped/C_74529266
+c	net/minecraft/unmapped/C_74529266	argo/jdom/JsonNodeFactories
 	m	()V	<init>	<init>
-	m	()Lnet/minecraft/unmapped/C_49105368;	m_17167309	m_17167309
-	m	()Lnet/minecraft/unmapped/C_49105368;	m_35379657	m_35379657
-	m	()Lnet/minecraft/unmapped/C_49105368;	m_19629871	m_19629871
-	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_65175111;	m_01455577	m_01455577
+	m	()Lnet/minecraft/unmapped/C_49105368;	m_17167309	aJsonNull
+	m	()Lnet/minecraft/unmapped/C_49105368;	m_35379657	aJsonTrue
+	m	()Lnet/minecraft/unmapped/C_49105368;	m_19629871	aJsonFalse
+	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_65175111;	m_01455577	aJsonString
 		p	0		p_0
-	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_49105368;	m_35478186	m_35478186
+	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_49105368;	m_35478186	aJsonNumber
 		p	0		p_0
-	m	(Ljava/lang/Iterable;)Lnet/minecraft/unmapped/C_35971787;	m_81001907	m_81001907
+	m	(Ljava/lang/Iterable;)Lnet/minecraft/unmapped/C_35971787;	m_81001907	aJsonArray
 		p	0		p_0
-	m	([Lnet/minecraft/unmapped/C_49105368;)Lnet/minecraft/unmapped/C_35971787;	m_31017693	m_31017693
+	m	([Lnet/minecraft/unmapped/C_49105368;)Lnet/minecraft/unmapped/C_35971787;	m_31017693	aJsonArray
 		p	0		p_0
-	m	(Ljava/util/Map;)Lnet/minecraft/unmapped/C_35971787;	m_45333269	m_45333269
+	m	(Ljava/util/Map;)Lnet/minecraft/unmapped/C_35971787;	m_45333269	aJsonObject
 		p	0		p_0
 c	net/minecraft/unmapped/C_74530968	net/minecraft/client/skins/TexturePack
 	f	Ljava/lang/String;	f_10921005	name
@@ -13015,14 +13015,14 @@ c	net/minecraft/unmapped/C_74530968	net/minecraft/client/skins/TexturePack
 		p	1		minecraft
 	m	(Ljava/lang/String;)Ljava/io/InputStream;	m_26802260	getResource
 		p	1		name
-c	net/minecraft/unmapped/C_74834866	net/minecraft/unmapped/C_74834866
-	f	Lnet/minecraft/unmapped/C_74834866;	f_17363144	f_17363144
-	f	Lnet/minecraft/unmapped/C_74834866;	f_20223648	f_20223648
-	f	Lnet/minecraft/unmapped/C_74834866;	f_68704327	f_68704327
-	f	Lnet/minecraft/unmapped/C_74834866;	f_85175555	f_85175555
-	f	Lnet/minecraft/unmapped/C_74834866;	f_43295123	f_43295123
-	f	Lnet/minecraft/unmapped/C_74834866;	f_74115231	f_74115231
-	f	Lnet/minecraft/unmapped/C_74834866;	f_42144147	f_42144147
+c	net/minecraft/unmapped/C_74834866	argo/jdom/JsonNodeType
+	f	Lnet/minecraft/unmapped/C_74834866;	f_17363144	OBJECT
+	f	Lnet/minecraft/unmapped/C_74834866;	f_20223648	ARRAY
+	f	Lnet/minecraft/unmapped/C_74834866;	f_68704327	STRING
+	f	Lnet/minecraft/unmapped/C_74834866;	f_85175555	NUMBER
+	f	Lnet/minecraft/unmapped/C_74834866;	f_43295123	TRUE
+	f	Lnet/minecraft/unmapped/C_74834866;	f_74115231	FALSE
+	f	Lnet/minecraft/unmapped/C_74834866;	f_42144147	NULL
 	f	[Lnet/minecraft/unmapped/C_74834866;	f_97363954	f_97363954
 	m	()[Lnet/minecraft/unmapped/C_74834866;	values	values
 	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_74834866;	valueOf	valueOf
@@ -13071,7 +13071,7 @@ c	net/minecraft/unmapped/C_75191757	net/minecraft/network/packets/ContainerSetSl
 	m	(Ljava/io/DataOutputStream;)V	m_17566769	m_17566769
 		p	1		p_1
 	m	()I	m_85604015	m_85604015
-c	net/minecraft/unmapped/C_75444724	net/minecraft/unmapped/C_75444724
+c	net/minecraft/unmapped/C_75444724	argo/jdom/JsonNodeDoesNotMatchJsonNodeSelectorException
 	m	(Ljava/lang/String;)V	<init>	<init>
 		p	1		p_1
 c	net/minecraft/unmapped/C_75615713	net/minecraft/world/item/MapItem
@@ -13269,24 +13269,24 @@ c	net/minecraft/unmapped/C_75957563	net/minecraft/world/level/tile/BedTile
 		p	6		p_6
 	m	()I	m_11009977	m_11009977
 	m	()V	<clinit>	<clinit>
-c	net/minecraft/unmapped/C_76028712	net/minecraft/unmapped/C_76028712
+c	net/minecraft/unmapped/C_76028712	argo/jdom/JsonNodeBuilders
 	m	()V	<init>	<init>
-	m	()Lnet/minecraft/unmapped/C_18368714;	m_51967541	m_51967541
-	m	()Lnet/minecraft/unmapped/C_18368714;	m_12674298	m_12674298
-	m	()Lnet/minecraft/unmapped/C_18368714;	m_29615864	m_29615864
-	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_18368714;	m_38611777	m_38611777
+	m	()Lnet/minecraft/unmapped/C_18368714;	m_51967541	aNullBuilder
+	m	()Lnet/minecraft/unmapped/C_18368714;	m_12674298	aTrueBuilder
+	m	()Lnet/minecraft/unmapped/C_18368714;	m_29615864	aFalseBuilder
+	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_18368714;	m_38611777	aNumberBuilder
 		p	0		p_0
-	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_64153253;	m_42703844	m_42703844
+	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_64153253;	m_42703844	aStringBuilder
 		p	0		p_0
-	m	()Lnet/minecraft/unmapped/C_32542459;	m_44774934	m_44774934
-	m	()Lnet/minecraft/unmapped/C_62054333;	m_11926023	m_11926023
-c	net/minecraft/unmapped/C_76028712$20232373	net/minecraft/unmapped/C_76028712$20232373
+	m	()Lnet/minecraft/unmapped/C_32542459;	m_44774934	anObjectBuilder
+	m	()Lnet/minecraft/unmapped/C_62054333;	m_11926023	anArrayBuilder
+c	net/minecraft/unmapped/C_76028712$20232373	argo/jdom/JsonNodeBuilders$20232373
 	m	()V	<init>	<init>
 	m	()Lnet/minecraft/unmapped/C_49105368;	m_34449997	m_34449997
-c	net/minecraft/unmapped/C_76028712$70104989	net/minecraft/unmapped/C_76028712$70104989
+c	net/minecraft/unmapped/C_76028712$70104989	argo/jdom/JsonNodeBuilders$70104989
 	m	()V	<init>	<init>
 	m	()Lnet/minecraft/unmapped/C_49105368;	m_34449997	m_34449997
-c	net/minecraft/unmapped/C_76028712$87562732	net/minecraft/unmapped/C_76028712$87562732
+c	net/minecraft/unmapped/C_76028712$87562732	argo/jdom/JsonNodeBuilders$87562732
 	m	()V	<init>	<init>
 	m	()Lnet/minecraft/unmapped/C_49105368;	m_34449997	m_34449997
 c	net/minecraft/unmapped/C_76154632	net/minecraft/world/item/BowItem
@@ -13818,8 +13818,8 @@ c	net/minecraft/unmapped/C_80147496	net/minecraft/client/gui/screens/ContainerSc
 	m	()V	m_22745008	m_22745008
 	m	(F)V	m_98661498	m_98661498
 		p	1		p_1
-c	net/minecraft/unmapped/C_80301944	net/minecraft/unmapped/C_80301944
-	f	Ljava/util/List;	f_05587944	f_05587944
+c	net/minecraft/unmapped/C_80301944	argo/jdom/JsonArray
+	f	Ljava/util/List;	f_05587944	elements
 	m	(Ljava/lang/Iterable;)V	<init>	<init>
 		p	1		p_1
 	m	()Lnet/minecraft/unmapped/C_74834866;	m_38158158	m_38158158
@@ -13830,9 +13830,9 @@ c	net/minecraft/unmapped/C_80301944	net/minecraft/unmapped/C_80301944
 		p	1		p_1
 	m	()I	hashCode	hashCode
 	m	()Ljava/lang/String;	toString	toString
-	m	(Ljava/lang/Iterable;)Ljava/util/List;	m_08351567	m_08351567
+	m	(Ljava/lang/Iterable;)Ljava/util/List;	m_08351567	asList
 		p	0		p_0
-c	net/minecraft/unmapped/C_80301944$58338291	net/minecraft/unmapped/C_80301944$58338291
+c	net/minecraft/unmapped/C_80301944$58338291	argo/jdom/JsonArray$58338291
 	f	Ljava/lang/Iterable;	f_49418043	f_49418043
 	m	(Ljava/lang/Iterable;)V	<init>	<init>
 		p	1		p_1
@@ -14825,46 +14825,46 @@ c	net/minecraft/unmapped/C_84093255	net/minecraft/client/particle/SnowShovelPart
 		p	6		p_6
 		p	7		p_7
 	m	()V	m_24884718	m_24884718
-c	net/minecraft/unmapped/C_84170137	net/minecraft/unmapped/C_84170137
+c	net/minecraft/unmapped/C_84170137	argo/saj/SajParser
 	m	()V	<init>	<init>
-	m	(Ljava/io/Reader;Lnet/minecraft/unmapped/C_23604545;)V	m_80662941	m_80662941
+	m	(Ljava/io/Reader;Lnet/minecraft/unmapped/C_23604545;)V	m_80662941	parse
 		p	1		p_1
 		p	2		p_2
-	m	(Lnet/minecraft/unmapped/C_72876972;Lnet/minecraft/unmapped/C_23604545;)V	m_56512235	m_56512235
+	m	(Lnet/minecraft/unmapped/C_72876972;Lnet/minecraft/unmapped/C_23604545;)V	m_56512235	arrayString
 		p	1		p_1
 		p	2		p_2
-	m	(Lnet/minecraft/unmapped/C_72876972;Lnet/minecraft/unmapped/C_23604545;)V	m_21823629	m_21823629
+	m	(Lnet/minecraft/unmapped/C_72876972;Lnet/minecraft/unmapped/C_23604545;)V	m_21823629	objectString
 		p	1		p_1
 		p	2		p_2
-	m	(Lnet/minecraft/unmapped/C_72876972;Lnet/minecraft/unmapped/C_23604545;)V	m_95673704	m_95673704
+	m	(Lnet/minecraft/unmapped/C_72876972;Lnet/minecraft/unmapped/C_23604545;)V	m_95673704	aFieldToken
 		p	1		p_1
 		p	2		p_2
-	m	(Lnet/minecraft/unmapped/C_72876972;Lnet/minecraft/unmapped/C_23604545;)V	m_45996917	m_45996917
+	m	(Lnet/minecraft/unmapped/C_72876972;Lnet/minecraft/unmapped/C_23604545;)V	m_45996917	aJsonValue
 		p	1		p_1
 		p	2		p_2
-	m	(Lnet/minecraft/unmapped/C_72876972;)Ljava/lang/String;	m_18723766	m_18723766
+	m	(Lnet/minecraft/unmapped/C_72876972;)Ljava/lang/String;	m_18723766	numberToken
 		p	1		p_1
-	m	(Lnet/minecraft/unmapped/C_72876972;)Ljava/lang/String;	m_08596355	m_08596355
+	m	(Lnet/minecraft/unmapped/C_72876972;)Ljava/lang/String;	m_08596355	nonNegativeNumberToken
 		p	1		p_1
-	m	(Lnet/minecraft/unmapped/C_72876972;)C	m_33875519	m_33875519
+	m	(Lnet/minecraft/unmapped/C_72876972;)C	m_33875519	nonZeroDigitToken
 		p	1		p_1
-	m	(Lnet/minecraft/unmapped/C_72876972;)C	m_41748475	m_41748475
+	m	(Lnet/minecraft/unmapped/C_72876972;)C	m_41748475	digitToken
 		p	1		p_1
-	m	(Lnet/minecraft/unmapped/C_72876972;)Ljava/lang/String;	m_12670596	m_12670596
+	m	(Lnet/minecraft/unmapped/C_72876972;)Ljava/lang/String;	m_12670596	digitString
 		p	1		p_1
-	m	(Lnet/minecraft/unmapped/C_72876972;)Ljava/lang/String;	m_62059113	m_62059113
+	m	(Lnet/minecraft/unmapped/C_72876972;)Ljava/lang/String;	m_62059113	possibleFractionalComponent
 		p	1		p_1
-	m	(Lnet/minecraft/unmapped/C_72876972;)Ljava/lang/String;	m_49933881	m_49933881
+	m	(Lnet/minecraft/unmapped/C_72876972;)Ljava/lang/String;	m_49933881	possibleExponent
 		p	1		p_1
-	m	(Lnet/minecraft/unmapped/C_72876972;)Ljava/lang/String;	m_63179840	m_63179840
+	m	(Lnet/minecraft/unmapped/C_72876972;)Ljava/lang/String;	m_63179840	possibleSign
 		p	1		p_1
-	m	(Lnet/minecraft/unmapped/C_72876972;)Ljava/lang/String;	m_19272366	m_19272366
+	m	(Lnet/minecraft/unmapped/C_72876972;)Ljava/lang/String;	m_19272366	stringToken
 		p	1		p_1
-	m	(Lnet/minecraft/unmapped/C_72876972;)C	m_22192420	m_22192420
+	m	(Lnet/minecraft/unmapped/C_72876972;)C	m_22192420	escapedStringChar
 		p	1		p_1
-	m	(Lnet/minecraft/unmapped/C_72876972;)I	m_66695042	m_66695042
+	m	(Lnet/minecraft/unmapped/C_72876972;)I	m_66695042	hexidecimalNumber
 		p	1		p_1
-	m	(Lnet/minecraft/unmapped/C_72876972;)I	m_55839054	m_55839054
+	m	(Lnet/minecraft/unmapped/C_72876972;)I	m_55839054	readNextNonWhitespaceChar
 		p	1		p_1
 c	net/minecraft/unmapped/C_84171032	net/minecraft/world/item/crafting/ShapelessRecipe
 	f	Lnet/minecraft/unmapped/C_88708284;	f_40770712	result
@@ -16004,13 +16004,13 @@ c	net/minecraft/unmapped/C_89060550$C_33454154	net/minecraft/world/level/chunk/s
 		p	2		p_2
 		p	3		p_3
 	m	()V	close	close
-c	net/minecraft/unmapped/C_89105241	net/minecraft/unmapped/C_89105241
-	f	I	f_10255465	f_10255465
+c	net/minecraft/unmapped/C_89105241	net/minecraft/stats/ItemStat
+	f	I	f_10255465	itemId
 	m	(ILjava/lang/String;I)V	<init>	<init>
-		p	1		p_1
-		p	2		p_2
-		p	3		p_3
-	m	()I	m_74148543	m_74148543
+		p	1		id
+		p	2		name
+		p	3		itemId
+	m	()I	m_74148543	getItemId
 c	net/minecraft/unmapped/C_89604096	net/minecraft/world/level/material/Material
 	f	Lnet/minecraft/unmapped/C_89604096;	f_74758574	AIR
 	f	Lnet/minecraft/unmapped/C_89604096;	f_71726800	GRASS
@@ -16139,9 +16139,9 @@ c	net/minecraft/unmapped/C_89967701	net/minecraft/world/level/tile/GlassTile
 	m	(Ljava/util/Random;)I	m_23574716	m_23574716
 		p	1		p_1
 	m	()I	m_52943252	m_52943252
-c	net/minecraft/unmapped/C_90210845	net/minecraft/unmapped/C_90210845
-	f	I	f_86964271	f_86964271
-	f	I	f_90690158	f_90690158
+c	net/minecraft/unmapped/C_90210845	argo/saj/InvalidSyntaxException
+	f	I	f_86964271	column
+	f	I	f_90690158	row
 	m	(Ljava/lang/String;Lnet/minecraft/unmapped/C_34685111;)V	<init>	<init>
 		p	1		p_1
 		p	2		p_2
@@ -17271,8 +17271,8 @@ c	net/minecraft/unmapped/C_95807626	net/minecraft/client/CrashReport
 	m	(Ljava/lang/String;Ljava/lang/Throwable;)V	<init>	<init>
 		p	1		crashTitle
 		p	2		exception
-c	net/minecraft/unmapped/C_96191056	net/minecraft/unmapped/C_96191056
-	m	(Lnet/minecraft/unmapped/C_35971787;)Ljava/lang/String;	m_13946389	m_13946389
+c	net/minecraft/unmapped/C_96191056	argo/format/JsonFormatter
+	m	(Lnet/minecraft/unmapped/C_35971787;)Ljava/lang/String;	m_13946389	format
 		p	1		p_1
 c	net/minecraft/unmapped/C_96459994	net/minecraft/client/renderer/MapRenderer
 	f	[I	f_26988556	pixels
@@ -17885,21 +17885,21 @@ c	net/minecraft/unmapped/C_98888256$C_74597326	net/minecraft/world/item/Item$Tie
 	m	()I	m_45371002	getAttackDamageBonus
 	m	()I	m_73635374	getLevel
 	m	()V	<clinit>	<clinit>
-c	net/minecraft/unmapped/C_98947689	net/minecraft/unmapped/C_98947689
+c	net/minecraft/unmapped/C_98947689	argo/format/CompactJsonFormatter
 	m	()V	<init>	<init>
 	m	(Lnet/minecraft/unmapped/C_35971787;)Ljava/lang/String;	m_13946389	m_13946389
 		p	1		p_1
-	m	(Lnet/minecraft/unmapped/C_35971787;Ljava/io/Writer;)V	m_64336198	m_64336198
+	m	(Lnet/minecraft/unmapped/C_35971787;Ljava/io/Writer;)V	m_64336198	format
 		p	1		p_1
 		p	2		p_2
-	m	(Lnet/minecraft/unmapped/C_49105368;Ljava/io/Writer;)V	m_59998718	m_59998718
+	m	(Lnet/minecraft/unmapped/C_49105368;Ljava/io/Writer;)V	m_59998718	formatJsonNode
 		p	1		p_1
 		p	2		p_2
-c	net/minecraft/unmapped/C_98947689$29312769	net/minecraft/unmapped/C_98947689$29312769
+c	net/minecraft/unmapped/C_98947689$29312769	argo/format/CompactJsonFormatter$29312769
 	f	[I	f_09239599	f_09239599
 	m	()V	<clinit>	<clinit>
-c	net/minecraft/unmapped/C_98947689$C_73364496	net/minecraft/unmapped/C_98947689$C_73364496
-	f	Ljava/lang/String;	f_90196513	f_90196513
+c	net/minecraft/unmapped/C_98947689$C_73364496	argo/format/CompactJsonFormatter$JsonEscapedString
+	f	Ljava/lang/String;	f_90196513	escapedString
 	m	(Ljava/lang/String;)V	<init>	<init>
 		p	1		p_1
 	m	()Ljava/lang/String;	toString	toString
