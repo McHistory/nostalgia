@@ -6,19 +6,19 @@ To see the current version being targeted, check the branch name!
 
 ## Build Setup
 ```properties
-# https://maven.wispforest.io/me/alphamode/nostalgia/
+# https://mvn.devos.one/#/releases/me/alphamode/nostalgia/
 nostalgia_mappings=...
 ```
 
 ```groovy
 repositories {
-    maven { url 'https://maven.wispforest.io' }
+    maven { url 'https://mvn.devos.one/releases' }
 }
 
 <...>
 
 dependencies {
-    mappings "me.alphamode:nostalgia:${project.nostalgia_mappings}:v2"
+    mappings ploceus.mappings("me.alphamode:nostalgia:${project.nostalgia_mappings}:v2")
 }
 ```
 
