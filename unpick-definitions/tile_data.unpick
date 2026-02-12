@@ -1,10 +1,11 @@
-v2
+unpick v4
 
 # Bed
 
-constant bed net/minecraft/world/level/tile/meta/TileData BED_ORIENTATION_MASK
-constant bed net/minecraft/world/level/tile/meta/TileData BED_OCCUPIED_FLAG
-constant bed net/minecraft/world/level/tile/meta/TileData BED_HEAD_PIECE_FLAG
+group int bed
+	net.minecraft.world.level.tile.meta.TileData.BED_ORIENTATION_MASK
+    net.minecraft.world.level.tile.meta.TileData.BED_OCCUPIED_FLAG
+    net.minecraft.world.level.tile.meta.TileData.BED_HEAD_PIECE_FLAG
 
 target_method net/minecraft/world/level/tile/BedTile getBedOrientation (I)I
 	return bed
@@ -17,18 +18,20 @@ target_method net/minecraft/world/level/tile/BedTile isBedOccupied (I)Z
 
 # Rail Shape
 
-constant rail_mask net/minecraft/world/level/tile/meta/RailShape SHAPE_MASK
+group int rail_mask
+	net.minecraft.world.level.tile.meta.RailShape.SHAPE_MASK
 
-constant rail_shape net/minecraft/world/level/tile/meta/RailShape NORTH_SOUTH
-constant rail_shape net/minecraft/world/level/tile/meta/RailShape EAST_WEST
-constant rail_shape net/minecraft/world/level/tile/meta/RailShape ASCENDING_EAST
-constant rail_shape net/minecraft/world/level/tile/meta/RailShape ASCENDING_WEST
-constant rail_shape net/minecraft/world/level/tile/meta/RailShape ASCENDING_NORTH
-constant rail_shape net/minecraft/world/level/tile/meta/RailShape ASCENDING_SOUTH
-constant rail_shape net/minecraft/world/level/tile/meta/RailShape SOUTH_EAST
-constant rail_shape net/minecraft/world/level/tile/meta/RailShape SOUTH_WEST
-constant rail_shape net/minecraft/world/level/tile/meta/RailShape NORTH_WEST
-constant rail_shape net/minecraft/world/level/tile/meta/RailShape NORTH_EAST
+group int rail_shape
+	net.minecraft.world.level.tile.meta.RailShape.NORTH_SOUTH
+    net.minecraft.world.level.tile.meta.RailShape.EAST_WEST
+    net.minecraft.world.level.tile.meta.RailShape.ASCENDING_EAST
+    net.minecraft.world.level.tile.meta.RailShape.ASCENDING_WEST
+    net.minecraft.world.level.tile.meta.RailShape.ASCENDING_NORTH
+    net.minecraft.world.level.tile.meta.RailShape.ASCENDING_SOUTH
+    net.minecraft.world.level.tile.meta.RailShape.SOUTH_EAST
+    net.minecraft.world.level.tile.meta.RailShape.SOUTH_WEST
+    net.minecraft.world.level.tile.meta.RailShape.NORTH_WEST
+    net.minecraft.world.level.tile.meta.RailShape.NORTH_EAST
 
 target_method net/minecraft/world/level/tile/RailTile$RailState updateConnections (I)V
 	param 0 rail_shape

@@ -1,24 +1,25 @@
-v2
+unpick v4
 
-constant block_shape net/minecraft/client/renderer/BlockShapes NONE
-constant block_shape net/minecraft/client/renderer/BlockShapes BLOCK
-constant block_shape net/minecraft/client/renderer/BlockShapes REEDS
-constant block_shape net/minecraft/client/renderer/BlockShapes TORCH
-constant block_shape net/minecraft/client/renderer/BlockShapes FIRE
-constant block_shape net/minecraft/client/renderer/BlockShapes LIQUID
-constant block_shape net/minecraft/client/renderer/BlockShapes REDSTONE
-constant block_shape net/minecraft/client/renderer/BlockShapes CROP
-constant block_shape net/minecraft/client/renderer/BlockShapes DOOR
-constant block_shape net/minecraft/client/renderer/BlockShapes LADDER
-constant block_shape net/minecraft/client/renderer/BlockShapes RAILS
-constant block_shape net/minecraft/client/renderer/BlockShapes STAIRS
-constant block_shape net/minecraft/client/renderer/BlockShapes FENCE
-constant block_shape net/minecraft/client/renderer/BlockShapes LEVER
-constant block_shape net/minecraft/client/renderer/BlockShapes CACTUS
-constant block_shape net/minecraft/client/renderer/BlockShapes BED
-constant block_shape net/minecraft/client/renderer/BlockShapes REPEATER
-constant block_shape net/minecraft/client/renderer/BlockShapes PISTON
-constant block_shape net/minecraft/client/renderer/BlockShapes PISTON_HEAD
+group int block_shape
+	net.minecraft.client.renderer.BlockShapes.NONE
+    net.minecraft.client.renderer.BlockShapes.BLOCK
+    net.minecraft.client.renderer.BlockShapes.REEDS
+    net.minecraft.client.renderer.BlockShapes.TORCH
+    net.minecraft.client.renderer.BlockShapes.FIRE
+    net.minecraft.client.renderer.BlockShapes.LIQUID
+    net.minecraft.client.renderer.BlockShapes.REDSTONE
+    net.minecraft.client.renderer.BlockShapes.CROP
+    net.minecraft.client.renderer.BlockShapes.DOOR
+    net.minecraft.client.renderer.BlockShapes.LADDER
+    net.minecraft.client.renderer.BlockShapes.RAILS
+    net.minecraft.client.renderer.BlockShapes.STAIRS
+    net.minecraft.client.renderer.BlockShapes.FENCE
+    net.minecraft.client.renderer.BlockShapes.LEVER
+    net.minecraft.client.renderer.BlockShapes.CACTUS
+    net.minecraft.client.renderer.BlockShapes.BED
+    net.minecraft.client.renderer.BlockShapes.REPEATER
+    net.minecraft.client.renderer.BlockShapes.PISTON
+    net.minecraft.client.renderer.BlockShapes.PISTON_HEAD
 
 target_method net/minecraft/world/level/tile/Tile getRenderShape ()I
 	return block_shape

@@ -1,4 +1,4 @@
-v2
+unpick v4
 
 # Unpick definition for GL
 
@@ -7,21 +7,7 @@ v2
 # most frequently used in. Lines declaring or using the same constants
 # are grouped.
 
-# Where possible, this will unpick the constant using values from
-# the game jar (usually GlConst in Blaze3D.) If there is no applicable
-# field there, this will use the value from GLxx class in LWJGL,
-# where XX is the lowest version the constant is available in.
-
-# This does not unpick all constants in LWJGL; that'd become
-# too big and target methods become harder to maintain.
-# Only constants that need unpicking in vanilla are listed.
-
-# Texture
-
-constant gl_tex_parameter_pname org/lwjgl/opengl/GL12 GL_TEXTURE_MAX_LEVEL
-constant gl_tex_parameter_pname org/lwjgl/opengl/GL12 GL_TEXTURE_MAX_LOD
-constant gl_tex_parameter_pname org/lwjgl/opengl/GL12 GL_TEXTURE_MIN_LOD
-constant gl_tex_parameter_pname org/lwjgl/opengl/GL14 GL_TEXTURE_LOD_BIAS
+# Types
 
 constant gl_type org/lwjgl/opengl/GL11 GL_BYTE
 constant gl_type org/lwjgl/opengl/GL11 GL_UNSIGNED_BYTE
@@ -33,52 +19,32 @@ constant gl_type org/lwjgl/opengl/GL11 GL_FLOAT
 
 # Vertex Mode
 
-constant gl_vertex_mode org/lwjgl/opengl/GL11 GL_POINTS
-constant gl_vertex_mode org/lwjgl/opengl/GL11 GL_LINES
-constant gl_vertex_mode org/lwjgl/opengl/GL11 GL_LINE_LOOP
-constant gl_vertex_mode org/lwjgl/opengl/GL11 GL_LINE_STRIP
-constant gl_vertex_mode org/lwjgl/opengl/GL11 GL_TRIANGLES
-constant gl_vertex_mode org/lwjgl/opengl/GL11 GL_TRIANGLE_STRIP
-constant gl_vertex_mode org/lwjgl/opengl/GL11 GL_TRIANGLE_FAN
-constant gl_vertex_mode org/lwjgl/opengl/GL11 GL_QUADS
-constant gl_vertex_mode org/lwjgl/opengl/GL11 GL_QUAD_STRIP
-constant gl_vertex_mode org/lwjgl/opengl/GL11 GL_POLYGON
+group int gl_vertex_mode
+	org.lwjgl.opengl.GL11.GL_POINTS
+	org.lwjgl.opengl.GL11.GL_LINES
+    org.lwjgl.opengl.GL11.GL_LINE_LOOP
+    org.lwjgl.opengl.GL11.GL_LINE_STRIP
+    org.lwjgl.opengl.GL11.GL_TRIANGLES
+    org.lwjgl.opengl.GL11.GL_TRIANGLE_STRIP
+    org.lwjgl.opengl.GL11.GL_TRIANGLE_FAN
+    org.lwjgl.opengl.GL11.GL_QUADS
+    org.lwjgl.opengl.GL11.GL_QUAD_STRIP
+    org.lwjgl.opengl.GL11.GL_POLYGON
 
 # Blending Factor
 
-constant gl_blend_factor org/lwjgl/opengl/GL11 GL_ZERO
-constant gl_blend_factor org/lwjgl/opengl/GL11 GL_ONE
-constant gl_blend_factor org/lwjgl/opengl/GL11 GL_SRC_COLOR
-constant gl_blend_factor org/lwjgl/opengl/GL11 GL_ONE_MINUS_SRC_COLOR
-constant gl_blend_factor org/lwjgl/opengl/GL11 GL_SRC_ALPHA
-constant gl_blend_factor org/lwjgl/opengl/GL11 GL_ONE_MINUS_SRC_ALPHA
-constant gl_blend_factor org/lwjgl/opengl/GL11 GL_DST_ALPHA
-constant gl_blend_factor org/lwjgl/opengl/GL11 GL_ONE_MINUS_DST_ALPHA
-
-constant gl_blend_factor org/lwjgl/opengl/GL11 GL_DST_COLOR
-constant gl_blend_factor org/lwjgl/opengl/GL11 GL_ONE_MINUS_DST_COLOR
-constant gl_blend_factor org/lwjgl/opengl/GL11 GL_SRC_ALPHA_SATURATE
-
-# GlDebug - Does not have blaze3d const
-constant gl_debug_source org/lwjgl/opengl/GL43 GL_DEBUG_SOURCE_API
-constant gl_debug_source org/lwjgl/opengl/GL43 GL_DEBUG_SOURCE_WINDOW_SYSTEM
-constant gl_debug_source org/lwjgl/opengl/GL43 GL_DEBUG_SOURCE_SHADER_COMPILER
-constant gl_debug_source org/lwjgl/opengl/GL43 GL_DEBUG_SOURCE_THIRD_PARTY
-constant gl_debug_source org/lwjgl/opengl/GL43 GL_DEBUG_SOURCE_APPLICATION
-constant gl_debug_source org/lwjgl/opengl/GL43 GL_DEBUG_SOURCE_OTHER
-
-constant gl_debug_type org/lwjgl/opengl/GL43 GL_DEBUG_TYPE_ERROR
-constant gl_debug_type org/lwjgl/opengl/GL43 GL_DEBUG_TYPE_DEPRECATED_BEHAVIOR
-constant gl_debug_type org/lwjgl/opengl/GL43 GL_DEBUG_TYPE_UNDEFINED_BEHAVIOR
-constant gl_debug_type org/lwjgl/opengl/GL43 GL_DEBUG_TYPE_PORTABILITY
-constant gl_debug_type org/lwjgl/opengl/GL43 GL_DEBUG_TYPE_PERFORMANCE
-constant gl_debug_type org/lwjgl/opengl/GL43 GL_DEBUG_TYPE_OTHER
-constant gl_debug_type org/lwjgl/opengl/GL43 GL_DEBUG_TYPE_MARKER
-
-constant gl_debug_severity org/lwjgl/opengl/GL43 GL_DEBUG_SEVERITY_HIGH
-constant gl_debug_severity org/lwjgl/opengl/GL43 GL_DEBUG_SEVERITY_MEDIUM
-constant gl_debug_severity org/lwjgl/opengl/GL43 GL_DEBUG_SEVERITY_LOW
-constant gl_debug_severity org/lwjgl/opengl/GL43 GL_DEBUG_SEVERITY_NOTIFICATION
+group int gl_blend_factor
+    org.lwjgl.opengl.GL11.GL_ZERO
+    org.lwjgl.opengl.GL11.GL_ONE
+    org.lwjgl.opengl.GL11.GL_SRC_COLOR
+    org.lwjgl.opengl.GL11.GL_ONE_MINUS_SRC_COLOR
+    org.lwjgl.opengl.GL11.GL_SRC_ALPHA
+    org.lwjgl.opengl.GL11.GL_ONE_MINUS_SRC_ALPHA
+    org.lwjgl.opengl.GL11.GL_DST_ALPHA
+    org.lwjgl.opengl.GL11.GL_ONE_MINUS_DST_ALPHA
+    org.lwjgl.opengl.GL11.GL_DST_COLOR
+    org.lwjgl.opengl.GL11.GL_ONE_MINUS_DST_COLOR
+    org.lwjgl.opengl.GL11.GL_SRC_ALPHA_SATURATE
 
 constant gl_enable_state org/lwjgl/opengl/GL11 GL_NEVER
 constant gl_enable_state org/lwjgl/opengl/GL11 GL_LESS
@@ -106,9 +72,11 @@ constant gl_enable_state org/lwjgl/opengl/GL11 GL_AUX3
 constant gl_enable_state org/lwjgl/opengl/GL11 GL_FLAT
 constant gl_enable_state org/lwjgl/opengl/GL11 GL_SMOOTH
 
-constant gl_enable_state org/lwjgl/opengl/GL11 GL_MODELVIEW
-constant gl_enable_state org/lwjgl/opengl/GL11 GL_PROJECTION
-constant gl_enable_state org/lwjgl/opengl/GL11 GL_TEXTURE
+# Matrix Mode
+group int gl_matrix_mode
+	org.lwjgl.opengl.GL11.GL_MODELVIEW
+    org.lwjgl.opengl.GL11.GL_PROJECTION
+    org.lwjgl.opengl.GL11.GL_TEXTURE
 
 constant gl_enable_state org/lwjgl/opengl/GL11 GL_COLOR
 constant gl_enable_state org/lwjgl/opengl/GL11 GL_DEPTH
@@ -159,44 +127,6 @@ constant gl_enable_client_state org/lwjgl/opengl/GL11 GL_TEXTURE_COORD_ARRAY
 constant gl_enable_client_state org/lwjgl/opengl/GL11 GL_COLOR_ARRAY
 constant gl_enable_client_state org/lwjgl/opengl/GL11 GL_NORMAL_ARRAY
 
-constant gl_hint_mode org/lwjgl/opengl/GL11 GL_DONT_CARE
-
-# note: glGetProgramInfoLog 32768 is not a const or flag
-
-# GlTimer
-
-constant gl_query_target org/lwjgl/opengl/GL33 GL_TIME_ELAPSED
-
-constant gl_query_object_pname org/lwjgl/opengl/GL15 GL_QUERY_RESULT
-constant gl_query_object_pname org/lwjgl/opengl/GL15 GL_QUERY_RESULT_AVAILABLE
-
-# GlDebugInfo
-constant gl_get_string_name org/lwjgl/opengl/GL11 GL_VENDOR
-constant gl_get_string_name org/lwjgl/opengl/GL11 GL_RENDERER
-constant gl_get_string_name org/lwjgl/opengl/GL11 GL_VERSION
-constant gl_get_string_name org/lwjgl/opengl/GL11 GL_EXTENSIONS
-
-# GlStateManager
-
-constant gl_get_integer_pname org/lwjgl/opengl/GL11 GL_MAX_TEXTURE_SIZE
-
-constant gl_logic_op org/lwjgl/opengl/GL11 GL_CLEAR
-constant gl_logic_op org/lwjgl/opengl/GL11 GL_AND
-constant gl_logic_op org/lwjgl/opengl/GL11 GL_AND_REVERSE
-constant gl_logic_op org/lwjgl/opengl/GL11 GL_COPY
-constant gl_logic_op org/lwjgl/opengl/GL11 GL_AND_INVERTED
-constant gl_logic_op org/lwjgl/opengl/GL11 GL_NOOP
-constant gl_logic_op org/lwjgl/opengl/GL11 GL_XOR
-constant gl_logic_op org/lwjgl/opengl/GL11 GL_OR
-constant gl_logic_op org/lwjgl/opengl/GL11 GL_NOR
-constant gl_logic_op org/lwjgl/opengl/GL11 GL_EQUIV
-constant gl_logic_op org/lwjgl/opengl/GL11 GL_INVERT
-constant gl_logic_op org/lwjgl/opengl/GL11 GL_OR_REVERSE
-constant gl_logic_op org/lwjgl/opengl/GL11 GL_COPY_INVERTED
-constant gl_logic_op org/lwjgl/opengl/GL11 GL_OR_INVERTED
-constant gl_logic_op org/lwjgl/opengl/GL11 GL_NAND
-constant gl_logic_op org/lwjgl/opengl/GL11 GL_SET
-
 constant gl_blend_func_factor org/lwjgl/opengl/GL14 GL_CONSTANT_ALPHA
 constant gl_blend_func_factor org/lwjgl/opengl/GL14 GL_CONSTANT_COLOR
 constant gl_blend_func_factor org/lwjgl/opengl/GL14 GL_ONE_MINUS_CONSTANT_ALPHA
@@ -241,7 +171,7 @@ target_method org/lwjgl/opengl/GL11 glBlendFunc (II)V
 	param 1 gl_blend_factor
 
 target_method org/lwjgl/opengl/GL11 glMatrixMode (I)V
-	param 0 gl_enable_state
+	param 0 gl_matrix_mode
 
 target_method org/lwjgl/opengl/GL11 glEnable (I)V
 	param 0 gl_enable_state
@@ -280,26 +210,3 @@ target_method org/lwjgl/opengl/GL11 glLight (IILjava/nio/FloatBuffer;)V
 target_method org/lwjgl/opengl/GL11 glColorMaterial (II)V
 	param 0 gl_enable_state
 	param 1 gl_enable_state
-
-target_method org/lwjgl/opengl/KHRDebug glDebugMessageControl (III[IZ)V
-	param 0 gl_hint_mode
-	param 1 gl_hint_mode
-target_method org/lwjgl/opengl/ARBDebugOutput glDebugMessageControlARB (III[IZ)V
-	param 0 gl_hint_mode
-	param 1 gl_hint_mode
-
-target_method org/lwjgl/opengl/GL32C glBeginQuery (II)V
-	param 0 gl_query_target
-target_method org/lwjgl/opengl/GL32C glEndQuery (I)V
-	param 0 gl_query_target
-
-target_method org/lwjgl/opengl/GL32C glGetQueryObjecti (II)I
-	param 1 gl_query_object_pname
-target_method org/lwjgl/opengl/ARBTimerQuery glGetQueryObjecti64 (II)J
-	param 1 gl_query_object_pname
-
-target_method org/lwjgl/opengl/GL32C glBindBuffer (II)V
-	param 0 gl_bind_buffer_target
-target_method org/lwjgl/opengl/GL32C glBufferData (IJI)V
-	param 0 gl_bind_buffer_target
-	param 2 gl_buffer_data_usage

@@ -1,13 +1,14 @@
-v2
+unpick v4
 
 # Directions
 
-constant direction net/minecraft/util/Facing DOWN
-constant direction net/minecraft/util/Facing UP
-constant direction net/minecraft/util/Facing NORTH
-constant direction net/minecraft/util/Facing SOUTH
-constant direction net/minecraft/util/Facing WEST
-constant direction net/minecraft/util/Facing EAST
+group int direction
+	net.minecraft.util.Facing.DOWN
+    net.minecraft.util.Facing.UP
+    net.minecraft.util.Facing.NORTH
+    net.minecraft.util.Facing.SOUTH
+    net.minecraft.util.Facing.WEST
+    net.minecraft.util.Facing.EAST
 
 target_method net/minecraft/world/level/tile/Tile canPlace (Lnet/minecraft/world/level/Level;IIII)Z
 	param 4 direction

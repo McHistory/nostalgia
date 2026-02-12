@@ -1,18 +1,19 @@
-v2
+unpick v4
 
 # Nbt tags
 
-constant nbt net/minecraft/nbt/Tags TAG_END
-constant nbt net/minecraft/nbt/Tags TAG_BYTE
-constant nbt net/minecraft/nbt/Tags TAG_SHORT
-constant nbt net/minecraft/nbt/Tags TAG_INT
-constant nbt net/minecraft/nbt/Tags TAG_LONG
-constant nbt net/minecraft/nbt/Tags TAG_FLOAT
-constant nbt net/minecraft/nbt/Tags TAG_DOUBLE
-constant nbt net/minecraft/nbt/Tags TAG_BYTE_ARRAY
-constant nbt net/minecraft/nbt/Tags TAG_STRING
-constant nbt net/minecraft/nbt/Tags TAG_LIST
-constant nbt net/minecraft/nbt/Tags TAG_COMPOUND
+group int nbt
+	com.mojang.nbt.Tags.TAG_END
+    com.mojang.nbt.Tags.TAG_BYTE
+    com.mojang.nbt.Tags.TAG_SHORT
+    com.mojang.nbt.Tags.TAG_INT
+    com.mojang.nbt.Tags.TAG_LONG
+    com.mojang.nbt.Tags.TAG_FLOAT
+    com.mojang.nbt.Tags.TAG_DOUBLE
+    com.mojang.nbt.Tags.TAG_BYTE_ARRAY
+    com.mojang.nbt.Tags.TAG_STRING
+    com.mojang.nbt.Tags.TAG_LIST
+    com.mojang.nbt.Tags.TAG_COMPOUND
 
 target_method net/minecraft/nbt/Tag getId ()B
 	return nbt
