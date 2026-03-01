@@ -2,10 +2,10 @@ tiny	2	0
 c	net/minecraft/client/Minecraft
 	f	I	f_87531065	lastClickTick	
 	f	I	f_98934656		f_98934656
-	m	()V	m_89198446	pickBlock	
+	m	()V	m_89198446	handleGrabTexture	
 	m	(Ljava/lang/String;Ljava/lang/String;J)V	m_16362034	selectLevel	
-		p	1		p_1	
-		p	2		p_2	
+		p	1		levelId	
+		p	2		levelName	
 		p	3		seed	
 	m	(Ljava/lang/String;Ljava/lang/String;Lnet/minecraft/unmapped/C_06007608;)V	m_16362034		selectLevel
 		p	1			p_1
@@ -32,7 +32,7 @@ c	net/minecraft/unmapped/C_03140863
 	f	[F	f_02175282		f_02175282
 	f	I	f_74506389		f_74506389
 	m	(F)F	m_68068742	getFov	
-		p	1		partialTick	
+		p	1		a	
 	m	()V	m_78558488		m_78558488
 	m	(FZ)F	m_68068742		getFov
 		p	1			p_1
@@ -163,25 +163,25 @@ c	net/minecraft/unmapped/C_04694721
 		p	6			p_6
 c	net/minecraft/unmapped/C_06041671
 	m	(II[BDDD)V	m_01681293	addRoom	
-		p	1		x	
-		p	2		z	
-		p	3		tiles	
-		p	4		p_4	
-		p	6		p_6	
-		p	8		p_8	
+		p	1		xOffs	
+		p	2		zOffs	
+		p	3		blocks	
+		p	4		xRoom	
+		p	6		yRoom	
+		p	8		zRoom	
 	m	(II[BDDDFFFIID)V	m_83883893	addTunnel	
-		p	1		x	
-		p	2		z	
-		p	3		tiles	
-		p	4		p_4	
-		p	6		p_6	
-		p	8		p_8	
-		p	10		p_10	
-		p	11		p_11	
-		p	12		p_12	
-		p	13		p_13	
-		p	14		p_14	
-		p	15		p_15	
+		p	1		xOffs	
+		p	2		zOffs	
+		p	3		blocks	
+		p	4		xCave	
+		p	6		yCave	
+		p	8		zCave	
+		p	10		thickness	
+		p	11		yRot	
+		p	12		xRot	
+		p	13		step	
+		p	14		dist	
+		p	15		yScale	
 	m	(JII[BDDD)V	m_01681293		addRoom
 		p	1			p_1
 		p	3			p_3
@@ -440,12 +440,12 @@ c	net/minecraft/unmapped/C_17594944	net/minecraft/world/level/LightUpdate
 	m	(Lnet/minecraft/unmapped/C_64041439;)V	m_60654935	update	
 		p	1		level	
 	m	(IIIIII)Z	m_69186287	expandToContain	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-		p	6		p_6	
+		p	1		_x0	
+		p	2		_y0	
+		p	3		_z0	
+		p	4		_x1	
+		p	5		_y1	
+		p	6		_z1	
 c	net/minecraft/unmapped/C_18072592
 	m	()V	m_92895068		m_92895068
 	m	()V	m_95363151		m_95363151
@@ -630,11 +630,11 @@ c	net/minecraft/unmapped/C_28112798
 		p	1		x	
 		p	2		z	
 	m	([DIIII)[D	m_86378052	getTemperatureBlock	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
+		p	1		temperatures	
+		p	2		x	
+		p	3		z	
+		p	4		w	
+		p	5		h	
 	m	()Ljava/util/List;	m_89213474		m_89213474
 	m	(II)F	m_18952974		m_18952974
 		p	1			p_1
@@ -915,16 +915,16 @@ c	net/minecraft/unmapped/C_43616774
 	m	()V	m_95363151		m_95363151
 c	net/minecraft/unmapped/C_43697299
 	m	([DDDDIIIDDD)[D	m_85988903	getRegion	
-		p	1		p_1	
-		p	2		p_2	
-		p	4		p_4	
-		p	6		p_6	
-		p	8		p_8	
-		p	9		p_9	
-		p	10		p_10	
-		p	11		p_11	
-		p	13		p_13	
-		p	15		p_15	
+		p	1		buffer	
+		p	2		x	
+		p	4		y	
+		p	6		z	
+		p	8		xSize	
+		p	9		ySize	
+		p	10		zSize	
+		p	11		xScale	
+		p	13		yScale	
+		p	15		zScale	
 	m	([DIIIIIIDDD)[D	m_85988903		getRegion
 		p	1			p_1
 		p	2			p_2
@@ -987,7 +987,7 @@ c	net/minecraft/unmapped/C_46108969
 		p	3			p_3
 	m	()I	m_98920689		m_98920689
 c	net/minecraft/unmapped/C_46938080	net/minecraft/world/level/levelgen/synth/SimplexNoise	
-	f	[[I	f_77417482	GRADIENT	
+	f	[[I	f_77417482	grad3	
 	f	[I	f_05838194	p	
 	f	D	f_25499375	xo	
 	f	D	f_45591561	yo	
@@ -998,20 +998,20 @@ c	net/minecraft/unmapped/C_46938080	net/minecraft/world/level/levelgen/synth/Sim
 	m	(Ljava/util/Random;)V	<init>	<init>	
 		p	1		random	
 	m	(D)I	m_08806880	fastfloor	
-		p	0		value	
+		p	0		x	
 	m	([IDD)D	m_37245370	dot	
-		p	0		p_0	
-		p	1		p_1	
-		p	3		p_3	
+		p	0		g	
+		p	1		x	
+		p	3		y	
 	m	([DDDIIDDD)V	m_06681260	add	
-		p	1		p_1	
-		p	2		p_2	
-		p	4		p_4	
-		p	6		p_6	
-		p	7		p_7	
-		p	8		p_8	
-		p	10		p_10	
-		p	12		p_12	
+		p	1		buffer	
+		p	2		_x	
+		p	4		_y	
+		p	6		xSize	
+		p	7		ySize	
+		p	8		xs	
+		p	10		ys	
+		p	12		pow	
 	m	()V	<clinit>	<clinit>	
 c	net/minecraft/unmapped/C_47900077
 	m	(Lnet/minecraft/unmapped/C_64041439;DDDDDDLnet/minecraft/unmapped/C_98888256;)V	<init>		<init>
@@ -1057,11 +1057,11 @@ c	net/minecraft/unmapped/C_49004282
 		p	1		level	
 		p	2		seed	
 	m	(II[B[Lnet/minecraft/unmapped/C_28105876;[D)V	m_79236571	prepareHeights	
-		p	1		x	
-		p	2		z	
-		p	3		tiles	
+		p	1		xOffs	
+		p	2		zOffs	
+		p	3		blocks	
 		p	4		biomes	
-		p	5		p_5	
+		p	5		temperatures	
 	m	(Lnet/minecraft/unmapped/C_64041439;JZ)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
@@ -1305,14 +1305,14 @@ c	net/minecraft/unmapped/C_64041439
 		p	4		z	
 		p	5		lightLevel	
 	m	(Lnet/minecraft/unmapped/C_92766678;IIIIIIZ)V	m_01981485	updateLight	
-		p	1		type	
+		p	1		layer	
 		p	2		x0	
 		p	3		y0	
 		p	4		z0	
 		p	5		x1	
 		p	6		y1	
 		p	7		z1	
-		p	8		p_8	
+		p	8		join	
 	m	()V	<clinit>	<clinit>	
 	m	(Lnet/minecraft/unmapped/C_08489468;Ljava/lang/String;Lnet/minecraft/unmapped/C_90532916;Lnet/minecraft/unmapped/C_06007608;)V	<init>		<init>
 		p	1			p_1
@@ -1430,26 +1430,26 @@ c	net/minecraft/unmapped/C_68070166	net/minecraft/world/level/levelgen/synth/Per
 	f	I	f_25207486	octaves	
 	m	(Ljava/util/Random;I)V	<init>	<init>	
 		p	1		random	
-		p	2		octaves	
+		p	2		levels	
 	m	([DDDIIDDD)[D	m_09590463	getRegion	
-		p	1		p_1	
-		p	2		p_2	
-		p	4		p_4	
-		p	6		p_6	
-		p	7		p_7	
-		p	8		p_8	
-		p	10		p_10	
-		p	12		p_12	
+		p	1		buffer	
+		p	2		x	
+		p	4		y	
+		p	6		xSize	
+		p	7		ySize	
+		p	8		xScale	
+		p	10		yScale	
+		p	12		sizeScale	
 	m	([DDDIIDDDD)[D	m_63714200	getRegion	
-		p	1		p_1	
-		p	2		p_2	
-		p	4		p_4	
-		p	6		p_6	
-		p	7		p_7	
-		p	8		p_8	
-		p	10		p_10	
-		p	12		p_12	
-		p	14		p_14	
+		p	1		buffer	
+		p	2		x	
+		p	4		y	
+		p	6		xSize	
+		p	7		ySize	
+		p	8		xScale	
+		p	10		yScale	
+		p	12		sizeScale	
+		p	14		powScale	
 c	net/minecraft/unmapped/C_68844438	net/minecraft/world/item/CookieItem	
 	m	(IIZI)V	<init>	<init>	
 		p	1		id	
@@ -1700,14 +1700,14 @@ c	net/minecraft/unmapped/C_83928382
 	m	()Z	m_87073809		m_87073809
 	m	()Z	m_13345205		m_13345205
 c	net/minecraft/unmapped/C_84173844
-	f	D	f_61667819	f_61667819	
-	f	D	f_95648801	f_95648801	
-	f	F	f_61667819		f_61667819
-	f	F	f_95648801		f_95648801
+	f	D	f_61667819	temperature	
+	f	D	f_95648801	downfall	
+	f	F	f_61667819		temperature
+	f	F	f_95648801		downfall
 	m	(Lnet/minecraft/unmapped/C_28105876;DD)V	<init>	<init>	
-		p	1		biome	
-		p	2		p_2	
-		p	4		p_4	
+		p	1		fixed	
+		p	2		temperature	
+		p	4		downfall	
 	m	(II)D	m_78021626	m_78021626	
 		p	1		p_1	
 		p	2		p_2	
@@ -1767,13 +1767,13 @@ c	net/minecraft/unmapped/C_84501715
 		p	6			p_6
 		p	7			p_7
 c	net/minecraft/unmapped/C_85051018
-	f	[D	f_43689520	f_43689520	
+	f	[D	f_43689520	temperatures	
 	m	(II[B[Lnet/minecraft/unmapped/C_28105876;[D)V	m_09144429	prepareHeights	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
+		p	1		xOffs	
+		p	2		zOffs	
+		p	3		blocks	
+		p	4		biomes	
+		p	5		temperatures	
 	m	(II[B[Lnet/minecraft/unmapped/C_28105876;)V	m_09144429		prepareHeights
 		p	1			p_1
 		p	2			p_2
