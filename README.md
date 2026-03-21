@@ -18,7 +18,11 @@ repositories {
 <...>
 
 dependencies {
-    mappings ploceus.mappings("me.alphamode:nostalgia:${project.nostalgia_mappings}:v2")
+    mappings ploceus.layeredMappings {
+        mappings("me.alphamode:nostalgia:${project.nostalgia_mappings}:v2", {
+            containsUnpick()
+        })
+    }
 }
 ```
 
