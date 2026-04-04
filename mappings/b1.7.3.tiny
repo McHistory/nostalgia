@@ -1377,7 +1377,7 @@ c	net/minecraft/unmapped/C_04428890	net/minecraft/world/entity/monster/Skeleton
 	m	()V	m_88345579	m_88345579
 	m	()Lnet/minecraft/unmapped/C_88708284;	m_68650840	m_68650840
 	m	()V	<clinit>	<clinit>
-c	net/minecraft/unmapped/C_04694721	net/minecraft/network/packets/PlayerChangeDimensionPacket
+c	net/minecraft/unmapped/C_04694721	net/minecraft/network/packets/RespawnPacket
 	f	B	f_65692041	dimension
 	m	()V	<init>	<init>
 	m	(B)V	<init>	<init>
@@ -2018,7 +2018,7 @@ c	net/minecraft/unmapped/C_10918870	net/minecraft/network/PacketListener
 		p	1		packet
 	m	(Lnet/minecraft/unmapped/C_65195890;)V	m_18396052	handleSetHealth
 		p	1		packet
-	m	(Lnet/minecraft/unmapped/C_04694721;)V	m_79091866	handlePlayerChangeDimension
+	m	(Lnet/minecraft/unmapped/C_04694721;)V	m_79091866	handleRespawn
 		p	1		packet
 	m	(Lnet/minecraft/unmapped/C_04411667;)V	m_96645687	handleExplosion
 		p	1		packet
@@ -4713,7 +4713,7 @@ c	net/minecraft/unmapped/C_28718426	net/minecraft/client/model/CreeperModel
 		p	4		p_4
 		p	5		p_5
 		p	6		p_6
-c	net/minecraft/unmapped/C_28851891	net/minecraft/network/packets/KeepAlivePacket
+c	net/minecraft/unmapped/C_28851891	net/minecraft/unmapped/C_28851891
 	m	()V	<init>	<init>
 	m	(Lnet/minecraft/unmapped/C_10918870;)V	m_04853589	m_04853589
 		p	1		p_1
@@ -6840,7 +6840,7 @@ c	net/minecraft/unmapped/C_42232651	net/minecraft/world/entity/Entity
 		p	3		onGround
 	m	()Lnet/minecraft/unmapped/C_82690114;	m_23077971	getCollideBox
 	m	(I)V	m_29258630	burn
-		p	1		damage
+		p	1		dmg
 	m	(F)V	m_43538800	causeFallDamage
 		p	1		fallDistance
 	m	()Z	m_48886985	isInWaterOrRain
@@ -12839,7 +12839,7 @@ c	net/minecraft/unmapped/C_74087615	com/mojang/nbt/CompoundTag
 	m	(Ljava/lang/String;Z)V	m_11270099	putBoolean
 		p	1		key
 		p	2		val
-	m	(Ljava/lang/String;)Z	m_97612750	hasKey
+	m	(Ljava/lang/String;)Z	m_97612750	contains
 		p	1		key
 	m	(Ljava/lang/String;)B	m_84056038	getByte
 		p	1		key
@@ -12984,8 +12984,8 @@ c	net/minecraft/unmapped/C_74425583	net/minecraft/world/entity/Mob
 	m	(F)V	m_43538800	m_43538800
 		p	1		p_1
 	m	(FF)V	m_52468627	travel
-		p	1		xxa
-		p	2		zza
+		p	1		xa
+		p	2		ya
 	m	()Z	m_05676876	onLadder
 	m	(Lnet/minecraft/unmapped/C_74087615;)V	m_61937125	m_61937125
 		p	1		p_1
