@@ -739,8 +739,8 @@ c	net/minecraft/unmapped/C_03140863	net/minecraft/client/renderer/GameRenderer
 	f	F	f_94048103	yRotO
 	f	F	f_50372751	xRot
 	f	F	f_60542103	xRotO
-	f	F	f_94750402	fov
-	f	F	f_80712508	oldFov
+	f	F	f_94750402	fovOffset
+	f	F	f_80712508	fovOffsetO
 	f	F	f_10622198	camTilt
 	f	F	f_98984257	camTiltO
 	f	Z	f_88330725	thickFog
@@ -946,13 +946,13 @@ c	net/minecraft/unmapped/C_03670941	net/minecraft/client/renderer/TileRenderer
 	f	F	f_97619740	llX00
 	f	F	f_81248476	ll0Y0
 	f	F	f_39115246	ll00Z
-	f	F	f_12891751	ll0yZ
-	f	F	f_59766724	llxyz
-	f	F	f_53700165	llXyz
-	f	F	f_85489325	llxy0
-	f	F	f_94971142	llxyZ
-	f	F	f_19477481	llXy0
-	f	F	f_16858408	ll0yz
+	f	F	f_12891751	llxyz
+	f	F	f_59766724	llxy0
+	f	F	f_53700165	llxyZ
+	f	F	f_85489325	ll0yz
+	f	F	f_94971142	ll0yZ
+	f	F	f_19477481	llXyz
+	f	F	f_16858408	llXy0
 	f	F	f_87321826	llXyZ
 	f	F	f_16827406	llxYz
 	f	F	f_74206365	llxY0
@@ -1006,36 +1006,36 @@ c	net/minecraft/unmapped/C_03670941	net/minecraft/client/renderer/TileRenderer
 		p	3		y
 		p	4		z
 	m	(Lnet/minecraft/unmapped/C_81592558;III)Z	m_99270071	tesselateInWorld
-		p	1		tile
+		p	1		tt
 		p	2		x
 		p	3		y
 		p	4		z
 	m	(Lnet/minecraft/unmapped/C_81592558;III)Z	m_48483610	tesselateBedInWorld
-		p	1		tile
+		p	1		tt
 		p	2		x
 		p	3		y
 		p	4		z
 	m	(Lnet/minecraft/unmapped/C_81592558;III)Z	m_93839352	tesselateTorchInWorld
-		p	1		tile
+		p	1		tt
 		p	2		x
 		p	3		y
 		p	4		z
 	m	(Lnet/minecraft/unmapped/C_81592558;III)Z	m_52007154	tesselateRepeaterInWorld
+		p	1		tt
+		p	2		x
+		p	3		y
+		p	4		z
+	m	(Lnet/minecraft/unmapped/C_81592558;III)V	m_31123656	tesselatePistonBaseForceExtended
 		p	1		tile
 		p	2		x
 		p	3		y
 		p	4		z
-	m	(Lnet/minecraft/unmapped/C_81592558;III)V	m_31123656	tesselatePistonHeadInWorld
-		p	1		tile
+	m	(Lnet/minecraft/unmapped/C_81592558;IIIZ)Z	m_53644461	tesselatePistonBaseInWorld
+		p	1		tt
 		p	2		x
 		p	3		y
 		p	4		z
-	m	(Lnet/minecraft/unmapped/C_81592558;IIIZ)Z	m_53644461	tesselatePistonInWorld
-		p	1		tile
-		p	2		x
-		p	3		y
-		p	4		z
-		p	5		head
+		p	5		forceExtended
 	m	(DDDDDDFD)V	m_89003825	renderPistonArmUpDown
 		p	1		x0
 		p	3		x1
@@ -1063,20 +1063,20 @@ c	net/minecraft/unmapped/C_03670941	net/minecraft/client/renderer/TileRenderer
 		p	11		z1
 		p	13		br
 		p	14		armLengthPixels
-	m	(Lnet/minecraft/unmapped/C_81592558;IIIZ)V	m_93367829	tesselateHeadPistonInWorldNoCulling
-		p	1		tt
-		p	2		x
-		p	3		y
-		p	4		z
-		p	5		extended
-	m	(Lnet/minecraft/unmapped/C_81592558;IIIZ)Z	m_83961557	tesselateHeadPistonInWorld
-		p	1		tt
-		p	2		x
-		p	3		y
-		p	4		z
-		p	5		extended
-	m	(Lnet/minecraft/unmapped/C_81592558;III)Z	m_26916209	tesselateLeverInWorld
+	m	(Lnet/minecraft/unmapped/C_81592558;IIIZ)V	m_93367829	tesselatePistonArmNoCulling
 		p	1		tile
+		p	2		x
+		p	3		y
+		p	4		z
+		p	5		fullArm
+	m	(Lnet/minecraft/unmapped/C_81592558;IIIZ)Z	m_83961557	tesselatePistonExtensionInWorld
+		p	1		tt
+		p	2		x
+		p	3		y
+		p	4		z
+		p	5		fullArm
+	m	(Lnet/minecraft/unmapped/C_81592558;III)Z	m_26916209	tesselateLeverInWorld
+		p	1		tt
 		p	2		x
 		p	3		y
 		p	4		z
@@ -1101,7 +1101,7 @@ c	net/minecraft/unmapped/C_03670941	net/minecraft/client/renderer/TileRenderer
 		p	3		y
 		p	4		z
 	m	(Lnet/minecraft/unmapped/C_81592558;III)Z	m_42653613	tesselateCrossInWorld
-		p	1		tile
+		p	1		tt
 		p	2		x
 		p	3		y
 		p	4		z
@@ -1159,7 +1159,7 @@ c	net/minecraft/unmapped/C_03670941	net/minecraft/client/renderer/TileRenderer
 		p	6		g
 		p	7		b
 	m	(Lnet/minecraft/unmapped/C_81592558;IIIFFF)Z	m_05779540	tesselateBlockInWorld
-		p	1		tile
+		p	1		tt
 		p	2		x
 		p	3		y
 		p	4		z
@@ -1185,51 +1185,51 @@ c	net/minecraft/unmapped/C_03670941	net/minecraft/client/renderer/TileRenderer
 		p	3		y
 		p	4		z
 	m	(Lnet/minecraft/unmapped/C_81592558;III)Z	m_58298507	tesselateStairsInWorld
-		p	1		tile
+		p	1		tt
 		p	2		x
 		p	3		y
 		p	4		z
 	m	(Lnet/minecraft/unmapped/C_81592558;III)Z	m_32118637	tesselateDoorInWorld
-		p	1		tile
+		p	1		tt
 		p	2		x
 		p	3		y
 		p	4		z
 	m	(Lnet/minecraft/unmapped/C_81592558;DDDI)V	m_52572467	renderFaceDown
-		p	1		tile
+		p	1		tt
 		p	2		x
 		p	4		y
 		p	6		z
-		p	8		texture
+		p	8		tex
 	m	(Lnet/minecraft/unmapped/C_81592558;DDDI)V	m_53051530	renderFaceUp
-		p	1		tile
+		p	1		tt
 		p	2		x
 		p	4		y
 		p	6		z
-		p	8		texture
+		p	8		tex
 	m	(Lnet/minecraft/unmapped/C_81592558;DDDI)V	m_01007294	renderNorth
-		p	1		tile
+		p	1		tt
 		p	2		x
 		p	4		y
 		p	6		z
-		p	8		texture
+		p	8		tex
 	m	(Lnet/minecraft/unmapped/C_81592558;DDDI)V	m_11750528	renderSouth
-		p	1		tile
+		p	1		tt
 		p	2		x
 		p	4		y
 		p	6		z
-		p	8		texture
+		p	8		tex
 	m	(Lnet/minecraft/unmapped/C_81592558;DDDI)V	m_46310987	renderWest
-		p	1		tile
+		p	1		tt
 		p	2		x
 		p	4		y
 		p	6		z
-		p	8		texture
+		p	8		tex
 	m	(Lnet/minecraft/unmapped/C_81592558;DDDI)V	m_13161429	renderEast
-		p	1		tile
+		p	1		tt
 		p	2		x
 		p	4		y
 		p	6		z
-		p	8		texture
+		p	8		tex
 	m	(Lnet/minecraft/unmapped/C_81592558;IF)V	m_96377958	renderTile
 		p	1		tile
 		p	2		data
@@ -2108,7 +2108,7 @@ c	net/minecraft/unmapped/C_11340426	net/minecraft/world/level/tile/DirtTile
 	m	(II)V	<init>	<init>
 		p	1		id
 		p	2		texture
-c	net/minecraft/unmapped/C_11403679	net/minecraft/world/item/LogItem
+c	net/minecraft/unmapped/C_11403679	net/minecraft/world/item/MultiTextureTileItem
 	m	(I)V	<init>	<init>
 		p	1		p_1
 	m	(I)I	m_27460772	m_27460772
@@ -2352,21 +2352,21 @@ c	net/minecraft/unmapped/C_13231860	net/minecraft/world/level/tile/StairsTile
 		p	4		p_4
 		p	5		p_5
 c	net/minecraft/unmapped/C_13378080	net/minecraft/world/level/material/MaterialColor
-	f	[Lnet/minecraft/unmapped/C_13378080;	f_63384265	MATERIAL_COLORS
-	f	Lnet/minecraft/unmapped/C_13378080;	f_57996895	NONE
-	f	Lnet/minecraft/unmapped/C_13378080;	f_54617532	GRASS
-	f	Lnet/minecraft/unmapped/C_13378080;	f_37302207	SAND
-	f	Lnet/minecraft/unmapped/C_13378080;	f_94230193	WOOL
-	f	Lnet/minecraft/unmapped/C_13378080;	f_63414629	FIRE
-	f	Lnet/minecraft/unmapped/C_13378080;	f_85222740	ICE
-	f	Lnet/minecraft/unmapped/C_13378080;	f_77064506	METAL
-	f	Lnet/minecraft/unmapped/C_13378080;	f_16403774	PLANT
-	f	Lnet/minecraft/unmapped/C_13378080;	f_20536931	SNOW
-	f	Lnet/minecraft/unmapped/C_13378080;	f_14000420	CLAY
-	f	Lnet/minecraft/unmapped/C_13378080;	f_64375588	DIRT
-	f	Lnet/minecraft/unmapped/C_13378080;	f_48498748	STONE
-	f	Lnet/minecraft/unmapped/C_13378080;	f_00332608	WATER
-	f	Lnet/minecraft/unmapped/C_13378080;	f_58387843	WOOD
+	f	[Lnet/minecraft/unmapped/C_13378080;	f_63384265	colors
+	f	Lnet/minecraft/unmapped/C_13378080;	f_57996895	none
+	f	Lnet/minecraft/unmapped/C_13378080;	f_54617532	grass
+	f	Lnet/minecraft/unmapped/C_13378080;	f_37302207	sand
+	f	Lnet/minecraft/unmapped/C_13378080;	f_94230193	cloth
+	f	Lnet/minecraft/unmapped/C_13378080;	f_63414629	fire
+	f	Lnet/minecraft/unmapped/C_13378080;	f_85222740	ice
+	f	Lnet/minecraft/unmapped/C_13378080;	f_77064506	metal
+	f	Lnet/minecraft/unmapped/C_13378080;	f_16403774	plant
+	f	Lnet/minecraft/unmapped/C_13378080;	f_20536931	snow
+	f	Lnet/minecraft/unmapped/C_13378080;	f_14000420	clay
+	f	Lnet/minecraft/unmapped/C_13378080;	f_64375588	dirt
+	f	Lnet/minecraft/unmapped/C_13378080;	f_48498748	stone
+	f	Lnet/minecraft/unmapped/C_13378080;	f_00332608	water
+	f	Lnet/minecraft/unmapped/C_13378080;	f_58387843	wood
 	f	I	f_09233878	color
 	f	I	f_45536788	id
 	m	(II)V	<init>	<init>
@@ -3353,7 +3353,7 @@ c	net/minecraft/unmapped/C_18719811	net/minecraft/world/level/tile/GrassTile
 	m	(ILjava/util/Random;)I	m_78174230	m_78174230
 		p	1		p_1
 		p	2		p_2
-c	net/minecraft/unmapped/C_18811114	net/minecraft/world/level/tile/SpongeTile
+c	net/minecraft/unmapped/C_18811114	net/minecraft/world/level/tile/Sponge
 	m	(I)V	<init>	<init>
 		p	1		id
 	m	(Lnet/minecraft/unmapped/C_64041439;III)V	m_69334720	m_69334720
@@ -4049,7 +4049,7 @@ c	net/minecraft/unmapped/C_23244556	net/minecraft/client/model/GhastModel
 		p	4		p_4
 		p	5		p_5
 		p	6		p_6
-c	net/minecraft/unmapped/C_23330260	net/minecraft/world/level/tile/LogTile
+c	net/minecraft/unmapped/C_23330260	net/minecraft/world/level/tile/TreeTile
 	m	(I)V	<init>	<init>
 		p	1		id
 	m	(Ljava/util/Random;)I	m_23574716	m_23574716
@@ -4584,17 +4584,17 @@ c	net/minecraft/unmapped/C_28000924	net/minecraft/client/gui/inventory/CraftingS
 	m	(F)V	m_98661498	m_98661498
 		p	1		p_1
 c	net/minecraft/unmapped/C_28105876	net/minecraft/world/level/biome/Biome
-	f	Lnet/minecraft/unmapped/C_28105876;	f_57833480	RAINFOREST
+	f	Lnet/minecraft/unmapped/C_28105876;	f_57833480	rainForest
 	f	Lnet/minecraft/unmapped/C_28105876;	f_63543934	swampland
-	f	Lnet/minecraft/unmapped/C_28105876;	f_83615720	SEASONAL_FOREST
+	f	Lnet/minecraft/unmapped/C_28105876;	f_83615720	seasonalForest
 	f	Lnet/minecraft/unmapped/C_28105876;	f_87807357	forest
-	f	Lnet/minecraft/unmapped/C_28105876;	f_54339456	SAVANNA
-	f	Lnet/minecraft/unmapped/C_28105876;	f_16568699	SHRUBLAND
+	f	Lnet/minecraft/unmapped/C_28105876;	f_54339456	savanna
+	f	Lnet/minecraft/unmapped/C_28105876;	f_16568699	shrubland
 	f	Lnet/minecraft/unmapped/C_28105876;	f_94700108	taiga
 	f	Lnet/minecraft/unmapped/C_28105876;	f_73939727	desert
 	f	Lnet/minecraft/unmapped/C_28105876;	f_81101322	plains
-	f	Lnet/minecraft/unmapped/C_28105876;	f_87128404	ICE_DESERT
-	f	Lnet/minecraft/unmapped/C_28105876;	f_87467385	TUNDRA
+	f	Lnet/minecraft/unmapped/C_28105876;	f_87128404	iceDesert
+	f	Lnet/minecraft/unmapped/C_28105876;	f_87467385	tundra
 	f	Lnet/minecraft/unmapped/C_28105876;	f_13553440	hell
 	f	Lnet/minecraft/unmapped/C_28105876;	f_16580057	sky
 	f	Ljava/lang/String;	f_53376351	name
@@ -4926,10 +4926,10 @@ c	net/minecraft/unmapped/C_29639016	net/minecraft/server/PlayerList
 	f	Ljava/util/Set;	f_37860742	ipBans
 	f	Ljava/util/Set;	f_16318836	ops
 	f	Ljava/util/Set;	f_62605414	whitelist
-	f	Ljava/io/File;	f_03541485	banListFile
-	f	Ljava/io/File;	f_67533055	bannedIpsFile
-	f	Ljava/io/File;	f_68188075	opsFile
-	f	Ljava/io/File;	f_54741235	whitelistFile
+	f	Ljava/io/File;	f_03541485	banFile
+	f	Ljava/io/File;	f_67533055	ipBanFile
+	f	Ljava/io/File;	f_68188075	opFile
+	f	Ljava/io/File;	f_54741235	whiteListFile
 	f	Lnet/minecraft/unmapped/C_34189003;	f_59721975	playerIo
 	f	Z	f_36927288	doWhiteList
 	m	(Lnet/minecraft/server/MinecraftServer;)V	<init>	<init>
@@ -5510,7 +5510,7 @@ c	net/minecraft/unmapped/C_34189003	net/minecraft/world/level/storage/PlayerIO
 		p	1		player
 	m	(Lnet/minecraft/unmapped/C_40996800;)V	m_97800875	load
 		p	1		player
-c	net/minecraft/unmapped/C_34225397	net/minecraft/world/level/tile/SaplingTile
+c	net/minecraft/unmapped/C_34225397	net/minecraft/world/level/tile/Sapling
 	m	(II)V	<init>	<init>
 		p	1		p_1
 		p	2		p_2
@@ -6165,9 +6165,9 @@ c	net/minecraft/unmapped/C_37790612	net/minecraft/server/network/ServerConnectio
 		p	1		server
 		p	2		address
 		p	3		port
-	m	(Lnet/minecraft/unmapped/C_99660737;)V	m_49479448	addConnection
+	m	(Lnet/minecraft/unmapped/C_99660737;)V	m_49479448	addPlayerConnection
 		p	1		listener
-	m	(Lnet/minecraft/unmapped/C_58873528;)V	m_80694640	addPendingConnection
+	m	(Lnet/minecraft/unmapped/C_58873528;)V	m_80694640	handleConnection
 		p	1		listener
 	m	()V	m_83305636	tick
 	m	(Lnet/minecraft/unmapped/C_37790612;)Ljava/net/ServerSocket;	m_30670130	m_30670130
@@ -6600,7 +6600,7 @@ c	net/minecraft/unmapped/C_41051854$C_36653667	net/minecraft/server/LogConfigura
 		p	1		record
 c	net/minecraft/unmapped/C_41189336	net/minecraft/world/entity/Syncable
 	c	A entity that uses {@link net.minecraft.world.entity.SynchedEntityData}.\nSee {@link net.minecraft.server.level.ServerEntity#getAddEntityPacket} and {@link net.minecraft.server.EntityTracker#addTrackedEntity}
-c	net/minecraft/unmapped/C_41611298	net/minecraft/world/item/PistonItem
+c	net/minecraft/unmapped/C_41611298	net/minecraft/world/item/PistonTileItem
 	m	(I)V	<init>	<init>
 		p	1		p_1
 	m	(I)I	m_65403122	m_65403122
@@ -7820,7 +7820,7 @@ c	net/minecraft/unmapped/C_47540058	net/minecraft/client/particle/Particle
 	m	()V	m_24884718	m_24884718
 	m	(Lnet/minecraft/unmapped/C_96603444;FFFFFF)V	m_32469004	render
 		p	1		t
-		p	2		partialTick
+		p	2		a
 		p	3		xa
 		p	4		ya
 		p	5		za
@@ -8429,14 +8429,14 @@ c	net/minecraft/unmapped/C_50078015	net/minecraft/world/level/LevelListener
 		p	6		z
 		p	8		volume
 		p	9		pitch
-	m	(Ljava/lang/String;DDDDDD)V	m_90456491	spawnParticle
+	m	(Ljava/lang/String;DDDDDD)V	m_90456491	addParticle
 		p	1		name
 		p	2		x
 		p	4		y
 		p	6		z
-		p	8		xd
-		p	10		yd
-		p	12		zd
+		p	8		xa
+		p	10		ya
+		p	12		za
 	m	(Lnet/minecraft/unmapped/C_42232651;)V	m_39925999	entityAdded
 		p	1		entity
 	m	(Lnet/minecraft/unmapped/C_42232651;)V	m_93054695	entityRemoved
@@ -8727,7 +8727,7 @@ c	net/minecraft/unmapped/C_52414917	argo/jdom/JsonFieldBuilder
 		p	1		jsonNodeBuilder
 	m	()Lnet/minecraft/unmapped/C_65175111;	m_18316919	buildKey
 	m	()Lnet/minecraft/unmapped/C_49105368;	m_84510030	buildValue
-c	net/minecraft/unmapped/C_52610529	net/minecraft/world/item/LeavesItem
+c	net/minecraft/unmapped/C_52610529	net/minecraft/world/item/LeafTileItem
 	m	(I)V	<init>	<init>
 		p	1		p_1
 	m	(I)I	m_65403122	m_65403122
@@ -16074,34 +16074,34 @@ c	net/minecraft/unmapped/C_89105241	net/minecraft/stats/ItemStat
 		p	3		itemId
 	m	()I	m_74148543	getItemId
 c	net/minecraft/unmapped/C_89604096	net/minecraft/world/level/material/Material
-	f	Lnet/minecraft/unmapped/C_89604096;	f_74758574	AIR
-	f	Lnet/minecraft/unmapped/C_89604096;	f_71726800	GRASS
-	f	Lnet/minecraft/unmapped/C_89604096;	f_77812914	DIRT
-	f	Lnet/minecraft/unmapped/C_89604096;	f_60980542	WOOD
-	f	Lnet/minecraft/unmapped/C_89604096;	f_64385500	STONE
-	f	Lnet/minecraft/unmapped/C_89604096;	f_16486116	METAL
-	f	Lnet/minecraft/unmapped/C_89604096;	f_99458234	WATER
-	f	Lnet/minecraft/unmapped/C_89604096;	f_70482856	LAVA
-	f	Lnet/minecraft/unmapped/C_89604096;	f_85479516	LEAVES
-	f	Lnet/minecraft/unmapped/C_89604096;	f_43755137	PLANT
-	f	Lnet/minecraft/unmapped/C_89604096;	f_30114615	SPONGE
-	f	Lnet/minecraft/unmapped/C_89604096;	f_92747101	WOOL
-	f	Lnet/minecraft/unmapped/C_89604096;	f_04585773	FIRE
-	f	Lnet/minecraft/unmapped/C_89604096;	f_63222177	SAND
-	f	Lnet/minecraft/unmapped/C_89604096;	f_31810391	DECORATION
-	f	Lnet/minecraft/unmapped/C_89604096;	f_60100127	GLASS
-	f	Lnet/minecraft/unmapped/C_89604096;	f_18714433	EXPLOSIVE
-	f	Lnet/minecraft/unmapped/C_89604096;	f_57926051	BASIC_PLANT
-	f	Lnet/minecraft/unmapped/C_89604096;	f_13130403	ICE
-	f	Lnet/minecraft/unmapped/C_89604096;	f_66199858	TOP_SNOW
-	f	Lnet/minecraft/unmapped/C_89604096;	f_53619813	SNOW
-	f	Lnet/minecraft/unmapped/C_89604096;	f_08384850	CACTUS
-	f	Lnet/minecraft/unmapped/C_89604096;	f_35482456	CLAY
-	f	Lnet/minecraft/unmapped/C_89604096;	f_11404709	VEGETABLE
-	f	Lnet/minecraft/unmapped/C_89604096;	f_77258942	PORTAL
-	f	Lnet/minecraft/unmapped/C_89604096;	f_96463353	CAKE
-	f	Lnet/minecraft/unmapped/C_89604096;	f_39748349	WEB
-	f	Lnet/minecraft/unmapped/C_89604096;	f_95157123	PISTON
+	f	Lnet/minecraft/unmapped/C_89604096;	f_74758574	air
+	f	Lnet/minecraft/unmapped/C_89604096;	f_71726800	grass
+	f	Lnet/minecraft/unmapped/C_89604096;	f_77812914	dirt
+	f	Lnet/minecraft/unmapped/C_89604096;	f_60980542	wood
+	f	Lnet/minecraft/unmapped/C_89604096;	f_64385500	stone
+	f	Lnet/minecraft/unmapped/C_89604096;	f_16486116	metal
+	f	Lnet/minecraft/unmapped/C_89604096;	f_99458234	water
+	f	Lnet/minecraft/unmapped/C_89604096;	f_70482856	lava
+	f	Lnet/minecraft/unmapped/C_89604096;	f_85479516	leaves
+	f	Lnet/minecraft/unmapped/C_89604096;	f_43755137	plant
+	f	Lnet/minecraft/unmapped/C_89604096;	f_30114615	sponge
+	f	Lnet/minecraft/unmapped/C_89604096;	f_92747101	cloth
+	f	Lnet/minecraft/unmapped/C_89604096;	f_04585773	fire
+	f	Lnet/minecraft/unmapped/C_89604096;	f_63222177	sand
+	f	Lnet/minecraft/unmapped/C_89604096;	f_31810391	decoration
+	f	Lnet/minecraft/unmapped/C_89604096;	f_60100127	glass
+	f	Lnet/minecraft/unmapped/C_89604096;	f_18714433	explosive
+	f	Lnet/minecraft/unmapped/C_89604096;	f_57926051	coral
+	f	Lnet/minecraft/unmapped/C_89604096;	f_13130403	ice
+	f	Lnet/minecraft/unmapped/C_89604096;	f_66199858	topSnow
+	f	Lnet/minecraft/unmapped/C_89604096;	f_53619813	snow
+	f	Lnet/minecraft/unmapped/C_89604096;	f_08384850	cactus
+	f	Lnet/minecraft/unmapped/C_89604096;	f_35482456	clay
+	f	Lnet/minecraft/unmapped/C_89604096;	f_11404709	vegetable
+	f	Lnet/minecraft/unmapped/C_89604096;	f_77258942	portal
+	f	Lnet/minecraft/unmapped/C_89604096;	f_96463353	cake
+	f	Lnet/minecraft/unmapped/C_89604096;	f_39748349	web
+	f	Lnet/minecraft/unmapped/C_89604096;	f_95157123	piston
 	f	Z	f_09322679	flammable
 	f	Z	f_46270857	replaceable
 	f	Z	f_08224746	notSolidBlocking
@@ -16305,7 +16305,7 @@ c	net/minecraft/unmapped/C_90532916	net/minecraft/world/level/dimension/Dimensio
 		p	0		id
 	m	()F	m_46261785	getCloudHeight
 	m	()Z	m_92219027	hasNormalSkyColor
-c	net/minecraft/unmapped/C_90574280	net/minecraft/world/level/tile/MushroomTile
+c	net/minecraft/unmapped/C_90574280	net/minecraft/world/level/tile/Mushroom
 	m	(II)V	<init>	<init>
 		p	1		p_1
 		p	2		p_2
@@ -17726,112 +17726,112 @@ c	net/minecraft/unmapped/C_98861173	net/minecraft/world/level/storage/LevelStora
 c	net/minecraft/unmapped/C_98888256	net/minecraft/world/item/Item
 	f	Ljava/util/Random;	f_13698745	random
 	f	[Lnet/minecraft/unmapped/C_98888256;	f_38445253	items
-	f	Lnet/minecraft/unmapped/C_98888256;	f_80805461	IRON_SHOVEL
-	f	Lnet/minecraft/unmapped/C_98888256;	f_98306436	IRON_PICKAXE
-	f	Lnet/minecraft/unmapped/C_98888256;	f_89785708	IRON_HATCHET
-	f	Lnet/minecraft/unmapped/C_98888256;	f_96370468	FLINT_AND_STEEL
-	f	Lnet/minecraft/unmapped/C_98888256;	f_57144513	APPLE
-	f	Lnet/minecraft/unmapped/C_98888256;	f_59992682	BOW
-	f	Lnet/minecraft/unmapped/C_98888256;	f_67660833	ARROW
-	f	Lnet/minecraft/unmapped/C_98888256;	f_58154723	COAL
-	f	Lnet/minecraft/unmapped/C_98888256;	f_18976102	DIAMOND
-	f	Lnet/minecraft/unmapped/C_98888256;	f_80480869	IRON_INGOT
-	f	Lnet/minecraft/unmapped/C_98888256;	f_73771168	GOLD_INGOT
-	f	Lnet/minecraft/unmapped/C_98888256;	f_32125146	IRON_SWORD
-	f	Lnet/minecraft/unmapped/C_98888256;	f_96913276	WOOD_SWORD
-	f	Lnet/minecraft/unmapped/C_98888256;	f_38813183	WOOD_SHOVEL
-	f	Lnet/minecraft/unmapped/C_98888256;	f_50174679	WOOD_PICKAXE
-	f	Lnet/minecraft/unmapped/C_98888256;	f_27888996	WOOD_AXE
-	f	Lnet/minecraft/unmapped/C_98888256;	f_13344738	STONE_SWORD
-	f	Lnet/minecraft/unmapped/C_98888256;	f_18708761	STONE_SHOVEL
-	f	Lnet/minecraft/unmapped/C_98888256;	f_88921834	STONE_PICKAXE
-	f	Lnet/minecraft/unmapped/C_98888256;	f_02912756	STONE_AXE
-	f	Lnet/minecraft/unmapped/C_98888256;	f_29490209	DIAMOND_SWORD
-	f	Lnet/minecraft/unmapped/C_98888256;	f_04770191	DIAMOND_SHOVEL
-	f	Lnet/minecraft/unmapped/C_98888256;	f_43932574	DIAMOND_PICKAXE
-	f	Lnet/minecraft/unmapped/C_98888256;	f_45386391	DIAMOND_AXE
-	f	Lnet/minecraft/unmapped/C_98888256;	f_70868303	STICK
-	f	Lnet/minecraft/unmapped/C_98888256;	f_21498627	BOWL
-	f	Lnet/minecraft/unmapped/C_98888256;	f_94828714	MUSHROOM_STEW
-	f	Lnet/minecraft/unmapped/C_98888256;	f_56140732	GOLD_SWORD
-	f	Lnet/minecraft/unmapped/C_98888256;	f_50429169	GOLD_SHOVEL
-	f	Lnet/minecraft/unmapped/C_98888256;	f_68090982	GOLD_PICKAXE
-	f	Lnet/minecraft/unmapped/C_98888256;	f_08977302	GOLD_AXE
-	f	Lnet/minecraft/unmapped/C_98888256;	f_94759491	STRING
-	f	Lnet/minecraft/unmapped/C_98888256;	f_56704454	FEATHER
-	f	Lnet/minecraft/unmapped/C_98888256;	f_32150368	SULPHUR
-	f	Lnet/minecraft/unmapped/C_98888256;	f_03688690	WOOD_HOE
-	f	Lnet/minecraft/unmapped/C_98888256;	f_98142733	STONE_HOE
-	f	Lnet/minecraft/unmapped/C_98888256;	f_57678723	IRON_HOE
-	f	Lnet/minecraft/unmapped/C_98888256;	f_35880850	DIAMOND_HOE
-	f	Lnet/minecraft/unmapped/C_98888256;	f_31038121	HOLD_HOE
-	f	Lnet/minecraft/unmapped/C_98888256;	f_84974010	SEEDS
-	f	Lnet/minecraft/unmapped/C_98888256;	f_60617725	WHEAT
-	f	Lnet/minecraft/unmapped/C_98888256;	f_94155714	BREAD
-	f	Lnet/minecraft/unmapped/C_98888256;	f_92705060	LEATHER_HELMET
-	f	Lnet/minecraft/unmapped/C_98888256;	f_60255230	LEATHER_CHESTPLATE
-	f	Lnet/minecraft/unmapped/C_98888256;	f_78687479	LEATHER_LEGGINGS
-	f	Lnet/minecraft/unmapped/C_98888256;	f_65686175	LEATHER_BOOTS
-	f	Lnet/minecraft/unmapped/C_98888256;	f_20484061	CHAIN_HELMET
-	f	Lnet/minecraft/unmapped/C_98888256;	f_92537726	CHAIN_CHESTPLATE
-	f	Lnet/minecraft/unmapped/C_98888256;	f_24275834	CHAIN_LEGGINGS
-	f	Lnet/minecraft/unmapped/C_98888256;	f_67341244	CHAIN_BOOTS
-	f	Lnet/minecraft/unmapped/C_98888256;	f_84448376	IRON_HELMET
-	f	Lnet/minecraft/unmapped/C_98888256;	f_56682976	IRON_CHESTPLATE
-	f	Lnet/minecraft/unmapped/C_98888256;	f_64671240	IRON_LEGGINGS
-	f	Lnet/minecraft/unmapped/C_98888256;	f_96568531	IRON_BOOTS
-	f	Lnet/minecraft/unmapped/C_98888256;	f_00953201	DIAMOND_HELMET
-	f	Lnet/minecraft/unmapped/C_98888256;	f_54219088	DIAMOND_CHESTPLATE
-	f	Lnet/minecraft/unmapped/C_98888256;	f_42239243	DIAMOND_LEGGINGS
-	f	Lnet/minecraft/unmapped/C_98888256;	f_21328201	DIAMOND_BOOTS
-	f	Lnet/minecraft/unmapped/C_98888256;	f_06326883	GOLD_HELMET
-	f	Lnet/minecraft/unmapped/C_98888256;	f_58467061	GOLD_CHESTPLATE
-	f	Lnet/minecraft/unmapped/C_98888256;	f_20229887	GOLD_LEGGINGS
-	f	Lnet/minecraft/unmapped/C_98888256;	f_08730706	GOLD_BOOTS
-	f	Lnet/minecraft/unmapped/C_98888256;	f_08935226	FLINT
-	f	Lnet/minecraft/unmapped/C_98888256;	f_70512792	PORKCHOP
-	f	Lnet/minecraft/unmapped/C_98888256;	f_40838509	COOKED_PORKCHOP
-	f	Lnet/minecraft/unmapped/C_98888256;	f_27056679	PAINTING
-	f	Lnet/minecraft/unmapped/C_98888256;	f_18291365	GOLD_APPLE
-	f	Lnet/minecraft/unmapped/C_98888256;	f_97502738	SIGN
-	f	Lnet/minecraft/unmapped/C_98888256;	f_92303073	WOOD_DOOR
-	f	Lnet/minecraft/unmapped/C_98888256;	f_91599154	BUCKET
-	f	Lnet/minecraft/unmapped/C_98888256;	f_94313583	WATER_BUCKET
-	f	Lnet/minecraft/unmapped/C_98888256;	f_32467447	LAVA_BUCKET
-	f	Lnet/minecraft/unmapped/C_98888256;	f_72559846	MINECART
-	f	Lnet/minecraft/unmapped/C_98888256;	f_07293363	SADDLE
-	f	Lnet/minecraft/unmapped/C_98888256;	f_40777991	DOOR
-	f	Lnet/minecraft/unmapped/C_98888256;	f_52656331	REDSTONE
-	f	Lnet/minecraft/unmapped/C_98888256;	f_10659101	SNOWBALL
-	f	Lnet/minecraft/unmapped/C_98888256;	f_67114151	BOAT
-	f	Lnet/minecraft/unmapped/C_98888256;	f_08971169	LEATHER
-	f	Lnet/minecraft/unmapped/C_98888256;	f_62954975	MILK_BUCKET
-	f	Lnet/minecraft/unmapped/C_98888256;	f_21279732	BRICK
-	f	Lnet/minecraft/unmapped/C_98888256;	f_39465979	CLAY
-	f	Lnet/minecraft/unmapped/C_98888256;	f_55275152	REEDS
-	f	Lnet/minecraft/unmapped/C_98888256;	f_90966147	PAPER
-	f	Lnet/minecraft/unmapped/C_98888256;	f_32576217	BOOK
-	f	Lnet/minecraft/unmapped/C_98888256;	f_46317332	SLIMEBALL
-	f	Lnet/minecraft/unmapped/C_98888256;	f_20481988	MINECART_CHEST
-	f	Lnet/minecraft/unmapped/C_98888256;	f_49490949	MINECART_FURNACE
-	f	Lnet/minecraft/unmapped/C_98888256;	f_03970011	EGG
-	f	Lnet/minecraft/unmapped/C_98888256;	f_53864758	COMPASS
-	f	Lnet/minecraft/unmapped/C_98888256;	f_57012528	FISHING_ROD
-	f	Lnet/minecraft/unmapped/C_98888256;	f_10956141	CLOCK
-	f	Lnet/minecraft/unmapped/C_98888256;	f_88723374	GLOW_STONE
-	f	Lnet/minecraft/unmapped/C_98888256;	f_87025895	FISH
-	f	Lnet/minecraft/unmapped/C_98888256;	f_87709655	COOKED_FISH
-	f	Lnet/minecraft/unmapped/C_98888256;	f_09260276	DYE
-	f	Lnet/minecraft/unmapped/C_98888256;	f_51993064	BONE
-	f	Lnet/minecraft/unmapped/C_98888256;	f_79588801	SUGAR
-	f	Lnet/minecraft/unmapped/C_98888256;	f_59726285	CAKE
-	f	Lnet/minecraft/unmapped/C_98888256;	f_08856223	BED
-	f	Lnet/minecraft/unmapped/C_98888256;	f_98054602	REPEATER
-	f	Lnet/minecraft/unmapped/C_98888256;	f_91086089	COOKIE
-	f	Lnet/minecraft/unmapped/C_75615713;	f_69447318	MAP
-	f	Lnet/minecraft/unmapped/C_17309128;	f_18374421	SHEARS
-	f	Lnet/minecraft/unmapped/C_98888256;	f_30116592	RECORD_13
-	f	Lnet/minecraft/unmapped/C_98888256;	f_33926157	RECORD_CAT
+	f	Lnet/minecraft/unmapped/C_98888256;	f_80805461	shovel_iron
+	f	Lnet/minecraft/unmapped/C_98888256;	f_98306436	pickAxe_iron
+	f	Lnet/minecraft/unmapped/C_98888256;	f_89785708	hatchet_iron
+	f	Lnet/minecraft/unmapped/C_98888256;	f_96370468	flintAndSteel
+	f	Lnet/minecraft/unmapped/C_98888256;	f_57144513	apple
+	f	Lnet/minecraft/unmapped/C_98888256;	f_59992682	bow
+	f	Lnet/minecraft/unmapped/C_98888256;	f_67660833	arrow
+	f	Lnet/minecraft/unmapped/C_98888256;	f_58154723	coal
+	f	Lnet/minecraft/unmapped/C_98888256;	f_18976102	diamond
+	f	Lnet/minecraft/unmapped/C_98888256;	f_80480869	ironIngot
+	f	Lnet/minecraft/unmapped/C_98888256;	f_73771168	goldIngot
+	f	Lnet/minecraft/unmapped/C_98888256;	f_32125146	sword_iron
+	f	Lnet/minecraft/unmapped/C_98888256;	f_96913276	sword_wood
+	f	Lnet/minecraft/unmapped/C_98888256;	f_38813183	shovel_wood
+	f	Lnet/minecraft/unmapped/C_98888256;	f_50174679	pickAxe_wood
+	f	Lnet/minecraft/unmapped/C_98888256;	f_27888996	hatchet_wood
+	f	Lnet/minecraft/unmapped/C_98888256;	f_13344738	sword_stone
+	f	Lnet/minecraft/unmapped/C_98888256;	f_18708761	shovel_stone
+	f	Lnet/minecraft/unmapped/C_98888256;	f_88921834	pickAxe_stone
+	f	Lnet/minecraft/unmapped/C_98888256;	f_02912756	hatchet_stone
+	f	Lnet/minecraft/unmapped/C_98888256;	f_29490209	sword_diamond
+	f	Lnet/minecraft/unmapped/C_98888256;	f_04770191	shovel_diamond
+	f	Lnet/minecraft/unmapped/C_98888256;	f_43932574	pickAxe_diamond
+	f	Lnet/minecraft/unmapped/C_98888256;	f_45386391	hatchet_diamond
+	f	Lnet/minecraft/unmapped/C_98888256;	f_70868303	stick
+	f	Lnet/minecraft/unmapped/C_98888256;	f_21498627	bowl
+	f	Lnet/minecraft/unmapped/C_98888256;	f_94828714	mushroomStew
+	f	Lnet/minecraft/unmapped/C_98888256;	f_56140732	sword_gold
+	f	Lnet/minecraft/unmapped/C_98888256;	f_50429169	shovel_gold
+	f	Lnet/minecraft/unmapped/C_98888256;	f_68090982	pickAxe_gold
+	f	Lnet/minecraft/unmapped/C_98888256;	f_08977302	hatchet_gold
+	f	Lnet/minecraft/unmapped/C_98888256;	f_94759491	string
+	f	Lnet/minecraft/unmapped/C_98888256;	f_56704454	feather
+	f	Lnet/minecraft/unmapped/C_98888256;	f_32150368	sulphur
+	f	Lnet/minecraft/unmapped/C_98888256;	f_03688690	hoe_wood
+	f	Lnet/minecraft/unmapped/C_98888256;	f_98142733	hoe_stone
+	f	Lnet/minecraft/unmapped/C_98888256;	f_57678723	hoe_iron
+	f	Lnet/minecraft/unmapped/C_98888256;	f_35880850	hoe_diamond
+	f	Lnet/minecraft/unmapped/C_98888256;	f_31038121	hoe_gold
+	f	Lnet/minecraft/unmapped/C_98888256;	f_84974010	seeds
+	f	Lnet/minecraft/unmapped/C_98888256;	f_60617725	wheat
+	f	Lnet/minecraft/unmapped/C_98888256;	f_94155714	bread
+	f	Lnet/minecraft/unmapped/C_98888256;	f_92705060	helmet_cloth
+	f	Lnet/minecraft/unmapped/C_98888256;	f_60255230	chestplate_cloth
+	f	Lnet/minecraft/unmapped/C_98888256;	f_78687479	leggings_cloth
+	f	Lnet/minecraft/unmapped/C_98888256;	f_65686175	boots_cloth
+	f	Lnet/minecraft/unmapped/C_98888256;	f_20484061	helmet_chain
+	f	Lnet/minecraft/unmapped/C_98888256;	f_92537726	chestplate_chain
+	f	Lnet/minecraft/unmapped/C_98888256;	f_24275834	leggings_chain
+	f	Lnet/minecraft/unmapped/C_98888256;	f_67341244	boots_chain
+	f	Lnet/minecraft/unmapped/C_98888256;	f_84448376	helmet_iron
+	f	Lnet/minecraft/unmapped/C_98888256;	f_56682976	chestplate_iron
+	f	Lnet/minecraft/unmapped/C_98888256;	f_64671240	leggings_iron
+	f	Lnet/minecraft/unmapped/C_98888256;	f_96568531	boots_iron
+	f	Lnet/minecraft/unmapped/C_98888256;	f_00953201	helmet_diamond
+	f	Lnet/minecraft/unmapped/C_98888256;	f_54219088	chestplate_diamond
+	f	Lnet/minecraft/unmapped/C_98888256;	f_42239243	leggings_diamond
+	f	Lnet/minecraft/unmapped/C_98888256;	f_21328201	boots_diamond
+	f	Lnet/minecraft/unmapped/C_98888256;	f_06326883	helmet_gold
+	f	Lnet/minecraft/unmapped/C_98888256;	f_58467061	chestplate_gold
+	f	Lnet/minecraft/unmapped/C_98888256;	f_20229887	leggings_gold
+	f	Lnet/minecraft/unmapped/C_98888256;	f_08730706	boots_gold
+	f	Lnet/minecraft/unmapped/C_98888256;	f_08935226	flint
+	f	Lnet/minecraft/unmapped/C_98888256;	f_70512792	porkChop_raw
+	f	Lnet/minecraft/unmapped/C_98888256;	f_40838509	porkChop_cooked
+	f	Lnet/minecraft/unmapped/C_98888256;	f_27056679	painting
+	f	Lnet/minecraft/unmapped/C_98888256;	f_18291365	apple_gold
+	f	Lnet/minecraft/unmapped/C_98888256;	f_97502738	sign
+	f	Lnet/minecraft/unmapped/C_98888256;	f_92303073	door_wood
+	f	Lnet/minecraft/unmapped/C_98888256;	f_91599154	bucket_empty
+	f	Lnet/minecraft/unmapped/C_98888256;	f_94313583	bucket_water
+	f	Lnet/minecraft/unmapped/C_98888256;	f_32467447	bucket_lava
+	f	Lnet/minecraft/unmapped/C_98888256;	f_72559846	minecart
+	f	Lnet/minecraft/unmapped/C_98888256;	f_07293363	saddle
+	f	Lnet/minecraft/unmapped/C_98888256;	f_40777991	door_iron
+	f	Lnet/minecraft/unmapped/C_98888256;	f_52656331	redStone
+	f	Lnet/minecraft/unmapped/C_98888256;	f_10659101	snowBall
+	f	Lnet/minecraft/unmapped/C_98888256;	f_67114151	boat
+	f	Lnet/minecraft/unmapped/C_98888256;	f_08971169	leather
+	f	Lnet/minecraft/unmapped/C_98888256;	f_62954975	milk
+	f	Lnet/minecraft/unmapped/C_98888256;	f_21279732	brick
+	f	Lnet/minecraft/unmapped/C_98888256;	f_39465979	clay
+	f	Lnet/minecraft/unmapped/C_98888256;	f_55275152	reeds
+	f	Lnet/minecraft/unmapped/C_98888256;	f_90966147	paper
+	f	Lnet/minecraft/unmapped/C_98888256;	f_32576217	book
+	f	Lnet/minecraft/unmapped/C_98888256;	f_46317332	slimeBall
+	f	Lnet/minecraft/unmapped/C_98888256;	f_20481988	minecart_chest
+	f	Lnet/minecraft/unmapped/C_98888256;	f_49490949	minecart_furnace
+	f	Lnet/minecraft/unmapped/C_98888256;	f_03970011	egg
+	f	Lnet/minecraft/unmapped/C_98888256;	f_53864758	compass
+	f	Lnet/minecraft/unmapped/C_98888256;	f_57012528	fishingRod
+	f	Lnet/minecraft/unmapped/C_98888256;	f_10956141	clock
+	f	Lnet/minecraft/unmapped/C_98888256;	f_88723374	yellowDust
+	f	Lnet/minecraft/unmapped/C_98888256;	f_87025895	fish_raw
+	f	Lnet/minecraft/unmapped/C_98888256;	f_87709655	fish_cooked
+	f	Lnet/minecraft/unmapped/C_98888256;	f_09260276	dye_powder
+	f	Lnet/minecraft/unmapped/C_98888256;	f_51993064	bone
+	f	Lnet/minecraft/unmapped/C_98888256;	f_79588801	sugar
+	f	Lnet/minecraft/unmapped/C_98888256;	f_59726285	cake
+	f	Lnet/minecraft/unmapped/C_98888256;	f_08856223	bed
+	f	Lnet/minecraft/unmapped/C_98888256;	f_98054602	repeater
+	f	Lnet/minecraft/unmapped/C_98888256;	f_91086089	cookie
+	f	Lnet/minecraft/unmapped/C_75615713;	f_69447318	map
+	f	Lnet/minecraft/unmapped/C_17309128;	f_18374421	shears
+	f	Lnet/minecraft/unmapped/C_98888256;	f_30116592	record_01
+	f	Lnet/minecraft/unmapped/C_98888256;	f_33926157	record_02
 	f	I	f_57562535	id
 	f	I	f_73205837	maxStackSize
 	f	I	f_08900756	maxDamage
@@ -17850,7 +17850,7 @@ c	net/minecraft/unmapped/C_98888256	net/minecraft/world/item/Item
 		p	1		row
 		p	2		column
 	m	(I)I	m_27460772	getIcon
-		p	1		meta
+		p	1		data
 	m	(Lnet/minecraft/unmapped/C_88708284;)I	m_36365924	getIcon
 		p	1		item
 	m	(Lnet/minecraft/unmapped/C_88708284;Lnet/minecraft/unmapped/C_40996800;Lnet/minecraft/unmapped/C_64041439;IIII)Z	m_93921076	useOn
@@ -17870,7 +17870,7 @@ c	net/minecraft/unmapped/C_98888256	net/minecraft/world/item/Item
 		p	3		player
 	m	()I	m_03156313	getMaxStackSize
 	m	(I)I	m_65403122	getLevelDataForAuxValue
-		p	1		itemMeta
+		p	1		auxValue
 	m	()Z	m_52352354	isStackedByData
 	m	(Z)Lnet/minecraft/unmapped/C_98888256;	m_56494446	setStackedByData
 		p	1		isStackedByData
@@ -18046,8 +18046,8 @@ c	net/minecraft/unmapped/C_99660737	net/minecraft/server/network/PlayerConnectio
 	f	Z	f_78643073	done
 	f	Lnet/minecraft/server/MinecraftServer;	f_61925799	server
 	f	Lnet/minecraft/unmapped/C_49202226;	f_49078788	player
-	f	I	f_72608417	keepAliveTime
-	f	I	f_36557888	lastKeepAliveTime
+	f	I	f_72608417	tickCount
+	f	I	f_36557888	lastKeepAliveTick
 	f	I	f_44413337	aboveGroundTickCount
 	f	Z	f_99057094	clientIsFloating
 	f	D	f_23513939	lastGoodX
