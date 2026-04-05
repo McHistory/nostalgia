@@ -47,7 +47,7 @@ c	net/minecraft/client/Minecraft	net/minecraft/client/Minecraft
 	f	I	f_73712093	frameTimePos
 	f	J	f_76663897	warezTime
 		c	Anything greater then 0 will make the client behave as its offline
-	f	Lnet/minecraft/unmapped/C_00535600;	f_25215102	statManager
+	f	Lnet/minecraft/unmapped/C_00535600;	f_25215102	stats
 	f	Ljava/lang/String;	f_39021232	connectToIp
 	f	I	f_11848316	connectToPort
 	f	Lnet/minecraft/unmapped/C_19106855;	f_06084782	waterTexture
@@ -379,26 +379,26 @@ c	net/minecraft/unmapped/C_00535600	net/minecraft/stats/StatsCounter
 	m	(Lnet/minecraft/unmapped/C_87604186;Ljava/io/File;)V	<init>	<init>
 		p	1		user
 		p	2		dir
-	m	(Lnet/minecraft/unmapped/C_62649600;I)V	m_82425990	addStat
+	m	(Lnet/minecraft/unmapped/C_62649600;I)V	m_82425990	award
 		p	1		stat
-		p	2		p_2
-	m	(Ljava/util/Map;Lnet/minecraft/unmapped/C_62649600;I)V	m_52411786	m_52411786
-		p	1		p_1
-		p	2		p_2
-		p	3		p_3
+		p	2		count
+	m	(Ljava/util/Map;Lnet/minecraft/unmapped/C_62649600;I)V	m_52411786	award
+		p	1		stats
+		p	2		stat
+		p	3		count
 	m	()Ljava/util/Map;	m_76359735	getAllStats
-	m	(Ljava/util/Map;)V	m_36814727	m_36814727
-		p	1		p_1
-	m	(Ljava/util/Map;)V	m_23498900	m_23498900
-		p	1		p_1
-	m	(Ljava/util/Map;)V	m_71635439	m_71635439
-		p	1		p_1
-	m	(Ljava/lang/String;)Ljava/util/Map;	m_18337421	m_18337421
-		p	0		p_0
-	m	(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)Ljava/lang/String;	m_10106213	m_10106213
+	m	(Ljava/util/Map;)V	m_36814727	load
+		p	1		stats
+	m	(Ljava/util/Map;)V	m_23498900	loadServerStats
+		p	1		stats
+	m	(Ljava/util/Map;)V	m_71635439	loadFailedStats
+		p	1		stats
+	m	(Ljava/lang/String;)Ljava/util/Map;	m_18337421	readJson
+		p	0		name
+	m	(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)Ljava/lang/String;	m_10106213	toJson
 		p	0		name
 		p	1		sessionid
-		p	2		p_2
+		p	2		stats
 	m	(Lnet/minecraft/unmapped/C_90931970;)Z	m_46015567	hasTaken
 		p	1		achievement
 	m	(Lnet/minecraft/unmapped/C_90931970;)Z	m_94045998	canTake
@@ -6607,10 +6607,10 @@ c	net/minecraft/unmapped/C_41611298	net/minecraft/world/item/PistonTileItem
 		p	1		p_1
 c	net/minecraft/unmapped/C_41722834	net/minecraft/stats/AchievementMap
 	f	Lnet/minecraft/unmapped/C_41722834;	f_74080571	instance
-	f	Ljava/util/Map;	f_54866447	f_54866447
+	f	Ljava/util/Map;	f_54866447	achievementsById
 	m	()V	<init>	<init>
-	m	(I)Ljava/lang/String;	m_22519975	m_22519975
-		p	0		p_0
+	m	(I)Ljava/lang/String;	m_22519975	get
+		p	0		key
 	m	()V	<clinit>	<clinit>
 c	net/minecraft/unmapped/C_41874688	argo/jdom/JsonNodeSelectors
 	c	<p>Factories for <code>JsonNodeSelectors</code>.</p>\n<p/>\n<p>Methods in this class fall into two broad categories - those that take a varargs argument of <code>Object</code>s\nand navigate down an entire hierarchy, and those that address a single node in a hierarchy.</p>\n<p>For example,\n<code>aStringNode(Object... pathElements)</code> takes a series of <code>String</code>s and\n<code>Integer</code>s as its argument which tell it how to navigate down a hierarchy to a particular JSON string.\nThe <code>String</code>s tell it to select a field with the given name from an object, and the <code>Integer</code>s\ntell it to select an element with the given index from an array.</p>\n<p/>\n<p>By contrast, <code>anArrayNodeWithElement(int index)</code> addresses a single array node only, selecting the\nelement at the given index from it.</p>
@@ -10059,7 +10059,7 @@ c	net/minecraft/unmapped/C_62649600	net/minecraft/stats/Stat
 	f	I	f_06721285	id
 	f	Ljava/lang/String;	f_88525248	name
 	f	Z	f_87370199	awardLocallyOnly
-	f	Ljava/lang/String;	f_99597716	f_99597716
+	f	Ljava/lang/String;	f_99597716	checksum
 	f	Lnet/minecraft/unmapped/C_17284174;	f_78595326	formatter
 	f	Ljava/text/NumberFormat;	f_94860755	NUMBER_FORMAT
 	f	Lnet/minecraft/unmapped/C_17284174;	f_00302337	DEFAULT
@@ -10073,7 +10073,7 @@ c	net/minecraft/unmapped/C_62649600	net/minecraft/stats/Stat
 	m	(ILjava/lang/String;)V	<init>	<init>
 		p	1		id
 		p	2		name
-	m	()Lnet/minecraft/unmapped/C_62649600;	m_62862553	root
+	m	()Lnet/minecraft/unmapped/C_62649600;	m_62862553	setAwardLocallyOnly
 	m	()Lnet/minecraft/unmapped/C_62649600;	m_34739653	postConstruct
 	m	()Z	m_77113659	isAchievement
 	m	(I)Ljava/lang/String;	m_88253346	format
@@ -17182,33 +17182,33 @@ c	net/minecraft/unmapped/C_94962583	net/minecraft/world/level/tile/TransparentTi
 		p	5		p_5
 c	net/minecraft/unmapped/C_95106612	net/minecraft/stats/Stats
 	f	Ljava/util/Map;	f_70114352	statsById
-	f	Ljava/util/List;	f_23883351	stats
+	f	Ljava/util/List;	f_23883351	all
 	f	Ljava/util/List;	f_51544073	generalStats
 	f	Ljava/util/List;	f_30446590	itemStats
 	f	Ljava/util/List;	f_65452341	blockStats
-	f	Lnet/minecraft/unmapped/C_62649600;	f_01264567	START_GAME
-	f	Lnet/minecraft/unmapped/C_62649600;	f_24221419	CREATE_WORLD
-	f	Lnet/minecraft/unmapped/C_62649600;	f_81018270	LOAD_WORLD
-	f	Lnet/minecraft/unmapped/C_62649600;	f_23564034	JOIN_MULTIPLAYER
-	f	Lnet/minecraft/unmapped/C_62649600;	f_15892621	LEAVE_GAME
-	f	Lnet/minecraft/unmapped/C_62649600;	f_84209338	PLAY_ONE_MINUTE
-	f	Lnet/minecraft/unmapped/C_62649600;	f_57771915	WALK_ONE_CM
-	f	Lnet/minecraft/unmapped/C_62649600;	f_79937119	SWIM_ONE_CM
-	f	Lnet/minecraft/unmapped/C_62649600;	f_79978314	FALL_ONE_CM
-	f	Lnet/minecraft/unmapped/C_62649600;	f_97933381	CLIMB_ONE_CM
-	f	Lnet/minecraft/unmapped/C_62649600;	f_26688556	FLY_ONE_CM
-	f	Lnet/minecraft/unmapped/C_62649600;	f_62697526	DIVE_ONE_CM
-	f	Lnet/minecraft/unmapped/C_62649600;	f_81483092	MINECART_ONE_CM
-	f	Lnet/minecraft/unmapped/C_62649600;	f_34445198	BOAT_ONE_CM
-	f	Lnet/minecraft/unmapped/C_62649600;	f_95226913	PIG_ONE_CM
-	f	Lnet/minecraft/unmapped/C_62649600;	f_91671218	JUMP
-	f	Lnet/minecraft/unmapped/C_62649600;	f_15479164	DROP
-	f	Lnet/minecraft/unmapped/C_62649600;	f_14420982	DAMAGE_DEALT
-	f	Lnet/minecraft/unmapped/C_62649600;	f_75548874	DAMAGE_TAKEN
-	f	Lnet/minecraft/unmapped/C_62649600;	f_70639821	DEATHS
-	f	Lnet/minecraft/unmapped/C_62649600;	f_41248419	MOB_KILLS
-	f	Lnet/minecraft/unmapped/C_62649600;	f_61826859	PLAYER_KILLS
-	f	Lnet/minecraft/unmapped/C_62649600;	f_80218828	FISH_CAUGHT
+	f	Lnet/minecraft/unmapped/C_62649600;	f_01264567	startGame
+	f	Lnet/minecraft/unmapped/C_62649600;	f_24221419	createWorld
+	f	Lnet/minecraft/unmapped/C_62649600;	f_81018270	loadWorld
+	f	Lnet/minecraft/unmapped/C_62649600;	f_23564034	joinMultiplayer
+	f	Lnet/minecraft/unmapped/C_62649600;	f_15892621	leaveGame
+	f	Lnet/minecraft/unmapped/C_62649600;	f_84209338	playOneMinute
+	f	Lnet/minecraft/unmapped/C_62649600;	f_57771915	walkOneCm
+	f	Lnet/minecraft/unmapped/C_62649600;	f_79937119	swimOneCm
+	f	Lnet/minecraft/unmapped/C_62649600;	f_79978314	fallOneCm
+	f	Lnet/minecraft/unmapped/C_62649600;	f_97933381	climbOneCm
+	f	Lnet/minecraft/unmapped/C_62649600;	f_26688556	flyOneCm
+	f	Lnet/minecraft/unmapped/C_62649600;	f_62697526	diveOneCm
+	f	Lnet/minecraft/unmapped/C_62649600;	f_81483092	minecartOneCm
+	f	Lnet/minecraft/unmapped/C_62649600;	f_34445198	boatOneCm
+	f	Lnet/minecraft/unmapped/C_62649600;	f_95226913	pigOneCm
+	f	Lnet/minecraft/unmapped/C_62649600;	f_91671218	jump
+	f	Lnet/minecraft/unmapped/C_62649600;	f_15479164	drop
+	f	Lnet/minecraft/unmapped/C_62649600;	f_14420982	damageDealt
+	f	Lnet/minecraft/unmapped/C_62649600;	f_75548874	damageTaken
+	f	Lnet/minecraft/unmapped/C_62649600;	f_70639821	deaths
+	f	Lnet/minecraft/unmapped/C_62649600;	f_41248419	mobKills
+	f	Lnet/minecraft/unmapped/C_62649600;	f_61826859	playerKills
+	f	Lnet/minecraft/unmapped/C_62649600;	f_80218828	fishCaught
 	f	[Lnet/minecraft/unmapped/C_62649600;	f_48784697	blockMined
 	f	[Lnet/minecraft/unmapped/C_62649600;	f_10735466	itemCrafted
 	f	[Lnet/minecraft/unmapped/C_62649600;	f_65070206	itemUsed
@@ -17223,26 +17223,26 @@ c	net/minecraft/unmapped/C_95106612	net/minecraft/stats/Stats
 	m	(Ljava/lang/String;I)[Lnet/minecraft/unmapped/C_62649600;	m_10921243	constructBlockStats
 		p	0		id
 		p	1		max
-	m	([Lnet/minecraft/unmapped/C_62649600;Ljava/lang/String;III)[Lnet/minecraft/unmapped/C_62649600;	m_83660087	m_83660087
-		p	0		p_0
-		p	1		p_1
-		p	2		p_2
-		p	3		p_3
-		p	4		p_4
-	m	([Lnet/minecraft/unmapped/C_62649600;Ljava/lang/String;III)[Lnet/minecraft/unmapped/C_62649600;	m_32388534	m_32388534
-		p	0		p_0
-		p	1		p_1
-		p	2		p_2
-		p	3		p_3
-		p	4		p_4
-	m	([Lnet/minecraft/unmapped/C_62649600;)V	m_77533512	m_77533512
+	m	([Lnet/minecraft/unmapped/C_62649600;Ljava/lang/String;III)[Lnet/minecraft/unmapped/C_62649600;	m_83660087	buildUsedStats
 		p	0		stats
-	m	([Lnet/minecraft/unmapped/C_62649600;II)V	m_72364389	m_72364389
-		p	0		p_0
-		p	1		p_1
-		p	2		p_2
-	m	(I)Lnet/minecraft/unmapped/C_62649600;	m_47110428	byId
-		p	0		id
+		p	1		name
+		p	2		start
+		p	3		min
+		p	4		max
+	m	([Lnet/minecraft/unmapped/C_62649600;Ljava/lang/String;III)[Lnet/minecraft/unmapped/C_62649600;	m_32388534	buildBreakStats
+		p	0		stats
+		p	1		name
+		p	2		start
+		p	3		min
+		p	4		max
+	m	([Lnet/minecraft/unmapped/C_62649600;)V	m_77533512	removeDuplicateStats
+		p	0		stats
+	m	([Lnet/minecraft/unmapped/C_62649600;II)V	m_72364389	remove
+		p	0		stats
+		p	1		baseId
+		p	2		toRemoveId
+	m	(I)Lnet/minecraft/unmapped/C_62649600;	m_47110428	get
+		p	0		key
 	m	()V	<clinit>	<clinit>
 c	net/minecraft/unmapped/C_95236836	net/minecraft/stats/Achievements
 	f	I	f_37084462	MIN_X
