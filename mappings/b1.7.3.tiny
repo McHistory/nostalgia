@@ -545,7 +545,7 @@ c	net/minecraft/unmapped/C_02333628	net/minecraft/world/level/tile/RailTile
 	m	()I	m_11009977	m_11009977
 	m	(Lnet/minecraft/unmapped/C_02333628;)Z	m_05047278	m_05047278
 		p	0		p_0
-c	net/minecraft/unmapped/C_02333628$C_92241048	net/minecraft/world/level/tile/RailTile$RailState
+c	net/minecraft/unmapped/C_02333628$C_92241048	net/minecraft/world/level/tile/RailTile$Rail
 	f	Lnet/minecraft/unmapped/C_64041439;	f_54080630	level
 	f	I	f_75647824	x
 	f	I	f_93816939	y
@@ -780,7 +780,7 @@ c	net/minecraft/unmapped/C_03140863	net/minecraft/client/renderer/GameRenderer
 		p	2		eye
 	m	(F)V	m_08357947	render
 		p	1		a
-	m	(FJ)V	m_66460096	render
+	m	(FJ)V	m_66460096	renderLevel
 		p	1		partialTick
 		p	2		nanoTime
 	m	()V	m_42924616	tickRain
@@ -901,7 +901,7 @@ c	net/minecraft/unmapped/C_03562565	net/minecraft/network/packets/Packet
 		p	1		serverbound
 	m	(Lnet/minecraft/unmapped/C_03562565;Ljava/io/DataOutputStream;)V	m_43136834	writePacket
 		p	0		packet
-		p	1		data
+		p	1		dos
 	m	(Ljava/lang/String;Ljava/io/DataOutputStream;)V	m_80888813	writeString
 		p	0		msg
 		p	1		data
@@ -909,11 +909,11 @@ c	net/minecraft/unmapped/C_03562565	net/minecraft/network/packets/Packet
 		p	0		data
 		p	1		length
 	m	(Ljava/io/DataInputStream;)V	m_13296744	read
-		p	1		data
+		p	1		dis
 	m	(Ljava/io/DataOutputStream;)V	m_17566769	write
-		p	1		data
+		p	1		dos
 	m	(Lnet/minecraft/unmapped/C_10918870;)V	m_04853589	handle
-		p	1		handler
+		p	1		listener
 	m	()I	m_85604015	getEstimatedSize
 	m	()V	<clinit>	<clinit>
 c	net/minecraft/unmapped/C_03562565$88697224	net/minecraft/network/packets/Packet$88697224
@@ -8698,7 +8698,7 @@ c	net/minecraft/unmapped/C_51413985	net/minecraft/client/Screenshot
 	f	[B	f_81333897	pixels
 	f	[I	f_44902457	colors
 	m	(Ljava/io/File;II)Ljava/lang/String;	m_97441971	grab
-		p	0		name
+		p	0		workDir
 		p	1		width
 		p	2		height
 	m	()V	<clinit>	<clinit>
