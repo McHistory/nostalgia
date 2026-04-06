@@ -1081,12 +1081,12 @@ c	net/minecraft/unmapped/C_03670941	net/minecraft/client/renderer/TileRenderer
 		p	3		y
 		p	4		z
 	m	(Lnet/minecraft/unmapped/C_81592558;III)Z	m_04533155	tesselateFireInWorld
-		p	1		tile
+		p	1		tt
 		p	2		x
 		p	3		y
 		p	4		z
 	m	(Lnet/minecraft/unmapped/C_81592558;III)Z	m_93690862	tesselateDustInWorld
-		p	1		tile
+		p	1		tt
 		p	2		x
 		p	3		y
 		p	4		z
@@ -1096,7 +1096,7 @@ c	net/minecraft/unmapped/C_03670941	net/minecraft/client/renderer/TileRenderer
 		p	3		y
 		p	4		z
 	m	(Lnet/minecraft/unmapped/C_81592558;III)Z	m_67036914	tesselateLadderInWorld
-		p	1		tile
+		p	1		tt
 		p	2		x
 		p	3		y
 		p	4		z
@@ -1106,31 +1106,31 @@ c	net/minecraft/unmapped/C_03670941	net/minecraft/client/renderer/TileRenderer
 		p	3		y
 		p	4		z
 	m	(Lnet/minecraft/unmapped/C_81592558;III)Z	m_17614106	tesselateRowInWorld
-		p	1		tile
+		p	1		tt
 		p	2		x
 		p	3		y
 		p	4		z
 	m	(Lnet/minecraft/unmapped/C_81592558;DDDDD)V	m_44049584	tesselateTorch
-		p	1		tile
+		p	1		tt
 		p	2		x
 		p	4		y
 		p	6		z
 		p	8		xxa
 		p	10		zza
 	m	(Lnet/minecraft/unmapped/C_81592558;IDDD)V	m_89358041	tesselateCrossTexture
-		p	1		tile
+		p	1		tt
 		p	2		data
 		p	3		x
 		p	5		y
 		p	7		z
 	m	(Lnet/minecraft/unmapped/C_81592558;IDDD)V	m_37903827	tesselateRowTexture
-		p	1		tile
+		p	1		tt
 		p	2		data
 		p	3		x
 		p	5		y
 		p	7		z
 	m	(Lnet/minecraft/unmapped/C_81592558;III)Z	m_03717224	tesselateWaterInWorld
-		p	1		level
+		p	1		tt
 		p	2		x
 		p	3		y
 		p	4		z
@@ -1140,13 +1140,13 @@ c	net/minecraft/unmapped/C_03670941	net/minecraft/client/renderer/TileRenderer
 		p	3		z
 		p	4		m
 	m	(Lnet/minecraft/unmapped/C_81592558;Lnet/minecraft/unmapped/C_64041439;III)V	m_65042374	renderBlock
-		p	1		tile
+		p	1		tt
 		p	2		level
 		p	3		x
 		p	4		y
 		p	5		z
 	m	(Lnet/minecraft/unmapped/C_81592558;III)Z	m_10351618	tesselateBlockInWorld
-		p	1		tile
+		p	1		tt
 		p	2		x
 		p	3		y
 		p	4		z
@@ -1235,7 +1235,7 @@ c	net/minecraft/unmapped/C_03670941	net/minecraft/client/renderer/TileRenderer
 		p	2		data
 		p	3		brightness
 	m	(I)Z	m_23090332	canRender
-		p	0		model
+		p	0		renderShape
 	m	()V	<clinit>	<clinit>
 c	net/minecraft/unmapped/C_03832126	net/minecraft/util/Tickable
 	m	()V	m_65302345	tick
@@ -2186,12 +2186,12 @@ c	net/minecraft/unmapped/C_12356698	net/minecraft/world/inventory/Slot
 	f	Lnet/minecraft/unmapped/C_43616774;	f_76989145	container
 	f	I	f_00184299	index
 	f	I	f_95205544	x
-	f	I	f_40293340	z
+	f	I	f_40293340	y
 	m	(Lnet/minecraft/unmapped/C_43616774;III)V	<init>	<init>
 		p	1		container
 		p	2		slot
 		p	3		x
-		p	4		z
+		p	4		y
 	m	(Lnet/minecraft/unmapped/C_88708284;)V	m_04379969	onTake
 		p	1		item
 	m	(Lnet/minecraft/unmapped/C_88708284;)Z	m_74355745	mayPlace
@@ -5075,12 +5075,12 @@ c	net/minecraft/unmapped/C_30731159	net/minecraft/client/multiplayer/Multiplayer
 	m	(II)Z	m_25376265	m_25376265
 		p	1		p_1
 		p	2		p_2
-	m	(II)V	m_48873348	unloadChunk
+	m	(II)V	m_48873348	drop
 		p	1		x
 		p	2		z
-	m	(II)Lnet/minecraft/unmapped/C_14917579;	m_81172804	m_81172804
-		p	1		p_1
-		p	2		p_2
+	m	(II)Lnet/minecraft/unmapped/C_14917579;	m_81172804	create
+		p	1		x
+		p	2		z
 	m	(II)Lnet/minecraft/unmapped/C_14917579;	m_63148559	m_63148559
 		p	1		p_1
 		p	2		p_2
@@ -13000,7 +13000,7 @@ c	net/minecraft/unmapped/C_74425583	net/minecraft/world/entity/Mob
 	m	()V	m_78825932	checkDespawn
 	m	()V	m_85081302	serverAiStep
 	m	()I	m_98286531	getMaxHeadXRot
-	m	(Lnet/minecraft/unmapped/C_42232651;FF)V	m_03694472	setLookAt
+	m	(Lnet/minecraft/unmapped/C_42232651;FF)V	m_03694472	lookAt
 		p	1		target
 		p	2		xRot
 		p	3		yRot
