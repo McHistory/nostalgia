@@ -10264,7 +10264,7 @@ c	net/minecraft/unmapped/C_64041439	net/minecraft/world/level/Level
 		p	2		levelName
 		p	3		seed
 		p	5		dimension
-	m	()Lnet/minecraft/unmapped/C_44627882;	m_35491590	createLevelSource
+	m	()Lnet/minecraft/unmapped/C_44627882;	m_35491590	createChunkSource
 	m	()V	m_94503539	setInitialSpawn
 	m	()V	m_65776351	validateSpawn
 	m	(II)I	m_74897689	getTopTile
@@ -11233,7 +11233,7 @@ c	net/minecraft/unmapped/C_65241348	net/minecraft/client/renderer/DistanceChunkS
 	m	(Ljava/lang/Object;Ljava/lang/Object;)I	compare	compare
 		p	1		c0
 		p	2		c1
-c	net/minecraft/unmapped/C_65562518	net/minecraft/client/gui/inventory/DispenserScreen
+c	net/minecraft/unmapped/C_65562518	net/minecraft/client/gui/inventory/TrapScreen
 	m	(Lnet/minecraft/unmapped/C_87542771;Lnet/minecraft/unmapped/C_63102660;)V	<init>	<init>
 		p	1		inventory
 		p	2		te
@@ -12312,14 +12312,14 @@ c	net/minecraft/unmapped/C_71226614	net/minecraft/world/level/TickNextTickData
 	f	I	f_56729292	x
 	f	I	f_21025042	y
 	f	I	f_92395359	z
-	f	I	f_09204826	priority
+	f	I	f_09204826	tileId
 	f	J	f_98309471	delay
 	f	J	f_99302835	c
 	m	(IIII)V	<init>	<init>
 		p	1		x
 		p	2		y
 		p	3		z
-		p	4		priority
+		p	4		tileId
 	m	(Ljava/lang/Object;)Z	equals	equals
 		p	1		obj
 	m	()I	hashCode	hashCode
@@ -12599,8 +12599,8 @@ c	net/minecraft/unmapped/C_72739095	net/minecraft/world/level/chunk/storage/OldC
 		p	2		p_2
 	m	(Lnet/minecraft/unmapped/C_14917579;Lnet/minecraft/unmapped/C_64041439;Lnet/minecraft/unmapped/C_74087615;)V	m_58338808	save
 		p	0		chunk
-		p	1		level
-		p	2		data
+		p	1		lc
+		p	2		level
 	m	(Lnet/minecraft/unmapped/C_64041439;Lnet/minecraft/unmapped/C_74087615;)Lnet/minecraft/unmapped/C_14917579;	m_60349170	load
 		p	0		level
 		p	1		tag
@@ -13964,10 +13964,10 @@ c	net/minecraft/unmapped/C_80821451	net/minecraft/world/level/tile/CactusTile
 		p	3		p_3
 		p	4		p_4
 		p	5		p_5
-c	net/minecraft/unmapped/C_80955943	net/minecraft/client/gui/TexturePackSelectScreen
+c	net/minecraft/unmapped/C_80955943	net/minecraft/client/skins/TexturePackSelectScreen
 	f	Lnet/minecraft/unmapped/C_85740840;	f_12761844	lastScreen
 	f	I	f_10241619	updateIn
-	f	Ljava/lang/String;	f_30549229	texturePacksFolder
+	f	Ljava/lang/String;	f_30549229	instructions
 	f	Lnet/minecraft/unmapped/C_80955943$C_09899208;	f_88157699	skinList
 	m	(Lnet/minecraft/unmapped/C_85740840;)V	<init>	<init>
 		p	1		lastScreen
@@ -14011,7 +14011,7 @@ c	net/minecraft/unmapped/C_80955943	net/minecraft/client/gui/TexturePackSelectSc
 		p	0		p_0
 	m	(Lnet/minecraft/unmapped/C_80955943;)Lnet/minecraft/unmapped/C_23014920;	m_86694412	m_86694412
 		p	0		p_0
-c	net/minecraft/unmapped/C_80955943$C_09899208	net/minecraft/client/gui/TexturePackSelectScreen$TexturePackList
+c	net/minecraft/unmapped/C_80955943$C_09899208	net/minecraft/client/skins/TexturePackSelectScreen$TexturePackList
 	f	Lnet/minecraft/unmapped/C_80955943;	f_57127443	f_57127443
 	m	(Lnet/minecraft/unmapped/C_80955943;)V	<init>	<init>
 		p	1		p_1
