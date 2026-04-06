@@ -29,4 +29,5 @@ public class BlockShapes {
 	public static final int SHAPE_VINE = 20;
 	public static final int SHAPE_FENCE_GATE = 21;
 	public static final int SHAPE_ENTITYTILE_ANIMATED = 22;
+	public static final int SHAPE_LILYPAD = 23;
 }

@@ -241,14 +241,14 @@ c	net/minecraft/unmapped/C_08381405
 		p	2		p_2	
 	m	()V	m_83565677	m_83565677	
 c	net/minecraft/unmapped/C_08565163
-	m	(Lnet/minecraft/unmapped/C_74087615;Ljava/io/File;)V	m_55972786		m_55972786
-		p	0			p_0
-		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_74087615;Ljava/io/File;)V	m_85581930		m_85581930
-		p	0			p_0
-		p	1			p_1
-	m	(Ljava/io/File;)Lnet/minecraft/unmapped/C_74087615;	m_55568032		m_55568032
-		p	0			p_0
+	m	(Lnet/minecraft/unmapped/C_74087615;Ljava/io/File;)V	m_55972786		safeWrite
+		p	0			tag
+		p	1			file
+	m	(Lnet/minecraft/unmapped/C_74087615;Ljava/io/File;)V	m_85581930		write
+		p	0			tag
+		p	1			file
+	m	(Ljava/io/File;)Lnet/minecraft/unmapped/C_74087615;	m_55568032		read
+		p	0			file
 c	net/minecraft/unmapped/C_10243778
 	m	(FFFFFF)V	m_61514729	m_61514729	
 		p	1		p_1	
@@ -1335,11 +1335,11 @@ c	net/minecraft/unmapped/C_64041439
 		p	2			levelName
 		p	3			levelSettings
 		p	4			fixedDimension
-	m	(Lnet/minecraft/unmapped/C_92766678;III)I	m_33310517		m_33310517
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
+	m	(Lnet/minecraft/unmapped/C_92766678;III)I	m_33310517		getBrightnessPropagate
+		p	1			layer
+		p	2			x
+		p	3			y
+		p	4			z
 	m	(IIII)I	m_72193523		m_72193523
 		p	1			p_1
 		p	2			p_2
@@ -1347,8 +1347,8 @@ c	net/minecraft/unmapped/C_64041439
 		p	4			p_4
 	m	(F)F	m_31573274		getSkyDarken
 		p	1			a
-	m	(F)F	m_05796930		m_05796930
-		p	1			p_1
+	m	(F)F	m_05796930		getSunAngle
+		p	1			a
 	m	(Lnet/minecraft/unmapped/C_40735137;)V	m_29582778		markForRemoval
 		p	1			entity
 	m	(III)V	m_85064200		checkLight
@@ -1859,14 +1859,14 @@ c	net/minecraft/unmapped/C_88708284
 		p	0			tag
 	m	()V	<init>		<init>
 	m	(Lnet/minecraft/unmapped/C_64041439;Lnet/minecraft/unmapped/C_40996800;)Lnet/minecraft/unmapped/C_88708284;	m_30029788		useTimeDepleted
-		p	1			p_1
-		p	2			p_2
+		p	1			level
+		p	2			player
 	m	()I	m_56605398		getUseDuration
 	m	()Lnet/minecraft/unmapped/C_51467731;	m_34822152		getUseAnimation
 	m	(Lnet/minecraft/unmapped/C_64041439;Lnet/minecraft/unmapped/C_40996800;I)V	m_18734659		releaseUsing
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+		p	1			level
+		p	2			player
+		p	3			durationLeft
 c	net/minecraft/unmapped/C_89604096
 	f	Lnet/minecraft/unmapped/C_89604096;	f_58797546		replaceable_plant
 c	net/minecraft/unmapped/C_89604096$04645074		04645074
@@ -1887,16 +1887,16 @@ c	net/minecraft/unmapped/C_90574280
 		p	4			z
 		p	5			random
 c	net/minecraft/unmapped/C_90716798
-	f	Ljava/lang/String;	f_24567665		f_24567665
-	f	Z	f_73479766		f_73479766
-	f	Z	f_04826048		f_04826048
-	f	Lnet/minecraft/unmapped/C_85125467;	f_79945455		f_79945455
-	f	Lnet/minecraft/unmapped/C_85125467;	f_90270677		f_90270677
-	f	Lnet/minecraft/unmapped/C_85125467;	f_93987180		f_93987180
-	f	Lnet/minecraft/unmapped/C_85125467;	f_25300304		f_25300304
-	f	Ljava/lang/String;	f_61348083		f_61348083
-	f	Ljava/lang/String;	f_32213474		f_32213474
-	m	()V	m_91021567		m_91021567
+	f	Ljava/lang/String;	f_24567665		gameMode
+	f	Z	f_73479766		features
+	f	Z	f_04826048		displayOptions
+	f	Lnet/minecraft/unmapped/C_85125467;	f_79945455		modeButton
+	f	Lnet/minecraft/unmapped/C_85125467;	f_90270677		moreOptionsButton
+	f	Lnet/minecraft/unmapped/C_85125467;	f_93987180		featuresButton
+	f	Lnet/minecraft/unmapped/C_85125467;	f_25300304		typeButton
+	f	Ljava/lang/String;	f_61348083		gameModeHelp1
+	f	Ljava/lang/String;	f_32213474		gameModeHelp2
+	m	()V	m_91021567		updateSelectionStrings
 c	net/minecraft/unmapped/C_90851635
 	m	(FFFFFF)V	m_61514729	m_61514729	
 		p	1		p_1	
@@ -2003,7 +2003,7 @@ c	net/minecraft/unmapped/C_94906307
 		p	6			p_6
 		p	7			p_7
 c	net/minecraft/unmapped/C_95236836
-	f	Lnet/minecraft/unmapped/C_90931970;	f_77605847		f_77605847
+	f	Lnet/minecraft/unmapped/C_90931970;	f_77605847		snipeSkeleton
 c	net/minecraft/unmapped/C_95462098
 	f	I	f_46022473		f_46022473
 	f	I	f_68299424		f_68299424
