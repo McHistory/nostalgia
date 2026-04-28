@@ -119,14 +119,14 @@ c	net/minecraft/unmapped/C_04411667
 		p	8		toBlow	
 c	net/minecraft/unmapped/C_06774341
 	m	()Z	m_24660344	m_24660344	
-c	net/minecraft/unmapped/C_06809037	net/minecraft/client/gui/components/ScreenParticleComponent	
+c	net/minecraft/unmapped/C_06809037	net/minecraft/client/gui/particle/GuiParticles	
 	f	Ljava/util/List;	f_01355978	particles	
-	f	Lnet/minecraft/client/Minecraft;	f_35292639	minecraft	
+	f	Lnet/minecraft/client/Minecraft;	f_35292639	mc	
 	m	(Lnet/minecraft/client/Minecraft;)V	<init>	<init>	
-		p	1		minecraft	
+		p	1		mc	
 	m	()V	m_63551125	tick	
 	m	(F)V	m_61993088	render	
-		p	1		partialTick	
+		p	1		a	
 c	net/minecraft/unmapped/C_08321986	net/minecraft/world/entity/animal/Wolf	
 	f	Z	f_30209251	interested	
 	f	F	f_23356798	interestedAngle	
@@ -503,30 +503,30 @@ c	net/minecraft/unmapped/C_27396115	net/minecraft/util/NoneNullTiles
 	m	([B)V	m_57339887	replace	
 		p	0		blocks	
 	m	()V	<clinit>	<clinit>	
-c	net/minecraft/unmapped/C_27649987	net/minecraft/client/gui/components/ScreenParticle	
+c	net/minecraft/unmapped/C_27649987	net/minecraft/client/gui/particle/GuiParticle	
 	f	Ljava/util/Random;	f_53268692	random	
 	f	D	f_59231318	x	
 	f	D	f_58065236	y	
 	f	D	f_89143671	xo	
 	f	D	f_62662779	yo	
-	f	D	f_04347396	xd	
-	f	D	f_49844367	yd	
-	f	D	f_34320333	power	
+	f	D	f_04347396	xa	
+	f	D	f_49844367	ya	
+	f	D	f_34320333	friction	
 	f	Z	f_84761191	removed	
-	f	I	f_18134404	age	
-	f	I	f_14069588	lifetime	
-	f	D	f_75152581	rCol	
-	f	D	f_82693943	gCol	
-	f	D	f_85205131	bCol	
-	f	D	f_98120169	alpha	
-	f	D	f_69337633	rColOld	
-	f	D	f_73070880	gColOld	
-	f	D	f_27980889	bColOld	
-	f	D	f_46927882	alphaOld	
+	f	I	f_18134404	life	
+	f	I	f_14069588	lifeTime	
+	f	D	f_75152581	r	
+	f	D	f_82693943	g	
+	f	D	f_85205131	b	
+	f	D	f_98120169	a	
+	f	D	f_69337633	oR	
+	f	D	f_73070880	oG	
+	f	D	f_27980889	oB	
+	f	D	f_46927882	oA	
 	m	(Lnet/minecraft/unmapped/C_06809037;)V	m_69899712	tick	
-		p	1		manager	
-	m	()V	m_10160836	setup	
-	m	()V	m_73700302	setRemoved	
+		p	1		guiParticles	
+	m	()V	m_10160836	preTick	
+	m	()V	m_73700302	remove	
 	m	()V	<clinit>	<clinit>	
 c	net/minecraft/unmapped/C_28105876
 	f	Ljava/util/List;	f_40051390	enemies	
@@ -1492,14 +1492,14 @@ c	net/minecraft/unmapped/C_75191757
 		p	1		containerId	
 		p	2		slot	
 		p	3		item	
-c	net/minecraft/unmapped/C_76536438	net/minecraft/util/Language	
-	f	Lnet/minecraft/unmapped/C_16154270;	f_12705175	i18n	
+c	net/minecraft/unmapped/C_76536438	net/minecraft/locale/I18n	
+	f	Lnet/minecraft/unmapped/C_16154270;	f_12705175	lang	
 	m	()V	<init>	<init>	
-	m	(Ljava/lang/String;)Ljava/lang/String;	m_79832914	getOrDefault	
-		p	0		key	
+	m	(Ljava/lang/String;)Ljava/lang/String;	m_79832914	get	
+		p	0		id	
 	m	(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;	m_00994426	get	
-		p	0		key	
-		p	1		format	
+		p	0		id	
+		p	1		args	
 	m	()V	<clinit>	<clinit>	
 c	net/minecraft/unmapped/C_76575783
 	f	Z	f_39197674	renderSelection	

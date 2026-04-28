@@ -763,7 +763,7 @@ c	net/minecraft/unmapped/C_03140863	net/minecraft/client/renderer/GameRenderer
 		p	1		minecraft
 	m	()V	m_08141499	tick
 	m	(F)V	m_09175101	pick
-		p	1		partialTick
+		p	1		a
 	m	(F)F	m_68068742	getFov
 		p	1		a
 	m	(F)V	m_51533744	bobHurt
@@ -781,8 +781,8 @@ c	net/minecraft/unmapped/C_03140863	net/minecraft/client/renderer/GameRenderer
 	m	(F)V	m_08357947	render
 		p	1		a
 	m	(FJ)V	m_66460096	renderLevel
-		p	1		partialTick
-		p	2		nanoTime
+		p	1		a
+		p	2		until
 	m	()V	m_42924616	tickRain
 	m	(F)V	m_14692088	renderSnowAndRain
 		p	1		a
@@ -1613,14 +1613,14 @@ c	net/minecraft/unmapped/C_06774341	net/minecraft/world/entity/item/ItemEntity
 		p	1		p_1
 	m	(Lnet/minecraft/unmapped/C_40996800;)V	m_37734789	m_37734789
 		p	1		p_1
-c	net/minecraft/unmapped/C_06809037	net/minecraft/client/gui/components/ScreenParticleComponent
+c	net/minecraft/unmapped/C_06809037	net/minecraft/client/gui/particle/GuiParticles
 	f	Ljava/util/List;	f_01355978	particles
-	f	Lnet/minecraft/client/Minecraft;	f_35292639	minecraft
+	f	Lnet/minecraft/client/Minecraft;	f_35292639	mc
 	m	(Lnet/minecraft/client/Minecraft;)V	<init>	<init>
-		p	1		minecraft
+		p	1		mc
 	m	()V	m_63551125	tick
 	m	(F)V	m_61993088	render
-		p	1		partialTick
+		p	1		a
 c	net/minecraft/unmapped/C_07722405	net/minecraft/client/renderer/entity/FireballRenderer
 	m	()V	<init>	<init>
 	m	(Lnet/minecraft/unmapped/C_34253829;DDDFF)V	m_33391449	render
@@ -2083,7 +2083,7 @@ c	net/minecraft/unmapped/C_11134548	net/minecraft/network/packets/EntityEventPac
 	m	(Lnet/minecraft/unmapped/C_10918870;)V	m_04853589	m_04853589
 		p	1		p_1
 	m	()I	m_85604015	m_85604015
-c	net/minecraft/unmapped/C_11164199	net/minecraft/client/gui/components/SmallButton
+c	net/minecraft/unmapped/C_11164199	net/minecraft/client/gui/SmallButton
 	f	Lnet/minecraft/unmapped/C_76792751$C_92207510;	f_58671892	option
 	m	(IIILjava/lang/String;)V	<init>	<init>
 		p	1		p_1
@@ -2973,20 +2973,20 @@ c	net/minecraft/unmapped/C_15891356	net/minecraft/client/gui/achievement/Achieve
 		p	3		a
 	m	()Z	m_47190451	m_47190451
 	m	()V	<clinit>	<clinit>
-c	net/minecraft/unmapped/C_16154270	net/minecraft/locale/I18n
+c	net/minecraft/unmapped/C_16154270	net/minecraft/locale/Language
 	f	Lnet/minecraft/unmapped/C_16154270;	f_25868344	singleton
 	f	Ljava/util/Properties;	f_10100345	keys
 	m	()V	<init>	<init>
 	m	()Lnet/minecraft/unmapped/C_16154270;	m_56062593	getInstance
-	m	(Ljava/lang/String;)Ljava/lang/String;	m_77288988	get
-		p	1		key
-	m	(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;	m_27767503	get
-		p	1		key
-		p	2		format
-	m	(Ljava/lang/String;)Ljava/lang/String;	m_36441695	getDescriptionString
-		p	1		key
+	m	(Ljava/lang/String;)Ljava/lang/String;	m_77288988	getElement
+		p	1		elementId
+	m	(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;	m_27767503	getElement
+		p	1		elementId
+		p	2		args
+	m	(Ljava/lang/String;)Ljava/lang/String;	m_36441695	getElementName
+		p	1		elementId
 	m	()V	<clinit>	<clinit>
-c	net/minecraft/unmapped/C_16178213	net/minecraft/client/gui/components/EditBox
+c	net/minecraft/unmapped/C_16178213	net/minecraft/client/gui/EditBox
 	f	Lnet/minecraft/unmapped/C_23014920;	f_08457791	font
 	f	I	f_62122459	x
 	f	I	f_90267608	y
@@ -3025,28 +3025,28 @@ c	net/minecraft/unmapped/C_16178213	net/minecraft/client/gui/components/EditBox
 c	net/minecraft/unmapped/C_16190149	net/minecraft/client/particle/ParticleEngine
 	f	Lnet/minecraft/unmapped/C_64041439;	f_79662056	level
 	f	[Ljava/util/List;	f_71918941	particles
-	f	Lnet/minecraft/unmapped/C_82920792;	f_94050747	textureManager
+	f	Lnet/minecraft/unmapped/C_82920792;	f_94050747	textures
 	f	Ljava/util/Random;	f_57879970	random
 	m	(Lnet/minecraft/unmapped/C_64041439;Lnet/minecraft/unmapped/C_82920792;)V	<init>	<init>
 		p	1		level
-		p	2		textureManager
+		p	2		textures
 	m	(Lnet/minecraft/unmapped/C_47540058;)V	m_20116138	add
-		p	1		particle
+		p	1		p
 	m	()V	m_13941108	tick
 	m	(Lnet/minecraft/unmapped/C_42232651;F)V	m_00221171	render
-		p	1		cameraEntity
-		p	2		partialTick
+		p	1		player
+		p	2		a
 	m	(Lnet/minecraft/unmapped/C_42232651;F)V	m_08636098	renderLit
 		p	1		player
-		p	2		partialTick
+		p	2		a
 	m	(Lnet/minecraft/unmapped/C_64041439;)V	m_86295162	setLevel
 		p	1		level
 	m	(IIIII)V	m_80935546	destroy
 		p	1		x
 		p	2		y
 		p	3		z
-		p	4		tile
-		p	5		meta
+		p	4		tid
+		p	5		data
 	m	(IIII)V	m_96196664	crack
 		p	1		x
 		p	2		y
@@ -4007,7 +4007,7 @@ c	net/minecraft/unmapped/C_23198811	net/minecraft/world/level/levelgen/feature/H
 		p	3		p_3
 		p	4		p_4
 		p	5		p_5
-c	net/minecraft/unmapped/C_23234924	net/minecraft/client/gui/components/SliderButton
+c	net/minecraft/unmapped/C_23234924	net/minecraft/client/gui/SliderButton
 	f	F	f_96577240	value
 	f	Z	f_73479383	canChangeValue
 	f	Lnet/minecraft/unmapped/C_76792751$C_92207510;	f_36304226	option
@@ -4248,7 +4248,7 @@ c	net/minecraft/unmapped/C_24384787	net/minecraft/client/renderer/LevelRenderer
 	m	(Lnet/minecraft/unmapped/C_94584382;Lnet/minecraft/unmapped/C_93187338;F)V	m_75596854	renderEntities
 		p	1		cam
 		p	2		culler
-		p	3		partialTick
+		p	3		a
 	m	()Ljava/lang/String;	m_38481617	getChunkStatistics
 	m	()Ljava/lang/String;	m_13458219	getEntityStatistics
 	m	(III)V	m_06475832	resortChunks
@@ -4527,30 +4527,30 @@ c	net/minecraft/unmapped/C_27396115	net/minecraft/util/NoneNullTiles
 	m	([B)V	m_57339887	replace
 		p	0		blocks
 	m	()V	<clinit>	<clinit>
-c	net/minecraft/unmapped/C_27649987	net/minecraft/client/gui/components/ScreenParticle
+c	net/minecraft/unmapped/C_27649987	net/minecraft/client/gui/particle/GuiParticle
 	f	Ljava/util/Random;	f_53268692	random
 	f	D	f_59231318	x
 	f	D	f_58065236	y
 	f	D	f_89143671	xo
 	f	D	f_62662779	yo
-	f	D	f_04347396	xd
-	f	D	f_49844367	yd
-	f	D	f_34320333	power
+	f	D	f_04347396	xa
+	f	D	f_49844367	ya
+	f	D	f_34320333	friction
 	f	Z	f_84761191	removed
-	f	I	f_18134404	age
-	f	I	f_14069588	lifetime
-	f	D	f_75152581	rCol
-	f	D	f_82693943	gCol
-	f	D	f_85205131	bCol
-	f	D	f_98120169	alpha
-	f	D	f_69337633	rColOld
-	f	D	f_73070880	gColOld
-	f	D	f_27980889	bColOld
-	f	D	f_46927882	alphaOld
+	f	I	f_18134404	life
+	f	I	f_14069588	lifeTime
+	f	D	f_75152581	r
+	f	D	f_82693943	g
+	f	D	f_85205131	b
+	f	D	f_98120169	a
+	f	D	f_69337633	oR
+	f	D	f_73070880	oG
+	f	D	f_27980889	oB
+	f	D	f_46927882	oA
 	m	(Lnet/minecraft/unmapped/C_06809037;)V	m_69899712	tick
-		p	1		manager
-	m	()V	m_10160836	setup
-	m	()V	m_73700302	setRemoved
+		p	1		guiParticles
+	m	()V	m_10160836	preTick
+	m	()V	m_73700302	remove
 	m	()V	<clinit>	<clinit>
 c	net/minecraft/unmapped/C_27971442	net/minecraft/network/packets/SetEntityMotionPacket
 	f	I	f_60764831	id
@@ -5939,14 +5939,14 @@ c	net/minecraft/unmapped/C_35412243	net/minecraft/client/renderer/ItemInHandRend
 		p	1		entity
 		p	2		item
 	m	(F)V	m_31780143	render
-		p	1		partialTick
+		p	1		a
 	m	(F)V	m_01123823	renderScreenEffect
-		p	1		partialTick
+		p	1		a
 	m	(FI)V	m_49733296	renderTex
-		p	1		partialTick
+		p	1		a
 		p	2		tex
 	m	(F)V	m_60857238	renderWater
-		p	1		partialTick
+		p	1		a
 	m	(F)V	m_71594834	renderFire
 		p	1		a
 	m	()V	m_99321066	tick
@@ -6855,7 +6855,7 @@ c	net/minecraft/unmapped/C_42232651	net/minecraft/world/entity/Entity
 		p	2		inputY
 		p	3		inputZ
 	m	(F)F	m_95186532	getBrightness
-		p	1		partialTick
+		p	1		a
 	m	(Lnet/minecraft/unmapped/C_64041439;)V	m_67289058	setLevel
 		p	1		level
 	m	(DDDFF)V	m_03000503	absMoveTo
@@ -10742,9 +10742,9 @@ c	net/minecraft/unmapped/C_64041439	net/minecraft/world/level/Level
 	m	()V	m_74600375	wakeUpPlayers
 	m	()Z	m_29740575	canSkipToDay
 	m	(F)F	m_10970845	getThunderLevel
-		p	1		partialTick
+		p	1		a
 	m	(F)F	m_77661568	getRainLevel
-		p	1		partialTick
+		p	1		a
 	m	(F)V	m_04000603	setRainLevel
 		p	1		newRainLevel
 	m	()Z	m_44230367	isThundering
@@ -12367,7 +12367,7 @@ c	net/minecraft/unmapped/C_71252617	net/minecraft/client/renderer/entity/MobRend
 	m	(Lnet/minecraft/unmapped/C_74425583;IF)Z	m_92745084	setupColor
 		p	1		entity
 		p	2		model
-		p	3		partialTick
+		p	3		a
 	m	(Lnet/minecraft/unmapped/C_74425583;IF)Z	m_06181004	prepareArmor
 		p	1		entity
 		p	2		layer
@@ -13014,15 +13014,15 @@ c	net/minecraft/unmapped/C_74425583	net/minecraft/world/entity/Mob
 	m	()Z	m_83348684	canSpawn
 	m	()V	m_71461017	m_71461017
 	m	(F)F	m_73829618	getAttackAnim
-		p	1		partialTick
+		p	1		a
 	m	(F)Lnet/minecraft/unmapped/C_94584382;	m_63524710	getPos
-		p	1		partialTick
+		p	1		a
 	m	()Lnet/minecraft/unmapped/C_94584382;	m_07686161	m_07686161
 	m	(F)Lnet/minecraft/unmapped/C_94584382;	m_49518844	getViewVector
-		p	1		partialTick
+		p	1		a
 	m	(DF)Lnet/minecraft/unmapped/C_24654288;	m_46210135	pick
-		p	1		pickRange
-		p	3		partialTick
+		p	1		range
+		p	3		a
 	m	()I	m_70209095	getMaxSpawnClusterSize
 	m	()Lnet/minecraft/unmapped/C_88708284;	m_68650840	getCarriedItem
 	m	(B)V	m_48967522	m_48967522
@@ -13347,14 +13347,14 @@ c	net/minecraft/unmapped/C_76154632	net/minecraft/world/item/BowItem
 		p	1		p_1
 		p	2		p_2
 		p	3		p_3
-c	net/minecraft/unmapped/C_76536438	net/minecraft/util/Language
-	f	Lnet/minecraft/unmapped/C_16154270;	f_12705175	i18n
+c	net/minecraft/unmapped/C_76536438	net/minecraft/locale/I18n
+	f	Lnet/minecraft/unmapped/C_16154270;	f_12705175	lang
 	m	()V	<init>	<init>
-	m	(Ljava/lang/String;)Ljava/lang/String;	m_79832914	getOrDefault
-		p	0		key
+	m	(Ljava/lang/String;)Ljava/lang/String;	m_79832914	get
+		p	0		id
 	m	(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;	m_00994426	get
-		p	0		key
-		p	1		format
+		p	0		id
+		p	1		args
 	m	()V	<clinit>	<clinit>
 c	net/minecraft/unmapped/C_76558927	net/minecraft/world/item/FlintAndSteelItem
 	m	(I)V	<init>	<init>
@@ -13367,7 +13367,7 @@ c	net/minecraft/unmapped/C_76558927	net/minecraft/world/item/FlintAndSteelItem
 		p	5		p_5
 		p	6		p_6
 		p	7		p_7
-c	net/minecraft/unmapped/C_76575783	net/minecraft/client/gui/components/ScrolledSelectionList
+c	net/minecraft/unmapped/C_76575783	net/minecraft/client/gui/ScrolledSelectionList
 	f	Lnet/minecraft/client/Minecraft;	f_42297045	minecraft
 	f	I	f_32805192	width
 	f	I	f_41056205	height
@@ -15151,7 +15151,7 @@ c	net/minecraft/unmapped/C_85051018	net/minecraft/world/level/levelgen/SkyLevelS
 	m	()Z	m_06909447	m_06909447
 	m	()Z	m_97106010	m_97106010
 	m	()Ljava/lang/String;	m_76774170	m_76774170
-c	net/minecraft/unmapped/C_85125467	net/minecraft/client/gui/components/Button
+c	net/minecraft/unmapped/C_85125467	net/minecraft/client/gui/Button
 	f	I	f_64784750	width
 	f	I	f_00173992	height
 	f	I	f_99054304	x
@@ -15169,22 +15169,22 @@ c	net/minecraft/unmapped/C_85125467	net/minecraft/client/gui/components/Button
 		p	1		id
 		p	2		x
 		p	3		y
-		p	4		width
-		p	5		height
+		p	4		w
+		p	5		h
 		p	6		msg
 	m	(Z)I	m_12559000	getYImage
 		p	1		hovered
 	m	(Lnet/minecraft/client/Minecraft;II)V	m_43811351	render
-		p	1		client
-		p	2		mouseX
-		p	3		mouseY
+		p	1		minecraft
+		p	2		xm
+		p	3		ym
 	m	(Lnet/minecraft/client/Minecraft;II)V	m_77395853	renderBg
-		p	1		client
-		p	2		mouseX
-		p	3		mouseY
+		p	1		minecraft
+		p	2		xm
+		p	3		ym
 	m	(II)V	m_77579459	mouseReleased
-		p	1		mouseX
-		p	2		mouseY
+		p	1		xm
+		p	2		ym
 	m	(Lnet/minecraft/client/Minecraft;II)Z	m_07260289	isMouseOver
 		p	1		mc
 		p	2		mouseX
@@ -16292,14 +16292,14 @@ c	net/minecraft/unmapped/C_90532916	net/minecraft/world/level/dimension/Dimensio
 		p	1		x
 		p	2		z
 	m	(JF)F	m_49698348	getTimeOfDay
-		p	1		timeOfDay
-		p	3		partialTicks
+		p	1		time
+		p	3		a
 	m	(FF)[F	m_12534257	getSunriseColor
-		p	1		timeOfDay
-		p	2		partialTicks
+		p	1		time
+		p	2		a
 	m	(FF)Lnet/minecraft/unmapped/C_94584382;	m_52969594	getFogColor
-		p	1		timeOfDay
-		p	2		partialTicks
+		p	1		time
+		p	2		a
 	m	()Z	m_25703618	mayRespawn
 	m	(I)Lnet/minecraft/unmapped/C_90532916;	m_09825512	getNew
 		p	0		id
@@ -17568,25 +17568,25 @@ c	net/minecraft/unmapped/C_97866173	net/minecraft/client/gui/Gui
 	f	F	f_84620581	destroyProgress
 	f	F	f_58317046	tbr
 	m	(Lnet/minecraft/client/Minecraft;)V	<init>	<init>
-		p	1		client
+		p	1		minecraft
 	m	(FZII)V	m_94668477	render
-		p	1		partialTick
-		p	2		hasScreen
-		p	3		mouseX
-		p	4		mouseY
+		p	1		a
+		p	2		mouseFree
+		p	3		xMouse
+		p	4		yMouse
 	m	(II)V	m_15423002	renderPumpkin
-		p	1		screenWidth
-		p	2		screenHeight
+		p	1		w
+		p	2		h
 	m	(FII)V	m_77930904	renderVignette
-		p	1		brightness
-		p	2		screenWidth
-		p	3		screenHeight
+		p	1		br
+		p	2		w
+		p	3		h
 	m	(FII)V	m_56920776	renderPortalOverlay
 		p	1		portalTime
-		p	2		width
-		p	3		height
+		p	2		w
+		p	3		h
 	m	(IIIF)V	m_43516960	renderSlot
-		p	1		index
+		p	1		slot
 		p	2		x
 		p	3		y
 		p	4		a
@@ -17595,9 +17595,9 @@ c	net/minecraft/unmapped/C_97866173	net/minecraft/client/gui/Gui
 	m	(Ljava/lang/String;)V	m_81906308	addMessage
 		p	1		msg
 	m	(Ljava/lang/String;)V	m_93993538	setNowPlaying
-		p	1		song
-	m	(Ljava/lang/String;)V	m_87147275	addTranslatedMessage
-		p	1		msg
+		p	1		string
+	m	(Ljava/lang/String;)V	m_87147275	displayClientMessage
+		p	1		messageId
 	m	()V	<clinit>	<clinit>
 c	net/minecraft/unmapped/C_97929192	net/minecraft/client/multiplayer/MultiplayerLocalPlayer
 	f	Lnet/minecraft/unmapped/C_88014908;	f_64157656	connection
