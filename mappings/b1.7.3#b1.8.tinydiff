@@ -1058,8 +1058,8 @@ c	net/minecraft/unmapped/C_49004282
 	f	Lnet/minecraft/unmapped/C_20744923;	f_46997617		strongholdFeature
 	f	Lnet/minecraft/unmapped/C_06705682;	f_70462830		f_70462830
 	f	Lnet/minecraft/unmapped/C_10007912;	f_86759975		f_86759975
-	f	Lnet/minecraft/unmapped/C_31728388;	f_87978136		f_87978136
-	f	[F	f_61387144		f_61387144
+	f	Lnet/minecraft/unmapped/C_31728388;	f_87978136		canyonFeature
+	f	[F	f_61387144		pows
 	m	(Lnet/minecraft/unmapped/C_64041439;J)V	<init>	<init>	
 		p	1		level	
 		p	2		seed	
@@ -1828,11 +1828,11 @@ c	net/minecraft/unmapped/C_87563645
 	m	(Lnet/minecraft/unmapped/C_40996800;)I	m_58781969		m_58781969
 		p	1			p_1
 c	net/minecraft/unmapped/C_87711245
-	m	(Lnet/minecraft/unmapped/C_12356698;IIZ)V	m_70125770		m_70125770
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
+	m	(Lnet/minecraft/unmapped/C_12356698;IIZ)V	m_70125770		slotClicked
+		p	1			slot
+		p	2			slotId
+		p	3			buttonNum
+		p	4			quickMove
 c	net/minecraft/unmapped/C_88014908
 	f	Ljava/util/Map;	f_62094986		playerInfoMap
 	f	Ljava/util/List;	f_24920504		playerInfos
@@ -2318,9 +2318,9 @@ c	net/minecraft/unmapped/C_13347427		net/minecraft/network/packets/SetCreativeMo
 	m	(Ljava/io/DataOutputStream;)V	m_17566769		m_17566769
 		p	1			p_1
 	m	()I	m_85604015		m_85604015
-c	net/minecraft/unmapped/C_14447387		net/minecraft/unmapped/C_14447387
+c	net/minecraft/unmapped/C_14447387		net/minecraft/world/level/newbiome/layer/TemperatureLayer
 	m	(Lnet/minecraft/unmapped/C_29110342;)V	<init>		<init>
-		p	1			p_1
+		p	1			parent
 	m	(IIII)[I	m_98846102		m_98846102
 		p	1			p_1
 		p	2			p_2
@@ -2352,7 +2352,7 @@ c	net/minecraft/unmapped/C_15290080		net/minecraft/world/entity/monster/Silverfi
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
-c	net/minecraft/unmapped/C_17634421		net/minecraft/world/level/biome/VoronoiZoom
+c	net/minecraft/unmapped/C_17634421		net/minecraft/world/level/newbiome/layer/VoronoiZoom
 	m	(JLnet/minecraft/unmapped/C_29110342;)V	<init>		<init>
 		p	1			seedMixup
 		p	3			parent
@@ -2363,19 +2363,19 @@ c	net/minecraft/unmapped/C_17634421		net/minecraft/world/level/biome/VoronoiZoom
 		p	4			p_4
 c	net/minecraft/unmapped/C_18585280		net/minecraft/unmapped/C_18585280
 	m	(JLnet/minecraft/unmapped/C_29110342;)V	<init>		<init>
-		p	1			p_1
-		p	3			p_3
+		p	1			seedMixup
+		p	3			parent
 	m	(IIII)[I	m_98846102		m_98846102
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
-	m	(JLnet/minecraft/unmapped/C_29110342;I)Lnet/minecraft/unmapped/C_29110342;	m_62522760		m_62522760
-		p	0			p_0
-		p	2			p_2
-		p	3			p_3
-c	net/minecraft/unmapped/C_18989064		net/minecraft/unmapped/C_18989064
-	f	I	f_76835077		f_76835077
+	m	(JLnet/minecraft/unmapped/C_29110342;I)Lnet/minecraft/unmapped/C_29110342;	m_62522760		zoom
+		p	0			seed
+		p	2			sup
+		p	3			count
+c	net/minecraft/unmapped/C_18989064		net/minecraft/client/renderer/entity/SilverfishRenderer
+	f	I	f_76835077		modelVersion
 	m	()V	<init>		<init>
 	m	(Lnet/minecraft/unmapped/C_15290080;)F	m_29178326		m_29178326
 		p	1			p_1
@@ -2443,7 +2443,7 @@ c	net/minecraft/unmapped/C_19120995		net/minecraft/world/level/tile/FenceGateTil
 		p	0			data
 	m	(I)I	m_78904822		getDirection
 		p	0			data
-c	net/minecraft/unmapped/C_19448399		net/minecraft/world/level/biome/ZoomLayer
+c	net/minecraft/unmapped/C_19448399		net/minecraft/world/level/newbiome/layer/ZoomLayer
 	m	(JLnet/minecraft/unmapped/C_29110342;)V	<init>		<init>
 		p	1			seedMixup
 		p	3			parent
@@ -2651,7 +2651,7 @@ c	net/minecraft/unmapped/C_28379476		net/minecraft/client/particle/HugeExplosion
 		p	1			p_1
 	m	()V	m_24884718		m_24884718
 	m	()I	m_89634559		m_89634559
-c	net/minecraft/unmapped/C_29110342		net/minecraft/world/level/biome/Layer
+c	net/minecraft/unmapped/C_29110342		net/minecraft/world/level/newbiome/layer/Layer
 	f	J	f_28136126		seed
 	f	Lnet/minecraft/unmapped/C_29110342;	f_40870772		parent
 	f	J	f_46664793		rval
@@ -2672,7 +2672,7 @@ c	net/minecraft/unmapped/C_29110342		net/minecraft/world/level/biome/Layer
 		p	2			yo
 		p	3			w
 		p	4			h
-c	net/minecraft/unmapped/C_30057312		net/minecraft/world/level/biome/AddIslandLayer
+c	net/minecraft/unmapped/C_30057312		net/minecraft/world/level/newbiome/layer/AddIslandLayer
 	m	(JLnet/minecraft/unmapped/C_29110342;)V	<init>		<init>
 		p	1			seedMixup
 		p	3			parent
@@ -2927,7 +2927,7 @@ c	net/minecraft/unmapped/C_45238127		net/minecraft/world/effect/InstantenousMobE
 	m	(II)Z	m_64760942		m_64760942
 		p	1			p_1
 		p	2			p_2
-c	net/minecraft/unmapped/C_45515262		net/minecraft/world/level/biome/SmoothLayer
+c	net/minecraft/unmapped/C_45515262		net/minecraft/world/level/newbiome/layer/SmoothLayer
 	m	(JLnet/minecraft/unmapped/C_29110342;)V	<init>		<init>
 		p	1			seedMixup
 		p	3			parent
@@ -2949,19 +2949,19 @@ c	net/minecraft/unmapped/C_46601080		net/minecraft/client/particle/SuspendedTown
 c	net/minecraft/unmapped/C_49313421		net/minecraft/world/level/biome/ExtremeHillsBiome
 	m	(I)V	<init>		<init>
 		p	1			p_1
-c	net/minecraft/unmapped/C_49745934		net/minecraft/unmapped/C_49745934
-	f	Lnet/minecraft/unmapped/C_29110342;	f_10172770		f_10172770
-	f	I	f_98988170		f_98988170
+c	net/minecraft/unmapped/C_49745934		net/minecraft/world/level/newbiome/layer/DownfallMixerLayer
+	f	Lnet/minecraft/unmapped/C_29110342;	f_10172770		downfall
+	f	I	f_98988170		layer
 	m	(Lnet/minecraft/unmapped/C_29110342;Lnet/minecraft/unmapped/C_29110342;I)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+		p	1			downfall
+		p	2			parent
+		p	3			layer
 	m	(IIII)[I	m_98846102		m_98846102
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
-c	net/minecraft/unmapped/C_50350663		net/minecraft/world/level/biome/RiverInitLayer
+c	net/minecraft/unmapped/C_50350663		net/minecraft/world/level/newbiome/layer/RiverInitLayer
 	m	(JLnet/minecraft/unmapped/C_29110342;)V	<init>		<init>
 		p	1			seed
 		p	3			parent
@@ -3402,9 +3402,9 @@ c	net/minecraft/unmapped/C_60676429		net/minecraft/client/particle/CritParticle
 		p	7			p_7
 	m	()V	m_24884718		m_24884718
 	m	()I	m_89634559		m_89634559
-c	net/minecraft/unmapped/C_60780374		net/minecraft/unmapped/C_60780374
-	f	Lnet/minecraft/unmapped/C_03670941;	f_32740229		f_32740229
-	f	Z	f_49730467		f_49730467
+c	net/minecraft/unmapped/C_60780374		net/minecraft/client/renderer/entity/ExperienceOrbRenderer
+	f	Lnet/minecraft/unmapped/C_03670941;	f_32740229		tileRenderer
+	f	Z	f_49730467		setColor
 	m	()V	<init>		<init>
 	m	(Lnet/minecraft/unmapped/C_96168960;DDDFF)V	m_27679696		m_27679696
 		p	1			p_1
@@ -3496,7 +3496,7 @@ c	net/minecraft/unmapped/C_61658427		net/minecraft/client/particle/HugeExplosion
 		p	7			p_7
 	m	()V	m_24884718		m_24884718
 	m	()I	m_89634559		m_89634559
-c	net/minecraft/unmapped/C_61995236		net/minecraft/world/level/biome/RiverLayer
+c	net/minecraft/unmapped/C_61995236		net/minecraft/world/level/newbiome/layer/RiverLayer
 	m	(JLnet/minecraft/unmapped/C_29110342;)V	<init>		<init>
 		p	1			seedMixup
 		p	3			parent
@@ -3520,7 +3520,7 @@ c	net/minecraft/unmapped/C_62524457		net/minecraft/world/level/tile/HugeMushroom
 	m	(ILjava/util/Random;)I	m_78174230		m_78174230
 		p	1			p_1
 		p	2			p_2
-c	net/minecraft/unmapped/C_63014373		net/minecraft/world/level/biome/IslandLayer
+c	net/minecraft/unmapped/C_63014373		net/minecraft/world/level/newbiome/layer/IslandLayer
 	m	(J)V	<init>		<init>
 		p	1			p_1
 	m	(IIII)[I	m_98846102		m_98846102
@@ -3563,23 +3563,23 @@ c	net/minecraft/unmapped/C_66510258		net/minecraft/unmapped/C_66510258
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
-c	net/minecraft/unmapped/C_66958069		net/minecraft/unmapped/C_66958069
-	f	[F	f_39986421		f_39986421
+c	net/minecraft/unmapped/C_66958069		net/minecraft/world/level/levelgen/CanyonFeature
+	f	[F	f_39986421		rs
 	m	()V	<init>		<init>
-	m	(JII[BDDDFFFIID)V	m_36684960		m_36684960
-		p	1			p_1
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
-		p	6			p_6
-		p	8			p_8
-		p	10			p_10
-		p	12			p_12
-		p	13			p_13
-		p	14			p_14
-		p	15			p_15
-		p	16			p_16
-		p	17			p_17
+	m	(JII[BDDDFFFIID)V	m_36684960		addTunnel
+		p	1			seed
+		p	3			xOffs
+		p	4			zOffs
+		p	5			blocks
+		p	6			xCave
+		p	8			yCave
+		p	10			zCave
+		p	12			thickness
+		p	13			yRot
+		p	14			xRot
+		p	15			step
+		p	16			dist
+		p	17			yScale
 	m	(Lnet/minecraft/unmapped/C_64041439;IIII[B)V	m_51978137		m_51978137
 		p	1			p_1
 		p	2			p_2
@@ -3710,14 +3710,14 @@ c	net/minecraft/unmapped/C_70759607		net/minecraft/network/packets/PlayerInfoPac
 	m	(Lnet/minecraft/unmapped/C_10918870;)V	m_04853589		m_04853589
 		p	1			p_1
 	m	()I	m_85604015		m_85604015
-c	net/minecraft/unmapped/C_71285876		net/minecraft/unmapped/C_71285876
-	f	[Lnet/minecraft/unmapped/C_94760802;	f_32710496		f_32710496
-	f	[Lnet/minecraft/unmapped/C_94760802;	f_24784939		f_24784939
-	f	[F	f_06870599		f_06870599
-	f	[[I	f_70439685		f_70439685
-	f	[[I	f_89070423		f_89070423
+c	net/minecraft/unmapped/C_71285876		net/minecraft/client/model/SilverfishModel
+	f	[Lnet/minecraft/unmapped/C_94760802;	f_32710496		bodyParts
+	f	[Lnet/minecraft/unmapped/C_94760802;	f_24784939		bodyLayers
+	f	[F	f_06870599		zPlacement
+	f	[[I	f_70439685		BODY_SIZES
+	f	[[I	f_89070423		BODY_TEXS
 	m	()V	<init>		<init>
-	m	()I	m_30306561		m_30306561
+	m	()I	m_30306561		modelVersion
 	m	(Lnet/minecraft/unmapped/C_42232651;FFFFFF)V	m_61514729		m_61514729
 		p	1			p_1
 		p	2			p_2
@@ -3759,7 +3759,7 @@ c	net/minecraft/unmapped/C_76184537		net/minecraft/client/renderer/EntityTileRen
 		p	2			data
 		p	3			brightness
 	m	()V	<clinit>		<clinit>
-c	net/minecraft/unmapped/C_76824101		net/minecraft/world/level/biome/BiomeInitLayer
+c	net/minecraft/unmapped/C_76824101		net/minecraft/world/level/newbiome/layer/BiomeInitLayer
 	f	[Lnet/minecraft/unmapped/C_28105876;	f_71243557		startBiomes
 	m	(JLnet/minecraft/unmapped/C_29110342;)V	<init>		<init>
 		p	1			seed
@@ -3859,9 +3859,9 @@ c	net/minecraft/unmapped/C_81079132		net/minecraft/client/model/ChestModel
 c	net/minecraft/unmapped/C_81159005		net/minecraft/world/level/biome/OceanBiome
 	m	(I)V	<init>		<init>
 		p	1			p_1
-c	net/minecraft/unmapped/C_81472318		net/minecraft/unmapped/C_81472318
+c	net/minecraft/unmapped/C_81472318		net/minecraft/world/level/newbiome/layer/DownfallLayer
 	m	(Lnet/minecraft/unmapped/C_29110342;)V	<init>		<init>
-		p	1			p_1
+		p	1			parent
 	m	(IIII)[I	m_98846102		m_98846102
 		p	1			p_1
 		p	2			p_2
@@ -3897,13 +3897,13 @@ c	net/minecraft/unmapped/C_82860087		net/minecraft/unmapped/C_82860087
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
-c	net/minecraft/unmapped/C_82941056		net/minecraft/unmapped/C_82941056
-	f	Lnet/minecraft/unmapped/C_29110342;	f_12081698		f_12081698
-	f	I	f_00069715		f_00069715
+c	net/minecraft/unmapped/C_82941056		net/minecraft/world/level/newbiome/layer/TemperatureMixerLayer
+	f	Lnet/minecraft/unmapped/C_29110342;	f_12081698		temp
+	f	I	f_00069715		layer
 	m	(Lnet/minecraft/unmapped/C_29110342;Lnet/minecraft/unmapped/C_29110342;I)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+		p	1			temp
+		p	2			parent
+		p	3			layer
 	m	(IIII)[I	m_98846102		m_98846102
 		p	1			p_1
 		p	2			p_2
@@ -3977,33 +3977,33 @@ c	net/minecraft/unmapped/C_84943765		net/minecraft/world/level/levelgen/feature/
 c	net/minecraft/unmapped/C_84978437		net/minecraft/unmapped/C_84978437
 	f	I	f_54666230		f_54666230
 	f	Ljava/lang/Object;	f_14150420		f_14150420
-	f	Lnet/minecraft/unmapped/C_85740840;	f_05909630		f_05909630
-	f	Lnet/minecraft/unmapped/C_84978437$C_11317765;	f_13037795		f_13037795
+	f	Lnet/minecraft/unmapped/C_85740840;	f_05909630		lastScreen
+	f	Lnet/minecraft/unmapped/C_84978437$C_11317765;	f_13037795		serverSelectionList
 	f	Ljava/util/List;	f_75001155		f_75001155
 	f	I	f_61052539		f_61052539
-	f	Lnet/minecraft/unmapped/C_85125467;	f_94108137		f_94108137
-	f	Lnet/minecraft/unmapped/C_85125467;	f_93646157		f_93646157
-	f	Lnet/minecraft/unmapped/C_85125467;	f_51001148		f_51001148
+	f	Lnet/minecraft/unmapped/C_85125467;	f_94108137		editButton
+	f	Lnet/minecraft/unmapped/C_85125467;	f_93646157		selectButton
+	f	Lnet/minecraft/unmapped/C_85125467;	f_51001148		deleteButton
 	f	Z	f_36570272		f_36570272
 	f	Z	f_05683061		f_05683061
 	f	Z	f_53316931		f_53316931
 	f	Z	f_59487328		f_59487328
-	f	Ljava/lang/String;	f_36346571		f_36346571
-	f	Lnet/minecraft/unmapped/C_91543234;	f_46188459		f_46188459
+	f	Ljava/lang/String;	f_36346571		toolTip
+	f	Lnet/minecraft/unmapped/C_91543234;	f_46188459		editingServer
 	m	(Lnet/minecraft/unmapped/C_85740840;)V	<init>		<init>
-		p	1			p_1
+		p	1			lastScreen
 	m	()V	m_53520780		m_53520780
 	m	()V	m_41805697		m_41805697
-	m	()V	m_58747389		m_58747389
-	m	()V	m_27927700		m_27927700
-	m	()V	m_50586450		m_50586450
+	m	()V	m_58747389		loadServers
+	m	()V	m_27927700		saveServers
+	m	()V	m_50586450		initButtons
 	m	()V	m_47002234		m_47002234
 	m	(Lnet/minecraft/unmapped/C_85125467;)V	m_30778170		m_30778170
 		p	1			p_1
 	m	(ZI)V	m_05721067		m_05721067
 		p	1			p_1
 		p	2			p_2
-	m	(Ljava/lang/String;I)I	m_12423431		m_12423431
+	m	(Ljava/lang/String;I)I	m_12423431		parsePort
 		p	1			p_1
 		p	2			p_2
 	m	(CI)V	m_29116903		m_29116903
@@ -4021,12 +4021,12 @@ c	net/minecraft/unmapped/C_84978437		net/minecraft/unmapped/C_84978437
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_91543234;)V	m_65424217		m_65424217
 		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_91543234;)V	m_67383349		m_67383349
-		p	1			p_1
-	m	(Ljava/lang/String;II)V	m_78658554		m_78658554
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+	m	(Lnet/minecraft/unmapped/C_91543234;)V	m_67383349		pingServer
+		p	1			server
+	m	(Ljava/lang/String;II)V	m_78658554		renderTooltip
+		p	1			string
+		p	2			x
+		p	3			y
 	m	(Lnet/minecraft/unmapped/C_84978437;)Ljava/util/List;	m_94895465		m_94895465
 		p	0			p_0
 	m	(Lnet/minecraft/unmapped/C_84978437;I)I	m_12236577		m_12236577
@@ -4054,7 +4054,7 @@ c	net/minecraft/unmapped/C_84978437		net/minecraft/unmapped/C_84978437
 		p	0			p_0
 		p	1			p_1
 	m	()V	<clinit>		<clinit>
-c	net/minecraft/unmapped/C_84978437$C_11317765		C_11317765
+c	net/minecraft/unmapped/C_84978437$C_11317765		ServerSelectionList
 	f	Lnet/minecraft/unmapped/C_84978437;	f_34870526		f_34870526
 	m	(Lnet/minecraft/unmapped/C_84978437;)V	<init>		<init>
 		p	1			p_1
@@ -4540,19 +4540,19 @@ c	net/minecraft/unmapped/C_90958282$C_96879604		C_96879604
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
-c	net/minecraft/unmapped/C_91543234		net/minecraft/unmapped/C_91543234
-	f	Ljava/lang/String;	f_20279990		f_20279990
-	f	Ljava/lang/String;	f_01631523		f_01631523
-	f	Ljava/lang/String;	f_90739178		f_90739178
-	f	Ljava/lang/String;	f_66672935		f_66672935
-	f	J	f_42674065		f_42674065
-	f	Z	f_94322754		f_94322754
+c	net/minecraft/unmapped/C_91543234		net/minecraft/client/multiplayer/ServerData
+	f	Ljava/lang/String;	f_20279990		name
+	f	Ljava/lang/String;	f_01631523		ip
+	f	Ljava/lang/String;	f_90739178		status
+	f	Ljava/lang/String;	f_66672935		motd
+	f	J	f_42674065		ping
+	f	Z	f_94322754		pinged
 	m	(Ljava/lang/String;Ljava/lang/String;)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-	m	()Lnet/minecraft/unmapped/C_74087615;	m_18974597		m_18974597
-	m	(Lnet/minecraft/unmapped/C_74087615;)Lnet/minecraft/unmapped/C_91543234;	m_24508005		m_24508005
-		p	0			p_0
+		p	1			name
+		p	2			ip
+	m	()Lnet/minecraft/unmapped/C_74087615;	m_18974597		write
+	m	(Lnet/minecraft/unmapped/C_74087615;)Lnet/minecraft/unmapped/C_91543234;	m_24508005		read
+		p	0			tag
 c	net/minecraft/unmapped/C_91792368		net/minecraft/world/level/levelgen/structure/StructurePiece
 	c		A structure piece is a construction or room, located somewhere in the world\nwith a given orientatino (out of Direction.java). Structure pieces have a\nbounding box that says where the piece is located and its bounds, and the\norientation is used to translate local coordinates into world coordinates.\n<p>\nThe default orientation is Direction.UNDEFINED, in which case no translation\nwill occur. If the orientation is Direction.NORTH, coordinate (0, 0, 0) will\nbe at (boundingBox.x0, boundingBox.y0, boundingBox.z1). In other words, (1,\n1, 1) will be translated to (boundingBox.x0 + 1, boundingBox.y0 + 1,\nboundingBox.z1 - 1).\n<p>\nWhen using Direction.SOUTH, the x coordinate will be the same, and the z\ncoordinate will be flipped. In other words, the bounding box is NOT rotated!\nIt is only flipped along the z axis. Also note that the bounding box is in\nworld coordinates, so the local drawing must never reach outside of this.\n<p>\nWhen using east and west coordinates, the local z coordinate will be swapped\nwith the local x coordinate. For example, (0, 0, 0) is (boundingBox.z1,\nboundingBox.y0, boundingBox.z0), and (1, 1, 1) becomes (boundingBox.x1 - 1,\nboundingBox.y0 + 1, boundingBox.z0 + 1) when using Direction.WEST.\n<p>\nWhen-ever a structure piece is placing blocks, it is VERY IMPORTANT to always\nmake sure that all getTile and setTile calls are within the chunk's bounding\nbox. Failing to check this will cause the level generator to create new\nchunks, leading to infinite loops and other errors.
 	f	Lnet/minecraft/unmapped/C_61280729;	f_23752582		boundingBox
@@ -4710,7 +4710,7 @@ c	net/minecraft/unmapped/C_91792368$C_46502351		BlockSelector
 		p	5			isEdge
 	m	()I	m_95564666		getNextId
 	m	()I	m_61306234		getNextData
-c	net/minecraft/unmapped/C_94306569		net/minecraft/world/level/biome/FuzzyZoomLayer
+c	net/minecraft/unmapped/C_94306569		net/minecraft/world/level/newbiome/layer/FuzzyZoomLayer
 	m	(JLnet/minecraft/unmapped/C_29110342;)V	<init>		<init>
 		p	1			seed
 		p	3			parent

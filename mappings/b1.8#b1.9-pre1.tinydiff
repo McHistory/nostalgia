@@ -55,7 +55,7 @@ c	net/minecraft/unmapped/C_28105876
 		p	3			y
 		p	4			z
 c	net/minecraft/unmapped/C_28112798
-	f	[F	f_30611415		f_30611415
+	f	[F	f_30611415		temperatures
 	m	(II)F	m_78021626	getTemperature	
 		p	1		x	
 		p	2		z	
@@ -63,14 +63,14 @@ c	net/minecraft/unmapped/C_28112798
 		p	1			x
 		p	2			y
 		p	3			z
-	m	(FI)F	m_48511555		m_48511555
-		p	1			p_1
-		p	2			p_2
-	m	(IIII)[F	m_80489734		m_80489734
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
+	m	(FI)F	m_48511555		scaleTemp
+		p	1			temp
+		p	2			y
+	m	(IIII)[F	m_80489734		getTemperatureBlock
+		p	1			x
+		p	2			z
+		p	3			w
+		p	4			h
 c	net/minecraft/unmapped/C_30731159
 	m	(Lnet/minecraft/unmapped/C_70943525;III)Ljava/util/List;	m_07648116		m_07648116
 		p	1			p_1
@@ -389,8 +389,8 @@ c	net/minecraft/unmapped/C_00308750		net/minecraft/world/entity/monster/LavaSlim
 	m	()Ljava/lang/String;	m_52063198		m_52063198
 	m	()Ljava/lang/String;	m_64027168		m_64027168
 	m	()Ljava/lang/String;	m_62254572		m_62254572
-c	net/minecraft/unmapped/C_01728693		net/minecraft/unmapped/C_01728693
-	f	Lnet/minecraft/unmapped/C_91866036;	f_97114020		f_97114020
+c	net/minecraft/unmapped/C_01728693		net/minecraft/client/renderer/entity/SnowManRenderer
+	f	Lnet/minecraft/unmapped/C_91866036;	f_97114020		model
 	m	()V	<init>		<init>
 	m	(Lnet/minecraft/unmapped/C_56670058;F)V	m_23153177		m_23153177
 		p	1			p_1
@@ -401,7 +401,7 @@ c	net/minecraft/unmapped/C_01728693		net/minecraft/unmapped/C_01728693
 c	net/minecraft/unmapped/C_03302358		net/minecraft/world/level/biome/MushroomIslandBiome
 	m	(I)V	<init>		<init>
 		p	1			p_1
-c	net/minecraft/unmapped/C_03759495		net/minecraft/unmapped/C_03759495
+c	net/minecraft/unmapped/C_03759495		net/minecraft/world/level/levelgen/feature/WaterlilyFeature
 	m	()V	<init>		<init>
 	m	(Lnet/minecraft/unmapped/C_64041439;Ljava/util/Random;III)Z	m_85015587		m_85015587
 		p	1			p_1
@@ -440,7 +440,7 @@ c	net/minecraft/unmapped/C_07875330		net/minecraft/world/level/tile/WaterlilyTil
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
-c	net/minecraft/unmapped/C_11084869		net/minecraft/unmapped/C_11084869
+c	net/minecraft/unmapped/C_11084869		net/minecraft/client/renderer/entity/MushroomCowRenderer
 	m	(Lnet/minecraft/unmapped/C_36076665;F)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
@@ -921,11 +921,11 @@ c	net/minecraft/unmapped/C_20686865$C_85719787		C_85719787
 c	net/minecraft/unmapped/C_23232514		net/minecraft/world/level/biome/IceBiome
 	m	(I)V	<init>		<init>
 		p	1			p_1
-c	net/minecraft/unmapped/C_24508717		net/minecraft/unmapped/C_24508717
-	f	[Lnet/minecraft/unmapped/C_94760802;	f_31054235		f_31054235
-	f	Lnet/minecraft/unmapped/C_94760802;	f_09026347		f_09026347
+c	net/minecraft/unmapped/C_24508717		net/minecraft/client/model/BlazeModel
+	f	[Lnet/minecraft/unmapped/C_94760802;	f_31054235		upperBodyParts
+	f	Lnet/minecraft/unmapped/C_94760802;	f_09026347		head
 	m	()V	<init>		<init>
-	m	()I	m_96548229		m_96548229
+	m	()I	m_96548229		modelVersion
 	m	(Lnet/minecraft/unmapped/C_42232651;FFFFFF)V	m_61514729		m_61514729
 		p	1			p_1
 		p	2			p_2
@@ -1000,11 +1000,11 @@ c	net/minecraft/unmapped/C_28872247		net/minecraft/world/level/tile/MycelTile
 	m	(ILjava/util/Random;)I	m_78174230		m_78174230
 		p	1			p_1
 		p	2			p_2
-c	net/minecraft/unmapped/C_37373476		net/minecraft/unmapped/C_37373476
-	f	[Lnet/minecraft/unmapped/C_94760802;	f_85657852		f_85657852
-	f	Lnet/minecraft/unmapped/C_94760802;	f_03032890		f_03032890
+c	net/minecraft/unmapped/C_37373476		net/minecraft/client/model/LavaSlimeModel
+	f	[Lnet/minecraft/unmapped/C_94760802;	f_85657852		bodyCubes
+	f	Lnet/minecraft/unmapped/C_94760802;	f_03032890		insideCube
 	m	()V	<init>		<init>
-	m	()I	m_55263118		m_55263118
+	m	()I	m_55263118		getModelVersion
 	m	(FFFFFF)V	m_42818616		m_42818616
 		p	1			p_1
 		p	2			p_2
@@ -1025,8 +1025,8 @@ c	net/minecraft/unmapped/C_37373476		net/minecraft/unmapped/C_37373476
 		p	5			p_5
 		p	6			p_6
 		p	7			p_7
-c	net/minecraft/unmapped/C_39014057		net/minecraft/unmapped/C_39014057
-	f	Lnet/minecraft/unmapped/C_45792724;	f_04484768		f_04484768
+c	net/minecraft/unmapped/C_39014057		net/minecraft/client/renderer/entity/VillagerRenderer
+	f	Lnet/minecraft/unmapped/C_45792724;	f_04484768		villagerModel
 	m	()V	<init>		<init>
 	m	(Lnet/minecraft/unmapped/C_56964626;IF)Z	m_79878283		m_79878283
 		p	1			p_1
@@ -1079,22 +1079,22 @@ c	net/minecraft/unmapped/C_39014057		net/minecraft/unmapped/C_39014057
 		p	6			p_6
 		p	8			p_8
 		p	9			p_9
-c	net/minecraft/unmapped/C_45792724		net/minecraft/unmapped/C_45792724
-	f	Lnet/minecraft/unmapped/C_94760802;	f_79536173		f_79536173
-	f	Lnet/minecraft/unmapped/C_94760802;	f_85306552		f_85306552
-	f	Lnet/minecraft/unmapped/C_94760802;	f_07694132		f_07694132
-	f	Lnet/minecraft/unmapped/C_94760802;	f_22706836		f_22706836
-	f	Lnet/minecraft/unmapped/C_94760802;	f_43233860		f_43233860
+c	net/minecraft/unmapped/C_45792724		net/minecraft/client/model/VillagerModel
+	f	Lnet/minecraft/unmapped/C_94760802;	f_79536173		head
+	f	Lnet/minecraft/unmapped/C_94760802;	f_85306552		body
+	f	Lnet/minecraft/unmapped/C_94760802;	f_07694132		arms
+	f	Lnet/minecraft/unmapped/C_94760802;	f_22706836		leg0
+	f	Lnet/minecraft/unmapped/C_94760802;	f_43233860		leg1
 	f	I	f_95952542		f_95952542
 	f	I	f_01081003		f_01081003
 	f	Z	f_92765254		f_92765254
 	f	Z	f_75634317		f_75634317
 	m	()V	<init>		<init>
 	m	(F)V	<init>		<init>
-		p	1			p_1
+		p	1			g
 	m	(FF)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
+		p	1			g
+		p	2			yOffset
 	m	(Lnet/minecraft/unmapped/C_42232651;FFFFFF)V	m_61514729		m_61514729
 		p	1			p_1
 		p	2			p_2
@@ -1110,10 +1110,10 @@ c	net/minecraft/unmapped/C_45792724		net/minecraft/unmapped/C_45792724
 		p	4			p_4
 		p	5			p_5
 		p	6			p_6
-c	net/minecraft/unmapped/C_47689763		net/minecraft/unmapped/C_47689763
+c	net/minecraft/unmapped/C_47689763		net/minecraft/world/level/newbiome/layer/AddMushroomIslandLayer
 	m	(JLnet/minecraft/unmapped/C_29110342;)V	<init>		<init>
-		p	1			p_1
-		p	3			p_3
+		p	1			seedMixup
+		p	3			parent
 	m	(IIII)[I	m_98846102		m_98846102
 		p	1			p_1
 		p	2			p_2
@@ -1141,16 +1141,16 @@ c	net/minecraft/unmapped/C_48201836		net/minecraft/unmapped/C_48201836
 	m	(F)F	m_95186532		m_95186532
 		p	1			p_1
 	m	()V	m_24884718		m_24884718
-c	net/minecraft/unmapped/C_53755907		net/minecraft/unmapped/C_53755907
+c	net/minecraft/unmapped/C_53755907		net/minecraft/world/level/newbiome/layer/AddSnowLayer
 	m	(JLnet/minecraft/unmapped/C_29110342;)V	<init>		<init>
-		p	1			p_1
-		p	3			p_3
+		p	1			seedMixup
+		p	3			parent
 	m	(IIII)[I	m_98846102		m_98846102
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
-c	net/minecraft/unmapped/C_56670058		net/minecraft/unmapped/C_56670058
+c	net/minecraft/unmapped/C_56670058		net/minecraft/world/entity/animal/SnowMan
 	m	(Lnet/minecraft/unmapped/C_64041439;)V	<init>		<init>
 		p	1			p_1
 	m	()V	m_11642923		m_11642923
@@ -1169,25 +1169,25 @@ c	net/minecraft/unmapped/C_56670058		net/minecraft/unmapped/C_56670058
 	m	()I	m_54895347		m_54895347
 	m	(Z)V	m_88345579		m_88345579
 		p	1			p_1
-c	net/minecraft/unmapped/C_56964626		net/minecraft/unmapped/C_56964626
-	f	I	f_35011335		f_35011335
+c	net/minecraft/unmapped/C_56964626		net/minecraft/world/entity/npc/Villager
+	f	I	f_35011335		profession
 	m	(Lnet/minecraft/unmapped/C_64041439;)V	<init>		<init>
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_64041439;I)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
+		p	1			level
+		p	2			profession
 	m	()V	m_11642923		m_11642923
 	m	(Lnet/minecraft/unmapped/C_74087615;)V	m_61937125		m_61937125
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_74087615;)V	m_30953923		m_30953923
 		p	1			p_1
-	m	()V	m_88158381		m_88158381
+	m	()V	m_88158381		setTexture
 	m	()Z	m_78239271		m_78239271
 	m	()Ljava/lang/String;	m_96971201		m_96971201
 	m	()Ljava/lang/String;	m_52063198		m_52063198
 	m	()Ljava/lang/String;	m_64027168		m_64027168
-c	net/minecraft/unmapped/C_61013837		net/minecraft/unmapped/C_61013837
-	f	I	f_92929343		f_92929343
+c	net/minecraft/unmapped/C_61013837		net/minecraft/client/renderer/entity/BlazeRenderer
+	f	I	f_92929343		modelVersion
 	m	()V	<init>		<init>
 	m	(Lnet/minecraft/unmapped/C_63638640;DDDFF)V	m_33296237		m_33296237
 		p	1			p_1
@@ -1271,8 +1271,8 @@ c	net/minecraft/unmapped/C_63638640		net/minecraft/world/entity/monster/Blaze
 		p	1			value
 	m	()Z	m_90747592		m_90747592
 c	net/minecraft/unmapped/C_65306928		net/minecraft/unmapped/C_65306928
-c	net/minecraft/unmapped/C_65922823		net/minecraft/unmapped/C_65922823
-	f	I	f_26675618		f_26675618
+c	net/minecraft/unmapped/C_65922823		net/minecraft/client/renderer/entity/LavaSlimeRenderer
+	f	I	f_26675618		modelVersion
 	m	()V	<init>		<init>
 	m	(Lnet/minecraft/unmapped/C_00308750;DDDFF)V	m_26475825		m_26475825
 		p	1			p_1
@@ -1337,21 +1337,21 @@ c	net/minecraft/unmapped/C_68529003		net/minecraft/unmapped/C_68529003
 		p	1			p_1
 	m	()V	m_27311198		m_27311198
 	m	()V	<clinit>		<clinit>
-c	net/minecraft/unmapped/C_81101453		net/minecraft/unmapped/C_81101453
+c	net/minecraft/unmapped/C_81101453		net/minecraft/world/level/newbiome/layer/ShoreLayer
 	m	(JLnet/minecraft/unmapped/C_29110342;)V	<init>		<init>
-		p	1			p_1
-		p	3			p_3
+		p	1			seedMixup
+		p	3			parent
 	m	(IIII)[I	m_98846102		m_98846102
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
-c	net/minecraft/unmapped/C_91866036		net/minecraft/unmapped/C_91866036
-	f	Lnet/minecraft/unmapped/C_94760802;	f_72881108		f_72881108
-	f	Lnet/minecraft/unmapped/C_94760802;	f_72928363		f_72928363
-	f	Lnet/minecraft/unmapped/C_94760802;	f_42713915		f_42713915
-	f	Lnet/minecraft/unmapped/C_94760802;	f_67330327		f_67330327
-	f	Lnet/minecraft/unmapped/C_94760802;	f_31103732		f_31103732
+c	net/minecraft/unmapped/C_91866036		net/minecraft/client/model/SnowManModel
+	f	Lnet/minecraft/unmapped/C_94760802;	f_72881108		piece1
+	f	Lnet/minecraft/unmapped/C_94760802;	f_72928363		piece2
+	f	Lnet/minecraft/unmapped/C_94760802;	f_42713915		head
+	f	Lnet/minecraft/unmapped/C_94760802;	f_67330327		arm1
+	f	Lnet/minecraft/unmapped/C_94760802;	f_31103732		arm2
 	m	()V	<init>		<init>
 	m	(FFFFFF)V	m_42818616		m_42818616
 		p	1			p_1
