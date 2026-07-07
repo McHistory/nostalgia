@@ -119,14 +119,14 @@ c	net/minecraft/unmapped/C_49004282
 		p	3			p_3
 		p	4			p_4
 c	net/minecraft/unmapped/C_49594631
-	f	I	f_91328586		f_91328586
+	f	I	f_91328586		targetLand
 	m	(II)V	<init>	<init>	
 		p	1		id	
 		p	2		plantId	
 	m	(III)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+		p	1			id
+		p	2			resultId
+		p	3			targetLand
 c	net/minecraft/unmapped/C_51102979
 	m	(Lnet/minecraft/unmapped/C_46108969;III)I	m_29076487		m_29076487
 		p	1			p_1
@@ -283,19 +283,19 @@ c	net/minecraft/unmapped/C_97645581
 		p	3		icon	
 		p	4		slot	
 	m	(ILnet/minecraft/unmapped/C_97645581$C_40495590;II)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
+		p	1			id
+		p	2			armorType
+		p	3			icon
+		p	4			slot
 	m	()[I	m_10813379		m_10813379
-c	net/minecraft/unmapped/C_97645581$C_40495590		C_40495590
-	f	Lnet/minecraft/unmapped/C_97645581$C_40495590;	f_06228876		f_06228876
-	f	Lnet/minecraft/unmapped/C_97645581$C_40495590;	f_53761550		f_53761550
-	f	Lnet/minecraft/unmapped/C_97645581$C_40495590;	f_82512133		f_82512133
-	f	Lnet/minecraft/unmapped/C_97645581$C_40495590;	f_55142482		f_55142482
-	f	Lnet/minecraft/unmapped/C_97645581$C_40495590;	f_07920347		f_07920347
-	f	I	f_52491094		f_52491094
-	f	[I	f_20582190		f_20582190
+c	net/minecraft/unmapped/C_97645581$C_40495590		ArmorMaterial
+	f	Lnet/minecraft/unmapped/C_97645581$C_40495590;	f_06228876		CLOTH
+	f	Lnet/minecraft/unmapped/C_97645581$C_40495590;	f_53761550		CHAIN
+	f	Lnet/minecraft/unmapped/C_97645581$C_40495590;	f_82512133		IRON
+	f	Lnet/minecraft/unmapped/C_97645581$C_40495590;	f_55142482		GOLD
+	f	Lnet/minecraft/unmapped/C_97645581$C_40495590;	f_07920347		DIAMOND
+	f	I	f_52491094		durabilityMultiplier
+	f	[I	f_20582190		slotProtections
 	f	[Lnet/minecraft/unmapped/C_97645581$C_40495590;	f_60340207		f_60340207
 	m	()[Lnet/minecraft/unmapped/C_97645581$C_40495590;	values		values
 	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_97645581$C_40495590;	valueOf		valueOf
@@ -305,16 +305,16 @@ c	net/minecraft/unmapped/C_97645581$C_40495590		C_40495590
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
-	m	(I)I	m_62103573		m_62103573
-		p	1			p_1
-	m	(I)I	m_59803305		m_59803305
-		p	1			p_1
+	m	(I)I	m_62103573		getHealthForSlot
+		p	1			slot
+	m	(I)I	m_59803305		getDefenseForSlot
+		p	1			slot
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_98888256
 	f	Lnet/minecraft/unmapped/C_98888256;	f_36416113		blazeRod
-	f	Lnet/minecraft/unmapped/C_98888256;	f_67187592		f_67187592
-	f	Lnet/minecraft/unmapped/C_98888256;	f_37045503		f_37045503
-	f	Lnet/minecraft/unmapped/C_98888256;	f_85633221		f_85633221
+	f	Lnet/minecraft/unmapped/C_98888256;	f_67187592		ghastTear
+	f	Lnet/minecraft/unmapped/C_98888256;	f_37045503		goldNugget
+	f	Lnet/minecraft/unmapped/C_98888256;	f_85633221		netherwart_seeds
 c	net/minecraft/unmapped/C_99454192
 	f	Lnet/minecraft/unmapped/C_20384404;	f_97782995		f_97782995
 	m	(Lnet/minecraft/unmapped/C_70943525;III)Ljava/util/List;	m_07648116		m_07648116

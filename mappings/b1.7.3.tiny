@@ -2860,20 +2860,20 @@ c	net/minecraft/unmapped/C_14917579	net/minecraft/world/level/chunk/LevelChunk
 	m	()Z	m_44951106	isEmpty
 	m	()V	m_02358196	onLoad
 c	net/minecraft/unmapped/C_14999373	net/minecraft/client/Lighting
-	f	Ljava/nio/FloatBuffer;	f_64226471	BUFFER
+	f	Ljava/nio/FloatBuffer;	f_64226471	lb
 	m	()V	<init>	<init>
 	m	()V	m_94129982	turnOff
 	m	()V	m_00064778	turnOn
 	m	(DDDD)Ljava/nio/FloatBuffer;	m_82484472	getBuffer
-		p	0		x
-		p	2		y
-		p	4		z
-		p	6		a
+		p	0		a
+		p	2		b
+		p	4		c
+		p	6		d
 	m	(FFFF)Ljava/nio/FloatBuffer;	m_61012999	getBuffer
-		p	0		x
-		p	1		y
-		p	2		z
-		p	3		a
+		p	0		a
+		p	1		b
+		p	2		c
+		p	3		d
 	m	()V	<clinit>	<clinit>
 c	net/minecraft/unmapped/C_15314804	net/minecraft/client/renderer/entity/TntRenderer
 	f	Lnet/minecraft/unmapped/C_03670941;	f_18754207	tileRenderer
@@ -8290,7 +8290,7 @@ c	net/minecraft/unmapped/C_49528123	net/minecraft/client/renderer/tileentity/Spa
 		p	6		p_6
 		p	8		p_8
 c	net/minecraft/unmapped/C_49594631	net/minecraft/world/item/SeedItem
-	f	I	f_60192787	plantId
+	f	I	f_60192787	resultId
 	m	(II)V	<init>	<init>
 		p	1		id
 		p	2		plantId
@@ -13451,7 +13451,7 @@ c	net/minecraft/unmapped/C_76792751	net/minecraft/client/Options
 	f	[Ljava/lang/String;	f_02443586	RENDER_DISTANCES
 	f	[Ljava/lang/String;	f_75260456	DIFFICULTIES
 	f	[Ljava/lang/String;	f_16862915	GUI_SCALES
-	f	[Ljava/lang/String;	f_39956954	PERFORMANCE_OPTIONS
+	f	[Ljava/lang/String;	f_39956954	FRAMERATE_LIMITS
 	f	F	f_10880645	music
 	f	F	f_00260881	sound
 	f	F	f_92231362	sensitivity
@@ -16509,7 +16509,7 @@ c	net/minecraft/unmapped/C_91575016	net/minecraft/network/packets/SetSpawnPositi
 	m	(Lnet/minecraft/unmapped/C_10918870;)V	m_04853589	m_04853589
 		p	1		p_1
 	m	()I	m_85604015	m_85604015
-c	net/minecraft/unmapped/C_92325241	net/minecraft/world/item/TileItemWithoutTranslation
+c	net/minecraft/unmapped/C_92325241	net/minecraft/world/item/TilePlanterItem
 	f	I	f_11710168	tile
 	m	(ILnet/minecraft/unmapped/C_81592558;)V	<init>	<init>
 		p	1		id
@@ -17503,25 +17503,25 @@ c	net/minecraft/unmapped/C_97027864	net/minecraft/world/level/Region
 		p	2		p_2
 		p	3		p_3
 c	net/minecraft/unmapped/C_97075175	com/mojang/nbt/Tag
-	f	Ljava/lang/String;	f_59639691	typeName
+	f	Ljava/lang/String;	f_59639691	name
 	m	()V	<init>	<init>
 	m	(Ljava/io/DataOutput;)V	m_20830783	write
 		p	1		output
 	m	(Ljava/io/DataInput;)V	m_52126384	read
 		p	1		input
 	m	()B	m_65815168	getId
-	m	()Ljava/lang/String;	m_27193928	getType
-	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_97075175;	m_44918998	setType
-		p	1		type
+	m	()Ljava/lang/String;	m_27193928	getName
+	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_97075175;	m_44918998	setName
+		p	1		name
 	m	(Ljava/io/DataInput;)Lnet/minecraft/unmapped/C_97075175;	m_46974369	readUnnamedTag
 		p	0		input
 	m	(Lnet/minecraft/unmapped/C_97075175;Ljava/io/DataOutput;)V	m_71107467	writeUnnamedTag
 		p	0		tag
 		p	1		output
-	m	(B)Lnet/minecraft/unmapped/C_97075175;	m_48721527	fromId
+	m	(B)Lnet/minecraft/unmapped/C_97075175;	m_48721527	newTag
 		p	0		id
-	m	(B)Ljava/lang/String;	m_74184047	getTypeFromId
-		p	0		id
+	m	(B)Ljava/lang/String;	m_74184047	getTagName
+		p	0		type
 c	net/minecraft/unmapped/C_97313606	net/minecraft/world/level/chunk/ChunkPos
 	f	I	f_77181208	x
 	f	I	f_93738510	z
@@ -17911,7 +17911,7 @@ c	net/minecraft/unmapped/C_98888256	net/minecraft/world/item/Item
 	m	()Z	m_45180073	hasCraftingRemainingItem
 	m	()Ljava/lang/String;	m_17134118	getName
 	m	(I)I	m_73217034	getItemColor
-		p	1		aux
+		p	1		data
 	m	(Lnet/minecraft/unmapped/C_88708284;Lnet/minecraft/unmapped/C_64041439;Lnet/minecraft/unmapped/C_42232651;IZ)V	m_36562381	inventoryTick
 		p	1		item
 		p	2		level
