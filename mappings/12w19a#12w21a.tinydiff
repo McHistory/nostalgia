@@ -516,16 +516,16 @@ c	net/minecraft/unmapped/C_49313421
 c	net/minecraft/unmapped/C_76184537
 	f	Lnet/minecraft/unmapped/C_85546361;	f_32787484		f_32787484
 c	net/minecraft/unmapped/C_90958282
-	m	(Lnet/minecraft/unmapped/C_90958282$C_19497742;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/unmapped/C_90958282$C_01159686;	m_61542658	m_61542658	
-		p	0		p_0	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-		p	6		p_6	
-		p	7		p_7	
-	m	(Lnet/minecraft/unmapped/C_90958282$C_77350861;Lnet/minecraft/unmapped/C_90958282$C_19497742;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/unmapped/C_90958282$C_01159686;	m_61542658		m_61542658
+	m	(Lnet/minecraft/unmapped/C_90958282$C_19497742;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/unmapped/C_90958282$C_01159686;	m_61542658	findAndCreatePieceFactory	
+		p	0		piece	
+		p	1		pieces	
+		p	2		random	
+		p	3		footX	
+		p	4		footY	
+		p	5		footZ	
+		p	6		direction	
+		p	7		depth	
+	m	(Lnet/minecraft/unmapped/C_90958282$C_77350861;Lnet/minecraft/unmapped/C_90958282$C_19497742;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/unmapped/C_90958282$C_01159686;	m_61542658		findAndCreatePieceFactory
 		p	0			p_0
 		p	1			p_1
 		p	2			p_2
@@ -578,10 +578,10 @@ c	net/minecraft/unmapped/C_90958282$C_01159686
 		p	7			p_7
 c	net/minecraft/unmapped/C_90958282$C_02727883
 	m	(ILjava/util/Random;Lnet/minecraft/unmapped/C_61280729;I)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
+		p	1		genDepth	
+		p	2		random	
+		p	3		stairsBox	
+		p	4		direction	
 	m	(Lnet/minecraft/unmapped/C_90958282$C_77350861;ILjava/util/Random;Lnet/minecraft/unmapped/C_61280729;I)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
@@ -590,24 +590,24 @@ c	net/minecraft/unmapped/C_90958282$C_02727883
 		p	5			p_5
 c	net/minecraft/unmapped/C_90958282$C_04089062
 	m	(ILjava/util/Random;Lnet/minecraft/unmapped/C_61280729;I)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-	m	(Ljava/util/List;Ljava/util/Random;IIII)Lnet/minecraft/unmapped/C_61280729;	m_35392396	m_35392396	
-		p	0		p_0	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
+		p	1		genDepth	
+		p	2		random	
+		p	3		box	
+		p	4		direction	
+	m	(Ljava/util/List;Ljava/util/Random;IIII)Lnet/minecraft/unmapped/C_61280729;	m_35392396	findPieceBox	
+		p	0		pieces	
+		p	1		random	
+		p	2		footX	
+		p	3		footY	
+		p	4		footZ	
+		p	5		direction	
 	m	(Lnet/minecraft/unmapped/C_90958282$C_77350861;ILjava/util/Random;Lnet/minecraft/unmapped/C_61280729;I)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
 		p	5			p_5
-	m	(Lnet/minecraft/unmapped/C_90958282$C_77350861;Ljava/util/List;Ljava/util/Random;IIII)Lnet/minecraft/unmapped/C_61280729;	m_35392396		m_35392396
+	m	(Lnet/minecraft/unmapped/C_90958282$C_77350861;Ljava/util/List;Ljava/util/Random;IIII)Lnet/minecraft/unmapped/C_61280729;	m_35392396		findPieceBox
 		p	0			p_0
 		p	1			p_1
 		p	2			p_2
@@ -617,25 +617,25 @@ c	net/minecraft/unmapped/C_90958282$C_04089062
 		p	6			p_6
 c	net/minecraft/unmapped/C_90958282$C_12598392
 	m	(ILjava/util/Random;Lnet/minecraft/unmapped/C_61280729;I)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-	m	(Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/unmapped/C_90958282$C_12598392;	m_84445649	m_84445649	
-		p	0		p_0	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-		p	6		p_6	
+		p	1		genDepth	
+		p	2		random	
+		p	3		stairsBox	
+		p	4		direction	
+	m	(Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/unmapped/C_90958282$C_12598392;	m_84445649	createPiece	
+		p	0		pieces	
+		p	1		random	
+		p	2		footX	
+		p	3		footY	
+		p	4		footZ	
+		p	5		direction	
+		p	6		genDepth	
 	m	(Lnet/minecraft/unmapped/C_90958282$C_77350861;ILjava/util/Random;Lnet/minecraft/unmapped/C_61280729;I)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
 		p	5			p_5
-	m	(Lnet/minecraft/unmapped/C_90958282$C_77350861;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/unmapped/C_90958282$C_12598392;	m_84445649		m_84445649
+	m	(Lnet/minecraft/unmapped/C_90958282$C_77350861;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/unmapped/C_90958282$C_12598392;	m_84445649		createPiece
 		p	0			p_0
 		p	1			p_1
 		p	2			p_2
@@ -646,25 +646,25 @@ c	net/minecraft/unmapped/C_90958282$C_12598392
 		p	7			p_7
 c	net/minecraft/unmapped/C_90958282$C_34960839
 	m	(ILjava/util/Random;Lnet/minecraft/unmapped/C_61280729;I)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-	m	(Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/unmapped/C_90958282$C_34960839;	m_01922111	m_01922111	
-		p	0		p_0	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-		p	6		p_6	
+		p	1		genDepth	
+		p	2		random	
+		p	3		stairsBox	
+		p	4		direction	
+	m	(Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/unmapped/C_90958282$C_34960839;	m_01922111	createPiece	
+		p	0		pieces	
+		p	1		random	
+		p	2		footX	
+		p	3		footY	
+		p	4		footZ	
+		p	5		direction	
+		p	6		genDepth	
 	m	(Lnet/minecraft/unmapped/C_90958282$C_77350861;ILjava/util/Random;Lnet/minecraft/unmapped/C_61280729;I)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
 		p	5			p_5
-	m	(Lnet/minecraft/unmapped/C_90958282$C_77350861;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/unmapped/C_90958282$C_34960839;	m_01922111		m_01922111
+	m	(Lnet/minecraft/unmapped/C_90958282$C_77350861;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/unmapped/C_90958282$C_34960839;	m_01922111		createPiece
 		p	0			p_0
 		p	1			p_1
 		p	2			p_2
@@ -675,25 +675,25 @@ c	net/minecraft/unmapped/C_90958282$C_34960839
 		p	7			p_7
 c	net/minecraft/unmapped/C_90958282$C_43838338
 	m	(ILjava/util/Random;Lnet/minecraft/unmapped/C_61280729;I)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-	m	(Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/unmapped/C_90958282$C_43838338;	m_17764814	m_17764814	
-		p	0		p_0	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-		p	6		p_6	
+		p	1		genDepth	
+		p	2		random	
+		p	3		stairsBox	
+		p	4		direction	
+	m	(Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/unmapped/C_90958282$C_43838338;	m_17764814	createPiece	
+		p	0		pieces	
+		p	1		random	
+		p	2		footX	
+		p	3		footY	
+		p	4		footZ	
+		p	5		direction	
+		p	6		genDepth	
 	m	(Lnet/minecraft/unmapped/C_90958282$C_77350861;ILjava/util/Random;Lnet/minecraft/unmapped/C_61280729;I)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
 		p	5			p_5
-	m	(Lnet/minecraft/unmapped/C_90958282$C_77350861;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/unmapped/C_90958282$C_43838338;	m_17764814		m_17764814
+	m	(Lnet/minecraft/unmapped/C_90958282$C_77350861;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/unmapped/C_90958282$C_43838338;	m_17764814		createPiece
 		p	0			p_0
 		p	1			p_1
 		p	2			p_2
@@ -704,25 +704,25 @@ c	net/minecraft/unmapped/C_90958282$C_43838338
 		p	7			p_7
 c	net/minecraft/unmapped/C_90958282$C_44224764
 	m	(ILjava/util/Random;Lnet/minecraft/unmapped/C_61280729;I)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-	m	(Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/unmapped/C_90958282$C_44224764;	m_32560024	m_32560024	
-		p	0		p_0	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-		p	6		p_6	
+		p	1		genDepth	
+		p	2		random	
+		p	3		stairsBox	
+		p	4		direction	
+	m	(Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/unmapped/C_90958282$C_44224764;	m_32560024	createPiece	
+		p	0		pieces	
+		p	1		random	
+		p	2		footX	
+		p	3		footY	
+		p	4		footZ	
+		p	5		direction	
+		p	6		genDepth	
 	m	(Lnet/minecraft/unmapped/C_90958282$C_77350861;ILjava/util/Random;Lnet/minecraft/unmapped/C_61280729;I)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
 		p	5			p_5
-	m	(Lnet/minecraft/unmapped/C_90958282$C_77350861;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/unmapped/C_90958282$C_44224764;	m_32560024		m_32560024
+	m	(Lnet/minecraft/unmapped/C_90958282$C_77350861;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/unmapped/C_90958282$C_44224764;	m_32560024		createPiece
 		p	0			p_0
 		p	1			p_1
 		p	2			p_2
@@ -733,10 +733,10 @@ c	net/minecraft/unmapped/C_90958282$C_44224764
 		p	7			p_7
 c	net/minecraft/unmapped/C_90958282$C_45463923
 	m	(ILjava/util/Random;II)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
+		p	1		genDepth	
+		p	2		random	
+		p	3		west	
+		p	4		north	
 	m	(Lnet/minecraft/unmapped/C_90958282$C_77350861;ILjava/util/Random;II)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
@@ -745,25 +745,25 @@ c	net/minecraft/unmapped/C_90958282$C_45463923
 		p	5			p_5
 c	net/minecraft/unmapped/C_90958282$C_47606172
 	m	(ILjava/util/Random;Lnet/minecraft/unmapped/C_61280729;I)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-	m	(Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/unmapped/C_90958282$C_47606172;	m_41020724	m_41020724	
-		p	0		p_0	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-		p	6		p_6	
+		p	1		genDepth	
+		p	2		random	
+		p	3		stairsBox	
+		p	4		direction	
+	m	(Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/unmapped/C_90958282$C_47606172;	m_41020724	createPiece	
+		p	0		pieces	
+		p	1		random	
+		p	2		footX	
+		p	3		footY	
+		p	4		footZ	
+		p	5		direction	
+		p	6		genDepth	
 	m	(Lnet/minecraft/unmapped/C_90958282$C_77350861;ILjava/util/Random;Lnet/minecraft/unmapped/C_61280729;I)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
 		p	5			p_5
-	m	(Lnet/minecraft/unmapped/C_90958282$C_77350861;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/unmapped/C_90958282$C_47606172;	m_41020724		m_41020724
+	m	(Lnet/minecraft/unmapped/C_90958282$C_77350861;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/unmapped/C_90958282$C_47606172;	m_41020724		createPiece
 		p	0			p_0
 		p	1			p_1
 		p	2			p_2
@@ -774,25 +774,25 @@ c	net/minecraft/unmapped/C_90958282$C_47606172
 		p	7			p_7
 c	net/minecraft/unmapped/C_90958282$C_70385227
 	m	(ILjava/util/Random;Lnet/minecraft/unmapped/C_61280729;I)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-	m	(Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/unmapped/C_90958282$C_70385227;	m_77225123	m_77225123	
-		p	0		p_0	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-		p	6		p_6	
+		p	1		genDepth	
+		p	2		random	
+		p	3		stairsBox	
+		p	4		direction	
+	m	(Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/unmapped/C_90958282$C_70385227;	m_77225123	createPiece	
+		p	0		pieces	
+		p	1		random	
+		p	2		footX	
+		p	3		footY	
+		p	4		footZ	
+		p	5		direction	
+		p	6		genDepth	
 	m	(Lnet/minecraft/unmapped/C_90958282$C_77350861;ILjava/util/Random;Lnet/minecraft/unmapped/C_61280729;I)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
 		p	5			p_5
-	m	(Lnet/minecraft/unmapped/C_90958282$C_77350861;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/unmapped/C_90958282$C_70385227;	m_77225123		m_77225123
+	m	(Lnet/minecraft/unmapped/C_90958282$C_77350861;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/unmapped/C_90958282$C_70385227;	m_77225123		createPiece
 		p	0			p_0
 		p	1			p_1
 		p	2			p_2
@@ -803,25 +803,25 @@ c	net/minecraft/unmapped/C_90958282$C_70385227
 		p	7			p_7
 c	net/minecraft/unmapped/C_90958282$C_70802892
 	m	(ILjava/util/Random;Lnet/minecraft/unmapped/C_61280729;I)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-	m	(Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/unmapped/C_90958282$C_70802892;	m_55312957	m_55312957	
-		p	0		p_0	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-		p	6		p_6	
+		p	1		genDepth	
+		p	2		random	
+		p	3		stairsBox	
+		p	4		direction	
+	m	(Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/unmapped/C_90958282$C_70802892;	m_55312957	createPiece	
+		p	0		startPiece	
+		p	1		random	
+		p	2		footX	
+		p	3		footY	
+		p	4		footZ	
+		p	5		direction	
+		p	6		genDepth	
 	m	(Lnet/minecraft/unmapped/C_90958282$C_77350861;ILjava/util/Random;Lnet/minecraft/unmapped/C_61280729;I)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
 		p	5			p_5
-	m	(Lnet/minecraft/unmapped/C_90958282$C_77350861;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/unmapped/C_90958282$C_70802892;	m_55312957		m_55312957
+	m	(Lnet/minecraft/unmapped/C_90958282$C_77350861;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/unmapped/C_90958282$C_70802892;	m_55312957		createPiece
 		p	0			p_0
 		p	1			p_1
 		p	2			p_2
@@ -834,25 +834,25 @@ c	net/minecraft/unmapped/C_90958282$C_77350861
 	f	Z	f_14401348		f_14401348
 c	net/minecraft/unmapped/C_90958282$C_85553867
 	m	(ILjava/util/Random;Lnet/minecraft/unmapped/C_61280729;I)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-	m	(Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/unmapped/C_90958282$C_85553867;	m_16260744	m_16260744	
-		p	0		p_0	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-		p	6		p_6	
+		p	1		genDepth	
+		p	2		random	
+		p	3		stairsBox	
+		p	4		direction	
+	m	(Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/unmapped/C_90958282$C_85553867;	m_16260744	createPiece	
+		p	0		pieces	
+		p	1		random	
+		p	2		footX	
+		p	3		footY	
+		p	4		footZ	
+		p	5		direction	
+		p	6		genDepth	
 	m	(Lnet/minecraft/unmapped/C_90958282$C_77350861;ILjava/util/Random;Lnet/minecraft/unmapped/C_61280729;I)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
 		p	5			p_5
-	m	(Lnet/minecraft/unmapped/C_90958282$C_77350861;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/unmapped/C_90958282$C_85553867;	m_16260744		m_16260744
+	m	(Lnet/minecraft/unmapped/C_90958282$C_77350861;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/unmapped/C_90958282$C_85553867;	m_16260744		createPiece
 		p	0			p_0
 		p	1			p_1
 		p	2			p_2
@@ -869,25 +869,25 @@ c	net/minecraft/unmapped/C_90958282$C_87934588
 		p	2			p_2
 c	net/minecraft/unmapped/C_90958282$C_96879604
 	m	(ILjava/util/Random;Lnet/minecraft/unmapped/C_61280729;I)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-	m	(Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/unmapped/C_90958282$C_96879604;	m_05661300	m_05661300	
-		p	0		p_0	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-		p	6		p_6	
+		p	1		genDepth	
+		p	2		random	
+		p	3		stairsBox	
+		p	4		direction	
+	m	(Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/unmapped/C_90958282$C_96879604;	m_05661300	createPiece	
+		p	0		pieces	
+		p	1		random	
+		p	2		footX	
+		p	3		footY	
+		p	4		footZ	
+		p	5		direction	
+		p	6		genDepth	
 	m	(Lnet/minecraft/unmapped/C_90958282$C_77350861;ILjava/util/Random;Lnet/minecraft/unmapped/C_61280729;I)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
 		p	5			p_5
-	m	(Lnet/minecraft/unmapped/C_90958282$C_77350861;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/unmapped/C_90958282$C_96879604;	m_05661300		m_05661300
+	m	(Lnet/minecraft/unmapped/C_90958282$C_77350861;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/unmapped/C_90958282$C_96879604;	m_05661300		createPiece
 		p	0			p_0
 		p	1			p_1
 		p	2			p_2

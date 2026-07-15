@@ -94,14 +94,14 @@ c	net/minecraft/unmapped/C_03562565
 		p	1		p_1	
 	m	(Ljava/io/DataOutput;)V	m_17566769	write	
 		p	1		p_1	
-	m	(Ljava/io/DataInput;)Lnet/minecraft/unmapped/C_88708284;	m_56291453	m_56291453	
+	m	(Ljava/io/DataInput;)Lnet/minecraft/unmapped/C_88708284;	m_56291453	readItem	
 		p	0		p_0	
-	m	(Lnet/minecraft/unmapped/C_88708284;Ljava/io/DataOutput;)V	m_51211679	m_51211679	
+	m	(Lnet/minecraft/unmapped/C_88708284;Ljava/io/DataOutput;)V	m_51211679	writeItem	
 		p	0		p_0	
 		p	1		p_1	
-	m	(Ljava/io/DataInput;)Lnet/minecraft/unmapped/C_74087615;	m_73329394	m_73329394	
+	m	(Ljava/io/DataInput;)Lnet/minecraft/unmapped/C_74087615;	m_73329394	readNbt	
 		p	0		p_0	
-	m	(Lnet/minecraft/unmapped/C_74087615;Ljava/io/DataOutput;)V	m_68911999	m_68911999	
+	m	(Lnet/minecraft/unmapped/C_74087615;Ljava/io/DataOutput;)V	m_68911999	writeNbt	
 		p	0		p_0	
 		p	1		p_1	
 	m	(I)Lnet/minecraft/unmapped/C_03562565;	m_80296734	getPacket	
@@ -310,8 +310,8 @@ c	net/minecraft/unmapped/C_10918870
 		p	1		packet	
 	m	(Lnet/minecraft/unmapped/C_75007057;)V	m_31918731	handleAddExperienceOrb	
 		p	1		packet	
-	m	(Lnet/minecraft/unmapped/C_65879772;)V	m_63802635	m_63802635	
-		p	1		p_1	
+	m	(Lnet/minecraft/unmapped/C_65879772;)V	m_63802635	handleContainerButtonClick	
+		p	1		packet	
 	m	(Lnet/minecraft/unmapped/C_96959155;)V	m_37475711	m_37475711	
 		p	1		p_1	
 	m	(Lnet/minecraft/unmapped/C_10010951;)V	m_36400499	m_36400499	
@@ -581,7 +581,7 @@ c	net/minecraft/unmapped/C_27971442
 	m	(Lnet/minecraft/unmapped/C_23730550;)V	m_64176336		m_64176336
 		p	1			p_1
 	m	()Ljava/lang/String;	m_14881458		m_14881458
-c	net/minecraft/unmapped/C_28851891	net/minecraft/network/packets/GetInfoPacket	
+c	net/minecraft/unmapped/C_28851891	net/minecraft/network/packet/GetInfoPacket	
 	f	I	f_59055977	f_59055977	
 	f	I	f_68898227	f_68898227	
 	f	Ljava/lang/String;	f_85024736	f_85024736	
@@ -1862,13 +1862,13 @@ c	net/minecraft/unmapped/C_91543234
 	m	()Ljava/lang/String;	m_93007113		m_93007113
 	m	(Ljava/lang/String;)V	m_19541485		m_19541485
 		p	1			p_1
-c	net/minecraft/unmapped/C_65879772	net/minecraft/unmapped/C_65879772	
-	f	I	f_57296517	f_57296517	
-	f	I	f_18209389	f_18209389	
+c	net/minecraft/unmapped/C_65879772	net/minecraft/network/packet/ContainerButtonClickPacket	
+	f	I	f_57296517	containerId	
+	f	I	f_18209389	buttonId	
 	m	()V	<init>	<init>	
 	m	(II)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
+		p	1		containerId	
+		p	2		buttonId	
 	m	(Lnet/minecraft/unmapped/C_10918870;)V	m_04853589	m_04853589	
 		p	1		p_1	
 	m	()I	m_85604015	m_85604015	
@@ -1876,14 +1876,14 @@ c	net/minecraft/unmapped/C_65879772	net/minecraft/unmapped/C_65879772
 		p	1		p_1	
 	m	(Ljava/io/DataOutput;)V	m_17566769	m_17566769	
 		p	1		p_1	
-c	net/minecraft/unmapped/C_71454160	net/minecraft/unmapped/PacketStatistics	
-	f	Z	f_64594237	f_64594237	
-	f	Ljava/util/Map;	f_52291974	f_52291974	
-	f	Ljava/util/Map;	f_06402543	f_06402543	
-	f	Ljava/lang/Object;	f_59261455	f_59261455	
+c	net/minecraft/unmapped/C_71454160	net/minecraft/network/packet/PacketStatistics	
+	f	Z	f_64594237	enabled	
+	f	Ljava/util/Map;	f_52291974	countSamples	
+	f	Ljava/util/Map;	f_06402543	sizeSamples	
+	f	Ljava/lang/Object;	f_59261455	lock	
 	m	(IJ)V	m_45128258	addPacket	
-		p	0		p_0	
-		p	1		p_1	
+		p	0		id	
+		p	1		size	
 	m	()V	<clinit>	<clinit>	
 c	net/minecraft/unmapped/C_96959155
 	m	()I	m_85604015	m_85604015	

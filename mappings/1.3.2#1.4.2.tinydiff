@@ -439,7 +439,7 @@ c	net/minecraft/unmapped/C_13231860
 		p	3			p_3
 		p	4			p_4
 c	net/minecraft/unmapped/C_14917579
-	f	Z	f_20173768	f_20173768	
+	f	Z	f_20173768	hasGapsToCheck	
 	f	Z	f_09182931		f_09182931
 	f	I	f_78192413		f_78192413
 	m	(III)V	m_82099513	lightGap	
@@ -1290,19 +1290,19 @@ c	net/minecraft/unmapped/C_64041439
 		p	3		y	
 		p	4		z	
 	m	(IIIIII)I	m_91003924	getSkyLight	
-		p	1		p_1	
+		p	1		oc	
 		p	2		x	
 		p	3		y	
 		p	4		z	
-		p	5		p_5	
-		p	6		p_6	
+		p	5		ct	
+		p	6		block	
 	m	(IIIIII)I	m_45697512	getBlockLight	
-		p	1		p_1	
+		p	1		oc	
 		p	2		x	
 		p	3		y	
 		p	4		z	
-		p	5		p_5	
-		p	6		p_6	
+		p	5		ct	
+		p	6		block	
 	m	(III)I	m_03689668	m_03689668	
 		p	1		p_1	
 		p	2		p_2	
@@ -2616,13 +2616,13 @@ c	net/minecraft/unmapped/C_17156571
 		p	1			p_1
 		p	2			p_2
 c	net/minecraft/unmapped/C_23805538
-	f	Lnet/minecraft/unmapped/C_29603462;	f_53833258	f_53833258	
-	f	Lnet/minecraft/unmapped/C_72633554;	f_53833258		f_53833258
+	f	Lnet/minecraft/unmapped/C_29603462;	f_53833258	bossMob	
+	f	Lnet/minecraft/unmapped/C_72633554;	f_53833258		bossMob
 	m	(Lnet/minecraft/unmapped/C_29603462;Ljava/lang/String;FF)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
+		p	1		bossMob	
+		p	2		id	
+		p	3		w	
+		p	4		h	
 	m	(Lnet/minecraft/unmapped/C_72633554;Ljava/lang/String;FF)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
@@ -2644,21 +2644,21 @@ c	net/minecraft/unmapped/C_24722861
 		p	5			p_5
 		p	6			p_6
 		p	7			p_7
-c	net/minecraft/unmapped/C_29603462	net/minecraft/unmapped/C_29603462	
-	f	I	f_98588824	f_98588824	
+c	net/minecraft/unmapped/C_29603462	net/minecraft/world/entity/boss/BossMob	
+	f	I	f_98588824	maxHealth	
 	m	(Lnet/minecraft/unmapped/C_64041439;)V	<init>	<init>	
 		p	1		p_1	
 	m	()I	m_42484344	m_42484344	
-	m	(Lnet/minecraft/unmapped/C_23805538;Lnet/minecraft/unmapped/C_83334639;I)Z	m_12115391	m_12115391	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
+	m	(Lnet/minecraft/unmapped/C_23805538;Lnet/minecraft/unmapped/C_83334639;I)Z	m_12115391	hurt	
+		p	1		bossMobPart	
+		p	2		source	
+		p	3		damage	
 	m	(Lnet/minecraft/unmapped/C_83334639;I)Z	m_40469716	m_40469716	
 		p	1		p_1	
 		p	2		p_2	
-	m	(Lnet/minecraft/unmapped/C_83334639;I)Z	m_99881802	m_99881802	
-		p	1		p_1	
-		p	2		p_2	
+	m	(Lnet/minecraft/unmapped/C_83334639;I)Z	m_99881802	reallyHurt	
+		p	1		source	
+		p	2		damage	
 c	net/minecraft/unmapped/C_45955098
 	f	I	f_87578878	potionValue	
 	f	Lnet/minecraft/unmapped/C_88708284;	f_87578878		potionValue
@@ -2752,7 +2752,7 @@ c	net/minecraft/unmapped/C_49356631$C_41170628
 		p	1			p_1
 		p	2			p_2
 c	net/minecraft/unmapped/C_57049179
-	f	Lnet/minecraft/unmapped/C_83946278;	f_04334341	f_04334341	
+	f	Lnet/minecraft/unmapped/C_83946278;	f_04334341	bossInstance	
 c	net/minecraft/unmapped/C_63219671
 	f	Ljava/lang/String;	f_97589655		f_97589655
 	m	(Ljava/util/Collection;)Z	m_58794551		m_58794551
@@ -2783,7 +2783,7 @@ c	net/minecraft/unmapped/C_88375837
 		p	2			p_2
 c	net/minecraft/unmapped/C_91973056
 	m	(F)V	<init>	<init>	
-		p	1		p_1	
+		p	1		g	
 	m	(FZ)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2

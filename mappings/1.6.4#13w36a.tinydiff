@@ -1212,13 +1212,13 @@ c	net/minecraft/unmapped/C_29639016
 	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_16883326;	m_43052793		m_43052793
 		p	1			p_1
 c	net/minecraft/unmapped/C_30339133
-	m	(Lnet/minecraft/unmapped/C_64041439;IIIII)V	m_75564774	m_75564774	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-		p	6		p_6	
+	m	(Lnet/minecraft/unmapped/C_64041439;IIIII)V	m_75564774	placeBlock	
+		p	1		level	
+		p	2		x	
+		p	3		y	
+		p	4		z	
+		p	5		tile	
+		p	6		data	
 	m	(Lnet/minecraft/unmapped/C_64041439;IIII)V	m_90237669	m_90237669	
 		p	1		p_1	
 		p	2		p_2	
@@ -1231,7 +1231,7 @@ c	net/minecraft/unmapped/C_30339133
 		p	3			p_3
 		p	4			p_4
 		p	5			p_5
-	m	(Lnet/minecraft/unmapped/C_64041439;IIILnet/minecraft/unmapped/C_81592558;I)V	m_75564774		m_75564774
+	m	(Lnet/minecraft/unmapped/C_64041439;IIILnet/minecraft/unmapped/C_81592558;I)V	m_75564774		placeBlock
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -1550,11 +1550,11 @@ c	net/minecraft/unmapped/C_42232651
 		p	1		item	
 		p	2		count	
 		p	3		heightOffset	
-	m	(IIII)V	m_04616312	m_04616312	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
+	m	(IIII)V	m_04616312	playStepSound	
+		p	1		xt	
+		p	2		yt	
+		p	3		zt	
+		p	4		t	
 	m	(Lnet/minecraft/unmapped/C_84651702;Lnet/minecraft/unmapped/C_64041439;IIIIF)Z	m_51763089	m_51763089	
 		p	1		p_1	
 		p	2		p_2	
@@ -1563,7 +1563,7 @@ c	net/minecraft/unmapped/C_42232651
 		p	5		p_5	
 		p	6		p_6	
 		p	7		p_7	
-	m	(IIILnet/minecraft/unmapped/C_81592558;)V	m_04616312		m_04616312
+	m	(IIILnet/minecraft/unmapped/C_81592558;)V	m_04616312		playStepSound
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -3070,8 +3070,8 @@ c	net/minecraft/unmapped/C_69835601
 		p	3		p_3	
 		p	4		p_4	
 		p	5		p_5	
-	m	(I)Z	m_83251370	m_83251370	
-		p	0		p_0	
+	m	(I)Z	m_83251370	attachesTo	
+		p	0		id	
 	m	(Lnet/minecraft/unmapped/C_89604096;)V	<init>		<init>
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_64041439;IIILnet/minecraft/unmapped/C_81592558;)V	m_91032811		m_91032811
@@ -3080,7 +3080,7 @@ c	net/minecraft/unmapped/C_69835601
 		p	3			p_3
 		p	4			p_4
 		p	5			p_5
-	m	(Lnet/minecraft/unmapped/C_81592558;)Z	m_83251370		m_83251370
+	m	(Lnet/minecraft/unmapped/C_81592558;)Z	m_83251370		attachesTo
 		p	0			p_0
 c	net/minecraft/unmapped/C_70629407
 	m	(I)V	<init>	<init>	
@@ -6035,10 +6035,10 @@ c	net/minecraft/unmapped/C_11176054
 		p	3			p_3
 		p	4			p_4
 c	net/minecraft/unmapped/C_11580903
-	f	I	f_02918440	f_02918440	
-	f	Lnet/minecraft/unmapped/C_81592558;	f_02918440		f_02918440
+	f	I	f_02918440	tile	
+	f	Lnet/minecraft/unmapped/C_81592558;	f_02918440		tile
 	m	(I)V	<init>	<init>	
-		p	1		p_1	
+		p	1		tile	
 	m	(Lnet/minecraft/unmapped/C_81592558;)V	<init>		<init>
 		p	1			p_1
 c	net/minecraft/unmapped/C_15146037
@@ -6241,11 +6241,11 @@ c	net/minecraft/unmapped/C_92086655
 		p	2			p_2
 		p	3			p_3
 c	net/minecraft/unmapped/C_93577926
-	m	(Lnet/minecraft/unmapped/C_64041439;Lnet/minecraft/unmapped/C_74425583;F)I	m_96885764	m_96885764	
-		p	0		p_0	
-		p	1		p_1	
-		p	2		p_2	
-	m	(Lnet/minecraft/unmapped/C_64041439;Lnet/minecraft/unmapped/C_74425583;F)Lnet/minecraft/unmapped/C_81592558;	m_96885764		m_96885764
+	m	(Lnet/minecraft/unmapped/C_64041439;Lnet/minecraft/unmapped/C_74425583;F)I	m_96885764	getBlockAt	
+		p	0		level	
+		p	1		player	
+		p	2		alpha	
+	m	(Lnet/minecraft/unmapped/C_64041439;Lnet/minecraft/unmapped/C_74425583;F)Lnet/minecraft/unmapped/C_81592558;	m_96885764		getBlockAt
 		p	0			p_0
 		p	1			p_1
 		p	2			p_2

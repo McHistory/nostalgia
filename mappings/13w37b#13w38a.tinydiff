@@ -30,8 +30,8 @@ c	net/minecraft/unmapped/C_02949887
 	m	(Ljava/lang/String;)V	<init>	<init>	
 		p	1		p_1	
 	m	(Ljava/lang/String;F)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
+		p	1		name	
+		p	2		data	
 	m	()V	<init>		<init>
 	m	(F)V	<init>		<init>
 		p	1			p_1
@@ -39,8 +39,8 @@ c	net/minecraft/unmapped/C_03009146
 	m	(Ljava/lang/String;)V	<init>	<init>	
 		p	1		p_1	
 	m	(Ljava/lang/String;[B)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
+		p	1		name	
+		p	2		data	
 	m	()V	<init>		<init>
 	m	([B)V	<init>		<init>
 		p	1			p_1
@@ -70,8 +70,8 @@ c	net/minecraft/unmapped/C_06229858
 	m	(Ljava/lang/String;)V	<init>	<init>	
 		p	1		p_1	
 	m	(Ljava/lang/String;D)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
+		p	1		name	
+		p	2		data	
 	m	()V	<init>		<init>
 	m	(D)V	<init>		<init>
 		p	1			p_1
@@ -189,8 +189,8 @@ c	net/minecraft/unmapped/C_57925352
 	m	(Ljava/lang/String;)V	<init>	<init>	
 		p	1		p_1	
 	m	(Ljava/lang/String;I)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
+		p	1		name	
+		p	2		data	
 	m	()V	<init>		<init>
 	m	(I)V	<init>		<init>
 		p	1			p_1
@@ -210,8 +210,8 @@ c	net/minecraft/unmapped/C_64685490
 	m	(Ljava/lang/String;)V	<init>	<init>	
 		p	1		p_1	
 	m	(Ljava/lang/String;B)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
+		p	1		name	
+		p	2		data	
 	m	()V	<init>		<init>
 	m	(B)V	<init>		<init>
 		p	1			p_1
@@ -243,8 +243,8 @@ c	net/minecraft/unmapped/C_74087615
 		p	3			p_3
 c	net/minecraft/unmapped/C_74891195
 	m	(Ljava/lang/String;Ljava/lang/String;)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
+		p	1		name	
+		p	2		data	
 	m	()V	<init>		<init>
 c	net/minecraft/unmapped/C_76575783
 	f	Z	f_75755873		f_75755873
@@ -317,8 +317,8 @@ c	net/minecraft/unmapped/C_80104453
 	m	(Ljava/lang/String;)V	<init>	<init>	
 		p	1		p_1	
 	m	(Ljava/lang/String;S)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
+		p	1		name	
+		p	2		data	
 	m	()V	<init>		<init>
 	m	(S)V	<init>		<init>
 		p	1			p_1
@@ -351,8 +351,8 @@ c	net/minecraft/unmapped/C_90490889
 	m	(Ljava/lang/String;)V	<init>	<init>	
 		p	1		p_1	
 	m	(Ljava/lang/String;J)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
+		p	1		name	
+		p	2		data	
 	m	()V	<init>		<init>
 	m	(J)V	<init>		<init>
 		p	1			p_1
@@ -370,11 +370,11 @@ c	net/minecraft/unmapped/C_97075175
 	m	()Ljava/lang/String;	m_27193928	getName	
 	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_97075175;	m_44918998	setName	
 		p	1		name	
-	m	(Ljava/io/DataInput;)Lnet/minecraft/unmapped/C_97075175;	m_46974369	readUnnamedTag	
-		p	0		input	
-	m	(Lnet/minecraft/unmapped/C_97075175;Ljava/io/DataOutput;)V	m_71107467	writeUnnamedTag	
+	m	(Ljava/io/DataInput;)Lnet/minecraft/unmapped/C_97075175;	m_46974369	readNamedTag	
+		p	0		dis	
+	m	(Lnet/minecraft/unmapped/C_97075175;Ljava/io/DataOutput;)V	m_71107467	writeNamedTag	
 		p	0		tag	
-		p	1		output	
+		p	1		dos	
 	m	(Ljava/lang/String;)V	<init>	<init>	
 		p	1		name	
 	m	(BLjava/lang/String;)Lnet/minecraft/unmapped/C_97075175;	m_48721527	newTag	

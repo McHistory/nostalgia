@@ -35,3 +35,6 @@ Under construction, sorry!
 
 ## Usages
 Versions past 13w39a have everything Tile related to Block
+
+Versions past 1.2 change ItemInstance to ItemStack
+ItemInstance 1.1 -> 1.2 ItemStack

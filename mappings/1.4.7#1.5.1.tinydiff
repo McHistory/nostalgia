@@ -870,9 +870,9 @@ c	net/minecraft/unmapped/C_21479319
 		p	1		p_1	
 	m	()V	m_92895068	m_92895068	
 	m	()V	m_95363151	m_95363151	
-	m	()Z	m_35095212	m_35095212	
-	m	(Z)V	m_71441742	m_71441742	
-		p	1		p_1	
+	m	()Z	m_35095212	hasFuel	
+	m	(Z)V	m_71441742	setHasFuel	
+		p	1		fuel	
 	m	(I)Lnet/minecraft/unmapped/C_88708284;	m_75956400	m_75956400	
 		p	1		p_1	
 	m	(I)V	m_15792024	m_15792024	
@@ -1247,14 +1247,14 @@ c	net/minecraft/unmapped/C_35412243
 	m	(FI)V	m_49733296	renderTex	
 		p	1		a	
 		p	2		tex	
-	m	(Lnet/minecraft/unmapped/C_96603444;FFFFF)V	m_01641184	m_01641184	
+	m	(Lnet/minecraft/unmapped/C_96603444;FFFFF)V	m_01641184	renderItem3D	
 		p	0		p_0	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
 		p	4		p_4	
 		p	5		p_5	
-	m	(Lnet/minecraft/unmapped/C_96603444;FFFFIIF)V	m_01641184		m_01641184
+	m	(Lnet/minecraft/unmapped/C_96603444;FFFFIIF)V	m_01641184		renderItem3D
 		p	0			p_0
 		p	1			p_1
 		p	2			p_2
@@ -1319,15 +1319,15 @@ c	net/minecraft/unmapped/C_37817857
 	f	Lnet/minecraft/unmapped/C_98888256;	f_94392730		f_94392730
 	m	(I)V	<init>	<init>	
 		p	1		icon	
-	m	(Lnet/minecraft/unmapped/C_96603444;I)V	m_91265274	m_91265274	
-		p	1		p_1	
-		p	2		p_2	
+	m	(Lnet/minecraft/unmapped/C_96603444;I)V	m_91265274	renderTex	
+		p	1		t	
+		p	2		tex	
 	m	(Lnet/minecraft/unmapped/C_98888256;I)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
 	m	(Lnet/minecraft/unmapped/C_98888256;)V	<init>		<init>
 		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_96603444;Lnet/minecraft/unmapped/C_02915043;)V	m_91265274		m_91265274
+	m	(Lnet/minecraft/unmapped/C_96603444;Lnet/minecraft/unmapped/C_02915043;)V	m_91265274		renderTex
 		p	1			p_1
 		p	2			p_2
 c	net/minecraft/unmapped/C_39000935
@@ -2669,11 +2669,11 @@ c	net/minecraft/unmapped/C_73452336
 		p	6			p_6
 c	net/minecraft/unmapped/C_74425583
 	f	Lnet/minecraft/unmapped/C_45710442;	f_93647283		f_93647283
-	m	(Lnet/minecraft/unmapped/C_88708284;I)I	m_75043345	getItemTexture	
-		p	1		p_1	
-		p	2		p_2	
+	m	(Lnet/minecraft/unmapped/C_88708284;I)I	m_75043345	getItemInHandIcon	
+		p	1		item	
+		p	2		layer	
 	m	()I	m_59469316		m_59469316
-	m	(Lnet/minecraft/unmapped/C_88708284;I)Lnet/minecraft/unmapped/C_02915043;	m_75043345		getItemTexture
+	m	(Lnet/minecraft/unmapped/C_88708284;I)Lnet/minecraft/unmapped/C_02915043;	m_75043345		getItemInHandIcon
 		p	1			p_1
 		p	2			p_2
 	m	()Lnet/minecraft/unmapped/C_74425583;	m_87713964		m_87713964
@@ -3796,17 +3796,17 @@ c	net/minecraft/unmapped/C_99795455
 	m	()I	m_15089163		m_15089163
 	m	()I	m_67274711		m_67274711
 c	net/minecraft/unmapped/C_10672040
-	f	I	f_87366226	iconSide	
+	f	I	f_87366226	edgeTexture	
 	f	Ljava/lang/String;	f_22444051		f_22444051
 	f	Ljava/lang/String;	f_47950389		f_47950389
-	f	Lnet/minecraft/unmapped/C_02915043;	f_87366226		iconSide
+	f	Lnet/minecraft/unmapped/C_02915043;	f_87366226		edgeTexture
 	m	()I	m_13145336	getEdgeTexture	
 	m	(IIILnet/minecraft/unmapped/C_89604096;Z)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
+		p	1		id	
+		p	2		tex	
+		p	3		edgeTex	
+		p	4		material	
+		p	5		dropsResources	
 	m	(ILjava/lang/String;Ljava/lang/String;Lnet/minecraft/unmapped/C_89604096;Z)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2

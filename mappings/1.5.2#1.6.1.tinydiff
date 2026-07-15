@@ -268,15 +268,15 @@ c	net/minecraft/unmapped/C_03562565
 		p	1		dis	
 	m	(Ljava/io/DataOutputStream;)V	m_17566769	write	
 		p	1		dos	
-	m	(Ljava/io/DataInputStream;)Lnet/minecraft/unmapped/C_88708284;	m_56291453	m_56291453	
+	m	(Ljava/io/DataInputStream;)Lnet/minecraft/unmapped/C_88708284;	m_56291453	readItem	
 		p	0		p_0	
-	m	(Lnet/minecraft/unmapped/C_88708284;Ljava/io/DataOutputStream;)V	m_51211679	m_51211679	
-		p	1		p_1	
+	m	(Lnet/minecraft/unmapped/C_88708284;Ljava/io/DataOutputStream;)V	m_51211679	writeItem	
+		p	1		item	
 		p	0		p_0	
-	m	(Ljava/io/DataInputStream;)Lnet/minecraft/unmapped/C_74087615;	m_73329394	m_73329394	
+	m	(Ljava/io/DataInputStream;)Lnet/minecraft/unmapped/C_74087615;	m_73329394	readNbt	
 		p	0		p_0	
-	m	(Lnet/minecraft/unmapped/C_74087615;Ljava/io/DataOutputStream;)V	m_68911999	m_68911999	
-		p	1		p_1	
+	m	(Lnet/minecraft/unmapped/C_74087615;Ljava/io/DataOutputStream;)V	m_68911999	writeNbt	
+		p	1		tag	
 		p	0		p_0	
 	m	(Ljava/io/DataOutputStream;[B)V	m_14793635	m_14793635	
 		p	0		p_0	
@@ -311,14 +311,14 @@ c	net/minecraft/unmapped/C_03562565
 		p	1			p_1
 	m	(Ljava/io/DataOutput;)V	m_17566769		write
 		p	1			p_1
-	m	(Ljava/io/DataInput;)Lnet/minecraft/unmapped/C_88708284;	m_56291453		m_56291453
+	m	(Ljava/io/DataInput;)Lnet/minecraft/unmapped/C_88708284;	m_56291453		readItem
 		p	0			p_0
-	m	(Lnet/minecraft/unmapped/C_88708284;Ljava/io/DataOutput;)V	m_51211679		m_51211679
+	m	(Lnet/minecraft/unmapped/C_88708284;Ljava/io/DataOutput;)V	m_51211679		writeItem
 		p	0			p_0
 		p	1			p_1
-	m	(Ljava/io/DataInput;)Lnet/minecraft/unmapped/C_74087615;	m_73329394		m_73329394
+	m	(Ljava/io/DataInput;)Lnet/minecraft/unmapped/C_74087615;	m_73329394		readNbt
 		p	0			p_0
-	m	(Lnet/minecraft/unmapped/C_74087615;Ljava/io/DataOutput;)V	m_68911999		m_68911999
+	m	(Lnet/minecraft/unmapped/C_74087615;Ljava/io/DataOutput;)V	m_68911999		writeNbt
 		p	0			p_0
 		p	1			p_1
 c	net/minecraft/unmapped/C_04411667
@@ -465,15 +465,15 @@ c	net/minecraft/unmapped/C_13860305
 	m	(Lnet/minecraft/unmapped/C_83334639;I)Z	m_40469716	m_40469716	
 		p	1		p_1	
 		p	2		p_2	
-	m	(I)V	m_07225602	m_07225602	
-		p	1		p_1	
-	m	()I	m_27824169	m_27824169	
+	m	(I)V	m_07225602	setDamage	
+		p	1		damage	
+	m	()I	m_27824169	getDamage	
 	m	(Lnet/minecraft/unmapped/C_83334639;F)Z	m_40469716		m_40469716
 		p	1			p_1
 		p	2			p_2
-	m	(F)V	m_07225602		m_07225602
+	m	(F)V	m_07225602		setDamage
 		p	1			p_1
-	m	()F	m_27824169		m_27824169
+	m	()F	m_27824169		getDamage
 c	net/minecraft/unmapped/C_13986175
 	m	(Lnet/minecraft/unmapped/C_64041439;DDDDDDLnet/minecraft/unmapped/C_81592558;IILnet/minecraft/unmapped/C_82920792;)V	<init>	<init>	
 		p	1		p_1	
@@ -507,7 +507,7 @@ c	net/minecraft/unmapped/C_14614014
 	m	(Ljava/io/DataOutput;)V	m_17566769		m_17566769
 		p	1			p_1
 c	net/minecraft/unmapped/C_14917579
-	f	Z	f_36389663	f_36389663	
+	f	Z	f_36389663	seenByPlayer	
 	f	J	f_55727452		f_55727452
 c	net/minecraft/unmapped/C_15314804
 	m	(Lnet/minecraft/unmapped/C_09140510;)Lnet/minecraft/unmapped/C_22168528;	m_53738479		m_53738479
@@ -703,15 +703,15 @@ c	net/minecraft/unmapped/C_21479319
 	m	(Lnet/minecraft/unmapped/C_83334639;I)Z	m_40469716	m_40469716	
 		p	1		p_1	
 		p	2		p_2	
-	m	(I)V	m_21736133	m_21736133	
-		p	1		p_1	
-	m	()I	m_33478575	m_33478575	
+	m	(I)V	m_21736133	setDamage	
+		p	1		damage	
+	m	()I	m_33478575	getDamage	
 	m	(Lnet/minecraft/unmapped/C_83334639;F)Z	m_40469716		m_40469716
 		p	1			p_1
 		p	2			p_2
-	m	(F)V	m_21736133		m_21736133
+	m	(F)V	m_21736133		setDamage
 		p	1			p_1
-	m	()F	m_33478575		m_33478575
+	m	()F	m_33478575		getDamage
 c	net/minecraft/unmapped/C_21829382
 	m	(Ljava/io/DataInputStream;)V	m_13296744	m_13296744	
 		p	1		p_1	
@@ -1528,7 +1528,7 @@ c	net/minecraft/unmapped/C_42232651
 	m	()V	<clinit>	<clinit>	
 	m	(Lnet/minecraft/unmapped/C_83334639;I)Z	m_40469716	hurt	
 		p	1		source	
-		p	2		dmg	
+		p	2		damage	
 	m	(Lnet/minecraft/unmapped/C_42232651;)V	m_37412662	m_37412662	
 		p	1		p_1	
 	m	(Lnet/minecraft/unmapped/C_83334639;F)Z	m_40469716		hurt
@@ -2390,9 +2390,9 @@ c	net/minecraft/unmapped/C_74425583
 	f	I	f_56749419	lookTime	
 	f	F	f_47717130	speed	
 	f	I	f_89368829	xpReward	
-	f	I	f_71149206	f_71149206	
+	f	I	f_71149206	dmgSpill	
 	f	Z	f_87676175	effectsDirty	
-	f	I	f_82003124	f_82003124	
+	f	I	f_82003124	effectColor	
 	f	Lnet/minecraft/unmapped/C_86243658;	f_06770494	f_06770494	
 	f	Lnet/minecraft/unmapped/C_35249531;	f_20178403	f_20178403	
 	f	Lnet/minecraft/unmapped/C_14826546;	f_63003312	f_63003312	
@@ -2455,18 +2455,18 @@ c	net/minecraft/unmapped/C_74425583
 		p	2		dmg	
 	m	()F	m_64980646	getSizeScale	
 	m	()F	m_47340058	getSpeedModifier	
-	m	(I)V	m_70918421	m_70918421	
-		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_83334639;I)I	m_14434752	m_14434752	
-		p	1		p_1	
-		p	2		p_2	
+	m	(I)V	m_70918421	hurtArmor	
+		p	1		damage	
+	m	(Lnet/minecraft/unmapped/C_83334639;I)I	m_14434752	getDamageAfterArmorAbsorb	
+		p	1		damageSource	
+		p	2		damage	
 	m	()I	m_42484344	getMaxHealth	
 	m	()I	m_09697920	getHealth	
-	m	(I)V	m_40441167	m_40441167	
-		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_83334639;I)I	m_21767999	m_21767999	
-		p	1		p_1	
-		p	2		p_2	
+	m	(I)V	m_40441167	setHealth	
+		p	1		health	
+	m	(Lnet/minecraft/unmapped/C_83334639;I)I	m_21767999	getDamageAfterMagicAbsorb	
+		p	1		damageSource	
+		p	2		damage	
 	m	()Lnet/minecraft/unmapped/C_86243658;	m_56766993	m_56766993	
 	m	()Lnet/minecraft/unmapped/C_35249531;	m_72426749	m_72426749	
 	m	()Lnet/minecraft/unmapped/C_14826546;	m_48288130	m_48288130	
@@ -2527,7 +2527,7 @@ c	net/minecraft/unmapped/C_74425583
 	m	(F)V	m_36201314		heal
 		p	1			p_1
 	m	()F	m_09697920		getHealth
-	m	(F)V	m_40441167		m_40441167
+	m	(F)V	m_40441167		setHealth
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_83334639;F)Z	m_40469716		m_40469716
 		p	1			p_1
@@ -2537,12 +2537,12 @@ c	net/minecraft/unmapped/C_74425583
 		p	2			p_2
 		p	3			p_3
 		p	5			p_5
-	m	(F)V	m_70918421		m_70918421
+	m	(F)V	m_70918421		hurtArmor
 		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_83334639;F)F	m_14434752		m_14434752
+	m	(Lnet/minecraft/unmapped/C_83334639;F)F	m_14434752		getDamageAfterArmorAbsorb
 		p	1			p_1
 		p	2			p_2
-	m	(Lnet/minecraft/unmapped/C_83334639;F)F	m_21767999		m_21767999
+	m	(Lnet/minecraft/unmapped/C_83334639;F)F	m_21767999		getDamageAfterMagicAbsorb
 		p	1			p_1
 		p	2			p_2
 	m	(Lnet/minecraft/unmapped/C_83334639;F)V	m_38176589		actuallyHurt
@@ -3783,27 +3783,27 @@ c	net/minecraft/unmapped/C_89634238
 	m	(Ljava/io/DataOutput;)V	m_17566769		m_17566769
 		p	1			p_1
 c	net/minecraft/unmapped/C_90958282
-	m	(Ljava/util/Random;I)Ljava/util/ArrayList;	m_43443027	m_43443027	
-		p	0		p_0	
-		p	1		p_1	
-	m	(Ljava/util/Random;I)Ljava/util/List;	m_43443027		m_43443027
+	m	(Ljava/util/Random;I)Ljava/util/ArrayList;	m_43443027	createPieceSet	
+		p	0		random	
+		p	1		villageSize	
+	m	(Ljava/util/Random;I)Ljava/util/List;	m_43443027		createPieceSet
 		p	0			p_0
 		p	1			p_1
 c	net/minecraft/unmapped/C_90958282$C_77350861
-	f	Ljava/util/ArrayList;	f_43101891	f_43101891	
-	f	Ljava/util/ArrayList;	f_64518820	f_64518820	
-	f	Ljava/util/ArrayList;	f_96748714	f_96748714	
-	f	Ljava/util/List;	f_43101891		f_43101891
-	f	Ljava/util/List;	f_64518820		f_64518820
-	f	Ljava/util/List;	f_96748714		f_96748714
+	f	Ljava/util/ArrayList;	f_43101891	pieceSet	
+	f	Ljava/util/ArrayList;	f_64518820	pendingHouses	
+	f	Ljava/util/ArrayList;	f_96748714	pendingRoads	
+	f	Ljava/util/List;	f_43101891		pieceSet
+	f	Ljava/util/List;	f_64518820		pendingHouses
+	f	Ljava/util/List;	f_96748714		pendingRoads
 	m	(Lnet/minecraft/unmapped/C_28112798;ILjava/util/Random;IILjava/util/ArrayList;I)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-		p	6		p_6	
-		p	7		p_7	
+		p	1		biomeSource	
+		p	2		genDepth	
+		p	3		random	
+		p	4		west	
+		p	5		north	
+		p	6		pieceSet	
+		p	7		villageSize	
 	m	(Lnet/minecraft/unmapped/C_28112798;ILjava/util/Random;IILjava/util/List;I)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
@@ -3973,7 +3973,7 @@ c	net/minecraft/unmapped/C_09370188
 		p	1			p_1
 		p	2			p_2
 c	net/minecraft/unmapped/C_14632260
-	f	I	f_78501117	f_78501117	
+	f	I	f_78501117	currentModel	
 	f	Lnet/minecraft/unmapped/C_22168528;	f_86816512		f_86816512
 	m	(Lnet/minecraft/unmapped/C_09370188;)Lnet/minecraft/unmapped/C_22168528;	m_77891574		m_77891574
 		p	1			p_1
@@ -4020,7 +4020,7 @@ c	net/minecraft/unmapped/C_47465897$C_44258475
 	f	I	f_14080434	sum	
 	f	F	f_14080434		sum
 c	net/minecraft/unmapped/C_57049179
-	f	I	f_72509866	f_72509866	
+	f	I	f_72509866	currentModel	
 	f	Lnet/minecraft/unmapped/C_22168528;	f_04529272		f_04529272
 	f	Lnet/minecraft/unmapped/C_22168528;	f_24514492		f_24514492
 	f	Lnet/minecraft/unmapped/C_22168528;	f_90756127		f_90756127
@@ -4064,7 +4064,7 @@ c	net/minecraft/unmapped/C_83946278
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
-	m	()I	m_43275531	m_43275531	
+	m	()I	m_43275531	getSynchedHealth	
 	m	()I	m_42484344	m_42484344	
 	m	(Lnet/minecraft/unmapped/C_83334639;I)Z	m_40469716	m_40469716	
 		p	1		p_1	
