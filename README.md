@@ -32,3 +32,6 @@ For checking the latest version please refer to the [maven](https://mvn.devos.on
 
 ## Usage
 Under construction, sorry!
+
+## Usages
+Versions past 13w39a have everything Tile related to Block
