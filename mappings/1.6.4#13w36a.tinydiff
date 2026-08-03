@@ -4182,12 +4182,13 @@ c	net/minecraft/unmapped/C_88708284
 		p	2		count	
 		p	3		damage	
 	m	(Lnet/minecraft/unmapped/C_64041439;IIIILnet/minecraft/unmapped/C_40996800;)V	m_62227385	mineBlock	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-		p	6		p_6	
+		c	Returns true when the item was used to mine more efficiently	
+		p	1		level	
+		p	2		tile	
+		p	3		x	
+		p	4		y	
+		p	5		z	
+		p	6		owner	
 	m	(Ljava/lang/String;)V	m_12689347	m_12689347	
 		p	1		p_1	
 	m	(Lnet/minecraft/unmapped/C_64041439;Lnet/minecraft/unmapped/C_81592558;IIILnet/minecraft/unmapped/C_40996800;)V	m_62227385		mineBlock
@@ -4840,20 +4841,21 @@ c	net/minecraft/unmapped/C_98888256
 	m	()Ljava/lang/String;	m_17134118	getName	
 	m	()Ljava/lang/String;	m_07863866	getPotionBrewingFormula	
 	m	()Z	m_21943228	hasPotionBrewingFormula	
-	m	(Lnet/minecraft/unmapped/C_88708284;)Ljava/lang/String;	m_99022908	m_99022908	
-		p	1		p_1	
+	m	(Lnet/minecraft/unmapped/C_88708284;)Ljava/lang/String;	m_99022908	getName	
+		p	1		itemInstance	
 	m	(ILnet/minecraft/unmapped/C_87042217;Ljava/util/List;)V	m_07120249	m_07120249	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
 	m	(Lnet/minecraft/unmapped/C_88708284;Lnet/minecraft/unmapped/C_64041439;IIIILnet/minecraft/unmapped/C_74425583;)Z	m_96282984	mineBlock	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-		p	6		p_6	
-		p	7		p_7	
+		c	Returns true when the item was used to mine more efficiently	
+		p	1		itemInstance	
+		p	2		level	
+		p	3		tile	
+		p	4		x	
+		p	5		y	
+		p	6		z	
+		p	7		owner	
 	m	()V	<init>		<init>
 	m	(Lnet/minecraft/unmapped/C_98888256;)I	m_18004261		m_18004261
 		p	0			p_0
