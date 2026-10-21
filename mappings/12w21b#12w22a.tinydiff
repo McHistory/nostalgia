@@ -426,7 +426,7 @@ c	net/minecraft/unmapped/C_40996800
 	m	(I)V	m_51816941	m_51816941	
 		p	1		p_1	
 	m	(Lnet/minecraft/unmapped/C_42232651;)Z	m_30359932		interact
-		p	1			p_1
+		p	1			entity
 	m	(Lnet/minecraft/unmapped/C_06007608$C_36868821;)V	m_51816941		m_51816941
 		p	1			p_1
 c	net/minecraft/unmapped/C_44922783
@@ -1585,7 +1585,7 @@ c	net/minecraft/unmapped/C_70250241
 		p	9			p_9
 		p	10			p_10
 c	net/minecraft/unmapped/C_64283062
-	f	Lnet/minecraft/unmapped/C_74425583;	f_11485787		f_11485787
+	f	Lnet/minecraft/unmapped/C_74425583;	f_11485787		targetMob
 	m	()Z	m_68122984		m_68122984
 c	net/minecraft/unmapped/C_86487224
 	m	(Lnet/minecraft/unmapped/C_88708284;Lnet/minecraft/unmapped/C_40996800;Lnet/minecraft/unmapped/C_64041439;IIII)Z	m_93921076	m_93921076	
@@ -1733,13 +1733,13 @@ c	net/minecraft/unmapped/C_56435444$C_17078896$C_03996535		C_03996535
 	m	(Lnet/minecraft/unmapped/C_56435444$99422984;)V	<init>		<init>
 		p	1			p_1
 c	net/minecraft/unmapped/C_58868350
-	f	Lnet/minecraft/unmapped/C_88708284;	f_10448039		f_10448039
+	f	Lnet/minecraft/unmapped/C_88708284;	f_10448039		buyB
 	m	(Lnet/minecraft/unmapped/C_88708284;Lnet/minecraft/unmapped/C_88708284;Lnet/minecraft/unmapped/C_88708284;)V	<init>		<init>
-		p	1			p_1
+		p	1			buyA
 		p	2			p_2
-		p	3			p_3
-	m	()Lnet/minecraft/unmapped/C_88708284;	m_50663077		m_50663077
-	m	()Z	m_91314340		m_91314340
+		p	3			sell
+	m	()Lnet/minecraft/unmapped/C_88708284;	m_50663077		getBuyBItem
+	m	()Z	m_91314340		hasSecondaryBuyItem
 c	net/minecraft/unmapped/C_63498166
 	m	(Lnet/minecraft/unmapped/C_64041439;IIILnet/minecraft/unmapped/C_40996800;)Z	m_39069644	m_39069644	
 		p	1		p_1	
@@ -1763,13 +1763,13 @@ c	net/minecraft/unmapped/C_64849426
 		p	1		p_1	
 	m	()Lnet/minecraft/unmapped/C_06007608$C_36868821;	m_64376781		m_64376781
 c	net/minecraft/unmapped/C_76093612
-	m	(Lnet/minecraft/unmapped/C_88708284;I)Lnet/minecraft/unmapped/C_58868350;	m_00465438	m_00465438	
+	m	(Lnet/minecraft/unmapped/C_88708284;I)Lnet/minecraft/unmapped/C_58868350;	m_00465438	getRecipeFor	
 		p	1		p_1	
 		p	2		p_2	
-	m	(Lnet/minecraft/unmapped/C_88708284;Lnet/minecraft/unmapped/C_88708284;I)Lnet/minecraft/unmapped/C_58868350;	m_00465438		m_00465438
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+	m	(Lnet/minecraft/unmapped/C_88708284;Lnet/minecraft/unmapped/C_88708284;I)Lnet/minecraft/unmapped/C_58868350;	m_00465438		getRecipeFor
+		p	1			buyA
+		p	2			buyB
+		p	3			selectionHint
 c	net/minecraft/unmapped/C_87042217
 	f	Ljava/lang/String;	f_03240571		backgroundSuffix
 	f	Z	f_92534863		canScroll

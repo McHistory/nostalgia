@@ -379,25 +379,25 @@ c	net/minecraft/unmapped/C_72517745		net/minecraft/world/level/tile/WoodTile
 		p	2			p_2
 	m	(I)I	m_40479460		m_40479460
 		p	1			p_1
-c	net/minecraft/unmapped/C_74721681		net/minecraft/unmapped/C_74721681
-	f	Lnet/minecraft/unmapped/C_11963006;	f_10424038		f_10424038
-	f	F	f_03680239		f_03680239
-	f	I	f_22868890		f_22868890
-	f	I	f_03372552		f_03372552
-	f	I	f_59091779		f_59091779
-	f	I	f_79964418		f_79964418
-	f	I	f_51365298		f_51365298
+c	net/minecraft/unmapped/C_74721681		net/minecraft/world/entity/ai/goal/OcelotSitOnTileGoal
+	f	Lnet/minecraft/unmapped/C_11963006;	f_10424038		ocelot
+	f	F	f_03680239		speedModifier
+	f	I	f_22868890		tick
+	f	I	f_03372552		maxTicks
+	f	I	f_59091779		tileX
+	f	I	f_79964418		tileY
+	f	I	f_51365298		tileZ
 	m	(Lnet/minecraft/unmapped/C_11963006;F)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
+		p	1			ocelot
+		p	2			speedModifier
 	m	()Z	m_13184927		m_13184927
 	m	()Z	m_68122984		m_68122984
 	m	()V	m_38932409		m_38932409
 	m	()V	m_77320506		m_77320506
 	m	()V	m_58078449		m_58078449
-	m	()Z	m_06652508		m_06652508
-	m	(Lnet/minecraft/unmapped/C_64041439;III)Z	m_48146326		m_48146326
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
+	m	()Z	m_06652508		findNearestTile
+	m	(Lnet/minecraft/unmapped/C_64041439;III)Z	m_48146326		isValidTarget
+		p	1			level
+		p	2			x
+		p	3			y
+		p	4			z

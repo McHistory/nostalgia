@@ -4785,7 +4785,7 @@ c	net/minecraft/unmapped/C_98888256
 	f	Lnet/minecraft/unmapped/C_98888256;	f_85085451	f_85085451	
 	f	Lnet/minecraft/unmapped/C_98888256;	f_92059019	f_92059019	
 	f	Lnet/minecraft/unmapped/C_98888256;	f_81877102	f_81877102	
-	f	Lnet/minecraft/unmapped/C_98888256;	f_18319018	f_18319018	
+	f	Lnet/minecraft/unmapped/C_98888256;	f_18319018	emerald	
 	f	Lnet/minecraft/unmapped/C_98888256;	f_01753926	f_01753926	
 	f	Lnet/minecraft/unmapped/C_98888256;	f_27434045	f_27434045	
 	f	Lnet/minecraft/unmapped/C_98888256;	f_88090589	f_88090589	
@@ -5949,42 +5949,44 @@ c	net/minecraft/unmapped/C_56670058
 	m	()I	m_54895347	m_54895347	
 	m	()Lnet/minecraft/unmapped/C_98888256;	m_54895347		m_54895347
 c	net/minecraft/unmapped/C_56964626
-	m	(Lnet/minecraft/unmapped/C_76093612;ILjava/util/Random;F)V	m_03354639	m_03354639	
-		p	0		p_0	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-	m	(ILjava/util/Random;)Lnet/minecraft/unmapped/C_88708284;	m_43264418	m_43264418	
-		p	0		p_0	
-		p	1		p_1	
-	m	(ILjava/util/Random;)I	m_92743448	m_92743448	
-		p	0		p_0	
-		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_76093612;ILjava/util/Random;F)V	m_39362242	m_39362242	
-		p	0		p_0	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-	m	(ILjava/util/Random;)I	m_98346203	m_98346203	
-		p	0		p_0	
-		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_76093612;Lnet/minecraft/unmapped/C_98888256;Ljava/util/Random;F)V	m_03354639		m_03354639
+	m	(Lnet/minecraft/unmapped/C_76093612;ILjava/util/Random;F)V	m_03354639	addItemForTradeIn	
+		c	Adds a merchant recipe that trades items for a single ruby.	
+		p	0		list	
+		p	1		itemId	
+		p	2		random	
+		p	3		likelyHood	
+	m	(ILjava/util/Random;)Lnet/minecraft/unmapped/C_88708284;	m_43264418	getItemTradeInValue	
+		p	0		itemId	
+		p	1		random	
+	m	(ILjava/util/Random;)I	m_92743448	getTradeInValue	
+		p	0		itemId	
+		p	1		random	
+	m	(Lnet/minecraft/unmapped/C_76093612;ILjava/util/Random;F)V	m_39362242	addItemForPurchase	
+		c	Adds a merchant recipe that trades rubies for an item. If the cost is\nnegative, one ruby will give several of that item.	
+		p	0		list	
+		p	1		itemId	
+		p	2		random	
+		p	3		likelyHood	
+	m	(ILjava/util/Random;)I	m_98346203	getPurchaseCost	
+		p	0		itemId	
+		p	1		random	
+	m	(Lnet/minecraft/unmapped/C_76093612;Lnet/minecraft/unmapped/C_98888256;Ljava/util/Random;F)V	m_03354639		addItemForTradeIn
 		p	0			p_0
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
-	m	(Lnet/minecraft/unmapped/C_98888256;Ljava/util/Random;)Lnet/minecraft/unmapped/C_88708284;	m_43264418		m_43264418
+	m	(Lnet/minecraft/unmapped/C_98888256;Ljava/util/Random;)Lnet/minecraft/unmapped/C_88708284;	m_43264418		getItemTradeInValue
 		p	0			p_0
 		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_98888256;Ljava/util/Random;)I	m_92743448		m_92743448
+	m	(Lnet/minecraft/unmapped/C_98888256;Ljava/util/Random;)I	m_92743448		getTradeInValue
 		p	0			p_0
 		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_76093612;Lnet/minecraft/unmapped/C_98888256;Ljava/util/Random;F)V	m_39362242		m_39362242
+	m	(Lnet/minecraft/unmapped/C_76093612;Lnet/minecraft/unmapped/C_98888256;Ljava/util/Random;F)V	m_39362242		addItemForPurchase
 		p	0			p_0
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
-	m	(Lnet/minecraft/unmapped/C_98888256;Ljava/util/Random;)I	m_98346203		m_98346203
+	m	(Lnet/minecraft/unmapped/C_98888256;Ljava/util/Random;)I	m_98346203		getPurchaseCost
 		p	0			p_0
 		p	1			p_1
 c	net/minecraft/unmapped/C_63638640

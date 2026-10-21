@@ -213,7 +213,7 @@ c	net/minecraft/unmapped/C_94584382
 		p	0		x	
 		p	2		y	
 		p	4		z	
-	m	()Lnet/minecraft/unmapped/C_30992371;	m_71437835		m_71437835
+	m	()Lnet/minecraft/unmapped/C_30992371;	m_71437835		getPool
 c	net/minecraft/unmapped/C_94584382$01173212	01173212	
 	m	()V	<init>	<init>	
 	m	()Ljava/lang/Integer;	initialValue	initialValue	
@@ -276,12 +276,12 @@ c	net/minecraft/unmapped/C_84978437$C_11317765
 		p	4			p_4
 		p	5			p_5
 c	net/minecraft/unmapped/C_56964626
-	f	Z	f_19161876		f_19161876
-	f	Lnet/minecraft/unmapped/C_58868350;	f_51609070		f_51609070
+	f	Z	f_19161876		addRecipeOnUpdate
+	f	Lnet/minecraft/unmapped/C_58868350;	f_51609070		lastAcceptedOffer
 	m	(B)V	m_48967522		m_48967522
 		p	1			p_1
-	m	(Ljava/lang/String;)V	m_93459202		m_93459202
-		p	1			p_1
+	m	(Ljava/lang/String;)V	m_93459202		addParticlesAroundSelf
+		p	1			particle
 c	net/minecraft/unmapped/C_64035597
 	m	(Lnet/minecraft/unmapped/C_74425583;)V	m_50417740	m_50417740	
 		p	1		p_1	
@@ -326,25 +326,25 @@ c	net/minecraft/unmapped/C_29144146
 c	net/minecraft/unmapped/C_56435444
 	m	()V	<init>		<init>
 c	net/minecraft/unmapped/C_58868350
-	f	I	f_91538619		f_91538619
-	m	()I	m_47312053		m_47312053
-	m	()V	m_69414714		m_69414714
-c	net/minecraft/unmapped/C_30992371		net/minecraft/unmapped/C_30992371
+	f	I	f_91538619		uses
+	m	()I	m_47312053		getUses
+	m	()V	m_69414714		increaseUses
+c	net/minecraft/unmapped/C_30992371		net/minecraft/util/Vec3Pool
 	f	I	f_02037783		f_02037783
 	f	I	f_90791359		f_90791359
-	f	Ljava/util/List;	f_92664955		f_92664955
+	f	Ljava/util/List;	f_92664955		pool
 	f	I	f_16790305		f_16790305
 	f	I	f_38603595		f_38603595
 	f	I	f_28750479		f_28750479
 	m	(II)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
-	m	(DDD)Lnet/minecraft/unmapped/C_94584382;	m_88510418		m_88510418
-		p	1			p_1
-		p	3			p_3
-		p	5			p_5
+	m	(DDD)Lnet/minecraft/unmapped/C_94584382;	m_88510418		newTemp
+		p	1			x
+		p	3			y
+		p	5			z
 	m	()V	m_12437950		m_12437950
-	m	()V	m_52026275		m_52026275
+	m	()V	m_52026275		clear
 c	net/minecraft/unmapped/C_67849684		net/minecraft/unmapped/C_67849684
 	f	Ljava/lang/String;	f_05368102		f_05368102
 	f	Ljava/lang/String;	f_91187011		f_91187011
@@ -407,7 +407,7 @@ c	net/minecraft/unmapped/C_80798648		net/minecraft/unmapped/C_80798648
 	m	(Ljava/lang/String;)Ljava/lang/String;	m_33084834		m_33084834
 		p	0			p_0
 	m	()V	<clinit>		<clinit>
-c	net/minecraft/unmapped/C_84533421		net/minecraft/unmapped/C_84533421
+c	net/minecraft/unmapped/C_84533421		net/minecraft/util/AABBPool
 	f	I	f_86386816		f_86386816
 	f	I	f_31158802		f_31158802
 	f	Ljava/util/List;	f_08461726		f_08461726
@@ -417,12 +417,12 @@ c	net/minecraft/unmapped/C_84533421		net/minecraft/unmapped/C_84533421
 	m	(II)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
-	m	(DDDDDD)Lnet/minecraft/unmapped/C_82690114;	m_00226279		m_00226279
-		p	1			p_1
-		p	3			p_3
-		p	5			p_5
-		p	7			p_7
-		p	9			p_9
-		p	11			p_11
+	m	(DDDDDD)Lnet/minecraft/unmapped/C_82690114;	m_00226279		newTemp
+		p	1			x0
+		p	3			y0
+		p	5			z0
+		p	7			x1
+		p	9			y1
+		p	11			z1
 	m	()V	m_27244070		m_27244070
-	m	()V	m_67320052		m_67320052
+	m	()V	m_67320052		clear

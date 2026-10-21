@@ -2135,13 +2135,13 @@ c	net/minecraft/unmapped/C_62989604
 	m	()Lnet/minecraft/unmapped/C_95231345;	m_57447328		m_57447328
 	m	()Z	m_66517083		m_66517083
 c	net/minecraft/unmapped/C_76093612
-	m	(Ljava/io/DataOutputStream;)V	m_86742668	m_86742668	
-		p	1		p_1	
-	m	(Ljava/io/DataInputStream;)Lnet/minecraft/unmapped/C_76093612;	m_03027984	m_03027984	
-		p	0		p_0	
-	m	(Lnet/minecraft/unmapped/C_04635774;)V	m_86742668		m_86742668
+	m	(Ljava/io/DataOutputStream;)V	m_86742668	writeToStream	
+		p	1		stream	
+	m	(Ljava/io/DataInputStream;)Lnet/minecraft/unmapped/C_76093612;	m_03027984	createFromStream	
+		p	0		stream	
+	m	(Lnet/minecraft/unmapped/C_04635774;)V	m_86742668		writeToStream
 		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_04635774;)Lnet/minecraft/unmapped/C_76093612;	m_03027984		m_03027984
+	m	(Lnet/minecraft/unmapped/C_04635774;)Lnet/minecraft/unmapped/C_76093612;	m_03027984		createFromStream
 		p	0			p_0
 c	net/minecraft/unmapped/C_92306618	net/minecraft/unmapped/C_92306618	
 	f	Lnet/minecraft/unmapped/C_84711441;	f_22908702	f_22908702	

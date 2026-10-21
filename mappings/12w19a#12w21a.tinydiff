@@ -239,8 +239,8 @@ c	net/minecraft/unmapped/C_40735137
 		p	1			p_1
 	m	()Z	m_86106940		m_86106940
 c	net/minecraft/unmapped/C_40996800
-	m	(Lnet/minecraft/unmapped/C_87535732;)V	m_83573048		m_83573048
-		p	1			p_1
+	m	(Lnet/minecraft/unmapped/C_87535732;)V	m_83573048		openTrading
+		p	1			traderTarget
 c	net/minecraft/unmapped/C_43718703
 	m	()D	m_31221441		m_31221441
 	m	()D	m_98453558		m_98453558
@@ -475,7 +475,7 @@ c	net/minecraft/unmapped/C_95462098
 	f	[Ljava/lang/String;	f_98033261		f_98033261
 	m	()Z	m_47190451	m_47190451	
 c	net/minecraft/unmapped/C_98888256
-	f	Lnet/minecraft/unmapped/C_98888256;	f_18319018		f_18319018
+	f	Lnet/minecraft/unmapped/C_98888256;	f_18319018		emerald
 c	net/minecraft/unmapped/C_99660737
 	f	Lnet/minecraft/unmapped/C_39588828;	f_88877238	connection	
 	f	Lnet/minecraft/unmapped/C_62989604;	f_88877238		connection
@@ -921,45 +921,47 @@ c	net/minecraft/unmapped/C_07875330
 		p	6			p_6
 		p	7			p_7
 c	net/minecraft/unmapped/C_56964626
-	f	Lnet/minecraft/unmapped/C_40996800;	f_73131399		f_73131399
-	f	Lnet/minecraft/unmapped/C_76093612;	f_55485993		f_55485993
-	f	I	f_88094916		f_88094916
-	f	I	f_31908959		f_31908959
-	f	Ljava/util/Map;	f_20536726		f_20536726
-	f	Ljava/util/Map;	f_13849302		f_13849302
+	f	Lnet/minecraft/unmapped/C_40996800;	f_73131399		tradingPlayer
+	f	Lnet/minecraft/unmapped/C_76093612;	f_55485993		offers
+	f	I	f_88094916		updateMerchantTimer
+	f	I	f_31908959		riches
+	f	Ljava/util/Map;	f_20536726		MIN_MAX_VALUES
+	f	Ljava/util/Map;	f_13849302		MIN_MAX_PRICES
 	m	(Lnet/minecraft/unmapped/C_40996800;)Z	m_18370723		m_18370723
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_40996800;)V	m_29342702		m_29342702
 		p	1			p_1
 	m	()Lnet/minecraft/unmapped/C_40996800;	m_05255774		m_05255774
-	m	()Z	m_22187364		m_22187364
+	m	()Z	m_22187364		isTrading
 	m	(Lnet/minecraft/unmapped/C_58868350;)V	m_08583091		m_08583091
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_40996800;)Lnet/minecraft/unmapped/C_76093612;	m_10556492		m_10556492
 		p	1			p_1
-	m	(I)V	m_88266272		m_88266272
-		p	1			p_1
+	m	(I)V	m_88266272		addOffers
+		p	1			addCount
 	m	(Lnet/minecraft/unmapped/C_76093612;)V	m_33614606		m_33614606
 		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_76093612;ILjava/util/Random;F)V	m_03354639		m_03354639
-		p	0			p_0
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-	m	(ILjava/util/Random;)Lnet/minecraft/unmapped/C_88708284;	m_43264418		m_43264418
-		p	0			p_0
-		p	1			p_1
-	m	(ILjava/util/Random;)I	m_92743448		m_92743448
-		p	0			p_0
-		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_76093612;ILjava/util/Random;F)V	m_39362242		m_39362242
-		p	0			p_0
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-	m	(ILjava/util/Random;)I	m_98346203		m_98346203
-		p	0			p_0
-		p	1			p_1
+	m	(Lnet/minecraft/unmapped/C_76093612;ILjava/util/Random;F)V	m_03354639		addItemForTradeIn
+		c		Adds a merchant recipe that trades items for a single ruby.
+		p	0			list
+		p	1			itemId
+		p	2			random
+		p	3			likelyHood
+	m	(ILjava/util/Random;)Lnet/minecraft/unmapped/C_88708284;	m_43264418		getItemTradeInValue
+		p	0			itemId
+		p	1			random
+	m	(ILjava/util/Random;)I	m_92743448		getTradeInValue
+		p	0			itemId
+		p	1			random
+	m	(Lnet/minecraft/unmapped/C_76093612;ILjava/util/Random;F)V	m_39362242		addItemForPurchase
+		c		Adds a merchant recipe that trades rubies for an item. If the cost is\nnegative, one ruby will give several of that item.
+		p	0			list
+		p	1			itemId
+		p	2			random
+		p	3			likelyHood
+	m	(ILjava/util/Random;)I	m_98346203		getPurchaseCost
+		p	0			itemId
+		p	1			random
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_31511251
 	m	()Lnet/minecraft/unmapped/C_40735137;	m_22794655	m_22794655	
@@ -1306,14 +1308,14 @@ c	net/minecraft/unmapped/C_21257475		net/minecraft/unmapped/C_21257475
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_58868350;)V	m_08583091		m_08583091
 		p	1			p_1
-c	net/minecraft/unmapped/C_22977370		net/minecraft/unmapped/C_22977370
-	f	Ljava/lang/Object;	f_77659913		f_77659913
-	f	Ljava/lang/Object;	f_89139990		f_89139990
+c	net/minecraft/unmapped/C_22977370		net/minecraft/util/Pair
+	f	Ljava/lang/Object;	f_77659913		first
+	f	Ljava/lang/Object;	f_89139990		second
 	m	(Ljava/lang/Object;Ljava/lang/Object;)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-	m	()Ljava/lang/Object;	m_78984803		m_78984803
-	m	()Ljava/lang/Object;	m_25244225		m_25244225
+		p	1			first
+		p	2			second
+	m	()Ljava/lang/Object;	m_78984803		getFirst
+	m	()Ljava/lang/Object;	m_25244225		getSecond
 c	net/minecraft/unmapped/C_27739481		net/minecraft/unmapped/C_27739481
 	f	Ljava/io/File;	f_73014681		f_73014681
 	f	Ljava/io/File;	f_66648651		f_66648651
@@ -1514,17 +1516,17 @@ c	net/minecraft/unmapped/C_43194647		net/minecraft/unmapped/C_43194647
 	m	()V	m_82855139		m_82855139
 	m	(Z)V	m_76256279		m_76256279
 		p	1			p_1
-c	net/minecraft/unmapped/C_44483158		net/minecraft/unmapped/C_44483158
-	f	Lnet/minecraft/unmapped/C_56964626;	f_01856095		f_01856095
+c	net/minecraft/unmapped/C_44483158		net/minecraft/world/entity/ai/goal/TradeWithPlayerGoal
+	f	Lnet/minecraft/unmapped/C_56964626;	f_01856095		mob
 	m	(Lnet/minecraft/unmapped/C_56964626;)V	<init>		<init>
-		p	1			p_1
+		p	1			mob
 	m	()Z	m_13184927		m_13184927
 	m	()V	m_38932409		m_38932409
 	m	()V	m_77320506		m_77320506
-c	net/minecraft/unmapped/C_46567622		net/minecraft/unmapped/C_46567622
-	f	Lnet/minecraft/unmapped/C_56964626;	f_49323716		f_49323716
+c	net/minecraft/unmapped/C_46567622		net/minecraft/world/entity/ai/goal/LookAtTradingPlayerGoal
+	f	Lnet/minecraft/unmapped/C_56964626;	f_49323716		villager
 	m	(Lnet/minecraft/unmapped/C_56964626;)V	<init>		<init>
-		p	1			p_1
+		p	1			villager
 	m	()Z	m_13184927		m_13184927
 c	net/minecraft/unmapped/C_51385776		net/minecraft/unmapped/C_51385776
 	m	(Lnet/minecraft/unmapped/C_29144146;)V	<init>		<init>
@@ -1559,26 +1561,26 @@ c	net/minecraft/unmapped/C_56435444$C_78076871		C_78076871
 		p	5			p_5
 		p	6			p_6
 		p	7			p_7
-c	net/minecraft/unmapped/C_58868350		net/minecraft/unmapped/C_58868350
-	f	Lnet/minecraft/unmapped/C_88708284;	f_31011957		f_31011957
-	f	Lnet/minecraft/unmapped/C_88708284;	f_10125241		f_10125241
+c	net/minecraft/unmapped/C_58868350		net/minecraft/world/item/trading/MerchantRecipe
+	f	Lnet/minecraft/unmapped/C_88708284;	f_31011957		buyA
+	f	Lnet/minecraft/unmapped/C_88708284;	f_10125241		sell
 	m	(Lnet/minecraft/unmapped/C_74087615;)V	<init>		<init>
-		p	1			p_1
+		p	1			tag
 	m	(Lnet/minecraft/unmapped/C_88708284;Lnet/minecraft/unmapped/C_88708284;)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
+		p	1			buy
+		p	2			sell
 	m	(Lnet/minecraft/unmapped/C_88708284;Lnet/minecraft/unmapped/C_98888256;)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-	m	()Lnet/minecraft/unmapped/C_88708284;	m_12337591		m_12337591
-	m	()Lnet/minecraft/unmapped/C_88708284;	m_60379988		m_60379988
-	m	(Lnet/minecraft/unmapped/C_58868350;)Z	m_00565808		m_00565808
-		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_58868350;)Z	m_91922532		m_91922532
-		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_74087615;)V	m_10641547		m_10641547
-		p	1			p_1
-	m	()Lnet/minecraft/unmapped/C_74087615;	m_26501383		m_26501383
+		p	1			buy
+		p	2			sell
+	m	()Lnet/minecraft/unmapped/C_88708284;	m_12337591		getBuyAItem
+	m	()Lnet/minecraft/unmapped/C_88708284;	m_60379988		getSellItem
+	m	(Lnet/minecraft/unmapped/C_58868350;)Z	m_00565808		isSame
+		p	1			other
+	m	(Lnet/minecraft/unmapped/C_58868350;)Z	m_91922532		isSameSameButBetter
+		p	1			other
+	m	(Lnet/minecraft/unmapped/C_74087615;)V	m_10641547		load
+		p	1			tag
+	m	()Lnet/minecraft/unmapped/C_74087615;	m_26501383		createTag
 c	net/minecraft/unmapped/C_61666794		net/minecraft/unmapped/C_61666794
 	m	()V	<init>		<init>
 	m	()Ljava/lang/String;	m_72533879		m_72533879
@@ -1685,22 +1687,22 @@ c	net/minecraft/unmapped/C_64849426		net/minecraft/unmapped/C_64849426
 	m	()Lnet/minecraft/unmapped/C_43616774;	m_08680482		m_08680482
 c	net/minecraft/unmapped/C_69118771		net/minecraft/unmapped/C_69118771
 	m	()V	<init>		<init>
-c	net/minecraft/unmapped/C_76093612		net/minecraft/unmapped/C_76093612
+c	net/minecraft/unmapped/C_76093612		net/minecraft/world/item/trading/MerchantRecipeList
 	m	()V	<init>		<init>
 	m	(Lnet/minecraft/unmapped/C_74087615;)V	<init>		<init>
-		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_88708284;I)Lnet/minecraft/unmapped/C_58868350;	m_00465438		m_00465438
+		p	1			tag
+	m	(Lnet/minecraft/unmapped/C_88708284;I)Lnet/minecraft/unmapped/C_58868350;	m_00465438		getRecipeFor
 		p	1			p_1
 		p	2			p_2
-	m	(Lnet/minecraft/unmapped/C_58868350;)V	m_53556193		m_53556193
-		p	1			p_1
-	m	(Ljava/io/DataOutputStream;)V	m_86742668		m_86742668
-		p	1			p_1
-	m	(Ljava/io/DataInputStream;)Lnet/minecraft/unmapped/C_76093612;	m_03027984		m_03027984
-		p	0			p_0
-	m	(Lnet/minecraft/unmapped/C_74087615;)V	m_21863075		m_21863075
-		p	1			p_1
-	m	()Lnet/minecraft/unmapped/C_74087615;	m_76452252		m_76452252
+	m	(Lnet/minecraft/unmapped/C_58868350;)V	m_53556193		addIfNewOrBetter
+		p	1			recipe
+	m	(Ljava/io/DataOutputStream;)V	m_86742668		writeToStream
+		p	1			stream
+	m	(Ljava/io/DataInputStream;)Lnet/minecraft/unmapped/C_76093612;	m_03027984		createFromStream
+		p	0			stream
+	m	(Lnet/minecraft/unmapped/C_74087615;)V	m_21863075		load
+		p	1			tag
+	m	()Lnet/minecraft/unmapped/C_74087615;	m_76452252		createTag
 c	net/minecraft/unmapped/C_83623978		net/minecraft/unmapped/C_83623978
 	f	Lnet/minecraft/unmapped/C_81079132;	f_24159510		f_24159510
 	m	()V	<init>		<init>
@@ -1808,16 +1810,16 @@ c	net/minecraft/unmapped/C_86826670$C_22365581		C_22365581
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
-c	net/minecraft/unmapped/C_87535732		net/minecraft/unmapped/C_87535732
-	m	(Lnet/minecraft/unmapped/C_40996800;)V	m_29342702		m_29342702
-		p	1			p_1
-	m	()Lnet/minecraft/unmapped/C_40996800;	m_05255774		m_05255774
-	m	(Lnet/minecraft/unmapped/C_40996800;)Lnet/minecraft/unmapped/C_76093612;	m_10556492		m_10556492
-		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_76093612;)V	m_33614606		m_33614606
-		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_58868350;)V	m_08583091		m_08583091
-		p	1			p_1
+c	net/minecraft/unmapped/C_87535732		net/minecraft/world/item/trading/Merchant
+	m	(Lnet/minecraft/unmapped/C_40996800;)V	m_29342702		setTradingPlayer
+		p	1			player
+	m	()Lnet/minecraft/unmapped/C_40996800;	m_05255774		getTradingPlayer
+	m	(Lnet/minecraft/unmapped/C_40996800;)Lnet/minecraft/unmapped/C_76093612;	m_10556492		getOffers
+		p	1			forPlayer
+	m	(Lnet/minecraft/unmapped/C_76093612;)V	m_33614606		overrideOffers
+		p	1			recipeList
+	m	(Lnet/minecraft/unmapped/C_58868350;)V	m_08583091		notifyTrade
+		p	1			activeRecipe
 c	net/minecraft/unmapped/C_89058967		org/bouncycastle/crypto/modes/CFBBlockCipher
 	f	[B	f_37647560		IV
 	f	[B	f_80976661		cfbV
