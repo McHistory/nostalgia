@@ -2661,7 +2661,7 @@ c	net/minecraft/unmapped/C_73452336
 		p	5		p_5	
 		p	6		p_6	
 	m	(Lnet/minecraft/unmapped/C_64041439;)Lnet/minecraft/unmapped/C_40735137;	m_22794655	newTileEntity	
-		p	1		p_1	
+		p	1		level	
 	m	(Lnet/minecraft/unmapped/C_64041439;IIIII)Z	m_95985470		m_95985470
 		p	1			p_1
 		p	2			p_2
@@ -3612,7 +3612,7 @@ c	net/minecraft/unmapped/C_95568557
 		p	1			p_1
 c	net/minecraft/unmapped/C_95807626
 	m	(Ljava/io/File;)Z	m_28079904	saveToFile	
-		p	1		p_1	
+		p	1		saveFile	
 	m	(Ljava/io/File;Lnet/minecraft/unmapped/C_41861935;)Z	m_28079904		saveToFile
 		p	1			saveFile
 		p	2			p_2
@@ -3774,13 +3774,13 @@ c	net/minecraft/unmapped/C_99795455
 	m	(Lnet/minecraft/unmapped/C_74087615;)V	m_55164141	m_55164141	
 		p	1		p_1	
 	m	()Lnet/minecraft/unmapped/C_03562565;	m_62241873	m_62241873	
-	m	(Lnet/minecraft/unmapped/C_42232651;)V	m_86303719	m_86303719	
-		p	1		p_1	
+	m	(Lnet/minecraft/unmapped/C_42232651;)V	m_86303719	loadDataAndAddEntity	
+		p	1		entity	
 	m	(II)V	m_76734513	m_76734513	
 		p	1		p_1	
 		p	2		p_2	
 	m	()V	m_46352886		m_46352886
-	m	(Lnet/minecraft/unmapped/C_42232651;)Lnet/minecraft/unmapped/C_42232651;	m_86303719		m_86303719
+	m	(Lnet/minecraft/unmapped/C_42232651;)Lnet/minecraft/unmapped/C_42232651;	m_86303719		loadDataAndAddEntity
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_74087615;)V	m_90252183		m_90252183
 		p	1			p_1
@@ -3958,12 +3958,12 @@ c	net/minecraft/unmapped/C_87211829
 	m	(Lnet/minecraft/unmapped/C_74425583;)Ljava/lang/String;	m_78861518		m_78861518
 		p	1			p_1
 c	net/minecraft/unmapped/C_90287053
-	m	(Ljava/util/Random;[Lnet/minecraft/unmapped/C_90287053;Lnet/minecraft/unmapped/C_51369719;I)V	m_76320542	m_76320542	
-		p	0		p_0	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-	m	(Ljava/util/Random;[Lnet/minecraft/unmapped/C_90287053;Lnet/minecraft/unmapped/C_43616774;I)V	m_76320542		m_76320542
+	m	(Ljava/util/Random;[Lnet/minecraft/unmapped/C_90287053;Lnet/minecraft/unmapped/C_51369719;I)V	m_76320542	addChestItems	
+		p	0		random	
+		p	1		items	
+		p	2		dest	
+		p	3		numRolls	
+	m	(Ljava/util/Random;[Lnet/minecraft/unmapped/C_90287053;Lnet/minecraft/unmapped/C_43616774;I)V	m_76320542		addChestItems
 		p	0			p_0
 		p	1			p_1
 		p	2			p_2

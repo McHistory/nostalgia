@@ -9,7 +9,7 @@ c	net/minecraft/unmapped/C_09553359
 c	net/minecraft/unmapped/C_09553359$82076943
 	m	()I	m_24076806		m_24076806
 c	net/minecraft/unmapped/C_10918870
-	m	(Lnet/minecraft/unmapped/C_52156807;)V	m_47450076		m_47450076
+	m	(Lnet/minecraft/unmapped/C_52156807;)V	m_47450076		handlePlayerAbilities
 		p	1			p_1
 c	net/minecraft/unmapped/C_14917579
 	f	Z	f_58237041		f_58237041
@@ -175,12 +175,12 @@ c	net/minecraft/unmapped/C_30339133
 		p	4			p_4
 		p	5			p_5
 c	net/minecraft/unmapped/C_34225397
-	m	(Lnet/minecraft/unmapped/C_64041439;IIII)Z	m_84434060		m_84434060
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
+	m	(Lnet/minecraft/unmapped/C_64041439;IIII)Z	m_84434060		isSapling
+		p	1			level
+		p	2			x
+		p	3			y
+		p	4			z
+		p	5			type
 c	net/minecraft/unmapped/C_40996800
 	m	()V	m_11118191		onUpdateAbilities
 c	net/minecraft/unmapped/C_47884049
@@ -356,14 +356,14 @@ c	net/minecraft/unmapped/C_51593360		net/minecraft/unmapped/C_51593360
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
-c	net/minecraft/unmapped/C_52156807		net/minecraft/unmapped/C_52156807
-	f	Z	f_65199628		f_65199628
-	f	Z	f_58233551		f_58233551
-	f	Z	f_49691330		f_49691330
-	f	Z	f_77460376		f_77460376
+c	net/minecraft/unmapped/C_52156807		net/minecraft/network/packet/PlayerAbilitiesPacket
+	f	Z	f_65199628		invulnerable
+	f	Z	f_58233551		isFlying
+	f	Z	f_49691330		canFly
+	f	Z	f_77460376		instabuild
 	m	()V	<init>		<init>
 	m	(Lnet/minecraft/unmapped/C_81721916;)V	<init>		<init>
-		p	1			p_1
+		p	1			abilities
 	m	(Ljava/io/DataInputStream;)V	m_13296744		m_13296744
 		p	1			p_1
 	m	(Ljava/io/DataOutputStream;)V	m_17566769		m_17566769

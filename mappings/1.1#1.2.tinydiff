@@ -136,7 +136,7 @@ c	net/minecraft/unmapped/C_08783725
 c	net/minecraft/unmapped/C_10918870
 	m	(Lnet/minecraft/unmapped/C_10010951;)V	m_36400499		m_36400499
 		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_01827895;)V	m_30777168		m_30777168
+	m	(Lnet/minecraft/unmapped/C_01827895;)V	m_30777168		handleTileEntityData
 		p	1			p_1
 c	net/minecraft/unmapped/C_11727459
 	m	(I)Lnet/minecraft/unmapped/C_88708284;	m_75956400		m_75956400
@@ -299,8 +299,8 @@ c	net/minecraft/unmapped/C_27396115	net/minecraft/util/NoneNullTiles
 		p	0		blocks	
 	m	()V	<clinit>	<clinit>	
 c	net/minecraft/unmapped/C_28105876
-	f	Lnet/minecraft/unmapped/C_28105876;	f_48115035		f_48115035
-	f	Lnet/minecraft/unmapped/C_28105876;	f_06882473		f_06882473
+	f	Lnet/minecraft/unmapped/C_28105876;	f_48115035		jungle
+	f	Lnet/minecraft/unmapped/C_28105876;	f_06882473		jungleHills
 	m	(Lnet/minecraft/unmapped/C_46108969;III)I	m_29076487	getGrassColor	
 		p	1		level	
 		p	2		x	
@@ -314,7 +314,7 @@ c	net/minecraft/unmapped/C_28105876
 	m	(Ljava/util/Random;)Lnet/minecraft/unmapped/C_30339133;	m_27560802		getGrassFeature
 		p	1			random
 	m	()Z	m_52838685		isHumid
-	m	()F	m_01072171		m_01072171
+	m	()F	m_01072171		getDownfall
 	m	()F	m_37125809		getTemperature
 	m	()I	m_29076487		getGrassColor
 	m	()I	m_08237421		getFolageColor
@@ -780,11 +780,11 @@ c	net/minecraft/unmapped/C_72739095	net/minecraft/world/level/chunk/storage/OldC
 		p	1		p_1	
 		p	2		p_2	
 c	net/minecraft/unmapped/C_74087615
-	m	(Ljava/lang/String;[I)V	m_91884657		m_91884657
-		p	1			p_1
-		p	2			p_2
-	m	(Ljava/lang/String;)[I	m_37023710		m_37023710
-		p	1			p_1
+	m	(Ljava/lang/String;[I)V	m_91884657		putIntArray
+		p	1			name
+		p	2			value
+	m	(Ljava/lang/String;)[I	m_37023710		getIntArray
+		p	1			name
 c	net/minecraft/unmapped/C_74425583
 	f	Lnet/minecraft/unmapped/C_44746283;	f_54331786	navigation	
 	f	I	f_83588217		lastHurtByMobTime
@@ -956,9 +956,9 @@ c	net/minecraft/unmapped/C_89967701
 c	net/minecraft/unmapped/C_90532916
 	f	Z	f_48838845	foggy	
 	m	()Z	m_30674582		isNaturalDimension
-	m	(II)Z	m_74257711		m_74257711
-		p	1			p_1
-		p	2			p_2
+	m	(II)Z	m_74257711		isFoggyAt
+		p	1			x
+		p	2			z
 c	net/minecraft/unmapped/C_92949082
 	m	(Lnet/minecraft/unmapped/C_46108969;III)Z	m_93785535		m_93785535
 		p	1			p_1
@@ -1509,11 +1509,11 @@ c	net/minecraft/unmapped/C_01663231		net/minecraft/world/entity/ai/goal/Interact
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
-c	net/minecraft/unmapped/C_01827895		net/minecraft/unmapped/C_01827895
-	f	I	f_91548410		f_91548410
-	f	I	f_68982383		f_68982383
-	f	I	f_91823214		f_91823214
-	f	I	f_21431771		f_21431771
+c	net/minecraft/unmapped/C_01827895		net/minecraft/network/packet/TileEntityDataPacket
+	f	I	f_91548410		x
+	f	I	f_68982383		y
+	f	I	f_91823214		z
+	f	I	f_21431771		type
 	f	I	f_18602289		f_18602289
 	f	I	f_44710400		f_44710400
 	f	I	f_93786025		f_93786025
@@ -2088,7 +2088,7 @@ c	net/minecraft/unmapped/C_54284556		net/minecraft/unmapped/C_54284556
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
-c	net/minecraft/unmapped/C_54462756		net/minecraft/unmapped/C_54462756
+c	net/minecraft/unmapped/C_54462756		net/minecraft/world/level/biome/JungleBiome
 	m	(I)V	<init>		<init>
 		p	1			p_1
 	m	(Ljava/util/Random;)Lnet/minecraft/unmapped/C_30339133;	m_47523269		m_47523269
@@ -2381,13 +2381,13 @@ c	net/minecraft/unmapped/C_65663213		net/minecraft/unmapped/C_65663213
 	m	()F	m_63023723		m_63023723
 	m	(Lnet/minecraft/unmapped/C_24654288;)V	m_48039727		m_48039727
 		p	1			p_1
-c	net/minecraft/unmapped/C_67412986		net/minecraft/unmapped/C_67412986
-	f	[I	f_21077460		f_21077460
+c	net/minecraft/unmapped/C_67412986		com/mojang/nbt/IntArrayTag
+	f	[I	f_21077460		data
 	m	(Ljava/lang/String;)V	<init>		<init>
 		p	1			p_1
 	m	(Ljava/lang/String;[I)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
+		p	1			name
+		p	2			data
 	m	(Ljava/io/DataOutput;)V	m_20830783		m_20830783
 		p	1			p_1
 	m	(Ljava/io/DataInput;)V	m_52126384		m_52126384
@@ -2464,7 +2464,7 @@ c	net/minecraft/unmapped/C_71932222		net/minecraft/world/entity/ai/goal/DoorInte
 		p	1			x
 		p	2			y
 		p	3			z
-c	net/minecraft/unmapped/C_72737315		net/minecraft/unmapped/C_72737315
+c	net/minecraft/unmapped/C_72737315		net/minecraft/world/level/levelgen/feature/VinesFeature
 	m	()V	<init>		<init>
 	m	(Lnet/minecraft/unmapped/C_64041439;Ljava/util/Random;III)Z	m_85015587		m_85015587
 		p	1			p_1
@@ -2486,40 +2486,40 @@ c	net/minecraft/unmapped/C_79234759		net/minecraft/unmapped/C_79234759
 	m	()Z	m_13184927		m_13184927
 	m	()V	m_38932409		m_38932409
 	m	()V	m_77320506		m_77320506
-c	net/minecraft/unmapped/C_80128723		net/minecraft/unmapped/C_80128723
-	f	I	f_84760158		f_84760158
-	f	I	f_97333083		f_97333083
+c	net/minecraft/unmapped/C_80128723		net/minecraft/world/level/levelgen/feature/GroundBushFeature
+	f	I	f_84760158		leafTileType
+	f	I	f_97333083		trunkTileType
 	m	(II)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
+		p	1			trunkType
+		p	2			leafType
 	m	(Lnet/minecraft/unmapped/C_64041439;Ljava/util/Random;III)Z	m_85015587		m_85015587
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
 		p	5			p_5
-c	net/minecraft/unmapped/C_80830217		net/minecraft/unmapped/C_80830217
-	f	I	f_11235358		f_11235358
-	f	I	f_96035767		f_96035767
-	f	I	f_41528549		f_41528549
+c	net/minecraft/unmapped/C_80830217		net/minecraft/world/level/levelgen/feature/MegaTreeFeature
+	f	I	f_11235358		baseHeight
+	f	I	f_96035767		trunkType
+	f	I	f_41528549		leafType
 	m	(ZIII)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
+		p	1			doUpdate
+		p	2			baseHeight
+		p	3			trunkType
+		p	4			leafType
 	m	(Lnet/minecraft/unmapped/C_64041439;Ljava/util/Random;III)Z	m_85015587		m_85015587
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
 		p	5			p_5
-	m	(Lnet/minecraft/unmapped/C_64041439;IIIILjava/util/Random;)V	m_05193515		m_05193515
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
-		p	6			p_6
+	m	(Lnet/minecraft/unmapped/C_64041439;IIIILjava/util/Random;)V	m_05193515		placeLeaves
+		p	1			level
+		p	2			x
+		p	3			z
+		p	4			topPosition
+		p	5			baseRadius
+		p	6			random
 c	net/minecraft/unmapped/C_82494390		net/minecraft/unmapped/C_82494390
 	f	Lnet/minecraft/unmapped/C_11961040;	f_90559793		f_90559793
 	m	()V	<init>		<init>

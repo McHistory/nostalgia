@@ -104,10 +104,10 @@ c	net/minecraft/unmapped/C_34267874
 		p	5			p_5
 		p	6			p_6
 c	net/minecraft/unmapped/C_40996800
-	m	(I)V	m_51816941		m_51816941
+	m	(I)V	m_51816941		setGameMode
 		p	1			p_1
 	m	()Ljava/lang/String;	m_64276922		m_64276922
-	m	()Lnet/minecraft/unmapped/C_16154270;	m_35975712		m_35975712
+	m	()Lnet/minecraft/unmapped/C_16154270;	m_35975712		getLanguage
 	m	(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;	m_92303761		m_92303761
 		p	1			p_1
 		p	2			p_2
@@ -274,11 +274,11 @@ c	net/minecraft/unmapped/C_70699216$C_31437606
 	m	(I)Lnet/minecraft/unmapped/C_88708284;	m_36051996		m_36051996
 		p	1			p_1
 c	net/minecraft/unmapped/C_90287053
-	m	(Ljava/util/Random;[Lnet/minecraft/unmapped/C_90287053;Lnet/minecraft/unmapped/C_51369719;I)V	m_76320542		m_76320542
-		p	0			p_0
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+	m	(Ljava/util/Random;[Lnet/minecraft/unmapped/C_90287053;Lnet/minecraft/unmapped/C_51369719;I)V	m_76320542		addChestItems
+		p	0			random
+		p	1			items
+		p	2			dest
+		p	3			numRolls
 c	net/minecraft/unmapped/C_91792368
 	m	(Ljava/util/Random;[Lnet/minecraft/unmapped/C_90287053;Lnet/minecraft/unmapped/C_51369719;I)V	m_40081440	addChestItems	
 		p	0		random	
@@ -316,10 +316,10 @@ c	net/minecraft/unmapped/C_01091443		net/minecraft/unmapped/C_01091443
 	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_40996800;	m_81139228		m_81139228
 		p	1			p_1
 	m	()[Ljava/lang/String;	m_62635269		m_62635269
-c	net/minecraft/unmapped/C_02777445		net/minecraft/unmapped/C_02777445
+c	net/minecraft/unmapped/C_02777445		net/minecraft/util/StringUtil
 	m	()V	<init>		<init>
-	m	(I)Ljava/lang/String;	m_68893132		m_68893132
-		p	0			p_0
+	m	(I)Ljava/lang/String;	m_68893132		formatTickDuration
+		p	0			ticks
 c	net/minecraft/unmapped/C_04091279		net/minecraft/unmapped/C_04091279
 	f	Lnet/minecraft/unmapped/C_61644694;	f_16331593		f_16331593
 	m	()V	<init>		<init>

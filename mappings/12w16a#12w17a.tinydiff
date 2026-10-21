@@ -85,7 +85,7 @@ c	net/minecraft/unmapped/C_23014920
 	m	(Ljava/lang/String;)Ljava/lang/String;	m_64936006		m_64936006
 		p	1			p_1
 c	net/minecraft/unmapped/C_34225397
-	f	[Ljava/lang/String;	f_10098046		f_10098046
+	f	[Ljava/lang/String;	f_10098046		SAPLING_NAMES
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_37790612
 	m	(Ljava/net/InetAddress;)Z	m_37838190		m_37838190
@@ -139,7 +139,7 @@ c	net/minecraft/unmapped/C_42232651$C_99501600		C_99501600
 		p	1			p_1
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_45510667
-	m	(D)I	m_78771816		m_78771816
+	m	(D)I	m_78771816		ceil
 		p	0			p_0
 c	net/minecraft/unmapped/C_46155730
 	f	I	f_36886963	ticks	
@@ -268,8 +268,8 @@ c	net/minecraft/unmapped/C_76792751$C_92207510
 	f	Lnet/minecraft/unmapped/C_76792751$C_92207510;	f_41694255		f_41694255
 	f	Lnet/minecraft/unmapped/C_76792751$C_92207510;	f_58437164		f_58437164
 c	net/minecraft/unmapped/C_79370641
-	m	(I)Lnet/minecraft/unmapped/C_97075175;	m_53729040		m_53729040
-		p	1			p_1
+	m	(I)Lnet/minecraft/unmapped/C_97075175;	m_53729040		remove
+		p	1			index
 c	net/minecraft/unmapped/C_79915627
 	m	(Lnet/minecraft/unmapped/C_23078083;)Ljava/util/List;	m_61557160		m_61557160
 		p	1			p_1
@@ -278,8 +278,8 @@ c	net/minecraft/unmapped/C_81592558
 	f	Lnet/minecraft/unmapped/C_81592558;	f_66929948	stoneSlabHalf	
 	f	Lnet/minecraft/unmapped/C_60248056;	f_39350323		stoneSlab
 	f	Lnet/minecraft/unmapped/C_60248056;	f_66929948		stoneSlabHalf
-	f	Lnet/minecraft/unmapped/C_60248056;	f_35691584		f_35691584
-	f	Lnet/minecraft/unmapped/C_60248056;	f_25152972		f_25152972
+	f	Lnet/minecraft/unmapped/C_60248056;	f_35691584		woodSlab
+	f	Lnet/minecraft/unmapped/C_60248056;	f_25152972		woodSlabHalf
 c	net/minecraft/unmapped/C_88014908
 	m	(Lnet/minecraft/unmapped/C_04787565;)V	m_22756750	m_22756750	
 		p	1		p_1	
@@ -333,7 +333,7 @@ c	net/minecraft/unmapped/C_10672040
 	m	(I)Lnet/minecraft/unmapped/C_88708284;	m_68572787		m_68572787
 		p	1			p_1
 c	net/minecraft/unmapped/C_42856767
-	f	[Ljava/lang/String;	f_32816363		f_32816363
+	f	[Ljava/lang/String;	f_32816363		STONE_MONSTER_NAMES
 	m	(Lnet/minecraft/unmapped/C_64041439;III)I	m_89320689		m_89320689
 		p	1			p_1
 		p	2			p_2
@@ -384,9 +384,9 @@ c	net/minecraft/unmapped/C_01091443
 	m	(Lnet/minecraft/unmapped/C_23078083;)Ljava/lang/String;	m_81771772		m_81771772
 		p	1			p_1
 c	net/minecraft/unmapped/C_02777445
-	f	Ljava/util/regex/Pattern;	f_77932007		f_77932007
-	m	(Ljava/lang/String;)Ljava/lang/String;	m_45487430		m_45487430
-		p	0			p_0
+	f	Ljava/util/regex/Pattern;	f_77932007		STRIP_COLOR_PATTERN
+	m	(Ljava/lang/String;)Ljava/lang/String;	m_45487430		stripColor
+		p	0			input
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_04091279
 	m	(Lnet/minecraft/unmapped/C_23078083;)Ljava/lang/String;	m_81771772		m_81771772
@@ -621,12 +621,12 @@ c	net/minecraft/unmapped/C_55766165		net/minecraft/util/Crypt
 		p	0			p_0
 		p	1			p_1
 	m	()V	<clinit>		<clinit>
-c	net/minecraft/unmapped/C_60248056		net/minecraft/unmapped/C_60248056
-	f	Z	f_02461162		f_02461162
+c	net/minecraft/unmapped/C_60248056		net/minecraft/world/level/tile/HalfSlabTile
+	f	Z	f_02461162		fullSize
 	m	(IZLnet/minecraft/unmapped/C_89604096;)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+		p	1			id
+		p	2			fullSize
+		p	3			material
 	m	(Lnet/minecraft/unmapped/C_46108969;III)V	m_98737217		m_98737217
 		p	1			p_1
 		p	2			p_2
@@ -660,15 +660,15 @@ c	net/minecraft/unmapped/C_60248056		net/minecraft/unmapped/C_60248056
 		p	3			p_3
 		p	4			p_4
 		p	5			p_5
-	m	(I)Z	m_50228230		m_50228230
-		p	0			p_0
-	m	(I)Ljava/lang/String;	m_00839462		m_00839462
-		p	1			p_1
-c	net/minecraft/unmapped/C_78540860		net/minecraft/unmapped/C_78540860
-	f	[Ljava/lang/String;	f_94535100		f_94535100
+	m	(I)Z	m_50228230		isHalfSlab
+		p	0			tileId
+	m	(I)Ljava/lang/String;	m_00839462		getAuxName
+		p	1			auxValue
+c	net/minecraft/unmapped/C_78540860		net/minecraft/world/level/tile/WoodSlabTile
+	f	[Ljava/lang/String;	f_94535100		WOOD_NAMES
 	m	(IZ)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
+		p	1			id
+		p	2			fullSize
 	m	(II)I	m_07414817		m_07414817
 		p	1			p_1
 		p	2			p_2

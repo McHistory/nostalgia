@@ -2210,7 +2210,7 @@ c	net/minecraft/unmapped/C_12356698	net/minecraft/world/inventory/Slot
 		p	2		slot
 c	net/minecraft/unmapped/C_12489945	net/minecraft/world/level/biome/FlatBiome
 	m	()V	<init>	<init>
-c	net/minecraft/unmapped/C_13231860	net/minecraft/world/level/tile/StairsTile
+c	net/minecraft/unmapped/C_13231860	net/minecraft/world/level/tile/StairTile
 	f	Lnet/minecraft/unmapped/C_81592558;	f_56188284	base
 	m	(ILnet/minecraft/unmapped/C_81592558;)V	<init>	<init>
 		p	1		id
@@ -12410,7 +12410,7 @@ c	net/minecraft/unmapped/C_71582209	net/minecraft/world/level/levelgen/feature/T
 		p	4		p_4
 		p	5		p_5
 c	net/minecraft/unmapped/C_71700262	net/minecraft/world/entity/item/FallingTile
-	f	I	f_55141416	tileId
+	f	I	f_55141416	tile
 	f	I	f_57391945	time
 	m	(Lnet/minecraft/unmapped/C_64041439;)V	<init>	<init>
 		p	1		p_1
@@ -12807,63 +12807,63 @@ c	net/minecraft/unmapped/C_74087615	com/mojang/nbt/CompoundTag
 		p	1		p_1
 	m	()Ljava/util/Collection;	m_45469513	getTags
 	m	()B	m_65815168	m_65815168
-	m	(Ljava/lang/String;Lnet/minecraft/unmapped/C_97075175;)V	m_21770494	putTag
-		p	1		key
+	m	(Ljava/lang/String;Lnet/minecraft/unmapped/C_97075175;)V	m_21770494	put
+		p	1		name
 		p	2		tag
 	m	(Ljava/lang/String;B)V	m_41884431	putByte
-		p	1		key
-		p	2		val
+		p	1		name
+		p	2		value
 	m	(Ljava/lang/String;S)V	m_98335007	putShort
-		p	1		key
-		p	2		val
+		p	1		name
+		p	2		value
 	m	(Ljava/lang/String;I)V	m_20318863	putInt
-		p	1		key
-		p	2		val
+		p	1		name
+		p	2		value
 	m	(Ljava/lang/String;J)V	m_94086206	putLong
-		p	1		key
-		p	2		val
+		p	1		name
+		p	2		value
 	m	(Ljava/lang/String;F)V	m_72136054	putFloat
-		p	1		key
-		p	2		val
+		p	1		name
+		p	2		value
 	m	(Ljava/lang/String;D)V	m_66750483	putDouble
-		p	1		key
-		p	2		val
+		p	1		name
+		p	2		value
 	m	(Ljava/lang/String;Ljava/lang/String;)V	m_91017064	putString
-		p	1		key
-		p	2		val
+		p	1		name
+		p	2		value
 	m	(Ljava/lang/String;[B)V	m_06603839	putByteArray
-		p	1		key
-		p	2		val
+		p	1		name
+		p	2		value
 	m	(Ljava/lang/String;Lnet/minecraft/unmapped/C_74087615;)V	m_18682924	putCompoundTag
-		p	1		key
-		p	2		tag
+		p	1		name
+		p	2		value
 	m	(Ljava/lang/String;Z)V	m_11270099	putBoolean
-		p	1		key
+		p	1		name
 		p	2		val
 	m	(Ljava/lang/String;)Z	m_97612750	contains
-		p	1		key
+		p	1		name
 	m	(Ljava/lang/String;)B	m_84056038	getByte
-		p	1		key
+		p	1		name
 	m	(Ljava/lang/String;)S	m_03599456	getShort
-		p	1		key
+		p	1		name
 	m	(Ljava/lang/String;)I	m_35587574	getInt
-		p	1		key
+		p	1		name
 	m	(Ljava/lang/String;)J	m_76179339	getLong
-		p	1		key
+		p	1		name
 	m	(Ljava/lang/String;)F	m_93225250	getFloat
-		p	1		key
+		p	1		name
 	m	(Ljava/lang/String;)D	m_61702839	getDouble
-		p	1		key
+		p	1		name
 	m	(Ljava/lang/String;)Ljava/lang/String;	m_47517355	getString
-		p	1		key
+		p	1		name
 	m	(Ljava/lang/String;)[B	m_32985640	getByteArray
-		p	1		key
+		p	1		name
 	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_74087615;	m_81819352	getCompoundTag
-		p	1		key
+		p	1		name
 	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_79370641;	m_95654166	getList
-		p	1		key
+		p	1		name
 	m	(Ljava/lang/String;)Z	m_25255788	getBoolean
-		p	1		key
+		p	1		string
 	m	()Ljava/lang/String;	toString	toString
 c	net/minecraft/unmapped/C_74216765	net/minecraft/world/entity/global/LightningBolt
 	f	I	f_67047484	life
@@ -17629,8 +17629,8 @@ c	net/minecraft/unmapped/C_97929192	net/minecraft/client/multiplayer/Multiplayer
 	m	()V	m_24369218	ensureHasSentInventory
 	m	(Lnet/minecraft/unmapped/C_06774341;)V	m_84892609	m_84892609
 		p	1		p_1
-	m	(Ljava/lang/String;)V	m_52386447	m_52386447
-		p	1		p_1
+	m	(Ljava/lang/String;)V	m_52386447	chat
+		p	1		message
 	m	()V	m_68509015	m_68509015
 	m	()V	m_74340941	m_74340941
 	m	(I)V	m_38176589	m_38176589

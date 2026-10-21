@@ -10,9 +10,9 @@ c	net/minecraft/unmapped/C_10918870
 	m	(Lnet/minecraft/unmapped/C_01281220;)V	m_00395552		m_00395552
 		p	1			p_1
 c	net/minecraft/unmapped/C_13231860
-	f	[[I	f_49221117		f_49221117
-	f	Z	f_99551803		f_99551803
-	f	I	f_20084933		f_20084933
+	f	[[I	f_49221117		DEAD_SPACES
+	f	Z	f_99551803		isClipping
+	f	I	f_20084933		clipStep
 	m	(Lnet/minecraft/unmapped/C_64041439;IIILnet/minecraft/unmapped/C_94584382;Lnet/minecraft/unmapped/C_94584382;)Lnet/minecraft/unmapped/C_24654288;	m_18909995		m_18909995
 		p	1			p_1
 		p	2			p_2
@@ -22,7 +22,7 @@ c	net/minecraft/unmapped/C_13231860
 		p	6			p_6
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_13860305
-	f	D	f_26303064		f_26303064
+	f	D	f_26303064		acceleration
 c	net/minecraft/unmapped/C_14230742
 	f	F	f_97603496	unused	
 	f	Z	f_12026733		f_12026733
@@ -75,10 +75,10 @@ c	net/minecraft/unmapped/C_42232651
 		p	1		slot	
 		p	2		item	
 		p	3		meta	
-	m	()V	m_33702178		m_33702178
+	m	()V	m_33702178		checkInsideTiles
 	m	(ILnet/minecraft/unmapped/C_88708284;)V	m_37260269		setItemSlot
-		p	1			p_1
-		p	2			p_2
+		p	1			slot
+		p	2			item
 c	net/minecraft/unmapped/C_50078015
 	m	(IIIII)V	m_83094077		destroyTileProgress
 		p	1			id

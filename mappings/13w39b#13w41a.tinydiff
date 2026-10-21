@@ -73,9 +73,9 @@ c	net/minecraft/unmapped/C_03562565
 		p	3		packetClass	
 	m	()I	m_71867606	getId	
 	m	()I	m_85604015	getEstimatedSize	
-	m	()Z	m_29946785	m_29946785	
-	m	(Lnet/minecraft/unmapped/C_03562565;)Z	m_71274009	m_71274009	
-		p	1		p_1	
+	m	()Z	m_29946785	canBeInvalidated	
+	m	(Lnet/minecraft/unmapped/C_03562565;)Z	m_71274009	isInvalidatedBy	
+		p	1		packet	
 	m	(Ljava/io/DataOutput;[B)V	m_14793635	m_14793635	
 		p	0		p_0	
 		p	1		p_1	
@@ -316,9 +316,9 @@ c	net/minecraft/unmapped/C_10918870
 		p	1		p_1	
 	m	(Lnet/minecraft/unmapped/C_10010951;)V	m_36400499	m_36400499	
 		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_01827895;)V	m_30777168	m_30777168	
+	m	(Lnet/minecraft/unmapped/C_01827895;)V	m_30777168	handleTileEntityData	
 		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_52156807;)V	m_47450076	m_47450076	
+	m	(Lnet/minecraft/unmapped/C_52156807;)V	m_47450076	handlePlayerAbilities	
 		p	1		p_1	
 	m	(Lnet/minecraft/unmapped/C_24802826;)V	m_29074489	m_29074489	
 		p	1		p_1	
@@ -332,7 +332,7 @@ c	net/minecraft/unmapped/C_10918870
 		p	1		p_1	
 	m	(Lnet/minecraft/unmapped/C_01281220;)V	m_00395552	m_00395552	
 		p	1		p_1	
-	m	(Lnet/minecraft/unmapped/C_43232316;)V	m_66826169	m_66826169	
+	m	(Lnet/minecraft/unmapped/C_43232316;)V	m_66826169	handleClientCommand	
 		p	1		p_1	
 	m	(Lnet/minecraft/unmapped/C_97598839;)V	m_02618112	handleRemoveEntity	
 		p	1		p_1	
@@ -2171,10 +2171,10 @@ c	net/minecraft/unmapped/C_01281220
 	m	(Lnet/minecraft/unmapped/C_23730550;)V	m_64316482		m_64316482
 		p	1			p_1
 c	net/minecraft/unmapped/C_43232316
-	f	I	f_77975380	f_77975380	
-	f	Lnet/minecraft/unmapped/C_43232316$C_83211847;	f_77975380		f_77975380
+	f	I	f_77975380	action	
+	f	Lnet/minecraft/unmapped/C_43232316$C_83211847;	f_77975380		action
 	m	(I)V	<init>	<init>	
-		p	1		p_1	
+		p	1		action	
 	m	()I	m_85604015	m_85604015	
 	m	(Ljava/io/DataInput;)V	m_13296744	m_13296744	
 		p	1		p_1	

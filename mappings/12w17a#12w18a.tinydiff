@@ -277,7 +277,7 @@ c	net/minecraft/unmapped/C_18996072$09992332		09992332
 	m	(Ljava/io/File;)V	m_79530350		m_79530350
 		p	1			p_1
 c	net/minecraft/unmapped/C_23330260
-	f	[Ljava/lang/String;	f_90574946		f_90574946
+	f	[Ljava/lang/String;	f_90574946		TREE_STRING_NAMES
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_25501528
 	m	(Lnet/minecraft/unmapped/C_64041439;ZZ)I	m_95125644	tick	
@@ -434,7 +434,7 @@ c	net/minecraft/unmapped/C_43496149$04471202
 c	net/minecraft/unmapped/C_44627882
 	m	()I	m_33045149		m_33045149
 c	net/minecraft/unmapped/C_44922783
-	f	[Ljava/lang/String;	f_86460541		f_86460541
+	f	[Ljava/lang/String;	f_86460541		LEAF_NAMES
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_45175654	net/minecraft/client/multiplayer/MultiplayerGameMode	
 	f	I	f_10898001	destroyPosX	
@@ -766,11 +766,11 @@ c	net/minecraft/unmapped/C_71021207
 		p	4		y	
 		p	6		z	
 	m	(Lnet/minecraft/unmapped/C_64041439;DDDLnet/minecraft/unmapped/C_40996800;)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-		p	4			p_4
-		p	6			p_6
-		p	8			p_8
+		p	1			level
+		p	2			x
+		p	4			y
+		p	6			z
+		p	8			owner
 	m	()V	m_96197347		m_96197347
 c	net/minecraft/unmapped/C_71803183
 	m	(Ljava/lang/String;)V	m_82026900		m_82026900
@@ -905,7 +905,7 @@ c	net/minecraft/unmapped/C_87007645
 		p	10			p_10
 	m	()Z	m_70348337		m_70348337
 c	net/minecraft/unmapped/C_87542771
-	f	Lnet/minecraft/unmapped/C_88708284;	f_01953922		f_01953922
+	f	Lnet/minecraft/unmapped/C_88708284;	f_01953922		heldItem
 c	net/minecraft/unmapped/C_88014908
 	m	(Lnet/minecraft/unmapped/C_50200306;)V	m_86731085	m_86731085	
 		p	1		p_1	
@@ -923,12 +923,12 @@ c	net/minecraft/unmapped/C_88014908$35811560		35811560
 		p	1			p_1
 		p	2			p_2
 c	net/minecraft/unmapped/C_89914243
-	m	(I)Z	m_42398072		m_42398072
-		p	0			p_0
+	m	(I)Z	m_42398072		isFence
+		p	0			tile
 c	net/minecraft/unmapped/C_92964787
 	m	()Ljava/lang/String;	m_91529029	m_91529029	
 c	net/minecraft/unmapped/C_95568557
-	f	[Ljava/lang/String;	f_07313456		f_07313456
+	f	[Ljava/lang/String;	f_07313456		SANDSTONE_NAMES
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_97313606
 	m	(Lnet/minecraft/unmapped/C_42232651;)D	m_75336834	distanceToSqr	
@@ -941,15 +941,15 @@ c	net/minecraft/unmapped/C_98888256
 c	net/minecraft/unmapped/C_99454192
 	m	()I	m_33045149		m_33045149
 c	net/minecraft/unmapped/C_44663923
-	f	[Ljava/lang/String;	f_78283037		f_78283037
+	f	[Ljava/lang/String;	f_78283037		SMOOTH_STONE_BRICK_NAMES
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_81721916
-	f	F	f_89703445		f_89703445
-	f	F	f_48681506		f_48681506
-	m	()F	m_70538752		m_70538752
-	m	(F)V	m_54011512		m_54011512
-		p	1			p_1
-	m	()F	m_91400950		m_91400950
+	f	F	f_89703445		flyingSpeed
+	f	F	f_48681506		walkingSpeed
+	m	()F	m_70538752		getFlyingSpeed
+	m	(F)V	m_54011512		setFlyingSpeed
+		p	1			value
+	m	()F	m_91400950		getWalkingSpeed
 c	net/minecraft/unmapped/C_84978437
 	f	Ljava/util/List;	f_75001155	f_75001155	
 	f	Lnet/minecraft/unmapped/C_57884255;	f_75001155		f_75001155
@@ -1113,27 +1113,27 @@ c	net/minecraft/unmapped/C_40266271$47666066
 	m	(Lnet/minecraft/unmapped/C_40266271;)V	<init>		<init>
 		p	1			p_1
 c	net/minecraft/unmapped/C_52156807
-	f	F	f_65954637		f_65954637
-	f	F	f_56357721		f_56357721
-	m	()Z	m_36822964		m_36822964
-	m	(Z)V	m_60263453		m_60263453
-		p	1			p_1
-	m	()Z	m_19973089		m_19973089
-	m	(Z)V	m_88043709		m_88043709
-		p	1			p_1
-	m	()Z	m_84999221		m_84999221
-	m	(Z)V	m_60295973		m_60295973
-		p	1			p_1
-	m	()Z	m_89687833		m_89687833
-	m	(Z)V	m_14594131		m_14594131
-		p	1			p_1
-	m	()F	m_32325407		m_32325407
-	m	(F)V	m_08425494		m_08425494
-		p	1			p_1
-	m	(F)V	m_87938122		m_87938122
-		p	1			p_1
+	f	F	f_65954637		flyingSpeed
+	f	F	f_56357721		walkingSpeed
+	m	()Z	m_36822964		isInvulnerable
+	m	(Z)V	m_60263453		setInvulnerable
+		p	1			invulnerable
+	m	()Z	m_19973089		isFlying
+	m	(Z)V	m_88043709		setFlying
+		p	1			flying
+	m	()Z	m_84999221		canFly
+	m	(Z)V	m_60295973		setCanFly
+		p	1			canFly
+	m	()Z	m_89687833		canInstabuild
+	m	(Z)V	m_14594131		setInstabuild
+		p	1			instabuild
+	m	()F	m_32325407		getFlyingSpeed
+	m	(F)V	m_08425494		setFlyingSpeed
+		p	1			flySpeed
+	m	(F)V	m_87938122		setWalkingSpeed
+		p	1			walkingSpeed
 c	net/minecraft/unmapped/C_72517745
-	f	[Ljava/lang/String;	f_19513815		f_19513815
+	f	[Ljava/lang/String;	f_19513815		WOOD_NAMES
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_08317554
 	m	(Ljava/io/File;Ljava/lang/String;Lnet/minecraft/unmapped/C_36131925;Ljava/util/Map;ILnet/minecraft/unmapped/C_71803183;)V	m_16549459		m_16549459

@@ -42,7 +42,7 @@ c	net/minecraft/unmapped/C_32764747
 c	net/minecraft/unmapped/C_34399650
 	f	Ljava/util/Set;	f_36238589		f_36238589
 c	net/minecraft/unmapped/C_40996800
-	m	()Z	m_25295799		m_25295799
+	m	()Z	m_25295799		isLocalPlayer
 c	net/minecraft/unmapped/C_41051854
 	m	()V	<init>	<init>	
 c	net/minecraft/unmapped/C_41874688
@@ -69,9 +69,9 @@ c	net/minecraft/unmapped/C_59053975
 c	net/minecraft/unmapped/C_60822219
 	m	()V	<init>	<init>	
 c	net/minecraft/unmapped/C_61027059
-	f	Ljava/util/concurrent/locks/ReadWriteLock;	f_77618316		f_77618316
-	m	(I)Lnet/minecraft/unmapped/C_61027059$C_95179189;	m_04047579		m_04047579
-		p	1			p_1
+	f	Ljava/util/concurrent/locks/ReadWriteLock;	f_77618316		lock
+	m	(I)Lnet/minecraft/unmapped/C_61027059$C_95179189;	m_04047579		getItem
+		p	1			id
 c	net/minecraft/unmapped/C_64041439
 	m	(IIIIZI)Z	m_84267582	mayPlace	
 		p	1		tileId	
@@ -128,7 +128,7 @@ c	net/minecraft/unmapped/C_95106612
 c	net/minecraft/unmapped/C_95236836
 	m	()V	<init>	<init>	
 c	net/minecraft/unmapped/C_97929192
-	f	I	f_17157583		f_17157583
+	f	I	f_17157583		positionReminder
 	m	()Z	m_25295799		m_25295799
 c	net/minecraft/unmapped/C_99660737
 	m	()Z	m_91451499		m_91451499
@@ -149,9 +149,9 @@ c	net/minecraft/unmapped/C_55815768$C_90224899
 		p	3		p_3	
 		p	4		p_4	
 c	net/minecraft/unmapped/C_83334639
-	f	Z	f_78439964		f_78439964
-	m	()Lnet/minecraft/unmapped/C_83334639;	m_63731198		m_63731198
-	m	()Z	m_20067479		m_20067479
+	f	Z	f_78439964		scalesWithDifficulty
+	m	()Lnet/minecraft/unmapped/C_83334639;	m_63731198		setScalesWithDifficulty
+	m	()Z	m_20067479		scalesWithDifficulty
 c	net/minecraft/unmapped/C_84978437
 	m	(Ljava/lang/String;I)I	m_12423431	parsePort	
 		p	1		p_1	

@@ -734,14 +734,14 @@ c	net/minecraft/unmapped/C_81227335
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_81592558
 	m	(Lnet/minecraft/unmapped/C_64041439;IIIIFFF)V	m_05287994	setPlacedOnFace	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-		p	6		p_6	
-		p	7		p_7	
-		p	8		p_8	
+		p	1		level	
+		p	2		x	
+		p	3		y	
+		p	4		z	
+		p	5		face	
+		p	6		clickX	
+		p	7		clickY	
+		p	8		clickZ	
 	m	(Lnet/minecraft/unmapped/C_64041439;IIIIFFFI)I	m_05287994		setPlacedOnFace
 		p	1			level
 		p	2			x
@@ -967,16 +967,16 @@ c	net/minecraft/unmapped/C_95807626
 	f	Ljava/util/List;	f_44732512		details
 	f	Z	f_36784279		trackingStackTrace
 	f	[Ljava/lang/StackTraceElement;	f_01322503		uncategorizedStackTrace
-	m	(Ljava/lang/String;Ljava/util/concurrent/Callable;)V	m_16657720	m_16657720	
-		p	1		p_1	
-		p	2		p_2	
-	m	(Ljava/lang/String;Ljava/lang/Object;)V	m_08854064	m_08854064	
-		p	1		p_1	
-		p	2		p_2	
-	m	(Ljava/lang/String;Ljava/lang/Throwable;)V	m_40359032	m_40359032	
-		p	1		p_1	
-		p	2		p_2	
-	m	()Ljava/lang/String;	m_38888821	m_38888821	
+	m	(Ljava/lang/String;Ljava/util/concurrent/Callable;)V	m_16657720	setDetail	
+		p	1		key	
+		p	2		callback	
+	m	(Ljava/lang/String;Ljava/lang/Object;)V	m_08854064	setDetail	
+		p	1		key	
+		p	2		value	
+	m	(Ljava/lang/String;Ljava/lang/Throwable;)V	m_40359032	setDetailError	
+		p	1		key	
+		p	2		t	
+	m	()Ljava/lang/String;	m_38888821	getDetails	
 	m	()Ljava/lang/String;	m_06604523		m_06604523
 	m	()Lnet/minecraft/unmapped/C_52791181;	m_31767604		getSystemDetails
 	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_52791181;	m_56707617		addCategory
@@ -1045,7 +1045,7 @@ c	net/minecraft/unmapped/C_99730074$85534830		85534830
 	m	(Lnet/minecraft/unmapped/C_40996800;)Z	m_85465282		m_85465282
 		p	1			p_1
 c	net/minecraft/unmapped/C_99795455
-	f	Lnet/minecraft/unmapped/C_74087615;	f_47962144	f_47962144	
+	f	Lnet/minecraft/unmapped/C_74087615;	f_47962144	nextSpawnData	
 	f	Ljava/util/List;	f_46977896		f_46977896
 	f	Lnet/minecraft/unmapped/C_99795455$C_03740442;	f_13722049		f_13722049
 c	net/minecraft/unmapped/C_99795455$C_03740442		C_03740442
