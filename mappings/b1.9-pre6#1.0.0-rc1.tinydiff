@@ -115,18 +115,18 @@ c	net/minecraft/unmapped/C_40735137
 	m	()Lnet/minecraft/unmapped/C_03562565;	m_62241873	m_62241873	
 c	net/minecraft/unmapped/C_40996800
 	m	()Ljava/lang/String;	m_98997855	m_98997855	
-	m	(Lnet/minecraft/unmapped/C_40996800;)V	m_19385233		m_19385233
-		p	1			p_1
+	m	(Lnet/minecraft/unmapped/C_40996800;)V	m_19385233		restoreFrom
+		p	1			oldPlayer
 c	net/minecraft/unmapped/C_42232651
 	m	()[Lnet/minecraft/unmapped/C_88708284;	m_37114138	m_37114138	
 	m	(Z)V	m_22136189	m_22136189	
 		p	1		p_1	
 	m	()Ljava/lang/String;	m_98997855	m_98997855	
-	m	(IIII)V	m_04616312		m_04616312
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
+	m	(IIII)V	m_04616312		playStepSound
+		p	1			xt
+		p	2			yt
+		p	3			zt
+		p	4			t
 c	net/minecraft/unmapped/C_42699272
 	m	(ILnet/minecraft/unmapped/C_61027059;)V	<init>	<init>	
 		p	1		p_1	
@@ -254,8 +254,8 @@ c	net/minecraft/unmapped/C_68019318
 	m	()Lnet/minecraft/unmapped/C_34189003;	m_44558115	m_44558115	
 	m	()V	m_69780808	m_69780808	
 c	net/minecraft/unmapped/C_69835601
-	m	(I)Z	m_83251370		m_83251370
-		p	0			p_0
+	m	(I)Z	m_83251370		attachesTo
+		p	0			id
 c	net/minecraft/unmapped/C_70193960
 	m	(II)V	<init>	<init>	
 		p	1		p_1	
@@ -271,8 +271,8 @@ c	net/minecraft/unmapped/C_73315750
 	m	()Z	m_94224311	m_94224311	
 	m	()Z	m_69358978	m_69358978	
 c	net/minecraft/unmapped/C_74425583
-	m	(Lnet/minecraft/unmapped/C_88708284;)V	m_27827391		m_27827391
-		p	1			p_1
+	m	(Lnet/minecraft/unmapped/C_88708284;)V	m_27827391		breakItem
+		p	1			itemInstance
 c	net/minecraft/unmapped/C_75191757
 	m	(IILnet/minecraft/unmapped/C_88708284;)V	<init>	<init>	
 		p	1		p_1	
@@ -284,8 +284,8 @@ c	net/minecraft/unmapped/C_75615713
 		p	2		p_2	
 		p	3		p_3	
 c	net/minecraft/unmapped/C_76792751
-	m	(I)Ljava/lang/String;	m_24794391		m_24794391
-		p	0			p_0
+	m	(I)Ljava/lang/String;	m_24794391		getKeyName
+		p	0			key
 c	net/minecraft/unmapped/C_78726810
 	m	(ILjava/util/List;)V	<init>	<init>	
 		p	1		p_1	
@@ -312,8 +312,8 @@ c	net/minecraft/unmapped/C_88708284
 		p	2		holder	
 	m	()Ljava/lang/String;	m_27822537	m_27822537	
 	m	(ILnet/minecraft/unmapped/C_74425583;)V	m_90945036		hurtAndBreak
-		p	1			p_1
-		p	2			p_2
+		p	1			amount
+		p	2			owner
 c	net/minecraft/unmapped/C_91575016
 	m	(III)V	<init>	<init>	
 		p	1		p_1	

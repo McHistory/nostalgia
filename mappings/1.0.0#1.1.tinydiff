@@ -123,14 +123,14 @@ c	net/minecraft/unmapped/C_44922783
 c	net/minecraft/unmapped/C_47909326
 	f	Lnet/minecraft/unmapped/C_61837504;	f_58766363		f_58766363
 	m	(Ljava/lang/String;IJIBBBB)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	5		p_5	
-		p	6		p_6	
-		p	7		p_7	
-		p	8		p_8	
-		p	9		p_9	
+		p	1		userName	
+		p	2		clientVersion	
+		p	3		seed	
+		p	5		gameType	
+		p	6		dimension	
+		p	7		difficulty	
+		p	8		mapHeight	
+		p	9		maxPlayers	
 	m	(Ljava/lang/String;IJLnet/minecraft/unmapped/C_61837504;IBBBB)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
@@ -220,12 +220,12 @@ c	net/minecraft/unmapped/C_73315750	net/minecraft/network/packet/PlayerInputPack
 	m	(Lnet/minecraft/unmapped/C_10918870;)V	m_04853589	m_04853589	
 		p	1		p_1	
 	m	()I	m_85604015	m_85604015	
-	m	()F	m_92038727	m_92038727	
-	m	()F	m_10877046	m_10877046	
-	m	()F	m_58574187	m_58574187	
-	m	()F	m_73966680	m_73966680	
-	m	()Z	m_94224311	m_94224311	
-	m	()Z	m_69358978	m_69358978	
+	m	()F	m_92038727	getXxa	
+	m	()F	m_10877046	getXRot	
+	m	()F	m_58574187	getZza	
+	m	()F	m_73966680	getYRot	
+	m	()Z	m_94224311	isJumping	
+	m	()Z	m_69358978	isShiftKeyDown	
 c	net/minecraft/unmapped/C_74425583
 	f	Z	f_08305162	interpolateOnly	
 	f	F	f_50412996		f_50412996
@@ -320,10 +320,10 @@ c	net/minecraft/unmapped/C_99730074
 c	net/minecraft/unmapped/C_06007608
 	f	Lnet/minecraft/unmapped/C_61837504;	f_26582131		f_26582131
 	m	(JIZZ)V	<init>	<init>	
-		p	1		p_1	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
+		p	1		seed	
+		p	3		gameType	
+		p	4		generateMapFeatures	
+		p	5		hardcore	
 	m	(JIZZLnet/minecraft/unmapped/C_61837504;)V	<init>		<init>
 		p	1			p_1
 		p	3			p_3
@@ -406,11 +406,11 @@ c	net/minecraft/unmapped/C_67330289
 		p	2			p_2
 c	net/minecraft/server/MinecraftServer
 	f	Z	f_35631178		f_35631178
-	m	(Lnet/minecraft/unmapped/C_98861173;Ljava/lang/String;J)V	m_93447105	m_93447105	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-	m	(Lnet/minecraft/unmapped/C_98861173;Ljava/lang/String;JLnet/minecraft/unmapped/C_61837504;)V	m_93447105		m_93447105
+	m	(Lnet/minecraft/unmapped/C_98861173;Ljava/lang/String;J)V	m_93447105	ensureLevelConversion	
+		p	1		levelSource	
+		p	2		levelName	
+		p	3		seed	
+	m	(Lnet/minecraft/unmapped/C_98861173;Ljava/lang/String;JLnet/minecraft/unmapped/C_61837504;)V	m_93447105		ensureLevelConversion
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -419,13 +419,13 @@ c	net/minecraft/unmapped/C_27018031
 	m	()V	m_85726111		m_85726111
 	m	()Ljava/lang/String;	m_76774170		m_76774170
 c	net/minecraft/unmapped/C_49202226
-	m	(FFZZFF)V	m_39897004	m_39897004	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-		p	6		p_6	
+	m	(FFZZFF)V	m_39897004	setPlayerInput	
+		p	1		xxa	
+		p	2		zza	
+		p	3		jumping	
+		p	4		sneaking	
+		p	5		xRot	
+		p	6		yRot	
 c	net/minecraft/unmapped/C_70668269
 	m	()V	m_94503539		m_94503539
 c	net/minecraft/unmapped/C_99660737
