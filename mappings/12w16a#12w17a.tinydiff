@@ -142,17 +142,17 @@ c	net/minecraft/unmapped/C_45510667
 		p	0			p_0
 c	net/minecraft/unmapped/C_46155730
 	f	I	f_36886963	ticks	
-	f	I	f_61093081		f_61093081
-	f	I	f_46881300		f_46881300
+	f	I	f_61093081		addedTime
+	f	I	f_46881300		id
 	m	(Ljava/lang/String;)V	<init>	<init>	
 		p	1		message	
 	m	(ILjava/lang/String;I)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-	m	()Ljava/lang/String;	m_15183391		m_15183391
-	m	()I	m_65631873		m_65631873
-	m	()I	m_36995598		m_36995598
+		p	1			addedTime
+		p	2			message
+		p	3			id
+	m	()Ljava/lang/String;	m_15183391		getMessage
+	m	()I	m_65631873		getAddedTime
+	m	()I	m_36995598		getId
 c	net/minecraft/unmapped/C_47185453
 	f	Z	f_41641507		f_41641507
 	m	(Ljava/lang/String;Z)V	<init>		<init>
@@ -582,37 +582,37 @@ c	net/minecraft/unmapped/C_52942202		net/minecraft/unmapped/C_52942202
 	m	()V	<init>		<init>
 	m	(Lnet/minecraft/unmapped/C_23078083;)Ljava/util/List;	m_11157707		m_11157707
 		p	1			p_1
-c	net/minecraft/unmapped/C_55766165		net/minecraft/unmapped/C_55766165
+c	net/minecraft/unmapped/C_55766165		net/minecraft/util/Crypt
 	f	Ljava/nio/charset/Charset;	f_82039166		f_82039166
 	m	()V	<init>		<init>
-	m	()Ljavax/crypto/SecretKey;	m_45899671		m_45899671
-	m	()Ljava/security/KeyPair;	m_60910175		m_60910175
-	m	(Ljava/lang/String;Ljava/security/PublicKey;Ljavax/crypto/SecretKey;)[B	m_36033183		m_36033183
-		p	0			p_0
-		p	1			p_1
-		p	2			p_2
-	m	(Ljava/lang/String;[[B)[B	m_34142954		m_34142954
-		p	0			p_0
-		p	1			p_1
-	m	([B)Ljava/security/PublicKey;	m_11800723		m_11800723
-		p	0			p_0
-	m	(Ljava/security/PrivateKey;[B)Ljavax/crypto/SecretKey;	m_84335871		m_84335871
-		p	0			p_0
-		p	1			p_1
-	m	(Ljava/security/Key;[B)[B	m_79447193		m_79447193
-		p	0			p_0
-		p	1			p_1
-	m	(Ljava/security/Key;[B)[B	m_48197579		m_48197579
-		p	0			p_0
-		p	1			p_1
-	m	(ILjava/security/Key;[B)[B	m_11400773		m_11400773
-		p	0			p_0
-		p	1			p_1
-		p	2			p_2
-	m	(ILjava/lang/String;Ljava/security/Key;)Ljavax/crypto/Cipher;	m_71959763		m_71959763
-		p	0			p_0
-		p	1			p_1
-		p	2			p_2
+	m	()Ljavax/crypto/SecretKey;	m_45899671		generateSecretKey
+	m	()Ljava/security/KeyPair;	m_60910175		generateKeyPair
+	m	(Ljava/lang/String;Ljava/security/PublicKey;Ljavax/crypto/SecretKey;)[B	m_36033183		digestData
+		p	0			serverId
+		p	1			publicKey
+		p	2			sharedKey
+	m	(Ljava/lang/String;[[B)[B	m_34142954		digestData
+		p	0			algorithm
+		p	1			inputs
+	m	([B)Ljava/security/PublicKey;	m_11800723		byteToPublicKey
+		p	0			keyData
+	m	(Ljava/security/PrivateKey;[B)Ljavax/crypto/SecretKey;	m_84335871		decryptByteToSecretKey
+		p	0			privateKey
+		p	1			keyData
+	m	(Ljava/security/Key;[B)[B	m_79447193		encryptUsingKey
+		p	0			key
+		p	1			input
+	m	(Ljava/security/Key;[B)[B	m_48197579		decryptUsingKey
+		p	0			key
+		p	1			input
+	m	(ILjava/security/Key;[B)[B	m_11400773		cipherData
+		p	0			cipherOpMode
+		p	1			key
+		p	2			input
+	m	(ILjava/lang/String;Ljava/security/Key;)Ljavax/crypto/Cipher;	m_71959763		setupCipher
+		p	0			cipherOpMode
+		p	1			algorithm
+		p	2			key
 	m	(Ljavax/crypto/SecretKey;Ljava/io/OutputStream;)Ljava/io/OutputStream;	m_54219427		m_54219427
 		p	0			p_0
 		p	1			p_1

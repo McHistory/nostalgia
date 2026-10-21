@@ -1155,24 +1155,24 @@ c	net/minecraft/unmapped/C_00755282
 		p	1		p_1	
 		p	2		p_2	
 	m	(Ljava/io/InputStream;Lnet/minecraft/unmapped/C_90748287;)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
+		p	1			is
+		p	2			cipher
 c	net/minecraft/unmapped/C_62956194
-	m	(ZLnet/minecraft/unmapped/C_09807532;)V	m_65598695		m_65598695
-		p	1			p_1
-		p	2			p_2
+	m	(ZLnet/minecraft/unmapped/C_09807532;)V	m_65598695		init
+		p	1			forEncryption
+		p	2			params
 c	net/minecraft/unmapped/C_79745437
 	m	(Ljava/io/OutputStream;Lnet/minecraft/unmapped/C_44825637;)V	<init>	<init>	
 		p	1		p_1	
 		p	2		p_2	
 	m	(Ljava/io/OutputStream;Lnet/minecraft/unmapped/C_90748287;)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
+		p	1			os
+		p	2			cipher
 c	net/minecraft/unmapped/C_90748287
-	f	Z	f_75985667		f_75985667
-	m	(ZLnet/minecraft/unmapped/C_09807532;)V	m_60544249		m_60544249
-		p	1			p_1
-		p	2			p_2
+	f	Z	f_75985667		forEncryption
+	m	(ZLnet/minecraft/unmapped/C_09807532;)V	m_60544249		init
+		p	1			encrypting
+		p	2			parameters
 c	net/minecraft/unmapped/C_91204192	net/minecraft/unmapped/C_91204192	
 	f	[I	f_00878166	f_00878166	
 	f	[I	f_39682610	f_39682610	
@@ -1358,37 +1358,37 @@ c	net/minecraft/unmapped/C_29144146		net/minecraft/unmapped/C_29144146
 	m	()Z	m_45654766		m_45654766
 	m	()Lnet/minecraft/unmapped/C_51385776;	m_04182835		m_04182835
 	m	()Lnet/minecraft/unmapped/C_37790612;	m_87745967		m_87745967
-c	net/minecraft/unmapped/C_30951586		net/minecraft/unmapped/C_30951586
-	f	[B	f_61162175		f_61162175
-	f	[B	f_56545388		f_56545388
-	f	[I	f_16670946		f_16670946
-	f	[I	f_72996562		f_72996562
-	f	[I	f_56590473		f_56590473
-	f	[I	f_45988387		f_45988387
-	f	[I	f_13996663		f_13996663
-	f	[I	f_42200437		f_42200437
-	f	[I	f_38330193		f_38330193
-	f	[I	f_99970026		f_99970026
-	f	[I	f_21984455		f_21984455
-	f	I	f_54892230		f_54892230
-	f	[[I	f_81207618		f_81207618
-	f	I	f_15498524		f_15498524
-	f	I	f_77387865		f_77387865
-	f	I	f_66474053		f_66474053
-	f	I	f_38839336		f_38839336
-	f	Z	f_82615206		f_82615206
-	m	(II)I	m_82183199		m_82183199
-		p	1			p_1
-		p	2			p_2
-	m	(I)I	m_04203711		m_04203711
-		p	1			p_1
-	m	(I)I	m_73020749		m_73020749
-		p	1			p_1
-	m	(I)I	m_25130249		m_25130249
-		p	1			p_1
-	m	([BZ)[[I	m_34057968		m_34057968
-		p	1			p_1
-		p	2			p_2
+c	net/minecraft/unmapped/C_30951586		org/bouncycastle/crypto/engines/AESFastEngine
+	f	[B	f_61162175		S
+	f	[B	f_56545388		Si
+	f	[I	f_16670946		rcon
+	f	[I	f_72996562		T0
+	f	[I	f_56590473		T1
+	f	[I	f_45988387		T2
+	f	[I	f_13996663		T3
+	f	[I	f_42200437		Tinv0
+	f	[I	f_38330193		Tinv1
+	f	[I	f_99970026		Tinv2
+	f	[I	f_21984455		Tinv3
+	f	I	f_54892230		ROUNDS
+	f	[[I	f_81207618		workingKey
+	f	I	f_15498524		C0
+	f	I	f_77387865		C1
+	f	I	f_66474053		C2
+	f	I	f_38839336		C3
+	f	Z	f_82615206		forEncryption
+	m	(II)I	m_82183199		shift
+		p	1			r
+		p	2			shift
+	m	(I)I	m_04203711		FFmulX
+		p	1			x
+	m	(I)I	m_73020749		inv_mcol
+		p	1			x
+	m	(I)I	m_25130249		subWord
+		p	1			x
+	m	([BZ)[[I	m_34057968		generateWorkingKey
+		p	1			key
+		p	2			forEncryption
 	m	()V	<init>		<init>
 	m	(ZLnet/minecraft/unmapped/C_09807532;)V	m_65598695		m_65598695
 		p	1			p_1
@@ -1401,16 +1401,16 @@ c	net/minecraft/unmapped/C_30951586		net/minecraft/unmapped/C_30951586
 		p	3			p_3
 		p	4			p_4
 	m	()V	m_81351548		m_81351548
-	m	([BI)V	m_85965374		m_85965374
-		p	1			p_1
-		p	2			p_2
-	m	([BI)V	m_94728481		m_94728481
-		p	1			p_1
-		p	2			p_2
-	m	([[I)V	m_94893440		m_94893440
-		p	1			p_1
-	m	([[I)V	m_98717229		m_98717229
-		p	1			p_1
+	m	([BI)V	m_85965374		unpackBlock
+		p	1			bytes
+		p	2			off
+	m	([BI)V	m_94728481		packBlock
+		p	1			bytes
+		p	2			off
+	m	([[I)V	m_94893440		encryptBlock
+		p	1			KW
+	m	([[I)V	m_98717229		decryptBlock
+		p	1			KW
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_32101806		net/minecraft/unmapped/C_32101806
 	f	Ljava/net/SocketAddress;	f_89908253		f_89908253
@@ -1818,16 +1818,16 @@ c	net/minecraft/unmapped/C_87535732		net/minecraft/unmapped/C_87535732
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_58868350;)V	m_08583091		m_08583091
 		p	1			p_1
-c	net/minecraft/unmapped/C_89058967		net/minecraft/unmapped/C_89058967
-	f	[B	f_37647560		f_37647560
-	f	[B	f_80976661		f_80976661
-	f	[B	f_21972962		f_21972962
-	f	I	f_97214605		f_97214605
-	f	Lnet/minecraft/unmapped/C_62956194;	f_66635664		f_66635664
-	f	Z	f_20355413		f_20355413
+c	net/minecraft/unmapped/C_89058967		org/bouncycastle/crypto/modes/CFBBlockCipher
+	f	[B	f_37647560		IV
+	f	[B	f_80976661		cfbV
+	f	[B	f_21972962		cfbOutV
+	f	I	f_97214605		blockSize
+	f	Lnet/minecraft/unmapped/C_62956194;	f_66635664		cipher
+	f	Z	f_20355413		encrypting
 	m	(Lnet/minecraft/unmapped/C_62956194;I)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
+		p	1			cipher
+		p	2			bitBlockSize
 	m	(ZLnet/minecraft/unmapped/C_09807532;)V	m_65598695		m_65598695
 		p	1			p_1
 		p	2			p_2
@@ -1838,16 +1838,16 @@ c	net/minecraft/unmapped/C_89058967		net/minecraft/unmapped/C_89058967
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
-	m	([BI[BI)I	m_65235396		m_65235396
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-	m	([BI[BI)I	m_94076141		m_94076141
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
+	m	([BI[BI)I	m_65235396		encryptBlock
+		p	1			in
+		p	2			inOff
+		p	3			out
+		p	4			outOff
+	m	([BI[BI)I	m_94076141		decryptBlock
+		p	1			in
+		p	2			inOff
+		p	3			out
+		p	4			outOff
 	m	()V	m_81351548		m_81351548
 c	net/minecraft/unmapped/C_89247924		net/minecraft/unmapped/C_89247924
 	f	Ljava/util/List;	f_14968900		f_14968900
