@@ -3809,8 +3809,8 @@ c	net/minecraft/unmapped/C_81592558
 	f	Lnet/minecraft/unmapped/C_81592558;	f_71686217	endPortalFrameTile	
 	f	Lnet/minecraft/unmapped/C_81592558;	f_54680525	whiteStone	
 	f	Lnet/minecraft/unmapped/C_81592558;	f_80568515	dragonEgg	
-	f	Lnet/minecraft/unmapped/C_81592558;	f_66351138	f_66351138	
-	f	Lnet/minecraft/unmapped/C_81592558;	f_03095108	f_03095108	
+	f	Lnet/minecraft/unmapped/C_81592558;	f_66351138	redstoneLight	
+	f	Lnet/minecraft/unmapped/C_81592558;	f_03095108	redstoneLight_lit	
 	f	Lnet/minecraft/unmapped/C_60248056;	f_39350323	stoneSlab	
 	f	Lnet/minecraft/unmapped/C_60248056;	f_66929948	stoneSlabHalf	
 	f	Lnet/minecraft/unmapped/C_60248056;	f_35691584	f_35691584	
@@ -6305,8 +6305,8 @@ c	net/minecraft/unmapped/C_11963006
 	m	()I	m_54895347	m_54895347	
 	m	()Lnet/minecraft/unmapped/C_98888256;	m_54895347		m_54895347
 c	net/minecraft/unmapped/C_20760238
-	f	I	f_08173535	f_08173535	
-	f	Lnet/minecraft/unmapped/C_98888256;	f_08173535		f_08173535
+	f	I	f_08173535	itemId	
+	f	Lnet/minecraft/unmapped/C_98888256;	f_08173535		itemId
 	m	(Lnet/minecraft/unmapped/C_45915938;DIZ)V	<init>	<init>	
 		p	1		p_1	
 		p	2		p_2	
@@ -6336,8 +6336,8 @@ c	net/minecraft/unmapped/C_37072611
 		p	1			p_1
 c	net/minecraft/unmapped/C_50604430
 	m	(IZ)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
+		p	1		id	
+		p	2		isLit	
 	m	(Lnet/minecraft/unmapped/C_64041439;IIII)V	m_91032811	m_91032811	
 		p	1		p_1	
 		p	2		p_2	
@@ -6382,20 +6382,20 @@ c	net/minecraft/unmapped/C_54462756
 	m	(Ljava/util/Random;)Lnet/minecraft/unmapped/C_53287693;	m_47523269		m_47523269
 		p	1			p_1
 c	net/minecraft/unmapped/C_56057114
-	m	(III)I	m_73544726	m_73544726	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-	m	(IIII)V	m_41489898	m_41489898	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-	m	(III)Lnet/minecraft/unmapped/C_81592558;	m_73544726		m_73544726
+	m	(III)I	m_73544726	getTile	
+		p	1		x	
+		p	2		y	
+		p	3		z	
+	m	(IIII)V	m_41489898	setTile	
+		p	1		x	
+		p	2		y	
+		p	3		z	
+		p	4		id	
+	m	(III)Lnet/minecraft/unmapped/C_81592558;	m_73544726		getTile
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
-	m	(IIILnet/minecraft/unmapped/C_81592558;)V	m_41489898		m_41489898
+	m	(IIILnet/minecraft/unmapped/C_81592558;)V	m_41489898		setTile
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -6460,7 +6460,7 @@ c	net/minecraft/unmapped/C_86487224
 	m	()V	<init>		<init>
 c	net/minecraft/unmapped/C_72517745
 	m	(I)V	<init>	<init>	
-		p	1		p_1	
+		p	1		id	
 	m	(ILnet/minecraft/unmapped/C_87042217;Ljava/util/List;)V	m_77245430	m_77245430	
 		p	1		p_1	
 		p	2		p_2	

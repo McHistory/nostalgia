@@ -15,13 +15,13 @@ c	net/minecraft/unmapped/C_14917579
 	f	Z	f_58237041		f_58237041
 c	net/minecraft/unmapped/C_16178213
 	f	Lnet/minecraft/unmapped/C_85740840;	f_63337646	parent	
-	f	Z	f_17060668		f_17060668
-	f	Z	f_37175217		f_37175217
-	f	I	f_26530929		f_26530929
-	f	I	f_60767391		f_60767391
-	f	I	f_24567658		f_24567658
-	f	I	f_60857706		f_60857706
-	f	I	f_29487991		f_29487991
+	f	Z	f_17060668		bordered
+	f	Z	f_37175217		canLoseFocus
+	f	I	f_26530929		displayPos
+	f	I	f_60767391		cursorPos
+	f	I	f_24567658		highlightPos
+	f	I	f_60857706		textColor
+	f	I	f_29487991		textColorUneditable
 	m	(Lnet/minecraft/unmapped/C_85740840;Lnet/minecraft/unmapped/C_23014920;IIIILjava/lang/String;)V	<init>	<init>	
 		p	1		parent	
 		p	2		font	
@@ -34,52 +34,52 @@ c	net/minecraft/unmapped/C_16178213
 		p	1		codePoint	
 		p	2		modifiers	
 	m	(Lnet/minecraft/unmapped/C_23014920;IIII)V	<init>		<init>
+		p	1			font
+		p	2			x
+		p	3			y
+		p	4			width
+		p	5			height
+	m	()Ljava/lang/String;	m_87121228		getHighlighted
+	m	(Ljava/lang/String;)V	m_27672042		insertText
+		p	1			input
+	m	(I)V	m_76500029		deleteWords
+		p	1			p_1
+	m	(I)V	m_44562688		deleteChars
+		p	1			p_1
+	m	(I)I	m_31991625		getWordPosition
+		p	1			p_1
+	m	(II)I	m_48240401		getWordPosition
 		p	1			p_1
 		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
-	m	()Ljava/lang/String;	m_87121228		m_87121228
-	m	(Ljava/lang/String;)V	m_27672042		m_27672042
+	m	(I)V	m_04468883		moveCursor
 		p	1			p_1
-	m	(I)V	m_76500029		m_76500029
+	m	(I)V	m_52969659		moveCursorTo
 		p	1			p_1
-	m	(I)V	m_44562688		m_44562688
-		p	1			p_1
-	m	(I)I	m_31991625		m_31991625
-		p	1			p_1
-	m	(II)I	m_48240401		m_48240401
-		p	1			p_1
-		p	2			p_2
-	m	(I)V	m_04468883		m_04468883
-		p	1			p_1
-	m	(I)V	m_52969659		m_52969659
-		p	1			p_1
-	m	()V	m_65764549		m_65764549
-	m	()V	m_20525393		m_20525393
+	m	()V	m_65764549		moveCursorToStart
+	m	()V	m_20525393		moveCursorToEnd
 	m	(CI)Z	m_47314154		charTyped
 		p	1			p_1
 		p	2			p_2
-	m	(IIII)V	m_12129503		m_12129503
+	m	(IIII)V	m_12129503		renderHighlight
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
-	m	()I	m_51924759		m_51924759
-	m	()I	m_54957687		m_54957687
-	m	()Z	m_77000577		m_77000577
-	m	(Z)V	m_10610678		m_10610678
+	m	()I	m_51924759		getMaxLength
+	m	()I	m_54957687		getCursorPosition
+	m	()Z	m_77000577		isBordered
+	m	(Z)V	m_10610678		setBordered
 		p	1			p_1
-	m	()Z	m_88884748		m_88884748
-	m	()I	m_41953874		m_41953874
-	m	()I	m_91553814		m_91553814
-	m	(I)V	m_58527884		m_58527884
+	m	()Z	m_88884748		isEditable
+	m	()I	m_41953874		getHighlightPos
+	m	()I	m_91553814		getInnerWidth
+	m	(I)V	m_58527884		setHighlightPos
 		p	1			p_1
-	m	(Z)V	m_43135179		m_43135179
+	m	(Z)V	m_43135179		setCanLoseFocus
 		p	1			p_1
 c	net/minecraft/unmapped/C_22460678
-	m	(Z)V	m_90098553		m_90098553
-		p	1			p_1
+	m	(Z)V	m_90098553		setEditable
+		p	1			isEditable
 c	net/minecraft/unmapped/C_22481487
 	m	(Lnet/minecraft/unmapped/C_85740840;Ljava/lang/String;Ljava/lang/String;I)V	<init>		<init>
 		p	1			p_1
@@ -137,7 +137,7 @@ c	net/minecraft/unmapped/C_23014920
 		p	5			p_5
 	m	(C)I	m_11668766		m_11668766
 		p	1			p_1
-	m	(Ljava/lang/String;I)Ljava/lang/String;	m_62332220		m_62332220
+	m	(Ljava/lang/String;I)Ljava/lang/String;	m_62332220		substrByWidth
 		p	1			p_1
 		p	2			p_2
 	m	(Ljava/lang/String;IZ)Ljava/lang/String;	m_46611978		m_46611978
@@ -160,7 +160,7 @@ c	net/minecraft/unmapped/C_23014920
 	m	(Ljava/lang/String;)Ljava/lang/String;	m_68052299		m_68052299
 		p	0			p_0
 c	net/minecraft/unmapped/C_28105876
-	m	()Lnet/minecraft/unmapped/C_28105876;	m_06327401		m_06327401
+	m	()Lnet/minecraft/unmapped/C_28105876;	m_06327401		setSnowCovered
 c	net/minecraft/unmapped/C_28253310
 	m	()V	m_60264081		m_60264081
 c	net/minecraft/unmapped/C_29058632
@@ -182,7 +182,7 @@ c	net/minecraft/unmapped/C_34225397
 		p	4			p_4
 		p	5			p_5
 c	net/minecraft/unmapped/C_40996800
-	m	()V	m_11118191		m_11118191
+	m	()V	m_11118191		onUpdateAbilities
 c	net/minecraft/unmapped/C_47884049
 	m	(Lnet/minecraft/unmapped/C_88708284;Lnet/minecraft/unmapped/C_40996800;Lnet/minecraft/unmapped/C_64041439;IIII)Z	m_49443889		m_49443889
 		p	0			p_0
@@ -195,11 +195,11 @@ c	net/minecraft/unmapped/C_47884049
 c	net/minecraft/unmapped/C_49202226
 	m	()V	m_11118191		m_11118191
 c	net/minecraft/unmapped/C_57247398
-	m	(Lnet/minecraft/unmapped/C_64041439;III)Z	m_70644683		m_70644683
-		p	0			p_0
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+	m	(Lnet/minecraft/unmapped/C_64041439;III)Z	m_70644683		isCatSittingOnChest
+		p	0			level
+		p	1			x
+		p	2			y
+		p	3			z
 c	net/minecraft/unmapped/C_57925352
 	m	()I	hashCode		hashCode
 c	net/minecraft/unmapped/C_63704535
@@ -245,13 +245,13 @@ c	net/minecraft/unmapped/C_79370641
 c	net/minecraft/unmapped/C_80104453
 	m	()I	hashCode		hashCode
 c	net/minecraft/unmapped/C_81592558
-	m	()Z	m_16166125		m_16166125
+	m	()Z	m_16166125		isSilkTouchable
 c	net/minecraft/unmapped/C_85740840
 	m	()V	m_81955864	tab	
-	m	(Ljava/lang/String;)V	m_80874759		m_80874759
-		p	0			p_0
-	m	()Z	m_74343108		m_74343108
-	m	()Z	m_31868779		m_31868779
+	m	(Ljava/lang/String;)V	m_80874759		setClipboard
+		p	0			text
+	m	()Z	m_74343108		hasControlDown
+	m	()Z	m_31868779		hasShiftDown
 c	net/minecraft/unmapped/C_88014908
 	m	(Lnet/minecraft/unmapped/C_52156807;)V	m_47450076		m_47450076
 		p	1			p_1
@@ -321,7 +321,7 @@ c	net/minecraft/unmapped/C_50604430
 		p	2			p_2
 		p	3			p_3
 c	net/minecraft/unmapped/C_56226565
-	m	()Lnet/minecraft/unmapped/C_07271204;	m_98203846		m_98203846
+	m	()Lnet/minecraft/unmapped/C_07271204;	m_98203846		getSitGoal
 c	net/minecraft/unmapped/C_67412986
 	m	()I	hashCode		hashCode
 c	net/minecraft/unmapped/C_47243611		net/minecraft/unmapped/C_47243611
@@ -371,9 +371,9 @@ c	net/minecraft/unmapped/C_52156807		net/minecraft/unmapped/C_52156807
 	m	(Lnet/minecraft/unmapped/C_10918870;)V	m_04853589		m_04853589
 		p	1			p_1
 	m	()I	m_85604015		m_85604015
-c	net/minecraft/unmapped/C_72517745		net/minecraft/unmapped/C_72517745
+c	net/minecraft/unmapped/C_72517745		net/minecraft/world/level/tile/WoodTile
 	m	(I)V	<init>		<init>
-		p	1			p_1
+		p	1			id
 	m	(II)I	m_07414817		m_07414817
 		p	1			p_1
 		p	2			p_2

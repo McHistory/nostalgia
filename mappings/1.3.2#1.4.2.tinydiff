@@ -460,10 +460,11 @@ c	net/minecraft/unmapped/C_14917579
 		p	3		y1	
 		p	4		y2	
 	m	()V	m_93619119	tick	
-	m	(III)I	m_59737314	m_59737314	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
+	m	(III)I	m_59737314	getTileLightBlock	
+		c	The purpose of this method is to allow the EmptyLevelChunk to be all air\nbut still block light. See EmptyLevelChunk.java	
+		p	1		x	
+		p	2		y	
+		p	3		z	
 	m	(II)V	m_59270822		m_59270822
 		p	1			p_1
 		p	2			p_2
@@ -2332,8 +2333,8 @@ c	net/minecraft/unmapped/C_98888256
 		p	1		itemInstance	
 		p	2		lines	
 	m	(II)I	m_73217034	getItemColor	
-		p	1		p_1	
-		p	2		p_2	
+		p	1		item	
+		p	2		spriteLayer	
 	m	(Lnet/minecraft/unmapped/C_88708284;I)I	m_73217034		getItemColor
 		p	1			p_1
 		p	2			p_2
@@ -2375,7 +2376,7 @@ c	net/minecraft/unmapped/C_06705682
 	f	I	f_77014084		f_77014084
 	f	I	f_69005136		f_69005136
 	m	(I)V	<init>	<init>	
-		p	1		p_1	
+		p	1		villageSizeModifier	
 	m	()V	<init>		<init>
 	m	(Ljava/util/Map;)V	<init>		<init>
 		p	1			p_1
@@ -2804,7 +2805,7 @@ c	net/minecraft/unmapped/C_92086655
 		p	3			p_3
 		p	4			p_4
 c	net/minecraft/unmapped/C_57145437
-	f	Lnet/minecraft/unmapped/C_06705682;	f_09577636	f_09577636	
+	f	Lnet/minecraft/unmapped/C_06705682;	f_09577636	villageFeature	
 	f	[B	f_78765473		f_78765473
 	f	[B	f_61654771		f_61654771
 	f	Lnet/minecraft/unmapped/C_48996137;	f_44107436		f_44107436
@@ -2813,11 +2814,11 @@ c	net/minecraft/unmapped/C_57145437
 	f	Lnet/minecraft/unmapped/C_67604311;	f_88834082		f_88834082
 	f	Lnet/minecraft/unmapped/C_67604311;	f_05380864		f_05380864
 	m	(Lnet/minecraft/unmapped/C_64041439;JZ)V	<init>	<init>	
-		p	1		p_1	
-		p	2		p_2	
-		p	4		p_4	
-	m	([B)V	m_42891499	m_42891499	
-		p	1		p_1	
+		p	1		level	
+		p	2		seed	
+		p	4		generateStructures	
+	m	([B)V	m_42891499	prepareHeights	
+		p	1		blocks	
 	m	(Lnet/minecraft/unmapped/C_64041439;JZLjava/lang/String;)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2

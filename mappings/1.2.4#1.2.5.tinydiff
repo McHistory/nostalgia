@@ -1,6 +1,6 @@
 tiny	2	0
 c	net/minecraft/client/Minecraft
-	m	()Ljava/lang/String;	m_63994976		m_63994976
+	m	()Ljava/lang/String;	m_63994976		getVersion
 	m	()V	m_70150364		m_70150364
 c	net/minecraft/server/MinecraftServer
 	m	()Ljava/lang/String;	getServerModName		getServerModName
@@ -41,14 +41,14 @@ c	net/minecraft/unmapped/C_34399650
 		p	3		p_3	
 		p	4		p_4	
 c	net/minecraft/unmapped/C_47185453
-	f	I	f_14366859		f_14366859
+	f	I	f_14366859		MAX_LENGTH
 	m	()V	<clinit>		<clinit>
 c	net/minecraft/unmapped/C_53504297
 	m	(Lnet/minecraft/unmapped/C_88708284;)I	m_22435140
 		p	1		item	
-		p	0			p_0
-	m	(Lnet/minecraft/unmapped/C_88708284;)Z	m_77425981		m_77425981
-		p	0			p_0
+		p	0			itemInstance
+	m	(Lnet/minecraft/unmapped/C_88708284;)Z	m_77425981		isFuel
+		p	0			item
 c	net/minecraft/unmapped/C_54206210
 	f	Z	f_90787744	wasJumping	
 	m	(Lnet/minecraft/unmapped/C_40996800;)V	m_81342827	tick	
@@ -68,8 +68,8 @@ c	net/minecraft/unmapped/C_62281153
 c	net/minecraft/unmapped/C_68019318
 	m	()[Ljava/lang/String;	m_96794794		m_96794794
 c	net/minecraft/unmapped/C_77279411
-	m	(Ljava/lang/String;)Ljava/lang/String;	m_68594739		m_68594739
-		p	0			p_0
+	m	(Ljava/lang/String;)Ljava/lang/String;	m_68594739		filterText
+		p	0			input
 c	net/minecraft/unmapped/C_85349123
 	m	(Lnet/minecraft/unmapped/C_96603444;FFFFFF)V	m_32469004	m_32469004	
 		p	1		p_1	
@@ -80,9 +80,9 @@ c	net/minecraft/unmapped/C_85349123
 		p	6		p_6	
 		p	7		p_7	
 c	net/minecraft/unmapped/C_87542771
-	m	(Lnet/minecraft/unmapped/C_98888256;I)V	m_20277145		m_20277145
-		p	1			p_1
-		p	2			p_2
+	m	(Lnet/minecraft/unmapped/C_98888256;I)V	m_20277145		replaceSlot
+		p	1			item
+		p	2			data
 c	net/minecraft/unmapped/C_97866173
 	f	Ljava/lang/String;	f_26834959	selectedName	
 c	net/minecraft/unmapped/C_97929192
@@ -117,18 +117,18 @@ c	net/minecraft/unmapped/C_40266271
 	f	Lnet/minecraft/unmapped/C_40266271;	f_88957694	f_88957694	
 	f	J	f_81295962	f_81295962	
 	f	Ljava/util/Map;	f_72527931	f_72527931	
-	f	Ljava/net/URL;	f_53682714		f_53682714
+	f	Ljava/net/URL;	f_53682714		url
 	m	()V	<init>	<init>	
 	m	()V	m_73394808	m_73394808	
-	m	(Ljava/lang/String;Ljava/lang/String;)V	m_85111716	m_85111716	
+	m	(Ljava/lang/String;Ljava/lang/String;)V	m_85111716	setData	
 		p	1		p_1	
 		p	2		p_2	
 	m	()V	<clinit>	<clinit>	
 	m	(Ljava/lang/String;)V	<init>		<init>
-		p	1			p_1
-	m	(Ljava/lang/String;Ljava/lang/Object;)V	m_85111716		m_85111716
-		p	1			p_1
-		p	2			p_2
+		p	1			side
+	m	(Ljava/lang/String;Ljava/lang/Object;)V	m_85111716		setData
+		p	1			key
+		p	2			value
 	m	(Lnet/minecraft/unmapped/C_40266271;)Ljava/net/URL;	m_74156176		m_74156176
 		p	0			p_0
 	m	(Lnet/minecraft/unmapped/C_40266271;)Ljava/util/Map;	m_64167483		m_64167483
