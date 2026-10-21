@@ -441,7 +441,7 @@ c	net/minecraft/unmapped/C_13231860
 c	net/minecraft/unmapped/C_14917579
 	f	Z	f_20173768	hasGapsToCheck	
 	f	Z	f_09182931		f_09182931
-	f	I	f_78192413		f_78192413
+	f	I	f_78192413		lowestHeightmap
 	m	(III)V	m_82099513	lightGap	
 		p	1		x	
 		p	2		z	
@@ -636,7 +636,7 @@ c	net/minecraft/unmapped/C_28000924
 		p	1			p_1
 		p	2			p_2
 c	net/minecraft/unmapped/C_28105876
-	f	Ljava/util/List;	f_44395106		f_44395106
+	f	Ljava/util/List;	f_44395106		ambientFriendlies
 c	net/minecraft/unmapped/C_28718426
 	m	(FFFFFF)V	m_42818616	m_42818616	
 		p	1		p_1	
@@ -870,7 +870,7 @@ c	net/minecraft/unmapped/C_40996800
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
-	m	()F	m_01652129		m_01652129
+	m	()F	m_01652129		getArmorCoverPercentage
 	m	(Lnet/minecraft/unmapped/C_40735137;)V	m_86879811		openSign
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_92307791;)V	m_81119069		m_81119069
@@ -919,7 +919,7 @@ c	net/minecraft/unmapped/C_42232651
 	f	I	f_21387757		f_21387757
 	m	()I	m_42142027		m_42142027
 	m	()I	m_99842441		m_99842441
-	m	()Z	m_69151229		m_69151229
+	m	()Z	m_69151229		isInvisible
 	m	(Z)V	m_73397844		m_73397844
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_42232651;)V	m_41174841		m_41174841
@@ -1016,7 +1016,7 @@ c	net/minecraft/unmapped/C_46053237
 		p	4			p_4
 c	net/minecraft/unmapped/C_46108969
 	m	()Lnet/minecraft/unmapped/C_30992371;	m_38773223		m_38773223
-	m	(IIII)Z	m_48917424		m_48917424
+	m	(IIII)Z	m_48917424		getDirectSignal
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -1123,12 +1123,12 @@ c	net/minecraft/unmapped/C_50075909
 		p	6			p_6
 		p	7			p_7
 c	net/minecraft/unmapped/C_50078015
-	m	(IIIII)V	m_86253275		m_86253275
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
+	m	(IIIII)V	m_86253275		globalLevelEvent
+		p	1			type
+		p	2			sourceX
+		p	3			sourceY
+		p	4			sourceZ
+		p	5			data
 c	net/minecraft/unmapped/C_51265047
 	m	(Lnet/minecraft/unmapped/C_64041439;IIII)Z	m_14301495	m_14301495	
 		p	1		p_1	
@@ -1245,8 +1245,8 @@ c	net/minecraft/unmapped/C_61027059$C_95179189
 		p	0			p_0
 		p	1			p_1
 c	net/minecraft/unmapped/C_62147686
-	m	()I	m_56311199		m_56311199
-	m	()I	m_47473258		m_47473258
+	m	()I	m_56311199		getBaseSeedId
+	m	()I	m_47473258		getBasePlantId
 c	net/minecraft/unmapped/C_62568306
 	f	Lnet/minecraft/unmapped/C_88708284;	f_71042615	sword	
 	m	()Lnet/minecraft/unmapped/C_88708284;	m_68650840	m_68650840	
@@ -1311,19 +1311,19 @@ c	net/minecraft/unmapped/C_64041439
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
-	m	(IIIZ)I	m_55892237		m_55892237
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-	m	(II)I	m_58591388		m_58591388
-		p	1			p_1
-		p	2			p_2
-	m	(Lnet/minecraft/unmapped/C_92766678;III)I	m_72389648		m_72389648
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
+	m	(IIIZ)I	m_55892237		getRawBrightness
+		p	1			x
+		p	2			y
+		p	3			z
+		p	4			propagate
+	m	(II)I	m_58591388		getLowestHeightmap
+		p	1			x
+		p	2			z
+	m	(Lnet/minecraft/unmapped/C_92766678;III)I	m_72389648		getBrightnessPropagate
+		p	1			layer
+		p	2			x
+		p	3			y
+		p	4			z
 	m	(IIIIII)V	m_96040795		m_96040795
 		p	1			p_1
 		p	2			p_2
@@ -1366,18 +1366,18 @@ c	net/minecraft/unmapped/C_64041439
 		p	3			p_3
 	m	(I)Lnet/minecraft/unmapped/C_42232651;	m_99124674		m_99124674
 		p	1			p_1
-	m	()J	m_08839739		m_08839739
-	m	(J)V	m_44107872		m_44107872
-		p	1			p_1
-	m	()Lnet/minecraft/unmapped/C_28707399;	m_18124683		m_18124683
-	m	(IIIII)V	m_30503839		m_30503839
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
-	m	(Lnet/minecraft/unmapped/C_21479319;)Lnet/minecraft/unmapped/C_03832126;	m_35778145		m_35778145
-		p	1			p_1
+	m	()J	m_08839739		getDayTime
+	m	(J)V	m_44107872		setDayTime
+		p	1			newTime
+	m	()Lnet/minecraft/unmapped/C_28707399;	m_18124683		getGameRules
+	m	(IIIII)V	m_30503839		globalLevelEvent
+		p	1			type
+		p	2			sourceX
+		p	3			sourceY
+		p	4			sourceZ
+		p	5			data
+	m	(Lnet/minecraft/unmapped/C_21479319;)Lnet/minecraft/unmapped/C_03832126;	m_35778145		makeSoundUpdater
+		p	1			minecart
 	m	()Lnet/minecraft/unmapped/C_30992371;	m_38773223		m_38773223
 	m	()Ljava/util/Calendar;	m_97992864		m_97992864
 c	net/minecraft/unmapped/C_64104387
@@ -1408,11 +1408,11 @@ c	net/minecraft/unmapped/C_64676926
 	f	Ljava/lang/String;	f_39519463		f_39519463
 	f	J	f_73481781		f_73481781
 	f	Lnet/minecraft/unmapped/C_28707399;	f_75324461		f_75324461
-	m	()J	m_04335648		m_04335648
-	m	(J)V	m_73319017		m_73319017
+	m	()J	m_04335648		getDayTime
+	m	(J)V	m_73319017		setDayTime
 		p	1			p_1
 	m	()Ljava/lang/String;	m_69294490		m_69294490
-	m	()Lnet/minecraft/unmapped/C_28707399;	m_63981906		m_63981906
+	m	()Lnet/minecraft/unmapped/C_28707399;	m_63981906		getGameRules
 c	net/minecraft/unmapped/C_65131087
 	m	()Z	m_61686626		m_61686626
 c	net/minecraft/unmapped/C_65562518
@@ -1776,11 +1776,11 @@ c	net/minecraft/unmapped/C_81592558
 	f	Lnet/minecraft/unmapped/C_81592558$C_01306377;	f_23980621		f_23980621
 	f	Lnet/minecraft/unmapped/C_81592558$C_01306377;	f_81826827		f_81826827
 	f	Lnet/minecraft/unmapped/C_81592558$C_01306377;	f_47969248		f_47969248
-	f	[Z	f_18344215		f_18344215
+	f	[Z	f_18344215		propagate
 	f	Lnet/minecraft/unmapped/C_81592558;	f_40304689		f_40304689
 	f	Lnet/minecraft/unmapped/C_81592558;	f_10214131		f_10214131
 	f	Lnet/minecraft/unmapped/C_81592558;	f_19990697		f_19990697
-	f	Lnet/minecraft/unmapped/C_81592558;	f_95188458		f_95188458
+	f	Lnet/minecraft/unmapped/C_81592558;	f_95188458		flowerPot
 	f	Lnet/minecraft/unmapped/C_81592558;	f_84299974		f_84299974
 	f	Lnet/minecraft/unmapped/C_81592558;	f_24078976		f_24078976
 	f	Lnet/minecraft/unmapped/C_81592558;	f_98921794		f_98921794
@@ -1796,20 +1796,20 @@ c	net/minecraft/unmapped/C_81592558
 		p	1		p_1	
 		p	2		p_2	
 		p	4		p_4	
-	m	()D	m_48635736		m_48635736
-	m	()D	m_00876361		m_00876361
-	m	()D	m_87001552		m_87001552
-	m	()D	m_34246495		m_34246495
-	m	()D	m_31019677		m_31019677
-	m	()D	m_61749209		m_61749209
+	m	()D	m_48635736		getShapeX0
+	m	()D	m_00876361		getShapeX1
+	m	()D	m_87001552		getShapeY0
+	m	()D	m_34246495		getShapeY1
+	m	()D	m_31019677		getShapeZ0
+	m	()D	m_61749209		getShapeZ1
 	m	(Lnet/minecraft/unmapped/C_46108969;IIII)Z	m_14301495		getDirectSignal
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
 		p	5			p_5
-	m	()Z	m_24340467		m_24340467
-	m	()Z	m_61686626		m_61686626
+	m	()Z	m_24340467		useOwnCloneData
+	m	()Z	m_61686626		canInstantlyTick
 c	net/minecraft/unmapped/C_81592558$96978149
 	m	()Ljava/lang/String;	m_49812403		m_49812403
 c	net/minecraft/unmapped/C_81592558$C_01306377
@@ -2827,8 +2827,8 @@ c	net/minecraft/unmapped/C_57145437
 		p	1			p_1
 		p	2			p_2
 c	net/minecraft/unmapped/C_61837504
-	f	I	f_06327629		f_06327629
-	m	()I	m_91726897		m_91726897
+	f	I	f_06327629		id
+	m	()I	m_91726897		getId
 c	net/minecraft/unmapped/C_70250241
 	m	(II)I	m_73217034	m_73217034	
 		p	1		p_1	
@@ -3208,10 +3208,10 @@ c	net/minecraft/unmapped/C_60655902
 		p	4			p_4
 		p	5			p_5
 c	net/minecraft/unmapped/C_58838815
-	f	I	f_76211668		f_76211668
-	m	(I)V	m_60900549		m_60900549
-		p	1			p_1
-	m	()I	m_82499865		m_82499865
+	f	I	f_76211668		updatedRenderTick
+	m	(I)V	m_60900549		updateTick
+		p	1			tick
+	m	()I	m_82499865		getUpdatedRenderTick
 c	net/minecraft/unmapped/C_21761637
 	m	()I	m_09735553		m_09735553
 c	net/minecraft/unmapped/C_30992371
@@ -3532,9 +3532,9 @@ c	net/minecraft/unmapped/C_16162222$C_77121822		C_77121822
 		p	4			p_4
 		p	5			p_5
 	m	()I	m_11670522		m_11670522
-c	net/minecraft/unmapped/C_16346676		net/minecraft/unmapped/C_16346676
+c	net/minecraft/unmapped/C_16346676		net/minecraft/world/level/tile/FlowerPotTile
 	m	(I)V	<init>		<init>
-		p	1			p_1
+		p	1			id
 	m	()V	m_25081207		m_25081207
 	m	()Z	m_57757663		m_57757663
 	m	()I	m_43136364		m_43136364
@@ -3583,10 +3583,10 @@ c	net/minecraft/unmapped/C_16346676		net/minecraft/unmapped/C_16346676
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
-	m	(I)Lnet/minecraft/unmapped/C_88708284;	m_93736832		m_93736832
-		p	0			p_0
-	m	(Lnet/minecraft/unmapped/C_88708284;)I	m_86493132		m_86493132
-		p	0			p_0
+	m	(I)Lnet/minecraft/unmapped/C_88708284;	m_93736832		getItemFromType
+		p	0			type
+	m	(Lnet/minecraft/unmapped/C_88708284;)I	m_86493132		getTypeFromItem
+		p	0			item
 c	net/minecraft/unmapped/C_16410909		net/minecraft/unmapped/C_16410909
 	f	I	f_10494660		f_10494660
 	m	(I)V	<init>		<init>
@@ -3874,36 +3874,36 @@ c	net/minecraft/unmapped/C_28187433		net/minecraft/unmapped/C_28187433
 		p	1			p_1
 	m	()I	m_36691583		m_36691583
 	m	()Lnet/minecraft/unmapped/C_88708284;	m_66362834		m_66362834
-c	net/minecraft/unmapped/C_28707399		net/minecraft/unmapped/C_28707399
-	f	Ljava/util/TreeMap;	f_21652775		f_21652775
+c	net/minecraft/unmapped/C_28707399		net/minecraft/world/level/GameRules
+	f	Ljava/util/TreeMap;	f_21652775		rules
 	m	()V	<init>		<init>
-	m	(Ljava/lang/String;Ljava/lang/String;)V	m_26514058		m_26514058
-		p	1			p_1
-		p	2			p_2
-	m	(Ljava/lang/String;Ljava/lang/String;)V	m_96008584		m_96008584
-		p	1			p_1
-		p	2			p_2
-	m	(Ljava/lang/String;)Ljava/lang/String;	m_05177213		m_05177213
-		p	1			p_1
-	m	(Ljava/lang/String;)Z	m_13095293		m_13095293
-		p	1			p_1
-	m	()Lnet/minecraft/unmapped/C_74087615;	m_22741677		m_22741677
-	m	(Lnet/minecraft/unmapped/C_74087615;)V	m_71784391		m_71784391
-		p	1			p_1
-	m	()[Ljava/lang/String;	m_03487659		m_03487659
-	m	(Ljava/lang/String;)Z	m_30873842		m_30873842
-		p	1			p_1
-c	net/minecraft/unmapped/C_28707399$C_98021076		C_98021076
-	f	Ljava/lang/String;	f_89584112		f_89584112
-	f	Z	f_04026315		f_04026315
-	f	I	f_03343754		f_03343754
-	f	D	f_00102927		f_00102927
+	m	(Ljava/lang/String;Ljava/lang/String;)V	m_26514058		registerRule
+		p	1			name
+		p	2			startValue
+	m	(Ljava/lang/String;Ljava/lang/String;)V	m_96008584		set
+		p	1			ruleName
+		p	2			newValue
+	m	(Ljava/lang/String;)Ljava/lang/String;	m_05177213		get
+		p	1			ruleName
+	m	(Ljava/lang/String;)Z	m_13095293		getBoolean
+		p	1			rule
+	m	()Lnet/minecraft/unmapped/C_74087615;	m_22741677		createTag
+	m	(Lnet/minecraft/unmapped/C_74087615;)V	m_71784391		loadFromTag
+		p	1			tag
+	m	()[Ljava/lang/String;	m_03487659		getRuleNames
+	m	(Ljava/lang/String;)Z	m_30873842		contains
+		p	1			rule
+c	net/minecraft/unmapped/C_28707399$C_98021076		GameRule
+	f	Ljava/lang/String;	f_89584112		value
+	f	Z	f_04026315		booleanValue
+	f	I	f_03343754		intValue
+	f	D	f_00102927		doubleValue
 	m	(Ljava/lang/String;)V	<init>		<init>
-		p	1			p_1
-	m	(Ljava/lang/String;)V	m_71519199		m_71519199
-		p	1			p_1
-	m	()Ljava/lang/String;	m_02259750		m_02259750
-	m	()Z	m_56986637		m_56986637
+		p	1			startValue
+	m	(Ljava/lang/String;)V	m_71519199		set
+		p	1			newValue
+	m	()Ljava/lang/String;	m_02259750		get
+	m	()Z	m_56986637		getBoolean
 c	net/minecraft/unmapped/C_28786548		net/minecraft/unmapped/C_28786548
 	f	Lnet/minecraft/unmapped/C_28786548;	f_49145803		f_49145803
 	f	Lnet/minecraft/unmapped/C_28786548;	f_59813843		f_59813843

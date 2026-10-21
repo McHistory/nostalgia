@@ -38,7 +38,7 @@ c	net/minecraft/unmapped/C_21829382
 	m	()Lnet/minecraft/unmapped/C_88708284;	m_10776202		m_10776202
 c	net/minecraft/unmapped/C_24384787
 	f	F	f_97567165	destroyProgress	
-	f	Ljava/util/Map;	f_79069085		f_79069085
+	f	Ljava/util/Map;	f_79069085		destroyingBlocks
 	m	(Lnet/minecraft/unmapped/C_96603444;Lnet/minecraft/unmapped/C_40996800;F)V	m_08872489		m_08872489
 		p	1			p_1
 		p	2			p_2
@@ -80,12 +80,12 @@ c	net/minecraft/unmapped/C_42232651
 		p	1			p_1
 		p	2			p_2
 c	net/minecraft/unmapped/C_50078015
-	m	(IIIII)V	m_83094077		m_83094077
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
+	m	(IIIII)V	m_83094077		destroyTileProgress
+		p	1			id
+		p	2			x
+		p	3			y
+		p	4			z
+		p	5			progress
 c	net/minecraft/unmapped/C_50240030
 	m	(Lnet/minecraft/unmapped/C_64676926;Lnet/minecraft/unmapped/C_40996800;)V	m_92317641	m_92317641	
 		p	1		p_1	
@@ -102,12 +102,12 @@ c	net/minecraft/unmapped/C_54810664
 		p	1			p_1
 		p	2			p_2
 c	net/minecraft/unmapped/C_64041439
-	m	(IIIII)V	m_97254881		m_97254881
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
+	m	(IIIII)V	m_97254881		destroyTileProgress
+		p	1			id
+		p	2			x
+		p	3			y
+		p	4			z
+		p	5			progress
 c	net/minecraft/unmapped/C_64676926
 	m	(Lnet/minecraft/unmapped/C_40996800;)Lnet/minecraft/unmapped/C_74087615;	m_19289848	saveWithPlayers	
 		p	1		p_1	
@@ -143,7 +143,7 @@ c	net/minecraft/unmapped/C_97866173
 c	net/minecraft/unmapped/C_98403025
 	m	()V	<clinit>	<clinit>	
 c	net/minecraft/unmapped/C_40266271
-	m	()V	m_64689751		m_64689751
+	m	()V	m_64689751		interrupt
 c	net/minecraft/unmapped/C_32101806
 	m	()V	m_29930604		m_29930604
 	m	()Z	m_38696535		m_38696535
@@ -186,20 +186,20 @@ c	net/minecraft/unmapped/C_01281220		net/minecraft/unmapped/C_01281220
 	m	()I	m_72860129		m_72860129
 	m	()I	m_88541474		m_88541474
 	m	()I	m_81877588		m_81877588
-c	net/minecraft/unmapped/C_58838815		net/minecraft/unmapped/C_58838815
-	f	I	f_62634985		f_62634985
-	f	I	f_98727740		f_98727740
-	f	I	f_86945011		f_86945011
-	f	I	f_31486243		f_31486243
-	f	I	f_78720466		f_78720466
+c	net/minecraft/unmapped/C_58838815		net/minecraft/world/level/BlockDestructionProgress
+	f	I	f_62634985		id
+	f	I	f_98727740		x
+	f	I	f_86945011		y
+	f	I	f_31486243		z
+	f	I	f_78720466		progress
 	m	(IIII)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-	m	()I	m_89371649		m_89371649
-	m	()I	m_16942310		m_16942310
-	m	()I	m_55007513		m_55007513
-	m	(I)V	m_72204052		m_72204052
-		p	1			p_1
-	m	()I	m_47668926		m_47668926
+		p	1			id
+		p	2			x
+		p	3			y
+		p	4			z
+	m	()I	m_89371649		getX
+	m	()I	m_16942310		getY
+	m	()I	m_55007513		getZ
+	m	(I)V	m_72204052		setProgress
+		p	1			progress
+	m	()I	m_47668926		getProgress

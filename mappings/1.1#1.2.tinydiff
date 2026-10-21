@@ -268,21 +268,21 @@ c	net/minecraft/unmapped/C_23969718
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
-	m	(Lnet/minecraft/unmapped/C_46108969;III)I	m_51673873		m_51673873
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-	m	(Lnet/minecraft/unmapped/C_46108969;III)Z	m_48736241		m_48736241
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-	m	(Lnet/minecraft/unmapped/C_46108969;III)I	m_39335138		m_39335138
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
+	m	(Lnet/minecraft/unmapped/C_46108969;III)I	m_51673873		getDir
+		p	1			level
+		p	2			x
+		p	3			y
+		p	4			z
+	m	(Lnet/minecraft/unmapped/C_46108969;III)Z	m_48736241		isOpen
+		p	1			level
+		p	2			x
+		p	3			y
+		p	4			z
+	m	(Lnet/minecraft/unmapped/C_46108969;III)I	m_39335138		getCompositeData
+		p	1			level
+		p	2			x
+		p	3			y
+		p	4			z
 c	net/minecraft/unmapped/C_24384787
 	m	(III)V	m_82879999		m_82879999
 		p	1			p_1
@@ -310,11 +310,11 @@ c	net/minecraft/unmapped/C_28105876
 		p	2		x	
 		p	3		y	
 		p	4		z	
-	m	(Ljava/util/Random;)Lnet/minecraft/unmapped/C_30339133;	m_27560802		m_27560802
-		p	1			p_1
-	m	()Z	m_52838685		m_52838685
+	m	(Ljava/util/Random;)Lnet/minecraft/unmapped/C_30339133;	m_27560802		getGrassFeature
+		p	1			random
+	m	()Z	m_52838685		isHumid
 	m	()F	m_01072171		m_01072171
-	m	()F	m_37125809		m_37125809
+	m	()F	m_37125809		getTemperature
 	m	()I	m_29076487		getGrassColor
 	m	()I	m_08237421		getFolageColor
 c	net/minecraft/unmapped/C_28112798
@@ -504,10 +504,10 @@ c	net/minecraft/unmapped/C_49363115
 	m	(Lnet/minecraft/unmapped/C_88708284;)V	m_21898693		m_21898693
 		p	1			p_1
 c	net/minecraft/unmapped/C_50078015
-	m	(III)V	m_82879999		m_82879999
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+	m	(III)V	m_82879999		tileLightChanged
+		p	1			x
+		p	2			y
+		p	3			z
 c	net/minecraft/unmapped/C_51102979
 	m	(Lnet/minecraft/unmapped/C_46108969;III)I	m_29076487	m_29076487	
 		p	1		p_1	
@@ -632,10 +632,10 @@ c	net/minecraft/unmapped/C_64041439
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
-	m	(III)Z	m_40265812		m_40265812
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+	m	(III)Z	m_40265812		isEntityTile
+		p	1			x
+		p	2			y
+		p	3			z
 	m	(III)V	m_00384111		m_00384111
 		p	1			p_1
 		p	2			p_2
@@ -656,31 +656,31 @@ c	net/minecraft/unmapped/C_64041439
 		p	2			p_2
 		p	3			p_3
 	m	(Lnet/minecraft/unmapped/C_42232651;Lnet/minecraft/unmapped/C_42232651;FZZZZ)Lnet/minecraft/unmapped/C_85604771;	m_27797267		findPath
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
-		p	6			p_6
-		p	7			p_7
+		p	1			from
+		p	2			to
+		p	3			maxDist
+		p	4			canPassDoors
+		p	5			canOpenDoors
+		p	6			avoidWater
+		p	7			canFloat
 	m	(Lnet/minecraft/unmapped/C_42232651;IIIFZZZZ)Lnet/minecraft/unmapped/C_85604771;	m_71899288		findPath
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
-		p	6			p_6
-		p	7			p_7
-		p	8			p_8
-		p	9			p_9
+		p	1			from
+		p	2			xBest
+		p	3			yBest
+		p	4			zBest
+		p	5			maxDist
+		p	6			canPassDoors
+		p	7			canOpenDoors
+		p	8			avoidWater
+		p	9			canFloat
 	m	(DDD)Lnet/minecraft/unmapped/C_40996800;	m_79569300		m_79569300
 		p	1			p_1
 		p	3			p_3
 		p	5			p_5
-	m	(III)Z	m_29906389		m_29906389
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+	m	(III)Z	m_29906389		isHumidAt
+		p	1			x
+		p	2			y
+		p	3			z
 	m	()Z	m_58307127		m_58307127
 c	net/minecraft/unmapped/C_64676926
 	m	(J)V	m_87736952	setSize	

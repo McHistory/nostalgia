@@ -1,7 +1,7 @@
 tiny	2	0
 c	net/minecraft/client/Minecraft
-	m	(Lnet/minecraft/unmapped/C_95807626;)Lnet/minecraft/unmapped/C_95807626;	m_82863806		m_82863806
-		p	1			p_1
+	m	(Lnet/minecraft/unmapped/C_95807626;)Lnet/minecraft/unmapped/C_95807626;	m_82863806		fillReport
+		p	1			report
 	m	()V	m_97212553	runTick	m_97212553
 	m	()Ljava/lang/String;	m_63994976	getVersion	m_63994976
 c	net/minecraft/client/Minecraft$30387532		30387532
@@ -367,7 +367,7 @@ c	net/minecraft/unmapped/C_62568306
 c	net/minecraft/unmapped/C_64041439
 	f	Lnet/minecraft/unmapped/C_54284556;	f_24349774	villages	f_24349774
 	m	()V	m_51415363	clearLoadedPlayerData	
-	m	(Lnet/minecraft/unmapped/C_95807626;)Lnet/minecraft/unmapped/C_95807626;	m_47977656		m_47977656
+	m	(Lnet/minecraft/unmapped/C_95807626;)Lnet/minecraft/unmapped/C_95807626;	m_47977656		fillReportDetails
 		p	1			p_1
 	m	(Ljava/lang/Class;Lnet/minecraft/unmapped/C_82690114;Lnet/minecraft/unmapped/C_42232651;)Lnet/minecraft/unmapped/C_42232651;	m_90790614	getClosestEntityOfClass	m_90790614
 c	net/minecraft/unmapped/C_64041439$25258353		25258353
@@ -568,8 +568,6 @@ c	net/minecraft/unmapped/C_79350730
 c	net/minecraft/unmapped/C_81592558
 	f	Lnet/minecraft/unmapped/C_81592558;	f_66351138	redstoneLight	f_66351138
 	f	Lnet/minecraft/unmapped/C_81592558;	f_03095108	redstoneLight_lit	f_03095108
-	f	Z	f_72650334	isTicking	f_72650334
-	f	Z	f_86082203	isEntityTile	f_86082203
 	m	(Lnet/minecraft/unmapped/C_64041439;IIILnet/minecraft/unmapped/C_82690114;Ljava/util/ArrayList;)V	m_64404227	addAABBs	
 		p	1		level	
 		p	2		x	
@@ -584,35 +582,16 @@ c	net/minecraft/unmapped/C_81592558
 		p	4			p_4
 		p	5			p_5
 		p	6			p_6
-	m	(Lnet/minecraft/unmapped/C_64041439;III)I	m_43056668		m_43056668
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-	m	(Lnet/minecraft/unmapped/C_64041439;III)I	m_89320689		m_89320689
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-	m	(Z)Lnet/minecraft/unmapped/C_81592558;	m_44795498
-		p	1		tick	ticksRandomly
-	m	(Lnet/minecraft/unmapped/C_64041439;IIILnet/minecraft/unmapped/C_42232651;F)V	m_35613877	fallOn	m_35613877
-		p	1		level	p_1
-		p	2		x	p_2
-		p	3		y	p_3
-		p	4		z	p_4
-		p	5		entity	p_5
-		p	6		fallDistance	p_6
-	m	(I)Z	m_64429939	isSolidBlockingTile	m_64429939
-		p	0		t	p_0
-	m	(Lnet/minecraft/unmapped/C_46108969;III)Z	m_93785535	isPathfindable	m_93785535
-		p	1		level	p_1
-		p	2		x	p_2
-		p	3		y	p_3
-		p	4		z	p_4
-	m	()Z	m_20353541	isTicking	m_20353541
-	m	()Z	m_48193954	isEntityTile	m_48193954
-	m	()Z	m_16166125	isSilkTouchable	m_16166125
+	m	(Lnet/minecraft/unmapped/C_64041439;III)I	m_43056668		cloneTileId
+		p	1			level
+		p	2			x
+		p	3			y
+		p	4			z
+	m	(Lnet/minecraft/unmapped/C_64041439;III)I	m_89320689		cloneTileData
+		p	1			level
+		p	2			x
+		p	3			y
+		p	4			z
 c	net/minecraft/unmapped/C_82920792
 	f	Z	f_72172455	MIPMAP	
 	f	I	f_40920265	f_40920265	
@@ -714,8 +693,8 @@ c	net/minecraft/unmapped/C_93497269
 		p	3		p_3	
 		p	4		p_4	
 c	net/minecraft/unmapped/C_95807626
-	f	Ljava/util/Map;	f_44732512		f_44732512
-	m	()V	m_03175564		m_03175564
+	f	Ljava/util/Map;	f_44732512		details
+	m	()V	m_03175564		initDetails
 	m	(Ljava/lang/String;Ljava/util/concurrent/Callable;)V	m_16657720		m_16657720
 		p	1			p_1
 		p	2			p_2
@@ -725,16 +704,16 @@ c	net/minecraft/unmapped/C_95807626
 	m	(Ljava/lang/String;Ljava/lang/Throwable;)V	m_40359032		m_40359032
 		p	1			p_1
 		p	2			p_2
-	m	()Ljava/lang/String;	m_08449316		m_08449316
-	m	()Ljava/lang/Throwable;	m_85844861		m_85844861
+	m	()Ljava/lang/String;	m_08449316		getTitle
+	m	()Ljava/lang/Throwable;	m_85844861		getException
 	m	()Ljava/lang/String;	m_38888821		m_38888821
-	m	(Ljava/lang/StringBuilder;)V	m_91061771		m_91061771
+	m	(Ljava/lang/StringBuilder;)V	m_91061771		getDetails
+		p	1			builder
+	m	()Ljava/lang/String;	m_22384225		getExceptionMessage
+	m	()Ljava/lang/String;	m_03091931		getFriendlyReport
+	m	(Ljava/io/File;)Z	m_28079904		saveToFile
 		p	1			p_1
-	m	()Ljava/lang/String;	m_22384225		m_22384225
-	m	()Ljava/lang/String;	m_03091931		m_03091931
-	m	(Ljava/io/File;)Z	m_28079904		m_28079904
-		p	1			p_1
-	m	()Ljava/lang/String;	m_85021835		m_85021835
+	m	()Ljava/lang/String;	m_85021835		getErrorComment
 c	net/minecraft/unmapped/C_95807626$03000589		03000589
 	f	Lnet/minecraft/unmapped/C_95807626;	f_36940969		f_36940969
 	m	(Lnet/minecraft/unmapped/C_95807626;)V	<init>		<init>
@@ -1236,11 +1215,6 @@ c	net/minecraft/unmapped/C_23014920
 c	net/minecraft/unmapped/C_43616774
 	m	(I)Lnet/minecraft/unmapped/C_88708284;	m_75956400	removeItemNoUpdate	m_75956400
 		p	1		slot	p_1
-c	net/minecraft/unmapped/C_46108969
-	m	(II)Lnet/minecraft/unmapped/C_28105876;	m_25174963	getBiome	m_25174963
-		p	1		x	p_1
-		p	2		z	p_2
-	m	()Z	m_58307127	isAllEmpty	m_58307127
 c	net/minecraft/unmapped/C_47185453
 	f	I	f_14366859	MAX_LENGTH	f_14366859
 c	net/minecraft/unmapped/C_53504297
@@ -1256,7 +1230,6 @@ c	net/minecraft/unmapped/C_57247398
 		p	3		z	p_3
 c	net/minecraft/unmapped/C_64676926
 	f	Lnet/minecraft/unmapped/C_61837504;	f_92576962	generator	f_92576962
-	m	()Lnet/minecraft/unmapped/C_61837504;	m_80583926	getGenerator	m_80583926
 	m	(Lnet/minecraft/unmapped/C_61837504;)V	m_12600593	setGenerator	m_12600593
 		p	1		generator	p_1
 c	net/minecraft/unmapped/C_71252617
@@ -1447,34 +1420,6 @@ c	net/minecraft/unmapped/C_60686841	net/minecraft/world/entity/ai/navigation/Pat
 		p	7		startPos	p_7
 		p	8		goalDirX	p_8
 		p	10		goalDirZ	p_10
-c	net/minecraft/unmapped/C_61837504	net/minecraft/world/level/LevelType	net/minecraft/unmapped/C_61837504
-	f	Lnet/minecraft/unmapped/C_61837504;	f_99408143	lvl_normal	f_99408143
-	f	Lnet/minecraft/unmapped/C_61837504;	f_74160535	lvl_flat	f_74160535
-	f	Ljava/lang/String;	f_29197434	generatorName	f_29197434
-	f	[Lnet/minecraft/unmapped/C_61837504;	f_13359166	levelTypes	f_13359166
-	f	Lnet/minecraft/unmapped/C_61837504;	f_62826174	lvl_normal_1_1	f_62826174
-	f	I	f_97576971	version	f_97576971
-	f	Z	f_98180701	selectable	f_98180701
-	f	Z	f_94280466	replacement	f_94280466
-	m	()Ljava/lang/String;	m_01314642	getDescriptionId	m_01314642
-	m	(Ljava/lang/String;)Lnet/minecraft/unmapped/C_61837504;	m_54045659	getLevelType	m_54045659
-		p	0		name	p_0
-	m	(ILjava/lang/String;)V	<init>
-		p	1		id	p_1
-		p	2		generatorName	p_2
-	m	(ILjava/lang/String;I)V	<init>
-		p	1		id	p_1
-		p	2		generatorName	p_2
-		p	3		version	p_3
-	m	()Ljava/lang/String;	m_56135911	getGeneratorName	m_56135911
-	m	()I	m_00407808	getVersion	m_00407808
-	m	(I)Lnet/minecraft/unmapped/C_61837504;	m_90372808	getReplacementForVersion	m_90372808
-		p	1		oldVersion	p_1
-	m	(Z)Lnet/minecraft/unmapped/C_61837504;	m_80118791	setSelectableByUser	m_80118791
-		p	1		selectable	p_1
-	m	()Z	m_98450906	isSelectable	m_98450906
-	m	()Lnet/minecraft/unmapped/C_61837504;	m_30965300	setHasReplacement	m_30965300
-	m	()Z	m_17846621	hasReplacement	m_17846621
 c	net/minecraft/unmapped/C_86243658	net/minecraft/world/entity/ai/control/LookControl	net/minecraft/unmapped/C_86243658
 	f	Lnet/minecraft/unmapped/C_74425583;	f_59031413	mob	f_59031413
 	f	F	f_85282586	yMax	f_85282586
@@ -1621,14 +1566,9 @@ c	net/minecraft/unmapped/C_27021753	net/minecraft/world/entity/ai/goal/AvoidPlay
 		p	3		maxDist	p_3
 		p	4		walkSpeed	p_4
 		p	5		sprintSpeed	p_5
-c	net/minecraft/unmapped/C_40266271	net/minecraft/world/Snooper	net/minecraft/unmapped/C_40266271
-	f	Ljava/util/Map;	f_10456017	data	f_10456017
-	f	Ljava/net/URL;	f_53682714	url	f_53682714
+c	net/minecraft/unmapped/C_40266271
 	m	(Ljava/lang/String;)V	<init>
 		p	1		side	p_1
-	m	(Ljava/lang/String;Ljava/lang/Object;)V	m_85111716	setData	m_85111716
-		p	1		key	p_1
-		p	2		value	p_2
 c	net/minecraft/unmapped/C_54284556
 	m	(III)V	m_62776514	queryUpdateAround	m_62776514
 	m	(IIII)Lnet/minecraft/unmapped/C_06666740;	m_48606792	getClosestVillage	m_48606792
@@ -1769,7 +1709,6 @@ c	net/minecraft/unmapped/C_16178213
 c	net/minecraft/unmapped/C_28105876
 	f	Lnet/minecraft/unmapped/C_28105876;	f_18485609	beaches	f_18485609
 	f	Lnet/minecraft/unmapped/C_28105876;	f_42202662	desertHills	f_42202662
-	m	()Lnet/minecraft/unmapped/C_28105876;	m_06327401	setSnowCovered	m_06327401
 c	net/minecraft/unmapped/C_29057998
 	f	D	f_13642885	baseDamage	f_13642885
 	f	I	f_92447542	knockback	f_92447542
@@ -1785,7 +1724,7 @@ c	net/minecraft/unmapped/C_29057998
 		p	4		power	p_4
 		p	5		uncertainty	p_5
 c	net/minecraft/unmapped/C_45510667
-	m	(FFF)F	m_08389758	clamp	m_08389758
+	m	(FFF)F	m_08389758
 		p	0		value	p_0
 		p	1		min	p_1
 		p	2		max	p_2

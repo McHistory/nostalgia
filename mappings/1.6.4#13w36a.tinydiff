@@ -1,8 +1,8 @@
 tiny	2	0
 c	net/minecraft/client/Minecraft
 	f	Lnet/minecraft/unmapped/C_00535600;	f_25215102	stats	
-	f	Lnet/minecraft/unmapped/C_74425583;	f_30642501	f_30642501	
-	f	Lnet/minecraft/unmapped/C_42232651;	f_30642501		f_30642501
+	f	Lnet/minecraft/unmapped/C_74425583;	f_30642501	crosshairPickMob	
+	f	Lnet/minecraft/unmapped/C_42232651;	f_30642501		crosshairPickMob
 	f	Lnet/minecraft/unmapped/C_06196994;	f_14235564		f_14235564
 	m	()Lnet/minecraft/unmapped/C_06196994;	m_17688331		m_17688331
 	m	()V	m_66884086		m_66884086
@@ -1083,7 +1083,7 @@ c	net/minecraft/unmapped/C_28105876
 		p	1		depth	
 		p	2		scale	
 	m	()I	m_87564139	getTemperatureInt	
-	m	()F	m_37125809	m_37125809	
+	m	()F	m_37125809	getTemperature	
 	m	()I	m_29076487	getGrassColor	
 	m	()I	m_08237421	getFolageColor	
 	m	(Lnet/minecraft/unmapped/C_28105876$C_58948084;)Lnet/minecraft/unmapped/C_28105876;	m_18721906		setDepthAndScale
@@ -1722,7 +1722,7 @@ c	net/minecraft/unmapped/C_45448523
 		p	1		p_1	
 		p	2		p_2	
 	m	(I)V	<init>	<init>	
-		p	1		p_1	
+		p	1		id	
 	m	(Lnet/minecraft/unmapped/C_89604096;)V	<init>		<init>
 		p	1			p_1
 	m	()V	<init>		<init>
@@ -1904,14 +1904,14 @@ c	net/minecraft/unmapped/C_50078015
 		p	6		z	
 		p	8		volume	
 		p	9		pitch	
-	m	(Lnet/minecraft/unmapped/C_40996800;Ljava/lang/String;DDDFF)V	m_37313959	m_37313959	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	5		p_5	
-		p	7		p_7	
-		p	9		p_9	
-		p	10		p_10	
+	m	(Lnet/minecraft/unmapped/C_40996800;Ljava/lang/String;DDDFF)V	m_37313959	playSoundExceptPlayer	
+		p	1		player	
+		p	2		sound	
+		p	3		x	
+		p	5		y	
+		p	7		z	
+		p	9		volume	
+		p	10		pitch	
 	m	(Ljava/lang/String;DDDFFLnet/minecraft/unmapped/C_28706180;)V	m_02082651		playSound
 		p	1			p_1
 		p	2			p_2
@@ -1920,7 +1920,7 @@ c	net/minecraft/unmapped/C_50078015
 		p	8			p_8
 		p	9			p_9
 		p	10			p_10
-	m	(Lnet/minecraft/unmapped/C_40996800;Ljava/lang/String;DDDFFLnet/minecraft/unmapped/C_28706180;)V	m_37313959		m_37313959
+	m	(Lnet/minecraft/unmapped/C_40996800;Ljava/lang/String;DDDFFLnet/minecraft/unmapped/C_28706180;)V	m_37313959		playSoundExceptPlayer
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -2361,15 +2361,15 @@ c	net/minecraft/unmapped/C_62147686
 		p	2		p_2	
 		p	3		p_3	
 		p	4		p_4	
-	m	()I	m_56311199	m_56311199	
-	m	()I	m_47473258	m_47473258	
+	m	()I	m_56311199	getBaseSeedId	
+	m	()I	m_47473258	getBasePlantId	
 	m	(I)V	<init>	<init>	
 		p	1		p_1	
 	m	()V	<init>		<init>
 	m	(Lnet/minecraft/unmapped/C_81592558;)Z	m_81619573		m_81619573
 		p	1			p_1
-	m	()Lnet/minecraft/unmapped/C_98888256;	m_56311199		m_56311199
-	m	()Lnet/minecraft/unmapped/C_98888256;	m_47473258		m_47473258
+	m	()Lnet/minecraft/unmapped/C_98888256;	m_56311199		getBaseSeedId
+	m	()Lnet/minecraft/unmapped/C_98888256;	m_47473258		getBasePlantId
 	m	(ILjava/util/Random;I)Lnet/minecraft/unmapped/C_98888256;	m_78174230		m_78174230
 		p	1			p_1
 		p	2			p_2
@@ -2520,12 +2520,12 @@ c	net/minecraft/unmapped/C_64041439
 		p	3		yc	
 		p	4		zc	
 	m	(IIIIII)V	m_63164641	tileEvent	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-		p	6		p_6	
+		p	1		x	
+		p	2		y	
+		p	3		z	
+		p	4		tile	
+		p	5		b0	
+		p	6		b1	
 	m	(IIIIII)V	m_96040795	m_96040795	
 		p	1		p_1	
 		p	2		p_2	
@@ -2533,7 +2533,7 @@ c	net/minecraft/unmapped/C_64041439
 		p	4		p_4	
 		p	5		p_5	
 		p	6		p_6	
-	m	(DDDLjava/lang/String;FFZ)V	m_70598418	m_70598418	
+	m	(DDDLjava/lang/String;FFZ)V	m_70598418	playLocalSound	
 		p	1		p_1	
 		p	3		p_3	
 		p	5		p_5	
@@ -2542,23 +2542,23 @@ c	net/minecraft/unmapped/C_64041439
 		p	9		p_9	
 		p	10		p_10	
 	m	(IIIIII)Z	m_70456507	setTileAndData	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-		p	6		p_6	
-	m	(IIIII)V	m_63448235	m_63448235	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-	m	(IIII)Z	m_38204755	m_38204755	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
+		p	1		x	
+		p	2		y	
+		p	3		z	
+		p	4		tile	
+		p	5		data	
+		p	6		updateFlags	
+	m	(IIIII)V	m_63448235	updateNeighborsAtExceptFromFacing	
+		p	1		x	
+		p	2		y	
+		p	3		z	
+		p	4		tile	
+		p	5		skipFacing	
+	m	(IIII)Z	m_38204755	isTileToBeTickedAt	
+		p	1		x	
+		p	2		y	
+		p	3		z	
+		p	4		tileId	
 	m	(IIIIII)V	m_76888851	forceAddTileTick	
 		p	1		p_1	
 		p	2		p_2	
@@ -2567,19 +2567,19 @@ c	net/minecraft/unmapped/C_64041439
 		p	5		p_5	
 		p	6		p_6	
 	m	(IIIIZILnet/minecraft/unmapped/C_42232651;Lnet/minecraft/unmapped/C_88708284;)Z	m_84267582	mayPlace	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-		p	6		p_6	
-		p	7		p_7	
-		p	8		p_8	
-	m	(IIII)V	m_30631361	m_30631361	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
+		p	1		tileId	
+		p	2		x	
+		p	3		y	
+		p	4		z	
+		p	5		ignoreEntities	
+		p	6		face	
+		p	7		ignoreEntity	
+		p	8		item	
+	m	(IIII)V	m_30631361	updateNeighbourForOutputSignal	
+		p	1		x	
+		p	2		y	
+		p	3		z	
+		p	4		source	
 	m	(II)Lnet/minecraft/unmapped/C_81592558;	m_74897689		getTopTile
 		p	1			p_1
 		p	2			p_2
@@ -2609,7 +2609,7 @@ c	net/minecraft/unmapped/C_64041439
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
-	m	(IIILnet/minecraft/unmapped/C_81592558;I)V	m_63448235		m_63448235
+	m	(IIILnet/minecraft/unmapped/C_81592558;I)V	m_63448235		updateNeighborsAtExceptFromFacing
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -2620,7 +2620,7 @@ c	net/minecraft/unmapped/C_64041439
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
-	m	(IIILnet/minecraft/unmapped/C_81592558;)Z	m_38204755		m_38204755
+	m	(IIILnet/minecraft/unmapped/C_81592558;)Z	m_38204755		isTileToBeTickedAt
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -2633,7 +2633,7 @@ c	net/minecraft/unmapped/C_64041439
 		p	8			p_8
 		p	9			p_9
 		p	10			p_10
-	m	(DDDLjava/lang/String;FFZLnet/minecraft/unmapped/C_28706180;)V	m_70598418		m_70598418
+	m	(DDDLjava/lang/String;FFZLnet/minecraft/unmapped/C_28706180;)V	m_70598418		playLocalSound
 		p	1			p_1
 		p	3			p_3
 		p	5			p_5
@@ -2687,7 +2687,7 @@ c	net/minecraft/unmapped/C_64041439
 		p	4			p_4
 		p	5			p_5
 		p	6			p_6
-	m	(IIILnet/minecraft/unmapped/C_81592558;)V	m_30631361		m_30631361
+	m	(IIILnet/minecraft/unmapped/C_81592558;)V	m_30631361		updateNeighbourForOutputSignal
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -3825,10 +3825,10 @@ c	net/minecraft/unmapped/C_81592558
 	f	Lnet/minecraft/unmapped/C_81592558;	f_34016293	f_34016293	
 	f	Lnet/minecraft/unmapped/C_81592558;	f_45584622	f_45584622	
 	f	Lnet/minecraft/unmapped/C_81592558;	f_32409252	f_32409252	
-	f	[Z	f_18344215	f_18344215	
+	f	[Z	f_18344215	propagate	
 	f	Lnet/minecraft/unmapped/C_81592558;	f_40304689	f_40304689	
 	f	Lnet/minecraft/unmapped/C_81592558;	f_19990697	f_19990697	
-	f	Lnet/minecraft/unmapped/C_81592558;	f_95188458	f_95188458	
+	f	Lnet/minecraft/unmapped/C_81592558;	f_95188458	flowerPot	
 	f	Lnet/minecraft/unmapped/C_81592558;	f_84299974	f_84299974	
 	f	Lnet/minecraft/unmapped/C_81592558;	f_24078976	f_24078976	
 	f	Lnet/minecraft/unmapped/C_81592558;	f_98921794	f_98921794	
@@ -3847,7 +3847,7 @@ c	net/minecraft/unmapped/C_81592558
 	f	Lnet/minecraft/unmapped/C_81592558;	f_48582040	f_48582040	
 	f	Lnet/minecraft/unmapped/C_81592558;	f_10614495	f_10614495	
 	f	Lnet/minecraft/unmapped/C_81592558;	f_90314583	f_90314583	
-	f	Lnet/minecraft/unmapped/C_81168785;	f_69670687	f_69670687	
+	f	Lnet/minecraft/unmapped/C_81168785;	f_69670687	comparator_off	
 	f	Lnet/minecraft/unmapped/C_81168785;	f_72550549	f_72550549	
 	f	Lnet/minecraft/unmapped/C_39027719;	f_31276461	f_31276461	
 	f	Lnet/minecraft/unmapped/C_81592558;	f_29418837	f_29418837	
@@ -3882,17 +3882,17 @@ c	net/minecraft/unmapped/C_81592558
 		p	1		data	
 		p	2		random	
 		p	3		playerBonusLevel	
-	m	(I)Z	m_64429939	m_64429939	
-		p	0		p_0	
-	m	(Lnet/minecraft/unmapped/C_64041439;III)I	m_43056668	m_43056668	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-	m	(ILnet/minecraft/unmapped/C_87042217;Ljava/util/List;)V	m_77245430	m_77245430	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
+	m	(I)Z	m_64429939	isSolidBlockingTile	
+		p	0		t	
+	m	(Lnet/minecraft/unmapped/C_64041439;III)I	m_43056668	cloneTileId	
+		p	1		level	
+		p	2		x	
+		p	3		y	
+		p	4		z	
+	m	(ILnet/minecraft/unmapped/C_87042217;Ljava/util/List;)V	m_77245430	fillItemCategory	
+		p	1		id	
+		p	2		tab	
+		p	3		items	
 	m	(Lnet/minecraft/unmapped/C_64041439;IIIII)V	m_13356966	onRemove	
 		p	1		p_1	
 		p	2		p_2	
@@ -3900,11 +3900,11 @@ c	net/minecraft/unmapped/C_81592558
 		p	4		p_4	
 		p	5		p_5	
 		p	6		p_6	
-	m	(I)Z	m_98332173	m_98332173	
-		p	1		p_1	
-	m	(II)Z	m_89385832	m_89385832	
-		p	0		p_0	
-		p	1		p_1	
+	m	(I)Z	m_98332173	isMatching	
+		p	1		id	
+	m	(II)Z	m_89385832	isMatching	
+		p	0		tileIdA	
+		p	1		tileIdB	
 	m	(Lnet/minecraft/unmapped/C_81592558;)Z	m_80741346		m_80741346
 		p	0			p_0
 	m	(Lnet/minecraft/unmapped/C_81592558;)Z	m_90880983		m_90880983
@@ -3924,7 +3924,7 @@ c	net/minecraft/unmapped/C_81592558
 	m	()V	m_90897802		m_90897802
 	m	(Lnet/minecraft/unmapped/C_89604096;)V	<init>		<init>
 		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_81592558;)Z	m_64429939		m_64429939
+	m	(Lnet/minecraft/unmapped/C_81592558;)Z	m_64429939		isSolidBlockingTile
 		p	0			p_0
 	m	(Lnet/minecraft/unmapped/C_64041439;IIILnet/minecraft/unmapped/C_81592558;)V	m_91032811		neighborChanged
 		p	1			p_1
@@ -3943,18 +3943,18 @@ c	net/minecraft/unmapped/C_81592558
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
-	m	(Lnet/minecraft/unmapped/C_64041439;III)Lnet/minecraft/unmapped/C_98888256;	m_43056668		m_43056668
+	m	(Lnet/minecraft/unmapped/C_64041439;III)Lnet/minecraft/unmapped/C_98888256;	m_43056668		cloneTileId
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
-	m	(Lnet/minecraft/unmapped/C_98888256;Lnet/minecraft/unmapped/C_87042217;Ljava/util/List;)V	m_77245430		m_77245430
+	m	(Lnet/minecraft/unmapped/C_98888256;Lnet/minecraft/unmapped/C_87042217;Ljava/util/List;)V	m_77245430		fillItemCategory
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
-	m	(Lnet/minecraft/unmapped/C_81592558;)Z	m_98332173		m_98332173
+	m	(Lnet/minecraft/unmapped/C_81592558;)Z	m_98332173		isMatching
 		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_81592558;Lnet/minecraft/unmapped/C_81592558;)Z	m_89385832		m_89385832
+	m	(Lnet/minecraft/unmapped/C_81592558;Lnet/minecraft/unmapped/C_81592558;)Z	m_89385832		isMatching
 		p	0			p_0
 		p	1			p_1
 c	net/minecraft/unmapped/C_82108633
@@ -6022,7 +6022,7 @@ c	net/minecraft/unmapped/C_11176054
 		p	3		p_3	
 		p	4		p_4	
 	m	(I)V	<init>	<init>	
-		p	1		p_1	
+		p	1		id	
 	m	()V	<init>		<init>
 	m	(Lnet/minecraft/unmapped/C_64041439;IIILnet/minecraft/unmapped/C_81592558;)V	m_91032811		m_91032811
 		p	1			p_1
@@ -6684,10 +6684,10 @@ c	net/minecraft/unmapped/C_89247924$C_05472504
 	m	()V	<init>	<init>	
 c	net/minecraft/unmapped/C_87042217
 	f	Lnet/minecraft/unmapped/C_88708284;	f_25637027		f_25637027
-	m	()Lnet/minecraft/unmapped/C_98888256;	m_89898702	m_89898702	
-	m	()I	m_16953677	m_16953677	
-	m	()Lnet/minecraft/unmapped/C_88708284;	m_89898702		m_89898702
-	m	()Lnet/minecraft/unmapped/C_98888256;	m_16953677		m_16953677
+	m	()Lnet/minecraft/unmapped/C_98888256;	m_89898702	getIconItem	
+	m	()I	m_16953677	getIconId	
+	m	()Lnet/minecraft/unmapped/C_88708284;	m_89898702		getIconItem
+	m	()Lnet/minecraft/unmapped/C_98888256;	m_16953677		getIconId
 	m	()I	m_52110529		m_52110529
 c	net/minecraft/unmapped/C_87042217$13019306
 	m	()I	m_16953677	m_16953677	
@@ -6776,23 +6776,23 @@ c	net/minecraft/unmapped/C_25781992
 		p	6			p_6
 c	net/minecraft/unmapped/C_60655902
 	m	(I)V	<init>	<init>	
-		p	1		p_1	
+		p	1		id	
 	m	(Lnet/minecraft/unmapped/C_64041439;IIII)V	m_91032811	m_91032811	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
 		p	4		p_4	
 		p	5		p_5	
-	m	(Lnet/minecraft/unmapped/C_64041439;IIIIIZII)V	m_73918247	m_73918247	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-		p	6		p_6	
-		p	7		p_7	
-		p	8		p_8	
-		p	9		p_9	
+	m	(Lnet/minecraft/unmapped/C_64041439;IIIIIZII)V	m_73918247	calculateState	
+		p	1		level	
+		p	2		x	
+		p	3		y	
+		p	4		z	
+		p	5		id	
+		p	6		data	
+		p	7		canUpdate	
+		p	8		wireSource	
+		p	9		wireSourceData	
 	m	(Lnet/minecraft/unmapped/C_64041439;IIIII)V	m_13356966	m_13356966	
 		p	1		p_1	
 		p	2		p_2	
@@ -6807,7 +6807,7 @@ c	net/minecraft/unmapped/C_60655902
 		p	3			p_3
 		p	4			p_4
 		p	5			p_5
-	m	(Lnet/minecraft/unmapped/C_64041439;IIILnet/minecraft/unmapped/C_81592558;IZII)V	m_73918247		m_73918247
+	m	(Lnet/minecraft/unmapped/C_64041439;IIILnet/minecraft/unmapped/C_81592558;IZII)V	m_73918247		calculateState
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
@@ -6920,7 +6920,7 @@ c	net/minecraft/unmapped/C_16162222$C_77121822
 		p	7			p_7
 c	net/minecraft/unmapped/C_16346676
 	m	(I)V	<init>	<init>	
-		p	1		p_1	
+		p	1		id	
 	m	(Lnet/minecraft/unmapped/C_64041439;III)I	m_43056668	m_43056668	
 		p	1		p_1	
 		p	2		p_2	
@@ -6936,10 +6936,10 @@ c	net/minecraft/unmapped/C_16346676
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
-	m	(I)Lnet/minecraft/unmapped/C_88708284;	m_93736832	m_93736832	
-		p	0		p_0	
-	m	(Lnet/minecraft/unmapped/C_88708284;)I	m_86493132	m_86493132	
-		p	0		p_0	
+	m	(I)Lnet/minecraft/unmapped/C_88708284;	m_93736832	getItemFromType	
+		p	0		type	
+	m	(Lnet/minecraft/unmapped/C_88708284;)I	m_86493132	getTypeFromItem	
+		p	0		item	
 	m	()V	<init>		<init>
 	m	(Lnet/minecraft/unmapped/C_81592558;I)Z	m_00952684		m_00952684
 		p	1			p_1
@@ -7267,14 +7267,14 @@ c	net/minecraft/unmapped/C_35287424
 		p	1		p_1	
 	m	()V	<init>		<init>
 c	net/minecraft/unmapped/C_52791181
-	m	(Lnet/minecraft/unmapped/C_52791181;IIIII)V	m_99594711	m_99594711	
-		p	0		p_0	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-	m	(Lnet/minecraft/unmapped/C_52791181;IIILnet/minecraft/unmapped/C_81592558;I)V	m_99594711		m_99594711
+	m	(Lnet/minecraft/unmapped/C_52791181;IIIII)V	m_99594711	populateBlockDetails	
+		p	0		category	
+		p	1		x	
+		p	2		y	
+		p	3		z	
+		p	4		id	
+		p	5		data	
+	m	(Lnet/minecraft/unmapped/C_52791181;IIILnet/minecraft/unmapped/C_81592558;I)V	m_99594711		populateBlockDetails
 		p	0			p_0
 		p	1			p_1
 		p	2			p_2
@@ -7564,10 +7564,10 @@ c	net/minecraft/unmapped/C_69518741
 		p	1			p_1
 		p	2			p_2
 c	net/minecraft/unmapped/C_73166169
-	m	(Ljava/lang/String;Lnet/minecraft/unmapped/C_97595263;)V	m_25588812	m_25588812	
-		p	1		p_1	
-		p	2		p_2	
-	m	(Ljava/lang/String;Ljava/lang/String;)Z	m_25588812		m_25588812
+	m	(Ljava/lang/String;Lnet/minecraft/unmapped/C_97595263;)V	m_25588812	addPlayerToTeam	
+		p	1		player	
+		p	2		team	
+	m	(Ljava/lang/String;Ljava/lang/String;)Z	m_25588812		addPlayerToTeam
 		p	1			p_1
 		p	2			p_2
 c	net/minecraft/unmapped/C_74307218
@@ -7688,7 +7688,7 @@ c	net/minecraft/unmapped/C_91643418
 		p	1		p_1	
 	m	(I)Z	m_25764023	m_25764023	
 		p	0		p_0	
-	m	(I)Z	m_66287505	m_66287505	
+	m	(I)Z	m_66287505	isSameDiode	
 		p	1		p_1	
 	m	(I)Z	m_98332173	m_98332173	
 		p	1		p_1	
@@ -7710,7 +7710,7 @@ c	net/minecraft/unmapped/C_91643418
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_81592558;)Z	m_25764023		m_25764023
 		p	0			p_0
-	m	(Lnet/minecraft/unmapped/C_81592558;)Z	m_66287505		m_66287505
+	m	(Lnet/minecraft/unmapped/C_81592558;)Z	m_66287505		isSameDiode
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_81592558;)Z	m_98332173		m_98332173
 		p	1			p_1

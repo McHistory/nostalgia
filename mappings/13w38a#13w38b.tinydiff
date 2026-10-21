@@ -45,10 +45,10 @@ c	net/minecraft/unmapped/C_46108969
 		p	1		x	
 		p	2		y	
 		p	3		z	
-	m	(III)Z	m_84587551	m_84587551	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
+	m	(III)Z	m_84587551	isTopSolidBlocking	
+		p	1		x	
+		p	2		y	
+		p	3		z	
 c	net/minecraft/unmapped/C_57778754
 	m	()Lnet/minecraft/unmapped/C_88708284;	m_68650840	m_68650840	
 c	net/minecraft/unmapped/C_62568306
@@ -71,22 +71,22 @@ c	net/minecraft/unmapped/C_64041439
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
-	m	(III)Z	m_40265812	m_40265812	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
+	m	(III)Z	m_40265812	isEntityTile	
+		p	1		x	
+		p	2		y	
+		p	3		z	
 	m	(III)Z	m_84587551	m_84587551	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
-	m	(III)I	m_73414128	m_73414128	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-	m	(Lnet/minecraft/unmapped/C_81592558;I)Z	m_20835865	m_20835865	
-		p	1		p_1	
-		p	2		p_2	
-	m	(Lnet/minecraft/unmapped/C_46108969;III)Z	m_20835865		m_20835865
+	m	(III)I	m_73414128	getTileRenderShape	
+		p	1		x	
+		p	2		y	
+		p	3		z	
+	m	(Lnet/minecraft/unmapped/C_81592558;I)Z	m_20835865	isTopSolidBlocking	
+		p	1		tile	
+		p	2		data	
+	m	(Lnet/minecraft/unmapped/C_46108969;III)Z	m_20835865		isTopSolidBlocking
 		p	0			p_0
 		p	1			p_1
 		p	2			p_2
@@ -124,7 +124,7 @@ c	net/minecraft/unmapped/C_81592558
 		p	0		p_0	
 	m	(Lnet/minecraft/unmapped/C_81592558;)I	m_76486297	m_76486297	
 		p	0		p_0	
-	m	(Lnet/minecraft/unmapped/C_81592558;)Z	m_64429939	m_64429939	
+	m	(Lnet/minecraft/unmapped/C_81592558;)Z	m_64429939	isSolidBlockingTile	
 		p	0		p_0	
 	m	()Z	m_80741346		m_80741346
 	m	()I	m_76486297		m_76486297
@@ -132,7 +132,7 @@ c	net/minecraft/unmapped/C_81592558
 	m	()I	m_27425159		m_27425159
 	m	()Z	m_48533760		m_48533760
 	m	()Lnet/minecraft/unmapped/C_89604096;	m_80029306		m_80029306
-	m	()Z	m_64429939		m_64429939
+	m	()Z	m_64429939		isSolidBlockingTile
 	m	()F	m_62524161		getShadeBrightness
 c	net/minecraft/unmapped/C_89967701
 	m	()Z	m_57757663	m_57757663	
@@ -246,7 +246,7 @@ c	net/minecraft/unmapped/C_79280634
 c	net/minecraft/unmapped/C_97519386
 	m	()I	m_09735553	m_09735553	
 c	net/minecraft/unmapped/C_60655902
-	m	(Lnet/minecraft/unmapped/C_64041439;IIILnet/minecraft/unmapped/C_81592558;IZII)V	m_73918247	m_73918247	
+	m	(Lnet/minecraft/unmapped/C_64041439;IIILnet/minecraft/unmapped/C_81592558;IZII)V	m_73918247	calculateState	
 		p	1		p_1	
 		p	2		p_2	
 		p	3		p_3	
@@ -256,7 +256,7 @@ c	net/minecraft/unmapped/C_60655902
 		p	7		p_7	
 		p	8		p_8	
 		p	9		p_9	
-	m	(Lnet/minecraft/unmapped/C_64041439;IIIZIZII)V	m_73918247		m_73918247
+	m	(Lnet/minecraft/unmapped/C_64041439;IIIZIZII)V	m_73918247		calculateState
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
