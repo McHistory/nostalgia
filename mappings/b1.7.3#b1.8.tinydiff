@@ -3655,13 +3655,13 @@ c	net/minecraft/unmapped/C_67691656		net/minecraft/world/level/tile/VineTile
 		p	4			p_4
 		p	5			p_5
 		p	6			p_6
-c	net/minecraft/unmapped/C_70699216		net/minecraft/unmapped/C_70699216
-	f	Lnet/minecraft/unmapped/C_22967193;	f_75396115		f_75396115
-	f	F	f_22156020		f_22156020
-	f	Z	f_60554615		f_60554615
-	f	Z	f_39254315		f_39254315
+c	net/minecraft/unmapped/C_70699216		net/minecraft/client/gui/inventory/CreativeModeInventoryScreen
+	f	Lnet/minecraft/unmapped/C_22967193;	f_75396115		CONTAINER
+	f	F	f_22156020		scrollOffs
+	f	Z	f_60554615		scrolling
+	f	Z	f_39254315		hasClicked
 	m	(Lnet/minecraft/unmapped/C_40996800;)V	<init>		<init>
-		p	1			p_1
+		p	1			player
 	m	()V	m_53520780		m_53520780
 	m	(Lnet/minecraft/unmapped/C_12356698;IIZ)V	m_70125770		m_70125770
 		p	1			p_1
@@ -3681,14 +3681,14 @@ c	net/minecraft/unmapped/C_70699216		net/minecraft/unmapped/C_70699216
 		p	1			p_1
 	m	()Lnet/minecraft/unmapped/C_22967193;	m_98392347		m_98392347
 	m	()V	<clinit>		<clinit>
-c	net/minecraft/unmapped/C_70699216$C_31437606		C_31437606
-	f	Ljava/util/List;	f_85632121		f_85632121
+c	net/minecraft/unmapped/C_70699216$C_31437606		ItemPickerMenu
+	f	Ljava/util/List;	f_85632121		items
 	m	(Lnet/minecraft/unmapped/C_40996800;)V	<init>		<init>
-		p	1			p_1
+		p	1			player
 	m	(Lnet/minecraft/unmapped/C_40996800;)Z	m_85465282		m_85465282
 		p	1			p_1
-	m	(F)V	m_00840327		m_00840327
-		p	1			p_1
+	m	(F)V	m_00840327		scrollTo
+		p	1			scrollOffs
 	m	(IIZLnet/minecraft/unmapped/C_40996800;)V	m_43475020		m_43475020
 		p	1			p_1
 		p	2			p_2
@@ -3873,14 +3873,14 @@ c	net/minecraft/unmapped/C_81721916		net/minecraft/world/entity/player/Abilities
 	f	Z	f_77637162		mayfly
 	f	Z	f_63336874		instabuild
 	m	()V	<init>		<init>
-c	net/minecraft/unmapped/C_82860087		net/minecraft/unmapped/C_82860087
-	f	Lnet/minecraft/unmapped/C_85740840;	f_55020812		f_55020812
-	f	Lnet/minecraft/unmapped/C_16178213;	f_97219561		f_97219561
-	f	Lnet/minecraft/unmapped/C_16178213;	f_39059114		f_39059114
-	f	Lnet/minecraft/unmapped/C_91543234;	f_64039195		f_64039195
+c	net/minecraft/unmapped/C_82860087		net/minecraft/client/gui/EditServerScreen
+	f	Lnet/minecraft/unmapped/C_85740840;	f_55020812		lastScreen
+	f	Lnet/minecraft/unmapped/C_16178213;	f_97219561		ipEdit
+	f	Lnet/minecraft/unmapped/C_16178213;	f_39059114		nameEdit
+	f	Lnet/minecraft/unmapped/C_91543234;	f_64039195		serverData
 	m	(Lnet/minecraft/unmapped/C_85740840;Lnet/minecraft/unmapped/C_91543234;)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
+		p	1			lastScreen
+		p	2			serverData
 	m	()V	m_53520780		m_53520780
 	m	()V	m_41805697		m_41805697
 	m	()V	m_47002234		m_47002234
