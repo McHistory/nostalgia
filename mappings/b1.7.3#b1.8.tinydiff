@@ -49,7 +49,7 @@ c	net/minecraft/unmapped/C_03562565
 	f	Lnet/minecraft/unmapped/C_31402669;	f_80203238		idToClassMap
 	f	Lnet/minecraft/unmapped/C_31402669;	f_15402218		incoming
 c	net/minecraft/unmapped/C_03670941
-	f	[Z	f_53313108		f_53313108
+	f	[Z	f_53313108		isSolidCubeRender
 	f	I	f_12752325		ccxyz
 	f	I	f_93361568		ccxy0
 	f	I	f_81132236		ccxyZ
@@ -79,16 +79,16 @@ c	net/minecraft/unmapped/C_03670941
 		p	2		x	
 		p	3		y	
 		p	4		z	
-	m	(IIII)Z	m_66692870		m_66692870
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-	m	(IIII)Z	m_05197886		m_05197886
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
+	m	(IIII)Z	m_66692870		renderDebugBoundary
+		p	1			x
+		p	2			y
+		p	3			z
+		p	4			layer
+	m	(IIII)Z	m_05197886		renderDebugBoundaryEdge
+		p	1			edge
+		p	2			x
+		p	3			y
+		p	4			z
 	m	(Lnet/minecraft/unmapped/C_81592558;III)Z	m_27753875		tesselateVineInWorld
 		p	1			tt
 		p	2			x
@@ -265,16 +265,16 @@ c	net/minecraft/unmapped/C_10243778
 		p	5			p_5
 		p	6			p_6
 		p	7			p_7
-c	net/minecraft/unmapped/C_10350466
-	f	Lnet/minecraft/unmapped/C_91543234;	f_24496669		f_24496669
+c	net/minecraft/unmapped/C_10350466	net/minecraft/client/gui/JoinMultiplayerScreen	net/minecraft/client/gui/DirectJoinServerScreen
+	f	Lnet/minecraft/unmapped/C_91543234;	f_24496669		serverData
 	m	(Lnet/minecraft/unmapped/C_85740840;)V	<init>	<init>	
 		p	1		lastScreen	
 	m	(Ljava/lang/String;I)I	m_50481140	parseInt	
 		p	1		msg	
 		p	2		defaultVal	
 	m	(Lnet/minecraft/unmapped/C_85740840;Lnet/minecraft/unmapped/C_91543234;)V	<init>		<init>
-		p	1			p_1
-		p	2			p_2
+		p	1			lastScreen
+		p	2			serverData
 c	net/minecraft/unmapped/C_10918870
 	m	(Lnet/minecraft/unmapped/C_28851891;)V	m_02900633		handleGetInfo
 		p	1			packet
@@ -1584,8 +1584,8 @@ c	net/minecraft/unmapped/C_76154632
 	m	(Lnet/minecraft/unmapped/C_88708284;)Lnet/minecraft/unmapped/C_51467731;	m_23494551		m_23494551
 		p	1			p_1
 c	net/minecraft/unmapped/C_76575783
-	f	I	f_15763193		f_15763193
-	f	I	f_57370134		f_57370134
+	f	I	f_15763193		mouseX
+	f	I	f_57370134		mouseY
 c	net/minecraft/unmapped/C_76792751
 	f	Lnet/minecraft/unmapped/C_23708450;	f_69386559	keyFog	
 	f	Lnet/minecraft/unmapped/C_23708450;	f_16700522		keyAttack
@@ -2005,15 +2005,15 @@ c	net/minecraft/unmapped/C_94906307
 c	net/minecraft/unmapped/C_95236836
 	f	Lnet/minecraft/unmapped/C_90931970;	f_77605847		snipeSkeleton
 c	net/minecraft/unmapped/C_95462098
-	f	I	f_46022473		f_46022473
-	f	I	f_68299424		f_68299424
+	f	I	f_46022473		time
+	f	I	f_68299424		blurTexture
 	m	()Z	m_47190451		m_47190451
-	m	(IIF)V	m_75744847		m_75744847
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-	m	(F)V	m_83609284		m_83609284
-		p	1			p_1
+	m	(IIF)V	m_75744847		renderBackgroundPanorama
+		p	1			xm
+		p	2			ym
+		p	3			a
+	m	(F)V	m_83609284		renderBlur
+		p	1			a
 	m	(IIF)V	m_31936294		renderPanorama
 		p	1			xm
 		p	2			ym
@@ -3974,20 +3974,20 @@ c	net/minecraft/unmapped/C_84943765		net/minecraft/world/level/levelgen/feature/
 		p	3			yy
 		p	4			zz
 		p	5			dir
-c	net/minecraft/unmapped/C_84978437		net/minecraft/unmapped/C_84978437
-	f	I	f_54666230		f_54666230
-	f	Ljava/lang/Object;	f_14150420		f_14150420
+c	net/minecraft/unmapped/C_84978437		net/minecraft/client/gui/JoinMultiplayerScreen
+	f	I	f_54666230		connectionAttempts
+	f	Ljava/lang/Object;	f_14150420		lock
 	f	Lnet/minecraft/unmapped/C_85740840;	f_05909630		lastScreen
 	f	Lnet/minecraft/unmapped/C_84978437$C_11317765;	f_13037795		serverSelectionList
-	f	Ljava/util/List;	f_75001155		f_75001155
-	f	I	f_61052539		f_61052539
+	f	Ljava/util/List;	f_75001155		servers
+	f	I	f_61052539		selected
 	f	Lnet/minecraft/unmapped/C_85125467;	f_94108137		editButton
 	f	Lnet/minecraft/unmapped/C_85125467;	f_93646157		selectButton
 	f	Lnet/minecraft/unmapped/C_85125467;	f_51001148		deleteButton
-	f	Z	f_36570272		f_36570272
-	f	Z	f_05683061		f_05683061
-	f	Z	f_53316931		f_53316931
-	f	Z	f_59487328		f_59487328
+	f	Z	f_36570272		selectedDelete
+	f	Z	f_05683061		selectedAdd
+	f	Z	f_53316931		selectedEdit
+	f	Z	f_59487328		selectedDirect
 	f	Ljava/lang/String;	f_36346571		toolTip
 	f	Lnet/minecraft/unmapped/C_91543234;	f_46188459		editingServer
 	m	(Lnet/minecraft/unmapped/C_85740840;)V	<init>		<init>
@@ -4004,8 +4004,8 @@ c	net/minecraft/unmapped/C_84978437		net/minecraft/unmapped/C_84978437
 		p	1			p_1
 		p	2			p_2
 	m	(Ljava/lang/String;I)I	m_12423431		parsePort
-		p	1			p_1
-		p	2			p_2
+		p	1			input
+		p	2			fallback
 	m	(CI)V	m_29116903		m_29116903
 		p	1			p_1
 		p	2			p_2
@@ -4017,10 +4017,10 @@ c	net/minecraft/unmapped/C_84978437		net/minecraft/unmapped/C_84978437
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
-	m	(I)V	m_61648202		m_61648202
-		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_91543234;)V	m_65424217		m_65424217
-		p	1			p_1
+	m	(I)V	m_61648202		join
+		p	1			selected
+	m	(Lnet/minecraft/unmapped/C_91543234;)V	m_65424217		join
+		p	1			server
 	m	(Lnet/minecraft/unmapped/C_91543234;)V	m_67383349		pingServer
 		p	1			server
 	m	(Ljava/lang/String;II)V	m_78658554		renderTooltip
