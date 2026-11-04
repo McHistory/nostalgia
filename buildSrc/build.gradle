@@ -1,0 +1,26 @@
+plugins {
+	id 'java'
+	id 'java-gradle-plugin'
+}
+
+repositories {
+	mavenCentral()
+	maven {
+		name = 'Ornithe Releases'
+		url = 'https://maven.ornithemc.net/releases'
+	}
+	maven {
+		name = 'Fabric'
+		url = 'https://maven.fabricmc.net/'
+	}
+	maven {
+		name 'Quilt'
+		url 'https://maven.quiltmc.org/repository/release'
+	}
+}
+
+dependencies {
+	implementation("net.ornithemc:keratin:48.2")
+	implementation("net.fabricmc:tiny-remapper:0.10.4")
+	implementation("net.fabricmc:mapping-io:0.6.1")
+}

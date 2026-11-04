@@ -527,8 +527,8 @@ c	net/minecraft/unmapped/C_97595263
 	m	(Ljava/lang/String;)Ljava/lang/String;	m_37562640		m_37562640
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_72624737;Ljava/lang/String;)Ljava/lang/String;	m_12027240		formatNameForTeam
-		p	0			p_0
-		p	1			p_1
+		p	0			team
+		p	1			name
 c	net/minecraft/unmapped/C_13795309
 	m	()V	m_65001148		m_65001148
 c	net/minecraft/unmapped/C_21461336
@@ -667,12 +667,12 @@ c	net/minecraft/unmapped/C_59702756		net/minecraft/unmapped/C_59702756
 		p	1			p_1
 		p	2			p_2
 	m	()Lnet/minecraft/unmapped/C_74087615;	m_62851468		m_62851468
-c	net/minecraft/unmapped/C_72624737		net/minecraft/unmapped/C_72624737
+c	net/minecraft/unmapped/C_72624737		net/minecraft/world/scores/Team
 	m	()V	<init>		<init>
-	m	(Lnet/minecraft/unmapped/C_72624737;)Z	m_06445273		m_06445273
-		p	1			p_1
-	m	()Ljava/lang/String;	m_76154159		m_76154159
-	m	(Ljava/lang/String;)Ljava/lang/String;	m_37562640		m_37562640
-		p	1			p_1
-	m	()Z	m_43820849		m_43820849
-	m	()Z	m_87103140		m_87103140
+	m	(Lnet/minecraft/unmapped/C_72624737;)Z	m_06445273		isAlliedTo
+		p	1			other
+	m	()Ljava/lang/String;	m_76154159		getName
+	m	(Ljava/lang/String;)Ljava/lang/String;	m_37562640		getFormattedName
+		p	1			teamMemberName
+	m	()Z	m_43820849		canSeeFriendlyInvisibles
+	m	()Z	m_87103140		isAllowFriendlyFire

@@ -1,12 +1,14 @@
 import net.ornithemc.keratin.api.TaskSelection
 import net.ornithemc.keratin.api.task.mapping.graph.ExtendGraphTask
 
+import me.alphamode.nostalgia.build.VerifyMappingsTask
+
 import net.fabricmc.filament.task.MappingPoetTask
 
 plugins {
 	id 'java'
 	id 'maven-publish'
-	id 'keratin' version '48.2'
+	id 'keratin'
 }
 
 def ENV = System.getenv()
@@ -37,11 +39,10 @@ keratin {
 	tasks TaskSelection.MAPPINGS
 }
 
-tasks.withType(ExtendGraphTask, {
-	if (ENV.FROM_MC_VERSIONS) {
-		fromMinecraftVersions ENV.FROM_MC_VERSIONS.split('[,]')
-	}
-})
+tasks.register("verifyMappings", VerifyMappingsTask).configure {
+	group = "nostalgia"
+	dependsOn("buildMappings")
+}
 
 tasks.withType(Javadoc, {
 	it.outputs.upToDateWhen { false }
