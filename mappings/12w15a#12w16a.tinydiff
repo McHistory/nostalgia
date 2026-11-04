@@ -30,7 +30,7 @@ c	net/minecraft/server/MinecraftServer
 	m	(Lnet/minecraft/unmapped/C_23078083;Ljava/lang/String;)Ljava/util/List;	m_58065088		m_58065088
 		p	1			p_1
 		p	2			p_2
-	m	()Lnet/minecraft/server/MinecraftServer;	m_45643387		m_45643387
+	m	()Lnet/minecraft/server/MinecraftServer;	m_45643387		getInstance
 	m	(Ljava/lang/String;)Z	m_13406572		m_13406572
 		p	1			p_1
 	m	(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;	m_92303761		m_92303761
@@ -299,7 +299,7 @@ c	net/minecraft/unmapped/C_91946665
 		p	1		string	
 	m	(Ljava/lang/String;)V	m_07045980		m_07045980
 		p	1			p_1
-c	net/minecraft/unmapped/C_01039069		net/minecraft/unmapped/C_01039069
+c	net/minecraft/unmapped/C_01039069		net/minecraft/commands/common/InvalidNumberException
 	m	()V	<init>		<init>
 	m	(Ljava/lang/String;[Ljava/lang/Object;)V	<init>		<init>
 		p	1			p_1
@@ -320,7 +320,7 @@ c	net/minecraft/unmapped/C_02777445		net/minecraft/util/StringUtil
 	m	()V	<init>		<init>
 	m	(I)Ljava/lang/String;	m_68893132		formatTickDuration
 		p	0			ticks
-c	net/minecraft/unmapped/C_04091279		net/minecraft/unmapped/C_04091279
+c	net/minecraft/unmapped/C_04091279		net/minecraft/commands/BaseCommand
 	f	Lnet/minecraft/unmapped/C_61644694;	f_16331593		f_16331593
 	m	()V	<init>		<init>
 	m	()Ljava/util/List;	m_19041456		m_19041456
@@ -329,18 +329,18 @@ c	net/minecraft/unmapped/C_04091279		net/minecraft/unmapped/C_04091279
 	m	(Lnet/minecraft/unmapped/C_23078083;[Ljava/lang/String;)Ljava/util/List;	m_74370043		m_74370043
 		p	1			p_1
 		p	2			p_2
-	m	(Lnet/minecraft/unmapped/C_23078083;Ljava/lang/String;)I	m_44446064		m_44446064
-		p	0			p_0
-		p	1			p_1
+	m	(Lnet/minecraft/unmapped/C_23078083;Ljava/lang/String;)I	m_44446064		readInt
+		p	0			source
+		p	1			input
 	m	(Lnet/minecraft/unmapped/C_23078083;Ljava/lang/String;I)I	m_69646919		m_69646919
 		p	0			p_0
 		p	1			p_1
 		p	2			p_2
-	m	(Lnet/minecraft/unmapped/C_23078083;Ljava/lang/String;II)I	m_61076836		m_61076836
-		p	0			p_0
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
+	m	(Lnet/minecraft/unmapped/C_23078083;Ljava/lang/String;II)I	m_61076836		readInt
+		p	0			source
+		p	1			input
+		p	2			min
+		p	3			max
 	m	(Lnet/minecraft/unmapped/C_23078083;)Lnet/minecraft/unmapped/C_40996800;	m_76589835		m_76589835
 		p	0			p_0
 	m	([Ljava/lang/String;I)Ljava/lang/String;	m_00780686		m_00780686
@@ -357,7 +357,7 @@ c	net/minecraft/unmapped/C_04091279		net/minecraft/unmapped/C_04091279
 	m	([Ljava/lang/String;Ljava/lang/Iterable;)Ljava/util/List;	m_46845050		m_46845050
 		p	0			p_0
 		p	1			p_1
-	m	(Lnet/minecraft/unmapped/C_23078083;Ljava/lang/String;[Ljava/lang/Object;)V	m_30150955		m_30150955
+	m	(Lnet/minecraft/unmapped/C_23078083;Ljava/lang/String;[Ljava/lang/Object;)V	m_30150955		logAdminAction
 		p	0			p_0
 		p	1			p_1
 		p	2			p_2
@@ -469,7 +469,7 @@ c	net/minecraft/unmapped/C_30413339		net/minecraft/unmapped/C_30413339
 	m	(Ljava/lang/String;[Ljava/lang/Object;)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
-c	net/minecraft/unmapped/C_33664827		net/minecraft/unmapped/C_33664827
+c	net/minecraft/unmapped/C_33664827		net/minecraft/commands/exceptions/CommandException
 	f	[Ljava/lang/Object;	f_59607024		f_59607024
 	m	(Ljava/lang/String;[Ljava/lang/Object;)V	<init>		<init>
 		p	1			p_1
@@ -562,12 +562,12 @@ c	net/minecraft/unmapped/C_52305460		net/minecraft/unmapped/C_52305460
 	m	(Lnet/minecraft/unmapped/C_23078083;[Ljava/lang/String;)Ljava/util/List;	m_74370043		m_74370043
 		p	1			p_1
 		p	2			p_2
-c	net/minecraft/unmapped/C_53421322		net/minecraft/unmapped/C_53421322
-	m	()Ljava/lang/String;	m_72533879		m_72533879
+c	net/minecraft/unmapped/C_53421322		net/minecraft/commands/Command
+	m	()Ljava/lang/String;	m_72533879		getName
 	m	()Ljava/util/List;	m_19041456		m_19041456
-	m	(Lnet/minecraft/unmapped/C_23078083;[Ljava/lang/String;)V	m_57379810		m_57379810
-		p	1			p_1
-		p	2			p_2
+	m	(Lnet/minecraft/unmapped/C_23078083;[Ljava/lang/String;)V	m_57379810		execute
+		p	1			source
+		p	2			args
 	m	(Lnet/minecraft/unmapped/C_23078083;)Z	m_52842527		m_52842527
 		p	1			p_1
 	m	(Lnet/minecraft/unmapped/C_23078083;[Ljava/lang/String;)Ljava/util/List;	m_74370043		m_74370043
@@ -736,7 +736,7 @@ c	net/minecraft/unmapped/C_91936732		net/minecraft/unmapped/C_91936732
 	m	(Lnet/minecraft/unmapped/C_23078083;I)V	m_57187866		m_57187866
 		p	1			p_1
 		p	2			p_2
-c	net/minecraft/unmapped/C_94006342		net/minecraft/unmapped/C_94006342
+c	net/minecraft/unmapped/C_94006342		net/minecraft/commands/exceptions/PlayerNotFoundException
 	m	()V	<init>		<init>
 	m	(Ljava/lang/String;[Ljava/lang/Object;)V	<init>		<init>
 		p	1			p_1
