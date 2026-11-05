@@ -565,15 +565,15 @@ c	net/minecraft/unmapped/C_92949082
 		p	4		p_4	
 c	net/minecraft/unmapped/C_92964787
 	m	(Ljava/io/File;Ljava/util/ArrayList;Lnet/minecraft/unmapped/C_28112798;IILnet/minecraft/unmapped/C_71803183;)V	m_12434943	convertRegions	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-		p	5		p_5	
-		p	6		p_6	
-	m	(Ljava/io/File;Ljava/util/ArrayList;)V	m_64005536	m_64005536	
-		p	1		p_1	
-		p	2		p_2	
+		p	1		baseFolder	
+		p	2		chunkFiles	
+		p	3		biomeSource	
+		p	4		currentCount	
+		p	5		totalCount	
+		p	6		progress	
+	m	(Ljava/io/File;Ljava/util/ArrayList;)V	m_64005536	addRegions	
+		p	1		baseFolder	
+		p	2		dest	
 	m	(Ljava/io/File;Ljava/lang/Iterable;Lnet/minecraft/unmapped/C_28112798;IILnet/minecraft/unmapped/C_71803183;)V	m_12434943		convertRegions
 		p	1			p_1
 		p	2			p_2
@@ -581,7 +581,7 @@ c	net/minecraft/unmapped/C_92964787
 		p	4			p_4
 		p	5			p_5
 		p	6			p_6
-	m	(Ljava/io/File;Ljava/util/Collection;)V	m_64005536		m_64005536
+	m	(Ljava/io/File;Ljava/util/Collection;)V	m_64005536		addRegions
 		p	1			p_1
 		p	2			p_2
 c	net/minecraft/unmapped/C_93318205
@@ -958,13 +958,13 @@ c	net/minecraft/unmapped/C_79360482
 		p	2		p_2	
 		p	3		p_3	
 c	net/minecraft/unmapped/C_19568358
-	f	I	f_51110954	f_51110954	
-	f	Ljava/awt/image/BufferedImage;	f_88486284	f_88486284	
-	f	Ljava/io/File;	f_78356513	f_78356513	
+	f	I	f_51110954	texture	
+	f	Ljava/awt/image/BufferedImage;	f_88486284	icon	
+	f	Ljava/io/File;	f_78356513	file	
 	m	(Ljava/io/File;)V	<init>	<init>	
-		p	1		p_1	
-	m	(Ljava/lang/String;)Ljava/lang/String;	m_49561564	m_49561564	
-		p	1		p_1	
+		p	1		file	
+	m	(Ljava/lang/String;)Ljava/lang/String;	m_49561564	trim	
+		p	1		line	
 	m	(Lnet/minecraft/client/Minecraft;)V	m_46759328	m_46759328	
 		p	1		p_1	
 	m	(Lnet/minecraft/client/Minecraft;)V	m_24818446	m_24818446	
@@ -993,8 +993,8 @@ c	net/minecraft/unmapped/C_50604430
 		p	3			p_3
 		p	4			p_4
 c	net/minecraft/unmapped/C_56057114
-	m	()V	m_68459163	m_68459163	
-	m	()I	m_06451376	m_06451376	
+	m	()V	m_68459163	onLoad	
+	m	()I	m_06451376	getBlockCount	
 c	net/minecraft/unmapped/C_64880518		net/minecraft/unmapped/C_64880518
 	f	Ljava/lang/String;	f_19349031		f_19349031
 	f	Ljava/lang/String;	f_82240300		f_82240300

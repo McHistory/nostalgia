@@ -1,7 +1,7 @@
 tiny	2	0
 c	net/minecraft/client/Minecraft
 	m	()Ljava/lang/String;	m_63994976		getVersion
-	m	()V	m_70150364		m_70150364
+	m	()V	m_70150364		startSnooper
 c	net/minecraft/server/MinecraftServer
 	m	()Ljava/lang/String;	getServerModName		getServerModName
 c	net/minecraft/unmapped/C_08381405
@@ -22,7 +22,7 @@ c	net/minecraft/unmapped/C_29639016
 c	net/minecraft/unmapped/C_33388993
 	f	I	f_99865467	tickCount	
 c	net/minecraft/unmapped/C_34189003
-	m	()[Ljava/lang/String;	m_96794794		m_96794794
+	m	()[Ljava/lang/String;	m_96794794		getPlayers
 c	net/minecraft/unmapped/C_34399650
 	m	(IIII)Z	m_20740557	m_20740557	
 		p	1		p_1	
@@ -172,15 +172,15 @@ c	net/minecraft/unmapped/C_62826967	net/minecraft/unmapped/C_62826967
 		p	2		p_2	
 c	net/minecraft/unmapped/C_74721681
 	f	I	f_82171587		tryTicks
-c	net/minecraft/unmapped/C_08317554		net/minecraft/unmapped/C_08317554
+c	net/minecraft/unmapped/C_08317554		net/minecraft/world/SnooperReporter
 	m	()V	<init>		<init>
-	m	(Ljava/util/Map;)Ljava/lang/String;	m_04821254		m_04821254
-		p	0			p_0
-	m	(Ljava/net/URL;Ljava/util/Map;Z)Ljava/lang/String;	m_23209999		m_23209999
-		p	0			p_0
-		p	1			p_1
-		p	2			p_2
-	m	(Ljava/net/URL;Ljava/lang/String;Z)Ljava/lang/String;	m_12762682		m_12762682
-		p	0			p_0
-		p	1			p_1
-		p	2			p_2
+	m	(Ljava/util/Map;)Ljava/lang/String;	m_04821254		encode
+		p	0			data
+	m	(Ljava/net/URL;Ljava/util/Map;Z)Ljava/lang/String;	m_23209999		post
+		p	0			url
+		p	1			data
+		p	2			ignoreError
+	m	(Ljava/net/URL;Ljava/lang/String;Z)Ljava/lang/String;	m_12762682		post
+		p	0			url
+		p	1			data
+		p	2			ignoreError

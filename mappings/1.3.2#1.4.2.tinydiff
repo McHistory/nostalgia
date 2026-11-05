@@ -1304,10 +1304,10 @@ c	net/minecraft/unmapped/C_64041439
 		p	4		z	
 		p	5		ct	
 		p	6		block	
-	m	(III)I	m_03689668	m_03689668	
-		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
+	m	(III)I	m_03689668	getTileLightBlock	
+		p	1		x	
+		p	2		y	
+		p	3		z	
 	m	(III)I	m_79167790		m_79167790
 		p	1			p_1
 		p	2			p_2
@@ -2834,16 +2834,16 @@ c	net/minecraft/unmapped/C_70250241
 	m	(II)I	m_73217034	m_73217034	
 		p	1		p_1	
 		p	2		p_2	
-	m	(Lnet/minecraft/unmapped/C_64041439;IDDD)Z	m_40555300	m_40555300	
-		p	0		p_0	
-		p	1		p_1	
-		p	2		p_2	
-		p	4		p_4	
-		p	6		p_6	
+	m	(Lnet/minecraft/unmapped/C_64041439;IDDD)Z	m_40555300	canSpawn	
+		p	0		level	
+		p	1		auxValue	
+		p	2		x	
+		p	4		y	
+		p	6		z	
 	m	(Lnet/minecraft/unmapped/C_88708284;I)I	m_73217034		m_73217034
 		p	1			p_1
 		p	2			p_2
-	m	(Lnet/minecraft/unmapped/C_64041439;IDDD)Lnet/minecraft/unmapped/C_42232651;	m_40555300		m_40555300
+	m	(Lnet/minecraft/unmapped/C_64041439;IDDD)Lnet/minecraft/unmapped/C_42232651;	m_40555300		canSpawn
 		p	0			p_0
 		p	1			p_1
 		p	2			p_2
@@ -2900,16 +2900,16 @@ c	net/minecraft/unmapped/C_30578826
 	m	(Lnet/minecraft/unmapped/C_83334639;)V	m_21437816		m_21437816
 		p	1			p_1
 c	net/minecraft/unmapped/C_35718713
-	f	Lnet/minecraft/unmapped/C_64041439;	f_10951581	f_10951581	
-	f	I	f_76967468	f_76967468	
+	f	Lnet/minecraft/unmapped/C_64041439;	f_10951581	level	
+	f	I	f_76967468	type	
 	f	Lnet/minecraft/unmapped/C_27593779;	f_15724897		f_15724897
 	f	F	f_15995048		f_15995048
 	m	(Lnet/minecraft/unmapped/C_74425583;FII)V	<init>	<init>	
 		p	1		p_1	
-		p	2		p_2	
-		p	3		p_3	
-		p	4		p_4	
-	m	()V	m_88272016	m_88272016	
+		p	2		speedModifier	
+		p	3		type	
+		p	4		attackInterval	
+	m	()V	m_88272016	performRangedAttack	
 	m	(Lnet/minecraft/unmapped/C_27593779;FIF)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2

@@ -164,7 +164,7 @@ c	net/minecraft/unmapped/C_47884049
 	f	Lnet/minecraft/unmapped/C_60248056;	f_29163543		f_29163543
 	f	Lnet/minecraft/unmapped/C_60248056;	f_93506845		f_93506845
 	m	(Lnet/minecraft/unmapped/C_88708284;Lnet/minecraft/unmapped/C_40996800;Lnet/minecraft/unmapped/C_64041439;IIII)Z	m_49443889
-		p	0		p_0	
+		p	0		instance	
 		p	7			p_7
 	m	(IZ)V	<init>	<init>	
 		p	1		p_1	
@@ -300,8 +300,8 @@ c	net/minecraft/unmapped/C_88708284
 c	net/minecraft/unmapped/C_97866173
 	f	Ljava/util/List;	f_32673274	guiMessages	
 	f	Ljava/util/List;	f_55323685	f_55323685	
-	f	I	f_03437555	f_03437555	
-	f	Z	f_40192599	f_40192599	
+	f	I	f_03437555	chatScrollbarPos	
+	f	Z	f_40192599	newMessageSinceScroll	
 	f	Lnet/minecraft/unmapped/C_51094326;	f_31347527		f_31347527
 	m	()V	m_57675430	clearMessages	
 	m	(Ljava/lang/String;)V	m_81906308	addMessage	
@@ -310,14 +310,14 @@ c	net/minecraft/unmapped/C_97866173
 		p	1		messageId	
 	m	(Lnet/minecraft/unmapped/C_23014920;)V	m_78089348	m_78089348	
 		p	1		p_1	
-	m	()Ljava/util/List;	m_00681596	m_00681596	
-	m	()V	m_48231107	m_48231107	
-	m	(I)V	m_30039279	m_30039279	
+	m	()Ljava/util/List;	m_00681596	getRecentChat	
+	m	()V	m_48231107	resetChatScroll	
+	m	(I)V	m_30039279	scrollChat	
 		p	1		p_1	
-	m	(II)Lnet/minecraft/unmapped/C_47243611;	m_51796019	m_51796019	
+	m	(II)Lnet/minecraft/unmapped/C_47243611;	m_51796019	getClickedLinkAt	
 		p	1		p_1	
 		p	2		p_2	
-	m	()Z	m_10028424	m_10028424	
+	m	()Z	m_10028424	isChatOpen	
 	m	()Lnet/minecraft/unmapped/C_51094326;	m_20387035		m_20387035
 	m	()I	m_76131799		m_76131799
 c	net/minecraft/unmapped/C_98888256

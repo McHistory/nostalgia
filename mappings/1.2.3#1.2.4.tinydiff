@@ -10,9 +10,9 @@ c	net/minecraft/unmapped/C_09553359$82076943
 	m	()I	m_24076806		m_24076806
 c	net/minecraft/unmapped/C_10918870
 	m	(Lnet/minecraft/unmapped/C_52156807;)V	m_47450076		handlePlayerAbilities
-		p	1			p_1
+		p	1			packet
 c	net/minecraft/unmapped/C_14917579
-	f	Z	f_58237041		f_58237041
+	f	Z	f_58237041		valid
 c	net/minecraft/unmapped/C_16178213
 	f	Lnet/minecraft/unmapped/C_85740840;	f_63337646	parent	
 	f	Z	f_17060668		bordered
@@ -168,12 +168,12 @@ c	net/minecraft/unmapped/C_29058632
 		p	5		color	
 		p	0			p_0
 c	net/minecraft/unmapped/C_30339133
-	m	(Lnet/minecraft/unmapped/C_64041439;IIII)V	m_90237669		m_90237669
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
+	m	(Lnet/minecraft/unmapped/C_64041439;IIII)V	m_90237669		placeBlock
+		p	1			level
+		p	2			x
+		p	3			y
+		p	4			z
+		p	5			tile
 c	net/minecraft/unmapped/C_34225397
 	m	(Lnet/minecraft/unmapped/C_64041439;IIII)Z	m_84434060		isSapling
 		p	1			level
@@ -184,14 +184,14 @@ c	net/minecraft/unmapped/C_34225397
 c	net/minecraft/unmapped/C_40996800
 	m	()V	m_11118191		onUpdateAbilities
 c	net/minecraft/unmapped/C_47884049
-	m	(Lnet/minecraft/unmapped/C_88708284;Lnet/minecraft/unmapped/C_40996800;Lnet/minecraft/unmapped/C_64041439;IIII)Z	m_49443889		m_49443889
-		p	0			p_0
-		p	1			p_1
-		p	2			p_2
-		p	3			p_3
-		p	4			p_4
-		p	5			p_5
-		p	6			p_6
+	m	(Lnet/minecraft/unmapped/C_88708284;Lnet/minecraft/unmapped/C_40996800;Lnet/minecraft/unmapped/C_64041439;IIII)Z	m_49443889		tryConvertTargetTile
+		p	0			instance
+		p	1			player
+		p	2			level
+		p	3			x
+		p	4			y
+		p	5			z
+		p	6			face
 c	net/minecraft/unmapped/C_49202226
 	m	()V	m_11118191		m_11118191
 c	net/minecraft/unmapped/C_57247398
@@ -204,23 +204,23 @@ c	net/minecraft/unmapped/C_57925352
 	m	()I	hashCode		hashCode
 c	net/minecraft/unmapped/C_63704535
 	f	I	f_46934095	frame	
-	f	I	f_46505611		f_46505611
+	f	I	f_46505611		historyPos
 	f	Z	f_16072174		f_16072174
 	f	Ljava/lang/String;	f_16966112		f_16966112
 	f	Ljava/lang/String;	f_97153780		f_97153780
 	f	I	f_97198123		f_97198123
 	f	Ljava/util/List;	f_73116063		f_73116063
-	f	Ljava/net/URI;	f_99710893		f_99710893
-	f	Lnet/minecraft/unmapped/C_16178213;	f_48091600		f_48091600
-	f	Ljava/lang/String;	f_16002242		f_16002242
+	f	Ljava/net/URI;	f_99710893		clickedLink
+	f	Lnet/minecraft/unmapped/C_16178213;	f_48091600		input
+	f	Ljava/lang/String;	f_16002242		initial
 	m	(Ljava/lang/String;)V	<init>		<init>
 		p	1			p_1
 	m	()V	m_29921564		m_29921564
 	m	(ZI)V	m_05721067		m_05721067
 		p	1			p_1
 		p	2			p_2
-	m	()V	m_90567152		m_90567152
-	m	(I)V	m_52645762		m_52645762
+	m	()V	m_90567152		showSuggestions
+	m	(I)V	m_52645762		moveInHistory
 		p	1			p_1
 c	net/minecraft/unmapped/C_63704535$75625193		75625193
 	f	Lnet/minecraft/unmapped/C_47243611;	f_88776954		f_88776954
@@ -283,18 +283,18 @@ c	net/minecraft/unmapped/C_97075175
 	m	()I	hashCode		hashCode
 c	net/minecraft/unmapped/C_97866173
 	f	Ljava/util/List;	f_55323685		f_55323685
-	f	I	f_03437555		f_03437555
-	f	Z	f_40192599		f_40192599
+	f	I	f_03437555		chatScrollbarPos
+	f	Z	f_40192599		newMessageSinceScroll
 	m	(Lnet/minecraft/unmapped/C_23014920;)V	m_78089348		m_78089348
 		p	1			p_1
-	m	()Ljava/util/List;	m_00681596		m_00681596
-	m	()V	m_48231107		m_48231107
-	m	(I)V	m_30039279		m_30039279
+	m	()Ljava/util/List;	m_00681596		getRecentChat
+	m	()V	m_48231107		resetChatScroll
+	m	(I)V	m_30039279		scrollChat
 		p	1			p_1
-	m	(II)Lnet/minecraft/unmapped/C_47243611;	m_51796019		m_51796019
+	m	(II)Lnet/minecraft/unmapped/C_47243611;	m_51796019		getClickedLinkAt
 		p	1			p_1
 		p	2			p_2
-	m	()Z	m_10028424		m_10028424
+	m	()Z	m_10028424		isChatOpen
 c	net/minecraft/unmapped/C_97929192
 	m	()V	m_11118191		m_11118191
 c	net/minecraft/unmapped/C_99660737
@@ -324,34 +324,34 @@ c	net/minecraft/unmapped/C_56226565
 	m	()Lnet/minecraft/unmapped/C_07271204;	m_98203846		getSitGoal
 c	net/minecraft/unmapped/C_67412986
 	m	()I	hashCode		hashCode
-c	net/minecraft/unmapped/C_47243611		net/minecraft/unmapped/C_47243611
+c	net/minecraft/unmapped/C_47243611		net/minecraft/client/gui/ChatLink
 	f	Ljava/util/regex/Pattern;	f_40490902		f_40490902
-	f	Lnet/minecraft/unmapped/C_23014920;	f_27102130		f_27102130
-	f	Lnet/minecraft/unmapped/C_46155730;	f_88996276		f_88996276
+	f	Lnet/minecraft/unmapped/C_23014920;	f_27102130		font
+	f	Lnet/minecraft/unmapped/C_46155730;	f_88996276		message
 	f	I	f_70975674		f_70975674
 	f	I	f_74305595		f_74305595
 	f	Ljava/lang/String;	f_29230816		f_29230816
-	f	Ljava/lang/String;	f_48304509		f_48304509
+	f	Ljava/lang/String;	f_48304509		link
 	m	(Lnet/minecraft/unmapped/C_23014920;Lnet/minecraft/unmapped/C_46155730;II)V	<init>		<init>
 		p	1			p_1
 		p	2			p_2
 		p	3			p_3
 		p	4			p_4
-	m	()Ljava/lang/String;	m_07633161		m_07633161
+	m	()Ljava/lang/String;	m_07633161		getLink
 	m	()Ljava/net/URI;	m_28932335		m_28932335
 	m	()Ljava/lang/String;	m_56659737		m_56659737
 	m	()V	<clinit>		<clinit>
-c	net/minecraft/unmapped/C_51593360		net/minecraft/unmapped/C_51593360
-	f	Ljava/lang/String;	f_64816456		f_64816456
-	f	Ljava/lang/String;	f_22332841		f_22332841
+c	net/minecraft/unmapped/C_51593360		net/minecraft/client/gui/ConfirmLinkScreen
+	f	Ljava/lang/String;	f_64816456		warning
+	f	Ljava/lang/String;	f_22332841		copyButton
 	m	(Lnet/minecraft/unmapped/C_85740840;Ljava/lang/String;I)V	<init>		<init>
-		p	1			p_1
+		p	1			lastScreen
 		p	2			p_2
 		p	3			p_3
 	m	()V	m_41805697		m_41805697
 	m	(Lnet/minecraft/unmapped/C_85125467;)V	m_30778170		m_30778170
 		p	1			p_1
-	m	()V	m_34553280		m_34553280
+	m	()V	m_34553280		copyToClipboard
 	m	(IIF)V	m_93956703		m_93956703
 		p	1			p_1
 		p	2			p_2

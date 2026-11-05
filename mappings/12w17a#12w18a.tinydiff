@@ -38,7 +38,7 @@ c	net/minecraft/client/Minecraft
 		p	2		p_2	
 		p	3		p_3	
 	m	()Ljava/lang/String;	m_63994976	getVersion	
-	m	()V	m_70150364	m_70150364	
+	m	()V	m_70150364	startSnooper	
 	m	(Ljava/lang/String;Ljava/lang/String;Z)V	m_80471510	start	
 		p	0		p_0	
 		p	1		p_1	
@@ -682,10 +682,10 @@ c	net/minecraft/unmapped/C_64041439
 		p	3		y	
 		p	4		z	
 	m	()Lnet/minecraft/unmapped/C_93816630;	m_61480200	getDimensionSpecificSpawn	
-	m	(DDD)Lnet/minecraft/unmapped/C_40996800;	m_79569300	m_79569300	
-		p	1		p_1	
-		p	3		p_3	
-		p	5		p_5	
+	m	(DDD)Lnet/minecraft/unmapped/C_40996800;	m_79569300	getNearestPlayer	
+		p	1		x	
+		p	3		z	
+		p	5		maxDist	
 	m	()V	m_63850864	m_63850864	
 	m	()V	<clinit>	<clinit>	
 c	net/minecraft/unmapped/C_64104387
@@ -1091,7 +1091,7 @@ c	net/minecraft/unmapped/C_40266271
 	f	Ljava/lang/Object;	f_72642315		lock
 	f	Z	f_72053338		started
 	f	I	f_55771606		count
-	m	()V	m_17329772	m_17329772	
+	m	()V	m_17329772	report	
 	m	(Ljava/lang/String;)V	<init>	<init>	
 		p	1		side	
 	m	(Ljava/lang/String;Lnet/minecraft/unmapped/C_48364209;)V	<init>		<init>
